@@ -1,4 +1,4 @@
-@import "../../styles/constants";
+@import "../../styles/constants.less";
 
 .timer {
     display: grid;
@@ -42,6 +42,7 @@
 
 .unknown {
     color: @magenta;
+    border: 2px solid fade(@magenta, 20%);
 
     .count {
         color: @magenta;
@@ -50,6 +51,7 @@
 
 .expired {
     color: @red;
+    border: 2px solid fade(@red, 20%);
 
     .count {
         color: @red;

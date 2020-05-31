@@ -1,32 +1,38 @@
 {
   "private": false,
   "name": "bluelib",
-  "version": "0.8.1",
+  "version": "0.10.3",
   "license": "AGPL-3.0-or-later",
-  "main": "src/index.js",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "files": ["dist/*"],
   "scripts": {
     "start": "preact watch",
-    "build": "preact build --no-prerender --dest docs && git add docs",
-    "ghpages": "npm run -s build && git add . && cross-env-shell git commit -m \"$npm_package_version\" && git push && cross-env-shell hub release create -m \"$npm_package_version\" \"$npm_package_version\" && cross-env-shell sentry-cli releases set-commits \"$npm_package_version\" --auto && cross-env-shell sentry-cli releases deploys \"$npm_package_version\" new --env production -n \"gh-pages\""
+    "dist": "microbundle && npm publish"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
-    "preact-cli": "^3.0.0-rc.14"
+    "preact-cli": "^3.0.0-rc.14",
+    "webpack-cli": "^3.3.11",
+    "microbundle": "^0.12.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
-    "@fortawesome/react-fontawesome": "^0.1.9",
-    "css-loader": "^3.5.3",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "css-loader": "^3.6.0",
     "file-loader": "^5.0.2",
-    "less": "^3.11.1",
+    "less": "^3.11.3",
     "less-loader": "^5.0.0",
     "preact": "^10.4.4",
     "preact-render-to-string": "^5.1.8",
     "react-syntax-highlighter": "^12.2.1",
     "showdown": "^1.9.1",
-    "style-loader": "^1.2.1"
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0"
   }
 }

@@ -1,7 +1,7 @@
-import Latex from "./Latex";
+import Latex, {LatexDisplay} from "./Latex";
 
 export default function (props) {
     return (
-        <Latex inline={true}>{props.children}</Latex>
+        <Latex inline={true} display={LatexDisplay.INLINE}>{props.children}</Latex>
     );
 }
