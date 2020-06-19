@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "bluelib",
-  "version": "0.10.4",
+  "version": "0.11.0",
   "license": "AGPL-3.0-or-later",
   "source": "src/index.js",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
   "files": ["dist/*"],
   "scripts": {
     "start": "preact watch",
-    "dist": "microbundle && npm publish"
+    "dist": "git add . && cross-env-shell git commit -m \"$npm_package_version\" && git push && microbundle && npm publish && cross-env-shell hub release create -m \"$npm_package_version\" \"$npm_package_version\""
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
