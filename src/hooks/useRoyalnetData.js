@@ -7,10 +7,11 @@ import useDeepCompareEffect from "use-deep-compare-effect";
 export default function(method, path, body) {
     const instanceUrl = useContext(RoyalnetInstanceUrl);
     const [data, setData] = useState(undefined);
+    const [error, setError] = useState(undefined);
 
     useDeepCompareEffect(() => {
-        royalnetApiRequest(instanceUrl, method, path, body).then(d => setData(d));
+        royalnetApiRequest(instanceUrl, method, path, body).then(d => setData(d)).catch((e => setError(e)));
     }, [instanceUrl, method, path, body]);
 
-    return data;
+    return [data, error];
 }
