@@ -20,6 +20,7 @@ import PLatex from "./components/Rendering/PLatex";
 import LatexDefaultDisplay from "./contexts/LatexDefaultDisplay";
 import LatexDefaultInline from "./contexts/LatexDefaultInline";
 import LatexRenderColor from "./contexts/LatexRenderColor";
+import RoyalnetInstanceUrl from "./contexts/RoyalnetInstanceUrl";
 
 import useFormValidator from "./hooks/useFormValidator";
 import useRoyalnetData from "./hooks/useRoyalnetData";
@@ -51,6 +52,7 @@ export {
     LatexDefaultDisplay,
     LatexDefaultInline,
     LatexRenderColor,
+    RoyalnetInstanceUrl,
     useFormValidator,
     useRoyalnetData,
     useRoyalnetInstanceValidator,
