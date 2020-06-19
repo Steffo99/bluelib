@@ -1,7 +1,7 @@
 import { useContext, useState } from 'preact/hooks';
 import RoyalnetInstanceUrl from '../contexts/RoyalnetInstanceUrl';
 import useFormValidator from "./useFormValidator";
-import apiRequest from '../utils/apiRequest';
+import {royalnetApiRequest} from '../utils/royalnetApiRequest';
 
 const instanceUrlRegex = /^https?:\/\/.*?[^/]$/;
 
@@ -33,7 +33,7 @@ export default function() {
         let abort = new AbortController();
         setInstanceTesterAbort(abort);
 
-        apiRequest(value, "GET", "/api/royalnet/version/v1", undefined, abort.signal).then((data) => {
+        royalnetApiRequest(value, "GET", "/api/royalnet/version/v1", undefined, abort.signal).then((data) => {
             if(value === instanceUrl) {
                 setStatus({
                     validity: true,
