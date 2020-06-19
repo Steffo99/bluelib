@@ -21,9 +21,14 @@ import LatexDefaultDisplay from "./contexts/LatexDefaultDisplay";
 import LatexDefaultInline from "./contexts/LatexDefaultInline";
 import LatexRenderColor from "./contexts/LatexRenderColor";
 
+import useFormValidator from "./hooks/useFormValidator";
+import useRoyalnetData from "./hooks/useRoyalnetData";
+import useRoyalnetInstanceValidator from "./hooks/useRoyalnetInstanceValidator";
+
 import theme from "./styles/theme.less";
 
 import stripTabs from "./utils/stripTabs";
+import {royalnetApiRequest, RoyalnetApiError} from "./utils/royalnetApiRequest";
 
 
 export {
@@ -47,5 +52,7 @@ export {
     LatexDefaultInline,
     LatexRenderColor,
     theme,
-    stripTabs
+    stripTabs,
+    royalnetApiRequest,
+    RoyalnetApiError,
 }
