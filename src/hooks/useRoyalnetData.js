@@ -9,9 +9,15 @@ export default function(method, path, body) {
     const [data, setData] = useState(undefined);
     const [error, setError] = useState(undefined);
 
+    function refresh() {
+        setData(undefined);
+        setError(undefined);
+        royalnetApiRequest(instanceUrl, method, path, body).then(d => setData(d)).catch((e => setError(e)));
+    }
+
     useDeepCompareEffect(() => {
         royalnetApiRequest(instanceUrl, method, path, body).then(d => setData(d)).catch((e => setError(e)));
     }, [instanceUrl, method, path, body]);
 
-    return [data, error];
+    return [data, error, refresh];
 }
