@@ -7,6 +7,7 @@ import TablePanel from "./components/Elements/TablePanel";
 import Timer from "./components/Elements/Timer";
 import Todo from "./components/Elements/Todo";
 
+import HInput from "./components/Layout/HInput";
 import Split from "./components/Layout/Split";
 
 import BLatex from "./components/Rendering/BLatex";
@@ -28,6 +29,10 @@ import useRoyalnetInstanceValidator from "./hooks/useRoyalnetInstanceValidator";
 
 import theme from "./styles/theme.less";
 
+import concatClass from "./utils/concatClass";
+import getEventValue from "./utils/getEventValue";
+import isString from "./utils/isString";
+import isValidDate from "./utils/isValidDate";
 import stripTabs from "./utils/stripTabs";
 import {royalnetApiRequest, RoyalnetApiError} from "./utils/royalnetApiRequest";
 
@@ -41,7 +46,10 @@ export {
     TablePanel,
     Timer,
     Todo,
+
+    HInput,
     Split,
+
     BLatex,
     Code,
     ILatex,
@@ -49,14 +57,22 @@ export {
     LatexDisplay,
     Markdown,
     PLatex,
+
     LatexDefaultDisplay,
     LatexDefaultInline,
     LatexRenderColor,
     RoyalnetInstanceUrl,
+
     useFormValidator,
     useRoyalnetData,
     useRoyalnetInstanceValidator,
+
     theme,
+
+    concatClass,
+    getEventValue,
+    isString,
+    isValidDate,
     stripTabs,
     royalnetApiRequest,
     RoyalnetApiError,
