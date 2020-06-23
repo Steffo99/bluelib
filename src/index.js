@@ -22,8 +22,10 @@ import LatexDefaultDisplay from "./contexts/LatexDefaultDisplay";
 import LatexDefaultInline from "./contexts/LatexDefaultInline";
 import LatexRenderColor from "./contexts/LatexRenderColor";
 import RoyalnetInstanceUrl from "./contexts/RoyalnetInstanceUrl";
+import RoyalnetLoginStatus from "./contexts/RoyalnetLoginStatus";
 
 import useFormValidator from "./hooks/useFormValidator";
+import useLoginDataStorage from "./hooks/useLoginDataStorage";
 import useRoyalnetData from "./hooks/useRoyalnetData";
 import useRoyalnetInstanceValidator from "./hooks/useRoyalnetInstanceValidator";
 
@@ -62,8 +64,10 @@ export {
     LatexDefaultInline,
     LatexRenderColor,
     RoyalnetInstanceUrl,
+    RoyalnetLoginStatus,
 
     useFormValidator,
+    useLoginDataStorage,
     useRoyalnetData,
     useRoyalnetInstanceValidator,
 

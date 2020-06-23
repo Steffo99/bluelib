@@ -1,13 +1,23 @@
 import RoyalnetInstanceUrl from '../contexts/RoyalnetInstanceUrl';
+import LoginStatus from "../contexts/RoyalnetLoginStatus";
 import {useContext, useState} from 'preact/hooks';
-import {royalnetApiRequest} from '../utils/royalnetApiRequest';
 import useDeepCompareEffect from "use-deep-compare-effect";
+import {royalnetApiRequest} from '../utils/royalnetApiRequest';
 
 
 export default function(method, path, body) {
     const instanceUrl = useContext(RoyalnetInstanceUrl);
+    const loginStatus = useContext(LoginStatus);
     const [data, setData] = useState(undefined);
     const [error, setError] = useState(undefined);
+
+    if(body === undefined) {
+        body = {}
+    }
+
+    if(loginStatus !== null) {
+        body["token"] = loginStatus["token"]
+    }
 
     function refresh() {
         setData(undefined);
