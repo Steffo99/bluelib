@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'preact/hooks';
 import { royalnetApiRequest } from '../utils/royalnetApiRequest';
-import { route } from 'preact-router';
 
 export default function(defaultInstanceUrl) {
 	const [instanceUrl, setInstanceUrl] = useState(defaultInstanceUrl);
@@ -35,20 +34,23 @@ export default function(defaultInstanceUrl) {
 	}, []);
 
 	function storeValues(newInstanceUrl, newLoginStatus) {
-		console.debug(`Successfully logged in as ${newLoginStatus.user.username} @ ${newInstanceUrl} !`);
+		if(newLoginStatus !== null) {
+			console.debug(`Successfully logged in as ${newLoginStatus.user.username} @ ${newInstanceUrl} !`);
+		}
+		else {
+			console.debug(`Changed instanceUrl to ${newInstanceUrl} !`);
+		}
 		setInstanceUrl(newInstanceUrl);
 		setLoginStatus(newLoginStatus);
 		console.debug("Saving login data in the localStorage...");
 		window.localStorage.setItem("instanceUrl", newInstanceUrl);
 		window.localStorage.setItem("loginStatus", JSON.stringify(newLoginStatus));
-		route("/");
 	}
 
 	function logout() {
 		console.debug("User requested logout, clearing loginStatus and localStorage...");
 		setLoginStatus(null);
 		window.localStorage.setItem("loginStatus", null);
-		route("/");
 	}
 
 	return [instanceUrl, loginStatus, storeValues, logout]
