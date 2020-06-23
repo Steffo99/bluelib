@@ -10,6 +10,7 @@ export default function(method, path, body) {
     const loginStatus = useContext(LoginStatus);
     const [data, setData] = useState(undefined);
     const [error, setError] = useState(undefined);
+    const [instanceTesterAbort, setInstanceTesterAbort] = useState(null);
 
     if(body === undefined) {
         body = {}
@@ -22,11 +23,18 @@ export default function(method, path, body) {
     function refresh() {
         setData(undefined);
         setError(undefined);
-        royalnetApiRequest(instanceUrl, method, path, body).then(d => setData(d)).catch((e => setError(e)));
+
+        if(instanceTesterAbort !== null) {
+            instanceTesterAbort.abort();
+        }
+        let abort = new AbortController();
+        setInstanceTesterAbort(abort);
+
+        royalnetApiRequest(instanceUrl, method, path, body, abort).then(d => setData(d)).catch((e => setError(e)));
     }
 
     useDeepCompareEffect(() => {
-        royalnetApiRequest(instanceUrl, method, path, body).then(d => setData(d)).catch((e => setError(e)));
+        refresh();
     }, [instanceUrl, method, path, body]);
 
     return [data, error, refresh];

@@ -34,7 +34,7 @@ export default function(defaultInstanceUrl) {
 		})
 	}, []);
 
-	function onSuccessfulLogin(newInstanceUrl, newLoginStatus) {
+	function storeValues(newInstanceUrl, newLoginStatus) {
 		console.debug(`Successfully logged in as ${newLoginStatus.user.username} @ ${newInstanceUrl} !`);
 		setInstanceUrl(newInstanceUrl);
 		setLoginStatus(newLoginStatus);
@@ -44,12 +44,12 @@ export default function(defaultInstanceUrl) {
 		route("/");
 	}
 
-	function requestLogout() {
+	function logout() {
 		console.debug("User requested logout, clearing loginStatus and localStorage...");
 		setLoginStatus(null);
 		window.localStorage.setItem("loginStatus", null);
 		route("/");
 	}
 
-	return [instanceUrl, loginStatus, onSuccessfulLogin, requestLogout]
+	return [instanceUrl, loginStatus, storeValues, logout]
 }
