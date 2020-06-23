@@ -8,6 +8,7 @@ import Timer from "./components/Elements/Timer";
 import Todo from "./components/Elements/Todo";
 
 import HInput from "./components/Layout/HInput";
+import HButton from "./components/Layout/HButton";
 import Split from "./components/Layout/Split";
 
 import BLatex from "./components/Rendering/BLatex";
@@ -50,6 +51,7 @@ export {
     Todo,
 
     HInput,
+    HButton,
     Split,
 
     BLatex,
