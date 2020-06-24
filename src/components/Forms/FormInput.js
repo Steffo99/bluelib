@@ -6,8 +6,7 @@ export default function (props) {
         <FormRow
             disabled={props.disabled}
             validity={props.validity}
-            label={props.label}
-            icon={props.icon}>
+            label={props.label}>
             <input
                 class={style.contentschild}
                 type={props.type}

@@ -15,8 +15,12 @@ export default function (props) {
     return (
         <label
             className={concatClass(style.label, color)}>
-            <div className={style.text}>{props.label}</div>
-            <div className={style.icon}>{props.icon}</div>
+            <div className={style.text}>
+                {props.label}
+            </div>
+            <div className={style.icon}>
+                {props.validity.icon}
+            </div>
             <div className={style.contents}>
                 {props.children}
             </div>

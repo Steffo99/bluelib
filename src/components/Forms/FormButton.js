@@ -1,4 +1,3 @@
-import ValidityStatus from "../../enums/Validity";
 import FormRow from "./FormRow";
 import style from "./FormRow.less";
 import concatClass from "../../utils/concatClass";
@@ -9,12 +8,11 @@ export default function (props) {
 		<FormRow
 			disabled={props.disabled}
 			validity={props.validity}
-			label={props.label}
-			icon={props.icon}>
+			label={props.label}>
 			<button
 				class={concatClass(style.contentschild, props.disabled ? theme.disabled : null)}
-				onClick={(props.disabled && props.validity.validity === ValidityStatus.DISABLED) ? null : props.onClick}
-				disabled={props.validity ? props.validity.validity === ValidityStatus.DISABLED : false}>
+				onClick={props.disabled ? null : props.onClick}
+				disabled={props.disabled}>
 				{props.children}
 			</button>
 		</FormRow>
