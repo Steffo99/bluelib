@@ -1,0 +1,43 @@
+@import "../../styles/constants.less";
+
+.label {
+  width: 100%;
+
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: 120px 24px auto;
+  grid-column-gap: 2px;
+}
+
+.text {
+  text-align: right;
+
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.icon {
+  text-align: center;
+
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.contents {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.message {
+  font-size: x-small;
+
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.contentschild {
+  width: 100%;
+}

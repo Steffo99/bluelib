@@ -1,0 +1,27 @@
+@import "constants.less";
+
+.h(@hfg; @hbg) {
+  color: @hfg;
+  background-color: @hbg;
+}
+
+.hb(@hfg; @hbg) {
+  .h(@hfg; @hbg);
+  border: 1px solid fade(@hfg, 10%);
+}
+
+.hh(@hfg; @hbg) {
+  .hb(@hfg; @hbg);
+
+  &:hover, &.hover {
+    background-color: overlay(fade(@hfg, 10%), @hbg);
+    border: 1px solid @hfg;
+    color: @hfg;
+  }
+
+  &:active, &.active {
+    background-color: overlay(fade(@accent, 20%), @hbg);
+    border: 1px solid @accent;
+    color: @accent;
+  }
+}

@@ -1,21 +1,31 @@
 import theme from "../styles/theme.less";
-import HInput from "../components/Layout/HInput";
+import FormInput from "../components/Forms/FormInput";
+import FormButton from "../components/Forms/FormButton";
 import Box, {BoxColors} from "../components/Panels/Box";
-import {faYoutube} from "@fortawesome/free-brands-svg-icons";
-import {Code, Panel, Split} from "../index";
+import {faXbox} from "@fortawesome/free-brands-svg-icons";
+import {Code, Panel} from "../index";
 import Section from "../components/Panels/Section";
 import Image from "../components/Elements/Image";
-import HButton from "../components/Layout/HButton";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCheck, faCircle, faCross, faExclamationTriangle, faSpinner} from "@fortawesome/free-solid-svg-icons";
+import {
+    faAddressCard,
+    faBug,
+    faCheck,
+    faCircle,
+    faCross,
+    faExclamationTriangle, faHouseUser,
+    faRadiation,
+    faSpinner
+} from "@fortawesome/free-solid-svg-icons";
 import ValidityStatus from "../components/Enums/ValidityStatus";
+import style from "./Sample.less";
 
 
 export default function (props) {
     return (
         <div class={theme.bluelib}>
             <h1>
-                bluelib
+                bluelib {process.env.RELEASE}
             </h1>
             <Section title={"Panels"}>
                 <Panel title={"Default"}>
@@ -81,36 +91,47 @@ export default function (props) {
                 </Panel>
             </Section>
             <Section title={"Forms"}>
-                <Panel title={"HInputs"}>
-                    <HInput type={"text"} label={"Username"}/>
-                    <HInput type={"password"} label={"Password"}/>
-                    <HInput type={"text"} label={"Caricamento"} icon={<FontAwesomeIcon icon={faSpinner} pulse={true}/>} validity={{
+                <Panel title={"FormInputs"}>
+                    <FormInput type={"text"} name={"username"} label={"Username"}/>
+                    <FormInput type={"password"} label={"Password"}/>
+                    <FormInput type={"text"} label={"Caricamento"} icon={<FontAwesomeIcon icon={faSpinner} pulse={true}/>} validity={{
                         validity: ValidityStatus.DISABLED,
-                        message: "Take your time..."
+                        message: [<FontAwesomeIcon icon={faAddressCard} className={style.flipping}/>, " Take your time..."]
                     }}/>
-                    <HInput type={"text"} label={"OK!"} icon={<FontAwesomeIcon icon={faCheck}/>} validity={{
+                    <FormInput type={"text"} label={"OK!"} icon={<FontAwesomeIcon icon={faCheck}/>} validity={{
                         validity: ValidityStatus.OK,
                         message: "",
                     }}/>
-                    <HInput type={"text"} label={"È un angelo!"} icon={<FontAwesomeIcon icon={faExclamationTriangle}/>} validity={{
+                    <FormInput type={"text"} label={"È un angelo!"} icon={<FontAwesomeIcon icon={faExclamationTriangle}/>} validity={{
                         validity: ValidityStatus.WARNING,
                         message: "",
                     }}/>
-                    <HInput type={"text"} label={"Spinning Jesus"} icon={<FontAwesomeIcon icon={faCross} spin={true}/>} validity={{
+                    <FormInput type={"text"} label={"Spinning Jesus"} icon={<FontAwesomeIcon icon={faCross} spin={true}/>} validity={{
                         validity: ValidityStatus.ERROR,
                         message: "",
                     }}/>
-                    <HInput type={"text"} label={"Ur mom"} icon={<FontAwesomeIcon icon={faCircle}/>} validity={{
+                    <FormInput type={"text"} label={"Ur mom"} icon={<FontAwesomeIcon icon={faCircle}/>} validity={{
                         validity: ValidityStatus.ERROR,
                         message: "ERROR: she is too fat for this input",
                     }}/>
                 </Panel>
-                <Panel title={"HButtons"}>
+                <Panel title={"FormButtons"}>
                     Ma quindi era tutto...
-                    <HButton label={"...un bottone?"}>Lo è sempre stato.</HButton>
-                    <HButton label={"...un Armageddon?"} validity={{
-                        message: "ciaone"
-                    }}>Lo è sempre stato.</HButton>
+                    <FormButton label={"...un bottone?"}>Lo è sempre stato.</FormButton>
+                    <FormButton label={"...disattivato?"} icon={<FontAwesomeIcon icon={faXbox}/>} validity={{
+                        validity: ValidityStatus.DISABLED,
+                        message: "pls w8 a sec"
+                    }}>Sì.</FormButton>
+                    <FormButton label={"...una città?"} icon={<FontAwesomeIcon icon={faHouseUser}/>} validity={{
+                        validity: ValidityStatus.OK,
+                    }}>Lucianina?</FormButton>
+                    <FormButton label={"...miele?"} icon={<FontAwesomeIcon icon={faBug}/>} validity={{
+                        validity: ValidityStatus.WARNING,
+                    }}>Not the bees!</FormButton>
+                    <FormButton label={"...un Helios?"} icon={<FontAwesomeIcon icon={faRadiation}/>} validity={{
+                        validity: ValidityStatus.ERROR,
+                        message: "ERROR: è finito il metallo",
+                    }}>[AVVIA ANNICHILIMENTO]</FormButton>
                 </Panel>
             </Section>
         </div>

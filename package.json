@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "bluelib",
-  "version": "0.12.6",
+  "version": "0.13.0",
   "license": "AGPL-3.0-or-later",
   "source": "src/index.js",
   "main": "dist/index.js",
@@ -12,7 +12,10 @@
   ],
   "scripts": {
     "start": "preact watch",
-    "dist": "git add . && cross-env-shell git commit -m \"$npm_package_version\" && git push && microbundle && npm publish && cross-env-shell hub release create -m \"$npm_package_version\" \"$npm_package_version\""
+    "dist": "git add . && cross-env-shell git commit -m \"$npm_package_version\" && git push && microbundle && npm publish && cross-env-shell hub release create -m \"$npm_package_version\" \"$npm_package_version\"",
+    "build": "preact build --template src/template.html --no-prerender --dest docs && git add docs",
+    "ghpages": "npm run build && git add . && cross-env-shell git commit -m \"$npm_package_version\" && git push && cross-env-shell hub release create -m \"$npm_package_version\" \"$npm_package_version\"",
+    "both": "npm run ghpages && npm run dist"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",

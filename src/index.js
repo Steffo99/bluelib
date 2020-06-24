@@ -7,8 +7,9 @@ import TablePanel from "./components/Panels/TablePanel";
 import Timer from "./components/Elements/Timer";
 import Todo from "./components/Elements/Todo";
 
-import HInput from "./components/Layout/HInput";
-import HButton from "./components/Layout/HButton";
+import FormRow from "./components/Forms/FormRow";
+import FormInput from "./components/Forms/FormInput";
+import FormButton from "./components/Forms/FormButton";
 import Split from "./components/Layout/Split";
 
 import BLatex from "./components/Rendering/BLatex";
@@ -54,8 +55,9 @@ export {
     Timer,
     Todo,
 
-    HInput,
-    HButton,
+    FormRow,
+    FormInput,
+    FormButton,
     Split,
 
     BLatex,

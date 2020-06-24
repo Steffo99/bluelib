@@ -1,4 +1,5 @@
 @import "constants.less";
+@import "mixins.less";
 
 .bluelib {
     background-color: @bg;
@@ -56,43 +57,67 @@
     }
 
     input[type="text"], input[type="password"] {
-        color: @fg;
-        background-color: @bg;
-        border: 1px solid @plusplus;
+        .hb(@fg; @bg);
+
         border-radius: 4px;
         padding: 4px;
         font-size: medium;
-
-        &:disabled, &.disabled {
-            cursor: not-allowed;
-        }
     }
 
     button {
-        color: @fg;
-        background-color: @bg;
-        border: 1px solid @plusplus;
+        .hh(@fg, @bg);
+
         border-radius: 4px;
         padding: 4px;
         font-size: medium;
+    }
 
-        &:hover, &.hover {
-            background-color: @plusplus;
-            border: 1px solid @fg;
-            color: @fg;
+    .ok {
+        color: @okfg;
+
+        input[type="text"], input[type="password"] {
+            .hb(@okfg; @okbg);
         }
 
-        &:active, &.active {
-            background-color: fade(@accent, 20%);
-            border: 1px solid @accent;
-            color: @accent;
+        button {
+            .hh(@okfg, @okbg);
+        }
+    }
+
+    .warning {
+        color: @warningfg;
+
+        input[type="text"], input[type="password"] {
+            .hb(@warningfg; @warningbg);
         }
 
-        &:disabled, &.disabled {
-            color: @disabledfg;
-            background-color: @disabledbg;
-            border-style: dotted;
-            cursor: not-allowed;
+        button {
+            .hh(@warningfg, @warningbg);
+        }
+    }
+
+    .error {
+        color: @errorfg;
+
+        input[type="text"], input[type="password"] {
+            .hb(@errorfg; @errorbg);
+        }
+
+        button {
+            .hh(@errorfg; @errorbg);
+        }
+    }
+
+    .disabled {
+        color: @disabledfg;
+        cursor: not-allowed;
+
+        input[type="text"], input[type="password"] {
+            .hb(@disabledfg; @disabledbg);
+        }
+
+        button {
+            .hb(@disabledfg, @disabledbg);
         }
     }
 
