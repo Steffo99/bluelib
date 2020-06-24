@@ -1,12 +1,20 @@
 import concatClass from "../../utils/concatClass";
 import style from "./FormRow.less";
 import theme from "../../styles/theme.less"
-import ValidityStatus from "../Enums/ValidityStatus";
+import ValidityStatus from "../../enums/Validity";
 
 export default function (props) {
+    let color = null;
+    if(props.disabled) {
+        color = theme.disabled;
+    }
+    else if(props.validity) {
+        color = theme[props.validity.validity];
+    }
+
     return (
         <label
-            className={concatClass(style.label, theme[props.validity ? props.validity.validity : ValidityStatus.NONE])}>
+            className={concatClass(style.label, color)}>
             <div className={style.text}>{props.label}</div>
             <div className={style.icon}>{props.icon}</div>
             <div className={style.contents}>

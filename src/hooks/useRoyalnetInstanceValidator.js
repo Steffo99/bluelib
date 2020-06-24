@@ -2,7 +2,7 @@ import { useContext, useState } from 'preact/hooks';
 import RoyalnetInstanceUrl from '../contexts/RoyalnetInstanceUrl';
 import useFormValidator from "./useFormValidator";
 import {royalnetApiRequest} from '../utils/royalnetApiRequest';
-import ValidityStatus from "../components/Enums/ValidityStatus";
+import ValidityStatus from "../enums/Validity";
 
 const instanceUrlRegex = /^https?:\/\/.*?[^/]$/;
 

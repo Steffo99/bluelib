@@ -26,6 +26,8 @@ import LatexRenderColor from "./contexts/LatexRenderColor";
 import RoyalnetInstanceUrl from "./contexts/RoyalnetInstanceUrl";
 import RoyalnetLoginStatus from "./contexts/RoyalnetLoginStatus";
 
+import Validity from "./enums/Validity";
+
 import useFormValidator from "./hooks/useFormValidator";
 import useLoginDataStorage from "./hooks/useLoginDataStorage";
 import useRoyalnetData from "./hooks/useRoyalnetData";
@@ -73,6 +75,8 @@ export {
     LatexRenderColor,
     RoyalnetInstanceUrl,
     RoyalnetLoginStatus,
+
+    Validity,
 
     useFormValidator,
     useLoginDataStorage,

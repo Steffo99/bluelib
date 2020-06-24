@@ -18,7 +18,7 @@ import {
     faRadiation,
     faSpinner
 } from "@fortawesome/free-solid-svg-icons";
-import ValidityStatus from "../components/Enums/ValidityStatus";
+import Validity from "../enums/Validity";
 import style from "./Sample.less";
 
 
@@ -95,42 +95,40 @@ export default function (props) {
                 <Panel title={"FormInputs"}>
                     <FormInput type={"text"} name={"username"} label={"Username"}/>
                     <FormInput type={"password"} label={"Password"}/>
-                    <FormInput type={"text"} label={"Caricamento"} icon={<FontAwesomeIcon icon={faSpinner} pulse={true}/>} validity={{
-                        validity: ValidityStatus.DISABLED,
+                    <FormInput type={"text"} label={"Caricamento"} icon={<FontAwesomeIcon icon={faSpinner} pulse={true}/>} disabled={true} validity={{
                         message: [<FontAwesomeIcon icon={faAddressCard} className={style.flipping}/>, " Take your time..."]
                     }}/>
                     <FormInput type={"text"} label={"OK!"} icon={<FontAwesomeIcon icon={faCheck}/>} validity={{
-                        validity: ValidityStatus.OK,
+                        validity: Validity.OK,
                         message: "",
                     }}/>
                     <FormInput type={"text"} label={"È un angelo!"} icon={<FontAwesomeIcon icon={faExclamationTriangle}/>} validity={{
-                        validity: ValidityStatus.WARNING,
+                        validity: Validity.WARNING,
                         message: "",
                     }}/>
                     <FormInput type={"text"} label={"Spinning Jesus"} icon={<FontAwesomeIcon icon={faCross} spin={true}/>} validity={{
-                        validity: ValidityStatus.ERROR,
+                        validity: Validity.ERROR,
                         message: "",
                     }}/>
                     <FormInput type={"text"} label={"Ur mom"} icon={<FontAwesomeIcon icon={faCircle}/>} validity={{
-                        validity: ValidityStatus.ERROR,
+                        validity: Validity.ERROR,
                         message: "ERROR: she is too fat for this input",
                     }}/>
                 </Panel>
                 <Panel title={"FormButtons"}>
                     Ma quindi era tutto...
                     <FormButton label={"...un bottone?"}>Lo è sempre stato.</FormButton>
-                    <FormButton label={"...disattivato?"} icon={<FontAwesomeIcon icon={faXbox}/>} validity={{
-                        validity: ValidityStatus.DISABLED,
+                    <FormButton label={"...disattivato?"} disabled={true} icon={<FontAwesomeIcon icon={faXbox}/>} validity={{
                         message: "pls w8 a sec"
                     }}>Sì.</FormButton>
                     <FormButton label={"...una città?"} icon={<FontAwesomeIcon icon={faHouseUser}/>} validity={{
-                        validity: ValidityStatus.OK,
+                        validity: Validity.OK,
                     }}>Lucianina?</FormButton>
                     <FormButton label={"...miele?"} icon={<FontAwesomeIcon icon={faBug}/>} validity={{
-                        validity: ValidityStatus.WARNING,
+                        validity: Validity.WARNING,
                     }}>Not the bees!</FormButton>
                     <FormButton label={"...un Helios?"} icon={<FontAwesomeIcon icon={faRadiation}/>} validity={{
-                        validity: ValidityStatus.ERROR,
+                        validity: Validity.ERROR,
                         message: "ERROR: è finito il metallo",
                     }}>[AVVIA ANNICHILIMENTO]</FormButton>
                 </Panel>
