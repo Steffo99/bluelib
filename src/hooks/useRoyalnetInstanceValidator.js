@@ -2,6 +2,7 @@ import { useContext, useState } from 'preact/hooks';
 import RoyalnetInstanceUrl from '../contexts/RoyalnetInstanceUrl';
 import useFormValidator from "./useFormValidator";
 import {royalnetApiRequest} from '../utils/royalnetApiRequest';
+import ValidityStatus from "../components/Enums/ValidityStatus";
 
 const instanceUrlRegex = /^https?:\/\/.*?[^/]$/;
 
@@ -13,7 +14,7 @@ export default function() {
     const instanceUrlStatus = useFormValidator(instanceUrl, (value, setStatus) => {
         if(value.length === 0) {
             setStatus({
-                validity: null,
+                validity: ValidityStatus.NONE,
                 message: ""
             });
             return;
@@ -21,7 +22,7 @@ export default function() {
 
         if(!Boolean(instanceUrlRegex.test(value))) {
             setStatus({
-                validity: false,
+                validity: ValidityStatus.ERROR,
                 message: "Invalid URL"
             });
             return;
@@ -36,7 +37,7 @@ export default function() {
         royalnetApiRequest(value, "GET", "/api/royalnet/version/v1", undefined, abort.signal).then((data) => {
             if(value === instanceUrl) {
                 setStatus({
-                    validity: true,
+                    validity: ValidityStatus.OK,
                     message: `Royalnet ${data["semantic"]}`
                 });
             }
@@ -46,14 +47,14 @@ export default function() {
         }).catch((err) => {
             if(value === instanceUrl) {
                 setStatus({
-                    validity: false,
+                    validity: ValidityStatus.ERROR,
                     message: "Royalnet not found"
                 });
             }
         });
         setStatus({
-            validity: null,
-            message: ""
+            validity: ValidityStatus.CHECKING,
+            message: "Checking..."
         });
     });
 

@@ -1,9 +1,9 @@
-import Box from "./components/Elements/Box";
-import {BoxColors} from "./components/Elements/Box";
+import Box from "./components/Panels/Box";
+import {BoxColors} from "./components/Panels/Box";
 import Image from "./components/Elements/Image";
-import Panel from "./components/Elements/Panel";
-import Section from "./components/Elements/Section";
-import TablePanel from "./components/Elements/TablePanel";
+import Panel from "./components/Panels/Panel";
+import Section from "./components/Panels/Section";
+import TablePanel from "./components/Panels/TablePanel";
 import Timer from "./components/Elements/Timer";
 import Todo from "./components/Elements/Todo";
 
@@ -39,6 +39,10 @@ import isValidDate from "./utils/isValidDate";
 import stripTabs from "./utils/stripTabs";
 import {royalnetApiRequest, RoyalnetApiError} from "./utils/royalnetApiRequest";
 
+import Sample from "./routes/Sample";
+export default function(props) {
+    return <Sample/>
+}
 
 export {
     Box,
