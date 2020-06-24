@@ -19,7 +19,7 @@ export default function (props) {
                 {props.label}
             </div>
             <div className={style.icon}>
-                {props.validity.icon}
+                {props.validity ? props.validity.icon : ""}
             </div>
             <div className={style.contents}>
                 {props.children}
