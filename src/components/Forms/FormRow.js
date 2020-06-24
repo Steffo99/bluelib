@@ -1,4 +1,4 @@
-import {concatClass} from "../../index";
+import concatClass from "../../utils/concatClass";
 import style from "./FormRow.less";
 import theme from "../../styles/theme.less"
 import ValidityStatus from "../Enums/ValidityStatus";

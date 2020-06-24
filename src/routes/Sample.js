@@ -1,9 +1,10 @@
 import theme from "../styles/theme.less";
 import FormInput from "../components/Forms/FormInput";
 import FormButton from "../components/Forms/FormButton";
-import Box, {BoxColors} from "../components/Panels/Box";
+import {BoxColors} from "../components/Panels/Box";
 import {faXbox} from "@fortawesome/free-brands-svg-icons";
-import {Code, Panel} from "../index";
+import Code from "../components/Rendering/Code";
+import Panel from "../components/Panels/Panel";
 import Section from "../components/Panels/Section";
 import Image from "../components/Elements/Image";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
