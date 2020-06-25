@@ -33,9 +33,17 @@ export default function(method, path, body) {
         setInstanceTesterAbort(abort);
 
         royalnetApiRequest(instanceUrl, method, path, body, abort.signal).then(
-            d => setData(d)
+            d =>
+            {
+                setData(d);
+                setError(undefined);
+            }
         ).catch(
-            e => setError(e)
+            e =>
+            {
+                setData(undefined);
+                setError(e);
+            }
         );
     }
 
