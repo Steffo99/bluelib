@@ -21,6 +21,8 @@ export default function(method, path, body) {
     }
 
     function refresh() {
+        console.debug(`Refresh: ${instanceUrl} | ${method} | ${path} | ${body}`)
+
         setData(undefined);
         setError(undefined);
 
@@ -30,7 +32,11 @@ export default function(method, path, body) {
         let abort = new AbortController();
         setInstanceTesterAbort(abort);
 
-        royalnetApiRequest(instanceUrl, method, path, body, abort.signal).then(d => setData(d)).catch((e => setError(e)));
+        royalnetApiRequest(instanceUrl, method, path, body, abort.signal).then(
+            d => setData(d)
+        ).catch(
+            e => setError(e)
+        );
     }
 
     useDeepCompareEffect(() => {
