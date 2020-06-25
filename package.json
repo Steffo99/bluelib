@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "bluelib",
-  "version": "0.13.7",
+  "version": "0.13.8",
   "license": "AGPL-3.0-or-later",
   "source": "src/index.js",
   "main": "dist/index.js",

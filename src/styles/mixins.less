@@ -25,3 +25,19 @@
     color: @accent;
   }
 }
+
+.hnh(@hfg; @hbg) {
+  .hb(@hfg; @hbg);
+
+  &:hover, &.hover {
+    background-color: @hbg;
+    border: 1px solid fade(@hfg, 10%);
+    color: @hfg;
+  }
+
+  &:active, &.active {
+    background-color: @hbg;
+    border: 1px solid fade(@hfg, 10%);
+    color: @hfg;
+  }
+}
