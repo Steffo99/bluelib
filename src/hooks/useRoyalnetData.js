@@ -21,7 +21,7 @@ export default function(method, path, body) {
     }
 
     function refresh() {
-        console.debug(`Refresh: ${instanceUrl} | ${method} | ${path} | ${body}`)
+        console.debug(`Refresh: ${instanceUrl} | ${method} | ${path} | ${JSON.stringify(body)}`)
 
         setData(undefined);
         setError(undefined);
