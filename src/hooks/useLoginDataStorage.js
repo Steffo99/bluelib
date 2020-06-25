@@ -8,12 +8,12 @@ export default function(defaultInstanceUrl) {
 	useEffect(() => {
 		console.debug("Checking if an instanceUrl is stored in the localStorage...");
 		let instanceUrlStore = window.localStorage.getItem("instanceUrl");
-		if(instanceUrlStore === null) return;
+		if(instanceUrlStore) return;
 		console.debug(`Found instanceUrl ${instanceUrlStore}, setting it...`);
 		setInstanceUrl(instanceUrlStore);
 		console.debug("Checking if a valid login token is stored in the localStorage...");
 		let loginStatusStore = JSON.parse(window.localStorage.getItem("loginStatus"));
-		if(loginStatusStore === null) return;
+		if(loginStatusStore) return;
 		console.debug("Found a login token; checking its validity...");
 		royalnetApiRequest(instanceUrlStore,  "GET", "/api/auth/token/v1", {token: loginStatusStore.token}).then((data => {
 			let expiration = new Date(data.expiration);
