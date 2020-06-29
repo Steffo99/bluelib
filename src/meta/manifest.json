@@ -1,0 +1,16 @@
+{
+  "name": "Example",
+  "short_name": "Example",
+  "start_url": "/",
+  "display": "browser",
+  "orientation": "portrait",
+  "background_color": "#0d193b",
+  "theme_color": "#1c2b4f",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "800x800"
+    }
+  ]
+}
