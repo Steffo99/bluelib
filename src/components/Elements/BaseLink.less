@@ -1,0 +1,27 @@
+@import "../../styles/constants.less";
+
+.link {
+    color: @link;
+
+    &.clickable {
+        cursor: pointer;
+
+        &:hover {
+            color: @linkhover;
+        }
+
+        &:active {
+            color: @linkactive;
+        }
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        opacity: 0.4;
+    }
+
+    &.current {
+        color: @accent;
+        font-weight: bold;
+    }
+}
