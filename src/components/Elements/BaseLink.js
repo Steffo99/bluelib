@@ -1,4 +1,4 @@
-import { concatClass } from 'bluelib';
+import concatClass from '../../utils/concatClass';
 import style from './BaseLink.less';
 import { useContext } from 'preact/hooks';
 import CurrentPage from '../../contexts/CurrentPage';
