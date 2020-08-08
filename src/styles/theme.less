@@ -75,11 +75,11 @@
     .ok {
         color: @okfg;
 
-        input[type="text"]&, input[type="password"]&, input[type="text"], input[type="password"] {
+        input[type="text"], input[type="password"] {
             .hb(@okfg; @okbg);
         }
 
-        &button, button {
+        button {
             .hh(@okfg, @okbg);
         }
     }
@@ -87,11 +87,11 @@
     .warning {
         color: @warningfg;
 
-        input[type="text"]&, input[type="password"]&, input[type="text"], input[type="password"] {
+        input[type="text"], input[type="password"] {
             .hb(@warningfg; @warningbg);
         }
 
-        button&, button {
+        button {
             .hh(@warningfg, @warningbg);
         }
     }
@@ -99,26 +99,34 @@
     .error {
         color: @errorfg;
 
-        input[type="text"]&, input[type="password"]&, input[type="text"], input[type="password"] {
+        input[type="text"], input[type="password"] {
             .hb(@errorfg; @errorbg);
         }
 
-        button&, button {
+        button {
             .hh(@errorfg; @errorbg);
         }
     }
 
-    .disabled, :disabled, [disabled] {
+    .disabled {
         color: @disabledfg;
         cursor: not-allowed;
 
-        input[type="text"]&, input[type="password"]&, input[type="text"], input[type="password"] {
+        input[type="text"], input[type="password"] {
             .hb(@disabledfg; @disabledbg);
         }
 
-        button&, button {
+        button {
             .hnh(@disabledfg, @disabledbg);
         }
+    }
+
+    input[type="text"][disabled], input[type="password"][disabled] {
+        .hb(@disabledfg; @disabledbg);
+    }
+
+    button[disabled] {
+        .hnh(@disabledfg, @disabledbg);
     }
 
     hr {

@@ -1,5 +1,5 @@
 import style from "./BasicContainer.less";
-import {concatClass} from "../../index";
+import concatClass from "../../utils/concatClass";
 
 export default function (props) {
 	return (

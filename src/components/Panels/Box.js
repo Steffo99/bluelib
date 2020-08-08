@@ -1,5 +1,5 @@
 import style from "./Box.less";
-import {concatClass} from "../../index";
+import concatClass from "../../utils/concatClass";
 
 export const BoxColors = Object.freeze({
     RED: style.red,
