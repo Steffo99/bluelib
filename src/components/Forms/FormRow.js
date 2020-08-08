@@ -12,18 +12,17 @@ export default function (props) {
     }
 
     return (
-        <label
-            className={concatClass(style.label, color)}>
-            <div className={style.text}>
+        <label class={concatClass(style.label, color)}>
+            <div class={style.text}>
                 {props.label}
             </div>
-            <div className={style.icon}>
+            <div class={style.icon}>
                 {props.validity ? props.validity.icon : ""}
             </div>
-            <div className={style.contents}>
+            <div class={style.contents}>
                 {props.children}
             </div>
-            <div className={style.message}>
+            <div class={style.message}>
                 {props.validity ? props.validity.message : ""}
             </div>
         </label>

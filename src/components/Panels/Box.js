@@ -1,4 +1,5 @@
 import style from "./Box.less";
+import {concatClass} from "../../index";
 
 export const BoxColors = Object.freeze({
     RED: style.red,
@@ -18,7 +19,7 @@ export default function (props) {
     }
 
     return (
-        <div class={style.box + " " + color}>
+        <div class={concatClass(style.box, color, props.class)}>
             {props.children}
         </div>
     );

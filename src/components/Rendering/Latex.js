@@ -45,7 +45,7 @@ export default function(props) {
             <img src={`https://latex.codecogs.com/svg.latex?${equation}`}
                  alt={contents}
                  title={contents}
-                 class={style.latex + " " + display}
+                 class={concatClass(style.latex, display, props.class)}
             />
         );
     }
@@ -55,7 +55,7 @@ export default function(props) {
             <img src={`https://latex.codecogs.com/svg.latex?${equation}`}
                  alt={contents}
                  title={contents}
-                 class={style.latex + " " + display}
+                 class={concatClass(style.latex, display, props.class)}
             />
         );
     }

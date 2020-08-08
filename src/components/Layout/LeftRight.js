@@ -1,8 +1,9 @@
 import style from "./LeftRight.less";
+import {concatClass} from "../../index";
 
 export default function (props) {
 	return (
-		<div class={style.container}>
+		<div class={concatClass(style.container, props.class)}>
 			<div class={style.left}>
 				{props.left}
 			</div>

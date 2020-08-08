@@ -3,7 +3,7 @@ import Box from "./Box";
 
 export default function(props) {
 	return (
-		<Box color={props.color}>
+		<Box color={props.color} class={props.class}>
 			<h3 class={style.title}>
 				{props.title}
 			</h3>
