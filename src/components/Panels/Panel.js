@@ -1,13 +1,12 @@
-import style from "./Panel.less";
 import Box from "./Box";
 
 export default function(props) {
 	return (
 		<Box color={props.color} class={props.class}>
-			<h3 class={style.title}>
+			<h3>
 				{props.title}
 			</h3>
-			<div class={style.contents}>
+			<div>
 				{props.children}
 			</div>
 		</Box>

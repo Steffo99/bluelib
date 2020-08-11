@@ -30,28 +30,44 @@ export default function (props) {
             </h1>
             <Section title={"Panels"}>
                 <Panel title={"Default"}>
-                    This is a default panel.
+                    <p>
+                        This is a default panel.
+                    </p>
                 </Panel>
                 <Panel title={"Red"} color={BoxColors.RED}>
-                    This is a red panel.
+                    <p>
+                        This is a red panel.
+                    </p>
                 </Panel>
                 <Panel title={"Orange"} color={BoxColors.ORANGE}>
-                    This is a orange panel.
+                    <p>
+                        This is a orange panel.
+                    </p>
                 </Panel>
                 <Panel title={"Yellow"} color={BoxColors.YELLOW}>
-                    This is a yellow panel.
+                    <p>
+                        This is a yellow panel.
+                    </p>
                 </Panel>
                 <Panel title={"Lime"} color={BoxColors.LIME}>
-                    This is a lime panel.
+                    <p>
+                        This is a lime panel.
+                    </p>
                 </Panel>
                 <Panel title={"Cyan"} color={BoxColors.CYAN}>
-                    This is a cyan panel.
+                    <p>
+                        This is a cyan panel.
+                    </p>
                 </Panel>
                 <Panel title={"Blue"} color={BoxColors.BLUE}>
-                    This is a blue panel.
+                    <p>
+                        This is a blue panel.
+                    </p>
                 </Panel>
                 <Panel title={"Magenta"} color={BoxColors.MAGENTA}>
-                    This is a magenta panel.
+                    <p>
+                        This is a magenta panel.
+                    </p>
                 </Panel>
             </Section>
             <Section title={"Code"}>

@@ -4,17 +4,14 @@
 .bluelib {
     background-color: @bg;
     color: @fg;
-    font-family: @sans;
+    font-family: sans-serif;
 
     * {
         box-sizing: border-box;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        margin-top: 4px;
-        margin-bottom: 4px;
         color: @accent;
-        font-family: @title;
         font-weight: normal;
         text-align: center;
     }
@@ -37,119 +34,61 @@
         }
     }
 
-    img, iframe {
-        max-width: 100%;
-        max-height: 300px;
-        border-radius: 4px;
-    }
-
     pre, code {
-        font-family: @mono;
+        font-family: monospace;
         font-size: 14px;
     }
 
     blockquote {
         color: @fg;
-        border-left: 3px solid @plusplusplusplus;
-        background-color: @plus;
+        border-left: 3px solid fade(@fg, 20%);
+        background-color: fade(@fg, 5%);
         padding: 4px 4px 4px 8px;
         margin: 8px 0;
     }
 
-    input[type="text"], input[type="password"] {
-        .hb(@fg; @bg);
+    input:not([type="checkbox"]):not([type="radio"]) {
+        .bordered(@fg; @bg);
 
         border-radius: 4px;
         padding: 4px;
         font-size: medium;
     }
 
-    button {
-        .hh(@fg, @bg);
+    button, input[type="button"], input[type="submit"] {
+        .bordered(@fg; @bg);
+
+        :not([disabled]) {
+            .hoverable(@fg; @bg);
+            .clickable(@fg; @bg);
+        }
 
         border-radius: 4px;
         padding: 4px;
         font-size: medium;
-    }
-
-    .ok {
-        color: @okfg;
-
-        input[type="text"], input[type="password"] {
-            .hb(@okfg; @okbg);
-        }
-
-        button {
-            .hh(@okfg, @okbg);
-        }
-    }
-
-    .warning {
-        color: @warningfg;
-
-        input[type="text"], input[type="password"] {
-            .hb(@warningfg; @warningbg);
-        }
-
-        button {
-            .hh(@warningfg, @warningbg);
-        }
-    }
-
-    .error {
-        color: @errorfg;
-
-        input[type="text"], input[type="password"] {
-            .hb(@errorfg; @errorbg);
-        }
-
-        button {
-            .hh(@errorfg; @errorbg);
-        }
-    }
-
-    .disabled {
-        color: @disabledfg;
-        cursor: not-allowed;
-
-        input[type="text"], input[type="password"] {
-            .hb(@disabledfg; @disabledbg);
-        }
-
-        button {
-            .hnh(@disabledfg, @disabledbg);
-        }
-    }
-
-    input[type="text"][disabled], input[type="password"][disabled] {
-        .hb(@disabledfg; @disabledbg);
-    }
-
-    button[disabled] {
-        .hnh(@disabledfg, @disabledbg);
     }
 
     hr {
-        border: 1px solid @plusplusplusplus;
+        border: 1px solid fade(@fg, 20%);
         margin-top: 24px;
         margin-bottom: 24px;
     }
 
     table {
         border-spacing: 0;
-        border: 2px solid @plusplus;
-        background-color: @plus;
+        border: 2px solid fade(@fg, 10%);
+        background-color: fade(@fg, 5%);
         border-collapse: collapse;
 
         thead, tbody {
             th, td {
                 padding: 4px;
-                border: 1px solid @plusplus;
+                border: 1px solid fade(@fg, 10%);
             }
         }
 
         thead {
-            background-color: @plusplus;
+            background-color: fade(@fg, 10%);
             color: @accent;
         }
     }
@@ -170,7 +109,7 @@
         margin: 4px 0;
         padding: 4px;
         font-size: smaller;
-        background-color: @plus;
+        background-color: fade(@fg, 5%);
         border-radius: 4px;
     }
 }

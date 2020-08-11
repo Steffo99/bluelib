@@ -9,7 +9,6 @@ import FormButton from "./components/Forms/FormButton";
 import FormInput from "./components/Forms/FormInput";
 import FormRow from "./components/Forms/FormRow";
 import getEventValue from "./utils/getEventValue";
-import HZero from "./components/Elements/HZero";
 import ILatex from "./components/Rendering/ILatex";
 import Image from "./components/Elements/Image";
 import isString from "./utils/isString";
@@ -58,7 +57,6 @@ export {
     FormInput,
     FormRow,
     getEventValue,
-    HZero,
     ILatex,
     Image,
     isString,

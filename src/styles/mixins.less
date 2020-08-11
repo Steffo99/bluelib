@@ -1,43 +1,24 @@
-@import "constants.less";
-
-.h(@hfg; @hbg) {
+/// A bordered item
+.bordered(@hfg; @hbg) {
   color: @hfg;
   background-color: @hbg;
-}
-
-.hb(@hfg; @hbg) {
-  .h(@hfg; @hbg);
   border: 1px solid fade(@hfg, 10%);
 }
 
-.hh(@hfg; @hbg) {
-  .hb(@hfg; @hbg);
-
+/// A hoverable element
+.hoverable(@hfg, @hbg) {
   &:hover, &.hover {
     background-color: overlay(fade(@hfg, 10%), @hbg);
     border: 1px solid @hfg;
-    color: @hfg;
-  }
-
-  &:active, &.active {
-    background-color: overlay(fade(@accent, 20%), @hbg);
-    border: 1px solid @accent;
-    color: @accent;
+    color: screen(@hfg, #808080);
   }
 }
 
-.hnh(@hfg; @hbg) {
-  .hb(@hfg; @hbg);
-
-  &:hover, &.hover {
-    background-color: @hbg;
-    border: 1px solid fade(@hfg, 10%);
-    color: @hfg;
-  }
-
+/// A clickable element
+.clickable(@hfg, @hbg) {
   &:active, &.active {
-    background-color: @hbg;
-    border: 1px solid fade(@hfg, 10%);
-    color: @hfg;
+    background-color: overlay(rgba(255, 255, 255, 0.2), @hbg);
+    border: 1px solid white;
+    color: white;
   }
 }

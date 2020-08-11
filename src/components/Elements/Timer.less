@@ -1,3 +1,4 @@
+@import "../../styles/mixins.less";
 @import "../../styles/constants.less";
 
 .timer {
@@ -9,8 +10,8 @@
     margin-bottom: 8px;
     padding: 8px;
     grid-template-columns: 80px 80px 80px 80px;
-    border: 2px solid @plusplus;
-    border-radius: 4px;
+
+    .bordered(@fg, @bg);
 }
 
 .days {
@@ -41,8 +42,7 @@
 }
 
 .unknown {
-    color: @magenta;
-    border: 2px solid fade(@magenta, 20%);
+    .bordered(@magenta, @bg);
 
     .count {
         color: @magenta;
@@ -50,8 +50,7 @@
 }
 
 .expired {
-    color: @red;
-    border: 2px solid fade(@red, 20%);
+    .bordered(@red, @bg);
 
     .count {
         color: @red;
