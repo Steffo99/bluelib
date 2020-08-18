@@ -1,4 +1,4 @@
-@import "../../styles/constants.less";
+@import "../../styles/main.less";
 
 .label {
   width: 100%;
@@ -40,4 +40,32 @@
 
 .contentschild {
   width: 100%;
+}
+
+.form-row(@hfg; @hbg; @hdfg; @hdbg) {
+  color: @hfg;
+
+  input:not([type="checkbox"]):not([type="radio"]) {
+    .input-text(@hfg; @hbg; @hdfg; @hdbg) !important;
+  }
+
+  button, input[type="button"], input[type="submit"] {
+    .input-btn(@hfg; @hbg; @hdfg; @hdbg) !important;
+  }
+}
+
+.ok {
+  .form-row(@okfg; @okbg; @disabledfg; @disabledbg);
+}
+
+.warning {
+  .form-row(@warningfg; @warningbg; @disabledfg; @disabledbg);
+}
+
+.error {
+  .form-row(@errorfg; @errorbg; @disabledfg; @disabledbg);
+}
+
+.disabled {
+  .form-row(@disabledfg; @disabledbg; @disabledfg; @disabledbg);
 }

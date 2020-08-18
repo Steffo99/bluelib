@@ -1,24 +1,50 @@
 /// A bordered item
 .bordered(@hfg; @hbg) {
-  color: @hfg;
-  background-color: @hbg;
-  border: 1px solid fade(@hfg, 10%);
+    color: @hfg;
+    background-color: @hbg;
+    border: 1px solid fade(@hfg, 10%);
 }
 
-/// A hoverable element
-.hoverable(@hfg, @hbg) {
-  &:hover, &.hover {
+.hover(@hfg; @hbg) {
     background-color: overlay(fade(@hfg, 10%), @hbg);
     border: 1px solid @hfg;
     color: screen(@hfg, #808080);
-  }
 }
 
-/// A clickable element
-.clickable(@hfg, @hbg) {
-  &:active, &.active {
+.active(@hfg; @hbg) {
     background-color: overlay(rgba(255, 255, 255, 0.2), @hbg);
     border: 1px solid white;
     color: white;
-  }
+}
+
+.input-text(@hfg; @hbg; @hdfg; @hdbg) {
+    &:enabled {
+        .bordered(@hfg; @hbg);
+
+        &:hover, &:focus {
+            .hover(@hfg; @hbg);
+        }
+    }
+
+    &:disabled {
+        .bordered(@hdfg, @hdbg);
+    }
+}
+
+.input-btn(@hfg; @hbg; @hdfg; @hdbg) {
+    &:enabled {
+        .bordered(@hfg; @hbg);
+
+        &:hover, &:focus {
+            .hover(@hfg; @hbg);
+        }
+
+        &:active {
+            .active(@hfg; @hbg);
+        }
+    }
+
+    &:disabled {
+        .bordered(@hdfg, @hdbg);
+    }
 }

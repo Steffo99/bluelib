@@ -8,42 +8,40 @@
   min-width: 256px;
 }
 
+.box-mixin(@color) {
+  border: 2px solid fade(@color, 10%);
+  color: @color;
+  background-color: fade(@color, 2%);
+}
+
 .default {
-  border: 2px solid fade(@fg, 10%);
-  color: @fg;
+  .box-mixin(@fg);
 }
 
 .red {
-  border: 2px solid fade(@red, 10%);
-  color: @red;
+  .box-mixin(@red);
 }
 
 .orange {
-  border: 2px solid fade(@orange, 10%);
-  color: @orange;
+  .box-mixin(@orange);
 }
 
 .yellow {
-  border: 2px solid fade(@yellow, 10%);
-  color: @yellow;
+  .box-mixin(@yellow);
 }
 
 .lime {
-  border: 2px solid fade(@lime, 10%);
-  color: @lime;
+  .box-mixin(@lime);
 }
 
 .cyan {
-  border: 2px solid fade(@cyan, 10%);
-  color: @cyan;
+  .box-mixin(@cyan);
 }
 
 .blue {
-  border: 2px solid fade(@blue, 10%);
-  color: @blue;
+  .box-mixin(@blue);
 }
 
 .magenta {
-  border: 2px solid fade(@magenta, 10%);
-  color: @magenta;
+  .box-mixin(@magenta);
 }

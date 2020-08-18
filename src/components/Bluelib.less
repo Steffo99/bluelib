@@ -1,5 +1,5 @@
-@import "constants.less";
-@import "mixins.less";
+@import "../styles/constants.less";
+@import "../styles/mixins.less";
 
 .bluelib {
     background-color: @bg;
@@ -48,7 +48,7 @@
     }
 
     input:not([type="checkbox"]):not([type="radio"]) {
-        .bordered(@fg; @bg);
+        .input-text(@fg, @bg, @disabledfg, @disabledbg);
 
         border-radius: 4px;
         padding: 4px;
@@ -56,12 +56,7 @@
     }
 
     button, input[type="button"], input[type="submit"] {
-        .bordered(@fg; @bg);
-
-        :not([disabled]) {
-            .hoverable(@fg; @bg);
-            .clickable(@fg; @bg);
-        }
+        .input-btn(@fg, @bg, @disabledfg, @disabledbg);
 
         border-radius: 4px;
         padding: 4px;

@@ -1,7 +1,7 @@
 import FormRow from "./FormRow";
 import style from "./FormRow.less";
 import concatClass from "../../utils/concatClass";
-import theme from "../../styles/theme.less";
+import theme from "../Bluelib.less";
 
 export default function (props) {
 	return (

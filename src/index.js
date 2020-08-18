@@ -27,7 +27,7 @@ import Section from "./components/Panels/Section";
 import Split from "./components/Layout/Split";
 import stripTabs from "./utils/stripTabs";
 import TablePanel from "./components/Panels/TablePanel";
-import theme from "./styles/theme.less";
+import theme from "./components/Bluelib.less";
 import Timer from "./components/Elements/Timer";
 import Todo from "./components/Elements/Todo";
 import useFormValidator from "./hooks/useFormValidator";

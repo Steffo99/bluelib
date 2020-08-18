@@ -1,14 +1,15 @@
 import Box from "./Box";
+import Unmargin from "../Layout/Unmargin";
 
 export default function(props) {
 	return (
 		<Box color={props.color} class={props.class}>
-			<h3>
-				{props.title}
-			</h3>
-			<div>
+			<Unmargin>
+				<h3>
+					{props.title}
+				</h3>
 				{props.children}
-			</div>
+			</Unmargin>
 		</Box>
 	);
 }

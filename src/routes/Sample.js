@@ -1,4 +1,3 @@
-import theme from "../styles/theme.less";
 import FormInput from "../components/Forms/FormInput";
 import FormButton from "../components/Forms/FormButton";
 import {BoxColors} from "../components/Panels/Box";
@@ -20,11 +19,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Validity from "../enums/Validity";
 import style from "./Sample.less";
+import Bluelib from "../components/Bluelib";
 
 
 export default function (props) {
     return (
-        <div class={theme.bluelib}>
+        <Bluelib>
             <h1>
                 bluelib {process.env.RELEASE}
             </h1>
@@ -149,6 +149,6 @@ export default function (props) {
                     }}>[AVVIA ANNICHILIMENTO]</FormButton>
                 </Panel>
             </Section>
-        </div>
+        </Bluelib>
     );
 }

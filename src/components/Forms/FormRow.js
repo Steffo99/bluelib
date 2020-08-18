@@ -1,14 +1,13 @@
 import concatClass from "../../utils/concatClass";
 import style from "./FormRow.less";
-import theme from "../../styles/theme.less"
 
 export default function (props) {
     let color = null;
     if(props.disabled) {
-        color = theme.disabled;
+        color = style.disabled;
     }
     else if(props.validity) {
-        color = theme[props.validity.validity];
+        color = style[props.validity.validity];
     }
 
     return (
