@@ -4,6 +4,7 @@ import LatexRenderColor from "../../contexts/LatexRenderColor";
 import LatexDefaultInline from "../../contexts/LatexDefaultInline";
 import LatexDefaultDisplay from "../../contexts/LatexDefaultDisplay";
 import stripTabs from "../../utils/stripTabs";
+import concatClass from "../../utils/concatClass";
 
 export const LatexDisplay = Object.freeze({
     INLINE: style.inline,

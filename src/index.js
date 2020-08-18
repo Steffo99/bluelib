@@ -38,6 +38,7 @@ import Validity from "./enums/Validity";
 import {BoxColors} from "./components/Panels/Box";
 import {LatexDisplay} from "./components/Rendering/Latex";
 import {royalnetApiRequest, RoyalnetApiError} from "./utils/royalnetApiRequest";
+import Bluelib from "./components/Bluelib";
 
 import Sample from "./routes/Sample";
 export default function(props) {
@@ -86,4 +87,5 @@ export {
     useRoyalnetData,
     useRoyalnetInstanceValidator,
     Validity,
+    Bluelib,
 }
