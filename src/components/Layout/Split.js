@@ -5,7 +5,6 @@ export default function (props) {
 
     if(Array.isArray(props.children)) {
         children = props.children.map(element => {
-            console.log(element);
             return (
                 <div class={style.splitchild}>
                     {element}
