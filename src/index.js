@@ -39,6 +39,8 @@ import {BoxColors} from "./components/Panels/Box";
 import {LatexDisplay} from "./components/Rendering/Latex";
 import {royalnetApiRequest, RoyalnetApiError} from "./utils/royalnetApiRequest";
 import Bluelib from "./components/Bluelib";
+import Bottom from "./components/Layout/Bottom";
+import Unmargin from "./components/Layout/Unmargin";
 
 import Sample from "./routes/Sample";
 export default function(props) {
@@ -88,4 +90,6 @@ export {
     useRoyalnetInstanceValidator,
     Validity,
     Bluelib,
+    Bottom,
+    Unmargin,
 }
