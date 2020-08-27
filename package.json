@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "start": "preact watch",
-    "both": "preact build --template src/template.html --no-prerender --dest docs && git add . && cross-env-shell git commit -m \"$npm_package_version\" && git push && microbundle && npm publish && cross-env-shell git tag -m \"$npm_package_version\" \"$npm_package_version\""
+    "both": "git add . && cross-env-shell git commit -m \"$npm_package_version\" && git push && microbundle && npm publish && cross-env-shell git tag -m \"$npm_package_version\" \"$npm_package_version\""
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
