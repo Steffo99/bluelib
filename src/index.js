@@ -41,6 +41,9 @@ import {royalnetApiRequest, RoyalnetApiError} from "./utils/royalnetApiRequest";
 import Bluelib from "./components/Bluelib";
 import Bottom from "./components/Layout/Bottom";
 import Unmargin from "./components/Layout/Unmargin";
+import CodeDefaultStyle from "./contexts/CodeDefaultStyle";
+import CodeDefaultLanguage from "./contexts/CodeDefaultLanguage";
+
 
 import Sample from "./routes/Sample";
 export default function(props) {
@@ -92,4 +95,6 @@ export {
     Bluelib,
     Bottom,
     Unmargin,
+    CodeDefaultStyle,
+    CodeDefaultLanguage,
 }
