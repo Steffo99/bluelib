@@ -1,0 +1,147 @@
+:root {
+    /*
+    CSS variables go here!
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+    */
+
+    /* The main colors of the stylesheet */
+    --background: #0d193b;
+    --foreground: #a0ccff;
+    --accent: #ffffff;
+
+    /* Panel background */
+    --panel: rgba(160, 204, 255, 0.05);  /* It's --foreground, but with 5% alpha */
+    --table: rgba(160, 204, 255, 0.10);  /* It's --foreground, but with 10% alpha */
+    --border: rgba(160, 204, 255, 0.20);  /* It's --foreground, but with 20% alpha */
+
+    /* Link colors */
+    --link: #00caca;
+    --link-hover: #00ffff;
+    --link-active: #a0ffff;
+
+    /* Other colors */
+    --moon: #dccc4f; /* The color of the moon in the server invite background */
+
+    /* Fonts */
+    --font-text: sans-serif;
+    --font-title: serif;
+    --font-code: monospace
+}
+
+* {
+    /* Use border boxes instead of the insane content boxes */
+    box-sizing: border-box;
+
+    /* Set the default border color and style on all elements */
+    border-color: var(--border);
+    border-style: solid;
+}
+
+body {
+    font-family: var(--font-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* Use the accent color for titles */
+    color: var(--accent);
+
+    /* Use a non-bold title font */
+    font-family: var(--font-title);
+    font-weight: normal;
+
+    /* Center titles */
+    text-align: center;
+}
+
+h1 {
+   /* By default h1 are as large as h2, make them larger */
+   font-size: xx-large;
+}
+
+a {
+    color: var(--link);
+
+    /* Remove the underline from links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+a:active {
+    color: var(--link-active);
+}
+
+pre, code {
+    font-family: var(--font-code);
+    font-size: 14px;
+}
+
+blockquote {
+    padding: 4px 4px 4px 8px;
+    margin: 8px 0;
+
+    /* As it is a "panel" element, apply the panel background */
+    background-color: var(--panel);
+
+    /* Display a little border on the left side */
+    border-left-width: 3px;
+}
+
+hr {
+    /* Border width is doubled by browsers */
+    border-width: 1px;
+
+    /* Leave a big margin between the top and the bottom */
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+table {
+    border-spacing: 0;
+    border-width: 2px;
+    border-collapse: collapse;
+}
+
+thead {
+    /* Make the header background a bit lighter */
+    background-color: var(--table);
+
+    /* Render the headers as a title aligned to the left */
+    color: var(--accent);
+    font-family: var(--font-title);
+    font-weight: normal;
+}
+
+th, td {
+    padding: 4px;
+
+    /* Border width is doubled by browsers */
+    border-width: 1px;
+    /* Make the border of the same color as the header */
+    border-color: var(--table);
+}
+
+li {
+    margin: 10px 0;
+}
+
+b {
+    /* Distinguish bold elements by changing their color */
+    color: var(--accent);
+}
+
+abbr[title] {
+    /* Change the cursor while hovering an abbr */
+    cursor: help;
+}
+
+/* Asides should be small panels with smaller text inside */
+aside {
+    margin: 4px 0;
+    padding: 4px;
+    font-size: smaller;
+    background-color: var(--panel);
+    border-radius: 4px;
+}
