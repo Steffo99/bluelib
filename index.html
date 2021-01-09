@@ -2,44 +2,233 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="bluelib.css">
+    <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="skin.css">
     <title>Bluelib 2</title>
 </head>
-<body>
-    <h1>
-        Bluelib 2
-    </h1>
-    <h2>
-        A new beginning
-    </h2>
-    <h3>
-        With no weird stuff
-    </h3>
-    <h4>
-        Just pure CSS
-    </h4>
-    <h5>
-        It's magic, isn't it?
-    </h5>
-    <h6>
-        yes it is
-    </h6>
-    <div class="panel" title="WOAH">
+<body class="theme-bluelib">
+    <main>
+        <hgroup>
+            <h1>
+                Bluelib 2
+            </h1>
+            <h2>
+                RYG style, in pure CSS
+            </h2>
+        </hgroup>
+        <section class="panel">
+            <h3>
+                Welcome to bluelib!
+            </h3>
+            <p>
+                Following are some examples on the things you can do with bluelib.
+            </p>
+            <p>
+                To see how something is done, <kbd>Right Click</kbd> on it and then press <kbd>Inspect Element</kbd>.
+            </p>
+            <img src="https://i.imgur.com/M8sFJeO.png" alt="How to Inspect Element">
+        </section>
         <h2>
-            This.
+            Panels
         </h2>
-        <h3>
-            Is a panel.
-        </h3>
-        <p>
-            Dear God...
-        </p>
-        <p>
-            But wait, there's more!
-        </p>
-        <p>
-            Noooooooooooo...
-        </p>
-    </div>
+        <section class="panel">
+            <h3>
+                Panel
+            </h3>
+            <p>
+                This is a panel.
+            </p>
+            <p>
+                It usually represents a section of text about a topic described by the title above.
+            </p>
+        </section>
+        <table class="panel">
+            <thead>
+                <tr>
+                    <th>This...</th>
+                    <th>...is a...</th>
+                    <th>table!</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tables are containers too!</td>
+                    <td>They will be themed automatically.</td>
+                    <td>Columns will be automatically scaled based on their content.</td>
+                </tr>
+            </tbody>
+        </table>
+        <blockquote class="panel">
+            <h3>
+                Blockquote
+            </h3>
+            <p>
+                This is a blockquote.
+            </p>
+            <p>
+                Blockquotes are specially formatted panels, useful for quotes!
+            </p>
+        </blockquote>
+        <aside class="panel">
+            <h3>
+                Aside
+            </h3>
+            <p>
+                This is an aside.
+            </p>
+            <p>
+                Asides are panels with no border and smaller text, useful to describe less important things while inside
+                a panel.
+            </p>
+        </aside>
+        <h2>
+            Nesting containers
+        </h2>
+        <section class="panel">
+            <h3>
+                Level one
+            </h3>
+            <p>
+                Containers can be nested effortlessly!
+            </p>
+            <p>
+                Drop one outside of any paragraphs and they will nest automatically.
+            </p>
+            <section class="panel">
+                <h3>
+                    Level two
+                </h3>
+                <p>
+                    You can add text above...
+                </p>
+                <section class="panel">
+                    <h3>
+                        Level three
+                    </h3>
+                    <p>
+                        How deep does the rabbit hole go?
+                    </p>
+                    <blockquote class="panel">
+                        <b><a href="https://www.youtube.com/watch?v=G2jUhnCU9iA" target="_blank">PANELCEPTION.</a></b>
+                        <aside class="panel">
+                            BWOON.
+                            <aside class="panel">
+                                BWOON.
+                                <aside class="panel">
+                                    BWOON.
+                                </aside>
+                            </aside>
+                        </aside>
+                    </blockquote>
+                </section>
+                <p>
+                    ...or below!
+                </p>
+            </section>
+        </section>
+        <h2>
+            Layout
+        </h2>
+        <section class="panel">
+            <h3>
+                Splitter and splitted
+            </h3>
+            <p>
+                You can split elements into multiple columns.
+            </p>
+            <p>
+                The columns will grow automatically to on the height of the tallest.
+            </p>
+            <div class="splitter">
+                <section class="splitted panel">
+                    <h3>
+                        Shorter panel
+                    </h3>
+                    <p>
+                        That's it.
+                    </p>
+                </section>
+                <section class="splitted panel">
+                    <h3>
+                        Taller panel
+                    </h3>
+                    <p><a href="https://bit.ly/3ou3jzG">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Giro in barca ma teme che le diverse e
+                        grandi prestazioni morbide. Per essere sempre un letto posuere posuere velit, ac lacinia ai
+                        bordi di un lago. Vestibulum vehicles, metus blandit fringilla of life, volutpat arcu lorem mi,
+                        eget porttitor augue turpis vitae libero. Laghi che ora hanno bisogno solo di proteine presenti
+                        membri del calcio. Nessuna temperatura libera UE. Attualmente le forze dell'ordine sono libere.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Calcio scommesse chili ricette
+                        calcio taccuino, con un morbido banane.
+                    </a></p>
+                </section>
+            </div>
+        </section>
+        <section class="panel">
+            <h3>
+                Horizonal rows
+            </h3>
+            <p>
+                You can add horizontal rows to the page:
+            </p>
+            <hr>
+            <p>
+                They are very useful as separators!
+            </p>
+        </section>
+        <h2>
+            Formatting
+        </h2>
+        <div class="splitter">
+            <section class="splitted panel">
+                <h3>
+                    Colors
+                </h3>
+                <p>
+                    You can use colored text:
+                </p>
+                <ul>
+                    <li><span class="color-red">Red</span></li>
+                    <li><span class="color-orange">Orange</span></li>
+                    <li><span class="color-yellow">Yellow</span></li>
+                    <li><span class="color-lime">Lime</span></li>
+                    <li><span class="color-cyan">Cyan</span></li>
+                    <li><span class="color-blue">Blue</span></li>
+                    <li><span class="color-magenta">Magenta</span></li>
+                </ul>
+            </section>
+            <section class="splitted panel">
+                <h3>
+                    Size
+                </h3>
+                <p>
+                    You can set the text size:
+                </p>
+                <ul>
+                    <li><span class="size-xxl">XXL</span></li>
+                    <li><span class="size-xl">XL</span></li>
+                    <li><span class="size-l">L</span></li>
+                    <li><span class="size-m">M</span></li>
+                    <li><span class="size-s">S</span></li>
+                    <li><span class="size-xs">XS</span></li>
+                    <li><span class="size-xxs">XXS</span></li>
+                </ul>
+            </section>
+            <section class="splitted panel">
+                <h3>
+                    Alignment
+                </h3>
+                <p>
+                    You can set the text alignment (<i>only in block elements</i> such as div):
+                </p>
+                <div class="align-left">Left</div>
+                <div class="align-center">Center</div>
+                <div class="align-right">Right</div>
+            </section>
+        </div>
+        <h2>
+
+        </h2>
+    </main>
 </body>
 </html>
