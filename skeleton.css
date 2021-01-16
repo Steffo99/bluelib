@@ -24,7 +24,8 @@
 
 /* --- Main container --- */
 
-main {
+main,
+.main {
     margin-left: auto;
     margin-right: auto;
     max-width: 1280px;
@@ -37,9 +38,10 @@ main {
     flex-wrap: wrap;
     gap: 8px;
     margin: 8px 0;
+    justify-content: center;
 }
 
-.splitted {
+.splitted {  /* Yes I know split is irregular, but it allows to disambiguate better between splitter and split */
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
@@ -136,10 +138,20 @@ i,
     color: magenta;
 }
 
-/* --- Code blocks --- */
+/* --- Text mode --- */
 
+pre, code, kbd,
 .monospace {
     font-family: monospace;
+}
+
+.spoiler {
+    filter: blur(5px);
+    cursor: help;
+}
+
+.spoiler:hover {
+    filter: none;
 }
 
 /* --- Containers --- */
@@ -154,7 +166,7 @@ i,
 }
 
 /* Dirty hack to have uniform margins */
-.splitter .panel, .panel .panel, .panel .splitter {
+.splitter > .panel, .panel > .panel, .panel > .splitter {
     margin: 0;
 }
 
@@ -166,6 +178,28 @@ i,
 .panel p:last-child, /* Remove the margin from the last paragraph of a panel */
 .no-margin-bottom {
     margin-bottom: 0;
+}
+
+.no-margin-vertical {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.no-margin-left {
+    margin-left: 0;
+}
+
+.no-margin-right {
+    margin-right: 0;
+}
+
+.no-margin-horizontal {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.no-margin-all {
+    margin: 0;
 }
 
 .panel h1:first-child, /* Add a slight margin to the first title of a panel */
@@ -219,6 +253,18 @@ th, td,
     border-width: 1px;
 }
 
+/* Limited panels */
+.limited {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.limited {
+    max-width: 420px;
+    max-height: 420px;
+}
+
 /* --- Separators --- */
 
 hr,
@@ -234,7 +280,8 @@ li,
 }
 
 /* --- Misc --- */
-abbr[title],
+
+*[title],
 .with-title-text {
     cursor: help;
 }
