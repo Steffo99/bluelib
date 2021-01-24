@@ -1,0 +1,335 @@
+.bluelib-skeleton * {
+  box-sizing: border-box;
+}
+.bluelib-skeleton .container-main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+}
+.bluelib-skeleton .panel {
+  margin: 8px 0;
+  width: 100%;
+}
+.bluelib-skeleton .panel > .panel {
+  margin: 0;
+}
+.bluelib-skeleton .panel > .paragraph:first-child {
+  margin-top: 0;
+}
+.bluelib-skeleton .panel > .paragraph:last-child {
+  margin-bottom: 0;
+}
+.bluelib-skeleton .panel > .title:first-child {
+  margin-top: 4px;
+}
+.bluelib-skeleton .panel > .title:last-child {
+  margin-bottom: 4px;
+}
+.bluelib-skeleton .panel-box {
+  padding: 8px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgba(0, 0, 0, 0.025);
+}
+.bluelib-skeleton .panel-blockquote {
+  padding: 8px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgba(0, 0, 0, 0.025);
+  border-left-width: 2px;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-right-width: 0;
+}
+.bluelib-skeleton .panel-aside {
+  padding: 8px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgba(0, 0, 0, 0.025);
+  border-width: 0;
+  font-size: smaller;
+}
+.bluelib-skeleton .panel-table {
+  padding: 8px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgba(0, 0, 0, 0.025);
+  display: table;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.bluelib-skeleton .panel-split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.bluelib-skeleton .panel-split > * {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+}
+.bluelib-skeleton .status-disabled {
+  cursor: not-allowed;
+}
+.bluelib-skeleton .status-hoverable {
+  cursor: help;
+}
+.bluelib-skeleton .status-clickable {
+  cursor: pointer;
+}
+.bluelib-skeleton .spoiler {
+  filter: blur(5px);
+  cursor: help;
+}
+.bluelib-skeleton .spoiler:hover {
+  filter: none;
+}
+.bluelib-skeleton .element-title {
+  text-align: center;
+}
+.bluelib-skeleton .element-separator {
+  border-width: 1px;
+  border-color: dimgrey;
+}
+.bluelib-skeleton .element-list-item {
+  margin: 10px 0;
+}
+.bluelib-skeleton .align-left {
+  text-align: left;
+}
+.bluelib-skeleton .align-center {
+  text-align: center;
+}
+.bluelib-skeleton .align-right {
+  text-align: right;
+}
+.bluelib-skeleton .size-xxl {
+  font-size: xx-large;
+}
+.bluelib-skeleton .size-xl {
+  font-size: x-large;
+}
+.bluelib-skeleton .size-l {
+  font-size: large;
+}
+.bluelib-skeleton .size-m {
+  font-size: medium;
+}
+.bluelib-skeleton .size-s {
+  font-size: small;
+}
+.bluelib-skeleton .size-xs {
+  font-size: x-small;
+}
+.bluelib-skeleton .size-xxs {
+  font-size: xx-small;
+}
+.bluelib-skeleton .style-bold {
+  font-weight: bold;
+}
+.bluelib-skeleton .style-italic {
+  font-style: italic;
+}
+.bluelib-skeleton .style-underline {
+  text-decoration-line: underline;
+}
+.bluelib-skeleton .style-strike {
+  text-decoration-line: line-through;
+}
+.bluelib-skeleton .style-monospace {
+  font-family: monospace;
+}
+.bluelib-skeleton .color-red {
+  color: red;
+}
+.bluelib-skeleton .color-orange {
+  color: orange;
+}
+.bluelib-skeleton .color-yellow {
+  color: #dddd00;
+}
+.bluelib-skeleton .color-lime {
+  color: lime;
+}
+.bluelib-skeleton .color-cyan {
+  color: cyan;
+}
+.bluelib-skeleton .color-blue {
+  color: blue;
+}
+.bluelib-skeleton .color-magenta {
+  color: magenta;
+}
+.bluelib * {
+  box-sizing: border-box;
+}
+.bluelib .container-main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+}
+.bluelib .panel {
+  margin: 8px 0;
+  width: 100%;
+}
+.bluelib .panel > .panel {
+  margin: 0;
+}
+.bluelib .panel > .paragraph:first-child {
+  margin-top: 0;
+}
+.bluelib .panel > .paragraph:last-child {
+  margin-bottom: 0;
+}
+.bluelib .panel > .title:first-child {
+  margin-top: 4px;
+}
+.bluelib .panel > .title:last-child {
+  margin-bottom: 4px;
+}
+.bluelib .panel-box {
+  padding: 8px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgba(0, 0, 0, 0.025);
+}
+.bluelib .panel-blockquote {
+  padding: 8px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgba(0, 0, 0, 0.025);
+  border-left-width: 2px;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-right-width: 0;
+}
+.bluelib .panel-aside {
+  padding: 8px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgba(0, 0, 0, 0.025);
+  border-width: 0;
+  font-size: smaller;
+}
+.bluelib .panel-table {
+  padding: 8px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgba(0, 0, 0, 0.025);
+  display: table;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.bluelib .panel-split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.bluelib .panel-split > * {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+}
+.bluelib .status-disabled {
+  cursor: not-allowed;
+}
+.bluelib .status-hoverable {
+  cursor: help;
+}
+.bluelib .status-clickable {
+  cursor: pointer;
+}
+.bluelib .spoiler {
+  filter: blur(5px);
+  cursor: help;
+}
+.bluelib .spoiler:hover {
+  filter: none;
+}
+.bluelib .element-title {
+  text-align: center;
+}
+.bluelib .element-separator {
+  border-width: 1px;
+  border-color: dimgrey;
+}
+.bluelib .element-list-item {
+  margin: 10px 0;
+}
+.bluelib .align-left {
+  text-align: left;
+}
+.bluelib .align-center {
+  text-align: center;
+}
+.bluelib .align-right {
+  text-align: right;
+}
+.bluelib .size-xxl {
+  font-size: xx-large;
+}
+.bluelib .size-xl {
+  font-size: x-large;
+}
+.bluelib .size-l {
+  font-size: large;
+}
+.bluelib .size-m {
+  font-size: medium;
+}
+.bluelib .size-s {
+  font-size: small;
+}
+.bluelib .size-xs {
+  font-size: x-small;
+}
+.bluelib .size-xxs {
+  font-size: xx-small;
+}
+.bluelib .style-bold {
+  font-weight: bold;
+}
+.bluelib .style-italic {
+  font-style: italic;
+}
+.bluelib .style-underline {
+  text-decoration-line: underline;
+}
+.bluelib .style-strike {
+  text-decoration-line: line-through;
+}
+.bluelib .style-monospace {
+  font-family: monospace;
+}
+.bluelib .color-red {
+  color: red;
+}
+.bluelib .color-orange {
+  color: orange;
+}
+.bluelib .color-yellow {
+  color: #dddd00;
+}
+.bluelib .color-lime {
+  color: lime;
+}
+.bluelib .color-cyan {
+  color: cyan;
+}
+.bluelib .color-blue {
+  color: blue;
+}
+.bluelib .color-magenta {
+  color: magenta;
+}
+/*# sourceMappingURL=skeleton-class.css.map */
