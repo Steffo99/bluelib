@@ -1,7 +1,6 @@
 // This mixin should contain ONLY positioning and layout rules.
 // They will be compiled later to different targets.
-
-.bluelib-skeleton() {
+.bluelib-skeleton {
     // Reset the insane box-sizing default
     box-sizing: border-box;
 
@@ -142,6 +141,10 @@
         margin: 10px 0;
     }
 
+    .element-anchor {
+
+    }
+
     // --- Alignment ---
 
     .align-left {
@@ -204,6 +207,10 @@
         text-decoration-line: line-through;
     }
 
+    .style-monospace {
+        font-family: monospace;
+    }
+
     // --- Colors ---
 
     .color-red {
@@ -232,71 +239,5 @@
 
     .color-magenta {
         color: magenta;
-    }
-
-    // === INHERITANCES ===
-
-    h1, h2, h3, h4, h5, h6 {
-        .element-title();
-    }
-
-    hr {
-        .element-separator();
-    }
-
-    p {
-        .element-paragraph();
-    }
-
-    h1 {
-        .size-xxl();
-    }
-
-    h2 {
-        .size-xl();
-    }
-
-    h3 {
-        .size-l();
-    }
-
-    h4 {
-        .size-m();
-    }
-
-    h5 {
-        .size-s();
-    }
-
-    h6 {
-        .size-xs();
-    }
-
-    b {
-        .style-bold();
-    }
-
-    i {
-        .style-italic();
-    }
-
-    u {
-        .style-underline();
-    }
-
-    li {
-        .element-list-item();
-    }
-
-    *[title] {
-        .status-hoverable();
-    }
-
-    *[disabled] {
-        .status-disabled();
-    }
-
-    *[onclick] {
-        .status-clickable();
     }
 }

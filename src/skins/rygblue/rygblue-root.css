@@ -1,0 +1,96 @@
+:root {
+  background-color: #0d193b;
+  color: #a0ccff;
+  font-family: sans-serif;
+}
+:root .panel-box {
+  background-color: rgba(160, 204, 255, 0.02);
+  border-color: rgba(160, 204, 255, 0.1);
+}
+:root .panel-blockquote {
+  background-color: rgba(160, 204, 255, 0.02);
+  border-color: rgba(160, 204, 255, 0.1);
+}
+:root .panel-aside {
+  background-color: rgba(160, 204, 255, 0.02);
+  border-color: rgba(160, 204, 255, 0.1);
+}
+:root .panel-table {
+  background-color: rgba(160, 204, 255, 0.02);
+  border-color: rgba(160, 204, 255, 0.1);
+}
+:root .element-title {
+  color: #ffffff;
+  font-family: sans-serif;
+}
+:root .element-anchor {
+  color: #00caca;
+  text-decoration: none;
+}
+:root .element-anchor:hover {
+  color: #00ffff;
+}
+:root .element-anchor:active {
+  color: #a0ffff;
+}
+:root .style-bold {
+  color: #ffffff;
+}
+:root .style-strike {
+  text-decoration-color: #ff7d7d;
+}
+:root .style-monospace {
+  font-family: sans-serif;
+}
+:root .color-red {
+  color: #ff7d7d;
+}
+:root .color-orange {
+  color: #ffbb7d;
+}
+:root .color-yellow {
+  color: #ffff7d;
+}
+:root .color-lime {
+  color: #7dff7d;
+}
+:root .color-cyan {
+  color: #7dffff;
+}
+:root .color-blue {
+  color: #7d7dff;
+}
+:root .color-magenta {
+  color: #ff7dff;
+}
+:root h1,
+:root h2,
+:root h3,
+:root h4,
+:root h5,
+:root h6 {
+  color: #ffffff;
+  font-family: sans-serif;
+}
+:root b {
+  color: #ffffff;
+}
+:root pre,
+:root code,
+:root kbd {
+  font-family: sans-serif;
+}
+:root strike {
+  text-decoration-color: #ff7d7d;
+}
+:root a {
+  color: #00caca;
+  text-decoration: none;
+}
+:root a:hover {
+  color: #00ffff;
+}
+:root a:active {
+  color: #a0ffff;
+}
+/*# sourceMappingURL=rygblue-root.css.map */
