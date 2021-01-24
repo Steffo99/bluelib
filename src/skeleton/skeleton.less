@@ -1,0 +1,248 @@
+// This mixin should contain ONLY positioning and layout rules.
+// They will be compiled later to different targets.
+.bluelib-skeleton {
+    // Reset the insane box-sizing default
+    // Should this be changed to something different?
+    * {
+        box-sizing: border-box;
+    }
+
+    // === RULES ===
+
+    // --- Containers ---
+
+    .container-main {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1280px;
+    }
+
+
+    // --- Panels ---
+    // Remember to use BOTH the panel AND the panel-* class when using a panel element!
+
+    .panel {
+        margin: 8px 0;
+        width: 100%;
+
+        > .panel {
+            margin: 0;
+        }
+
+        // Remove the margin from paragraphs, if they are the first or last element of the panel
+        > .paragraph {
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        // Reduce the margin from titles, if they are the first or last element of the panel
+        > .title {
+            &:first-child {
+                margin-top: 4px;
+            }
+
+            &:last-child {
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+    // A generic content box
+    .panel-box {
+        padding: 8px;
+        border-radius: 4px;
+        border-width: 2px;
+        border-style: solid;
+        background-color: rgba(0, 0, 0, 0.025);  // Make the panel more noticeable on a white background
+    }
+
+    // Should be the same as a box, but with a quote-like border
+    .panel-blockquote {
+        .panel-box();
+
+        border-left-width: 2px;
+        border-top-width: 0;
+        border-bottom-width: 0;
+        border-right-width: 0;
+    }
+
+    // Should be the same as a box, but with smaller text and no border
+    .panel-aside {
+        .panel-box();
+
+        border-width: 0;
+        font-size: smaller;
+    }
+
+    // Should be the same as a box, but display its contents differently
+    .panel-table {
+        .panel-box();
+
+        display: table;
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+
+    // Evenly split the panels contained inside
+    .panel-split {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+
+        > * {
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 0;
+        }
+    }
+
+    // --- Element status ---
+
+    .status-disabled {
+        cursor: not-allowed;
+    }
+
+    .status-hoverable {
+        cursor: help;
+    }
+
+    .status-clickable {
+        cursor: pointer;
+    }
+
+    // --- Spoilers ---
+
+    .spoiler {
+        filter: blur(5px);
+        cursor: help;
+
+        &:hover {
+            filter: none;
+        }
+    }
+
+    // --- Elements ---
+
+    .element-title {
+        .align-center();
+    }
+
+    .element-paragraph {
+
+    }
+
+    .element-separator {
+        border-width: 1px;
+        border-color: dimgrey;
+    }
+
+    .element-list-item {
+        margin: 10px 0;
+    }
+
+    .element-anchor {
+
+    }
+
+    // --- Alignment ---
+
+    .align-left {
+        text-align: left;
+    }
+
+    .align-center {
+        text-align: center;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+
+    // --- Sizes ---
+
+    .size-xxl {
+        font-size: xx-large;
+    }
+
+    .size-xl {
+        font-size: x-large;
+    }
+
+    .size-l {
+        font-size: large;
+    }
+
+    .size-m {
+        font-size: medium;
+    }
+
+    .size-s {
+        font-size: small;
+    }
+
+    .size-xs {
+        font-size: x-small;
+    }
+
+    .size-xxs {
+        font-size: xx-small;
+    }
+
+    // --- Styles ---
+
+    .style-bold {
+        font-weight: bold;
+    }
+
+    .style-italic {
+        font-style: italic;
+    }
+
+    .style-underline {
+        text-decoration-line: underline;
+    }
+
+    .style-strike {
+        text-decoration-line: line-through;
+    }
+
+    .style-monospace {
+        font-family: monospace;
+    }
+
+    // --- Colors ---
+
+    .color-red {
+        color: red;
+    }
+
+    .color-orange {
+        color: orange;
+    }
+
+    .color-yellow {
+        color: #dddd00;  // Pure yellow isn't readable on a white background
+    }
+
+    .color-lime {
+        color: lime;
+    }
+
+    .color-cyan {
+        color: cyan;
+    }
+
+    .color-blue {
+        color: blue;
+    }
+
+    .color-magenta {
+        color: magenta;
+    }
+}
