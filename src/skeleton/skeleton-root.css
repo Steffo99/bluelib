@@ -1,4 +1,4 @@
-.bluelib-skeleton {
+.bluelib-skeleton * {
   box-sizing: border-box;
 }
 .bluelib-skeleton .container-main {
@@ -29,12 +29,14 @@
   padding: 8px;
   border-radius: 4px;
   border-width: 2px;
+  border-style: solid;
   background-color: rgba(0, 0, 0, 0.025);
 }
 .bluelib-skeleton .panel-blockquote {
   padding: 8px;
   border-radius: 4px;
   border-width: 2px;
+  border-style: solid;
   background-color: rgba(0, 0, 0, 0.025);
   border-left-width: 2px;
   border-top-width: 0;
@@ -45,6 +47,7 @@
   padding: 8px;
   border-radius: 4px;
   border-width: 2px;
+  border-style: solid;
   background-color: rgba(0, 0, 0, 0.025);
   border-width: 0;
   font-size: smaller;
@@ -53,6 +56,7 @@
   padding: 8px;
   border-radius: 4px;
   border-width: 2px;
+  border-style: solid;
   background-color: rgba(0, 0, 0, 0.025);
   display: table;
   border-spacing: 0;
@@ -90,6 +94,7 @@
 }
 .bluelib-skeleton .element-separator {
   border-width: 1px;
+  border-color: dimgrey;
 }
 .bluelib-skeleton .element-list-item {
   margin: 10px 0;
@@ -160,7 +165,7 @@
 .bluelib-skeleton .color-magenta {
   color: magenta;
 }
-:root {
+:root * {
   box-sizing: border-box;
 }
 :root .container-main {
@@ -191,12 +196,14 @@
   padding: 8px;
   border-radius: 4px;
   border-width: 2px;
+  border-style: solid;
   background-color: rgba(0, 0, 0, 0.025);
 }
 :root .panel-blockquote {
   padding: 8px;
   border-radius: 4px;
   border-width: 2px;
+  border-style: solid;
   background-color: rgba(0, 0, 0, 0.025);
   border-left-width: 2px;
   border-top-width: 0;
@@ -207,6 +214,7 @@
   padding: 8px;
   border-radius: 4px;
   border-width: 2px;
+  border-style: solid;
   background-color: rgba(0, 0, 0, 0.025);
   border-width: 0;
   font-size: smaller;
@@ -215,6 +223,7 @@
   padding: 8px;
   border-radius: 4px;
   border-width: 2px;
+  border-style: solid;
   background-color: rgba(0, 0, 0, 0.025);
   display: table;
   border-spacing: 0;
@@ -252,6 +261,7 @@
 }
 :root .element-separator {
   border-width: 1px;
+  border-color: dimgrey;
 }
 :root .element-list-item {
   margin: 10px 0;
@@ -332,6 +342,7 @@
 }
 :root hr {
   border-width: 1px;
+  border-color: dimgrey;
 }
 :root h1 {
   font-size: xx-large;
@@ -370,6 +381,10 @@
 }
 :root li {
   margin: 10px 0;
+}
+:root hr {
+  border-width: 1px;
+  border-color: dimgrey;
 }
 :root *[title] {
   cursor: help;

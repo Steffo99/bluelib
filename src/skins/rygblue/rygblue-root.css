@@ -23,6 +23,9 @@
   color: #ffffff;
   font-family: sans-serif;
 }
+:root .element-separator {
+  border-color: rgba(160, 204, 255, 0.1);
+}
 :root .element-anchor {
   color: #00caca;
   text-decoration: none;
@@ -72,6 +75,9 @@
   color: #ffffff;
   font-family: sans-serif;
 }
+:root hr {
+  border-color: rgba(160, 204, 255, 0.1);
+}
 :root b {
   color: #ffffff;
 }
@@ -82,6 +88,9 @@
 }
 :root strike {
   text-decoration-color: #ff7d7d;
+}
+:root hr {
+  border-color: rgba(160, 204, 255, 0.1);
 }
 :root a {
   color: #00caca;

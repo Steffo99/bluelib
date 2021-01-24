@@ -2,7 +2,10 @@
 // They will be compiled later to different targets.
 .bluelib-skeleton {
     // Reset the insane box-sizing default
-    box-sizing: border-box;
+    // Should this be changed to something different?
+    * {
+        box-sizing: border-box;
+    }
 
     // === RULES ===
 
@@ -54,6 +57,7 @@
         padding: 8px;
         border-radius: 4px;
         border-width: 2px;
+        border-style: solid;
         background-color: rgba(0, 0, 0, 0.025);  // Make the panel more noticeable on a white background
     }
 
@@ -135,6 +139,7 @@
 
     .element-separator {
         border-width: 1px;
+        border-color: dimgrey;
     }
 
     .element-list-item {

@@ -23,6 +23,9 @@
   color: #ffffff;
   font-family: sans-serif;
 }
+.bluelib-skin-rygblue .element-separator {
+  border-color: rgba(160, 204, 255, 0.1);
+}
 .bluelib-skin-rygblue .element-anchor {
   color: #00caca;
   text-decoration: none;
