@@ -1,0 +1,3 @@
+[submodule "src/bluelib"]
+	path = src/bluelib
+	url = git@github.com:RYGhub/bluelib.git

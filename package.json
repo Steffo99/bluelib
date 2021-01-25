@@ -1,0 +1,43 @@
+{
+    "name": "bluelib",
+    "version": "0.22.0",
+    "description": "React components for Bluelib",
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "files": [
+        "css",
+        "es",
+        "lib",
+        "umd"
+    ],
+    "scripts": {
+        "build": "nwb build-react-component",
+        "prepublishOnly": "npm run build",
+        "start": "styleguidist server"
+    },
+    "dependencies": {
+        "classnames": "^2.2.6",
+        "mathjax-react": "^1.0.6",
+        "prop-types": "^15.7.2",
+        "react-syntax-highlighter": "^15.4.3",
+        "strip-indent": "^3.0.0",
+        "@babel/preset-env": "^7.12.11",
+        "@babel/preset-react": "^7.12.10",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1"
+    },
+    "peerDependencies": {
+        "react": "16.x"
+    },
+    "devDependencies": {
+        "nwb": "0.25.x",
+        "react-styleguidist": "^11.1.5"
+    },
+    "author": "",
+    "homepage": "",
+    "license": "MIT",
+    "repository": "",
+    "keywords": [
+        "react-component"
+    ]
+}
