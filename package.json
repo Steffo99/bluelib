@@ -1,6 +1,6 @@
 {
     "name": "bluelib",
-    "version": "0.23.1",
+    "version": "0.23.2",
     "description": "React components for Bluelib",
     "main": "lib/index.js",
     "module": "es/index.js",
@@ -11,7 +11,7 @@
         "umd"
     ],
     "scripts": {
-        "build": "nwb build-react-component",
+        "build": "nwb build-react-component --copy-files",
         "prepublishOnly": "npm run build",
         "start": "styleguidist server"
     },
