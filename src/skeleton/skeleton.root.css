@@ -13,16 +13,16 @@
 .bluelib-skeleton .panel > .panel {
   margin: 0;
 }
-.bluelib-skeleton .panel > .paragraph:first-child {
+.bluelib-skeleton .panel > .element-paragraph:first-child {
   margin-top: 0;
 }
-.bluelib-skeleton .panel > .paragraph:last-child {
+.bluelib-skeleton .panel > .element-paragraph:last-child {
   margin-bottom: 0;
 }
-.bluelib-skeleton .panel > .title:first-child {
+.bluelib-skeleton .panel > .element-title:first-child {
   margin-top: 4px;
 }
-.bluelib-skeleton .panel > .title:last-child {
+.bluelib-skeleton .panel > .element-title:last-child {
   margin-bottom: 4px;
 }
 .bluelib-skeleton .panel-box {
@@ -180,16 +180,16 @@
 :root .panel > .panel {
   margin: 0;
 }
-:root .panel > .paragraph:first-child {
+:root .panel > .element-paragraph:first-child {
   margin-top: 0;
 }
-:root .panel > .paragraph:last-child {
+:root .panel > .element-paragraph:last-child {
   margin-bottom: 0;
 }
-:root .panel > .title:first-child {
+:root .panel > .element-title:first-child {
   margin-top: 4px;
 }
-:root .panel > .title:last-child {
+:root .panel > .element-title:last-child {
   margin-bottom: 4px;
 }
 :root .panel-box {
