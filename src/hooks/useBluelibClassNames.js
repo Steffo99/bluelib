@@ -9,10 +9,16 @@ export default function useBluelibClassNames(cn, extra) {
     const bluelibSkin = useContext(contextBluelibSkin);
 
     // Split class names
-    cn = cn.split(" ");
+    if(typeof(cn) === "string") {
+        cn = cn.split(" ");
+    }
 
     // Get bluelib skeleton and skin class names
     cn = cn.map(c => {
+        if(!c) {
+            return null;
+        }
+
         return classNames(skeleton[c], bluelibSkin ? bluelibSkin[c] : null)
     });
 

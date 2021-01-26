@@ -20,3 +20,4 @@ export {default as Strike} from "./Strike";
 export {default as Table} from "./Table";
 export {default as Title} from "./Title";
 export {default as Underline} from "./Underline";
+export {default as BaseLink} from "./BaseLink";
