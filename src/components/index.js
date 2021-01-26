@@ -10,6 +10,7 @@ export {default as Color} from "./Color";
 export {default as Help} from "./Help";
 export {default as Italic} from "./Italic";
 export {default as LatexMath} from "./LatexMath";
+export {default as ListItem} from "./ListItem";
 export {default as Main} from "./Main";
 export {default as Paragraph} from "./Paragraph";
 export {default as Separator} from "./Separator";
