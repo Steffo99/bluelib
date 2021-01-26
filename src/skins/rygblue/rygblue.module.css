@@ -41,6 +41,7 @@
 }
 .bluelib .style-strike {
   text-decoration-color: #ff7d7d;
+  text-decoration-width: 2px;
 }
 .bluelib .style-monospace {
   font-family: sans-serif;

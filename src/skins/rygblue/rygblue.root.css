@@ -41,6 +41,7 @@
 }
 :root .style-strike {
   text-decoration-color: #ff7d7d;
+  text-decoration-width: 2px;
 }
 :root .style-monospace {
   font-family: sans-serif;
@@ -88,6 +89,7 @@
 }
 :root strike {
   text-decoration-color: #ff7d7d;
+  text-decoration-width: 2px;
 }
 :root hr {
   border-color: rgba(160, 204, 255, 0.1);
