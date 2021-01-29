@@ -75,6 +75,7 @@
 }
 .bluelib-skeleton .status-disabled {
   cursor: not-allowed;
+  opacity: 50%;
 }
 .bluelib-skeleton .status-hoverable {
   cursor: help;
@@ -242,6 +243,7 @@
 }
 .bluelib .status-disabled {
   cursor: not-allowed;
+  opacity: 50%;
 }
 .bluelib .status-hoverable {
   cursor: help;

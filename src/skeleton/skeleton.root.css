@@ -75,6 +75,7 @@
 }
 .bluelib-skeleton .status-disabled {
   cursor: not-allowed;
+  opacity: 50%;
 }
 .bluelib-skeleton .status-hoverable {
   cursor: help;
@@ -242,6 +243,7 @@
 }
 :root .status-disabled {
   cursor: not-allowed;
+  opacity: 50%;
 }
 :root .status-hoverable {
   cursor: help;
@@ -391,6 +393,7 @@
 }
 :root *[disabled] {
   cursor: not-allowed;
+  opacity: 50%;
 }
 :root *[onclick] {
   cursor: pointer;
