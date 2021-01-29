@@ -25,29 +25,14 @@
         margin: 8px 0;
         width: 100%;
 
-        > .panel {
-            margin: 0;
-        }
-
-        // Remove the margin from paragraphs, if they are the first or last element of the panel
-        > .element-paragraph {
+        // Remove the margins from the first and the last elements, as the padding is already good enough
+        > .element-paragraph, .element-title, .panel {
             &:first-child {
                 margin-top: 0;
             }
 
             &:last-child {
                 margin-bottom: 0;
-            }
-        }
-
-        // Reduce the margin from titles, if they are the first or last element of the panel
-        > .element-title {
-            &:first-child {
-                margin-top: 4px;
-            }
-
-            &:last-child {
-                margin-bottom: 4px;
             }
         }
     }
@@ -99,6 +84,10 @@
             flex-grow: 1;
             flex-shrink: 0;
             flex-basis: 0;
+        }
+
+        > .panel {
+            margin: 0;
         }
     }
 
