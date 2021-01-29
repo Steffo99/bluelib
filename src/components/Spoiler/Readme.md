@@ -2,8 +2,8 @@ Hides its contents until the mouse is over the element.
 
 ```jsx
 import Bluelib from "../Bluelib";
-import Box from "./index";
-import Split from "./index";
+import Box from "../Box";
+import Split from "../Split";
 
 <Bluelib>
     <Split>
