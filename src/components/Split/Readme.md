@@ -2,7 +2,7 @@ A **panel** which splits horizontally the contained panels into multiple columns
 
 ```jsx
 import Bluelib from "../Bluelib";
-import Box from "./index";
+import Box from "../Box";
 
 <Bluelib>
     <Box>
