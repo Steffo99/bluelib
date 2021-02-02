@@ -8,7 +8,7 @@ module.exports = {
                     loader: "babel-loader"
                 },
                 {
-                    test: /[.]css$/,
+                    test: /[.]module[.]css$/,
                     use: [
                         "style-loader",
                         {
@@ -19,7 +19,24 @@ module.exports = {
                             }
                         }
                     ]
-                }
+                },
+                {
+                    test: /(?<![.]module)[.]css$/,
+                    use: [
+                        "style-loader",
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1,
+                                modules: false
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /[.](?:ttf|woff|woff2)$/,
+                    loader: "file-loader"
+                },
             ]
         }
     }

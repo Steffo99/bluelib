@@ -9,7 +9,7 @@ export {default as Code} from "./Code";
 export {default as Color} from "./Color";
 export {default as Help} from "./Help";
 export {default as Italic} from "./Italic";
-export {default as LatexMath} from "./LatexMath";
+// export {default as LatexMath} from "./LatexMath";  // Do not export this, it should use dynamic load if imported
 export {default as ListItem} from "./ListItem";
 export {default as Main} from "./Main";
 export {default as Paragraph} from "./Paragraph";

@@ -1,11 +1,12 @@
 import React from "react";
-import { MathComponent } from 'mathjax-react'
+import "katex/dist/katex.css";
+import TeX from '@matejmazur/react-katex';
 import PropTypes from "prop-types";
 
 
 export default function LatexMath({children, block}) {
     return (
-        <MathComponent tex={children} display={block ?? false}/>
+        <TeX math={children} block={block}/>
     )
 }
 

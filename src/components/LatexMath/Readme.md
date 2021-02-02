@@ -3,6 +3,7 @@ Render a Latex math string.
 It can be displayed in block format by setting the `block` prop to `true`.
 
 ```jsx
+import LatexMath from "./index";
 
 <div>
     <p>
@@ -12,5 +13,15 @@ It can be displayed in block format by setting the `block` prop to `true`.
     <p>
         (Don't confuse it with the area, which is <LatexMath>{`4 \\pi r^2`}</LatexMath>!)
     </p>
+    <p>
+        Do you know what <code>abs()</code> is?
+    </p>
+    <LatexMath block={true}>{`
+        | x | = \\begin{cases}
+            x \\qquad x > 0\\\\
+            0 \\qquad x = 0\\\\
+            -x \\qquad x < 0
+        \\end{cases}
+    `}</LatexMath>
 </div>
 ```
