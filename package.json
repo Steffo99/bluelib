@@ -34,10 +34,10 @@
         "nwb": "0.25.x",
         "react-styleguidist": "^11.1.5"
     },
-    "author": "",
+    "author": "Stefano Pigozzi <me@steffo.eu>",
     "homepage": "",
     "license": "MIT",
-    "repository": "",
+    "repository": "https://github.com/RYGhub/bluelib-react",
     "keywords": [
         "react-component"
     ]
