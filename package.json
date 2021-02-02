@@ -1,6 +1,6 @@
 {
     "name": "bluelib",
-    "version": "0.24.3",
+    "version": "0.24.0",
     "description": "React components for Bluelib",
     "main": "lib/index.js",
     "module": "es/index.js",
