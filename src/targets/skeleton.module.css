@@ -1,158 +1,158 @@
-.base-skeleton {
+.bluelib {
   box-sizing: border-box;
 }
-.base-skeleton * {
+.bluelib * {
   box-sizing: border-box;
 }
-.base-skeleton .container-main {
+.bluelib .container-main {
   margin-left: auto;
   margin-right: auto;
   max-width: 1280px;
 }
-.base-skeleton .panel {
+.bluelib .panel {
   margin: 8px 0;
   width: 100%;
 }
-.base-skeleton .panel > .element-paragraph:first-child,
-.base-skeleton .panel .element-title:first-child,
-.base-skeleton .panel .panel:first-child {
+.bluelib .panel > .element-paragraph:first-child,
+.bluelib .panel .element-title:first-child,
+.bluelib .panel .panel:first-child {
   margin-top: 0;
 }
-.base-skeleton .panel > .element-paragraph:last-child,
-.base-skeleton .panel .element-title:last-child,
-.base-skeleton .panel .panel:last-child {
+.bluelib .panel > .element-paragraph:last-child,
+.bluelib .panel .element-title:last-child,
+.bluelib .panel .panel:last-child {
   margin-bottom: 0;
 }
-.base-skeleton .panel-box {
+.bluelib .panel-box {
   padding: 8px;
   border-radius: 4px;
   border-width: 2px;
   border-style: solid;
   background-color: rgba(0, 0, 0, 0.025);
 }
-.base-skeleton .panel-blockquote {
+.bluelib .panel-blockquote {
   border-left-width: 2px;
   border-top-width: 0;
   border-bottom-width: 0;
   border-right-width: 0;
 }
-.base-skeleton .panel-aside {
+.bluelib .panel-aside {
   border-width: 0;
   font-size: smaller;
 }
-.base-skeleton .panel-split {
+.bluelib .panel-split {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   justify-content: center;
 }
-.base-skeleton .panel-split > * {
+.bluelib .panel-split > * {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 0;
 }
-.base-skeleton .panel-split > .panel {
+.bluelib .panel-split > .panel {
   margin: 0;
 }
-.base-skeleton .status-disabled {
+.bluelib .status-disabled {
   cursor: not-allowed;
   opacity: 50%;
 }
-.base-skeleton .status-hoverable {
+.bluelib .status-hoverable {
   cursor: help;
 }
-.base-skeleton .status-clickable {
+.bluelib .status-clickable {
   cursor: pointer;
 }
-.base-skeleton .spoiler {
+.bluelib .spoiler {
   filter: blur(5px);
 }
-.base-skeleton .spoiler:hover {
+.bluelib .spoiler:hover {
   filter: none;
 }
-.base-skeleton .element-title {
+.bluelib .element-title {
   text-align: center;
 }
-.base-skeleton .element-separator {
+.bluelib .element-separator {
   border-width: 1px;
   border-color: dimgrey;
 }
-.base-skeleton .element-list-item {
+.bluelib .element-list-item {
   margin: 10px 0;
 }
-.base-skeleton .align-left {
+.bluelib .align-left {
   text-align: left;
 }
-.base-skeleton .align-center {
+.bluelib .align-center {
   text-align: center;
 }
-.base-skeleton .align-right {
+.bluelib .align-right {
   text-align: right;
 }
-.base-skeleton .size-xxl {
+.bluelib .size-xxl {
   font-size: xx-large;
 }
-.base-skeleton .size-xl {
+.bluelib .size-xl {
   font-size: x-large;
 }
-.base-skeleton .size-l {
+.bluelib .size-l {
   font-size: large;
 }
-.base-skeleton .size-m {
+.bluelib .size-m {
   font-size: medium;
 }
-.base-skeleton .size-s {
+.bluelib .size-s {
   font-size: small;
 }
-.base-skeleton .size-xs {
+.bluelib .size-xs {
   font-size: x-small;
 }
-.base-skeleton .size-xxs {
+.bluelib .size-xxs {
   font-size: xx-small;
 }
-.base-skeleton .style-bold {
+.bluelib .style-bold {
   font-weight: bold;
 }
-.base-skeleton .style-italic {
+.bluelib .style-italic {
   font-style: italic;
 }
-.base-skeleton .style-underline {
+.bluelib .style-underline {
   text-decoration-line: underline;
 }
-.base-skeleton .style-strike {
+.bluelib .style-strike {
   text-decoration-line: line-through;
 }
-.base-skeleton .style-monospace {
+.bluelib .style-monospace {
   font-family: monospace;
 }
-.base-skeleton .style-keyboard {
+.bluelib .style-keyboard {
   font-family: monospace;
   padding: 4px;
   border: 2px outset;
   border-radius: 4px;
 }
-.base-skeleton .color-red {
+.bluelib .color-red {
   color: red;
 }
-.base-skeleton .color-orange {
+.bluelib .color-orange {
   color: orange;
 }
-.base-skeleton .color-yellow {
+.bluelib .color-yellow {
   color: #dddd00;
 }
-.base-skeleton .color-lime {
+.bluelib .color-lime {
   color: lime;
 }
-.base-skeleton .color-cyan {
+.bluelib .color-cyan {
   color: cyan;
 }
-.base-skeleton .color-blue {
+.bluelib .color-blue {
   color: blue;
 }
-.base-skeleton .color-magenta {
+.bluelib .color-magenta {
   color: magenta;
 }
-.base-skeleton .color-gray {
+.bluelib .color-gray {
   color: gray;
 }
 /*# sourceMappingURL=skeleton.module.css.map */

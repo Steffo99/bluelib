@@ -33,78 +33,78 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnLK3uQQ.ttf) format('truetype');
 }
-.base-rygblue {
+.bluelib {
   background-color: #0d193b;
   color: #a0ccff;
   font-family: "Fira Sans", sans-serif;
 }
-.base-rygblue .panel-box {
+.bluelib .panel-box {
   background-color: rgba(160, 204, 255, 0.02);
   border-color: rgba(160, 204, 255, 0.1);
 }
-.base-rygblue .panel-blockquote {
+.bluelib .panel-blockquote {
   background-color: rgba(160, 204, 255, 0.02);
   border-color: rgba(160, 204, 255, 0.1);
 }
-.base-rygblue .panel-aside {
+.bluelib .panel-aside {
   background-color: rgba(160, 204, 255, 0.02);
   border-color: rgba(160, 204, 255, 0.1);
 }
-.base-rygblue .element-title {
+.bluelib .element-title {
   color: #ffffff;
   font-family: "Fira Sans", sans-serif;
   font-weight: normal;
 }
-.base-rygblue .element-separator {
+.bluelib .element-separator {
   border-color: rgba(160, 204, 255, 0.1);
 }
-.base-rygblue .element-anchor {
+.bluelib .element-anchor {
   color: #00caca;
   text-decoration: none;
 }
-.base-rygblue .element-anchor:hover {
+.bluelib .element-anchor:hover {
   color: #00ffff;
 }
-.base-rygblue .element-anchor:active {
+.bluelib .element-anchor:active {
   color: #a0ffff;
 }
-.base-rygblue .style-bold {
+.bluelib .style-bold {
   color: #ffffff;
 }
-.base-rygblue .style-strike {
+.bluelib .style-strike {
   text-decoration-color: #ff7d7d;
   text-decoration-width: 2px;
 }
-.base-rygblue .style-monospace {
+.bluelib .style-monospace {
   font-family: "Fira Code", sans-serif;
 }
-.base-rygblue .style-keyboard {
+.bluelib .style-keyboard {
   font-family: "Fira Code", sans-serif;
   padding: 3px;
   border: 2px outset;
 }
-.base-rygblue .color-red {
+.bluelib .color-red {
   color: #ff7d7d;
 }
-.base-rygblue .color-orange {
+.bluelib .color-orange {
   color: #ffbb7d;
 }
-.base-rygblue .color-yellow {
+.bluelib .color-yellow {
   color: #ffff7d;
 }
-.base-rygblue .color-lime {
+.bluelib .color-lime {
   color: #7dff7d;
 }
-.base-rygblue .color-cyan {
+.bluelib .color-cyan {
   color: #7dffff;
 }
-.base-rygblue .color-blue {
+.bluelib .color-blue {
   color: #7d7dff;
 }
-.base-rygblue .color-magenta {
+.bluelib .color-magenta {
   color: #ff7dff;
 }
-.base-rygblue .color-gray {
+.bluelib .color-gray {
   color: #bbbbbb;
 }
 /*# sourceMappingURL=rygblue.module.css.map */
