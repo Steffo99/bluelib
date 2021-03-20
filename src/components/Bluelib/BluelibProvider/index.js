@@ -1,6 +1,6 @@
 import React from "react";
 
-import skinRygblue from "../../../bluelib/src/skins/rygblue/rygblue.module.css";
+import skinRygblue from "../../../bluelib/src/targets/rygblue.module.css";
 import ContextBluelibSkin from "../../../contexts/ContextBluelibSkin";
 import isString from "../../../utils/isString";
 import PropTypes from "prop-types";

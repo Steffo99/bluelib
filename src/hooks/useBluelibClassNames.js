@@ -2,7 +2,7 @@ import {useContext} from "react";
 import contextBluelibSkin from "../contexts/ContextBluelibSkin";
 import classNames from "classnames";
 
-import skeleton from "../bluelib/src/skeleton/skeleton.module.css";
+import skeleton from "../bluelib/src/targets/skeleton.module.css";
 
 
 export default function useBluelibClassNames(cn, extra) {

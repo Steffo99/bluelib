@@ -15,5 +15,5 @@ export default function Color({children, className, value}) {
 Color.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    value: PropTypes.oneOf(["red", "orange", "yellow", "lime", "cyan", "blue", "magenta"]),
+    value: PropTypes.oneOf(["red", "orange", "yellow", "lime", "cyan", "blue", "magenta", "gray"]),
 }

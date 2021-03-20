@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 export default function Blockquote({children, className}) {
     return (
-        <blockquote className={useBluelibClassNames("panel panel-blockquote", className)}>
+        <blockquote className={useBluelibClassNames("panel panel-box panel-blockquote", className)}>
             {children}
         </blockquote>
     )
