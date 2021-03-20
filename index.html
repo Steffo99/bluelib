@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="src/skeleton/skeleton.root.css">
-    <link rel="stylesheet" href="src/skins/rygblue/rygblue.root.css">
+    <link rel="stylesheet" href="src/targets/skeleton.root.css">
+    <link rel="stylesheet" href="src/targets/rygblue.root.css">
     <title>Bluelib 2</title>
 </head>
 <body class="theme-bluelib">
@@ -16,7 +16,7 @@
                 RYG style, in pure CSS
             </h2>
         </hgroup>
-        <section class="panel panel-box">
+        <section>
             <h3>
                 Welcome to bluelib!
             </h3>
@@ -31,7 +31,7 @@
         <h2>
             Panels
         </h2>
-        <section class="panel panel-box">
+        <section>
             <h3>
                 Panel
             </h3>
@@ -42,23 +42,7 @@
                 It usually represents a section of text about a topic described by the title above.
             </p>
         </section>
-        <table class="panel panel-table">
-            <thead>
-                <tr>
-                    <th>This...</th>
-                    <th>...is a...</th>
-                    <th>table!</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Tables are containers too!</td>
-                    <td>They will be themed automatically.</td>
-                    <td>Columns will be automatically scaled based on their content.</td>
-                </tr>
-            </tbody>
-        </table>
-        <blockquote class="panel panel-blockquote">
+        <blockquote>
             <h3>
                 Blockquote
             </h3>
@@ -69,7 +53,7 @@
                 Blockquotes are specially formatted panels, useful for quotes!
             </p>
         </blockquote>
-        <aside class="panel panel-aside">
+        <aside>
             <h3>
                 Aside
             </h3>
@@ -84,16 +68,16 @@
         <h2>
             Close containers
         </h2>
-        <section class="panel panel-box">
+        <section>
             <p>
                 Here's what two panels next to each other look like:
             </p>
-            <aside class="panel panel-aside">
+            <aside>
                 <p>
                     STONKS
                 </p>
             </aside>
-            <aside class="panel panel-aside">
+            <aside>
                 <p>
                     STINKS
                 </p>
@@ -102,7 +86,7 @@
         <h2>
             Nesting containers
         </h2>
-        <section class="panel panel-box">
+        <section>
             <h3>
                 Level one
             </h3>
@@ -112,27 +96,27 @@
             <p>
                 Drop one outside of any paragraphs and they will nest automatically.
             </p>
-            <section class="panel panel-box">
+            <section>
                 <h3>
                     Level two
                 </h3>
                 <p>
                     You can add text above...
                 </p>
-                <section class="panel panel-box">
+                <section>
                     <h3>
                         Level three
                     </h3>
                     <p>
                         How deep does the rabbit hole go?
                     </p>
-                    <blockquote class="panel panel-blockquote">
+                    <blockquote>
                         <b><a href="https://www.youtube.com/watch?v=G2jUhnCU9iA" target="_blank">PANELCEPTION.</a></b>
-                        <aside class="panel panel-aside">
+                        <aside>
                             BWOON.
-                            <aside class="panel panel-aside">
+                            <aside>
                                 BWOON.
-                                <aside class="panel panel-aside">
+                                <aside>
                                     BWOON.
                                 </aside>
                             </aside>
@@ -147,7 +131,7 @@
         <h2>
             Layout
         </h2>
-        <section class="panel panel-box">
+        <section>
             <h3>
                 Splitter and splitted
             </h3>
@@ -158,7 +142,7 @@
                 The columns will grow automatically to on the height of the tallest.
             </p>
             <div class="panel panel-split">
-                <section class="panel panel-box">
+                <section>
                     <h3>
                         Shorter panel
                     </h3>
@@ -166,7 +150,7 @@
                         That's it.
                     </p>
                 </section>
-                <section class="panel panel-box">
+                <section>
                     <h3>
                         Taller panel
                     </h3>
@@ -182,7 +166,7 @@
                 </section>
             </div>
         </section>
-        <section class="panel panel-box">
+        <section>
             <h3>
                 Horizonal rows
             </h3>
@@ -198,7 +182,7 @@
             Formatting
         </h2>
         <div class="panel panel-split">
-            <section class="panel panel-box">
+            <section>
                 <h3>
                     Colors
                 </h3>
@@ -213,9 +197,10 @@
                     <li><span class="color-cyan">Cyan</span></li>
                     <li><span class="color-blue">Blue</span></li>
                     <li><span class="color-magenta">Magenta</span></li>
+                    <li><span class="color-gray">Gray</span></li>
                 </ul>
             </section>
-            <section class="panel panel-box">
+            <section>
                 <h3>
                     Size
                 </h3>
@@ -232,7 +217,7 @@
                     <li><span class="size-xxs">XXS</span></li>
                 </ul>
             </section>
-            <section class="panel panel-box">
+            <section>
                 <h3>
                     Alignment
                 </h3>
@@ -243,14 +228,14 @@
                 <div class="align-center">Center</div>
                 <div class="align-right">Right</div>
             </section>
-            <section class="panel panel-box">
+            <section>
                 <h3>
                     Spoilers
                 </h3>
                 <p>
                     You can define <span class="spoiler">spoilers</span>.
                 </p>
-                <section class="spoiler panel panel-box">
+                <section class="spoiler">
                     <h3>
                         Spoiler panels
                     </h3>
@@ -264,7 +249,7 @@
             Interactivity
         </h2>
         <div class="panel panel-split">
-            <section class="panel panel-box">
+            <section>
                 <h3>
                     Tooltips
                 </h3>
@@ -273,7 +258,7 @@
                     hovered.
                 </p>
             </section>
-            <section class="panel panel-box">
+            <section>
                 <h3>
                     Disabled
                 </h3>
@@ -284,7 +269,7 @@
                 <p>
                     It also works with <a class="status-disabled">links</a>!
                 </p>
-                <section class="panel panel-box status-disabled">
+                <section class="status-disabled">
                     And panels!
                 </section>
             </section>

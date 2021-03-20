@@ -3,8 +3,8 @@
     <option name="myName" value="Project Default" />
     <inspection_tool class="InconsistentLineSeparators" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="JupyterPackageInspection" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="LessResolvedByNameOnly" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="LessUnresolvedMixin" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="LessResolvedByNameOnly" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="LessUnresolvedMixin" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="LessUnresolvedVariable" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="LongLine" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PoetryPackageVersion" enabled="true" level="ERROR" enabled_by_default="true" />
