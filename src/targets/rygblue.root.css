@@ -1,0 +1,173 @@
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firacode/v10/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sFVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v10/va9C4kDNxMZdWfMOD5VvkojO.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v10/va9f4kDNxMZdWfMOD5VvkrByRBf_.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v10/va9E4kDNxMZdWfMOD5VfkA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnLK3uQQ.ttf) format('truetype');
+}
+.base-rygblue,
+body {
+  background-color: #0d193b;
+  color: #a0ccff;
+  font-family: "Fira Sans", sans-serif;
+}
+.base-rygblue .panel-box,
+body .panel-box,
+.base-rygblue section,
+body section,
+.base-rygblue .panel-blockquote,
+body .panel-blockquote,
+.base-rygblue blockquote,
+body blockquote,
+.base-rygblue .panel-aside,
+body .panel-aside,
+.base-rygblue aside,
+body aside {
+  background-color: rgba(160, 204, 255, 0.02);
+  border-color: rgba(160, 204, 255, 0.1);
+}
+.base-rygblue .panel-blockquote,
+body .panel-blockquote,
+.base-rygblue blockquote,
+body blockquote {
+  background-color: rgba(160, 204, 255, 0.02);
+  border-color: rgba(160, 204, 255, 0.1);
+}
+.base-rygblue .panel-aside,
+body .panel-aside,
+.base-rygblue aside,
+body aside {
+  background-color: rgba(160, 204, 255, 0.02);
+  border-color: rgba(160, 204, 255, 0.1);
+}
+.base-rygblue .element-title,
+body .element-title,
+.base-rygblue h1,
+body h1,
+.base-rygblue h2,
+body h2,
+.base-rygblue h3,
+body h3,
+.base-rygblue h4,
+body h4,
+.base-rygblue h5,
+body h5,
+.base-rygblue h6,
+body h6 {
+  color: #ffffff;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: normal;
+}
+.base-rygblue .element-separator,
+body .element-separator,
+.base-rygblue hr,
+body hr {
+  border-color: rgba(160, 204, 255, 0.1);
+}
+.base-rygblue .element-anchor,
+body .element-anchor,
+.base-rygblue a,
+body a {
+  color: #00caca;
+  text-decoration: none;
+}
+.base-rygblue .element-anchor:hover,
+body .element-anchor:hover,
+.base-rygblue a:hover,
+body a:hover {
+  color: #00ffff;
+}
+.base-rygblue .element-anchor:active,
+body .element-anchor:active,
+.base-rygblue a:active,
+body a:active {
+  color: #a0ffff;
+}
+.base-rygblue .style-bold,
+body .style-bold,
+.base-rygblue b,
+body b {
+  color: #ffffff;
+}
+.base-rygblue .style-strike,
+body .style-strike,
+.base-rygblue strike,
+body strike {
+  text-decoration-color: #ff7d7d;
+  text-decoration-width: 2px;
+}
+.base-rygblue .style-monospace,
+body .style-monospace,
+.base-rygblue code,
+body code {
+  font-family: "Fira Code", sans-serif;
+}
+.base-rygblue .style-keyboard,
+body .style-keyboard,
+.base-rygblue kbd,
+body kbd {
+  font-family: "Fira Code", sans-serif;
+  padding: 3px;
+  border: 2px outset;
+}
+.base-rygblue .color-red,
+body .color-red {
+  color: #ff7d7d;
+}
+.base-rygblue .color-orange,
+body .color-orange {
+  color: #ffbb7d;
+}
+.base-rygblue .color-yellow,
+body .color-yellow {
+  color: #ffff7d;
+}
+.base-rygblue .color-lime,
+body .color-lime {
+  color: #7dff7d;
+}
+.base-rygblue .color-cyan,
+body .color-cyan {
+  color: #7dffff;
+}
+.base-rygblue .color-blue,
+body .color-blue {
+  color: #7d7dff;
+}
+.base-rygblue .color-magenta,
+body .color-magenta {
+  color: #ff7dff;
+}
+.base-rygblue .color-gray,
+body .color-gray {
+  color: #bbbbbb;
+}
+/*# sourceMappingURL=rygblue.root.css.map */
