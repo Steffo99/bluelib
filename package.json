@@ -1,7 +1,8 @@
 {
     "name": "bluelib",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "React components for Bluelib",
+    "readme": "README.md",
     "main": "lib/index.js",
     "module": "es/index.js",
     "files": [
@@ -37,8 +38,7 @@
         "react-styleguidist": "^11.1.5"
     },
     "author": "Stefano Pigozzi <me@steffo.eu>",
-    "homepage": "",
-    "license": "MIT",
+    "license": "AGPL-3.0-or-later",
     "repository": "https://github.com/RYGhub/bluelib-react",
     "keywords": [
         "react-component"

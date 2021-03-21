@@ -1,16 +1,26 @@
-# bluelib-react3
+# `bluelib-react` [![npm package](https://img.shields.io/npm/v/bluelib.png)](https://www.npmjs.org/package/bluelib)
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+A React library implementing [bluelib](https://github.com/RYGhub/bluelib) classes as React components
 
-Describe bluelib-react3 here.
+## Installation
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+```bash
+npm install bluelib
+```
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+## Usage
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+To see an interactive documentation for all components provided, run the following commands:
+
+```bash
+git clone https://github.com/RYGhub/bluelib-react.git
+cd bluelib-react
+npm install
+npm start
+```
+
+Then visit [http://127.0.0.1:6060](http://127.0.0.1:6060) in a JavaScript-enabled browser.
+
+## Contributing
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md)!

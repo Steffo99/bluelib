@@ -1,25 +1,30 @@
-## Prerequisites
+# Contributing
 
-[Node.js](http://nodejs.org/) >= 10 must be installed.
+Feel free to contribute to bluelib at any time, adding new rules, themes or anything else through [pull requests](https://github.com/RYGhub/bluelib/pulls)!
 
-## Installation
+## Structure
 
-- Running `npm install` in the component's root directory will install everything you need for development.
+- [src](src) contains the project source
+    - [components](src/components) contains all components provided by this module with the following structure
+        - `Component`, a folder with the name of the component
+            - `index.js`, a JSX file default-exporting the React component
+            - `Readme.md`, a Markdown file which contains the text to be displayed in the documentation; code blocks additionally act as examples where the component is automatically imported, allowing the developer to edit them in real time
+    - [contexts](src/contexts) contains all React contexts used by this module
+    - [hooks](src/hooks) contains all custom React hooks used by this module
+    - [utils](src/utils) contains miscellaneous functions with a variety of uses
 
-## Demo Development Server
+## Compiling
 
-- `npm start` will run a development server with the component's demo app at [http://localhost:3000](http://localhost:3000) with hot module reloading.
+To build this module, run:
 
-## Running Tests
+```bash 
+npm run build
+```
 
-- `npm test` will run the tests once.
+## Publish
 
-- `npm run test:coverage` will run the tests and produce a coverage report in `coverage/`.
+To publish this module on npm, run:
 
-- `npm run test:watch` will run the tests on every change.
-
-## Building
-
-- `npm run build` will build the component for publishing to npm and also bundle the demo app.
-
-- `npm run clean` will delete built resources.
+```bash
+npm publish
+```
