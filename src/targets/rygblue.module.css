@@ -141,15 +141,6 @@
 .bluelib * {
   color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b));
 }
-.bluelib .panel-box {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
-}
-.bluelib .panel-blockquote {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
-}
-.bluelib .panel-aside {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
-}
 .bluelib .element-title {
   color: #ffffff;
   font-family: "Fira Sans", sans-serif;
@@ -170,10 +161,6 @@
 }
 .bluelib .style-bold {
   color: #ffffff;
-}
-.bluelib .style-strike {
-  text-decoration-color: #ff7d7d;
-  text-decoration-width: 2px;
 }
 .bluelib .style-monospace {
   font-family: "Fira Code", sans-serif;

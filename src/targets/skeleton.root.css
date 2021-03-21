@@ -699,7 +699,7 @@ body .element-separator,
 .base-skeleton hr,
 body hr {
   border-width: 1px;
-  border-color: dimgrey;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
 .base-skeleton .element-list-item,
 body .element-list-item,

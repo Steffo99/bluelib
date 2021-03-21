@@ -143,32 +143,6 @@ body {
 body * {
   color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b));
 }
-.base-skeleton .panel-box,
-body .panel-box,
-.base-skeleton section,
-body section,
-.base-skeleton .panel-blockquote,
-body .panel-blockquote,
-.base-skeleton blockquote,
-body blockquote,
-.base-skeleton .panel-aside,
-body .panel-aside,
-.base-skeleton aside,
-body aside {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
-}
-.base-skeleton .panel-blockquote,
-body .panel-blockquote,
-.base-skeleton blockquote,
-body blockquote {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
-}
-.base-skeleton .panel-aside,
-body .panel-aside,
-.base-skeleton aside,
-body aside {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
-}
 .base-skeleton .element-title,
 body .element-title,
 .base-skeleton h1,
@@ -217,13 +191,6 @@ body .style-bold,
 .base-skeleton b,
 body b {
   color: #ffffff;
-}
-.base-skeleton .style-strike,
-body .style-strike,
-.base-skeleton strike,
-body strike {
-  text-decoration-color: #ff7d7d;
-  text-decoration-width: 2px;
 }
 .base-skeleton .style-monospace,
 body .style-monospace,

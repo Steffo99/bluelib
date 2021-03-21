@@ -85,7 +85,7 @@
         gap: 8px;
         justify-content: center;
 
-        > * {
+        > @{all} {
             flex-grow: 1;
             flex-shrink: 0;
             flex-basis: 0;
@@ -133,7 +133,12 @@
 
     @{element-separator} {
         border-width: 1px;
-        border-color: dimgrey;
+        border-color: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.1
+        );
     }
 
     @{element-list-item} {
