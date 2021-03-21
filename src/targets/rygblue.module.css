@@ -137,6 +137,7 @@
   --bluelib-color-b: 255;
   background-color: #0d193b;
   font-family: "Fira Sans", sans-serif;
+  color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b));
 }
 .bluelib * {
   color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b));
