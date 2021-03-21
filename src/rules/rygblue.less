@@ -26,12 +26,21 @@
 
     // === RULES ===
 
-    background-color: @hex-background;
-    font-family: @font-text;
-
     --bluelib-color-r: red(@hex-foreground);
     --bluelib-color-g: green(@hex-foreground);
     --bluelib-color-b: blue(@hex-foreground);
+
+    background-color: @hex-background;
+    font-family: @font-text;
+
+    @{all} {
+        color: rgb(
+                var(--bluelib-color-r),
+                var(--bluelib-color-g),
+                var(--bluelib-color-b),
+        );
+    }
+
 
     // --- Containers ---
 
