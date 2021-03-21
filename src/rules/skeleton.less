@@ -6,15 +6,14 @@
     --bluelib-color-g: 24;
     --bluelib-color-b: 24;
 
-    color: rgb(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-    );
-
     box-sizing: border-box;
-    * {
+    @{all} {
         box-sizing: border-box;
+        color: rgb(
+                var(--bluelib-color-r),
+                var(--bluelib-color-g),
+                var(--bluelib-color-b),
+        );
     }
 
     // --- Containers ---
