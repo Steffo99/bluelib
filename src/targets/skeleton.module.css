@@ -4,7 +4,7 @@
   --bluelib-color-b: 24;
   box-sizing: border-box;
 }
-.bluelib .bluelib * {
+.bluelib * {
   box-sizing: border-box;
   color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b));
 }
