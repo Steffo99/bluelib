@@ -142,6 +142,15 @@
 .bluelib * {
   color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b));
 }
+.bluelib .panel-box {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.bluelib .panel-blockquote {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.bluelib .panel-aside {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
 .bluelib .element-title {
   color: #ffffff;
   font-family: "Fira Sans", sans-serif;
