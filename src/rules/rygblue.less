@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @{root} {
     // === LESS VARIABLES ===
@@ -27,8 +27,11 @@
     // === RULES ===
 
     background-color: @hex-background;
-    color: @hex-foreground;
     font-family: @font-text;
+
+    --bluelib-color-r: red(@hex-foreground);
+    --bluelib-color-g: green(@hex-foreground);
+    --bluelib-color-b: blue(@hex-foreground);
 
     // --- Containers ---
 
@@ -46,8 +49,12 @@
 
     // A generic content box
     @{panel-box} {
-        background-color: fade(@hex-foreground, 2%);
-        border-color: fade(@hex-foreground, 10%);
+        border-color: rgba(
+                var(--bluelib-color-r),
+                var(--bluelib-color-g),
+                var(--bluelib-color-b),
+                0.1
+        );
     }
 
     // Should be the same as a box, but with a quote-like border
@@ -90,7 +97,7 @@
     @{element-title} {
         color: @hex-accent;
         font-family: @font-title;
-        font-weight: normal;
+        font-weight: 500;
     }
 
     @{element-paragraph} {

@@ -2,7 +2,16 @@
 @{root} {
     // --- Globals ---
 
-    // Force box-sizing: border-box;
+    --bluelib-color-r: 24;
+    --bluelib-color-g: 24;
+    --bluelib-color-b: 24;
+
+    color: rgb(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+    );
+
     box-sizing: border-box;
     * {
         box-sizing: border-box;
@@ -41,7 +50,19 @@
         border-radius: 4px;
         border-width: 2px;
         border-style: solid;
-        background-color: rgba(0, 0, 0, 0.025);
+
+        background-color: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.025
+        );
+        border-color: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            1
+        );
     }
 
     // A box with a quote-like border
