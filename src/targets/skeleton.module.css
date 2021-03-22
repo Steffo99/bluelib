@@ -33,7 +33,7 @@
   border-width: 2px;
   border-style: solid;
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
 .bluelib .panel-blockquote {
   border-left-width: 2px;
@@ -69,6 +69,63 @@
 .bluelib .status-clickable {
   cursor: pointer;
 }
+.bluelib .button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  border: none;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+.bluelib .button:hover {
+  background-color: rgba(calc(var(--bluelib-color-r) - 25), calc(var(--bluelib-color-g) - 25), calc(var(--bluelib-color-b) - 25), 1);
+}
+.bluelib .button:active {
+  background-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
+}
+.bluelib .button-fill-width {
+  width: 100%;
+}
+.bluelib .button-toggle {
+  padding: 4px 14px;
+  border-width: 2px;
+  border-style: solid;
+}
+.bluelib .button-toggle-off {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: transparent;
+}
+.bluelib .button-toggle-off:hover {
+  border-color: rgba(calc(var(--bluelib-color-r) - 25), calc(var(--bluelib-color-g) - 25), calc(var(--bluelib-color-b) - 25), 1);
+  color: rgba(calc(var(--bluelib-color-r) - 25), calc(var(--bluelib-color-g) - 25), calc(var(--bluelib-color-b) - 25), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.bluelib .button-toggle-off:active {
+  border-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
+  color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+}
+.bluelib .button-toggle-on {
+  border-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
+  color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+}
+.bluelib .button-toggle-on:hover {
+  border-color: rgba(calc(var(--bluelib-color-r) - 25), calc(var(--bluelib-color-g) - 25), calc(var(--bluelib-color-b) - 25), 1);
+  color: rgba(calc(var(--bluelib-color-r) - 25), calc(var(--bluelib-color-g) - 25), calc(var(--bluelib-color-b) - 25), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.bluelib .button-toggle-on:active {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: transparent;
+}
 .bluelib .spoiler {
   filter: blur(5px);
 }
@@ -80,6 +137,7 @@
 }
 .bluelib .element-separator {
   border-width: 1px;
+  border-style: solid;
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
 .bluelib .element-list-item {
@@ -137,27 +195,43 @@
   border-radius: 4px;
 }
 .bluelib .color-red {
-  color: red;
+  --bluelib-color-r: 200;
+  --bluelib-color-g: 0;
+  --bluelib-color-b: 0;
 }
 .bluelib .color-orange {
-  color: orange;
+  --bluelib-color-r: 200;
+  --bluelib-color-g: 165;
+  --bluelib-color-b: 0;
 }
 .bluelib .color-yellow {
-  color: #dddd00;
+  --bluelib-color-r: 200;
+  --bluelib-color-g: 200;
+  --bluelib-color-b: 0;
 }
 .bluelib .color-lime {
-  color: lime;
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 200;
+  --bluelib-color-b: 0;
 }
 .bluelib .color-cyan {
-  color: cyan;
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 200;
+  --bluelib-color-b: 200;
 }
 .bluelib .color-blue {
-  color: blue;
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 0;
+  --bluelib-color-b: 200;
 }
 .bluelib .color-magenta {
-  color: magenta;
+  --bluelib-color-r: 200;
+  --bluelib-color-g: 0;
+  --bluelib-color-b: 200;
 }
 .bluelib .color-gray {
-  color: gray;
+  --bluelib-color-r: 128;
+  --bluelib-color-g: 128;
+  --bluelib-color-b: 128;
 }
 /*# sourceMappingURL=skeleton.module.css.map */

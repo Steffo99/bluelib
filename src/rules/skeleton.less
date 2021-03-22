@@ -60,7 +60,7 @@
             var(--bluelib-color-r),
             var(--bluelib-color-g),
             var(--bluelib-color-b),
-            1
+            0.1
         );
     }
 
@@ -111,6 +111,111 @@
         cursor: pointer;
     }
 
+    // --- Buttons ---
+
+    @stroke-1: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            1
+    );
+    @stroke-2: rgba(
+            calc(var(--bluelib-color-r) - 25),
+            calc(var(--bluelib-color-g) - 25),
+            calc(var(--bluelib-color-b) - 25),
+            1
+    );
+    @stroke-3: rgba(
+            calc(var(--bluelib-color-r) - 55),
+            calc(var(--bluelib-color-g) - 55),
+            calc(var(--bluelib-color-b) - 55),
+            1
+    );
+
+    @fill-1: transparent;
+    @fill-2: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.1
+    );
+    @fill-3: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.3
+    );
+
+    @{button} {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: @stroke-1;
+        border: none;
+        color: white;
+        padding: 6px 16px;
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: inherit;
+
+        cursor: pointer;
+
+        &:hover  {
+            background-color: @stroke-2;
+        }
+
+        &:active {
+            background-color: @stroke-3;
+        }
+    }
+
+    @{button-fill-width} {
+        width: 100%;
+    }
+
+    @{button-toggle} {
+        padding: 4px 14px;
+        border-width: 2px;
+        border-style: solid;
+    }
+
+    @{button-toggle-off} {
+        border-color: @stroke-1;
+        color: @stroke-1;
+        background-color: @fill-1;
+
+        &:hover  {
+            border-color: @stroke-2;
+            color: @stroke-2;
+            background-color: @fill-2;
+        }
+
+        &:active {
+            border-color: @stroke-3;
+            color: @stroke-3;
+            background-color: @fill-3;
+        }
+    }
+
+    @{button-toggle-on} {
+        border-color: @stroke-3;
+        color: @stroke-3;
+        background-color: @fill-3;
+
+        &:hover  {
+            border-color: @stroke-2;
+            color: @stroke-2;
+            background-color: @fill-2;
+        }
+
+        &:active {
+            border-color: @stroke-1;
+            color: @stroke-1;
+            background-color: @fill-1;
+        }
+    }
+
     // --- Spoilers ---
 
     @{spoiler} {
@@ -133,6 +238,7 @@
 
     @{element-separator} {
         border-width: 1px;
+        border-style: solid;
         border-color: rgba(
             var(--bluelib-color-r),
             var(--bluelib-color-g),
@@ -225,35 +331,51 @@
     // --- Colors ---
 
     @{color-red} {
-        color: red;
+        --bluelib-color-r: 200;
+        --bluelib-color-g: 0;
+        --bluelib-color-b: 0;
     }
 
     @{color-orange} {
-        color: orange;
+        --bluelib-color-r: 200;
+        --bluelib-color-g: 165;
+        --bluelib-color-b: 0;
     }
 
     @{color-yellow} {
-        color: #dddd00;  // Pure yellow isn't readable on a white background
+        --bluelib-color-r: 200;
+        --bluelib-color-g: 200;
+        --bluelib-color-b: 0;
     }
 
     @{color-lime} {
-        color: lime;
+        --bluelib-color-r: 0;
+        --bluelib-color-g: 200;
+        --bluelib-color-b: 0;
     }
 
     @{color-cyan} {
-        color: cyan;
+        --bluelib-color-r: 0;
+        --bluelib-color-g: 200;
+        --bluelib-color-b: 200;
     }
 
     @{color-blue} {
-        color: blue;
+        --bluelib-color-r: 0;
+        --bluelib-color-g: 0;
+        --bluelib-color-b: 200;
     }
 
     @{color-magenta} {
-        color: magenta;
+        --bluelib-color-r: 200;
+        --bluelib-color-g: 0;
+        --bluelib-color-b: 200;
     }
 
     @{color-gray} {
-        color: gray;
+        --bluelib-color-r: 128;
+        --bluelib-color-g: 128;
+        --bluelib-color-b: 128;
     }
 }
 

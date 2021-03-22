@@ -63,32 +63,17 @@
 
     // A generic content box
     @{panel-box} {
-        border-color: rgba(
-                var(--bluelib-color-r),
-                var(--bluelib-color-g),
-                var(--bluelib-color-b),
-                0.1
-        );
+
     }
 
     // Should be the same as a box, but with a quote-like border
     @{panel-blockquote} {
-        border-color: rgba(
-                var(--bluelib-color-r),
-                var(--bluelib-color-g),
-                var(--bluelib-color-b),
-                0.1
-        );
+
     }
 
     // Should be the same as a box, but with smaller text and no border
     @{panel-aside} {
-        border-color: rgba(
-                var(--bluelib-color-r),
-                var(--bluelib-color-g),
-                var(--bluelib-color-b),
-                0.1
-        );
+
     }
 
     // Evenly split the panels contained inside
@@ -110,6 +95,92 @@
 
     }
 
+    // --- Buttons ---
+
+    @{button} {
+        color: black;
+    }
+
+    @toggle-stroke-1: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            1
+    );
+    @toggle-stroke-2: rgba(
+            calc(var(--bluelib-color-r) + 25),
+            calc(var(--bluelib-color-g) + 25),
+            calc(var(--bluelib-color-b) + 25),
+            1
+    );
+    @toggle-stroke-3: rgba(
+            calc(var(--bluelib-color-r) + 55),
+            calc(var(--bluelib-color-g) + 55),
+            calc(var(--bluelib-color-b) + 55),
+            1
+    );
+
+    @toggle-fill-1: transparent;
+    @toggle-fill-2: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.10
+    );
+    @toggle-fill-3: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.3
+    );
+
+    @{button-toggle} {
+        padding: 4px 14px;
+        border-width: 2px;
+        border-style: solid;
+
+        &@{status-disabled} {
+            border-style: dashed;
+        }
+    }
+
+    @{button-toggle-off} {
+        border-color: @toggle-stroke-1;
+        color: @toggle-stroke-1;
+        background-color: @toggle-fill-1;
+
+        &:hover  {
+            border-color: @toggle-stroke-2;
+            color: @toggle-stroke-2;
+            background-color: @toggle-fill-2;
+        }
+
+        &:active {
+            border-color: @toggle-stroke-3;
+            color: @toggle-stroke-3;
+            background-color: @toggle-fill-3;
+        }
+    }
+
+    @{button-toggle-on} {
+        border-color: @toggle-stroke-3;
+        color: @toggle-stroke-3;
+        background-color: @toggle-fill-3;
+
+        &:hover  {
+            border-color: @toggle-stroke-2;
+            color: @toggle-stroke-2;
+            background-color: @toggle-fill-2;
+        }
+
+        &:active {
+            border-color: @toggle-stroke-1;
+            color: @toggle-stroke-1;
+            background-color: @toggle-fill-1;
+        }
+    }
+
+
     // --- Spoilers ---
 
     @{spoiler} {
@@ -129,7 +200,7 @@
     }
 
     @{element-separator} {
-        border-color: fade(@hex-foreground, 10%);
+
     }
 
     @{element-list-item} {
@@ -225,34 +296,50 @@
     // --- Colors ---
 
     @{color-red} {
-        color: @hex-red;
+        --bluelib-color-r: red(@hex-red);
+        --bluelib-color-g: green(@hex-red);
+        --bluelib-color-b: blue(@hex-red);
     }
 
     @{color-orange} {
-        color: @hex-orange;
+        --bluelib-color-r: red(@hex-orange);
+        --bluelib-color-g: green(@hex-orange);
+        --bluelib-color-b: blue(@hex-orange);
     }
 
     @{color-yellow} {
-        color: @hex-yellow;
+        --bluelib-color-r: red(@hex-yellow);
+        --bluelib-color-g: green(@hex-yellow);
+        --bluelib-color-b: blue(@hex-yellow);
     }
 
     @{color-lime} {
-        color: @hex-lime;
+        --bluelib-color-r: red(@hex-lime);
+        --bluelib-color-g: green(@hex-lime);
+        --bluelib-color-b: blue(@hex-lime);
     }
 
     @{color-cyan} {
-        color: @hex-cyan;
+        --bluelib-color-r: red(@hex-cyan);
+        --bluelib-color-g: green(@hex-cyan);
+        --bluelib-color-b: blue(@hex-cyan);
     }
 
     @{color-blue} {
-        color: @hex-blue;
+        --bluelib-color-r: red(@hex-blue);
+        --bluelib-color-g: green(@hex-blue);
+        --bluelib-color-b: blue(@hex-blue);
     }
 
     @{color-magenta} {
-        color: @hex-magenta;
+        --bluelib-color-r: red(@hex-magenta);
+        --bluelib-color-g: green(@hex-magenta);
+        --bluelib-color-b: blue(@hex-magenta);
     }
 
     @{color-gray} {
-        color: @hex-gray;
+        --bluelib-color-r: red(@hex-gray);
+        --bluelib-color-g: green(@hex-gray);
+        --bluelib-color-b: blue(@hex-gray);
     }
 }

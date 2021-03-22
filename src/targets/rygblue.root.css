@@ -144,31 +144,61 @@ body {
 body * {
   color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b));
 }
-.base-skeleton .panel-box,
-body .panel-box,
-.base-skeleton section,
-body section,
-.base-skeleton .panel-blockquote,
-body .panel-blockquote,
-.base-skeleton blockquote,
-body blockquote,
-.base-skeleton .panel-aside,
-body .panel-aside,
-.base-skeleton aside,
-body aside {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+.base-skeleton .button,
+body .button,
+.base-skeleton button,
+body button,
+.base-skeleton input[type="submit"],
+body input[type="submit"] {
+  color: black;
 }
-.base-skeleton .panel-blockquote,
-body .panel-blockquote,
-.base-skeleton blockquote,
-body blockquote {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+.base-skeleton .button-toggle,
+body .button-toggle {
+  padding: 4px 14px;
+  border-width: 2px;
+  border-style: solid;
 }
-.base-skeleton .panel-aside,
-body .panel-aside,
-.base-skeleton aside,
-body aside {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+.base-skeleton .button-toggle.status-disabled,
+body .button-toggle.status-disabled,
+.base-skeleton .button-toggle *[disabled],
+body .button-toggle *[disabled] {
+  border-style: dashed;
+}
+.base-skeleton .button-toggle-off,
+body .button-toggle-off {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: transparent;
+}
+.base-skeleton .button-toggle-off:hover,
+body .button-toggle-off:hover {
+  border-color: rgba(calc(var(--bluelib-color-r) + 25), calc(var(--bluelib-color-g) + 25), calc(var(--bluelib-color-b) + 25), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 25), calc(var(--bluelib-color-g) + 25), calc(var(--bluelib-color-b) + 25), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.base-skeleton .button-toggle-off:active,
+body .button-toggle-off:active {
+  border-color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+}
+.base-skeleton .button-toggle-on,
+body .button-toggle-on {
+  border-color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+}
+.base-skeleton .button-toggle-on:hover,
+body .button-toggle-on:hover {
+  border-color: rgba(calc(var(--bluelib-color-r) + 25), calc(var(--bluelib-color-g) + 25), calc(var(--bluelib-color-b) + 25), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 25), calc(var(--bluelib-color-g) + 25), calc(var(--bluelib-color-b) + 25), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.base-skeleton .button-toggle-on:active,
+body .button-toggle-on:active {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: transparent;
 }
 .base-skeleton .element-title,
 body .element-title,
@@ -187,12 +217,6 @@ body h6 {
   color: #ffffff;
   font-family: "Fira Sans", sans-serif;
   font-weight: 500;
-}
-.base-skeleton .element-separator,
-body .element-separator,
-.base-skeleton hr,
-body hr {
-  border-color: rgba(160, 204, 255, 0.1);
 }
 .base-skeleton .element-anchor,
 body .element-anchor,
@@ -235,34 +259,50 @@ body kbd {
 }
 .base-skeleton .color-red,
 body .color-red {
-  color: #ff7d7d;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 125;
+  --bluelib-color-b: 125;
 }
 .base-skeleton .color-orange,
 body .color-orange {
-  color: #ffbb7d;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 187;
+  --bluelib-color-b: 125;
 }
 .base-skeleton .color-yellow,
 body .color-yellow {
-  color: #ffff7d;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 125;
 }
 .base-skeleton .color-lime,
 body .color-lime {
-  color: #7dff7d;
+  --bluelib-color-r: 125;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 125;
 }
 .base-skeleton .color-cyan,
 body .color-cyan {
-  color: #7dffff;
+  --bluelib-color-r: 125;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
 }
 .base-skeleton .color-blue,
 body .color-blue {
-  color: #7d7dff;
+  --bluelib-color-r: 125;
+  --bluelib-color-g: 125;
+  --bluelib-color-b: 255;
 }
 .base-skeleton .color-magenta,
 body .color-magenta {
-  color: #ff7dff;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 125;
+  --bluelib-color-b: 255;
 }
 .base-skeleton .color-gray,
 body .color-gray {
-  color: #bbbbbb;
+  --bluelib-color-r: 187;
+  --bluelib-color-g: 187;
+  --bluelib-color-b: 187;
 }
 /*# sourceMappingURL=rygblue.root.css.map */
