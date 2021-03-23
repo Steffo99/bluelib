@@ -165,6 +165,16 @@
   color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
 }
+.bluelib .button-toggle-off.status-disabled:hover {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: transparent;
+}
+.bluelib .button-toggle-off.status-disabled:active {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: transparent;
+}
 .bluelib .button-toggle-on {
   border-color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
   color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
@@ -179,6 +189,16 @@
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: transparent;
+}
+.bluelib .button-toggle-on.status-disabled:hover {
+  border-color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+}
+.bluelib .button-toggle-on.status-disabled:active {
+  border-color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
 }
 .bluelib .element-title {
   color: #ffffff;

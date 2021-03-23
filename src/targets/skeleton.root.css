@@ -823,13 +823,6 @@ body .spoiler.status-disabled,
 body .spoiler *[disabled]:hover {
   filter: blur(5px);
 }
-.base-skeleton .status-disabled,
-body .status-disabled,
-.base-skeleton *[disabled],
-body *[disabled] {
-  cursor: not-allowed;
-  opacity: 50%;
-}
 .base-skeleton .status-hoverable,
 body .status-hoverable,
 .base-skeleton *[title],
@@ -841,6 +834,13 @@ body .status-clickable,
 .base-skeleton *[onclick],
 body *[onclick] {
   cursor: pointer;
+}
+.base-skeleton .status-disabled,
+body .status-disabled,
+.base-skeleton *[disabled],
+body *[disabled] {
+  cursor: not-allowed !important;
+  opacity: 50%;
 }
 .base-skeleton .element-title,
 body .element-title,

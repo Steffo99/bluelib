@@ -263,17 +263,17 @@
 
     // --- Element status ---
 
-    @{status-disabled} {
-        cursor: not-allowed;
-        opacity: 50%;
-    }
-
     @{status-hoverable} {
         cursor: help;
     }
 
     @{status-clickable} {
         cursor: pointer;
+    }
+
+    @{status-disabled} {
+        cursor: not-allowed !important;
+        opacity: 50%;
     }
 
     // --- Elements ---
