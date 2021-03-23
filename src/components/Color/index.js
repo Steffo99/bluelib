@@ -24,8 +24,6 @@ export default function Color({children, builtin, custom}) {
         extraStyle["--bluelib-color-b"] = c.blue()
     }
 
-    console.log(`Builtin: ${builtin} → ${extraClassName}\nCustom: ${custom} → ${JSON.stringify(extraStyle)}`)
-
     children = React.Children.map(children, child => {
         if(!child.props) {
             return child;
