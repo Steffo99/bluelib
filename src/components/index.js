@@ -23,3 +23,5 @@ export {default as Underline} from "./Underline";
 export {default as BaseLink} from "./BaseLink";
 export {default as VisualErrorBoundary} from "./VisualErrorBoundary";
 export {default as VisualLog} from "./VisualLog";
+export {default as Button} from "./Button";
+export {default as ButtonToggle} from "./ButtonToggle";
