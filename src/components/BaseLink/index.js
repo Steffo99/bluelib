@@ -5,7 +5,10 @@ import {Link, useRouteMatch} from "react-router-dom"
 
 
 export default function BaseLink({children, className, href, disabled, ...props}) {
-    const locationMatch = useRouteMatch(href)
+    const locationMatch = useRouteMatch({
+        path: href,
+        strict: true,
+    })
 
     const activeClassNames = useBluelibClassNames("style-bold", className)
     const disabledClassNames = useBluelibClassNames("element-anchor status-disabled", className)
