@@ -6,6 +6,8 @@ import color from "color"
 
 
 export default function Color({children, builtin, custom}) {
+    const potentialClassName = useBluelibClassNames(`color-${builtin}`)
+
     if(builtin && custom) {
         throw new Error("<Color> tags may only have one prop between `builtin` and `custom`.")
     }
@@ -14,7 +16,7 @@ export default function Color({children, builtin, custom}) {
     let extraStyle = {};
 
     if(builtin !== undefined) {
-        extraClassName = useBluelibClassNames(`color-${builtin}`)
+        extraClassName = potentialClassName
 
     }
     if(custom !== undefined) {
