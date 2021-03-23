@@ -240,7 +240,9 @@ body h4,
 body h5,
 .base-skeleton h6,
 body h6 {
-  color: #ffffff;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
   font-family: "Fira Sans", sans-serif;
   font-weight: 500;
 }
@@ -248,20 +250,26 @@ body h6 {
 body .element-anchor,
 .base-skeleton a,
 body a {
-  color: #00caca;
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 202;
+  --bluelib-color-b: 202;
   text-decoration: none;
 }
 .base-skeleton .element-anchor:hover,
 body .element-anchor:hover,
 .base-skeleton a:hover,
 body a:hover {
-  color: #00ffff;
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
 }
 .base-skeleton .element-anchor:active,
 body .element-anchor:active,
 .base-skeleton a:active,
 body a:active {
-  color: #a0ffff;
+  --bluelib-color-r: 160;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
 }
 .base-skeleton .style-bold,
 body .style-bold,

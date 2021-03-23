@@ -214,7 +214,10 @@
     // --- Elements ---
 
     @{element-title} {
-        color: @hex-accent;
+        --bluelib-color-r: red(@hex-accent);
+        --bluelib-color-g: green(@hex-accent);
+        --bluelib-color-b: blue(@hex-accent);
+
         font-family: @font-title;
         font-weight: 500;
     }
@@ -232,15 +235,21 @@
     }
 
     @{element-anchor} {
-        color: @hex-link;
+        --bluelib-color-r: red(@hex-link);
+        --bluelib-color-g: green(@hex-link);
+        --bluelib-color-b: blue(@hex-link);
         text-decoration: none;
 
         &:hover {
-            color: @hex-link-hover;
+            --bluelib-color-r: red(@hex-link-hover);
+            --bluelib-color-g: green(@hex-link-hover);
+            --bluelib-color-b: blue(@hex-link-hover);
         }
 
         &:active {
-            color: @hex-link-active;
+            --bluelib-color-r: red(@hex-link-active);
+            --bluelib-color-g: green(@hex-link-active);
+            --bluelib-color-b: blue(@hex-link-active);
         }
     }
 

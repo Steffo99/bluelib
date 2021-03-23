@@ -201,19 +201,27 @@
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
 }
 .bluelib .element-title {
-  color: #ffffff;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
   font-family: "Fira Sans", sans-serif;
   font-weight: 500;
 }
 .bluelib .element-anchor {
-  color: #00caca;
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 202;
+  --bluelib-color-b: 202;
   text-decoration: none;
 }
 .bluelib .element-anchor:hover {
-  color: #00ffff;
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
 }
 .bluelib .element-anchor:active {
-  color: #a0ffff;
+  --bluelib-color-r: 160;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
 }
 .bluelib .style-bold {
   color: #ffffff;
