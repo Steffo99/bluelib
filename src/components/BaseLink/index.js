@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 import { Link, useMatch } from "@reach/router"
 
 
-export default function BaseLink({children, className, href, disabled}) {
+export default function BaseLink({children, className, href, disabled, ...props}) {
     const locationMatch = useMatch(href);
 
     const activeClassNames = useBluelibClassNames("style-bold", className);
     if(locationMatch) {
         return (
-            <span className={activeClassNames}>
+            <span className={activeClassNames} {...props}>
                 {children}
             </span>
         )
@@ -19,7 +19,7 @@ export default function BaseLink({children, className, href, disabled}) {
     const disabledClassNames = useBluelibClassNames("element-anchor status-disabled", className);
     if(disabled) {
         return (
-            <span className={disabledClassNames}>
+            <span className={disabledClassNames} {...props}>
                 {children}
             </span>
         )
@@ -27,7 +27,7 @@ export default function BaseLink({children, className, href, disabled}) {
 
     const enabledClassNames = useBluelibClassNames("element-anchor", className)
     return (
-        <Link to={href} className={enabledClassNames}>
+        <Link to={href} className={enabledClassNames} {...props}>
             {children}
         </Link>
     )

@@ -3,9 +3,9 @@ import useBluelibClassNames from "../../hooks/useBluelibClassNames";
 import PropTypes from "prop-types";
 
 
-export default function Italic({children, className}) {
+export default function Italic({children, className, ...props}) {
     return (
-        <i className={useBluelibClassNames("style-italic", className)}>
+        <i className={useBluelibClassNames("style-italic", className)} {...props}>
             {children}
         </i>
     )

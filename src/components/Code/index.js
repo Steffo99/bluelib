@@ -5,7 +5,7 @@ import ContextCodeSkin from "../../contexts/ContextCodeSkin";
 import stripIndent from "strip-indent";
 
 
-export default function Code({children, style, language, skin}) {
+export default function Code({children, style, language, skin, ...props}) {
     let ctxLanguage = useContext(ContextCodeLanguage);
     let ctxSkin = useContext(ContextCodeSkin);
 
@@ -14,6 +14,7 @@ export default function Code({children, style, language, skin}) {
             language={language ?? ctxLanguage}
             style={skin ?? ctxSkin}
             customStyle={style}
+            {...props}
         >
             {stripIndent(children).trim()}
         </SyntaxHighlighter>

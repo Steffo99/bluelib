@@ -3,9 +3,9 @@ import useBluelibClassNames from "../../hooks/useBluelibClassNames";
 import PropTypes from "prop-types";
 
 
-export default function Title({children, className, size}) {
+export default function Title({children, className, size, ...props}) {
     return (
-        <div className={useBluelibClassNames(`element-title size-${size}`, className)}>
+        <div className={useBluelibClassNames(`element-title size-${size}`, className)} {...props}>
             {children}
         </div>
     )

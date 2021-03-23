@@ -3,9 +3,9 @@ import useBluelibClassNames from "../../hooks/useBluelibClassNames";
 import PropTypes from "prop-types";
 
 
-export default function Help({children, className, text}) {
+export default function Help({children, className, text, ...props}) {
     return (
-        <abbr className={useBluelibClassNames("status-hoverable", className)} title={text}>
+        <abbr className={useBluelibClassNames("status-hoverable", className)} title={text} {...props}>
             {children}
         </abbr>
     )

@@ -3,9 +3,9 @@ import useBluelibClassNames from "../../hooks/useBluelibClassNames";
 import PropTypes from "prop-types";
 
 
-export default function Spoiler({children, className}) {
+export default function Spoiler({children, className, ...props}) {
     return (
-        <div className={useBluelibClassNames("spoiler", className)}>
+        <div className={useBluelibClassNames("spoiler", className)} {...props}>
             {children}
         </div>
     )

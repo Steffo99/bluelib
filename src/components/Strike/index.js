@@ -3,9 +3,9 @@ import useBluelibClassNames from "../../hooks/useBluelibClassNames";
 import PropTypes from "prop-types";
 
 
-export default function Strike({children, className}) {
+export default function Strike({children, className, ...props}) {
     return (
-        <span className={useBluelibClassNames("style-strike", className)}>
+        <span className={useBluelibClassNames("style-strike", className)} {...props}>
             {children}
         </span>
     )

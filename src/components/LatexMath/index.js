@@ -4,9 +4,9 @@ import TeX from '@matejmazur/react-katex';
 import PropTypes from "prop-types";
 
 
-export default function LatexMath({children, block}) {
+export default function LatexMath({children, block, ...props}) {
     return (
-        <TeX math={children} block={block}/>
+        <TeX math={children} block={block} {...props}/>
     )
 }
 

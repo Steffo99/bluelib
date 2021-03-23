@@ -3,9 +3,9 @@ import useBluelibClassNames from "../../hooks/useBluelibClassNames";
 import PropTypes from "prop-types";
 
 
-export default function Bold({children, className}) {
+export default function Bold({children, className, ...props}) {
     return (
-        <b className={useBluelibClassNames("style-bold", className)}>
+        <b className={useBluelibClassNames("style-bold", className)} {...props}>
             {children}
         </b>
     )

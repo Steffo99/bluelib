@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import useBluelibClassNames from "../../hooks/useBluelibClassNames";
 
 
-export default function Align({children, className, value}) {
+export default function Align({children, className, value, ...props}) {
     return (
-        <div className={useBluelibClassNames(`align-${value}`, className)}>
+        <div className={useBluelibClassNames(`align-${value}`, className)} {...props}>
             {children}
         </div>
     )

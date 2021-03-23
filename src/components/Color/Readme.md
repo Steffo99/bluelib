@@ -1,52 +1,43 @@
-Change the **color** of the contained text to one of the seven presets.
+Change the **bluelib color** of the contained elements.
 
-The color is chosen through the `value` prop. The options are:
-- `red`
-- `orange`
-- `yellow`
-- `lime`
-- `cyan`
-- `blue`
-- `magenta`
+The color can chosen through either the `builtin` prop or the `custom` prop. 
 
+By using the `builtin` prop, the color will automatically adapt itself to the theme. Possible builtin colors are:
+- `"red"`
+- `"orange"`
+- `"yellow"`
+- `"lime"`
+- `"cyan"`
+- `"blue"`
+- `"magenta"`
+- `"gray"`
+
+By using the `custom` prop, the color will be the same for all themes, but you will be able to specify any color.
 
 ```jsx
 import Bluelib from "../Bluelib";
+import Box from "../Box";
 
 <Bluelib>
     <div>
-        <Color value={"red"}>
-            Red
+        <Color builtin={"red"}>
+            <span>
+                Red
+            </span>
         </Color>
     </div>
     <div>
-        <Color value={"orange"}>
-            Orange
+        <Color builtin={"orange"}>
+            <Box>
+                Orange
+            </Box>
         </Color>
     </div>
     <div>
-        <Color value={"yellow"}>
-            Yellow
-        </Color>
-    </div>
-    <div>
-        <Color value={"lime"}>
-            Lime
-        </Color>
-    </div>
-    <div>
-        <Color value={"cyan"}>
-            Cyan
-        </Color>
-    </div>
-    <div>
-        <Color value={"blue"}>
-            Blue
-        </Color>
-    </div>
-    <div>
-        <Color value={"magenta"}>
-            Magenta
+        <Color custom={"#ffff00"}>
+            <Box>
+                Custom yellow
+            </Box>
         </Color>
     </div>
 </Bluelib>

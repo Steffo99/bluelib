@@ -3,9 +3,9 @@ import useBluelibClassNames from "../../hooks/useBluelibClassNames";
 import PropTypes from "prop-types";
 
 
-export default function Size({children, className, value}) {
+export default function Size({children, className, value, ...props}) {
     return (
-        <span className={useBluelibClassNames(`size-${value}`, className)}>
+        <span className={useBluelibClassNames(`size-${value}`, className)} {...props}>
             {children}
         </span>
     )

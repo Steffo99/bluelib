@@ -3,9 +3,9 @@ import useBluelibClassNames from "../../hooks/useBluelibClassNames";
 import PropTypes from "prop-types";
 
 
-export default function Main({children, className}) {
+export default function Main({children, className, ...props}) {
     return (
-        <main className={useBluelibClassNames("container-main", className)}>
+        <main className={useBluelibClassNames("container-main", className)} {...props}>
             {children}
         </main>
     )

@@ -1,19 +1,51 @@
-import React from "react";
+import React, {Fragment} from "react"
 import useBluelibClassNames from "../../hooks/useBluelibClassNames";
 import PropTypes from "prop-types";
+import classNames from "classnames"
+import color from "color"
 
 
-export default function Color({children, className, value}) {
+export default function Color({children, builtin, custom}) {
+    if(builtin && custom) {
+        throw new Error("<Color> tags may only have one prop between `builtin` and `custom`.")
+    }
+
+    let extraClassName = "";
+    let extraStyle = {};
+
+    if(builtin !== undefined) {
+        extraClassName = useBluelibClassNames(`color-${builtin}`)
+
+    }
+    if(custom !== undefined) {
+        let c = color(custom);
+        extraStyle["--bluelib-color-r"] = c.red()
+        extraStyle["--bluelib-color-g"] = c.green()
+        extraStyle["--bluelib-color-b"] = c.blue()
+    }
+
+    console.log(`Builtin: ${builtin} → ${extraClassName}\nCustom: ${custom} → ${JSON.stringify(extraStyle)}`)
+
+    children = React.Children.map(children, child => {
+        if(!child.props) {
+            return child;
+        }
+        return React.cloneElement(child, {
+            className: classNames(child.props.className, extraClassName),
+            style: {...child.props.style, ...extraStyle},
+        })
+    })
+
     return (
-        <span className={useBluelibClassNames(`color-${value}`, className)}>
+        <Fragment>
             {children}
-        </span>
+        </Fragment>
     )
 }
 
 
 Color.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string,
-    value: PropTypes.oneOf(["red", "orange", "yellow", "lime", "cyan", "blue", "magenta", "gray"]),
+    builtin: PropTypes.oneOf(["red", "orange", "yellow", "lime", "cyan", "blue", "magenta", "gray"]),
+    custom: PropTypes.string,
 }

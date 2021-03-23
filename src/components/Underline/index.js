@@ -3,9 +3,9 @@ import useBluelibClassNames from "../../hooks/useBluelibClassNames";
 import PropTypes from "prop-types";
 
 
-export default function Underline({children, className}) {
+export default function Underline({children, className, ...props}) {
     return (
-        <u className={useBluelibClassNames("style-underline", className)}>
+        <u className={useBluelibClassNames("style-underline", className)} {...props}>
             {children}
         </u>
     )

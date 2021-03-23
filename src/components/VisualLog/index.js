@@ -20,8 +20,10 @@ const EMOJIS = {
 
 export default function VisualLog({children, level}) {
     return (
-        <Color value={COLORS[level]}>
-            {EMOJIS[level]} {children}
+        <Color builtin={COLORS[level]}>
+            <span>
+                {EMOJIS[level]} {children}
+            </span>
         </Color>
     )
 }
