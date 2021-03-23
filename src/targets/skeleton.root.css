@@ -651,25 +651,6 @@ body .panel-split aside,
 body .panel-split .panel-split {
   margin: 0;
 }
-.base-skeleton .status-disabled,
-body .status-disabled,
-.base-skeleton *[disabled],
-body *[disabled] {
-  cursor: not-allowed;
-  opacity: 50%;
-}
-.base-skeleton .status-hoverable,
-body .status-hoverable,
-.base-skeleton *[title],
-body *[title] {
-  cursor: help;
-}
-.base-skeleton .status-clickable,
-body .status-clickable,
-.base-skeleton *[onclick],
-body *[onclick] {
-  cursor: pointer;
-}
 .base-skeleton .button,
 body .button,
 .base-skeleton button,
@@ -843,6 +824,31 @@ body .spoiler {
 .base-skeleton .spoiler:hover,
 body .spoiler:hover {
   filter: none;
+}
+.base-skeleton .spoiler.status-disabled,
+body .spoiler.status-disabled,
+.base-skeleton .spoiler *[disabled]:hover,
+body .spoiler *[disabled]:hover {
+  filter: blur(5px);
+}
+.base-skeleton .status-disabled,
+body .status-disabled,
+.base-skeleton *[disabled],
+body *[disabled] {
+  cursor: not-allowed;
+  opacity: 50%;
+}
+.base-skeleton .status-hoverable,
+body .status-hoverable,
+.base-skeleton *[title],
+body *[title] {
+  cursor: help;
+}
+.base-skeleton .status-clickable,
+body .status-clickable,
+.base-skeleton *[onclick],
+body *[onclick] {
+  cursor: pointer;
 }
 .base-skeleton .element-title,
 body .element-title,
