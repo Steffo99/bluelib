@@ -8,6 +8,7 @@ export default function BaseLink({children, className, href, disabled, ...props}
     const locationMatch = useRouteMatch({
         path: href,
         strict: true,
+        sensitive: true,
     })
 
     const activeClassNames = useBluelibClassNames("style-bold", className)
