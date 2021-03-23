@@ -1,6 +1,7 @@
 Change the **size** of the contained text.
 
 The size can be configured with the `value` prop:
+
 - `xxl`
 - `xl`
 - `l`

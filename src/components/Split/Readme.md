@@ -1,4 +1,4 @@
-A **panel** which splits horizontally the contained panels into multiple columns of the same size (if possible). 
+A **panel** which splits horizontally the contained panels into multiple columns of the same size (if possible).
 
 ```jsx
 import Bluelib from "../Bluelib";

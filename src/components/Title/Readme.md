@@ -1,6 +1,7 @@
 Format the text like a **title**, changing its font and centering it.
 
 The size can be configured with the `size` prop:
+
 - `xxl`
 - `xl` (equivalent to `<h1>` and `<h2>`)
 - `l` (equivalent to `<h3>`)

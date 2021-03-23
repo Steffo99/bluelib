@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import useBluelibClassNames from "../../hooks/useBluelibClassNames";
+import React from "react"
+import PropTypes from "prop-types"
+import useBluelibClassNames from "../../hooks/useBluelibClassNames"
 
 
 export default function Align({children, className, value, ...props}) {

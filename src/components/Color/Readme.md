@@ -1,8 +1,9 @@
 Change the **bluelib color** of the contained elements.
 
-The color can chosen through either the `builtin` prop or the `custom` prop. 
+The color can chosen through either the `builtin` prop or the `custom` prop.
 
 By using the `builtin` prop, the color will automatically adapt itself to the theme. Possible builtin colors are:
+
 - `"red"`
 - `"orange"`
 - `"yellow"`

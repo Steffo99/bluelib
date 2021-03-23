@@ -1,6 +1,6 @@
-import React from "react";
-import useBluelibClassNames from "../../../hooks/useBluelibClassNames";
-import PropTypes from "prop-types";
+import React from "react"
+import useBluelibClassNames from "../../../hooks/useBluelibClassNames"
+import PropTypes from "prop-types"
 
 
 export default function BluelibContainer({children, className}) {

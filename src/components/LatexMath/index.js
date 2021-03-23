@@ -1,7 +1,7 @@
-import React from "react";
-import "katex/dist/katex.css";
-import TeX from '@matejmazur/react-katex';
-import PropTypes from "prop-types";
+import React from "react"
+import "katex/dist/katex.css"
+import TeX from '@matejmazur/react-katex'
+import PropTypes from "prop-types"
 
 
 export default function LatexMath({children, block, ...props}) {

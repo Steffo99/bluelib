@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react"
 
-import skinRygblue from "../../../bluelib/src/targets/rygblue.module.css";
-import ContextBluelibSkin from "../../../contexts/ContextBluelibSkin";
-import isString from "../../../utils/isString";
-import PropTypes from "prop-types";
+import skinRygblue from "../../../bluelib/src/targets/rygblue.module.css"
+import ContextBluelibSkin from "../../../contexts/ContextBluelibSkin"
+import isString from "../../../utils/isString"
+import PropTypes from "prop-types"
 
 
 const builtinSkins = {
@@ -13,7 +13,7 @@ const builtinSkins = {
 
 export default function BluelibProvider({skin, children}) {
     // If the skin is a string, try to get the corresponding builtin skin
-    if(isString(skin)) {
+    if (isString(skin)) {
         skin = builtinSkins[skin]
     }
 

@@ -1,14 +1,17 @@
-import React from "react";
-import useBluelibClassNames from "../../hooks/useBluelibClassNames";
-import PropTypes from "prop-types";
-import { Link, useMatch } from "@reach/router"
+import React from "react"
+import useBluelibClassNames from "../../hooks/useBluelibClassNames"
+import PropTypes from "prop-types"
+import {Link, useRouteMatch} from "react-router-dom"
 
 
 export default function BaseLink({children, className, href, disabled, ...props}) {
-    const locationMatch = useMatch(href);
+    const locationMatch = useRouteMatch(href)
 
-    const activeClassNames = useBluelibClassNames("style-bold", className);
-    if(locationMatch) {
+    const activeClassNames = useBluelibClassNames("style-bold", className)
+    const disabledClassNames = useBluelibClassNames("element-anchor status-disabled", className)
+    const enabledClassNames = useBluelibClassNames("element-anchor", className)
+
+    if (locationMatch) {
         return (
             <span className={activeClassNames} {...props}>
                 {children}
@@ -16,8 +19,7 @@ export default function BaseLink({children, className, href, disabled, ...props}
         )
     }
 
-    const disabledClassNames = useBluelibClassNames("element-anchor status-disabled", className);
-    if(disabled) {
+    if (disabled) {
         return (
             <span className={disabledClassNames} {...props}>
                 {children}
@@ -25,7 +27,6 @@ export default function BaseLink({children, className, href, disabled, ...props}
         )
     }
 
-    const enabledClassNames = useBluelibClassNames("element-anchor", className)
     return (
         <Link to={href} className={enabledClassNames} {...props}>
             {children}

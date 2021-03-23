@@ -1,7 +1,7 @@
-import React from "react";
-import BluelibProvider from "./BluelibProvider";
-import BluelibContainer from "./BluelibContainer";
-import PropTypes from "prop-types";
+import React from "react"
+import BluelibProvider from "./BluelibProvider"
+import BluelibContainer from "./BluelibContainer"
+import PropTypes from "prop-types"
 
 
 export default function Bluelib({className, children, skin}) {
