@@ -150,9 +150,6 @@
   border-width: 2px;
   border-style: solid;
 }
-.bluelib .button-toggle.status-disabled {
-  border-style: dashed;
-}
 .bluelib .button-toggle-off {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);

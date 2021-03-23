@@ -704,6 +704,48 @@ body button:active,
 body input[type="submit"]:active {
   background-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
 }
+.base-skeleton .button.status-disabled,
+body .button.status-disabled,
+.base-skeleton button.status-disabled,
+body button.status-disabled,
+.base-skeleton input[type="submit"].status-disabled,
+body input[type="submit"].status-disabled,
+.base-skeleton .button *[disabled],
+body .button *[disabled],
+.base-skeleton button *[disabled],
+body button *[disabled],
+.base-skeleton input[type="submit"] *[disabled],
+body input[type="submit"] *[disabled] {
+  border-style: dashed;
+}
+.base-skeleton .button.status-disabled:hover,
+body .button.status-disabled:hover,
+.base-skeleton button.status-disabled:hover,
+body button.status-disabled:hover,
+.base-skeleton input[type="submit"].status-disabled:hover,
+body input[type="submit"].status-disabled:hover,
+.base-skeleton .button *[disabled]:hover,
+body .button *[disabled]:hover,
+.base-skeleton button *[disabled]:hover,
+body button *[disabled]:hover,
+.base-skeleton input[type="submit"] *[disabled]:hover,
+body input[type="submit"] *[disabled]:hover {
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+}
+.base-skeleton .button.status-disabled:active,
+body .button.status-disabled:active,
+.base-skeleton button.status-disabled:active,
+body button.status-disabled:active,
+.base-skeleton input[type="submit"].status-disabled:active,
+body input[type="submit"].status-disabled:active,
+.base-skeleton .button *[disabled]:active,
+body .button *[disabled]:active,
+.base-skeleton button *[disabled]:active,
+body button *[disabled]:active,
+.base-skeleton input[type="submit"] *[disabled]:active,
+body input[type="submit"] *[disabled]:active {
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+}
 .base-skeleton .button-fill-width,
 body .button-fill-width {
   width: 100%;
@@ -732,6 +774,28 @@ body .button-toggle-off:active {
   color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
 }
+.base-skeleton .button-toggle-off.status-disabled,
+body .button-toggle-off.status-disabled,
+.base-skeleton .button-toggle-off *[disabled],
+body .button-toggle-off *[disabled] {
+  border-style: dashed;
+}
+.base-skeleton .button-toggle-off.status-disabled:hover,
+body .button-toggle-off.status-disabled:hover,
+.base-skeleton .button-toggle-off *[disabled]:hover,
+body .button-toggle-off *[disabled]:hover {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: transparent;
+}
+.base-skeleton .button-toggle-off.status-disabled:active,
+body .button-toggle-off.status-disabled:active,
+.base-skeleton .button-toggle-off *[disabled]:active,
+body .button-toggle-off *[disabled]:active {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: transparent;
+}
 .base-skeleton .button-toggle-on,
 body .button-toggle-on {
   border-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
@@ -749,6 +813,28 @@ body .button-toggle-on:active {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: transparent;
+}
+.base-skeleton .button-toggle-on.status-disabled,
+body .button-toggle-on.status-disabled,
+.base-skeleton .button-toggle-on *[disabled],
+body .button-toggle-on *[disabled] {
+  border-style: dashed;
+}
+.base-skeleton .button-toggle-on.status-disabled:hover,
+body .button-toggle-on.status-disabled:hover,
+.base-skeleton .button-toggle-on *[disabled]:hover,
+body .button-toggle-on *[disabled]:hover {
+  border-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
+  color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+}
+.base-skeleton .button-toggle-on.status-disabled:active,
+body .button-toggle-on.status-disabled:active,
+.base-skeleton .button-toggle-on *[disabled]:active,
+body .button-toggle-on *[disabled]:active {
+  border-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
+  color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
 }
 .base-skeleton .spoiler,
 body .spoiler {

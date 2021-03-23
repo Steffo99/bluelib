@@ -168,6 +168,18 @@
         &:active {
             background-color: @stroke-3;
         }
+
+        &@{status-disabled} {
+            border-style: dashed;
+
+            &:hover  {
+                background-color: @stroke-1;
+            }
+
+            &:active {
+                background-color: @stroke-1;
+            }
+        }
     }
 
     @{button-fill-width} {
@@ -196,6 +208,22 @@
             color: @stroke-3;
             background-color: @fill-3;
         }
+
+        &@{status-disabled} {
+            border-style: dashed;
+
+            &:hover  {
+                border-color: @stroke-1;
+                color: @stroke-1;
+                background-color: @fill-1;
+            }
+
+            &:active {
+                border-color: @stroke-1;
+                color: @stroke-1;
+                background-color: @fill-1;
+            }
+        }
     }
 
     @{button-toggle-on} {
@@ -213,6 +241,22 @@
             border-color: @stroke-1;
             color: @stroke-1;
             background-color: @fill-1;
+        }
+
+        &@{status-disabled} {
+            border-style: dashed;
+
+            &:hover  {
+                border-color: @stroke-3;
+                color: @stroke-3;
+                background-color: @fill-3;
+            }
+
+            &:active {
+                border-color: @stroke-3;
+                color: @stroke-3;
+                background-color: @fill-3;
+            }
         }
     }
 

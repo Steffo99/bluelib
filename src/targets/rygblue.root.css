@@ -158,12 +158,6 @@ body .button-toggle {
   border-width: 2px;
   border-style: solid;
 }
-.base-skeleton .button-toggle.status-disabled,
-body .button-toggle.status-disabled,
-.base-skeleton .button-toggle *[disabled],
-body .button-toggle *[disabled] {
-  border-style: dashed;
-}
 .base-skeleton .button-toggle-off,
 body .button-toggle-off {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
