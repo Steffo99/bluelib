@@ -155,8 +155,6 @@
         }
 
         &@{status-disabled} {
-            border-style: dashed;
-
             &:hover  {
                 background-color: @stroke-1;
             }
@@ -175,6 +173,10 @@
         padding: 4px 14px;
         border-width: 2px;
         border-style: solid;
+
+        @{status-disabled} {
+            border-style: dashed;
+        }
     }
 
     @{button-toggle-off} {

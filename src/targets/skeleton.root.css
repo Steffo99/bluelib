@@ -685,20 +685,6 @@ body button:active,
 body input[type="submit"]:active {
   background-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
 }
-.base-skeleton .button.status-disabled,
-body .button.status-disabled,
-.base-skeleton button.status-disabled,
-body button.status-disabled,
-.base-skeleton input[type="submit"].status-disabled,
-body input[type="submit"].status-disabled,
-.base-skeleton .button *[disabled],
-body .button *[disabled],
-.base-skeleton button *[disabled],
-body button *[disabled],
-.base-skeleton input[type="submit"] *[disabled],
-body input[type="submit"] *[disabled] {
-  border-style: dashed;
-}
 .base-skeleton .button.status-disabled:hover,
 body .button.status-disabled:hover,
 .base-skeleton button.status-disabled:hover,
@@ -736,6 +722,12 @@ body .button-toggle {
   padding: 4px 14px;
   border-width: 2px;
   border-style: solid;
+}
+.base-skeleton .button-toggle .status-disabled,
+body .button-toggle .status-disabled,
+.base-skeleton .button-toggle *[disabled],
+body .button-toggle *[disabled] {
+  border-style: dashed;
 }
 .base-skeleton .button-toggle-off,
 body .button-toggle-off {

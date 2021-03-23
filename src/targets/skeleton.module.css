@@ -78,9 +78,6 @@
 .bluelib .button:active {
   background-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
 }
-.bluelib .button.status-disabled {
-  border-style: dashed;
-}
 .bluelib .button.status-disabled:hover {
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
@@ -94,6 +91,9 @@
   padding: 4px 14px;
   border-width: 2px;
   border-style: solid;
+}
+.bluelib .button-toggle .status-disabled {
+  border-style: dashed;
 }
 .bluelib .button-toggle-off {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
