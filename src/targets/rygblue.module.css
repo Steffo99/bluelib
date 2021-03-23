@@ -88,7 +88,9 @@
   --bluelib-color-b: 255;
 }
 .bluelib .style-bold {
-  color: #ffffff;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
 }
 .bluelib .color-red {
   --bluelib-color-r: 255;
