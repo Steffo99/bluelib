@@ -1,3 +1,4 @@
+/* @input-field: ~'.input-field, input[type="color"], input[type="date"], input[type="datetime-local"], input[type="email"], input[type="file"], input[type="image"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]'; */
 @font-face {
   font-family: 'Fira Code';
   font-style: normal;
@@ -10,126 +11,126 @@
   font-style: italic;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9A4kDNxMZdWfMOD5VvkrCqYTc.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9A4kDNxMZdWfMOD5VvkrCqYTc.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: italic;
   font-weight: 200;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9f4kDNxMZdWfMOD5VvkrAGQBf_.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrAGQBf_.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: italic;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9f4kDNxMZdWfMOD5VvkrBiQxf_.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrBiQxf_.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9C4kDNxMZdWfMOD5VvkojO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9C4kDNxMZdWfMOD5VvkojO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9f4kDNxMZdWfMOD5VvkrA6Qhf_.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrA6Qhf_.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: italic;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9f4kDNxMZdWfMOD5VvkrAWRRf_.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrAWRRf_.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9f4kDNxMZdWfMOD5VvkrByRBf_.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrByRBf_.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: italic;
   font-weight: 800;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9f4kDNxMZdWfMOD5VvkrBuRxf_.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrBuRxf_.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: italic;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9f4kDNxMZdWfMOD5VvkrBKRhf_.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrBKRhf_.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9C4kDNxMZdWfMOD5Vn9IjO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9C4kDNxMZdWfMOD5Vn9IjO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 200;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnWKnuQQ.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnWKnuQQ.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnPKruQQ.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnPKruQQ.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9E4kDNxMZdWfMOD5VfkA.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9E4kDNxMZdWfMOD5VfkA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnZKvuQQ.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKvuQQ.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnSKzuQQ.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnSKzuQQ.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnLK3uQQ.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnLK3uQQ.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnMK7uQQ.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnMK7uQQ.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnFK_uQQ.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnFK_uQQ.ttf) format('truetype');
 }
 .base-skeleton,
 body {
@@ -820,32 +821,32 @@ body button:active,
 body input[type="submit"]:active {
   background-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
 }
-.base-skeleton .button.status-disabled:hover,
-body .button.status-disabled:hover,
-.base-skeleton button.status-disabled:hover,
-body button.status-disabled:hover,
-.base-skeleton input[type="submit"].status-disabled:hover,
-body input[type="submit"].status-disabled:hover,
-.base-skeleton .button *[disabled]:hover,
-body .button *[disabled]:hover,
-.base-skeleton button *[disabled]:hover,
-body button *[disabled]:hover,
-.base-skeleton input[type="submit"] *[disabled]:hover,
-body input[type="submit"] *[disabled]:hover {
+.base-skeleton .button[disabled]:hover,
+body .button[disabled]:hover,
+.base-skeleton button[disabled]:hover,
+body button[disabled]:hover,
+.base-skeleton input[type="submit"][disabled]:hover,
+body input[type="submit"][disabled]:hover,
+.base-skeleton .button .status-disabled:hover,
+body .button .status-disabled:hover,
+.base-skeleton button .status-disabled:hover,
+body button .status-disabled:hover,
+.base-skeleton input[type="submit"] .status-disabled:hover,
+body input[type="submit"] .status-disabled:hover {
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
-.base-skeleton .button.status-disabled:active,
-body .button.status-disabled:active,
-.base-skeleton button.status-disabled:active,
-body button.status-disabled:active,
-.base-skeleton input[type="submit"].status-disabled:active,
-body input[type="submit"].status-disabled:active,
-.base-skeleton .button *[disabled]:active,
-body .button *[disabled]:active,
-.base-skeleton button *[disabled]:active,
-body button *[disabled]:active,
-.base-skeleton input[type="submit"] *[disabled]:active,
-body input[type="submit"] *[disabled]:active {
+.base-skeleton .button[disabled]:active,
+body .button[disabled]:active,
+.base-skeleton button[disabled]:active,
+body button[disabled]:active,
+.base-skeleton input[type="submit"][disabled]:active,
+body input[type="submit"][disabled]:active,
+.base-skeleton .button .status-disabled:active,
+body .button .status-disabled:active,
+.base-skeleton button .status-disabled:active,
+body button .status-disabled:active,
+.base-skeleton input[type="submit"] .status-disabled:active,
+body input[type="submit"] .status-disabled:active {
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
 .base-skeleton .button-fill-width,
@@ -858,10 +859,10 @@ body .button-toggle {
   border-width: 2px;
   border-style: solid;
 }
+.base-skeleton .button-toggle[disabled],
+body .button-toggle[disabled],
 .base-skeleton .button-toggle .status-disabled,
-body .button-toggle .status-disabled,
-.base-skeleton .button-toggle *[disabled],
-body .button-toggle *[disabled] {
+body .button-toggle .status-disabled {
   border-style: dashed;
 }
 .base-skeleton .button-toggle-off,
@@ -882,24 +883,24 @@ body .button-toggle-off:active {
   color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
 }
-.base-skeleton .button-toggle-off.status-disabled,
-body .button-toggle-off.status-disabled,
-.base-skeleton .button-toggle-off *[disabled],
-body .button-toggle-off *[disabled] {
+.base-skeleton .button-toggle-off[disabled],
+body .button-toggle-off[disabled],
+.base-skeleton .button-toggle-off .status-disabled,
+body .button-toggle-off .status-disabled {
   border-style: dashed;
 }
-.base-skeleton .button-toggle-off.status-disabled:hover,
-body .button-toggle-off.status-disabled:hover,
-.base-skeleton .button-toggle-off *[disabled]:hover,
-body .button-toggle-off *[disabled]:hover {
+.base-skeleton .button-toggle-off[disabled]:hover,
+body .button-toggle-off[disabled]:hover,
+.base-skeleton .button-toggle-off .status-disabled:hover,
+body .button-toggle-off .status-disabled:hover {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: transparent;
 }
-.base-skeleton .button-toggle-off.status-disabled:active,
-body .button-toggle-off.status-disabled:active,
-.base-skeleton .button-toggle-off *[disabled]:active,
-body .button-toggle-off *[disabled]:active {
+.base-skeleton .button-toggle-off[disabled]:active,
+body .button-toggle-off[disabled]:active,
+.base-skeleton .button-toggle-off .status-disabled:active,
+body .button-toggle-off .status-disabled:active {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: transparent;
@@ -922,24 +923,24 @@ body .button-toggle-on:active {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: transparent;
 }
-.base-skeleton .button-toggle-on.status-disabled,
-body .button-toggle-on.status-disabled,
-.base-skeleton .button-toggle-on *[disabled],
-body .button-toggle-on *[disabled] {
+.base-skeleton .button-toggle-on[disabled],
+body .button-toggle-on[disabled],
+.base-skeleton .button-toggle-on .status-disabled,
+body .button-toggle-on .status-disabled {
   border-style: dashed;
 }
-.base-skeleton .button-toggle-on.status-disabled:hover,
-body .button-toggle-on.status-disabled:hover,
-.base-skeleton .button-toggle-on *[disabled]:hover,
-body .button-toggle-on *[disabled]:hover {
+.base-skeleton .button-toggle-on[disabled]:hover,
+body .button-toggle-on[disabled]:hover,
+.base-skeleton .button-toggle-on .status-disabled:hover,
+body .button-toggle-on .status-disabled:hover {
   border-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
   color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
 }
-.base-skeleton .button-toggle-on.status-disabled:active,
-body .button-toggle-on.status-disabled:active,
-.base-skeleton .button-toggle-on *[disabled]:active,
-body .button-toggle-on *[disabled]:active {
+.base-skeleton .button-toggle-on[disabled]:active,
+body .button-toggle-on[disabled]:active,
+.base-skeleton .button-toggle-on .status-disabled:active,
+body .button-toggle-on .status-disabled:active {
   border-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
   color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
@@ -952,28 +953,28 @@ body .spoiler {
 body .spoiler:hover {
   filter: none;
 }
-.base-skeleton .spoiler.status-disabled,
-body .spoiler.status-disabled,
-.base-skeleton .spoiler *[disabled]:hover,
-body .spoiler *[disabled]:hover {
+.base-skeleton .spoiler[disabled],
+body .spoiler[disabled],
+.base-skeleton .spoiler .status-disabled:hover,
+body .spoiler .status-disabled:hover {
   filter: blur(5px);
 }
+.base-skeleton [title],
+body [title],
 .base-skeleton .status-hoverable,
-body .status-hoverable,
-.base-skeleton *[title],
-body *[title] {
+body .status-hoverable {
   cursor: help;
 }
+.base-skeleton [onclick],
+body [onclick],
 .base-skeleton .status-clickable,
-body .status-clickable,
-.base-skeleton *[onclick],
-body *[onclick] {
+body .status-clickable {
   cursor: pointer;
 }
+.base-skeleton [disabled],
+body [disabled],
 .base-skeleton .status-disabled,
-body .status-disabled,
-.base-skeleton *[disabled],
-body *[disabled] {
+body .status-disabled {
   cursor: not-allowed !important;
   opacity: 50%;
 }
