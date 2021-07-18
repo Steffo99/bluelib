@@ -98,7 +98,7 @@
         }
     }
 
-    // --- Buttons ---
+    // --- Buttons and inputs ---
 
     @stroke-1: rgba(
             var(--bluelib-color-r),
@@ -245,6 +245,35 @@
                 border-color: @stroke-3;
                 color: @stroke-3;
                 background-color: @fill-3;
+            }
+        }
+    }
+
+    @{input-field} {
+        cursor: text;
+
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 4px;
+        padding: 4px 6px;
+
+        border-color: @stroke-1;
+        color: @stroke-1;
+        background-color: @fill-1;
+
+        &:hover, &:focus {
+            border-color: @stroke-3;
+            color: @stroke-3;
+            background-color: @fill-2;
+        }
+
+        &@{status-disabled} {
+            border-style: dashed;
+
+            &:hover, &:focus {
+                border-color: @stroke-1;
+                color: @stroke-1;
+                background-color: @fill-1;
             }
         }
     }
