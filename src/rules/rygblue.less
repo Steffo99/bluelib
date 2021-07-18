@@ -26,18 +26,10 @@
     --bluelib-color-b: blue(@hex-foreground);
 
     background-color: @hex-background;
-    color: rgb(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-    );
+    color: @bA;
 
     @{all} {
-        color: rgb(
-                var(--bluelib-color-r),
-                var(--bluelib-color-g),
-                var(--bluelib-color-b),
-        );
+        color: @bA;
     }
 
 
@@ -81,39 +73,6 @@
         color: black;
     }
 
-    @toggle-stroke-1: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            1
-    );
-    @toggle-stroke-2: rgba(
-            calc(var(--bluelib-color-r) + 25),
-            calc(var(--bluelib-color-g) + 25),
-            calc(var(--bluelib-color-b) + 25),
-            1
-    );
-    @toggle-stroke-3: rgba(
-            calc(var(--bluelib-color-r) + 55),
-            calc(var(--bluelib-color-g) + 55),
-            calc(var(--bluelib-color-b) + 55),
-            1
-    );
-
-    @toggle-fill-1: transparent;
-    @toggle-fill-2: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.10
-    );
-    @toggle-fill-3: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.3
-    );
-
     @{button-toggle} {
         padding: 4px 14px;
         border-width: 2px;
@@ -121,89 +80,15 @@
     }
 
     @{button-toggle-off} {
-        border-color: @toggle-stroke-1;
-        color: @toggle-stroke-1;
-        background-color: @toggle-fill-1;
 
-        &:hover  {
-            border-color: @toggle-stroke-2;
-            color: @toggle-stroke-2;
-            background-color: @toggle-fill-2;
-        }
-
-        &:active {
-            border-color: @toggle-stroke-3;
-            color: @toggle-stroke-3;
-            background-color: @toggle-fill-3;
-        }
-
-        &@{status-disabled} {
-            &:hover  {
-                border-color: @toggle-stroke-1;
-                color: @toggle-stroke-1;
-                background-color: @toggle-fill-1;
-            }
-
-            &:active {
-                border-color: @toggle-stroke-1;
-                color: @toggle-stroke-1;
-                background-color: @toggle-fill-1;
-            }
-        }
     }
 
     @{button-toggle-on} {
-        border-color: @toggle-stroke-3;
-        color: @toggle-stroke-3;
-        background-color: @toggle-fill-3;
 
-        &:hover  {
-            border-color: @toggle-stroke-2;
-            color: @toggle-stroke-2;
-            background-color: @toggle-fill-2;
-        }
-
-        &:active {
-            border-color: @toggle-stroke-1;
-            color: @toggle-stroke-1;
-            background-color: @toggle-fill-1;
-        }
-
-        &@{status-disabled} {
-            &:hover  {
-                border-color: @toggle-stroke-3;
-                color: @toggle-stroke-3;
-                background-color: @toggle-fill-3;
-            }
-
-            &:active {
-                border-color: @toggle-stroke-3;
-                color: @toggle-stroke-3;
-                background-color: @toggle-fill-3;
-            }
-        }
     }
 
     @{input-field} {
-        border-color: @toggle-stroke-1;
-        color: @toggle-stroke-1;
-        background-color: @toggle-fill-1;
 
-        &:hover, &:focus {
-            border-color: @toggle-stroke-3;
-            color: @toggle-stroke-3;
-            background-color: @toggle-fill-2;
-        }
-
-        &@{status-disabled} {
-            border-style: dashed;
-
-            &:hover, &:focus {
-                border-color: @toggle-stroke-1;
-                color: @toggle-stroke-1;
-                background-color: @toggle-fill-1;
-            }
-        }
     }
 
 

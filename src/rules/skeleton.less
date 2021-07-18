@@ -3,20 +3,20 @@
 @{root} {
     // --- Globals ---
 
+    @font-family: "Fira Sans", sans-serif;
+
+    // -- Root --
+
     --bluelib-color-r: 24;
     --bluelib-color-g: 24;
     --bluelib-color-b: 24;
 
+    font-family: @font-family;
+
     &, @{all} {
         box-sizing: border-box;
-        color: rgb(
-                var(--bluelib-color-r),
-                var(--bluelib-color-g),
-                var(--bluelib-color-b),
-        );
+        color: @bA;
     }
-
-    font-family: "Fira Sans", sans-serif;
 
     // --- Containers ---
 
@@ -52,18 +52,8 @@
         border-width: 2px;
         border-style: solid;
 
-        background-color: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.025
-        );
-        border-color: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.1
-        );
+        background-color: @b0;
+        border-color: @b1;
     }
 
     // A box with a quote-like border
@@ -98,47 +88,14 @@
         }
     }
 
-    // --- Buttons and inputs ---
-
-    @stroke-1: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            1
-    );
-    @stroke-2: rgba(
-            calc(var(--bluelib-color-r) - 25),
-            calc(var(--bluelib-color-g) - 25),
-            calc(var(--bluelib-color-b) - 25),
-            1
-    );
-    @stroke-3: rgba(
-            calc(var(--bluelib-color-r) - 55),
-            calc(var(--bluelib-color-g) - 55),
-            calc(var(--bluelib-color-b) - 55),
-            1
-    );
-
-    @fill-1: transparent;
-    @fill-2: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.1
-    );
-    @fill-3: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.3
-    );
+    // --- Buttons ---
 
     @{button} {
         display: inline-flex;
         justify-content: center;
         align-items: center;
 
-        background-color: @stroke-1;
+        background-color: @bA;
         border: none;
         color: white;
         padding: 6px 16px;
@@ -149,20 +106,20 @@
         cursor: pointer;
 
         &:hover  {
-            background-color: @stroke-2;
+            background-color: @bC;
         }
 
         &:active {
-            background-color: @stroke-3;
+            background-color: @bF;
         }
 
         &@{status-disabled} {
             &:hover  {
-                background-color: @stroke-1;
+                background-color: @bC;
             }
 
             &:active {
-                background-color: @stroke-1;
+                background-color: @bC;
             }
         }
     }
@@ -182,102 +139,106 @@
     }
 
     @{button-toggle-off} {
-        border-color: @stroke-1;
-        color: @stroke-1;
-        background-color: @fill-1;
+        border-color: @bA;
+        color: @bA;
+        background-color: @b0;
 
         &:hover  {
-            border-color: @stroke-2;
-            color: @stroke-2;
-            background-color: @fill-2;
+            border-color: @bC;
+            color: @bC;
+            background-color: @b1;
         }
 
         &:active {
-            border-color: @stroke-3;
-            color: @stroke-3;
-            background-color: @fill-3;
+            border-color: @bF;
+            color: @bF;
+            background-color: @b2;
         }
 
         &@{status-disabled} {
             border-style: dashed;
 
             &:hover  {
-                border-color: @stroke-1;
-                color: @stroke-1;
-                background-color: @fill-1;
+                border-color: @bA;
+                color: @bA;
+                background-color: @bA;
             }
 
             &:active {
-                border-color: @stroke-1;
-                color: @stroke-1;
-                background-color: @fill-1;
+                border-color: @bA;
+                color: @bA;
+                background-color: @bA;
             }
         }
     }
 
     @{button-toggle-on} {
-        border-color: @stroke-3;
-        color: @stroke-3;
-        background-color: @fill-3;
+        border-color: @bF;
+        color: @bF;
+        background-color: @b2;
 
         &:hover  {
-            border-color: @stroke-2;
-            color: @stroke-2;
-            background-color: @fill-2;
+            border-color: @bC;
+            color: @bC;
+            background-color: @b1;
         }
 
         &:active {
-            border-color: @stroke-1;
-            color: @stroke-1;
-            background-color: @fill-1;
+            border-color: @bA;
+            color: @bA;
+            background-color: @b0;
         }
 
         &@{status-disabled} {
             border-style: dashed;
 
             &:hover  {
-                border-color: @stroke-3;
-                color: @stroke-3;
-                background-color: @fill-3;
+                border-color: @bF;
+                color: @bF;
+                background-color: @b2;
             }
 
             &:active {
-                border-color: @stroke-3;
-                color: @stroke-3;
-                background-color: @fill-3;
+                border-color: @bF;
+                color: @bF;
+                background-color: @b2;
             }
         }
     }
 
+    // --- Inputs ---
+
     @{input-field} {
         cursor: text;
 
-        border-width: 1px;
+        border-width: 0 0 2px 0;
         border-style: solid;
-        border-radius: 4px;
+        border-radius: 4px 4px 0 0;
         padding: 4px 6px;
 
-        border-color: @stroke-1;
-        color: @stroke-1;
-        background-color: @fill-1;
+        font-size: medium;
+        font-family: @font-family;
+
+        border-color: @b3;
+        color: @bA;
+        background-color: @b0;
 
         &:hover, &:focus {
-            border-color: @stroke-3;
-            color: @stroke-3;
-            background-color: @fill-2;
+            border-color: @b6;
+            color: @bF;
+            background-color: @b1;
         }
 
         &@{status-disabled} {
             border-style: dashed;
 
             &:hover, &:focus {
-                border-color: @stroke-1;
-                color: @stroke-1;
-                background-color: @fill-1;
+                border-color: @b3;
+                color: @bA;
+                background-color: @b0;
             }
         }
     }
-
 
     // --- Spoilers ---
 
@@ -322,12 +283,7 @@
     @{element-separator} {
         border-width: 1px;
         border-style: solid;
-        border-color: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.1
-        );
+        border-color: @b1;
     }
 
     @{element-list-item} {

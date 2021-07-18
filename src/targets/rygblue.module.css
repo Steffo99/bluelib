@@ -3,10 +3,10 @@
   --bluelib-color-g: 204;
   --bluelib-color-b: 255;
   background-color: #0d193b;
-  color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b));
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
 .bluelib * {
-  color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b));
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
 .bluelib .button {
   color: black;
@@ -15,76 +15,6 @@
   padding: 4px 14px;
   border-width: 2px;
   border-style: solid;
-}
-.bluelib .button-toggle-off {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: transparent;
-}
-.bluelib .button-toggle-off:hover {
-  border-color: rgba(calc(var(--bluelib-color-r) + 25), calc(var(--bluelib-color-g) + 25), calc(var(--bluelib-color-b) + 25), 1);
-  color: rgba(calc(var(--bluelib-color-r) + 25), calc(var(--bluelib-color-g) + 25), calc(var(--bluelib-color-b) + 25), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
-}
-.bluelib .button-toggle-off:active {
-  border-color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
-  color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
-}
-.bluelib .button-toggle-off.status-disabled:hover {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: transparent;
-}
-.bluelib .button-toggle-off.status-disabled:active {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: transparent;
-}
-.bluelib .button-toggle-on {
-  border-color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
-  color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
-}
-.bluelib .button-toggle-on:hover {
-  border-color: rgba(calc(var(--bluelib-color-r) + 25), calc(var(--bluelib-color-g) + 25), calc(var(--bluelib-color-b) + 25), 1);
-  color: rgba(calc(var(--bluelib-color-r) + 25), calc(var(--bluelib-color-g) + 25), calc(var(--bluelib-color-b) + 25), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
-}
-.bluelib .button-toggle-on:active {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: transparent;
-}
-.bluelib .button-toggle-on.status-disabled:hover {
-  border-color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
-  color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
-}
-.bluelib .button-toggle-on.status-disabled:active {
-  border-color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
-  color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
-}
-.bluelib .input-field {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: transparent;
-}
-.bluelib .input-field:hover,
-.bluelib .input-field:focus {
-  border-color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
-  color: rgba(calc(var(--bluelib-color-r) + 55), calc(var(--bluelib-color-g) + 55), calc(var(--bluelib-color-b) + 55), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
-}
-.bluelib .input-field.status-disabled {
-  border-style: dashed;
-}
-.bluelib .input-field.status-disabled:hover,
-.bluelib .input-field.status-disabled:focus {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: transparent;
 }
 .bluelib .element-title {
   --bluelib-color-r: 255;
