@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 
 export default function Aside({children, className, ...props}) {
     return (
-        <aside className={useBluelibClassNames("panel panel-box panel-aside", className)} {...props}>
+        <aside className={useBluelibClassNames(["panel", "panel-box", "panel-aside"], className)} {...props}>
             {children}
         </aside>
     )

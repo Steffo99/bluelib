@@ -1,11 +1,14 @@
 import React from "react"
 import useBluelibClassNames from "../../hooks/useBluelibClassNames"
 import PropTypes from "prop-types"
+import { disable, disableClass } from "../../utils/disable"
 
 
-export default function Anchor({children, className, href, ...props}) {
+export default function Anchor({children, className, disabled, href, ...props}) {
+    className = useBluelibClassNames([`element-anchor`, disableClass(disabled)], [className])
+
     return (
-        <a className={useBluelibClassNames(`element-anchor`, className)} href={href} {...props}>
+        <a href={disable(disabled, href)} {className} {...props}>
             {children}
         </a>
     )
@@ -15,5 +18,6 @@ export default function Anchor({children, className, href, ...props}) {
 Anchor.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    href: PropTypes.string
+    disabled: PropTypes.bool,
+    href: PropTypes.string,
 }

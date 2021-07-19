@@ -1,4 +1,4 @@
-Align text horizontally.
+A `<div>` which changes the alignment of the contained text using the `align-*` Bluelib class.
 
 ```jsx
 import Bluelib from "../Bluelib";
