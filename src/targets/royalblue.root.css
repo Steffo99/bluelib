@@ -147,6 +147,8 @@ body,
 body * {
   box-sizing: border-box;
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  /* Disable outline, as we already highlight focused elements; if it's not enough, let me know */
+  outline: none !important;
 }
 .base-skeleton .container-main,
 body .container-main,
@@ -789,6 +791,72 @@ body .panel-split aside,
 body .panel-split .panel-split {
   margin: 0;
 }
+.base-skeleton form,
+body form,
+.base-skeleton .form,
+body .form {
+  display: grid;
+  align-items: center;
+  row-gap: 4px;
+  column-gap: 8px;
+  grid-template-columns: minmax(auto, 1fr) 5fr;
+}
+.base-skeleton form label,
+body form label,
+.base-skeleton .form-label,
+body .form-label {
+  grid-column: 1;
+  justify-self: end;
+}
+.base-skeleton form input,
+body form input,
+.base-skeleton .form-input,
+body .form-input {
+  grid-column: 2;
+  justify-self: stretch;
+  width: 100%;
+}
+.base-skeleton form input:optional::placeholder,
+body form input:optional::placeholder,
+.base-skeleton .form-input:optional::placeholder,
+body .form-input:optional::placeholder {
+  font-style: italic;
+}
+.base-skeleton form input:invalid:not(:placeholder-shown),
+body form input:invalid:not(:placeholder-shown),
+.base-skeleton .form-input:invalid:not(:placeholder-shown),
+body .form-input:invalid:not(:placeholder-shown) {
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 125;
+  --bluelib-color-b: 125;
+}
+.base-skeleton form input[type="submit"],
+body form input[type="submit"],
+.base-skeleton form button,
+body form button,
+.base-skeleton .form-submit,
+body .form-submit {
+  width: auto;
+}
+.base-skeleton .form-buttons,
+body .form-buttons {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.base-skeleton .form-buttons:first-child,
+body .form-buttons:first-child {
+  margin-top: 0;
+}
+.base-skeleton .form-buttons:last-child,
+body .form-buttons:last-child {
+  margin-bottom: 0;
+}
 .base-skeleton .button,
 body .button,
 .base-skeleton button,
@@ -835,7 +903,7 @@ body .button .status-disabled:hover,
 body button .status-disabled:hover,
 .base-skeleton input[type="submit"] .status-disabled:hover,
 body input[type="submit"] .status-disabled:hover {
-  background-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
 .base-skeleton .button[disabled]:active,
 body .button[disabled]:active,
@@ -849,7 +917,7 @@ body .button .status-disabled:active,
 body button .status-disabled:active,
 .base-skeleton input[type="submit"] .status-disabled:active,
 body input[type="submit"] .status-disabled:active {
-  background-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
 .base-skeleton .button-fill-width,
 body .button-fill-width {
@@ -897,7 +965,7 @@ body .button-toggle-off[disabled]:hover,
 body .button-toggle-off .status-disabled:hover {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
 .base-skeleton .button-toggle-off[disabled]:active,
 body .button-toggle-off[disabled]:active,
@@ -905,7 +973,7 @@ body .button-toggle-off[disabled]:active,
 body .button-toggle-off .status-disabled:active {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
 .base-skeleton .button-toggle-on,
 body .button-toggle-on {

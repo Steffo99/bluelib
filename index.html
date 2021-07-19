@@ -393,10 +393,17 @@
                     Bluelib allows for the easy creation of forms:
                 </p>
                 <form>
-                    <input type="text" placeholder="Text"/>
-                    <input type="password" placeholder="Password"/>
-                    <input type="email" placeholder="Email"/>
-                    <input type="text" placeholder="Disabled" disabled/>
+                    <label for="input-text">Text</label>
+                    <input id="input-text" type="text" placeholder="Text"/>
+                    <label for="input-password">Password</label>
+                    <input id="input-password" type="password" placeholder="Password" required/>
+                    <label for="input-email">Email</label>
+                    <input id="input-email" type="email" placeholder="Email"/>
+                    <label for="input-disabled">Disabled</label>
+                    <input id="input-disabled" type="text" placeholder="Disabled" disabled/>
+                    <div class="form-buttons">
+                        <input id="input-submit" type="submit" value="Submit"/>
+                    </div>
                 </form>
             </section>
         </div>

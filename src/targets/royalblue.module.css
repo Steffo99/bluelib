@@ -144,6 +144,8 @@
 .bluelib * {
   box-sizing: border-box;
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  /* Disable outline, as we already highlight focused elements; if it's not enough, let me know */
+  outline: none !important;
 }
 .bluelib .container-main {
   margin-left: auto;
@@ -196,6 +198,49 @@
 .bluelib .panel-split > .panel {
   margin: 0;
 }
+.bluelib .form {
+  display: grid;
+  align-items: center;
+  row-gap: 4px;
+  column-gap: 8px;
+  grid-template-columns: minmax(auto, 1fr) 5fr;
+}
+.bluelib .form-label {
+  grid-column: 1;
+  justify-self: end;
+}
+.bluelib .form-input {
+  grid-column: 2;
+  justify-self: stretch;
+  width: 100%;
+}
+.bluelib .form-input:optional::placeholder {
+  font-style: italic;
+}
+.bluelib .form-input:invalid:not(:placeholder-shown) {
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 125;
+  --bluelib-color-b: 125;
+}
+.bluelib .form-submit {
+  width: auto;
+}
+.bluelib .form-buttons {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.bluelib .form-buttons:first-child {
+  margin-top: 0;
+}
+.bluelib .form-buttons:last-child {
+  margin-bottom: 0;
+}
 .bluelib .button {
   display: inline-flex;
   justify-content: center;
@@ -216,10 +261,10 @@
   background-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
 }
 .bluelib .button.status-disabled:hover {
-  background-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
 .bluelib .button.status-disabled:active {
-  background-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
 .bluelib .button-fill-width {
   width: 100%;
@@ -253,12 +298,12 @@
 .bluelib .button-toggle-off.status-disabled:hover {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
 .bluelib .button-toggle-off.status-disabled:active {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
 .bluelib .button-toggle-on {
   border-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
