@@ -6,3 +6,4 @@ Valid strings are:
 
 - `"paper"`
 - `"royalblue"`
+- `"rygblue"` (aliased to `"royalblue"`)

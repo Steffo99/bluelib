@@ -1,7 +1,7 @@
 import React from "react"
 
 import skinPaper from "../../../bluelib/src/targets/paper.module.css"
-import skinRygblue from "../../../bluelib/src/targets/royalblue.module.css"
+import skinRoyalblue from "../../../bluelib/src/targets/royalblue.module.css"
 import ContextBluelibSkin from "../../../contexts/ContextBluelibSkin"
 import isString from "../../../utils/isString"
 import PropTypes from "prop-types"
@@ -9,7 +9,8 @@ import PropTypes from "prop-types"
 
 const builtinSkins = {
     "paper": skinPaper,
-    "royalblue": skinRygblue,
+    "royalblue": skinRoyalblue,
+    "rygblue": skinRoyalblue,
 }
 
 

@@ -9,6 +9,8 @@ Valid strings are:
 
 - `"paper"`
 - `"royalblue"`
+- `"rygblue"` (aliased to `"royalblue"`)
+
 
 ```jsx
 <Bluelib skin={"royalblue"}>
