@@ -7,10 +7,11 @@ A skin can be selected by passing either a CSS module or a string to the `skin` 
 
 Valid strings are:
 
-- `"rygblue"`
+- `"paper"`
+- `"royalblue"`
 
 ```jsx
-<Bluelib skin={"rygblue"}>
+<Bluelib skin={"royalblue"}>
     Ciao!
 </Bluelib>
 ```

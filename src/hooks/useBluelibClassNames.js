@@ -2,8 +2,6 @@ import {useContext} from "react";
 import contextBluelibSkin from "../contexts/ContextBluelibSkin";
 import classNames from "classnames";
 
-import skeleton from "../bluelib/src/targets/skeleton.module.css";
-
 
 export default function useBluelibClassNames(cn, extra) {
     const bluelibSkin = useContext(contextBluelibSkin);
@@ -19,7 +17,12 @@ export default function useBluelibClassNames(cn, extra) {
             return null;
         }
 
-        return classNames(skeleton[c], bluelibSkin ? bluelibSkin[c] : null)
+        if(!bluelibSkin) {
+            console.warn("bluelibSkin is invalid: ", bluelibSkin)
+            return null
+        }
+
+        return classNames(bluelibSkin[c])
     });
 
     // Return all the class names
