@@ -1,22 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 @{root} {
-    // --- Globals ---
 
-    @font-family: "Fira Sans", sans-serif;
+    // --- Root ---
 
-    // -- Root --
+    color: @bA;
+    background-color: @hex-background;
+    .bluelib-color(@hex-foreground);
+    .font-text();
 
-    --bluelib-color-r: 24;
-    --bluelib-color-g: 24;
-    --bluelib-color-b: 24;
-
-    font-family: @font-family;
 
     &, @{all} {
         box-sizing: border-box;
         color: @bA;
     }
+
 
     // --- Containers ---
 
@@ -25,6 +21,7 @@
         margin-right: auto;
         max-width: 1280px;
     }
+
 
     // --- Panels ---
     // Remember to use BOTH the panel AND the panel-* class when using a panel element!
@@ -97,7 +94,7 @@
 
         background-color: @bA;
         border: none;
-        color: white;
+        color: @hex-outline;
         padding: 6px 16px;
         border-radius: 4px;
         font-family: inherit;
@@ -216,8 +213,8 @@
         border-radius: 4px 4px 0 0;
         padding: 4px 6px;
 
-        font-size: medium;
-        font-family: @font-family;
+        font-family: inherit;
+        font-size: inherit;
 
         border-color: @b3;
         color: @bA;
@@ -273,7 +270,8 @@
 
     @{element-title} {
         text-align: center;
-        font-weight: 500;
+        .bluelib-color(@hex-accent);
+        .font-title();
     }
 
     @{element-paragraph} {
@@ -291,7 +289,29 @@
     }
 
     @{element-anchor} {
+        .bluelib-color(@hex-link);
 
+        &:hover {
+            .bluelib-color(@hex-link-hover);
+        }
+
+        &:active {
+            .bluelib-color(@hex-link-active);
+        }
+
+        &@{status-disabled} {
+            text-decoration-style: dashed;
+            text-decoration-color: currentColor;
+            text-decoration-width: 1px;
+
+            &:hover {
+                .bluelib-color(@hex-link);
+            }
+
+            &:active {
+                .bluelib-color(@hex-link);
+            }
+        }
     }
 
     // --- Alignment ---
@@ -357,11 +377,11 @@
     }
 
     @{style-monospace} {
-        font-family: "Fira Code", monospace;
+        .font-code();
     }
 
     @{style-keyboard} {
-        font-family: "Fira Code", monospace;
+        .font-code();
         padding: 2px 4px;
         border: 2px outset;
         border-radius: 4px;
@@ -370,51 +390,35 @@
     // --- Colors ---
 
     @{color-red} {
-        --bluelib-color-r: 200;
-        --bluelib-color-g: 0;
-        --bluelib-color-b: 0;
+        .bluelib-color(@hex-red)
     }
 
     @{color-orange} {
-        --bluelib-color-r: 200;
-        --bluelib-color-g: 165;
-        --bluelib-color-b: 0;
+        .bluelib-color(@hex-orange)
     }
 
     @{color-yellow} {
-        --bluelib-color-r: 200;
-        --bluelib-color-g: 200;
-        --bluelib-color-b: 0;
+        .bluelib-color(@hex-yellow)
     }
 
     @{color-lime} {
-        --bluelib-color-r: 0;
-        --bluelib-color-g: 200;
-        --bluelib-color-b: 0;
+        .bluelib-color(@hex-lime)
     }
 
     @{color-cyan} {
-        --bluelib-color-r: 0;
-        --bluelib-color-g: 200;
-        --bluelib-color-b: 200;
+        .bluelib-color(@hex-cyan)
     }
 
     @{color-blue} {
-        --bluelib-color-r: 0;
-        --bluelib-color-g: 0;
-        --bluelib-color-b: 200;
+        .bluelib-color(@hex-blue)
     }
 
     @{color-magenta} {
-        --bluelib-color-r: 200;
-        --bluelib-color-g: 0;
-        --bluelib-color-b: 200;
+        .bluelib-color(@hex-magenta)
     }
 
     @{color-gray} {
-        --bluelib-color-r: 128;
-        --bluelib-color-g: 128;
-        --bluelib-color-b: 128;
+        .bluelib-color(@hex-gray)
     }
 }
 

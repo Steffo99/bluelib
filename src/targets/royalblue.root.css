@@ -1,0 +1,1528 @@
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firacode/v10/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sFVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9A4kDNxMZdWfMOD5VvkrCqYTc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrAGQBf_.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrBiQxf_.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9C4kDNxMZdWfMOD5VvkojO.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrA6Qhf_.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrAWRRf_.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrByRBf_.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrBuRxf_.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9f4kDNxMZdWfMOD5VvkrBKRhf_.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9C4kDNxMZdWfMOD5Vn9IjO.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnWKnuQQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnPKruQQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9E4kDNxMZdWfMOD5VfkA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKvuQQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnSKzuQQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnLK3uQQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnMK7uQQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnFK_uQQ.ttf) format('truetype');
+}
+.base-skeleton,
+body {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: #0d193b;
+  --bluelib-color-r: 160;
+  --bluelib-color-g: 204;
+  --bluelib-color-b: 255;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+}
+.base-skeleton,
+body,
+.base-skeleton *,
+body * {
+  box-sizing: border-box;
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+}
+.base-skeleton .container-main,
+body .container-main,
+.base-skeleton main,
+body main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+}
+.base-skeleton .panel,
+body .panel,
+.base-skeleton .panel-box,
+body .panel-box,
+.base-skeleton section,
+body section,
+.base-skeleton .panel-blockquote,
+body .panel-blockquote,
+.base-skeleton blockquote,
+body blockquote,
+.base-skeleton .panel-aside,
+body .panel-aside,
+.base-skeleton aside,
+body aside,
+.base-skeleton .panel-split,
+body .panel-split {
+  margin: 8px 0;
+  width: 100%;
+}
+.base-skeleton .panel > .element-paragraph:first-child,
+body .panel > .element-paragraph:first-child,
+.base-skeleton .panel-box > .element-paragraph:first-child,
+body .panel-box > .element-paragraph:first-child,
+.base-skeleton section > .element-paragraph:first-child,
+body section > .element-paragraph:first-child,
+.base-skeleton .panel-blockquote > .element-paragraph:first-child,
+body .panel-blockquote > .element-paragraph:first-child,
+.base-skeleton blockquote > .element-paragraph:first-child,
+body blockquote > .element-paragraph:first-child,
+.base-skeleton .panel-aside > .element-paragraph:first-child,
+body .panel-aside > .element-paragraph:first-child,
+.base-skeleton aside > .element-paragraph:first-child,
+body aside > .element-paragraph:first-child,
+.base-skeleton .panel-split > .element-paragraph:first-child,
+body .panel-split > .element-paragraph:first-child,
+.base-skeleton .panel p:first-child,
+body .panel p:first-child,
+.base-skeleton .panel-box p:first-child,
+body .panel-box p:first-child,
+.base-skeleton section p:first-child,
+body section p:first-child,
+.base-skeleton .panel-blockquote p:first-child,
+body .panel-blockquote p:first-child,
+.base-skeleton blockquote p:first-child,
+body blockquote p:first-child,
+.base-skeleton .panel-aside p:first-child,
+body .panel-aside p:first-child,
+.base-skeleton aside p:first-child,
+body aside p:first-child,
+.base-skeleton .panel-split p:first-child,
+body .panel-split p:first-child,
+.base-skeleton .panel .element-title:first-child,
+body .panel .element-title:first-child,
+.base-skeleton .panel-box .element-title:first-child,
+body .panel-box .element-title:first-child,
+.base-skeleton section .element-title:first-child,
+body section .element-title:first-child,
+.base-skeleton .panel-blockquote .element-title:first-child,
+body .panel-blockquote .element-title:first-child,
+.base-skeleton blockquote .element-title:first-child,
+body blockquote .element-title:first-child,
+.base-skeleton .panel-aside .element-title:first-child,
+body .panel-aside .element-title:first-child,
+.base-skeleton aside .element-title:first-child,
+body aside .element-title:first-child,
+.base-skeleton .panel-split .element-title:first-child,
+body .panel-split .element-title:first-child,
+.base-skeleton .panel h1:first-child,
+body .panel h1:first-child,
+.base-skeleton .panel-box h1:first-child,
+body .panel-box h1:first-child,
+.base-skeleton section h1:first-child,
+body section h1:first-child,
+.base-skeleton .panel-blockquote h1:first-child,
+body .panel-blockquote h1:first-child,
+.base-skeleton blockquote h1:first-child,
+body blockquote h1:first-child,
+.base-skeleton .panel-aside h1:first-child,
+body .panel-aside h1:first-child,
+.base-skeleton aside h1:first-child,
+body aside h1:first-child,
+.base-skeleton .panel-split h1:first-child,
+body .panel-split h1:first-child,
+.base-skeleton .panel h2:first-child,
+body .panel h2:first-child,
+.base-skeleton .panel-box h2:first-child,
+body .panel-box h2:first-child,
+.base-skeleton section h2:first-child,
+body section h2:first-child,
+.base-skeleton .panel-blockquote h2:first-child,
+body .panel-blockquote h2:first-child,
+.base-skeleton blockquote h2:first-child,
+body blockquote h2:first-child,
+.base-skeleton .panel-aside h2:first-child,
+body .panel-aside h2:first-child,
+.base-skeleton aside h2:first-child,
+body aside h2:first-child,
+.base-skeleton .panel-split h2:first-child,
+body .panel-split h2:first-child,
+.base-skeleton .panel h3:first-child,
+body .panel h3:first-child,
+.base-skeleton .panel-box h3:first-child,
+body .panel-box h3:first-child,
+.base-skeleton section h3:first-child,
+body section h3:first-child,
+.base-skeleton .panel-blockquote h3:first-child,
+body .panel-blockquote h3:first-child,
+.base-skeleton blockquote h3:first-child,
+body blockquote h3:first-child,
+.base-skeleton .panel-aside h3:first-child,
+body .panel-aside h3:first-child,
+.base-skeleton aside h3:first-child,
+body aside h3:first-child,
+.base-skeleton .panel-split h3:first-child,
+body .panel-split h3:first-child,
+.base-skeleton .panel h4:first-child,
+body .panel h4:first-child,
+.base-skeleton .panel-box h4:first-child,
+body .panel-box h4:first-child,
+.base-skeleton section h4:first-child,
+body section h4:first-child,
+.base-skeleton .panel-blockquote h4:first-child,
+body .panel-blockquote h4:first-child,
+.base-skeleton blockquote h4:first-child,
+body blockquote h4:first-child,
+.base-skeleton .panel-aside h4:first-child,
+body .panel-aside h4:first-child,
+.base-skeleton aside h4:first-child,
+body aside h4:first-child,
+.base-skeleton .panel-split h4:first-child,
+body .panel-split h4:first-child,
+.base-skeleton .panel h5:first-child,
+body .panel h5:first-child,
+.base-skeleton .panel-box h5:first-child,
+body .panel-box h5:first-child,
+.base-skeleton section h5:first-child,
+body section h5:first-child,
+.base-skeleton .panel-blockquote h5:first-child,
+body .panel-blockquote h5:first-child,
+.base-skeleton blockquote h5:first-child,
+body blockquote h5:first-child,
+.base-skeleton .panel-aside h5:first-child,
+body .panel-aside h5:first-child,
+.base-skeleton aside h5:first-child,
+body aside h5:first-child,
+.base-skeleton .panel-split h5:first-child,
+body .panel-split h5:first-child,
+.base-skeleton .panel h6:first-child,
+body .panel h6:first-child,
+.base-skeleton .panel-box h6:first-child,
+body .panel-box h6:first-child,
+.base-skeleton section h6:first-child,
+body section h6:first-child,
+.base-skeleton .panel-blockquote h6:first-child,
+body .panel-blockquote h6:first-child,
+.base-skeleton blockquote h6:first-child,
+body blockquote h6:first-child,
+.base-skeleton .panel-aside h6:first-child,
+body .panel-aside h6:first-child,
+.base-skeleton aside h6:first-child,
+body aside h6:first-child,
+.base-skeleton .panel-split h6:first-child,
+body .panel-split h6:first-child,
+.base-skeleton .panel .panel:first-child,
+body .panel .panel:first-child,
+.base-skeleton .panel-box .panel:first-child,
+body .panel-box .panel:first-child,
+.base-skeleton section .panel:first-child,
+body section .panel:first-child,
+.base-skeleton .panel-blockquote .panel:first-child,
+body .panel-blockquote .panel:first-child,
+.base-skeleton blockquote .panel:first-child,
+body blockquote .panel:first-child,
+.base-skeleton .panel-aside .panel:first-child,
+body .panel-aside .panel:first-child,
+.base-skeleton aside .panel:first-child,
+body aside .panel:first-child,
+.base-skeleton .panel-split .panel:first-child,
+body .panel-split .panel:first-child,
+.base-skeleton .panel .panel-box:first-child,
+body .panel .panel-box:first-child,
+.base-skeleton .panel-box .panel-box:first-child,
+body .panel-box .panel-box:first-child,
+.base-skeleton section .panel-box:first-child,
+body section .panel-box:first-child,
+.base-skeleton .panel-blockquote .panel-box:first-child,
+body .panel-blockquote .panel-box:first-child,
+.base-skeleton blockquote .panel-box:first-child,
+body blockquote .panel-box:first-child,
+.base-skeleton .panel-aside .panel-box:first-child,
+body .panel-aside .panel-box:first-child,
+.base-skeleton aside .panel-box:first-child,
+body aside .panel-box:first-child,
+.base-skeleton .panel-split .panel-box:first-child,
+body .panel-split .panel-box:first-child,
+.base-skeleton .panel section:first-child,
+body .panel section:first-child,
+.base-skeleton .panel-box section:first-child,
+body .panel-box section:first-child,
+.base-skeleton section section:first-child,
+body section section:first-child,
+.base-skeleton .panel-blockquote section:first-child,
+body .panel-blockquote section:first-child,
+.base-skeleton blockquote section:first-child,
+body blockquote section:first-child,
+.base-skeleton .panel-aside section:first-child,
+body .panel-aside section:first-child,
+.base-skeleton aside section:first-child,
+body aside section:first-child,
+.base-skeleton .panel-split section:first-child,
+body .panel-split section:first-child,
+.base-skeleton .panel .panel-blockquote:first-child,
+body .panel .panel-blockquote:first-child,
+.base-skeleton .panel-box .panel-blockquote:first-child,
+body .panel-box .panel-blockquote:first-child,
+.base-skeleton section .panel-blockquote:first-child,
+body section .panel-blockquote:first-child,
+.base-skeleton .panel-blockquote .panel-blockquote:first-child,
+body .panel-blockquote .panel-blockquote:first-child,
+.base-skeleton blockquote .panel-blockquote:first-child,
+body blockquote .panel-blockquote:first-child,
+.base-skeleton .panel-aside .panel-blockquote:first-child,
+body .panel-aside .panel-blockquote:first-child,
+.base-skeleton aside .panel-blockquote:first-child,
+body aside .panel-blockquote:first-child,
+.base-skeleton .panel-split .panel-blockquote:first-child,
+body .panel-split .panel-blockquote:first-child,
+.base-skeleton .panel blockquote:first-child,
+body .panel blockquote:first-child,
+.base-skeleton .panel-box blockquote:first-child,
+body .panel-box blockquote:first-child,
+.base-skeleton section blockquote:first-child,
+body section blockquote:first-child,
+.base-skeleton .panel-blockquote blockquote:first-child,
+body .panel-blockquote blockquote:first-child,
+.base-skeleton blockquote blockquote:first-child,
+body blockquote blockquote:first-child,
+.base-skeleton .panel-aside blockquote:first-child,
+body .panel-aside blockquote:first-child,
+.base-skeleton aside blockquote:first-child,
+body aside blockquote:first-child,
+.base-skeleton .panel-split blockquote:first-child,
+body .panel-split blockquote:first-child,
+.base-skeleton .panel .panel-aside:first-child,
+body .panel .panel-aside:first-child,
+.base-skeleton .panel-box .panel-aside:first-child,
+body .panel-box .panel-aside:first-child,
+.base-skeleton section .panel-aside:first-child,
+body section .panel-aside:first-child,
+.base-skeleton .panel-blockquote .panel-aside:first-child,
+body .panel-blockquote .panel-aside:first-child,
+.base-skeleton blockquote .panel-aside:first-child,
+body blockquote .panel-aside:first-child,
+.base-skeleton .panel-aside .panel-aside:first-child,
+body .panel-aside .panel-aside:first-child,
+.base-skeleton aside .panel-aside:first-child,
+body aside .panel-aside:first-child,
+.base-skeleton .panel-split .panel-aside:first-child,
+body .panel-split .panel-aside:first-child,
+.base-skeleton .panel aside:first-child,
+body .panel aside:first-child,
+.base-skeleton .panel-box aside:first-child,
+body .panel-box aside:first-child,
+.base-skeleton section aside:first-child,
+body section aside:first-child,
+.base-skeleton .panel-blockquote aside:first-child,
+body .panel-blockquote aside:first-child,
+.base-skeleton blockquote aside:first-child,
+body blockquote aside:first-child,
+.base-skeleton .panel-aside aside:first-child,
+body .panel-aside aside:first-child,
+.base-skeleton aside aside:first-child,
+body aside aside:first-child,
+.base-skeleton .panel-split aside:first-child,
+body .panel-split aside:first-child,
+.base-skeleton .panel .panel-split:first-child,
+body .panel .panel-split:first-child,
+.base-skeleton .panel-box .panel-split:first-child,
+body .panel-box .panel-split:first-child,
+.base-skeleton section .panel-split:first-child,
+body section .panel-split:first-child,
+.base-skeleton .panel-blockquote .panel-split:first-child,
+body .panel-blockquote .panel-split:first-child,
+.base-skeleton blockquote .panel-split:first-child,
+body blockquote .panel-split:first-child,
+.base-skeleton .panel-aside .panel-split:first-child,
+body .panel-aside .panel-split:first-child,
+.base-skeleton aside .panel-split:first-child,
+body aside .panel-split:first-child,
+.base-skeleton .panel-split .panel-split:first-child,
+body .panel-split .panel-split:first-child {
+  margin-top: 0;
+}
+.base-skeleton .panel > .element-paragraph:last-child,
+body .panel > .element-paragraph:last-child,
+.base-skeleton .panel-box > .element-paragraph:last-child,
+body .panel-box > .element-paragraph:last-child,
+.base-skeleton section > .element-paragraph:last-child,
+body section > .element-paragraph:last-child,
+.base-skeleton .panel-blockquote > .element-paragraph:last-child,
+body .panel-blockquote > .element-paragraph:last-child,
+.base-skeleton blockquote > .element-paragraph:last-child,
+body blockquote > .element-paragraph:last-child,
+.base-skeleton .panel-aside > .element-paragraph:last-child,
+body .panel-aside > .element-paragraph:last-child,
+.base-skeleton aside > .element-paragraph:last-child,
+body aside > .element-paragraph:last-child,
+.base-skeleton .panel-split > .element-paragraph:last-child,
+body .panel-split > .element-paragraph:last-child,
+.base-skeleton .panel p:last-child,
+body .panel p:last-child,
+.base-skeleton .panel-box p:last-child,
+body .panel-box p:last-child,
+.base-skeleton section p:last-child,
+body section p:last-child,
+.base-skeleton .panel-blockquote p:last-child,
+body .panel-blockquote p:last-child,
+.base-skeleton blockquote p:last-child,
+body blockquote p:last-child,
+.base-skeleton .panel-aside p:last-child,
+body .panel-aside p:last-child,
+.base-skeleton aside p:last-child,
+body aside p:last-child,
+.base-skeleton .panel-split p:last-child,
+body .panel-split p:last-child,
+.base-skeleton .panel .element-title:last-child,
+body .panel .element-title:last-child,
+.base-skeleton .panel-box .element-title:last-child,
+body .panel-box .element-title:last-child,
+.base-skeleton section .element-title:last-child,
+body section .element-title:last-child,
+.base-skeleton .panel-blockquote .element-title:last-child,
+body .panel-blockquote .element-title:last-child,
+.base-skeleton blockquote .element-title:last-child,
+body blockquote .element-title:last-child,
+.base-skeleton .panel-aside .element-title:last-child,
+body .panel-aside .element-title:last-child,
+.base-skeleton aside .element-title:last-child,
+body aside .element-title:last-child,
+.base-skeleton .panel-split .element-title:last-child,
+body .panel-split .element-title:last-child,
+.base-skeleton .panel h1:last-child,
+body .panel h1:last-child,
+.base-skeleton .panel-box h1:last-child,
+body .panel-box h1:last-child,
+.base-skeleton section h1:last-child,
+body section h1:last-child,
+.base-skeleton .panel-blockquote h1:last-child,
+body .panel-blockquote h1:last-child,
+.base-skeleton blockquote h1:last-child,
+body blockquote h1:last-child,
+.base-skeleton .panel-aside h1:last-child,
+body .panel-aside h1:last-child,
+.base-skeleton aside h1:last-child,
+body aside h1:last-child,
+.base-skeleton .panel-split h1:last-child,
+body .panel-split h1:last-child,
+.base-skeleton .panel h2:last-child,
+body .panel h2:last-child,
+.base-skeleton .panel-box h2:last-child,
+body .panel-box h2:last-child,
+.base-skeleton section h2:last-child,
+body section h2:last-child,
+.base-skeleton .panel-blockquote h2:last-child,
+body .panel-blockquote h2:last-child,
+.base-skeleton blockquote h2:last-child,
+body blockquote h2:last-child,
+.base-skeleton .panel-aside h2:last-child,
+body .panel-aside h2:last-child,
+.base-skeleton aside h2:last-child,
+body aside h2:last-child,
+.base-skeleton .panel-split h2:last-child,
+body .panel-split h2:last-child,
+.base-skeleton .panel h3:last-child,
+body .panel h3:last-child,
+.base-skeleton .panel-box h3:last-child,
+body .panel-box h3:last-child,
+.base-skeleton section h3:last-child,
+body section h3:last-child,
+.base-skeleton .panel-blockquote h3:last-child,
+body .panel-blockquote h3:last-child,
+.base-skeleton blockquote h3:last-child,
+body blockquote h3:last-child,
+.base-skeleton .panel-aside h3:last-child,
+body .panel-aside h3:last-child,
+.base-skeleton aside h3:last-child,
+body aside h3:last-child,
+.base-skeleton .panel-split h3:last-child,
+body .panel-split h3:last-child,
+.base-skeleton .panel h4:last-child,
+body .panel h4:last-child,
+.base-skeleton .panel-box h4:last-child,
+body .panel-box h4:last-child,
+.base-skeleton section h4:last-child,
+body section h4:last-child,
+.base-skeleton .panel-blockquote h4:last-child,
+body .panel-blockquote h4:last-child,
+.base-skeleton blockquote h4:last-child,
+body blockquote h4:last-child,
+.base-skeleton .panel-aside h4:last-child,
+body .panel-aside h4:last-child,
+.base-skeleton aside h4:last-child,
+body aside h4:last-child,
+.base-skeleton .panel-split h4:last-child,
+body .panel-split h4:last-child,
+.base-skeleton .panel h5:last-child,
+body .panel h5:last-child,
+.base-skeleton .panel-box h5:last-child,
+body .panel-box h5:last-child,
+.base-skeleton section h5:last-child,
+body section h5:last-child,
+.base-skeleton .panel-blockquote h5:last-child,
+body .panel-blockquote h5:last-child,
+.base-skeleton blockquote h5:last-child,
+body blockquote h5:last-child,
+.base-skeleton .panel-aside h5:last-child,
+body .panel-aside h5:last-child,
+.base-skeleton aside h5:last-child,
+body aside h5:last-child,
+.base-skeleton .panel-split h5:last-child,
+body .panel-split h5:last-child,
+.base-skeleton .panel h6:last-child,
+body .panel h6:last-child,
+.base-skeleton .panel-box h6:last-child,
+body .panel-box h6:last-child,
+.base-skeleton section h6:last-child,
+body section h6:last-child,
+.base-skeleton .panel-blockquote h6:last-child,
+body .panel-blockquote h6:last-child,
+.base-skeleton blockquote h6:last-child,
+body blockquote h6:last-child,
+.base-skeleton .panel-aside h6:last-child,
+body .panel-aside h6:last-child,
+.base-skeleton aside h6:last-child,
+body aside h6:last-child,
+.base-skeleton .panel-split h6:last-child,
+body .panel-split h6:last-child,
+.base-skeleton .panel .panel:last-child,
+body .panel .panel:last-child,
+.base-skeleton .panel-box .panel:last-child,
+body .panel-box .panel:last-child,
+.base-skeleton section .panel:last-child,
+body section .panel:last-child,
+.base-skeleton .panel-blockquote .panel:last-child,
+body .panel-blockquote .panel:last-child,
+.base-skeleton blockquote .panel:last-child,
+body blockquote .panel:last-child,
+.base-skeleton .panel-aside .panel:last-child,
+body .panel-aside .panel:last-child,
+.base-skeleton aside .panel:last-child,
+body aside .panel:last-child,
+.base-skeleton .panel-split .panel:last-child,
+body .panel-split .panel:last-child,
+.base-skeleton .panel .panel-box:last-child,
+body .panel .panel-box:last-child,
+.base-skeleton .panel-box .panel-box:last-child,
+body .panel-box .panel-box:last-child,
+.base-skeleton section .panel-box:last-child,
+body section .panel-box:last-child,
+.base-skeleton .panel-blockquote .panel-box:last-child,
+body .panel-blockquote .panel-box:last-child,
+.base-skeleton blockquote .panel-box:last-child,
+body blockquote .panel-box:last-child,
+.base-skeleton .panel-aside .panel-box:last-child,
+body .panel-aside .panel-box:last-child,
+.base-skeleton aside .panel-box:last-child,
+body aside .panel-box:last-child,
+.base-skeleton .panel-split .panel-box:last-child,
+body .panel-split .panel-box:last-child,
+.base-skeleton .panel section:last-child,
+body .panel section:last-child,
+.base-skeleton .panel-box section:last-child,
+body .panel-box section:last-child,
+.base-skeleton section section:last-child,
+body section section:last-child,
+.base-skeleton .panel-blockquote section:last-child,
+body .panel-blockquote section:last-child,
+.base-skeleton blockquote section:last-child,
+body blockquote section:last-child,
+.base-skeleton .panel-aside section:last-child,
+body .panel-aside section:last-child,
+.base-skeleton aside section:last-child,
+body aside section:last-child,
+.base-skeleton .panel-split section:last-child,
+body .panel-split section:last-child,
+.base-skeleton .panel .panel-blockquote:last-child,
+body .panel .panel-blockquote:last-child,
+.base-skeleton .panel-box .panel-blockquote:last-child,
+body .panel-box .panel-blockquote:last-child,
+.base-skeleton section .panel-blockquote:last-child,
+body section .panel-blockquote:last-child,
+.base-skeleton .panel-blockquote .panel-blockquote:last-child,
+body .panel-blockquote .panel-blockquote:last-child,
+.base-skeleton blockquote .panel-blockquote:last-child,
+body blockquote .panel-blockquote:last-child,
+.base-skeleton .panel-aside .panel-blockquote:last-child,
+body .panel-aside .panel-blockquote:last-child,
+.base-skeleton aside .panel-blockquote:last-child,
+body aside .panel-blockquote:last-child,
+.base-skeleton .panel-split .panel-blockquote:last-child,
+body .panel-split .panel-blockquote:last-child,
+.base-skeleton .panel blockquote:last-child,
+body .panel blockquote:last-child,
+.base-skeleton .panel-box blockquote:last-child,
+body .panel-box blockquote:last-child,
+.base-skeleton section blockquote:last-child,
+body section blockquote:last-child,
+.base-skeleton .panel-blockquote blockquote:last-child,
+body .panel-blockquote blockquote:last-child,
+.base-skeleton blockquote blockquote:last-child,
+body blockquote blockquote:last-child,
+.base-skeleton .panel-aside blockquote:last-child,
+body .panel-aside blockquote:last-child,
+.base-skeleton aside blockquote:last-child,
+body aside blockquote:last-child,
+.base-skeleton .panel-split blockquote:last-child,
+body .panel-split blockquote:last-child,
+.base-skeleton .panel .panel-aside:last-child,
+body .panel .panel-aside:last-child,
+.base-skeleton .panel-box .panel-aside:last-child,
+body .panel-box .panel-aside:last-child,
+.base-skeleton section .panel-aside:last-child,
+body section .panel-aside:last-child,
+.base-skeleton .panel-blockquote .panel-aside:last-child,
+body .panel-blockquote .panel-aside:last-child,
+.base-skeleton blockquote .panel-aside:last-child,
+body blockquote .panel-aside:last-child,
+.base-skeleton .panel-aside .panel-aside:last-child,
+body .panel-aside .panel-aside:last-child,
+.base-skeleton aside .panel-aside:last-child,
+body aside .panel-aside:last-child,
+.base-skeleton .panel-split .panel-aside:last-child,
+body .panel-split .panel-aside:last-child,
+.base-skeleton .panel aside:last-child,
+body .panel aside:last-child,
+.base-skeleton .panel-box aside:last-child,
+body .panel-box aside:last-child,
+.base-skeleton section aside:last-child,
+body section aside:last-child,
+.base-skeleton .panel-blockquote aside:last-child,
+body .panel-blockquote aside:last-child,
+.base-skeleton blockquote aside:last-child,
+body blockquote aside:last-child,
+.base-skeleton .panel-aside aside:last-child,
+body .panel-aside aside:last-child,
+.base-skeleton aside aside:last-child,
+body aside aside:last-child,
+.base-skeleton .panel-split aside:last-child,
+body .panel-split aside:last-child,
+.base-skeleton .panel .panel-split:last-child,
+body .panel .panel-split:last-child,
+.base-skeleton .panel-box .panel-split:last-child,
+body .panel-box .panel-split:last-child,
+.base-skeleton section .panel-split:last-child,
+body section .panel-split:last-child,
+.base-skeleton .panel-blockquote .panel-split:last-child,
+body .panel-blockquote .panel-split:last-child,
+.base-skeleton blockquote .panel-split:last-child,
+body blockquote .panel-split:last-child,
+.base-skeleton .panel-aside .panel-split:last-child,
+body .panel-aside .panel-split:last-child,
+.base-skeleton aside .panel-split:last-child,
+body aside .panel-split:last-child,
+.base-skeleton .panel-split .panel-split:last-child,
+body .panel-split .panel-split:last-child {
+  margin-bottom: 0;
+}
+.base-skeleton .panel-box,
+body .panel-box,
+.base-skeleton section,
+body section,
+.base-skeleton .panel-blockquote,
+body .panel-blockquote,
+.base-skeleton blockquote,
+body blockquote,
+.base-skeleton .panel-aside,
+body .panel-aside,
+.base-skeleton aside,
+body aside {
+  padding: 8px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.base-skeleton .panel-blockquote,
+body .panel-blockquote,
+.base-skeleton blockquote,
+body blockquote {
+  border-left-width: 2px;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-right-width: 0;
+}
+.base-skeleton .panel-aside,
+body .panel-aside,
+.base-skeleton aside,
+body aside {
+  border-width: 0;
+  font-size: smaller;
+}
+.base-skeleton .panel-split,
+body .panel-split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.base-skeleton .panel-split > *,
+body .panel-split > * {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+}
+.base-skeleton .panel-split > .panel,
+body .panel-split > .panel,
+.base-skeleton .panel-split .panel-box,
+body .panel-split .panel-box,
+.base-skeleton .panel-split section,
+body .panel-split section,
+.base-skeleton .panel-split .panel-blockquote,
+body .panel-split .panel-blockquote,
+.base-skeleton .panel-split blockquote,
+body .panel-split blockquote,
+.base-skeleton .panel-split .panel-aside,
+body .panel-split .panel-aside,
+.base-skeleton .panel-split aside,
+body .panel-split aside,
+.base-skeleton .panel-split .panel-split,
+body .panel-split .panel-split {
+  margin: 0;
+}
+.base-skeleton .button,
+body .button,
+.base-skeleton button,
+body button,
+.base-skeleton input[type="submit"],
+body input[type="submit"] {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  border: none;
+  color: #000000;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+.base-skeleton .button:hover,
+body .button:hover,
+.base-skeleton button:hover,
+body button:hover,
+.base-skeleton input[type="submit"]:hover,
+body input[type="submit"]:hover {
+  background-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+}
+.base-skeleton .button:active,
+body .button:active,
+.base-skeleton button:active,
+body button:active,
+.base-skeleton input[type="submit"]:active,
+body input[type="submit"]:active {
+  background-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+}
+.base-skeleton .button[disabled]:hover,
+body .button[disabled]:hover,
+.base-skeleton button[disabled]:hover,
+body button[disabled]:hover,
+.base-skeleton input[type="submit"][disabled]:hover,
+body input[type="submit"][disabled]:hover,
+.base-skeleton .button .status-disabled:hover,
+body .button .status-disabled:hover,
+.base-skeleton button .status-disabled:hover,
+body button .status-disabled:hover,
+.base-skeleton input[type="submit"] .status-disabled:hover,
+body input[type="submit"] .status-disabled:hover {
+  background-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+}
+.base-skeleton .button[disabled]:active,
+body .button[disabled]:active,
+.base-skeleton button[disabled]:active,
+body button[disabled]:active,
+.base-skeleton input[type="submit"][disabled]:active,
+body input[type="submit"][disabled]:active,
+.base-skeleton .button .status-disabled:active,
+body .button .status-disabled:active,
+.base-skeleton button .status-disabled:active,
+body button .status-disabled:active,
+.base-skeleton input[type="submit"] .status-disabled:active,
+body input[type="submit"] .status-disabled:active {
+  background-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+}
+.base-skeleton .button-fill-width,
+body .button-fill-width {
+  width: 100%;
+}
+.base-skeleton .button-toggle,
+body .button-toggle {
+  padding: 4px 14px;
+  border-width: 2px;
+  border-style: solid;
+}
+.base-skeleton .button-toggle[disabled],
+body .button-toggle[disabled],
+.base-skeleton .button-toggle .status-disabled,
+body .button-toggle .status-disabled {
+  border-style: dashed;
+}
+.base-skeleton .button-toggle-off,
+body .button-toggle-off {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+}
+.base-skeleton .button-toggle-off:hover,
+body .button-toggle-off:hover {
+  border-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.base-skeleton .button-toggle-off:active,
+body .button-toggle-off:active {
+  border-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
+}
+.base-skeleton .button-toggle-off[disabled],
+body .button-toggle-off[disabled],
+.base-skeleton .button-toggle-off .status-disabled,
+body .button-toggle-off .status-disabled {
+  border-style: dashed;
+}
+.base-skeleton .button-toggle-off[disabled]:hover,
+body .button-toggle-off[disabled]:hover,
+.base-skeleton .button-toggle-off .status-disabled:hover,
+body .button-toggle-off .status-disabled:hover {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+}
+.base-skeleton .button-toggle-off[disabled]:active,
+body .button-toggle-off[disabled]:active,
+.base-skeleton .button-toggle-off .status-disabled:active,
+body .button-toggle-off .status-disabled:active {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+}
+.base-skeleton .button-toggle-on,
+body .button-toggle-on {
+  border-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
+}
+.base-skeleton .button-toggle-on:hover,
+body .button-toggle-on:hover {
+  border-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.base-skeleton .button-toggle-on:active,
+body .button-toggle-on:active {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+}
+.base-skeleton .button-toggle-on[disabled],
+body .button-toggle-on[disabled],
+.base-skeleton .button-toggle-on .status-disabled,
+body .button-toggle-on .status-disabled {
+  border-style: dashed;
+}
+.base-skeleton .button-toggle-on[disabled]:hover,
+body .button-toggle-on[disabled]:hover,
+.base-skeleton .button-toggle-on .status-disabled:hover,
+body .button-toggle-on .status-disabled:hover {
+  border-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
+}
+.base-skeleton .button-toggle-on[disabled]:active,
+body .button-toggle-on[disabled]:active,
+.base-skeleton .button-toggle-on .status-disabled:active,
+body .button-toggle-on .status-disabled:active {
+  border-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
+}
+.base-skeleton .input-field,
+body .input-field,
+.base-skeleton input[type="color"],
+body input[type="color"],
+.base-skeleton input[type="date"],
+body input[type="date"],
+.base-skeleton input[type="datetime-local"],
+body input[type="datetime-local"],
+.base-skeleton input[type="email"],
+body input[type="email"],
+.base-skeleton input[type="file"],
+body input[type="file"],
+.base-skeleton input[type="image"],
+body input[type="image"],
+.base-skeleton input[type="month"],
+body input[type="month"],
+.base-skeleton input[type="number"],
+body input[type="number"],
+.base-skeleton input[type="password"],
+body input[type="password"],
+.base-skeleton input[type="search"],
+body input[type="search"],
+.base-skeleton input[type="tel"],
+body input[type="tel"],
+.base-skeleton input[type="text"],
+body input[type="text"],
+.base-skeleton input[type="time"],
+body input[type="time"],
+.base-skeleton input[type="url"],
+body input[type="url"],
+.base-skeleton input[type="week"],
+body input[type="week"] {
+  cursor: text;
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  border-radius: 4px 4px 0 0;
+  padding: 4px 6px;
+  font-family: inherit;
+  font-size: inherit;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+}
+.base-skeleton .input-field:hover,
+body .input-field:hover,
+.base-skeleton input[type="color"]:hover,
+body input[type="color"]:hover,
+.base-skeleton input[type="date"]:hover,
+body input[type="date"]:hover,
+.base-skeleton input[type="datetime-local"]:hover,
+body input[type="datetime-local"]:hover,
+.base-skeleton input[type="email"]:hover,
+body input[type="email"]:hover,
+.base-skeleton input[type="file"]:hover,
+body input[type="file"]:hover,
+.base-skeleton input[type="image"]:hover,
+body input[type="image"]:hover,
+.base-skeleton input[type="month"]:hover,
+body input[type="month"]:hover,
+.base-skeleton input[type="number"]:hover,
+body input[type="number"]:hover,
+.base-skeleton input[type="password"]:hover,
+body input[type="password"]:hover,
+.base-skeleton input[type="search"]:hover,
+body input[type="search"]:hover,
+.base-skeleton input[type="tel"]:hover,
+body input[type="tel"]:hover,
+.base-skeleton input[type="text"]:hover,
+body input[type="text"]:hover,
+.base-skeleton input[type="time"]:hover,
+body input[type="time"]:hover,
+.base-skeleton input[type="url"]:hover,
+body input[type="url"]:hover,
+.base-skeleton input[type="week"]:hover,
+body input[type="week"]:hover,
+.base-skeleton .input-field:focus,
+body .input-field:focus,
+.base-skeleton input[type="color"]:focus,
+body input[type="color"]:focus,
+.base-skeleton input[type="date"]:focus,
+body input[type="date"]:focus,
+.base-skeleton input[type="datetime-local"]:focus,
+body input[type="datetime-local"]:focus,
+.base-skeleton input[type="email"]:focus,
+body input[type="email"]:focus,
+.base-skeleton input[type="file"]:focus,
+body input[type="file"]:focus,
+.base-skeleton input[type="image"]:focus,
+body input[type="image"]:focus,
+.base-skeleton input[type="month"]:focus,
+body input[type="month"]:focus,
+.base-skeleton input[type="number"]:focus,
+body input[type="number"]:focus,
+.base-skeleton input[type="password"]:focus,
+body input[type="password"]:focus,
+.base-skeleton input[type="search"]:focus,
+body input[type="search"]:focus,
+.base-skeleton input[type="tel"]:focus,
+body input[type="tel"]:focus,
+.base-skeleton input[type="text"]:focus,
+body input[type="text"]:focus,
+.base-skeleton input[type="time"]:focus,
+body input[type="time"]:focus,
+.base-skeleton input[type="url"]:focus,
+body input[type="url"]:focus,
+.base-skeleton input[type="week"]:focus,
+body input[type="week"]:focus {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.6);
+  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.base-skeleton .input-field[disabled],
+body .input-field[disabled],
+.base-skeleton input[type="color"][disabled],
+body input[type="color"][disabled],
+.base-skeleton input[type="date"][disabled],
+body input[type="date"][disabled],
+.base-skeleton input[type="datetime-local"][disabled],
+body input[type="datetime-local"][disabled],
+.base-skeleton input[type="email"][disabled],
+body input[type="email"][disabled],
+.base-skeleton input[type="file"][disabled],
+body input[type="file"][disabled],
+.base-skeleton input[type="image"][disabled],
+body input[type="image"][disabled],
+.base-skeleton input[type="month"][disabled],
+body input[type="month"][disabled],
+.base-skeleton input[type="number"][disabled],
+body input[type="number"][disabled],
+.base-skeleton input[type="password"][disabled],
+body input[type="password"][disabled],
+.base-skeleton input[type="search"][disabled],
+body input[type="search"][disabled],
+.base-skeleton input[type="tel"][disabled],
+body input[type="tel"][disabled],
+.base-skeleton input[type="text"][disabled],
+body input[type="text"][disabled],
+.base-skeleton input[type="time"][disabled],
+body input[type="time"][disabled],
+.base-skeleton input[type="url"][disabled],
+body input[type="url"][disabled],
+.base-skeleton input[type="week"][disabled],
+body input[type="week"][disabled],
+.base-skeleton .input-field .status-disabled,
+body .input-field .status-disabled,
+.base-skeleton input[type="color"] .status-disabled,
+body input[type="color"] .status-disabled,
+.base-skeleton input[type="date"] .status-disabled,
+body input[type="date"] .status-disabled,
+.base-skeleton input[type="datetime-local"] .status-disabled,
+body input[type="datetime-local"] .status-disabled,
+.base-skeleton input[type="email"] .status-disabled,
+body input[type="email"] .status-disabled,
+.base-skeleton input[type="file"] .status-disabled,
+body input[type="file"] .status-disabled,
+.base-skeleton input[type="image"] .status-disabled,
+body input[type="image"] .status-disabled,
+.base-skeleton input[type="month"] .status-disabled,
+body input[type="month"] .status-disabled,
+.base-skeleton input[type="number"] .status-disabled,
+body input[type="number"] .status-disabled,
+.base-skeleton input[type="password"] .status-disabled,
+body input[type="password"] .status-disabled,
+.base-skeleton input[type="search"] .status-disabled,
+body input[type="search"] .status-disabled,
+.base-skeleton input[type="tel"] .status-disabled,
+body input[type="tel"] .status-disabled,
+.base-skeleton input[type="text"] .status-disabled,
+body input[type="text"] .status-disabled,
+.base-skeleton input[type="time"] .status-disabled,
+body input[type="time"] .status-disabled,
+.base-skeleton input[type="url"] .status-disabled,
+body input[type="url"] .status-disabled,
+.base-skeleton input[type="week"] .status-disabled,
+body input[type="week"] .status-disabled {
+  border-style: dashed;
+}
+.base-skeleton .input-field[disabled]:hover,
+body .input-field[disabled]:hover,
+.base-skeleton input[type="color"][disabled]:hover,
+body input[type="color"][disabled]:hover,
+.base-skeleton input[type="date"][disabled]:hover,
+body input[type="date"][disabled]:hover,
+.base-skeleton input[type="datetime-local"][disabled]:hover,
+body input[type="datetime-local"][disabled]:hover,
+.base-skeleton input[type="email"][disabled]:hover,
+body input[type="email"][disabled]:hover,
+.base-skeleton input[type="file"][disabled]:hover,
+body input[type="file"][disabled]:hover,
+.base-skeleton input[type="image"][disabled]:hover,
+body input[type="image"][disabled]:hover,
+.base-skeleton input[type="month"][disabled]:hover,
+body input[type="month"][disabled]:hover,
+.base-skeleton input[type="number"][disabled]:hover,
+body input[type="number"][disabled]:hover,
+.base-skeleton input[type="password"][disabled]:hover,
+body input[type="password"][disabled]:hover,
+.base-skeleton input[type="search"][disabled]:hover,
+body input[type="search"][disabled]:hover,
+.base-skeleton input[type="tel"][disabled]:hover,
+body input[type="tel"][disabled]:hover,
+.base-skeleton input[type="text"][disabled]:hover,
+body input[type="text"][disabled]:hover,
+.base-skeleton input[type="time"][disabled]:hover,
+body input[type="time"][disabled]:hover,
+.base-skeleton input[type="url"][disabled]:hover,
+body input[type="url"][disabled]:hover,
+.base-skeleton input[type="week"][disabled]:hover,
+body input[type="week"][disabled]:hover,
+.base-skeleton .input-field .status-disabled:hover,
+body .input-field .status-disabled:hover,
+.base-skeleton input[type="color"] .status-disabled:hover,
+body input[type="color"] .status-disabled:hover,
+.base-skeleton input[type="date"] .status-disabled:hover,
+body input[type="date"] .status-disabled:hover,
+.base-skeleton input[type="datetime-local"] .status-disabled:hover,
+body input[type="datetime-local"] .status-disabled:hover,
+.base-skeleton input[type="email"] .status-disabled:hover,
+body input[type="email"] .status-disabled:hover,
+.base-skeleton input[type="file"] .status-disabled:hover,
+body input[type="file"] .status-disabled:hover,
+.base-skeleton input[type="image"] .status-disabled:hover,
+body input[type="image"] .status-disabled:hover,
+.base-skeleton input[type="month"] .status-disabled:hover,
+body input[type="month"] .status-disabled:hover,
+.base-skeleton input[type="number"] .status-disabled:hover,
+body input[type="number"] .status-disabled:hover,
+.base-skeleton input[type="password"] .status-disabled:hover,
+body input[type="password"] .status-disabled:hover,
+.base-skeleton input[type="search"] .status-disabled:hover,
+body input[type="search"] .status-disabled:hover,
+.base-skeleton input[type="tel"] .status-disabled:hover,
+body input[type="tel"] .status-disabled:hover,
+.base-skeleton input[type="text"] .status-disabled:hover,
+body input[type="text"] .status-disabled:hover,
+.base-skeleton input[type="time"] .status-disabled:hover,
+body input[type="time"] .status-disabled:hover,
+.base-skeleton input[type="url"] .status-disabled:hover,
+body input[type="url"] .status-disabled:hover,
+.base-skeleton input[type="week"] .status-disabled:hover,
+body input[type="week"] .status-disabled:hover,
+.base-skeleton .input-field[disabled]:focus,
+body .input-field[disabled]:focus,
+.base-skeleton input[type="color"][disabled]:focus,
+body input[type="color"][disabled]:focus,
+.base-skeleton input[type="date"][disabled]:focus,
+body input[type="date"][disabled]:focus,
+.base-skeleton input[type="datetime-local"][disabled]:focus,
+body input[type="datetime-local"][disabled]:focus,
+.base-skeleton input[type="email"][disabled]:focus,
+body input[type="email"][disabled]:focus,
+.base-skeleton input[type="file"][disabled]:focus,
+body input[type="file"][disabled]:focus,
+.base-skeleton input[type="image"][disabled]:focus,
+body input[type="image"][disabled]:focus,
+.base-skeleton input[type="month"][disabled]:focus,
+body input[type="month"][disabled]:focus,
+.base-skeleton input[type="number"][disabled]:focus,
+body input[type="number"][disabled]:focus,
+.base-skeleton input[type="password"][disabled]:focus,
+body input[type="password"][disabled]:focus,
+.base-skeleton input[type="search"][disabled]:focus,
+body input[type="search"][disabled]:focus,
+.base-skeleton input[type="tel"][disabled]:focus,
+body input[type="tel"][disabled]:focus,
+.base-skeleton input[type="text"][disabled]:focus,
+body input[type="text"][disabled]:focus,
+.base-skeleton input[type="time"][disabled]:focus,
+body input[type="time"][disabled]:focus,
+.base-skeleton input[type="url"][disabled]:focus,
+body input[type="url"][disabled]:focus,
+.base-skeleton input[type="week"][disabled]:focus,
+body input[type="week"][disabled]:focus,
+.base-skeleton .input-field .status-disabled:focus,
+body .input-field .status-disabled:focus,
+.base-skeleton input[type="color"] .status-disabled:focus,
+body input[type="color"] .status-disabled:focus,
+.base-skeleton input[type="date"] .status-disabled:focus,
+body input[type="date"] .status-disabled:focus,
+.base-skeleton input[type="datetime-local"] .status-disabled:focus,
+body input[type="datetime-local"] .status-disabled:focus,
+.base-skeleton input[type="email"] .status-disabled:focus,
+body input[type="email"] .status-disabled:focus,
+.base-skeleton input[type="file"] .status-disabled:focus,
+body input[type="file"] .status-disabled:focus,
+.base-skeleton input[type="image"] .status-disabled:focus,
+body input[type="image"] .status-disabled:focus,
+.base-skeleton input[type="month"] .status-disabled:focus,
+body input[type="month"] .status-disabled:focus,
+.base-skeleton input[type="number"] .status-disabled:focus,
+body input[type="number"] .status-disabled:focus,
+.base-skeleton input[type="password"] .status-disabled:focus,
+body input[type="password"] .status-disabled:focus,
+.base-skeleton input[type="search"] .status-disabled:focus,
+body input[type="search"] .status-disabled:focus,
+.base-skeleton input[type="tel"] .status-disabled:focus,
+body input[type="tel"] .status-disabled:focus,
+.base-skeleton input[type="text"] .status-disabled:focus,
+body input[type="text"] .status-disabled:focus,
+.base-skeleton input[type="time"] .status-disabled:focus,
+body input[type="time"] .status-disabled:focus,
+.base-skeleton input[type="url"] .status-disabled:focus,
+body input[type="url"] .status-disabled:focus,
+.base-skeleton input[type="week"] .status-disabled:focus,
+body input[type="week"] .status-disabled:focus {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+}
+.base-skeleton .spoiler,
+body .spoiler {
+  filter: blur(5px);
+}
+.base-skeleton .spoiler:hover,
+body .spoiler:hover {
+  filter: none;
+}
+.base-skeleton .spoiler[disabled],
+body .spoiler[disabled],
+.base-skeleton .spoiler .status-disabled:hover,
+body .spoiler .status-disabled:hover {
+  filter: blur(5px);
+}
+.base-skeleton [title],
+body [title],
+.base-skeleton .status-hoverable,
+body .status-hoverable {
+  cursor: help;
+}
+.base-skeleton [onclick],
+body [onclick],
+.base-skeleton .status-clickable,
+body .status-clickable {
+  cursor: pointer;
+}
+.base-skeleton [disabled],
+body [disabled],
+.base-skeleton .status-disabled,
+body .status-disabled {
+  cursor: not-allowed !important;
+  opacity: 50%;
+}
+.base-skeleton .element-title,
+body .element-title,
+.base-skeleton h1,
+body h1,
+.base-skeleton h2,
+body h2,
+.base-skeleton h3,
+body h3,
+.base-skeleton h4,
+body h4,
+.base-skeleton h5,
+body h5,
+.base-skeleton h6,
+body h6 {
+  text-align: center;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+}
+.base-skeleton .element-separator,
+body .element-separator,
+.base-skeleton hr,
+body hr {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.base-skeleton .element-list-item,
+body .element-list-item,
+.base-skeleton li,
+body li {
+  margin: 10px 0;
+}
+.base-skeleton .element-anchor,
+body .element-anchor,
+.base-skeleton a,
+body a {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 202;
+  --bluelib-color-b: 202;
+}
+.base-skeleton .element-anchor:hover,
+body .element-anchor:hover,
+.base-skeleton a:hover,
+body a:hover {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
+}
+.base-skeleton .element-anchor:active,
+body .element-anchor:active,
+.base-skeleton a:active,
+body a:active {
+  --bluelib-color-r: 160;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
+}
+.base-skeleton .element-anchor[disabled],
+body .element-anchor[disabled],
+.base-skeleton a[disabled],
+body a[disabled],
+.base-skeleton .element-anchor .status-disabled,
+body .element-anchor .status-disabled,
+.base-skeleton a .status-disabled,
+body a .status-disabled {
+  text-decoration-style: dashed;
+  text-decoration-color: currentColor;
+  text-decoration-width: 1px;
+}
+.base-skeleton .element-anchor[disabled]:hover,
+body .element-anchor[disabled]:hover,
+.base-skeleton a[disabled]:hover,
+body a[disabled]:hover,
+.base-skeleton .element-anchor .status-disabled:hover,
+body .element-anchor .status-disabled:hover,
+.base-skeleton a .status-disabled:hover,
+body a .status-disabled:hover {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 202;
+  --bluelib-color-b: 202;
+}
+.base-skeleton .element-anchor[disabled]:active,
+body .element-anchor[disabled]:active,
+.base-skeleton a[disabled]:active,
+body a[disabled]:active,
+.base-skeleton .element-anchor .status-disabled:active,
+body .element-anchor .status-disabled:active,
+.base-skeleton a .status-disabled:active,
+body a .status-disabled:active {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 202;
+  --bluelib-color-b: 202;
+}
+.base-skeleton .align-left,
+body .align-left {
+  text-align: left;
+}
+.base-skeleton .align-center,
+body .align-center {
+  text-align: center;
+}
+.base-skeleton .align-right,
+body .align-right {
+  text-align: right;
+}
+.base-skeleton .size-xxl,
+body .size-xxl,
+.base-skeleton h1,
+body h1 {
+  font-size: xx-large;
+}
+.base-skeleton .size-xl,
+body .size-xl,
+.base-skeleton h2,
+body h2 {
+  font-size: x-large;
+}
+.base-skeleton .size-l,
+body .size-l,
+.base-skeleton h3,
+body h3 {
+  font-size: large;
+}
+.base-skeleton .size-m,
+body .size-m,
+.base-skeleton h4,
+body h4 {
+  font-size: medium;
+}
+.base-skeleton .size-s,
+body .size-s,
+.base-skeleton h5,
+body h5 {
+  font-size: small;
+}
+.base-skeleton .size-xs,
+body .size-xs,
+.base-skeleton h6,
+body h6 {
+  font-size: x-small;
+}
+.base-skeleton .size-xxs,
+body .size-xxs {
+  font-size: xx-small;
+}
+.base-skeleton .style-bold,
+body .style-bold,
+.base-skeleton b,
+body b {
+  font-weight: bold;
+}
+.base-skeleton .style-italic,
+body .style-italic,
+.base-skeleton i,
+body i {
+  font-style: italic;
+}
+.base-skeleton .style-underline,
+body .style-underline,
+.base-skeleton u,
+body u {
+  text-decoration-line: underline;
+}
+.base-skeleton .style-strike,
+body .style-strike,
+.base-skeleton strike,
+body strike {
+  text-decoration-line: line-through;
+}
+.base-skeleton .style-monospace,
+body .style-monospace,
+.base-skeleton code,
+body code {
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+}
+.base-skeleton .style-keyboard,
+body .style-keyboard,
+.base-skeleton kbd,
+body kbd {
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  padding: 2px 4px;
+  border: 2px outset;
+  border-radius: 4px;
+}
+.base-skeleton .color-red,
+body .color-red {
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 125;
+  --bluelib-color-b: 125;
+}
+.base-skeleton .color-orange,
+body .color-orange {
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 187;
+  --bluelib-color-b: 125;
+}
+.base-skeleton .color-yellow,
+body .color-yellow {
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 125;
+}
+.base-skeleton .color-lime,
+body .color-lime {
+  --bluelib-color-r: 125;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 125;
+}
+.base-skeleton .color-cyan,
+body .color-cyan {
+  --bluelib-color-r: 125;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
+}
+.base-skeleton .color-blue,
+body .color-blue {
+  --bluelib-color-r: 125;
+  --bluelib-color-g: 125;
+  --bluelib-color-b: 255;
+}
+.base-skeleton .color-magenta,
+body .color-magenta {
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 125;
+  --bluelib-color-b: 255;
+}
+.base-skeleton .color-gray,
+body .color-gray {
+  --bluelib-color-r: 187;
+  --bluelib-color-g: 187;
+  --bluelib-color-b: 187;
+}
+/*# sourceMappingURL=royalblue.root.css.map */

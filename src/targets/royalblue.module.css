@@ -132,10 +132,13 @@
   src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnFK_uQQ.ttf) format('truetype');
 }
 .bluelib {
-  --bluelib-color-r: 24;
-  --bluelib-color-g: 24;
-  --bluelib-color-b: 24;
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: #0d193b;
+  --bluelib-color-r: 160;
+  --bluelib-color-g: 204;
+  --bluelib-color-b: 255;
   font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
 }
 .bluelib,
 .bluelib * {
@@ -199,7 +202,7 @@
   align-items: center;
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   border: none;
-  color: white;
+  color: #000000;
   padding: 6px 16px;
   border-radius: 4px;
   font-family: inherit;
@@ -207,16 +210,16 @@
   cursor: pointer;
 }
 .bluelib .button:hover {
-  background-color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
+  background-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
 }
 .bluelib .button:active {
-  background-color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  background-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
 }
 .bluelib .button.status-disabled:hover {
-  background-color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
+  background-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
 }
 .bluelib .button.status-disabled:active {
-  background-color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
+  background-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
 }
 .bluelib .button-fill-width {
   width: 100%;
@@ -235,13 +238,13 @@
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
 .bluelib .button-toggle-off:hover {
-  border-color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
-  color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
+  border-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
 .bluelib .button-toggle-off:active {
-  border-color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
-  color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  border-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
 }
 .bluelib .button-toggle-off.status-disabled {
@@ -258,13 +261,13 @@
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
 .bluelib .button-toggle-on {
-  border-color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
-  color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  border-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
 }
 .bluelib .button-toggle-on:hover {
-  border-color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
-  color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
+  border-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
 .bluelib .button-toggle-on:active {
@@ -276,13 +279,13 @@
   border-style: dashed;
 }
 .bluelib .button-toggle-on.status-disabled:hover {
-  border-color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
-  color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  border-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
 }
 .bluelib .button-toggle-on.status-disabled:active {
-  border-color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
-  color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  border-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
 }
 .bluelib .input-field {
@@ -291,8 +294,8 @@
   border-style: solid;
   border-radius: 4px 4px 0 0;
   padding: 4px 6px;
-  font-size: medium;
-  font-family: "Fira Sans", sans-serif;
+  font-family: inherit;
+  font-size: inherit;
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
@@ -300,7 +303,7 @@
 .bluelib .input-field:hover,
 .bluelib .input-field:focus {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.6);
-  color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
 .bluelib .input-field.status-disabled {
@@ -333,6 +336,10 @@
 }
 .bluelib .element-title {
   text-align: center;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
+  font-family: "Fira Sans", sans-serif;
   font-weight: 500;
 }
 .bluelib .element-separator {
@@ -342,6 +349,36 @@
 }
 .bluelib .element-list-item {
   margin: 10px 0;
+}
+.bluelib .element-anchor {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 202;
+  --bluelib-color-b: 202;
+}
+.bluelib .element-anchor:hover {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
+}
+.bluelib .element-anchor:active {
+  --bluelib-color-r: 160;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
+}
+.bluelib .element-anchor.status-disabled {
+  text-decoration-style: dashed;
+  text-decoration-color: currentColor;
+  text-decoration-width: 1px;
+}
+.bluelib .element-anchor.status-disabled:hover {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 202;
+  --bluelib-color-b: 202;
+}
+.bluelib .element-anchor.status-disabled:active {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 202;
+  --bluelib-color-b: 202;
 }
 .bluelib .align-left {
   text-align: left;
@@ -387,51 +424,53 @@
 }
 .bluelib .style-monospace {
   font-family: "Fira Code", monospace;
+  font-weight: 400;
 }
 .bluelib .style-keyboard {
   font-family: "Fira Code", monospace;
+  font-weight: 400;
   padding: 2px 4px;
   border: 2px outset;
   border-radius: 4px;
 }
 .bluelib .color-red {
-  --bluelib-color-r: 200;
-  --bluelib-color-g: 0;
-  --bluelib-color-b: 0;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 125;
+  --bluelib-color-b: 125;
 }
 .bluelib .color-orange {
-  --bluelib-color-r: 200;
-  --bluelib-color-g: 165;
-  --bluelib-color-b: 0;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 187;
+  --bluelib-color-b: 125;
 }
 .bluelib .color-yellow {
-  --bluelib-color-r: 200;
-  --bluelib-color-g: 200;
-  --bluelib-color-b: 0;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 125;
 }
 .bluelib .color-lime {
-  --bluelib-color-r: 0;
-  --bluelib-color-g: 200;
-  --bluelib-color-b: 0;
+  --bluelib-color-r: 125;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 125;
 }
 .bluelib .color-cyan {
-  --bluelib-color-r: 0;
-  --bluelib-color-g: 200;
-  --bluelib-color-b: 200;
+  --bluelib-color-r: 125;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
 }
 .bluelib .color-blue {
-  --bluelib-color-r: 0;
-  --bluelib-color-g: 0;
-  --bluelib-color-b: 200;
+  --bluelib-color-r: 125;
+  --bluelib-color-g: 125;
+  --bluelib-color-b: 255;
 }
 .bluelib .color-magenta {
-  --bluelib-color-r: 200;
-  --bluelib-color-g: 0;
-  --bluelib-color-b: 200;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 125;
+  --bluelib-color-b: 255;
 }
 .bluelib .color-gray {
-  --bluelib-color-r: 128;
-  --bluelib-color-g: 128;
-  --bluelib-color-b: 128;
+  --bluelib-color-r: 187;
+  --bluelib-color-g: 187;
+  --bluelib-color-b: 187;
 }
-/*# sourceMappingURL=skeleton.module.css.map */
+/*# sourceMappingURL=royalblue.module.css.map */
