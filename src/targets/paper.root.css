@@ -843,6 +843,7 @@ body .form-buttons {
   grid-column-start: 1;
   grid-column-end: 3;
   display: flex;
+  gap: 8px;
   justify-content: center;
   align-items: center;
   width: 100%;
