@@ -209,15 +209,15 @@
   grid-column: 1;
   justify-self: end;
 }
-.bluelib .form-input {
+.bluelib .form-field {
   grid-column: 2;
   justify-self: stretch;
   width: 100%;
 }
-.bluelib .form-input:optional::placeholder {
+.bluelib .form-field:optional::placeholder {
   font-style: italic;
 }
-.bluelib .form-input:invalid:not(:placeholder-shown) {
+.bluelib .form-field:invalid:not(:placeholder-shown) {
   --bluelib-color-r: 255;
   --bluelib-color-g: 125;
   --bluelib-color-b: 125;
