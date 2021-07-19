@@ -1,4 +1,3 @@
-/* @input-field: ~'.input-field, input[type="color"], input[type="date"], input[type="datetime-local"], input[type="email"], input[type="file"], input[type="image"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]'; */
 @font-face {
   font-family: 'Fira Code';
   font-style: normal;
@@ -134,17 +133,22 @@
 }
 .base-skeleton,
 body {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: #ffffff;
   --bluelib-color-r: 24;
   --bluelib-color-g: 24;
   --bluelib-color-b: 24;
   font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
 }
 .base-skeleton,
 body,
 .base-skeleton *,
 body * {
   box-sizing: border-box;
-  color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b));
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  /* Disable outline, as we already highlight focused elements; if it's not enough, let me know */
+  outline: none !important;
 }
 .base-skeleton .container-main,
 body .container-main,
@@ -787,6 +791,72 @@ body .panel-split aside,
 body .panel-split .panel-split {
   margin: 0;
 }
+.base-skeleton form,
+body form,
+.base-skeleton .form,
+body .form {
+  display: grid;
+  align-items: center;
+  row-gap: 4px;
+  column-gap: 8px;
+  grid-template-columns: minmax(auto, 1fr) 5fr;
+}
+.base-skeleton form label,
+body form label,
+.base-skeleton .form-label,
+body .form-label {
+  grid-column: 1;
+  justify-self: end;
+}
+.base-skeleton form input,
+body form input,
+.base-skeleton .form-input,
+body .form-input {
+  grid-column: 2;
+  justify-self: stretch;
+  width: 100%;
+}
+.base-skeleton form input:optional::placeholder,
+body form input:optional::placeholder,
+.base-skeleton .form-input:optional::placeholder,
+body .form-input:optional::placeholder {
+  font-style: italic;
+}
+.base-skeleton form input:invalid:not(:placeholder-shown),
+body form input:invalid:not(:placeholder-shown),
+.base-skeleton .form-input:invalid:not(:placeholder-shown),
+body .form-input:invalid:not(:placeholder-shown) {
+  --bluelib-color-r: 200;
+  --bluelib-color-g: 0;
+  --bluelib-color-b: 0;
+}
+.base-skeleton form input[type="submit"],
+body form input[type="submit"],
+.base-skeleton form button,
+body form button,
+.base-skeleton .form-submit,
+body .form-submit {
+  width: auto;
+}
+.base-skeleton .form-buttons,
+body .form-buttons {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.base-skeleton .form-buttons:first-child,
+body .form-buttons:first-child {
+  margin-top: 0;
+}
+.base-skeleton .form-buttons:last-child,
+body .form-buttons:last-child {
+  margin-bottom: 0;
+}
 .base-skeleton .button,
 body .button,
 .base-skeleton button,
@@ -798,7 +868,7 @@ body input[type="submit"] {
   align-items: center;
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   border: none;
-  color: white;
+  color: #ffffff;
   padding: 6px 16px;
   border-radius: 4px;
   font-family: inherit;
@@ -811,7 +881,7 @@ body .button:hover,
 body button:hover,
 .base-skeleton input[type="submit"]:hover,
 body input[type="submit"]:hover {
-  background-color: rgba(calc(var(--bluelib-color-r) - 25), calc(var(--bluelib-color-g) - 25), calc(var(--bluelib-color-b) - 25), 1);
+  background-color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
 }
 .base-skeleton .button:active,
 body .button:active,
@@ -819,7 +889,7 @@ body .button:active,
 body button:active,
 .base-skeleton input[type="submit"]:active,
 body input[type="submit"]:active {
-  background-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
+  background-color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
 }
 .base-skeleton .button[disabled]:hover,
 body .button[disabled]:hover,
@@ -869,19 +939,19 @@ body .button-toggle .status-disabled {
 body .button-toggle-off {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: transparent;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
 .base-skeleton .button-toggle-off:hover,
 body .button-toggle-off:hover {
-  border-color: rgba(calc(var(--bluelib-color-r) - 25), calc(var(--bluelib-color-g) - 25), calc(var(--bluelib-color-b) - 25), 1);
-  color: rgba(calc(var(--bluelib-color-r) - 25), calc(var(--bluelib-color-g) - 25), calc(var(--bluelib-color-b) - 25), 1);
+  border-color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
+  color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
 .base-skeleton .button-toggle-off:active,
 body .button-toggle-off:active {
-  border-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
-  color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+  border-color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
 }
 .base-skeleton .button-toggle-off[disabled],
 body .button-toggle-off[disabled],
@@ -895,7 +965,7 @@ body .button-toggle-off[disabled]:hover,
 body .button-toggle-off .status-disabled:hover {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: transparent;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
 .base-skeleton .button-toggle-off[disabled]:active,
 body .button-toggle-off[disabled]:active,
@@ -903,25 +973,25 @@ body .button-toggle-off[disabled]:active,
 body .button-toggle-off .status-disabled:active {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: transparent;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
 .base-skeleton .button-toggle-on,
 body .button-toggle-on {
-  border-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
-  color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+  border-color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
 }
 .base-skeleton .button-toggle-on:hover,
 body .button-toggle-on:hover {
-  border-color: rgba(calc(var(--bluelib-color-r) - 25), calc(var(--bluelib-color-g) - 25), calc(var(--bluelib-color-b) - 25), 1);
-  color: rgba(calc(var(--bluelib-color-r) - 25), calc(var(--bluelib-color-g) - 25), calc(var(--bluelib-color-b) - 25), 1);
+  border-color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
+  color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
 .base-skeleton .button-toggle-on:active,
 body .button-toggle-on:active {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: transparent;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
 .base-skeleton .button-toggle-on[disabled],
 body .button-toggle-on[disabled],
@@ -933,17 +1003,326 @@ body .button-toggle-on .status-disabled {
 body .button-toggle-on[disabled]:hover,
 .base-skeleton .button-toggle-on .status-disabled:hover,
 body .button-toggle-on .status-disabled:hover {
-  border-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
-  color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+  border-color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
 }
 .base-skeleton .button-toggle-on[disabled]:active,
 body .button-toggle-on[disabled]:active,
 .base-skeleton .button-toggle-on .status-disabled:active,
 body .button-toggle-on .status-disabled:active {
-  border-color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
-  color: rgba(calc(var(--bluelib-color-r) - 55), calc(var(--bluelib-color-g) - 55), calc(var(--bluelib-color-b) - 55), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+  border-color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
+}
+.base-skeleton .input-field,
+body .input-field,
+.base-skeleton input[type="color"],
+body input[type="color"],
+.base-skeleton input[type="date"],
+body input[type="date"],
+.base-skeleton input[type="datetime-local"],
+body input[type="datetime-local"],
+.base-skeleton input[type="email"],
+body input[type="email"],
+.base-skeleton input[type="file"],
+body input[type="file"],
+.base-skeleton input[type="image"],
+body input[type="image"],
+.base-skeleton input[type="month"],
+body input[type="month"],
+.base-skeleton input[type="number"],
+body input[type="number"],
+.base-skeleton input[type="password"],
+body input[type="password"],
+.base-skeleton input[type="search"],
+body input[type="search"],
+.base-skeleton input[type="tel"],
+body input[type="tel"],
+.base-skeleton input[type="text"],
+body input[type="text"],
+.base-skeleton input[type="time"],
+body input[type="time"],
+.base-skeleton input[type="url"],
+body input[type="url"],
+.base-skeleton input[type="week"],
+body input[type="week"] {
+  cursor: text;
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  border-radius: 4px 4px 0 0;
+  padding: 4px 6px;
+  font-family: inherit;
+  font-size: inherit;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+}
+.base-skeleton .input-field:hover,
+body .input-field:hover,
+.base-skeleton input[type="color"]:hover,
+body input[type="color"]:hover,
+.base-skeleton input[type="date"]:hover,
+body input[type="date"]:hover,
+.base-skeleton input[type="datetime-local"]:hover,
+body input[type="datetime-local"]:hover,
+.base-skeleton input[type="email"]:hover,
+body input[type="email"]:hover,
+.base-skeleton input[type="file"]:hover,
+body input[type="file"]:hover,
+.base-skeleton input[type="image"]:hover,
+body input[type="image"]:hover,
+.base-skeleton input[type="month"]:hover,
+body input[type="month"]:hover,
+.base-skeleton input[type="number"]:hover,
+body input[type="number"]:hover,
+.base-skeleton input[type="password"]:hover,
+body input[type="password"]:hover,
+.base-skeleton input[type="search"]:hover,
+body input[type="search"]:hover,
+.base-skeleton input[type="tel"]:hover,
+body input[type="tel"]:hover,
+.base-skeleton input[type="text"]:hover,
+body input[type="text"]:hover,
+.base-skeleton input[type="time"]:hover,
+body input[type="time"]:hover,
+.base-skeleton input[type="url"]:hover,
+body input[type="url"]:hover,
+.base-skeleton input[type="week"]:hover,
+body input[type="week"]:hover,
+.base-skeleton .input-field:focus,
+body .input-field:focus,
+.base-skeleton input[type="color"]:focus,
+body input[type="color"]:focus,
+.base-skeleton input[type="date"]:focus,
+body input[type="date"]:focus,
+.base-skeleton input[type="datetime-local"]:focus,
+body input[type="datetime-local"]:focus,
+.base-skeleton input[type="email"]:focus,
+body input[type="email"]:focus,
+.base-skeleton input[type="file"]:focus,
+body input[type="file"]:focus,
+.base-skeleton input[type="image"]:focus,
+body input[type="image"]:focus,
+.base-skeleton input[type="month"]:focus,
+body input[type="month"]:focus,
+.base-skeleton input[type="number"]:focus,
+body input[type="number"]:focus,
+.base-skeleton input[type="password"]:focus,
+body input[type="password"]:focus,
+.base-skeleton input[type="search"]:focus,
+body input[type="search"]:focus,
+.base-skeleton input[type="tel"]:focus,
+body input[type="tel"]:focus,
+.base-skeleton input[type="text"]:focus,
+body input[type="text"]:focus,
+.base-skeleton input[type="time"]:focus,
+body input[type="time"]:focus,
+.base-skeleton input[type="url"]:focus,
+body input[type="url"]:focus,
+.base-skeleton input[type="week"]:focus,
+body input[type="week"]:focus {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.6);
+  color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.base-skeleton .input-field[disabled],
+body .input-field[disabled],
+.base-skeleton input[type="color"][disabled],
+body input[type="color"][disabled],
+.base-skeleton input[type="date"][disabled],
+body input[type="date"][disabled],
+.base-skeleton input[type="datetime-local"][disabled],
+body input[type="datetime-local"][disabled],
+.base-skeleton input[type="email"][disabled],
+body input[type="email"][disabled],
+.base-skeleton input[type="file"][disabled],
+body input[type="file"][disabled],
+.base-skeleton input[type="image"][disabled],
+body input[type="image"][disabled],
+.base-skeleton input[type="month"][disabled],
+body input[type="month"][disabled],
+.base-skeleton input[type="number"][disabled],
+body input[type="number"][disabled],
+.base-skeleton input[type="password"][disabled],
+body input[type="password"][disabled],
+.base-skeleton input[type="search"][disabled],
+body input[type="search"][disabled],
+.base-skeleton input[type="tel"][disabled],
+body input[type="tel"][disabled],
+.base-skeleton input[type="text"][disabled],
+body input[type="text"][disabled],
+.base-skeleton input[type="time"][disabled],
+body input[type="time"][disabled],
+.base-skeleton input[type="url"][disabled],
+body input[type="url"][disabled],
+.base-skeleton input[type="week"][disabled],
+body input[type="week"][disabled],
+.base-skeleton .input-field .status-disabled,
+body .input-field .status-disabled,
+.base-skeleton input[type="color"] .status-disabled,
+body input[type="color"] .status-disabled,
+.base-skeleton input[type="date"] .status-disabled,
+body input[type="date"] .status-disabled,
+.base-skeleton input[type="datetime-local"] .status-disabled,
+body input[type="datetime-local"] .status-disabled,
+.base-skeleton input[type="email"] .status-disabled,
+body input[type="email"] .status-disabled,
+.base-skeleton input[type="file"] .status-disabled,
+body input[type="file"] .status-disabled,
+.base-skeleton input[type="image"] .status-disabled,
+body input[type="image"] .status-disabled,
+.base-skeleton input[type="month"] .status-disabled,
+body input[type="month"] .status-disabled,
+.base-skeleton input[type="number"] .status-disabled,
+body input[type="number"] .status-disabled,
+.base-skeleton input[type="password"] .status-disabled,
+body input[type="password"] .status-disabled,
+.base-skeleton input[type="search"] .status-disabled,
+body input[type="search"] .status-disabled,
+.base-skeleton input[type="tel"] .status-disabled,
+body input[type="tel"] .status-disabled,
+.base-skeleton input[type="text"] .status-disabled,
+body input[type="text"] .status-disabled,
+.base-skeleton input[type="time"] .status-disabled,
+body input[type="time"] .status-disabled,
+.base-skeleton input[type="url"] .status-disabled,
+body input[type="url"] .status-disabled,
+.base-skeleton input[type="week"] .status-disabled,
+body input[type="week"] .status-disabled {
+  border-style: dashed;
+}
+.base-skeleton .input-field[disabled]:hover,
+body .input-field[disabled]:hover,
+.base-skeleton input[type="color"][disabled]:hover,
+body input[type="color"][disabled]:hover,
+.base-skeleton input[type="date"][disabled]:hover,
+body input[type="date"][disabled]:hover,
+.base-skeleton input[type="datetime-local"][disabled]:hover,
+body input[type="datetime-local"][disabled]:hover,
+.base-skeleton input[type="email"][disabled]:hover,
+body input[type="email"][disabled]:hover,
+.base-skeleton input[type="file"][disabled]:hover,
+body input[type="file"][disabled]:hover,
+.base-skeleton input[type="image"][disabled]:hover,
+body input[type="image"][disabled]:hover,
+.base-skeleton input[type="month"][disabled]:hover,
+body input[type="month"][disabled]:hover,
+.base-skeleton input[type="number"][disabled]:hover,
+body input[type="number"][disabled]:hover,
+.base-skeleton input[type="password"][disabled]:hover,
+body input[type="password"][disabled]:hover,
+.base-skeleton input[type="search"][disabled]:hover,
+body input[type="search"][disabled]:hover,
+.base-skeleton input[type="tel"][disabled]:hover,
+body input[type="tel"][disabled]:hover,
+.base-skeleton input[type="text"][disabled]:hover,
+body input[type="text"][disabled]:hover,
+.base-skeleton input[type="time"][disabled]:hover,
+body input[type="time"][disabled]:hover,
+.base-skeleton input[type="url"][disabled]:hover,
+body input[type="url"][disabled]:hover,
+.base-skeleton input[type="week"][disabled]:hover,
+body input[type="week"][disabled]:hover,
+.base-skeleton .input-field .status-disabled:hover,
+body .input-field .status-disabled:hover,
+.base-skeleton input[type="color"] .status-disabled:hover,
+body input[type="color"] .status-disabled:hover,
+.base-skeleton input[type="date"] .status-disabled:hover,
+body input[type="date"] .status-disabled:hover,
+.base-skeleton input[type="datetime-local"] .status-disabled:hover,
+body input[type="datetime-local"] .status-disabled:hover,
+.base-skeleton input[type="email"] .status-disabled:hover,
+body input[type="email"] .status-disabled:hover,
+.base-skeleton input[type="file"] .status-disabled:hover,
+body input[type="file"] .status-disabled:hover,
+.base-skeleton input[type="image"] .status-disabled:hover,
+body input[type="image"] .status-disabled:hover,
+.base-skeleton input[type="month"] .status-disabled:hover,
+body input[type="month"] .status-disabled:hover,
+.base-skeleton input[type="number"] .status-disabled:hover,
+body input[type="number"] .status-disabled:hover,
+.base-skeleton input[type="password"] .status-disabled:hover,
+body input[type="password"] .status-disabled:hover,
+.base-skeleton input[type="search"] .status-disabled:hover,
+body input[type="search"] .status-disabled:hover,
+.base-skeleton input[type="tel"] .status-disabled:hover,
+body input[type="tel"] .status-disabled:hover,
+.base-skeleton input[type="text"] .status-disabled:hover,
+body input[type="text"] .status-disabled:hover,
+.base-skeleton input[type="time"] .status-disabled:hover,
+body input[type="time"] .status-disabled:hover,
+.base-skeleton input[type="url"] .status-disabled:hover,
+body input[type="url"] .status-disabled:hover,
+.base-skeleton input[type="week"] .status-disabled:hover,
+body input[type="week"] .status-disabled:hover,
+.base-skeleton .input-field[disabled]:focus,
+body .input-field[disabled]:focus,
+.base-skeleton input[type="color"][disabled]:focus,
+body input[type="color"][disabled]:focus,
+.base-skeleton input[type="date"][disabled]:focus,
+body input[type="date"][disabled]:focus,
+.base-skeleton input[type="datetime-local"][disabled]:focus,
+body input[type="datetime-local"][disabled]:focus,
+.base-skeleton input[type="email"][disabled]:focus,
+body input[type="email"][disabled]:focus,
+.base-skeleton input[type="file"][disabled]:focus,
+body input[type="file"][disabled]:focus,
+.base-skeleton input[type="image"][disabled]:focus,
+body input[type="image"][disabled]:focus,
+.base-skeleton input[type="month"][disabled]:focus,
+body input[type="month"][disabled]:focus,
+.base-skeleton input[type="number"][disabled]:focus,
+body input[type="number"][disabled]:focus,
+.base-skeleton input[type="password"][disabled]:focus,
+body input[type="password"][disabled]:focus,
+.base-skeleton input[type="search"][disabled]:focus,
+body input[type="search"][disabled]:focus,
+.base-skeleton input[type="tel"][disabled]:focus,
+body input[type="tel"][disabled]:focus,
+.base-skeleton input[type="text"][disabled]:focus,
+body input[type="text"][disabled]:focus,
+.base-skeleton input[type="time"][disabled]:focus,
+body input[type="time"][disabled]:focus,
+.base-skeleton input[type="url"][disabled]:focus,
+body input[type="url"][disabled]:focus,
+.base-skeleton input[type="week"][disabled]:focus,
+body input[type="week"][disabled]:focus,
+.base-skeleton .input-field .status-disabled:focus,
+body .input-field .status-disabled:focus,
+.base-skeleton input[type="color"] .status-disabled:focus,
+body input[type="color"] .status-disabled:focus,
+.base-skeleton input[type="date"] .status-disabled:focus,
+body input[type="date"] .status-disabled:focus,
+.base-skeleton input[type="datetime-local"] .status-disabled:focus,
+body input[type="datetime-local"] .status-disabled:focus,
+.base-skeleton input[type="email"] .status-disabled:focus,
+body input[type="email"] .status-disabled:focus,
+.base-skeleton input[type="file"] .status-disabled:focus,
+body input[type="file"] .status-disabled:focus,
+.base-skeleton input[type="image"] .status-disabled:focus,
+body input[type="image"] .status-disabled:focus,
+.base-skeleton input[type="month"] .status-disabled:focus,
+body input[type="month"] .status-disabled:focus,
+.base-skeleton input[type="number"] .status-disabled:focus,
+body input[type="number"] .status-disabled:focus,
+.base-skeleton input[type="password"] .status-disabled:focus,
+body input[type="password"] .status-disabled:focus,
+.base-skeleton input[type="search"] .status-disabled:focus,
+body input[type="search"] .status-disabled:focus,
+.base-skeleton input[type="tel"] .status-disabled:focus,
+body input[type="tel"] .status-disabled:focus,
+.base-skeleton input[type="text"] .status-disabled:focus,
+body input[type="text"] .status-disabled:focus,
+.base-skeleton input[type="time"] .status-disabled:focus,
+body input[type="time"] .status-disabled:focus,
+.base-skeleton input[type="url"] .status-disabled:focus,
+body input[type="url"] .status-disabled:focus,
+.base-skeleton input[type="week"] .status-disabled:focus,
+body input[type="week"] .status-disabled:focus {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
 .base-skeleton .spoiler,
 body .spoiler {
@@ -993,6 +1372,10 @@ body h5,
 .base-skeleton h6,
 body h6 {
   text-align: center;
+  --bluelib-color-r: 24;
+  --bluelib-color-g: 24;
+  --bluelib-color-b: 24;
+  font-family: "Fira Sans", sans-serif;
   font-weight: 500;
 }
 .base-skeleton .element-separator,
@@ -1008,6 +1391,66 @@ body .element-list-item,
 .base-skeleton li,
 body li {
   margin: 10px 0;
+}
+.base-skeleton .element-anchor,
+body .element-anchor,
+.base-skeleton a,
+body a {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 147;
+  --bluelib-color-b: 147;
+}
+.base-skeleton .element-anchor:hover,
+body .element-anchor:hover,
+.base-skeleton a:hover,
+body a:hover {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 107;
+  --bluelib-color-b: 107;
+}
+.base-skeleton .element-anchor:active,
+body .element-anchor:active,
+.base-skeleton a:active,
+body a:active {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 65;
+  --bluelib-color-b: 65;
+}
+.base-skeleton .element-anchor[disabled],
+body .element-anchor[disabled],
+.base-skeleton a[disabled],
+body a[disabled],
+.base-skeleton .element-anchor .status-disabled,
+body .element-anchor .status-disabled,
+.base-skeleton a .status-disabled,
+body a .status-disabled {
+  text-decoration-style: dashed;
+  text-decoration-color: currentColor;
+  text-decoration-width: 1px;
+}
+.base-skeleton .element-anchor[disabled]:hover,
+body .element-anchor[disabled]:hover,
+.base-skeleton a[disabled]:hover,
+body a[disabled]:hover,
+.base-skeleton .element-anchor .status-disabled:hover,
+body .element-anchor .status-disabled:hover,
+.base-skeleton a .status-disabled:hover,
+body a .status-disabled:hover {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 147;
+  --bluelib-color-b: 147;
+}
+.base-skeleton .element-anchor[disabled]:active,
+body .element-anchor[disabled]:active,
+.base-skeleton a[disabled]:active,
+body a[disabled]:active,
+.base-skeleton .element-anchor .status-disabled:active,
+body .element-anchor .status-disabled:active,
+.base-skeleton a .status-disabled:active,
+body a .status-disabled:active {
+  --bluelib-color-r: 0;
+  --bluelib-color-g: 147;
+  --bluelib-color-b: 147;
 }
 .base-skeleton .align-left,
 body .align-left {
@@ -1090,12 +1533,14 @@ body .style-monospace,
 .base-skeleton code,
 body code {
   font-family: "Fira Code", monospace;
+  font-weight: 400;
 }
 .base-skeleton .style-keyboard,
 body .style-keyboard,
 .base-skeleton kbd,
 body kbd {
   font-family: "Fira Code", monospace;
+  font-weight: 400;
   padding: 2px 4px;
   border: 2px outset;
   border-radius: 4px;
@@ -1148,4 +1593,4 @@ body .color-gray {
   --bluelib-color-g: 128;
   --bluelib-color-b: 128;
 }
-/*# sourceMappingURL=skeleton.root.css.map */
+/*# sourceMappingURL=paper.root.css.map */

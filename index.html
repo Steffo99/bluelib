@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="src/targets/skeleton.root.css">
-    <link rel="stylesheet" href="src/targets/rygblue.root.css">
+    <link rel="stylesheet" href="src/targets/paper.root.css">
+    <link rel="stylesheet" href="src/targets/royalblue.root.css">
     <title>Bluelib 2</title>
 </head>
 <body class="theme-bluelib">
@@ -374,7 +374,7 @@
                     "not allowed" cursor if hovered.
                 </p>
                 <p>
-                    It also works with <a class="status-disabled">links</a>!
+                    It also works with <a href="#" disabled class="status-disabled">links</a>!
                 </p>
                 <section class="status-disabled">
                     And panels!
@@ -393,9 +393,17 @@
                     Bluelib allows for the easy creation of forms:
                 </p>
                 <form>
-                    <input type="text" placeholder="Text"/>
-                    <input type="password" placeholder="Password"/>
-                    <input type="email" placeholder="Email"/>
+                    <label for="input-text">Text</label>
+                    <input id="input-text" type="text" placeholder="Text"/>
+                    <label for="input-password">Password</label>
+                    <input id="input-password" type="password" placeholder="Password" required/>
+                    <label for="input-email">Email</label>
+                    <input id="input-email" type="email" placeholder="Email"/>
+                    <label for="input-disabled">Disabled</label>
+                    <input id="input-disabled" type="text" placeholder="Disabled" disabled/>
+                    <div class="form-buttons">
+                        <input id="input-submit" type="submit" value="Submit"/>
+                    </div>
                 </form>
             </section>
         </div>
