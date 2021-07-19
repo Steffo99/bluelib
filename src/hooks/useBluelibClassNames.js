@@ -18,13 +18,13 @@ export default function useBluelibClassNames(cn, extra) {
         }
 
         if(!bluelibSkin) {
-            console.warn("bluelibSkin is invalid: ", bluelibSkin)
+            console.warn("Trying to access .", cn, " of bluelibSkin ", bluelibSkin)
             return null
         }
 
-        return classNames(bluelibSkin[c])
+        return bluelibSkin[c]
     });
 
     // Return all the class names
-    return classNames(...cn, extra);
+    return classNames(cn, extra);
 }
