@@ -8,7 +8,7 @@ export default function Anchor({children, className, disabled, href, ...props}) 
     className = useBluelibClassNames([`element-anchor`, disableClass(disabled)], [className])
 
     return (
-        <a href={disable(disabled, href)} {className} {...props}>
+        <a href={disable(disabled, href)} className={className} {...props}>
             {children}
         </a>
     )
