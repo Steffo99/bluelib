@@ -1,17 +1,43 @@
-The default **panel**, with rounded borders on all sides.
+A Box [Panel](#panel), using the `panel-box` Bluelib class.
 
 ```jsx
 import Bluelib from "../Bluelib";
 
 <Bluelib>
     <Box>
-        Ciao!
+        This is a box.
     </Box>
-    <Box color={"#ff7d7d"}>
-        This is a red box.
+</Bluelib>
+```
+
+Boxes support the same props [Panel](#panel)s do, such as `title` and `kind`:
+
+```jsx
+import Bluelib from "../Bluelib";
+
+<Bluelib>
+    <Box title={"Hello world!"}>
+        This box has a title.
     </Box>
-    <Box color={"rgb(125, 125, 255)"}>
-        This is a blue box.
-    </Box>
+</Bluelib>
+```
+
+As with [Panel](#panel)s, Boxes can be wrapped in [Color](#color) elements to paint them a different color:
+
+```jsx
+import Bluelib from "../Bluelib";
+import Color from "../Color";
+
+<Bluelib>
+    <Color builtin={"red"}>
+        <Box>
+            See? Red! No, wait, that's blood...
+        </Box>
+    </Color>
+    <Color custom={"#123456"}>
+        <Box>
+            He'll turn RED any second now...
+        </Box>
+    </Color>
 </Bluelib>
 ```

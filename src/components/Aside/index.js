@@ -1,13 +1,14 @@
 import React from "react"
 import useBluelibClassNames from "../../hooks/useBluelibClassNames"
 import PropTypes from "prop-types"
+import Panel from "../Panel"
 
 
 export default function Aside({children, className, ...props}) {
     return (
-        <aside className={useBluelibClassNames(["panel", "panel-box", "panel-aside"], className)} {...props}>
+        <Panel kind={"aside"} className={useBluelibClassNames( ["panel-box", "panel-aside"], className)} {...props}>
             {children}
-        </aside>
+        </Panel>
     )
 }
 

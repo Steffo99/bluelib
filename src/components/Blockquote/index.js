@@ -1,13 +1,14 @@
 import React from "react"
 import useBluelibClassNames from "../../hooks/useBluelibClassNames"
 import PropTypes from "prop-types"
+import Panel from "../Panel"
 
 
 export default function Blockquote({children, className, ...props}) {
     return (
-        <blockquote className={useBluelibClassNames("panel panel-box panel-blockquote", className)} {...props}>
+        <Panel kind={"blockquote"} className={useBluelibClassNames(["panel-box", "panel-blockquote"], className)} {...props}>
             {children}
-        </blockquote>
+        </Panel>
     )
 }
 

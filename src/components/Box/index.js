@@ -1,13 +1,14 @@
 import React from "react"
 import useBluelibClassNames from "../../hooks/useBluelibClassNames"
 import PropTypes from "prop-types"
+import Panel from "../Panel"
 
 
 export default function Box({children, className, ...props}) {
     return (
-        <section className={useBluelibClassNames("panel panel-box", className)} {...props}>
+        <Panel kind={"section"} className={useBluelibClassNames("panel-box", className)} {...props}>
             {children}
-        </section>
+        </Panel>
     )
 }
 
