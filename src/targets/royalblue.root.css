@@ -860,14 +860,22 @@ body input[type="time"],
 body input[type="url"],
 .base-skeleton input[type="week"],
 body input[type="week"],
-.base-skeleton .form-field,
-body .form-field {
+.base-skeleton form select,
+body form select,
+.base-skeleton .input-select,
+body .input-select,
+.base-skeleton .form-input,
+body .form-input {
   grid-column: 2;
   justify-self: stretch;
   width: 100%;
 }
-.base-skeleton form input[type="submit"],
-body form input[type="submit"],
+.base-skeleton form .button,
+body form .button,
+.base-skeleton button,
+body button,
+.base-skeleton input[type="submit"],
+body input[type="submit"],
 .base-skeleton form button,
 body form button,
 .base-skeleton .form-submit,

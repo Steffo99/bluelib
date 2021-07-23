@@ -224,7 +224,7 @@
   grid-column: 1;
   justify-self: end;
 }
-.bluelib .form-field {
+.bluelib .form-input {
   grid-column: 2;
   justify-self: stretch;
   width: 100%;
