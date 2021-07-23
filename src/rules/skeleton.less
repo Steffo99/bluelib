@@ -354,8 +354,12 @@
         text-decoration-color: currentColor;
         text-decoration-thickness: 1px;
 
-        &:hover {
+        &:hover, &:focus {
             .bluelib-color(@hex-link-hover);
+        }
+
+        &:focus-visible {
+            text-decoration-thickness: 2px;
         }
 
         &:active {
@@ -365,7 +369,7 @@
         &@{status-disabled} {
             text-decoration-style: dashed;
 
-            &:hover {
+            &:hover, &:focus {
                 .bluelib-color(@hex-link);
             }
 

@@ -1712,10 +1712,20 @@ body a {
 .base-skeleton .element-anchor:hover,
 body .element-anchor:hover,
 .base-skeleton a:hover,
-body a:hover {
+body a:hover,
+.base-skeleton .element-anchor:focus,
+body .element-anchor:focus,
+.base-skeleton a:focus,
+body a:focus {
   --bluelib-color-r: 0;
   --bluelib-color-g: 255;
   --bluelib-color-b: 255;
+}
+.base-skeleton .element-anchor:focus-visible,
+body .element-anchor:focus-visible,
+.base-skeleton a:focus-visible,
+body a:focus-visible {
+  text-decoration-thickness: 2px;
 }
 .base-skeleton .element-anchor:active,
 body .element-anchor:active,
@@ -1742,7 +1752,15 @@ body a[disabled]:hover,
 .base-skeleton .element-anchor .status-disabled:hover,
 body .element-anchor .status-disabled:hover,
 .base-skeleton a .status-disabled:hover,
-body a .status-disabled:hover {
+body a .status-disabled:hover,
+.base-skeleton .element-anchor[disabled]:focus,
+body .element-anchor[disabled]:focus,
+.base-skeleton a[disabled]:focus,
+body a[disabled]:focus,
+.base-skeleton .element-anchor .status-disabled:focus,
+body .element-anchor .status-disabled:focus,
+.base-skeleton a .status-disabled:focus,
+body a .status-disabled:focus {
   --bluelib-color-r: 0;
   --bluelib-color-g: 202;
   --bluelib-color-b: 202;

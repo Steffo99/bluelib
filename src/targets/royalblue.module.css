@@ -409,10 +409,14 @@
   text-decoration-color: currentColor;
   text-decoration-thickness: 1px;
 }
-.bluelib .element-anchor:hover {
+.bluelib .element-anchor:hover,
+.bluelib .element-anchor:focus {
   --bluelib-color-r: 0;
   --bluelib-color-g: 255;
   --bluelib-color-b: 255;
+}
+.bluelib .element-anchor:focus-visible {
+  text-decoration-thickness: 2px;
 }
 .bluelib .element-anchor:active {
   --bluelib-color-r: 160;
@@ -422,7 +426,8 @@
 .bluelib .element-anchor.status-disabled {
   text-decoration-style: dashed;
 }
-.bluelib .element-anchor.status-disabled:hover {
+.bluelib .element-anchor.status-disabled:hover,
+.bluelib .element-anchor.status-disabled:focus {
   --bluelib-color-r: 0;
   --bluelib-color-g: 202;
   --bluelib-color-b: 202;
