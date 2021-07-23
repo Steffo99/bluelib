@@ -363,6 +363,10 @@
 
     @{element-anchor} {
         .bluelib-color(@hex-link);
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-color: currentColor;
+        text-decoration-thickness: 1px;
 
         &:hover {
             .bluelib-color(@hex-link-hover);
@@ -374,8 +378,6 @@
 
         &@{status-disabled} {
             text-decoration-style: dashed;
-            text-decoration-color: currentColor;
-            text-decoration-width: 1px;
 
             &:hover {
                 .bluelib-color(@hex-link);

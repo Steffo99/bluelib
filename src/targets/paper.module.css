@@ -413,6 +413,10 @@
   --bluelib-color-r: 0;
   --bluelib-color-g: 147;
   --bluelib-color-b: 147;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
 }
 .bluelib .element-anchor:hover {
   --bluelib-color-r: 0;
@@ -426,8 +430,6 @@
 }
 .bluelib .element-anchor.status-disabled {
   text-decoration-style: dashed;
-  text-decoration-color: currentColor;
-  text-decoration-width: 1px;
 }
 .bluelib .element-anchor.status-disabled:hover {
   --bluelib-color-r: 0;

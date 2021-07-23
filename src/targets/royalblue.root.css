@@ -1718,6 +1718,10 @@ body a {
   --bluelib-color-r: 0;
   --bluelib-color-g: 202;
   --bluelib-color-b: 202;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
 }
 .base-skeleton .element-anchor:hover,
 body .element-anchor:hover,
@@ -1744,8 +1748,6 @@ body .element-anchor .status-disabled,
 .base-skeleton a .status-disabled,
 body a .status-disabled {
   text-decoration-style: dashed;
-  text-decoration-color: currentColor;
-  text-decoration-width: 1px;
 }
 .base-skeleton .element-anchor[disabled]:hover,
 body .element-anchor[disabled]:hover,
