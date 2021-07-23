@@ -458,6 +458,9 @@
 }
 .bluelib .style-bold {
   font-weight: bold;
+  --bluelib-color-r: 24;
+  --bluelib-color-g: 24;
+  --bluelib-color-b: 24;
 }
 .bluelib .style-italic {
   font-style: italic;

@@ -1600,6 +1600,9 @@ body .style-bold,
 .base-skeleton b,
 body b {
   font-weight: bold;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
 }
 .base-skeleton .style-italic,
 body .style-italic,
