@@ -907,7 +907,7 @@ body .button:focus-visible,
 body button:focus-visible,
 .base-skeleton input[type="submit"]:focus-visible,
 body input[type="submit"]:focus-visible {
-  outline: 3px solid #00ffff !important;
+  outline: 4px solid rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7) !important;
 }
 .base-skeleton .button:active,
 body .button:active,

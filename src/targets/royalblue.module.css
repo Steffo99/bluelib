@@ -252,7 +252,7 @@
   background-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
 }
 .bluelib .button:focus-visible {
-  outline: 3px solid #00ffff !important;
+  outline: 4px solid rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7) !important;
 }
 .bluelib .button:active {
   background-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
