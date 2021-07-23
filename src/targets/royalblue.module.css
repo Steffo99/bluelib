@@ -339,6 +339,10 @@
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
+.bluelib .input-field::placeholder {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.4);
+  opacity: 1;
+}
 .bluelib .input-field:optional::placeholder {
   font-style: italic;
 }
@@ -353,6 +357,10 @@
   color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
+.bluelib .input-field:hover::placeholder,
+.bluelib .input-field:focus::placeholder {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7);
+}
 .bluelib .input-field.status-disabled {
   border-style: dashed;
 }
@@ -361,6 +369,10 @@
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+}
+.bluelib .input-field.status-disabled:hover::placeholder,
+.bluelib .input-field.status-disabled:focus::placeholder {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.4);
 }
 .bluelib .spoiler {
   filter: blur(5px);

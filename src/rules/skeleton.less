@@ -272,6 +272,11 @@
         color: @bA;
         background-color: @b0;
 
+        &::placeholder {
+            color: @b4;
+            opacity: 1;
+        }
+
         &:optional::placeholder {
             font-style: italic;
         }
@@ -284,6 +289,10 @@
             border-color: @b6;
             color: @bF;
             background-color: @b1;
+
+            &::placeholder {
+                color: @b7;
+            }
         }
 
         &@{status-disabled} {
@@ -293,6 +302,10 @@
                 border-color: @b3;
                 color: @bA;
                 background-color: @b0;
+
+                &::placeholder {
+                    color: @b4;
+                }
             }
         }
     }
