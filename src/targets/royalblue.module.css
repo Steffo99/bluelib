@@ -142,7 +142,8 @@
   font-weight: 400;
 }
 .bluelib,
-.bluelib * {
+.bluelib *,
+.bluelib .all {
   box-sizing: border-box;
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   /* Disable outline, as we already highlight focused elements; if it's not enough, let me know */
@@ -191,7 +192,8 @@
   gap: 8px;
   justify-content: center;
 }
-.bluelib .panel-split > * {
+.bluelib .panel-split > *,
+.bluelib .panel-split .all {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 0;
