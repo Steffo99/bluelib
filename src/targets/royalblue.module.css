@@ -133,7 +133,6 @@
   src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnFK_uQQ.ttf) format('truetype');
 }
 .bluelib {
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: #0d193b;
   --bluelib-color-r: 160;
   --bluelib-color-g: 204;
@@ -144,15 +143,84 @@
 .bluelib,
 .bluelib *,
 .bluelib .all {
-  box-sizing: border-box;
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  /* Disable outline, as we already highlight focused elements; if it's not enough, let me know */
-  outline: none !important;
 }
-.bluelib .container-main {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1280px;
+.bluelib,
+.bluelib *,
+.bluelib .all,
+.bluelib::before,
+.bluelib *::before,
+.bluelib .all::before,
+.bluelib::after,
+.bluelib *::after,
+.bluelib .all::after {
+  box-sizing: border-box;
+}
+.bluelib .layout {
+  display: grid;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.bluelib .layout-fill {
+  padding: 4px;
+  grid-template-areas: "single";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.bluelib .layout-fill > main,
+.bluelib .layout-fill-single {
+  grid-area: single;
+}
+.bluelib .layout-threecol {
+  padding: 4px;
+}
+@media screen and (min-width: 1281px) {
+  .bluelib .layout-threecol {
+    grid-template-areas: "left center right";
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .bluelib .layout-threecol {
+    grid-template-areas: "center center" "left right";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.bluelib .layout-threecol-left {
+  grid-area: left;
+}
+@media screen and (min-width: 1281px) {
+  .bluelib .layout-threecol-left {
+    justify-self: end;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .bluelib .layout-threecol-left {
+    justify-self: stretch;
+  }
+}
+.bluelib .layout-threecol-center {
+  grid-area: center;
+  max-width: 1024px;
+}
+.bluelib .layout-threecol-right {
+  grid-area: right;
+}
+@media screen and (min-width: 1281px) {
+  .bluelib .layout-threecol-right {
+    justify-self: start;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .bluelib .layout-threecol-right {
+    justify-self: stretch;
+  }
 }
 .bluelib .panel {
   margin: 8px 0;
