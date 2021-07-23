@@ -134,7 +134,6 @@
 }
 body,
 .bluelib {
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: #0d193b;
   --bluelib-color-r: 160;
   --bluelib-color-g: 204;
@@ -148,18 +147,105 @@ body *,
 .bluelib *,
 body .all,
 .bluelib .all {
-  box-sizing: border-box;
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  /* Disable outline, as we already highlight focused elements; if it's not enough, let me know */
-  outline: none !important;
 }
-body main,
-.bluelib main,
-body .container-main,
-.bluelib .container-main {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1280px;
+body,
+.bluelib,
+body *,
+.bluelib *,
+body .all,
+.bluelib .all,
+body::before,
+.bluelib::before,
+body *::before,
+.bluelib *::before,
+body .all::before,
+.bluelib .all::before,
+body::after,
+.bluelib::after,
+body *::after,
+.bluelib *::after,
+body .all::after,
+.bluelib .all::after {
+  box-sizing: border-box;
+}
+body .layout,
+.bluelib .layout {
+  display: grid;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+body .layout-fill,
+.bluelib .layout-fill {
+  padding: 4px;
+  grid-template-areas: "single";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+body .layout-fill-single,
+.bluelib .layout-fill-single {
+  grid-area: single;
+}
+body .layout-threecol,
+.bluelib .layout-threecol {
+  padding: 4px;
+}
+@media screen and (min-width: 1281px) {
+  body .layout-threecol,
+  .bluelib .layout-threecol {
+    grid-template-areas: "left center right";
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media screen and (max-width: 1280px) {
+  body .layout-threecol,
+  .bluelib .layout-threecol {
+    grid-template-areas: "center center" "left right";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+body .layout-threecol-left,
+.bluelib .layout-threecol-left {
+  grid-area: left;
+}
+@media screen and (min-width: 1281px) {
+  body .layout-threecol-left,
+  .bluelib .layout-threecol-left {
+    justify-self: end;
+  }
+}
+@media screen and (max-width: 1280px) {
+  body .layout-threecol-left,
+  .bluelib .layout-threecol-left {
+    justify-self: stretch;
+  }
+}
+body .layout-threecol-center,
+.bluelib .layout-threecol-center {
+  grid-area: center;
+  max-width: 1024px;
+}
+body .layout-threecol-right,
+.bluelib .layout-threecol-right {
+  grid-area: right;
+}
+@media screen and (min-width: 1281px) {
+  body .layout-threecol-right,
+  .bluelib .layout-threecol-right {
+    justify-self: start;
+  }
+}
+@media screen and (max-width: 1280px) {
+  body .layout-threecol-right,
+  .bluelib .layout-threecol-right {
+    justify-self: stretch;
+  }
 }
 body .panel,
 .bluelib .panel,
@@ -874,12 +960,12 @@ body .form-input,
   justify-self: stretch;
   width: 100%;
 }
-body form .button,
-.bluelib form .button,
-body button,
-.bluelib button,
+body form button,
+.bluelib form button,
 body input[type="submit"],
 .bluelib input[type="submit"],
+body .button,
+.bluelib .button,
 body form button,
 .bluelib form button,
 body .form-submit,
@@ -906,12 +992,12 @@ body .form-buttons:last-child,
 .bluelib .form-buttons:last-child {
   margin-bottom: 0;
 }
-body .button,
-.bluelib .button,
 body button,
 .bluelib button,
 body input[type="submit"],
-.bluelib input[type="submit"] {
+.bluelib input[type="submit"],
+body .button,
+.bluelib .button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -924,56 +1010,56 @@ body input[type="submit"],
   font-size: inherit;
   cursor: pointer;
 }
-body .button:hover,
-.bluelib .button:hover,
 body button:hover,
 .bluelib button:hover,
 body input[type="submit"]:hover,
-.bluelib input[type="submit"]:hover {
+.bluelib input[type="submit"]:hover,
+body .button:hover,
+.bluelib .button:hover {
   background-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
 }
-body .button:focus-visible,
-.bluelib .button:focus-visible,
 body button:focus-visible,
 .bluelib button:focus-visible,
 body input[type="submit"]:focus-visible,
-.bluelib input[type="submit"]:focus-visible {
+.bluelib input[type="submit"]:focus-visible,
+body .button:focus-visible,
+.bluelib .button:focus-visible {
   outline: 4px solid rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7) !important;
 }
-body .button:active,
-.bluelib .button:active,
 body button:active,
 .bluelib button:active,
 body input[type="submit"]:active,
-.bluelib input[type="submit"]:active {
+.bluelib input[type="submit"]:active,
+body .button:active,
+.bluelib .button:active {
   background-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
 }
-body .button[disabled]:hover,
-.bluelib .button[disabled]:hover,
 body button[disabled]:hover,
 .bluelib button[disabled]:hover,
 body input[type="submit"][disabled]:hover,
 .bluelib input[type="submit"][disabled]:hover,
-body .button .status-disabled:hover,
-.bluelib .button .status-disabled:hover,
+body .button[disabled]:hover,
+.bluelib .button[disabled]:hover,
 body button .status-disabled:hover,
 .bluelib button .status-disabled:hover,
 body input[type="submit"] .status-disabled:hover,
-.bluelib input[type="submit"] .status-disabled:hover {
+.bluelib input[type="submit"] .status-disabled:hover,
+body .button .status-disabled:hover,
+.bluelib .button .status-disabled:hover {
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
-body .button[disabled]:active,
-.bluelib .button[disabled]:active,
 body button[disabled]:active,
 .bluelib button[disabled]:active,
 body input[type="submit"][disabled]:active,
 .bluelib input[type="submit"][disabled]:active,
-body .button .status-disabled:active,
-.bluelib .button .status-disabled:active,
+body .button[disabled]:active,
+.bluelib .button[disabled]:active,
 body button .status-disabled:active,
 .bluelib button .status-disabled:active,
 body input[type="submit"] .status-disabled:active,
-.bluelib input[type="submit"] .status-disabled:active {
+.bluelib input[type="submit"] .status-disabled:active,
+body .button .status-disabled:active,
+.bluelib .button .status-disabled:active {
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
 body .button-fill-width,
@@ -1072,12 +1158,12 @@ body .button-toggle-on .status-disabled:active,
   color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
 }
-body .input,
-.bluelib .input,
 body input,
 .bluelib input,
 body select,
-.bluelib select {
+.bluelib select,
+body .input,
+.bluelib .input {
   border-style: solid;
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
@@ -1085,135 +1171,135 @@ body select,
   font-family: inherit;
   font-size: inherit;
 }
-body .input::placeholder,
-.bluelib .input::placeholder,
 body input::placeholder,
 .bluelib input::placeholder,
 body select::placeholder,
-.bluelib select::placeholder {
+.bluelib select::placeholder,
+body .input::placeholder,
+.bluelib .input::placeholder {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.4);
   opacity: 1;
 }
-body .input:optional,
-.bluelib .input:optional,
 body input:optional,
 .bluelib input:optional,
 body select:optional,
 .bluelib select:optional,
-body .input:optional::placeholder,
-.bluelib .input:optional::placeholder,
+body .input:optional,
+.bluelib .input:optional,
 body input:optional::placeholder,
 .bluelib input:optional::placeholder,
 body select:optional::placeholder,
-.bluelib select:optional::placeholder {
+.bluelib select:optional::placeholder,
+body .input:optional::placeholder,
+.bluelib .input:optional::placeholder {
   font-style: italic;
 }
-body .input:invalid:not(:placeholder-shown),
-.bluelib .input:invalid:not(:placeholder-shown),
 body input:invalid:not(:placeholder-shown),
 .bluelib input:invalid:not(:placeholder-shown),
 body select:invalid:not(:placeholder-shown),
-.bluelib select:invalid:not(:placeholder-shown) {
+.bluelib select:invalid:not(:placeholder-shown),
+body .input:invalid:not(:placeholder-shown),
+.bluelib .input:invalid:not(:placeholder-shown) {
   --bluelib-color-r: 255;
   --bluelib-color-g: 125;
   --bluelib-color-b: 125;
 }
-body .input:hover,
-.bluelib .input:hover,
 body input:hover,
 .bluelib input:hover,
 body select:hover,
 .bluelib select:hover,
-body .input:focus,
-.bluelib .input:focus,
+body .input:hover,
+.bluelib .input:hover,
 body input:focus,
 .bluelib input:focus,
 body select:focus,
-.bluelib select:focus {
+.bluelib select:focus,
+body .input:focus,
+.bluelib .input:focus {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.6);
   color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
-body .input:hover::placeholder,
-.bluelib .input:hover::placeholder,
 body input:hover::placeholder,
 .bluelib input:hover::placeholder,
 body select:hover::placeholder,
 .bluelib select:hover::placeholder,
-body .input:focus::placeholder,
-.bluelib .input:focus::placeholder,
+body .input:hover::placeholder,
+.bluelib .input:hover::placeholder,
 body input:focus::placeholder,
 .bluelib input:focus::placeholder,
 body select:focus::placeholder,
-.bluelib select:focus::placeholder {
+.bluelib select:focus::placeholder,
+body .input:focus::placeholder,
+.bluelib .input:focus::placeholder {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7);
 }
-body .input[disabled],
-.bluelib .input[disabled],
 body input[disabled],
 .bluelib input[disabled],
 body select[disabled],
 .bluelib select[disabled],
-body .input .status-disabled,
-.bluelib .input .status-disabled,
+body .input[disabled],
+.bluelib .input[disabled],
 body input .status-disabled,
 .bluelib input .status-disabled,
 body select .status-disabled,
-.bluelib select .status-disabled {
+.bluelib select .status-disabled,
+body .input .status-disabled,
+.bluelib .input .status-disabled {
   border-style: dashed;
 }
-body .input[disabled]:hover,
-.bluelib .input[disabled]:hover,
 body input[disabled]:hover,
 .bluelib input[disabled]:hover,
 body select[disabled]:hover,
 .bluelib select[disabled]:hover,
-body .input .status-disabled:hover,
-.bluelib .input .status-disabled:hover,
+body .input[disabled]:hover,
+.bluelib .input[disabled]:hover,
 body input .status-disabled:hover,
 .bluelib input .status-disabled:hover,
 body select .status-disabled:hover,
 .bluelib select .status-disabled:hover,
-body .input[disabled]:focus,
-.bluelib .input[disabled]:focus,
+body .input .status-disabled:hover,
+.bluelib .input .status-disabled:hover,
 body input[disabled]:focus,
 .bluelib input[disabled]:focus,
 body select[disabled]:focus,
 .bluelib select[disabled]:focus,
-body .input .status-disabled:focus,
-.bluelib .input .status-disabled:focus,
+body .input[disabled]:focus,
+.bluelib .input[disabled]:focus,
 body input .status-disabled:focus,
 .bluelib input .status-disabled:focus,
 body select .status-disabled:focus,
-.bluelib select .status-disabled:focus {
+.bluelib select .status-disabled:focus,
+body .input .status-disabled:focus,
+.bluelib .input .status-disabled:focus {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
-body .input[disabled]:hover::placeholder,
-.bluelib .input[disabled]:hover::placeholder,
 body input[disabled]:hover::placeholder,
 .bluelib input[disabled]:hover::placeholder,
 body select[disabled]:hover::placeholder,
 .bluelib select[disabled]:hover::placeholder,
-body .input .status-disabled:hover::placeholder,
-.bluelib .input .status-disabled:hover::placeholder,
+body .input[disabled]:hover::placeholder,
+.bluelib .input[disabled]:hover::placeholder,
 body input .status-disabled:hover::placeholder,
 .bluelib input .status-disabled:hover::placeholder,
 body select .status-disabled:hover::placeholder,
 .bluelib select .status-disabled:hover::placeholder,
-body .input[disabled]:focus::placeholder,
-.bluelib .input[disabled]:focus::placeholder,
+body .input .status-disabled:hover::placeholder,
+.bluelib .input .status-disabled:hover::placeholder,
 body input[disabled]:focus::placeholder,
 .bluelib input[disabled]:focus::placeholder,
 body select[disabled]:focus::placeholder,
 .bluelib select[disabled]:focus::placeholder,
-body .input .status-disabled:focus::placeholder,
-.bluelib .input .status-disabled:focus::placeholder,
+body .input[disabled]:focus::placeholder,
+.bluelib .input[disabled]:focus::placeholder,
 body input .status-disabled:focus::placeholder,
 .bluelib input .status-disabled:focus::placeholder,
 body select .status-disabled:focus::placeholder,
-.bluelib select .status-disabled:focus::placeholder {
+.bluelib select .status-disabled:focus::placeholder,
+body .input .status-disabled:focus::placeholder,
+.bluelib .input .status-disabled:focus::placeholder {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.4);
 }
 body .input-field,

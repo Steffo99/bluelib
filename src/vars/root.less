@@ -1,6 +1,14 @@
 @bluelib: ~"body, .bluelib";
 @all: ~"*, .all";
-@container-main: ~"main, .container-main";
+
+@layout: ~".layout";
+@layout-fill: ~".layout-fill";
+@layout-fill-single: ~".layout-fill-single";
+@layout-threecol: ~".layout-threecol";
+@layout-threecol-left: ~".layout-threecol-left";
+@layout-threecol-center: ~".layout-threecol-center";
+@layout-threecol-right: ~".layout-threecol-right";
+
 @panel: ~".panel, .panel-box, section, .panel-blockquote, blockquote, .panel-aside, aside, .panel-split";
 @panel-box: ~".panel-box, section, .panel-blockquote, blockquote, .panel-aside, aside";
 @panel-blockquote: ~".panel-blockquote, blockquote";
@@ -17,12 +25,12 @@
 @form-input: ~"form @{input-field}, form @{input-select}, .form-input";
 @form-submit: ~'form @{button}, form button, .form-submit';
 @form-buttons: ~'.form-buttons';
-@button: ~'.button, button, input[type="submit"]';
+@button: ~'button, input[type="submit"], .button';
 @button-fill-width: ~'.button-fill-width';
 @button-toggle: ~'.button-toggle';
 @button-toggle-off: ~'.button-toggle-off';
 @button-toggle-on: ~'.button-toggle-on';
-@input: ~'.input, input, select';
+@input: ~'input, select, .input';
 @input-field: ~'.input-field, input[type="color"], input[type="date"], input[type="datetime-local"], input[type="email"], input[type="file"], input[type="image"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]';
 @input-select: ~'select:not([multiple]), .input-select';
 @input-select-optgroup: ~'optgroup, .input-select-optgroup';

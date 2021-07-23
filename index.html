@@ -11,429 +11,437 @@
     </style>
 </head>
 <body class="theme-bluelib">
-    <main class="main">
-        <hgroup>
-            <h1>
-                Bluelib 2
-            </h1>
-            <h2>
-                RYG style, in pure CSS
-            </h2>
-        </hgroup>
-        <section>
-            <h3>
-                Welcome to bluelib!
-            </h3>
-            <p>
-                Following are some examples on the things you can do with bluelib.
-            </p>
-            <p>
-                To see how something is done, <kbd>Right Click</kbd> on it and then press <kbd>Inspect Element</kbd>.
-            </p>
-            <img class="image-limited" src="https://i.imgur.com/M8sFJeO.png" alt="How to Inspect Element">
-        </section>
+    <hgroup>
+        <h1>
+            Bluelib 2
+        </h1>
         <h2>
-            Panels
+            RYG style, in pure CSS
         </h2>
-        <section>
-            <h3>
-                Panel
-            </h3>
-            <p>
-                This is a panel.
-            </p>
-            <p>
-                It usually represents a section of text about a topic described by the title above.
-            </p>
-        </section>
-        <blockquote>
-            <h3>
-                Blockquote
-            </h3>
-            <p>
-                This is a blockquote.
-            </p>
-            <p>
-                Blockquotes are specially formatted panels, useful for quotes!
-            </p>
-        </blockquote>
-        <aside>
-            <h3>
-                Aside
-            </h3>
-            <p>
-                This is an aside.
-            </p>
-            <p>
-                Asides are panels with no border and smaller text, useful to describe less important things while inside
-                a panel.
-            </p>
-        </aside>
-        <h2>
-            Close containers
-        </h2>
-        <section>
-            <p>
-                Here's what two panels next to each other look like:
-            </p>
-            <aside>
-                <p>
-                    STONKS
-                </p>
-            </aside>
-            <aside>
-                <p>
-                    STINKS
-                </p>
-            </aside>
-        </section>
-        <h2>
-            Nesting containers
-        </h2>
-        <section>
-            <h3>
-                Level one
-            </h3>
-            <p>
-                Containers can be nested effortlessly!
-            </p>
-            <p>
-                Drop one outside of any paragraphs and they will nest automatically.
-            </p>
+    </hgroup>
+    <div class="layout layout-threecol">
+        <main class="main layout-threecol-center">
             <section>
                 <h3>
-                    Level two
+                    Welcome to bluelib!
                 </h3>
                 <p>
-                    You can add text above...
+                    Following are some examples on the things you can do with bluelib.
+                </p>
+                <p>
+                    To see how something is done, <kbd>Right Click</kbd> on it and then press <kbd>Inspect Element</kbd>.
+                </p>
+                <img class="image-limited" src="https://i.imgur.com/M8sFJeO.png" alt="How to Inspect Element">
+            </section>
+            <h2>
+                Panels
+            </h2>
+            <section>
+                <h3>
+                    Panel
+                </h3>
+                <p>
+                    This is a panel.
+                </p>
+                <p>
+                    It usually represents a section of text about a topic described by the title above.
+                </p>
+            </section>
+            <blockquote>
+                <h3>
+                    Blockquote
+                </h3>
+                <p>
+                    This is a blockquote.
+                </p>
+                <p>
+                    Blockquotes are specially formatted panels, useful for quotes!
+                </p>
+            </blockquote>
+            <aside>
+                <h3>
+                    Aside
+                </h3>
+                <p>
+                    This is an aside.
+                </p>
+                <p>
+                    Asides are panels with no border and smaller text, useful to describe less important things while inside
+                    a panel.
+                </p>
+            </aside>
+            <h2>
+                Close containers
+            </h2>
+            <section>
+                <p>
+                    Here's what two panels next to each other look like:
+                </p>
+                <aside>
+                    <p>
+                        STONKS
+                    </p>
+                </aside>
+                <aside>
+                    <p>
+                        STINKS
+                    </p>
+                </aside>
+            </section>
+            <h2>
+                Nesting containers
+            </h2>
+            <section>
+                <h3>
+                    Level one
+                </h3>
+                <p>
+                    Containers can be nested effortlessly!
+                </p>
+                <p>
+                    Drop one outside of any paragraphs and they will nest automatically.
                 </p>
                 <section>
                     <h3>
-                        Level three
+                        Level two
                     </h3>
                     <p>
-                        How deep does the rabbit hole go?
+                        You can add text above...
                     </p>
-                    <blockquote>
-                        <b><a href="https://www.youtube.com/watch?v=G2jUhnCU9iA" target="_blank">PANELCEPTION.</a></b>
-                        <aside>
-                            BWOON.
+                    <section>
+                        <h3>
+                            Level three
+                        </h3>
+                        <p>
+                            How deep does the rabbit hole go?
+                        </p>
+                        <blockquote>
+                            <b><a href="https://www.youtube.com/watch?v=G2jUhnCU9iA" target="_blank">PANELCEPTION.</a></b>
                             <aside>
                                 BWOON.
                                 <aside>
                                     BWOON.
+                                    <aside>
+                                        BWOON.
+                                    </aside>
                                 </aside>
                             </aside>
-                        </aside>
-                    </blockquote>
+                        </blockquote>
+                    </section>
+                    <p>
+                        ...or below!
+                    </p>
                 </section>
+            </section>
+            <h2>
+                Layout
+            </h2>
+            <section>
+                <h3>
+                    Splitter and splitted
+                </h3>
                 <p>
-                    ...or below!
+                    You can split elements into multiple columns.
+                </p>
+                <p>
+                    The columns will grow automatically to on the height of the tallest.
+                </p>
+                <div class="panel panel-split">
+                    <section>
+                        <h3>
+                            Shorter panel
+                        </h3>
+                        <p>
+                            That's it.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>
+                            Taller panel
+                        </h3>
+                        <p><a href="https://bit.ly/3ou3jzG">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Giro in barca ma teme che le diverse e
+                            grandi prestazioni morbide. Per essere sempre un letto posuere posuere velit, ac lacinia ai
+                            bordi di un lago. Vestibulum vehicles, metus blandit fringilla of life, volutpat arcu lorem mi,
+                            eget porttitor augue turpis vitae libero. Laghi che ora hanno bisogno solo di proteine presenti
+                            membri del calcio. Nessuna temperatura libera UE. Attualmente le forze dell'ordine sono libere.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Calcio scommesse chili ricette
+                            calcio taccuino, con un morbido banane.
+                        </a></p>
+                    </section>
+                </div>
+            </section>
+            <section>
+                <h3>
+                    Horizonal rows
+                </h3>
+                <p>
+                    You can add horizontal rows to the page:
+                </p>
+                <hr>
+                <p>
+                    They are very useful as separators!
                 </p>
             </section>
-        </section>
-        <h2>
-            Layout
-        </h2>
-        <section>
-            <h3>
-                Splitter and splitted
-            </h3>
-            <p>
-                You can split elements into multiple columns.
-            </p>
-            <p>
-                The columns will grow automatically to on the height of the tallest.
-            </p>
+            <h2>
+                Formatting
+            </h2>
             <div class="panel panel-split">
                 <section>
                     <h3>
-                        Shorter panel
+                        Colors
                     </h3>
                     <p>
-                        That's it.
+                        You can use colored text:
+                    </p>
+                    <ul>
+                        <li><span class="color-red">Red</span></li>
+                        <li><span class="color-orange">Orange</span></li>
+                        <li><span class="color-yellow">Yellow</span></li>
+                        <li><span class="color-lime">Lime</span></li>
+                        <li><span class="color-cyan">Cyan</span></li>
+                        <li><span class="color-blue">Blue</span></li>
+                        <li><span class="color-magenta">Magenta</span></li>
+                        <li><span class="color-gray">Gray</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>
+                        Size
+                    </h3>
+                    <p>
+                        You can set the text size:
+                    </p>
+                    <ul>
+                        <li><span class="size-xxl">XXL</span></li>
+                        <li><span class="size-xl">XL</span></li>
+                        <li><span class="size-l">L</span></li>
+                        <li><span class="size-m">M</span></li>
+                        <li><span class="size-s">S</span></li>
+                        <li><span class="size-xs">XS</span></li>
+                        <li><span class="size-xxs">XXS</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>
+                        Alignment
+                    </h3>
+                    <p>
+                        You can set the text alignment (<i>only in block elements</i> such as div):
+                    </p>
+                    <div class="align-left">Left</div>
+                    <div class="align-center">Center</div>
+                    <div class="align-right">Right</div>
+                </section>
+                <section>
+                    <h3>
+                        Style
+                    </h3>
+                    <p>
+                        You can use all the usual text styles:
+                    </p>
+                    <ul>
+                        <li>Regular</li>
+                        <li><b>Bold</b></li>
+                        <li><i>Italic</i></li>
+                        <li><u>Underlined</u></li>
+                        <li><s>Struck</s></li>
+                        <li><code>Code</code></li>
+                        <li><b><i><u><s><code>All of them together</code></s></u></i></b></li>
+                    </ul>
+                </section>
+            </div>
+            <h2>
+                Elements
+            </h2>
+            <div class="panel panel-split">
+                <section>
+                    <h3>
+                        Buttons
+                    </h3>
+                    <p>
+                        Bluelib supports buttons:
+                    </p>
+                    <p>
+                        <button>
+                            Hi, I'm a inline default button!
+                        </button>
+                        &nbsp;or&nbsp;
+                        <input class="color-lime" type="submit" value="Hi, I'm a lime submit button!"/>
+                    </p>
+                    <p>
+                        <button class="button-fill-width color-orange">
+                            I'm stretched horizontally!
+                        </button>
+                    </p>
+                    <p>
+                        <button disabled class="button-fill-width">
+                            Can't click on this!
+                        </button>
                     </p>
                 </section>
                 <section>
                     <h3>
-                        Taller panel
+                        Toggle buttons
                     </h3>
-                    <p><a href="https://bit.ly/3ou3jzG">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Giro in barca ma teme che le diverse e
-                        grandi prestazioni morbide. Per essere sempre un letto posuere posuere velit, ac lacinia ai
-                        bordi di un lago. Vestibulum vehicles, metus blandit fringilla of life, volutpat arcu lorem mi,
-                        eget porttitor augue turpis vitae libero. Laghi che ora hanno bisogno solo di proteine presenti
-                        membri del calcio. Nessuna temperatura libera UE. Attualmente le forze dell'ordine sono libere.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Calcio scommesse chili ricette
-                        calcio taccuino, con un morbido banane.
-                    </a></p>
+                    <p>
+                        Bluelib supports buttons that can be toggled on and off:
+                    </p>
+                    <p>
+                        <button class="button-toggle button-toggle-off">
+                            Toggled off
+                        </button>
+                        &nbsp;
+                        <button class="button-toggle button-toggle-on">
+                            Toggled on
+                        </button>
+                    </p>
+                    <p>
+                        <button class="button-toggle button-toggle-off color-red">
+                            Colored off
+                        </button>
+                        &nbsp;
+                        <button class="button-toggle button-toggle-on color-lime">
+                            Colored on
+                        </button>
+                    </p>
+                    <p>
+                        <button disabled class="button-toggle button-toggle-off">
+                            Disabled off
+                        </button>
+                        &nbsp;
+                        <button disabled class="button-toggle button-toggle-on">
+                            Disabled on
+                        </button>
+                    </p>
                 </section>
             </div>
-        </section>
-        <section>
-            <h3>
-                Horizonal rows
-            </h3>
-            <p>
-                You can add horizontal rows to the page:
-            </p>
-            <hr>
-            <p>
-                They are very useful as separators!
-            </p>
-        </section>
-        <h2>
-            Formatting
-        </h2>
-        <div class="panel panel-split">
-            <section>
-                <h3>
-                    Colors
-                </h3>
-                <p>
-                    You can use colored text:
-                </p>
-                <ul>
-                    <li><span class="color-red">Red</span></li>
-                    <li><span class="color-orange">Orange</span></li>
-                    <li><span class="color-yellow">Yellow</span></li>
-                    <li><span class="color-lime">Lime</span></li>
-                    <li><span class="color-cyan">Cyan</span></li>
-                    <li><span class="color-blue">Blue</span></li>
-                    <li><span class="color-magenta">Magenta</span></li>
-                    <li><span class="color-gray">Gray</span></li>
-                </ul>
-            </section>
-            <section>
-                <h3>
-                    Size
-                </h3>
-                <p>
-                    You can set the text size:
-                </p>
-                <ul>
-                    <li><span class="size-xxl">XXL</span></li>
-                    <li><span class="size-xl">XL</span></li>
-                    <li><span class="size-l">L</span></li>
-                    <li><span class="size-m">M</span></li>
-                    <li><span class="size-s">S</span></li>
-                    <li><span class="size-xs">XS</span></li>
-                    <li><span class="size-xxs">XXS</span></li>
-                </ul>
-            </section>
-            <section>
-                <h3>
-                    Alignment
-                </h3>
-                <p>
-                    You can set the text alignment (<i>only in block elements</i> such as div):
-                </p>
-                <div class="align-left">Left</div>
-                <div class="align-center">Center</div>
-                <div class="align-right">Right</div>
-            </section>
-            <section>
-                <h3>
-                    Style
-                </h3>
-                <p>
-                    You can use all the usual text styles:
-                </p>
-                <ul>
-                    <li>Regular</li>
-                    <li><b>Bold</b></li>
-                    <li><i>Italic</i></li>
-                    <li><u>Underlined</u></li>
-                    <li><s>Struck</s></li>
-                    <li><code>Code</code></li>
-                    <li><b><i><u><s><code>All of them together</code></s></u></i></b></li>
-                </ul>
-            </section>
-        </div>
-        <h2>
-            Elements
-        </h2>
-        <div class="panel panel-split">
-            <section>
-                <h3>
-                    Buttons
-                </h3>
-                <p>
-                    Bluelib supports buttons:
-                </p>
-                <p>
-                    <button>
-                        Hi, I'm a inline default button!
-                    </button>
-                    &nbsp;or&nbsp;
-                    <input class="color-lime" type="submit" value="Hi, I'm a lime submit button!"/>
-                </p>
-                <p>
-                    <button class="button-fill-width color-orange">
-                        I'm stretched horizontally!
-                    </button>
-                </p>
-                <p>
-                    <button disabled class="button-fill-width">
-                        Can't click on this!
-                    </button>
-                </p>
-            </section>
-            <section>
-                <h3>
-                    Toggle buttons
-                </h3>
-                <p>
-                    Bluelib supports buttons that can be toggled on and off:
-                </p>
-                <p>
-                    <button class="button-toggle button-toggle-off">
-                        Toggled off
-                    </button>
-                    &nbsp;
-                    <button class="button-toggle button-toggle-on">
-                        Toggled on
-                    </button>
-                </p>
-                <p>
-                    <button class="button-toggle button-toggle-off color-red">
-                        Colored off
-                    </button>
-                    &nbsp;
-                    <button class="button-toggle button-toggle-on color-lime">
-                        Colored on
-                    </button>
-                </p>
-                <p>
-                    <button disabled class="button-toggle button-toggle-off">
-                        Disabled off
-                    </button>
-                    &nbsp;
-                    <button disabled class="button-toggle button-toggle-on">
-                        Disabled on
-                    </button>
-                </p>
-            </section>
-        </div>
-        <h2>
-            Coloring panels
-        </h2>
-        <div class="panel panel-split">
-            <section class="color-red">
-                <h3>
-                    Panels can be recolored!
-                </h3>
-                <p>
-                    Elements contained inside will be recolored accordingly.
-                </p>
-            </section>
-            <blockquote class="color-lime">
-                <h3>
-                    It works on all types of panels!
-                </h3>
-                <p>
-                    This blockquote should be green!
-                </p>
-                <hr/>
-                <p>
-                    And so should be the separator above.
-                </p>
-            </blockquote>
-            <aside class="color-blue">
-                <h3>
-                    Smol blue aside
-                </h3>
-                <p>
-                    The buttons below should be automatically colored blue.
-                </p>
-                <button>
-                    Blue button
-                </button>
-                <button class="button-toggle button-toggle-off">
-                    Blue toggle off
-                </button>
-                <button class="button-toggle button-toggle-on">
-                    Blue toggle on
-                </button>
-            </aside>
-        </div>
-        <h2>
-            Interactivity
-        </h2>
-        <div class="panel panel-split">
-            <section>
-                <h3>
-                    Tooltips
-                </h3>
-                <p>
-                    Text <abbr title="Hello world!">with a tooltip</abbr> is underlined and has a "help" cursor if
-                    hovered.
-                </p>
-            </section>
-            <section>
-                <h3>
-                    Disabled
-                </h3>
-                <p>
-                    Elements can be <span class="status-disabled">disabled</span> to reduce their opacity and display a
-                    "not allowed" cursor if hovered.
-                </p>
-                <p>
-                    It also works with <a disabled class="status-disabled">links</a>!
-                </p>
-                <section class="status-disabled">
-                    And panels!
+            <h2>
+                Coloring panels
+            </h2>
+            <div class="panel panel-split">
+                <section class="color-red">
+                    <h3>
+                        Panels can be recolored!
+                    </h3>
+                    <p>
+                        Elements contained inside will be recolored accordingly.
+                    </p>
                 </section>
-            </section>
-        </div>
-        <h2>
-            Forms
-        </h2>
-        <div class="panel panel-split">
-            <section>
-                <h3>
-                    Inputs
-                </h3>
-                <p>
-                    Bluelib allows for the easy creation of forms:
-                </p>
-                <form>
-                    <label for="input-text">Text</label>
-                    <input id="input-text" type="text" placeholder="Text"/>
-                    <label for="input-password">Password</label>
-                    <input id="input-password" type="password" placeholder="Password" required/>
-                    <label for="input-email">Email</label>
-                    <input id="input-email" type="email" placeholder="Email"/>
-                    <label for="input-disabled">Disabled</label>
-                    <input id="input-disabled" type="text" placeholder="Disabled" disabled/>
-                    <label for="input-select">Select</label>
-                    <select id="input-select">
-                        <option>A</option>
-                        <option>B</option>
-                        <option>C</option>
-                        <optgroup label="D">
-                            <option>D.1</option>
-                            <option>D.2</option>
-                            <option>D.3</option>
-                        </optgroup>
-                    </select>
-                    <label for="input-multiple">Multiple</label>
-                    <select id="input-multiple" multiple>
-                        <option>A</option>
-                        <option>B</option>
-                        <option>C</option>
-                        <optgroup label="D">
-                            <option>D.1</option>
-                            <option>D.2</option>
-                            <option>D.3</option>
-                        </optgroup>
-                    </select>
-                    <div class="form-buttons">
-                        <input id="input-submit" type="submit" value="Submit"/>
-                    </div>
-                </form>
-            </section>
-        </div>
-    </main>
+                <blockquote class="color-lime">
+                    <h3>
+                        It works on all types of panels!
+                    </h3>
+                    <p>
+                        This blockquote should be green!
+                    </p>
+                    <hr/>
+                    <p>
+                        And so should be the separator above.
+                    </p>
+                </blockquote>
+                <aside class="color-blue">
+                    <h3>
+                        Smol blue aside
+                    </h3>
+                    <p>
+                        The buttons below should be automatically colored blue.
+                    </p>
+                    <button>
+                        Blue button
+                    </button>
+                    <button class="button-toggle button-toggle-off">
+                        Blue toggle off
+                    </button>
+                    <button class="button-toggle button-toggle-on">
+                        Blue toggle on
+                    </button>
+                </aside>
+            </div>
+            <h2>
+                Interactivity
+            </h2>
+            <div class="panel panel-split">
+                <section>
+                    <h3>
+                        Tooltips
+                    </h3>
+                    <p>
+                        Text <abbr title="Hello world!">with a tooltip</abbr> is underlined and has a "help" cursor if
+                        hovered.
+                    </p>
+                </section>
+                <section>
+                    <h3>
+                        Disabled
+                    </h3>
+                    <p>
+                        Elements can be <span class="status-disabled">disabled</span> to reduce their opacity and display a
+                        "not allowed" cursor if hovered.
+                    </p>
+                    <p>
+                        It also works with <a disabled class="status-disabled">links</a>!
+                    </p>
+                    <section class="status-disabled">
+                        And panels!
+                    </section>
+                </section>
+            </div>
+            <h2>
+                Forms
+            </h2>
+            <div class="panel panel-split">
+                <section>
+                    <h3>
+                        Inputs
+                    </h3>
+                    <p>
+                        Bluelib allows for the easy creation of forms:
+                    </p>
+                    <form>
+                        <label for="input-text">Text</label>
+                        <input id="input-text" type="text" placeholder="Text"/>
+                        <label for="input-password">Password</label>
+                        <input id="input-password" type="password" placeholder="Password" required/>
+                        <label for="input-email">Email</label>
+                        <input id="input-email" type="email" placeholder="Email"/>
+                        <label for="input-disabled">Disabled</label>
+                        <input id="input-disabled" type="text" placeholder="Disabled" disabled/>
+                        <label for="input-select">Select</label>
+                        <select id="input-select">
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <optgroup label="D">
+                                <option>D.1</option>
+                                <option>D.2</option>
+                                <option>D.3</option>
+                            </optgroup>
+                        </select>
+                        <label for="input-multiple">Multiple</label>
+                        <select id="input-multiple" multiple>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <optgroup label="D">
+                                <option>D.1</option>
+                                <option>D.2</option>
+                                <option>D.3</option>
+                            </optgroup>
+                        </select>
+                        <div class="form-buttons">
+                            <input id="input-submit" type="submit" value="Submit"/>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <nav class="layout-threecol-left">
+            I'm wrong.
+        </nav>
+        <nav class="layout-threecol-right">
+            I'm right :)
+        </nav>
+    </div>
 </body>
 </html>

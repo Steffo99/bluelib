@@ -1,33 +1,127 @@
-@{bluelib} {
-    // --- Root ---
+/// ===== Root =====
+/// Every HTML document using Bluelib must define a root, an element where all bluelib styles can start being applied.
+/// Elements outside the root won't be styled at all, allowing Bluelib's styling to be contained in components or modules of a website.
 
-    color: @bA;
+@{bluelib} {
+
+    // Set the background defined in the palette
     background-color: @hex-background;
+
+    // Set the base color to the foreground defined in the palette
     .bluelib-color(@hex-foreground);
+
+    // By default, text should use the main font
     .font-text();
 
+    /// ===== All =====
+    /// By default, browsers style elements with some weird rules.
+    /// This is an attempt to correct them, and to implement some Bluelib magic.
+
     &, @{all} {
-        box-sizing: border-box;
+
+        // Globally set the box-sizing to border-box, as content-box is completely insane
+        &, &::before, &::after {
+            box-sizing: border-box;
+        }
+
+        // Bluelib magic!
+        // This rule sets the color of all text to be equal to the current .bluelib-color() at 100% opacity.
+        // Thanks, CSS variables!
         color: @bA;
 
-        /* Disable outline, as we already highlight focused elements; if it's not enough, let me know */
-        outline: none !important;
     }
 
+    /// ===== Layouts =====
+    /// Layouts arrange the content displayed inside the root.
+    /// Layouts are the second element in the Bluelib hierarchy, immediately following the root.
+    /// Ideally, a single layout should be used per page.
 
-    // --- Containers ---
+    // The base layout class.
+    @{layout} {
+        display: grid;
+        justify-content: stretch;
+        align-items: stretch;
 
-    @{container-main} {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 1280px;
+        width: 100%;
     }
 
+    // A layout with a single container spanning the whole screen.
+    @{layout-fill} {
+        padding: 4px;
 
-    // --- Panels ---
-    // Remember to use BOTH the panel AND the panel-* class when using a panel element!
+        grid-template-areas:
+            "single";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 
-    // Base panel
+    @{layout-fill-single} {
+        grid-area: single;
+    }
+
+    // A layout with a centered 1024px wide main container and two symmetric containers at the sides.
+    @{layout-threecol} {
+        padding: 4px;
+
+        @media screen and (min-width: 1281px) {
+            grid-template-areas:
+            "left center right";
+            grid-template-columns: 1fr auto 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        // If the side containers would be smaller than 128px (if the screen is narrower than 1280px), the smaller containers are moved below the main one.
+        @media screen and (max-width: 1280px) {
+            grid-template-areas:
+                "center center"
+                "left right";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+
+            // Keep the container limited to 1024px and centered
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @{layout-threecol-left} {
+        grid-area: left;
+
+        @media screen and (min-width: 1281px) {
+            justify-self: end;
+        }
+
+        @media screen and (max-width: 1280px) {
+            justify-self: stretch;
+        }
+    }
+
+    @{layout-threecol-center} {
+        grid-area: center;
+
+        // Ensure the container doesn't eat up all the space
+        max-width: 1024px;
+    }
+
+    @{layout-threecol-right} {
+        grid-area: right;
+
+        @media screen and (min-width: 1281px) {
+            justify-self: start;
+        }
+
+        @media screen and (max-width: 1280px) {
+            justify-self: stretch;
+        }
+    }
+
+    /// ===== Panels =====
+    /// Panels are the main sectioning elements available in Bluelib.
+    /// Many instance of them should be present on the page!
+    /// They should group small amounts of tightly related content, which can be understood more or less separately from the rest of the page.
+
+    // The base panel class.
     @{panel} {
         margin: 8px 0;
         width: 100%;
