@@ -1814,7 +1814,9 @@ body .size-xxs {
 .base-skeleton .style-bold,
 body .style-bold,
 .base-skeleton b,
-body b {
+body b,
+.base-skeleton strong,
+body strong {
   font-weight: bold;
   --bluelib-color-r: 24;
   --bluelib-color-g: 24;
@@ -1823,7 +1825,9 @@ body b {
 .base-skeleton .style-italic,
 body .style-italic,
 .base-skeleton i,
-body i {
+body i,
+.base-skeleton em,
+body em {
   font-style: italic;
 }
 .base-skeleton .style-underline,
@@ -1835,7 +1839,11 @@ body u {
 .base-skeleton .style-strike,
 body .style-strike,
 .base-skeleton strike,
-body strike {
+body strike,
+.base-skeleton s,
+body s,
+.base-skeleton del,
+body del {
   text-decoration-line: line-through;
 }
 .base-skeleton .style-monospace,
