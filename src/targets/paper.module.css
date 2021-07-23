@@ -224,31 +224,26 @@
 }
 .bluelib .panel {
   margin: 8px 0;
-  width: 100%;
-}
-.bluelib .panel > .element-paragraph:first-child,
-.bluelib .panel .element-title:first-child,
-.bluelib .panel .panel:first-child {
-  margin-top: 0;
-}
-.bluelib .panel > .element-paragraph:last-child,
-.bluelib .panel .element-title:last-child,
-.bluelib .panel .panel:last-child {
-  margin-bottom: 0;
-}
-.bluelib .panel-box {
   padding: 8px;
-  border-radius: 4px;
-  border-width: 2px;
-  border-style: solid;
+  width: 100%;
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
+.bluelib .panel > *:first-child {
+  margin-top: 0;
+}
+.bluelib .panel > *:last-child {
+  margin-bottom: 0;
+}
+.bluelib .panel-box {
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+}
 .bluelib .panel-blockquote {
-  border-left-width: 2px;
-  border-top-width: 0;
-  border-bottom-width: 0;
-  border-right-width: 0;
+  border-radius: 4px;
+  border-width: 0 0 0 2px;
+  border-style: solid;
 }
 .bluelib .panel-aside {
   border-width: 0;
