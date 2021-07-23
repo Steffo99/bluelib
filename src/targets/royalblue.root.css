@@ -792,6 +792,25 @@ body .panel-split aside,
 body .panel-split .panel-split {
   margin: 0;
 }
+.base-skeleton img,
+body img,
+.base-skeleton .image,
+body .image {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.base-skeleton .image-free,
+body .image-free {
+  max-width: unset;
+  max-height: unset;
+}
+.base-skeleton .image-limited,
+body .image-limited {
+  max-height: max(37.5vw, 66.6vh);
+}
 .base-skeleton form,
 body form,
 .base-skeleton .form,

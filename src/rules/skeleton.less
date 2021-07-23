@@ -88,6 +88,28 @@
         }
     }
 
+    // --- Images ---
+
+    @{image} {
+        display: block;
+
+        max-width: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        object-fit: contain;
+    }
+
+    @{image-free} {
+        max-width: unset;
+        max-height: unset;
+    }
+
+    @{image-limited} {
+        max-height: max(37.5vw, 66.6vh);
+    }
+
     // --- Forms ---
 
     @{form} {

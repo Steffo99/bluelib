@@ -199,6 +199,20 @@
 .bluelib .panel-split > .panel {
   margin: 0;
 }
+.bluelib .image {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.bluelib .image-free {
+  max-width: unset;
+  max-height: unset;
+}
+.bluelib .image-limited {
+  max-height: max(37.5vw, 66.6vh);
+}
 .bluelib .form {
   display: grid;
   align-items: center;
