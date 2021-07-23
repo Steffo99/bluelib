@@ -344,52 +344,107 @@
   color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
 }
-.bluelib .input-field {
-  cursor: text;
-  border-width: 0 0 2px 0;
+.bluelib .input {
   border-style: solid;
-  border-radius: 4px 4px 0 0;
-  padding: 4px 6px;
-  font-family: inherit;
-  font-size: inherit;
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+  font-family: inherit;
+  font-size: inherit;
 }
-.bluelib .input-field::placeholder {
+.bluelib .input::placeholder {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.4);
   opacity: 1;
 }
-.bluelib .input-field:optional::placeholder {
+.bluelib .input:optional,
+.bluelib .input:optional::placeholder {
   font-style: italic;
 }
-.bluelib .input-field:invalid:not(:placeholder-shown) {
+.bluelib .input:invalid:not(:placeholder-shown) {
   --bluelib-color-r: 255;
   --bluelib-color-g: 125;
   --bluelib-color-b: 125;
 }
-.bluelib .input-field:hover,
-.bluelib .input-field:focus {
+.bluelib .input:hover,
+.bluelib .input:focus {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.6);
   color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
-.bluelib .input-field:hover::placeholder,
-.bluelib .input-field:focus::placeholder {
+.bluelib .input:hover::placeholder,
+.bluelib .input:focus::placeholder {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7);
 }
-.bluelib .input-field.status-disabled {
+.bluelib .input.status-disabled {
   border-style: dashed;
 }
-.bluelib .input-field.status-disabled:hover,
-.bluelib .input-field.status-disabled:focus {
+.bluelib .input.status-disabled:hover,
+.bluelib .input.status-disabled:focus {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
-.bluelib .input-field.status-disabled:hover::placeholder,
-.bluelib .input-field.status-disabled:focus::placeholder {
+.bluelib .input.status-disabled:hover::placeholder,
+.bluelib .input.status-disabled:focus::placeholder {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.4);
+}
+.bluelib .input-field {
+  cursor: text;
+  border-width: 0 0 2px 0;
+  border-radius: 4px 4px 0 0;
+  padding: 4px 6px;
+}
+.bluelib .input-select,
+.bluelib .input-multiselect {
+  padding: 4px 2px;
+}
+.bluelib .input-select-option,
+.bluelib .input-multiselect-option {
+  font-weight: normal;
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  padding: 4px 4px;
+}
+.bluelib .input-select-optgroup,
+.bluelib .input-multiselect-optgroup {
+  font-weight: bold;
+  color: #ffffff;
+  padding: 4px 4px;
+}
+.bluelib .input-select-optgroup .input-select-option,
+.bluelib .input-multiselect-optgroup .input-select-option,
+.bluelib .input-select-optgroup .input-multiselect-option,
+.bluelib .input-multiselect-optgroup .input-multiselect-option {
+  padding: 4px 20px;
+}
+.bluelib .input-select-optgroup .input-select-option::before,
+.bluelib .input-multiselect-optgroup .input-select-option::before,
+.bluelib .input-select-optgroup .input-multiselect-option::before,
+.bluelib .input-multiselect-optgroup .input-multiselect-option::before {
+  content: "";
+}
+.bluelib .input-select-optgroup,
+.bluelib .input-select-option,
+.bluelib .input-multiselect-optgroup,
+.bluelib .input-multiselect-option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+}
+.bluelib .input-select {
+  cursor: context-menu;
+  border-width: 0 0 2px 0;
+  border-radius: 4px 4px 0 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .bluelib .input-select .input-select-option,
+  .bluelib .input-select .input-select-optgroup {
+    background-color: #0d193b;
+  }
+}
+.bluelib .input-multiselect {
+  cursor: vertical-text;
+  border-width: 0 0 0 2px;
+  border-radius: 0 4px 4px 0;
 }
 .bluelib .status-hoverable {
   cursor: help;

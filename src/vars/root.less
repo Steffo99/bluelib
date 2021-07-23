@@ -22,8 +22,14 @@
 @button-toggle: ~'.button-toggle';
 @button-toggle-off: ~'.button-toggle-off';
 @button-toggle-on: ~'.button-toggle-on';
+@input: ~'.input, input, select';
 @input-field: ~'.input-field, input[type="color"], input[type="date"], input[type="datetime-local"], input[type="email"], input[type="file"], input[type="image"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]';
-@input-select: ~'select, .input-select';
+@input-select: ~'select:not([multiple]), .input-select';
+@input-select-optgroup: ~'optgroup, .input-select-optgroup';
+@input-select-option: ~'option, .input-select-option';
+@input-multiselect: ~'select[multiple], .input-multiselect';
+@input-multiselect-optgroup: ~'optgroup, .input-multiselect-optgroup';
+@input-multiselect-option: ~'option, .input-multiselect-option';
 @spoiler: ~".spoiler";
 @element-title: ~".element-title, h1, h2, h3, h4, h5, h6";
 @element-paragraph: ~".element-paragraph, p";

@@ -283,29 +283,27 @@
 
     // --- Inputs ---
 
-    @{input-field} {
-        cursor: text;
-
-        border-width: 0 0 2px 0;
+    @{input} {
         border-style: solid;
-        border-radius: 4px 4px 0 0;
-        padding: 4px 6px;
-
-        font-family: inherit;
-        font-size: inherit;
-
         border-color: @b3;
         color: @bA;
         background-color: @b0;
+
+        font-family: inherit;
+        font-size: inherit;
 
         &::placeholder {
             color: @b4;
             opacity: 1;
         }
 
-        &:optional::placeholder {
+        &:optional, &:optional::placeholder {
             font-style: italic;
         }
+
+        // &:valid:not(:placeholder-shown) {
+        //     .bluelib-color(@hex-lime);
+        // }
 
         &:invalid:not(:placeholder-shown) {
             .bluelib-color(@hex-red);
@@ -336,8 +334,67 @@
         }
     }
 
-    &@{input-select} {
+    @{input-field} {
+        cursor: text;
 
+        border-width: 0 0 2px 0;
+        border-radius: 4px 4px 0 0;
+        padding: 4px 6px;
+    }
+
+    @{input-select}, @{input-multiselect} {
+        // Browsers add 4px of unremovable horizontal padding to options for some reason
+        padding: 4px 2px;
+    }
+
+    @{input-select-option}, @{input-multiselect-option} {
+        font-weight: normal;
+        color: @bA;
+
+        padding: 4px 4px;
+
+        // TODO: style checked elements, when it will be possible
+    }
+
+    @{input-select-optgroup}, @{input-multiselect-optgroup} {
+        font-weight: bold;
+        color: @hex-accent;
+
+        padding: 4px 4px;
+
+        @{input-select-option}, @{input-multiselect-option} {
+            padding: 4px 20px;
+
+            &::before {
+                content: "";
+            }
+        }
+    }
+
+    @{input-select-optgroup}, @{input-select-option}, @{input-multiselect-optgroup}, @{input-multiselect-option} {
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+    }
+
+    @{input-select} {
+        cursor: context-menu;
+
+        border-width: 0 0 2px 0;
+        border-radius: 4px 4px 0 0;
+
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            @{input-select-option}, @{input-select-optgroup} {
+                background-color: @hex-background;
+            }
+        }
+    }
+
+    @{input-multiselect} {
+        cursor: vertical-text;
+
+        border-width: 0 0 0 2px;
+        border-radius: 0 4px 4px 0;
     }
 
     // --- Element status ---

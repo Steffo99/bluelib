@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="src/targets/paper.root.css">
     <link rel="stylesheet" href="src/targets/royalblue.root.css">
     <title>Bluelib 2</title>
     <style>
@@ -409,6 +408,17 @@
                     <input id="input-disabled" type="text" placeholder="Disabled" disabled/>
                     <label for="input-select">Select</label>
                     <select id="input-select">
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <optgroup label="D">
+                            <option>D.1</option>
+                            <option>D.2</option>
+                            <option>D.3</option>
+                        </optgroup>
+                    </select>
+                    <label for="input-multiple">Multiple</label>
+                    <select id="input-multiple" multiple>
                         <option>A</option>
                         <option>B</option>
                         <option>C</option>
