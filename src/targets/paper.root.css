@@ -1643,20 +1643,6 @@ body input[type="url"] .status-disabled:focus::placeholder,
 body input[type="week"] .status-disabled:focus::placeholder {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.4);
 }
-.base-skeleton .spoiler,
-body .spoiler {
-  filter: blur(5px);
-}
-.base-skeleton .spoiler:hover,
-body .spoiler:hover {
-  filter: none;
-}
-.base-skeleton .spoiler[disabled],
-body .spoiler[disabled],
-.base-skeleton .spoiler .status-disabled:hover,
-body .spoiler .status-disabled:hover {
-  filter: blur(5px);
-}
 .base-skeleton [title],
 body [title],
 .base-skeleton .status-hoverable,

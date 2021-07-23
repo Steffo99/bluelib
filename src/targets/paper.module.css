@@ -374,15 +374,6 @@
 .bluelib .input-field.status-disabled:focus::placeholder {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.4);
 }
-.bluelib .spoiler {
-  filter: blur(5px);
-}
-.bluelib .spoiler:hover {
-  filter: none;
-}
-.bluelib .spoiler.status-disabled:hover {
-  filter: blur(5px);
-}
 .bluelib .status-hoverable {
   cursor: help;
 }
