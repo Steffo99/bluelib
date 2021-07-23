@@ -215,14 +215,6 @@
   justify-self: stretch;
   width: 100%;
 }
-.bluelib .form-field:optional::placeholder {
-  font-style: italic;
-}
-.bluelib .form-field:invalid:not(:placeholder-shown) {
-  --bluelib-color-r: 200;
-  --bluelib-color-g: 0;
-  --bluelib-color-b: 0;
-}
 .bluelib .form-submit {
   width: auto;
 }
@@ -346,6 +338,14 @@
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+}
+.bluelib .input-field:optional::placeholder {
+  font-style: italic;
+}
+.bluelib .input-field:invalid:not(:placeholder-shown) {
+  --bluelib-color-r: 200;
+  --bluelib-color-g: 0;
+  --bluelib-color-b: 0;
 }
 .bluelib .input-field:hover,
 .bluelib .input-field:focus {

@@ -109,14 +109,6 @@
         grid-column: 2;
         justify-self: stretch;
         width: 100%;
-
-        &:optional::placeholder {
-            font-style: italic;
-        }
-
-        &:invalid:not(:placeholder-shown) {
-            .bluelib-color(@hex-red);
-        }
     }
 
     @{form-submit} {
@@ -279,6 +271,14 @@
         border-color: @b3;
         color: @bA;
         background-color: @b0;
+
+        &:optional::placeholder {
+            font-style: italic;
+        }
+
+        &:invalid:not(:placeholder-shown) {
+            .bluelib-color(@hex-red);
+        }
 
         &:hover, &:focus {
             border-color: @b6;
