@@ -146,7 +146,7 @@
 
         background-color: @bA;
         border: none;
-        color: @hex-outline;
+        color: @hex-btn-text;
         padding: 6px 16px;
         border-radius: 4px;
         font-family: inherit;
@@ -154,8 +154,12 @@
 
         cursor: pointer;
 
-        &:hover  {
+        &:hover {
             background-color: @bC;
+        }
+
+        &:focus-visible {
+            outline: 3px solid @hex-link-hover !important;
         }
 
         &:active {
@@ -163,7 +167,7 @@
         }
 
         &@{status-disabled} {
-            &:hover  {
+            &:hover {
                 background-color: @bA;
             }
 

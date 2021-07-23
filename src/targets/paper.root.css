@@ -901,6 +901,14 @@ body button:hover,
 body input[type="submit"]:hover {
   background-color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
 }
+.base-skeleton .button:focus-visible,
+body .button:focus-visible,
+.base-skeleton button:focus-visible,
+body button:focus-visible,
+.base-skeleton input[type="submit"]:focus-visible,
+body input[type="submit"]:focus-visible {
+  outline: 3px solid #006b6b !important;
+}
 .base-skeleton .button:active,
 body .button:active,
 .base-skeleton button:active,
