@@ -9,11 +9,14 @@
 @layout-threecol-center: ~".layout-threecol-center";
 @layout-threecol-right: ~".layout-threecol-right";
 
-@panel: ~".panel, .panel-box, section, .panel-blockquote, blockquote, .panel-aside, aside, .panel-split";
-@panel-box: ~".panel-box, section, .panel-blockquote, blockquote, .panel-aside, aside";
+@panel: ~".panel, @{panel-box}, @{panel-blockquote}, @{panel-aside}";
+@panel-box: ~"section, .panel-box";
 @panel-blockquote: ~".panel-blockquote, blockquote";
 @panel-aside: ~".panel-aside, aside";
-@panel-split: ~".panel-split";
+
+@split: ~".split";
+@split-forcewrap: ~".split-forcewrap";
+
 @status-disabled: ~"[disabled], .status-disabled";
 @status-hoverable: ~"[title], .status-hoverable";
 @status-clickable: ~"[onclick], .status-clickable";

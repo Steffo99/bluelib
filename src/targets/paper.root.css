@@ -249,66 +249,10 @@ body .layout-threecol-right,
 }
 body .panel,
 .bluelib .panel,
-body .panel-box,
-.bluelib .panel-box,
 body section,
 .bluelib section,
-body .panel-blockquote,
-.bluelib .panel-blockquote,
-body blockquote,
-.bluelib blockquote,
-body .panel-aside,
-.bluelib .panel-aside,
-body aside,
-.bluelib aside,
-body .panel-split,
-.bluelib .panel-split {
-  margin: 8px 0;
-  padding: 8px;
-  width: 100%;
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
-}
-body .panel > *:first-child,
-.bluelib .panel > *:first-child,
-body .panel-box > *:first-child,
-.bluelib .panel-box > *:first-child,
-body section > *:first-child,
-.bluelib section > *:first-child,
-body .panel-blockquote > *:first-child,
-.bluelib .panel-blockquote > *:first-child,
-body blockquote > *:first-child,
-.bluelib blockquote > *:first-child,
-body .panel-aside > *:first-child,
-.bluelib .panel-aside > *:first-child,
-body aside > *:first-child,
-.bluelib aside > *:first-child,
-body .panel-split > *:first-child,
-.bluelib .panel-split > *:first-child {
-  margin-top: 0;
-}
-body .panel > *:last-child,
-.bluelib .panel > *:last-child,
-body .panel-box > *:last-child,
-.bluelib .panel-box > *:last-child,
-body section > *:last-child,
-.bluelib section > *:last-child,
-body .panel-blockquote > *:last-child,
-.bluelib .panel-blockquote > *:last-child,
-body blockquote > *:last-child,
-.bluelib blockquote > *:last-child,
-body .panel-aside > *:last-child,
-.bluelib .panel-aside > *:last-child,
-body aside > *:last-child,
-.bluelib aside > *:last-child,
-body .panel-split > *:last-child,
-.bluelib .panel-split > *:last-child {
-  margin-bottom: 0;
-}
 body .panel-box,
 .bluelib .panel-box,
-body section,
-.bluelib section,
 body .panel-blockquote,
 .bluelib .panel-blockquote,
 body blockquote,
@@ -317,6 +261,76 @@ body .panel-aside,
 .bluelib .panel-aside,
 body aside,
 .bluelib aside {
+  margin: 8px 0;
+  padding: 8px;
+  width: 100%;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+body .panel > *:first-child,
+.bluelib .panel > *:first-child,
+body section > *:first-child,
+.bluelib section > *:first-child,
+body .panel-box > *:first-child,
+.bluelib .panel-box > *:first-child,
+body .panel-blockquote > *:first-child,
+.bluelib .panel-blockquote > *:first-child,
+body blockquote > *:first-child,
+.bluelib blockquote > *:first-child,
+body .panel-aside > *:first-child,
+.bluelib .panel-aside > *:first-child,
+body aside > *:first-child,
+.bluelib aside > *:first-child,
+body .panel .all:first-child,
+.bluelib .panel .all:first-child,
+body section .all:first-child,
+.bluelib section .all:first-child,
+body .panel-box .all:first-child,
+.bluelib .panel-box .all:first-child,
+body .panel-blockquote .all:first-child,
+.bluelib .panel-blockquote .all:first-child,
+body blockquote .all:first-child,
+.bluelib blockquote .all:first-child,
+body .panel-aside .all:first-child,
+.bluelib .panel-aside .all:first-child,
+body aside .all:first-child,
+.bluelib aside .all:first-child {
+  margin-top: 0;
+}
+body .panel > *:last-child,
+.bluelib .panel > *:last-child,
+body section > *:last-child,
+.bluelib section > *:last-child,
+body .panel-box > *:last-child,
+.bluelib .panel-box > *:last-child,
+body .panel-blockquote > *:last-child,
+.bluelib .panel-blockquote > *:last-child,
+body blockquote > *:last-child,
+.bluelib blockquote > *:last-child,
+body .panel-aside > *:last-child,
+.bluelib .panel-aside > *:last-child,
+body aside > *:last-child,
+.bluelib aside > *:last-child,
+body .panel .all:last-child,
+.bluelib .panel .all:last-child,
+body section .all:last-child,
+.bluelib section .all:last-child,
+body .panel-box .all:last-child,
+.bluelib .panel-box .all:last-child,
+body .panel-blockquote .all:last-child,
+.bluelib .panel-blockquote .all:last-child,
+body blockquote .all:last-child,
+.bluelib blockquote .all:last-child,
+body .panel-aside .all:last-child,
+.bluelib .panel-aside .all:last-child,
+body aside .all:last-child,
+.bluelib aside .all:last-child {
+  margin-bottom: 0;
+}
+body section,
+.bluelib section,
+body .panel-box,
+.bluelib .panel-box {
   border-radius: 4px;
   border-width: 2px;
   border-style: solid;
@@ -336,38 +350,42 @@ body aside,
   border-width: 0;
   font-size: smaller;
 }
-body .panel-split,
-.bluelib .panel-split {
+body .split,
+.bluelib .split {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px 8px;
   justify-content: center;
 }
-body .panel-split > *,
-.bluelib .panel-split > *,
-body .panel-split .all,
-.bluelib .panel-split .all {
+body .split > .panel,
+.bluelib .split > .panel,
+body .split section,
+.bluelib .split section,
+body .split .panel-box,
+.bluelib .split .panel-box,
+body .split .panel-blockquote,
+.bluelib .split .panel-blockquote,
+body .split blockquote,
+.bluelib .split blockquote,
+body .split .panel-aside,
+.bluelib .split .panel-aside,
+body .split aside,
+.bluelib .split aside {
+  margin: 0;
+}
+body .split > *,
+.bluelib .split > *,
+body .split .all,
+.bluelib .split .all {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 0;
 }
-body .panel-split > .panel,
-.bluelib .panel-split > .panel,
-body .panel-split .panel-box,
-.bluelib .panel-split .panel-box,
-body .panel-split section,
-.bluelib .panel-split section,
-body .panel-split .panel-blockquote,
-.bluelib .panel-split .panel-blockquote,
-body .panel-split blockquote,
-.bluelib .panel-split blockquote,
-body .panel-split .panel-aside,
-.bluelib .panel-split .panel-aside,
-body .panel-split aside,
-.bluelib .panel-split aside,
-body .panel-split .panel-split,
-.bluelib .panel-split .panel-split {
-  margin: 0;
+body .split-forcewrap,
+.bluelib .split-forcewrap {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
 }
 body img,
 .bluelib img,

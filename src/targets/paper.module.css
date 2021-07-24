@@ -229,10 +229,12 @@
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
-.bluelib .panel > *:first-child {
+.bluelib .panel > *:first-child,
+.bluelib .panel .all:first-child {
   margin-top: 0;
 }
-.bluelib .panel > *:last-child {
+.bluelib .panel > *:last-child,
+.bluelib .panel .all:last-child {
   margin-bottom: 0;
 }
 .bluelib .panel-box {
@@ -249,20 +251,25 @@
   border-width: 0;
   font-size: smaller;
 }
-.bluelib .panel-split {
+.bluelib .split {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px 8px;
   justify-content: center;
 }
-.bluelib .panel-split > *,
-.bluelib .panel-split .all {
+.bluelib .split > .panel {
+  margin: 0;
+}
+.bluelib .split > *,
+.bluelib .split .all {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 0;
 }
-.bluelib .panel-split > .panel {
-  margin: 0;
+.bluelib .split-forcewrap {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
 }
 .bluelib .image {
   display: block;

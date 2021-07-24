@@ -135,7 +135,7 @@
         border-color: @b1;
 
         // The first and last elements of a panel should not have a margin
-        > * {
+        > @{all} {
             &:first-child {
                 margin-top: 0;
             }
@@ -166,22 +166,33 @@
         font-size: smaller;
     }
 
-    // Evenly split the panels contained inside
-    @{panel-split} {
+    /// ===== Split =====
+    /// A split is an element which splits everything contained inside in multiple columns of equal width.
+
+    @{split} {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 4px 8px;
         justify-content: center;
 
+        > @{panel} {
+            // Add a horizontal margin to panels
+            margin: 0;
+        }
+
+        // Allow contained elements to grow
         > @{all} {
             flex-grow: 1;
             flex-shrink: 0;
             flex-basis: 0;
         }
+    }
 
-        > @{panel} {
-            margin: 0;
-        }
+    // Force a split to wrap
+    @{split-forcewrap} {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 100%;
     }
 
     // --- Images ---
