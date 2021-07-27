@@ -144,29 +144,21 @@ body,
 body,
 .bluelib,
 body *,
-.bluelib *,
-body .all,
-.bluelib .all {
+.bluelib * {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
 body,
 .bluelib,
 body *,
 .bluelib *,
-body .all,
-.bluelib .all,
 body::before,
 .bluelib::before,
 body *::before,
 .bluelib *::before,
-body .all::before,
-.bluelib .all::before,
 body::after,
 .bluelib::after,
 body *::after,
-.bluelib *::after,
-body .all::after,
-.bluelib .all::after {
+.bluelib *::after {
   box-sizing: border-box;
 }
 body .layout,
@@ -280,21 +272,7 @@ body blockquote > *:first-child,
 body .panel-aside > *:first-child,
 .bluelib .panel-aside > *:first-child,
 body aside > *:first-child,
-.bluelib aside > *:first-child,
-body .panel .all:first-child,
-.bluelib .panel .all:first-child,
-body section .all:first-child,
-.bluelib section .all:first-child,
-body .panel-box .all:first-child,
-.bluelib .panel-box .all:first-child,
-body .panel-blockquote .all:first-child,
-.bluelib .panel-blockquote .all:first-child,
-body blockquote .all:first-child,
-.bluelib blockquote .all:first-child,
-body .panel-aside .all:first-child,
-.bluelib .panel-aside .all:first-child,
-body aside .all:first-child,
-.bluelib aside .all:first-child {
+.bluelib aside > *:first-child {
   margin-top: 0;
 }
 body .panel > *:last-child,
@@ -310,21 +288,7 @@ body blockquote > *:last-child,
 body .panel-aside > *:last-child,
 .bluelib .panel-aside > *:last-child,
 body aside > *:last-child,
-.bluelib aside > *:last-child,
-body .panel .all:last-child,
-.bluelib .panel .all:last-child,
-body section .all:last-child,
-.bluelib section .all:last-child,
-body .panel-box .all:last-child,
-.bluelib .panel-box .all:last-child,
-body .panel-blockquote .all:last-child,
-.bluelib .panel-blockquote .all:last-child,
-body blockquote .all:last-child,
-.bluelib blockquote .all:last-child,
-body .panel-aside .all:last-child,
-.bluelib .panel-aside .all:last-child,
-body aside .all:last-child,
-.bluelib aside .all:last-child {
+.bluelib aside > *:last-child {
   margin-bottom: 0;
 }
 body section,
@@ -374,9 +338,7 @@ body .split aside,
   margin: 0;
 }
 body .split > *,
-.bluelib .split > *,
-body .split .all,
-.bluelib .split .all {
+.bluelib .split > * {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 0;
