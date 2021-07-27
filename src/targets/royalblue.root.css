@@ -383,6 +383,34 @@ body .image-limit-quarter,
 .bluelib .image-limit-quarter {
   max-height: max(14.1vw, 25vh);
 }
+body [title],
+.bluelib [title],
+body .status-hoverable,
+.bluelib .status-hoverable {
+  cursor: help;
+}
+body [onclick],
+.bluelib [onclick],
+body .status-clickable,
+.bluelib .status-clickable {
+  cursor: pointer;
+}
+body [disabled],
+.bluelib [disabled],
+body .status-disabled,
+.bluelib .status-disabled {
+  opacity: 50%;
+}
+body [disabled],
+.bluelib [disabled],
+body .status-disabled,
+.bluelib .status-disabled,
+body [disabled] *,
+.bluelib [disabled] *,
+body .status-disabled *,
+.bluelib .status-disabled * {
+  cursor: not-allowed !important;
+}
 body form,
 .bluelib form,
 body .form,
@@ -938,25 +966,6 @@ body .input-multiselect,
   cursor: vertical-text;
   border-width: 0 0 0 2px;
   border-radius: 0 4px 4px 0;
-}
-body [title],
-.bluelib [title],
-body .status-hoverable,
-.bluelib .status-hoverable {
-  cursor: help;
-}
-body [onclick],
-.bluelib [onclick],
-body .status-clickable,
-.bluelib .status-clickable {
-  cursor: pointer;
-}
-body [disabled],
-.bluelib [disabled],
-body .status-disabled,
-.bluelib .status-disabled {
-  cursor: not-allowed !important;
-  opacity: 50%;
 }
 body .element-title,
 .bluelib .element-title,
