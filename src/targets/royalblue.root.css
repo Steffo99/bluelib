@@ -375,9 +375,13 @@ body .image,
   margin-right: auto;
   object-fit: contain;
 }
-body .image-limited,
-.bluelib .image-limited {
-  max-height: max(37.5vw, 66.6vh);
+body .image-limit-half,
+.bluelib .image-limit-half {
+  max-height: max(28.2vw, 50vh);
+}
+body .image-limit-quarter,
+.bluelib .image-limit-quarter {
+  max-height: max(14.1vw, 25vh);
 }
 body form,
 .bluelib form,

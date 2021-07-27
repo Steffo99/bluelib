@@ -289,8 +289,11 @@
   margin-right: auto;
   object-fit: contain;
 }
-.bluelib .image-limited {
-  max-height: max(37.5vw, 66.6vh);
+.bluelib .image-limit-half {
+  max-height: max(28.2vw, 50vh);
+}
+.bluelib .image-limit-quarter {
+  max-height: max(14.1vw, 25vh);
 }
 .bluelib .form {
   display: grid;
