@@ -168,7 +168,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-.bluelib .layout-fill > main,
 .bluelib .layout-fill-single {
   grid-area: single;
 }
@@ -271,6 +270,7 @@
   flex-shrink: 0;
   flex-basis: 100%;
 }
+.bluelib img,
 .bluelib .image {
   display: block;
   max-width: 100%;
@@ -295,16 +295,14 @@
 .bluelib .form-label {
   grid-column: 1;
   justify-self: end;
+  text-align: right;
 }
 .bluelib .form-input {
   grid-column: 2;
   justify-self: stretch;
   width: 100%;
 }
-.bluelib .form-submit {
-  width: auto;
-}
-.bluelib .form-buttons {
+.bluelib .form-row {
   grid-column-start: 1;
   grid-column-end: 3;
   display: flex;
@@ -314,12 +312,6 @@
   width: 100%;
   margin-top: 8px;
   margin-bottom: 8px;
-}
-.bluelib .form-buttons:first-child {
-  margin-top: 0;
-}
-.bluelib .form-buttons:last-child {
-  margin-bottom: 0;
 }
 .bluelib .button {
   display: inline-flex;

@@ -17,17 +17,19 @@
 @split: ~".split";
 @split-forcewrap: ~".split-forcewrap";
 
-@status-disabled: ~"[disabled], .status-disabled";
-@status-hoverable: ~"[title], .status-hoverable";
-@status-clickable: ~"[onclick], .status-clickable";
 @image: ~"img, .image";
 @image-free: ~".image-free";
 @image-limited: ~".image-limited";
+
+@status-disabled: ~"[disabled], .status-disabled";
+@status-hoverable: ~"[title], .status-hoverable";
+@status-clickable: ~"[onclick], .status-clickable";
+
 @form: ~"form, .form";
-@form-label: ~"form label, .form-label";
-@form-input: ~"form @{input-field}, form @{input-select}, .form-input";
-@form-submit: ~'form @{button}, form button, .form-submit';
-@form-buttons: ~'.form-buttons';
+@form-label: ~"@{form} label, .form-label";
+@form-input: ~"@{form} @{input}, .form-input";
+@form-row: ~"@{form} div, .form-row";
+
 @button: ~'button, input[type="submit"], .button';
 @button-fill-width: ~'.button-fill-width';
 @button-toggle: ~'.button-toggle';

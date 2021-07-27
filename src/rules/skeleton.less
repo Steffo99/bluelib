@@ -195,7 +195,8 @@
         flex-basis: 100%;
     }
 
-    // --- Images ---
+    /// --- Images ---
+    /// Images are changed to block elements and are automatically centered.
 
     @{image} {
         display: block;
@@ -208,16 +209,29 @@
         object-fit: contain;
     }
 
+    // Allow an image to grow to its real size
     @{image-free} {
         max-width: unset;
         max-height: unset;
     }
 
+    // Limit even further the size of an image based on the size of the screen
     @{image-limited} {
         max-height: max(37.5vw, 66.6vh);
     }
 
-    // --- Forms ---
+    /// --- Forms ---
+    /// Forms are containers where interactable elements are contained.
+    /// Every interactable is split in two parts: a label on the left and the control on the right
+    ///
+    /// Example:
+    ///
+    /// Username | Steffo
+    ///    Email | ste.pigozzi@gmail.com
+    /// Password | ············
+    ///  Country | Italy ↓
+    ///
+    ///      [Submit]
 
     @{form} {
         display: grid;
@@ -226,25 +240,29 @@
         row-gap: 4px;
         column-gap: 8px;
 
+        // Labels should have the greater width between the one they require and 1/6 of the form width.
         grid-template-columns: minmax(auto, 1fr) 5fr;
     }
 
     @{form-label} {
+        // Labels are on the left column of the grid
         grid-column: 1;
+        // They should be right-aligned
         justify-self: end;
+        text-align: right;
     }
 
     @{form-input} {
+        // Inputs are on the right column of the grid
         grid-column: 2;
+        // They should occupy all the available space
         justify-self: stretch;
         width: 100%;
     }
 
-    @{form-submit} {
-        width: auto;
-    }
-
-    @{form-buttons} {
+    // An element filling a whole row of a form
+    // Useful for adding buttons or similar flow interruptions
+    @{form-row} {
         grid-column-start: 1;
         grid-column-end: 3;
 
@@ -256,14 +274,6 @@
 
         margin-top: 8px;
         margin-bottom: 8px;
-
-        &:first-child {
-            margin-top: 0;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
 
     // --- Buttons ---
