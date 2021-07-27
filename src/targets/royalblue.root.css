@@ -416,69 +416,36 @@ body .form,
   column-gap: 8px;
   grid-template-columns: minmax(auto, 1fr) 5fr;
 }
-body form label,
-.bluelib form label,
+body form,
+.bluelib form,
+body .form label,
+.bluelib .form label,
 body .form-label,
 .bluelib .form-label {
   grid-column: 1;
   justify-self: end;
+  text-align: right;
 }
-body form .input-field,
-.bluelib form .input-field,
-body input[type="color"],
-.bluelib input[type="color"],
-body input[type="date"],
-.bluelib input[type="date"],
-body input[type="datetime-local"],
-.bluelib input[type="datetime-local"],
-body input[type="email"],
-.bluelib input[type="email"],
-body input[type="file"],
-.bluelib input[type="file"],
-body input[type="image"],
-.bluelib input[type="image"],
-body input[type="month"],
-.bluelib input[type="month"],
-body input[type="number"],
-.bluelib input[type="number"],
-body input[type="password"],
-.bluelib input[type="password"],
-body input[type="search"],
-.bluelib input[type="search"],
-body input[type="tel"],
-.bluelib input[type="tel"],
-body input[type="text"],
-.bluelib input[type="text"],
-body input[type="time"],
-.bluelib input[type="time"],
-body input[type="url"],
-.bluelib input[type="url"],
-body input[type="week"],
-.bluelib input[type="week"],
-body form select:not([multiple]),
-.bluelib form select:not([multiple]),
-body .input-select,
-.bluelib .input-select,
+body form,
+.bluelib form,
+body .form input,
+.bluelib .form input,
+body select,
+.bluelib select,
+body .input,
+.bluelib .input,
 body .form-input,
 .bluelib .form-input {
   grid-column: 2;
   justify-self: stretch;
   width: 100%;
 }
-body form button,
-.bluelib form button,
-body input[type="submit"],
-.bluelib input[type="submit"],
-body .button,
-.bluelib .button,
-body form button,
-.bluelib form button,
-body .form-submit,
-.bluelib .form-submit {
-  width: auto;
-}
-body .form-buttons,
-.bluelib .form-buttons {
+body form,
+.bluelib form,
+body .form div,
+.bluelib .form div,
+body .form-row,
+.bluelib .form-row {
   grid-column-start: 1;
   grid-column-end: 3;
   display: flex;
@@ -488,14 +455,6 @@ body .form-buttons,
   width: 100%;
   margin-top: 8px;
   margin-bottom: 8px;
-}
-body .form-buttons:first-child,
-.bluelib .form-buttons:first-child {
-  margin-top: 0;
-}
-body .form-buttons:last-child,
-.bluelib .form-buttons:last-child {
-  margin-bottom: 0;
 }
 body button,
 .bluelib button,
