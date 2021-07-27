@@ -289,10 +289,6 @@
   margin-right: auto;
   object-fit: contain;
 }
-.bluelib .image-free {
-  max-width: unset;
-  max-height: unset;
-}
 .bluelib .image-limited {
   max-height: max(37.5vw, 66.6vh);
 }

@@ -375,11 +375,6 @@ body .image,
   margin-right: auto;
   object-fit: contain;
 }
-body .image-free,
-.bluelib .image-free {
-  max-width: unset;
-  max-height: unset;
-}
 body .image-limited,
 .bluelib .image-limited {
   max-height: max(37.5vw, 66.6vh);

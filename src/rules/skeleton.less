@@ -212,7 +212,7 @@
         border-color: @bA;
     }
 
-    /// --- Images ---
+    /// ===== Images =====
     /// Images are changed to block elements and are automatically centered.
 
     @{image} {
@@ -224,12 +224,6 @@
         margin-right: auto;
 
         object-fit: contain;
-    }
-
-    // Allow an image to grow to its real size
-    @{image-free} {
-        max-width: unset;
-        max-height: unset;
     }
 
     // Limit even further the size of an image based on the size of the screen
