@@ -141,18 +141,18 @@
   font-weight: 400;
 }
 .bluelib,
-.bluelib *,
+.bluelib .bluelib *,
 .bluelib .all {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
 .bluelib,
-.bluelib *,
+.bluelib .bluelib *,
 .bluelib .all,
 .bluelib::before,
-.bluelib *::before,
+.bluelib .bluelib *::before,
 .bluelib .all::before,
 .bluelib::after,
-.bluelib *::after,
+.bluelib .bluelib *::after,
 .bluelib .all::after {
   box-sizing: border-box;
 }
@@ -228,11 +228,11 @@
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
-.bluelib .panel > *:first-child,
+.bluelib .panel > .bluelib *:first-child,
 .bluelib .panel .all:first-child {
   margin-top: 0;
 }
-.bluelib .panel > *:last-child,
+.bluelib .panel > .bluelib *:last-child,
 .bluelib .panel .all:last-child {
   margin-bottom: 0;
 }
@@ -259,7 +259,7 @@
 .bluelib .split > .panel {
   margin: 0;
 }
-.bluelib .split > *,
+.bluelib .split > .bluelib *,
 .bluelib .split .all {
   flex-grow: 1;
   flex-shrink: 0;
