@@ -226,9 +226,12 @@
         object-fit: contain;
     }
 
-    // Limit even further the size of an image based on the size of the screen
-    @{image-limited} {
-        max-height: max(37.5vw, 66.6vh);
+    @{image-limit-half} {
+        max-height: max(28.2vw, 50vh);
+    }
+
+    @{image-limit-quarter} {
+        max-height: max(14.1vw, 25vh);
     }
 
     /// ===== Forms =====
