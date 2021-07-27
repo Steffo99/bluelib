@@ -195,6 +195,23 @@
         flex-basis: 100%;
     }
 
+    /// ===== Separators =====
+    /// Separators are horizontal lines separating elements.
+
+    @{separator} {
+        border-width: 1px;
+        border-style: solid;
+        border-color: @b5;
+    }
+
+    @{separator-light} {
+        border-color: @b1;
+    }
+
+    @{separator-heavy} {
+        border-color: @bA;
+    }
+
     /// --- Images ---
     /// Images are changed to block elements and are automatically centered.
 
@@ -220,7 +237,7 @@
         max-height: max(37.5vw, 66.6vh);
     }
 
-    /// --- Forms ---
+    /// ===== Forms =====
     /// Forms are containers where interactable elements are contained.
     /// Every interactable is split in two parts: a label on the left and the control on the right
     ///
@@ -276,35 +293,44 @@
         margin-bottom: 8px;
     }
 
-    // --- Buttons ---
+    /// ===== Buttons =====
+    /// Buttons are clickable elements which should trigger an action when clicked.
+    /// Their contents are elements containing either an icon or text, or possibly both.
 
     @{button} {
+        // Buttons are rendered as inline elements, but should arrange their contents as if they were flex
         display: inline-flex;
+
+        // Center the button contents both vertically and horizontally
         justify-content: center;
         align-items: center;
 
+        // Disable the operating system appearance for the button
+        appearance: none;
+
+        // Button properties should be set explicitly, as otherwise every browser will display them in a different manner
         background-color: @bA;
+        color: @hex-away;
         border: none;
-        color: @hex-btn-text;
         padding: 6px 16px;
         border-radius: 4px;
         font-family: inherit;
         font-size: inherit;
 
+        // Buttons should display a pointer cursor
         cursor: pointer;
 
         &:hover {
+            // Hovered buttons should provide feedback
             background-color: @bC;
         }
 
-        &:focus-visible {
-            outline: 4px solid @b7 !important;
-        }
-
         &:active {
+            // Activated buttons should provide greater feedback
             background-color: @bF;
         }
 
+        // Disabled buttons shouldn't do anything
         &@{status-disabled} {
             &:hover {
                 background-color: @bA;
@@ -313,6 +339,11 @@
             &:active {
                 background-color: @bA;
             }
+        }
+
+        // If using keyboard navigation, display an outline to make the focused button more evident
+        &:focus-visible {
+            outline: 4px solid @b7 !important;
         }
     }
 
@@ -539,12 +570,6 @@
 
     @{element-paragraph} {
 
-    }
-
-    @{element-separator} {
-        border-width: 1px;
-        border-style: solid;
-        border-color: @b1;
     }
 
     @{element-list-item} {

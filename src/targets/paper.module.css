@@ -270,6 +270,17 @@
   flex-shrink: 0;
   flex-basis: 100%;
 }
+.bluelib .separator {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.5);
+}
+.bluelib .separator-light {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.bluelib .separator-heavy {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+}
 .bluelib img,
 .bluelib .image {
   display: block;
@@ -317,9 +328,10 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  appearance: none;
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  border: none;
   color: #ffffff;
+  border: none;
   padding: 6px 16px;
   border-radius: 4px;
   font-family: inherit;
@@ -329,9 +341,6 @@
 .bluelib .button:hover {
   background-color: rgba(calc(var(--bluelib-color-r) - 20), calc(var(--bluelib-color-g) - 20), calc(var(--bluelib-color-b) - 20), 1);
 }
-.bluelib .button:focus-visible {
-  outline: 4px solid rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7) !important;
-}
 .bluelib .button:active {
   background-color: rgba(calc(var(--bluelib-color-r) - 50), calc(var(--bluelib-color-g) - 50), calc(var(--bluelib-color-b) - 50), 1);
 }
@@ -340,6 +349,9 @@
 }
 .bluelib .button.status-disabled:active {
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+}
+.bluelib .button:focus-visible {
+  outline: 4px solid rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7) !important;
 }
 .bluelib .button-fill-width {
   width: 100%;
@@ -527,11 +539,6 @@
   --bluelib-color-b: 24;
   font-family: "Fira Sans", sans-serif;
   font-weight: 500;
-}
-.bluelib .element-separator {
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
 .bluelib .element-list-item {
   margin: 10px 0;
