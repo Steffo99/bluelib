@@ -234,6 +234,26 @@
         max-height: max(14.1vw, 25vh);
     }
 
+    /// ===== Status =====
+    /// Statuses are classes that can be applied to elements to indicate that special interactions are available
+
+    @{status-hoverable} {
+        cursor: help;
+    }
+
+    @{status-clickable} {
+        cursor: pointer;
+    }
+
+    @{status-disabled} {
+        opacity: 50%;
+
+        // All sub-elements of a disabled element should have a not-allowed cursor
+        &, @{all} {
+            cursor: not-allowed !important;
+        }
+    }
+
     /// ===== Forms =====
     /// Forms are containers where interactable elements are contained.
     /// Every interactable is split in two parts: a label on the left and the control on the right
@@ -540,21 +560,6 @@
 
         border-width: 0 0 0 2px;
         border-radius: 0 4px 4px 0;
-    }
-
-    // --- Element status ---
-
-    @{status-hoverable} {
-        cursor: help;
-    }
-
-    @{status-clickable} {
-        cursor: pointer;
-    }
-
-    @{status-disabled} {
-        cursor: not-allowed !important;
-        opacity: 50%;
     }
 
     // --- Elements ---
