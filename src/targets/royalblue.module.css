@@ -295,12 +295,6 @@
 .bluelib .image-limit-quarter {
   max-height: max(14.1vw, 25vh);
 }
-.bluelib .status-hoverable {
-  cursor: help;
-}
-.bluelib .status-clickable {
-  cursor: pointer;
-}
 .bluelib .status-disabled {
   opacity: 50%;
 }
