@@ -27,23 +27,24 @@
 
 @status-disabled: ~"[disabled], .status-disabled";
 
-@input: ~'input, select, .input';
+@input: ~'@{input-field}, @{input-select}, @{input-multiselect}, @{input-button}, .input';
 @input-field: ~'.input-field, input[type="color"], input[type="date"], input[type="datetime-local"], input[type="email"], input[type="file"], input[type="image"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]';
 @input-select: ~'select:not([multiple]), .input-select';
 @input-multiselect: ~'select[multiple], .input-multiselect';
 @input-option: ~'option, .input-option';
 @input-optgroup: ~'optgroup, .input-optgroup';
+@input-button: ~'button, input[type="submit"], input[type="reset"], .input-button';
 
 @form: ~"form, .form";
 @form-label: ~"label, .form-label";
 @form-input: ~"@{input}, .form-input";
 @form-row: ~"div, .form-row";
 
-@button: ~'button, input[type="submit"], .button';
-@button-fill-width: ~'.button-fill-width';
-@button-toggle: ~'.button-toggle';
-@button-toggle-off: ~'.button-toggle-off';
-@button-toggle-on: ~'.button-toggle-on';
+@button: ~':not()';
+@button-fill-width: ~':not()';
+@button-toggle: ~':not()';
+@button-toggle-off: ~':not()';
+@button-toggle-on: ~':not()';
 @spoiler: ~".spoiler";
 @element-title: ~".element-title, h1, h2, h3, h4, h5, h6";
 @element-paragraph: ~".element-paragraph, p";

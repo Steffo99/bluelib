@@ -393,30 +393,35 @@
                         <input id="input-email" type="email" placeholder="Fields where the input is invalid are colored red"/>
                         <label for="input-phone">Phone</label>
                         <input id="input-phone" type="tel" placeholder="Optional fields have italic text"/>
-                        <label for="input-disabled">Disabled</label>
+                        <label for="input-disabled">Fax</label>
                         <input id="input-disabled" type="text" placeholder="Disabled fields have a dashed underline" disabled required/>
-                        <label for="input-select">Select</label>
+                        <label for="input-select">Shirt size</label>
                         <select id="input-select">
-                            <option>A</option>
-                            <option>B</option>
-                            <option>C</option>
-                            <optgroup label="D">
-                                <option>D.1</option>
-                                <option>D.2</option>
-                                <option>D.3</option>
+                            <optgroup label="Smaller">
+                                <option>XXS</option>
+                                <option>XS</option>
+                                <option>S</option>
+                            </optgroup>
+                            <option>M</option>
+                            <optgroup label="Larger">
+                                <option>L</option>
+                                <option>XL</option>
+                                <option>XXL</option>
                             </optgroup>
                         </select>
-                        <label for="input-multiple">Multiple</label>
+                        <label for="input-multiple">Colors</label>
                         <select id="input-multiple" multiple>
-                            <option>A</option>
-                            <option>B</option>
-                            <option>C</option>
-                            <optgroup label="D">
-                                <option>D.1</option>
-                                <option>D.2</option>
+                            <option>Red</option>
+                            <option>Yellow</option>
+                            <option>Green</option>
+                            <optgroup label="Blues">
+                                <option>Blue</option>
+                                <option>Purple</option>
+                                <option>Cyan</option>
                             </optgroup>
                         </select>
-                        <div class="form-buttons">
+                        <div class="form-row">
+                            <input id="input-reset" type="reset" value="Reset"/>
                             <input id="input-submit" type="submit" value="Submit"/>
                         </div>
                     </form>
