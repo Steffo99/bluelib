@@ -396,6 +396,37 @@
         // Nested optgroups aren't allowed by browsers, so no need to worry about that
     }
 
+    @{input-button} {
+        cursor: pointer;
+
+        // Buttons are rendered as inline elements, but should arrange their contents as if they were flex
+        display: inline-flex;
+        // Center the button contents both vertically and horizontally
+        justify-content: center;
+        align-items: center;
+
+        // Give the button a nice shape
+        padding: 6px 16px;
+        border-radius: 4px;
+
+        // Give them a good clicking feedback
+        // (sadly it doesn't work if using the keyboard)
+        &:active {
+            border-color: @bC;
+            color: @bF;
+            background-color: @b3;
+        }
+
+        // But not if they're disabled
+        @{status-disabled} {
+            &:active {
+                border-color: @b3;
+                color: @bA;
+                background-color: @b0;
+            }
+        }
+    }
+
     /// ===== Forms =====
     /// Forms are containers where interactable elements are contained.
     /// Every interactable is split in two parts: a label on the left and the control on the right.
@@ -449,142 +480,6 @@
 
             margin-top: 8px;
             margin-bottom: 8px;
-        }
-    }
-
-    /// ===== Buttons =====
-    /// Buttons are clickable elements which should trigger an action when clicked.
-    /// Their contents are elements containing either an icon or text, or possibly both.
-
-    @{button} {
-        // Buttons are rendered as inline elements, but should arrange their contents as if they were flex
-        display: inline-flex;
-
-        // Center the button contents both vertically and horizontally
-        justify-content: center;
-        align-items: center;
-
-        // Disable the operating system appearance for the button
-        appearance: none;
-
-        // Button properties should be set explicitly, as otherwise every browser will display them in a different manner
-        background-color: @bA;
-        color: @hex-away;
-        border: none;
-        padding: 6px 16px;
-        border-radius: 4px;
-        font-family: inherit;
-        font-size: inherit;
-
-        // Buttons should display a pointer cursor
-        cursor: pointer;
-
-        &:hover {
-            // Hovered buttons should provide feedback
-            background-color: @bC;
-        }
-
-        &:active {
-            // Activated buttons should provide greater feedback
-            background-color: @bF;
-        }
-
-        // Disabled buttons shouldn't do anything
-        &@{status-disabled} {
-            &:hover {
-                background-color: @bA;
-            }
-
-            &:active {
-                background-color: @bA;
-            }
-        }
-
-        // If using keyboard navigation, display an outline to make the focused button more evident
-        &:focus-visible {
-            outline: 4px solid @b7 !important;
-        }
-    }
-
-    @{button-fill-width} {
-        width: 100%;
-    }
-
-    @{button-toggle} {
-        padding: 4px 14px;
-        border-width: 2px;
-        border-style: solid;
-
-        &@{status-disabled} {
-            border-style: dashed;
-        }
-    }
-
-    @{button-toggle-off} {
-        border-color: @bA;
-        color: @bA;
-        background-color: @b0;
-
-        &:hover  {
-            border-color: @bC;
-            color: @bC;
-            background-color: @b1;
-        }
-
-        &:active {
-            border-color: @bF;
-            color: @bF;
-            background-color: @b2;
-        }
-
-        &@{status-disabled} {
-            border-style: dashed;
-
-            &:hover  {
-                border-color: @bA;
-                color: @bA;
-                background-color: @b0;
-            }
-
-            &:active {
-                border-color: @bA;
-                color: @bA;
-                background-color: @b0;
-            }
-        }
-    }
-
-    @{button-toggle-on} {
-        border-color: @bF;
-        color: @bF;
-        background-color: @b2;
-
-        &:hover  {
-            border-color: @bC;
-            color: @bC;
-            background-color: @b1;
-        }
-
-        &:active {
-            border-color: @bA;
-            color: @bA;
-            background-color: @b0;
-        }
-
-        &@{status-disabled} {
-            border-style: dashed;
-
-            &:hover  {
-                border-color: @bF;
-                color: @bF;
-                background-color: @b2;
-            }
-
-            &:active {
-                border-color: @bF;
-                color: @bF;
-                background-color: @b2;
-            }
         }
     }
 
