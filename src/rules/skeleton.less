@@ -246,9 +246,159 @@
         }
     }
 
+    /// ===== Inputs =====
+    /// Inputs are the interactable parts of a website.
+
+    @{input} {
+        // Disable the browser font override
+        font: inherit;
+
+        // They should have a solid border
+        border-style: solid;
+        // Unless they are disabled, then they should have a dashed one
+        &@{status-disabled} {
+            border-style: dashed;
+        }
+
+        // They should use the current bluelib color
+        border-color: @b3;
+        color: @bA;
+        background-color: @b0;
+
+        // Both for themselves and their placeholder
+        &::placeholder {
+            color: @b4;
+            opacity: 1;
+        }
+
+        // They should become lighter if hovered
+        &:hover {
+            border-color: @b6;
+            color: @bC;
+            background-color: @b1;
+
+            &::placeholder {
+                color: @b7;
+            }
+        }
+
+        // And even lighter if focused
+        &:focus {
+            border-color: @bA;
+            color: @bF;
+            background-color: @b2;
+
+            &::placeholder {
+                color: @b7;
+            }
+        }
+
+        // Unless they are disabled
+        &@{status-disabled} {
+            &:hover, &:focus {
+                border-color: @b3;
+                color: @bA;
+                background-color: @b0;
+
+                &::placeholder {
+                    color: @b4;
+                }
+            }
+        }
+
+        // If they are optional, their contents should be in italic
+        &:optional, &:optional::placeholder {
+            font-style: italic;
+        }
+
+        // If their contents fail validation, they should be recolored red
+        &:invalid:not(:placeholder-shown) {
+            .bluelib-color(@hex-red);
+        }
+
+        // If the browser wants the focus to be more appearent, don't draw an ugly focus ring and let every element define a better way
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    /// Fields are inputs where text can be entered
+    @{input-field} {
+        cursor: text;
+
+        border-width: 0 0 2px 0;
+        border-radius: 4px 4px 0 0;
+        padding: 6px;
+    }
+
+    /// Selects are inputs where one option between many can be selected
+    @{input-select} {
+        cursor: context-menu;
+
+        border-width: 0 0 2px 0;
+        border-radius: 4px 4px 0 0;
+
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            @{input-option}, @{input-optgroup} {
+                background-color: @hex-background;
+            }
+        }
+    }
+
+    /// Multiselects are inputs where multiple options between many can be selected
+    @{input-multiselect} {
+        cursor: vertical-text;
+
+        border-width: 0 0 0 2px;
+        border-radius: 0 4px 4px 0;
+
+        // This is how you change color of the selected options of the multiselect
+        // But it is very quirky and never works as expected, so it is disabled
+        // @{input-option} {
+        //     &:checked {
+        //         background-image: linear-gradient(0deg, @bA 0%, @bA 100%);
+        //     }
+        // }
+    }
+
+    // Some rules apply to both of them
+    @{input-select}, @{input-multiselect} {
+        // Browsers add 4px of unremovable horizontal padding to options for some reason
+        padding: 6px 4px;
+
+        @{input-option} {
+            font-weight: normal;
+            color: @bA;
+
+            // Options should be slightly padded too
+            padding: 4px;
+        }
+
+        @{input-optgroup} {
+            // Style option groups as titles
+            font-weight: bold;
+            color: @hex-accent;
+
+            // Options groups should be slightly padded too
+            padding: 4px;
+
+            @{input-option} {
+                // Add a slight indentation
+                padding: 4px 20px;
+
+                &::before {
+                    // Remove the tabs that Chrome adds before the options
+                    content: "";
+                }
+            }
+        }
+
+        // Nested optgroups aren't allowed by browsers, so no need to worry about that
+    }
+
     /// ===== Forms =====
     /// Forms are containers where interactable elements are contained.
-    /// Every interactable is split in two parts: a label on the left and the control on the right
+    /// Every interactable is split in two parts: a label on the left and the control on the right.
     ///
     /// Example:
     ///
@@ -268,38 +418,38 @@
 
         // Labels should have the greater width between the one they require and 1/6 of the form width.
         grid-template-columns: minmax(auto, 1fr) 5fr;
-    }
 
-    @{form-label} {
-        // Labels are on the left column of the grid
-        grid-column: 1;
-        // They should be right-aligned
-        justify-self: end;
-        text-align: right;
-    }
+        @{form-label} {
+            // Labels are on the left column of the grid
+            grid-column: 1;
+            // They should be right-aligned
+            justify-self: end;
+            text-align: right;
+        }
 
-    @{form-input} {
-        // Inputs are on the right column of the grid
-        grid-column: 2;
-        // They should occupy all the available space
-        justify-self: stretch;
-        width: 100%;
-    }
+        @{form-input} {
+            // Inputs are on the right column of the grid
+            grid-column: 2;
+            // They should occupy all the available space
+            justify-self: stretch;
+            width: 100%;
+        }
 
-    // An element filling a whole row of a form
-    // Useful for adding buttons or similar flow interruptions
-    @{form-row} {
-        grid-column-start: 1;
-        grid-column-end: 3;
+        // An element filling a whole row of a form
+        // Useful for adding buttons or similar flow interruptions
+        @{form-row} {
+            grid-column-start: 1;
+            grid-column-end: 3;
 
-        display: flex;
-        gap: 8px;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
 
-        margin-top: 8px;
-        margin-bottom: 8px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
     }
 
     /// ===== Buttons =====
@@ -436,122 +586,6 @@
                 background-color: @b2;
             }
         }
-    }
-
-    // --- Inputs ---
-
-    @{input} {
-        border-style: solid;
-        border-color: @b3;
-        color: @bA;
-        background-color: @b0;
-
-        font-family: inherit;
-        font-size: inherit;
-
-        &::placeholder {
-            color: @b4;
-            opacity: 1;
-        }
-
-        &:optional, &:optional::placeholder {
-            font-style: italic;
-        }
-
-        // &:valid:not(:placeholder-shown) {
-        //     .bluelib-color(@hex-lime);
-        // }
-
-        &:invalid:not(:placeholder-shown) {
-            .bluelib-color(@hex-red);
-        }
-
-        &:hover, &:focus {
-            border-color: @b6;
-            color: @bF;
-            background-color: @b1;
-
-            &::placeholder {
-                color: @b7;
-            }
-        }
-
-        &@{status-disabled} {
-            border-style: dashed;
-
-            &:hover, &:focus {
-                border-color: @b3;
-                color: @bA;
-                background-color: @b0;
-
-                &::placeholder {
-                    color: @b4;
-                }
-            }
-        }
-    }
-
-    @{input-field} {
-        cursor: text;
-
-        border-width: 0 0 2px 0;
-        border-radius: 4px 4px 0 0;
-        padding: 4px 6px;
-    }
-
-    @{input-select}, @{input-multiselect} {
-        // Browsers add 4px of unremovable horizontal padding to options for some reason
-        padding: 4px 2px;
-    }
-
-    @{input-select-option}, @{input-multiselect-option} {
-        font-weight: normal;
-        color: @bA;
-
-        padding: 4px 4px;
-
-        // TODO: style checked elements, when it will be possible
-    }
-
-    @{input-select-optgroup}, @{input-multiselect-optgroup} {
-        font-weight: bold;
-        color: @hex-accent;
-
-        padding: 4px 4px;
-
-        @{input-select-option}, @{input-multiselect-option} {
-            padding: 4px 20px;
-
-            &::before {
-                content: "";
-            }
-        }
-    }
-
-    @{input-select-optgroup}, @{input-select-option}, @{input-multiselect-optgroup}, @{input-multiselect-option} {
-        font-family: inherit;
-        font-size: inherit;
-        font-style: inherit;
-    }
-
-    @{input-select} {
-        cursor: context-menu;
-
-        border-width: 0 0 2px 0;
-        border-radius: 4px 4px 0 0;
-
-        @media screen and (-webkit-min-device-pixel-ratio:0) {
-            @{input-select-option}, @{input-select-optgroup} {
-                background-color: @hex-background;
-            }
-        }
-    }
-
-    @{input-multiselect} {
-        cursor: vertical-text;
-
-        border-width: 0 0 0 2px;
-        border-radius: 0 4px 4px 0;
     }
 
     // --- Elements ---

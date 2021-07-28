@@ -27,24 +27,23 @@
 
 @status-disabled: ~"[disabled], .status-disabled";
 
+@input: ~'input, select, .input';
+@input-field: ~'.input-field, input[type="color"], input[type="date"], input[type="datetime-local"], input[type="email"], input[type="file"], input[type="image"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]';
+@input-select: ~'select:not([multiple]), .input-select';
+@input-multiselect: ~'select[multiple], .input-multiselect';
+@input-option: ~'option, .input-option';
+@input-optgroup: ~'optgroup, .input-optgroup';
+
 @form: ~"form, .form";
-@form-label: ~"@{form} label, .form-label";
-@form-input: ~"@{form} @{input}, .form-input";
-@form-row: ~"@{form} div, .form-row";
+@form-label: ~"label, .form-label";
+@form-input: ~"@{input}, .form-input";
+@form-row: ~"div, .form-row";
 
 @button: ~'button, input[type="submit"], .button';
 @button-fill-width: ~'.button-fill-width';
 @button-toggle: ~'.button-toggle';
 @button-toggle-off: ~'.button-toggle-off';
 @button-toggle-on: ~'.button-toggle-on';
-@input: ~'input, select, .input';
-@input-field: ~'.input-field, input[type="color"], input[type="date"], input[type="datetime-local"], input[type="email"], input[type="file"], input[type="image"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]';
-@input-select: ~'select:not([multiple]), .input-select';
-@input-select-optgroup: ~'optgroup, .input-select-optgroup';
-@input-select-option: ~'option, .input-select-option';
-@input-multiselect: ~'select[multiple], .input-multiselect';
-@input-multiselect-optgroup: ~'optgroup, .input-multiselect-optgroup';
-@input-multiselect-option: ~'option, .input-multiselect-option';
 @spoiler: ~".spoiler";
 @element-title: ~".element-title, h1, h2, h3, h4, h5, h6";
 @element-paragraph: ~".element-paragraph, p";

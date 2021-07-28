@@ -357,10 +357,10 @@
             </h2>
             <section>
                 <h3>
-                    Statuses
+                    Status
                 </h3>
                 <p>
-                    Statuses are classes that can be applied to elements to mark some special interaction property.
+                    Status are classes that can be applied to elements to mark some special interaction property.
                 </p>
                 <div class="split">
                     <section class="status-disabled">
@@ -373,6 +373,55 @@
                     </section>
                 </div>
             </section>
+            <h2>
+                Forms
+            </h2>
+            <div class="split">
+                <section>
+                    <h3>
+                        Inputs
+                    </h3>
+                    <p>
+                        Bluelib allows for the easy creation of forms:
+                    </p>
+                    <form>
+                        <label for="input-text">Text</label>
+                        <input id="input-text" type="text" placeholder="All fields have a customizable placeholder" required/>
+                        <label for="input-password">Password</label>
+                        <input id="input-password" type="password" placeholder="Field type determines how input is displayed" required/>
+                        <label for="input-email">Email</label>
+                        <input id="input-email" type="email" placeholder="Fields where the input is invalid are colored red"/>
+                        <label for="input-phone">Phone</label>
+                        <input id="input-phone" type="tel" placeholder="Optional fields have italic text"/>
+                        <label for="input-disabled">Disabled</label>
+                        <input id="input-disabled" type="text" placeholder="Disabled fields have a dashed underline" disabled required/>
+                        <label for="input-select">Select</label>
+                        <select id="input-select">
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <optgroup label="D">
+                                <option>D.1</option>
+                                <option>D.2</option>
+                                <option>D.3</option>
+                            </optgroup>
+                        </select>
+                        <label for="input-multiple">Multiple</label>
+                        <select id="input-multiple" multiple>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <optgroup label="D">
+                                <option>D.1</option>
+                                <option>D.2</option>
+                            </optgroup>
+                        </select>
+                        <div class="form-buttons">
+                            <input id="input-submit" type="submit" value="Submit"/>
+                        </div>
+                    </form>
+                </section>
+            </div>
             <h2>
                 Formatting
             </h2>
@@ -575,54 +624,6 @@
                     <section class="status-disabled">
                         And panels!
                     </section>
-                </section>
-            </div>
-            <h2>
-                Forms
-            </h2>
-            <div class="split">
-                <section>
-                    <h3>
-                        Inputs
-                    </h3>
-                    <p>
-                        Bluelib allows for the easy creation of forms:
-                    </p>
-                    <form>
-                        <label for="input-text">Text</label>
-                        <input id="input-text" type="text" placeholder="Text"/>
-                        <label for="input-password">Password</label>
-                        <input id="input-password" type="password" placeholder="Password" required/>
-                        <label for="input-email">Email</label>
-                        <input id="input-email" type="email" placeholder="Email"/>
-                        <label for="input-disabled">Disabled</label>
-                        <input id="input-disabled" type="text" placeholder="Disabled" disabled/>
-                        <label for="input-select">Select</label>
-                        <select id="input-select">
-                            <option>A</option>
-                            <option>B</option>
-                            <option>C</option>
-                            <optgroup label="D">
-                                <option>D.1</option>
-                                <option>D.2</option>
-                                <option>D.3</option>
-                            </optgroup>
-                        </select>
-                        <label for="input-multiple">Multiple</label>
-                        <select id="input-multiple" multiple>
-                            <option>A</option>
-                            <option>B</option>
-                            <option>C</option>
-                            <optgroup label="D">
-                                <option>D.1</option>
-                                <option>D.2</option>
-                                <option>D.3</option>
-                            </optgroup>
-                        </select>
-                        <div class="form-buttons">
-                            <input id="input-submit" type="submit" value="Submit"/>
-                        </div>
-                    </form>
                 </section>
             </div>
         </main>
