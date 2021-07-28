@@ -383,18 +383,6 @@ body .image-limit-quarter,
 .bluelib .image-limit-quarter {
   max-height: max(14.1vw, 25vh);
 }
-body [title],
-.bluelib [title],
-body .status-hoverable,
-.bluelib .status-hoverable {
-  cursor: help;
-}
-body [onclick],
-.bluelib [onclick],
-body .status-clickable,
-.bluelib .status-clickable {
-  cursor: pointer;
-}
 body [disabled],
 .bluelib [disabled],
 body .status-disabled,
