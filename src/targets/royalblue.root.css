@@ -399,6 +399,354 @@ body .status-disabled *,
 .bluelib .status-disabled * {
   cursor: not-allowed !important;
 }
+body input,
+.bluelib input,
+body select,
+.bluelib select,
+body .input,
+.bluelib .input {
+  font: inherit;
+  border-style: solid;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+}
+body input[disabled],
+.bluelib input[disabled],
+body select[disabled],
+.bluelib select[disabled],
+body .input[disabled],
+.bluelib .input[disabled],
+body input .status-disabled,
+.bluelib input .status-disabled,
+body select .status-disabled,
+.bluelib select .status-disabled,
+body .input .status-disabled,
+.bluelib .input .status-disabled {
+  border-style: dashed;
+}
+body input::placeholder,
+.bluelib input::placeholder,
+body select::placeholder,
+.bluelib select::placeholder,
+body .input::placeholder,
+.bluelib .input::placeholder {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.4);
+  opacity: 1;
+}
+body input:hover,
+.bluelib input:hover,
+body select:hover,
+.bluelib select:hover,
+body .input:hover,
+.bluelib .input:hover {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.6);
+  color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+body input:hover::placeholder,
+.bluelib input:hover::placeholder,
+body select:hover::placeholder,
+.bluelib select:hover::placeholder,
+body .input:hover::placeholder,
+.bluelib .input:hover::placeholder {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7);
+}
+body input:focus,
+.bluelib input:focus,
+body select:focus,
+.bluelib select:focus,
+body .input:focus,
+.bluelib .input:focus {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
+}
+body input:focus::placeholder,
+.bluelib input:focus::placeholder,
+body select:focus::placeholder,
+.bluelib select:focus::placeholder,
+body .input:focus::placeholder,
+.bluelib .input:focus::placeholder {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7);
+}
+body input[disabled]:hover,
+.bluelib input[disabled]:hover,
+body select[disabled]:hover,
+.bluelib select[disabled]:hover,
+body .input[disabled]:hover,
+.bluelib .input[disabled]:hover,
+body input .status-disabled:hover,
+.bluelib input .status-disabled:hover,
+body select .status-disabled:hover,
+.bluelib select .status-disabled:hover,
+body .input .status-disabled:hover,
+.bluelib .input .status-disabled:hover,
+body input[disabled]:focus,
+.bluelib input[disabled]:focus,
+body select[disabled]:focus,
+.bluelib select[disabled]:focus,
+body .input[disabled]:focus,
+.bluelib .input[disabled]:focus,
+body input .status-disabled:focus,
+.bluelib input .status-disabled:focus,
+body select .status-disabled:focus,
+.bluelib select .status-disabled:focus,
+body .input .status-disabled:focus,
+.bluelib .input .status-disabled:focus {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+}
+body input[disabled]:hover::placeholder,
+.bluelib input[disabled]:hover::placeholder,
+body select[disabled]:hover::placeholder,
+.bluelib select[disabled]:hover::placeholder,
+body .input[disabled]:hover::placeholder,
+.bluelib .input[disabled]:hover::placeholder,
+body input .status-disabled:hover::placeholder,
+.bluelib input .status-disabled:hover::placeholder,
+body select .status-disabled:hover::placeholder,
+.bluelib select .status-disabled:hover::placeholder,
+body .input .status-disabled:hover::placeholder,
+.bluelib .input .status-disabled:hover::placeholder,
+body input[disabled]:focus::placeholder,
+.bluelib input[disabled]:focus::placeholder,
+body select[disabled]:focus::placeholder,
+.bluelib select[disabled]:focus::placeholder,
+body .input[disabled]:focus::placeholder,
+.bluelib .input[disabled]:focus::placeholder,
+body input .status-disabled:focus::placeholder,
+.bluelib input .status-disabled:focus::placeholder,
+body select .status-disabled:focus::placeholder,
+.bluelib select .status-disabled:focus::placeholder,
+body .input .status-disabled:focus::placeholder,
+.bluelib .input .status-disabled:focus::placeholder {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.4);
+}
+body input:optional,
+.bluelib input:optional,
+body select:optional,
+.bluelib select:optional,
+body .input:optional,
+.bluelib .input:optional,
+body input:optional::placeholder,
+.bluelib input:optional::placeholder,
+body select:optional::placeholder,
+.bluelib select:optional::placeholder,
+body .input:optional::placeholder,
+.bluelib .input:optional::placeholder {
+  font-style: italic;
+}
+body input:invalid:not(:placeholder-shown),
+.bluelib input:invalid:not(:placeholder-shown),
+body select:invalid:not(:placeholder-shown),
+.bluelib select:invalid:not(:placeholder-shown),
+body .input:invalid:not(:placeholder-shown),
+.bluelib .input:invalid:not(:placeholder-shown) {
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 125;
+  --bluelib-color-b: 125;
+}
+body input:focus-visible,
+.bluelib input:focus-visible,
+body select:focus-visible,
+.bluelib select:focus-visible,
+body .input:focus-visible,
+.bluelib .input:focus-visible {
+  outline: none;
+}
+body .input-field,
+.bluelib .input-field,
+body input[type="color"],
+.bluelib input[type="color"],
+body input[type="date"],
+.bluelib input[type="date"],
+body input[type="datetime-local"],
+.bluelib input[type="datetime-local"],
+body input[type="email"],
+.bluelib input[type="email"],
+body input[type="file"],
+.bluelib input[type="file"],
+body input[type="image"],
+.bluelib input[type="image"],
+body input[type="month"],
+.bluelib input[type="month"],
+body input[type="number"],
+.bluelib input[type="number"],
+body input[type="password"],
+.bluelib input[type="password"],
+body input[type="search"],
+.bluelib input[type="search"],
+body input[type="tel"],
+.bluelib input[type="tel"],
+body input[type="text"],
+.bluelib input[type="text"],
+body input[type="time"],
+.bluelib input[type="time"],
+body input[type="url"],
+.bluelib input[type="url"],
+body input[type="week"],
+.bluelib input[type="week"] {
+  cursor: text;
+  border-width: 0 0 2px 0;
+  border-radius: 4px 4px 0 0;
+  padding: 6px;
+}
+body select:not([multiple]),
+.bluelib select:not([multiple]),
+body .input-select,
+.bluelib .input-select {
+  cursor: context-menu;
+  border-width: 0 0 2px 0;
+  border-radius: 4px 4px 0 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  body select:not([multiple]) option,
+  .bluelib select:not([multiple]) option,
+  body .input-select option,
+  .bluelib .input-select option,
+  body select:not([multiple]) .input-option,
+  .bluelib select:not([multiple]) .input-option,
+  body .input-select .input-option,
+  .bluelib .input-select .input-option,
+  body select:not([multiple]) optgroup,
+  .bluelib select:not([multiple]) optgroup,
+  body .input-select optgroup,
+  .bluelib .input-select optgroup,
+  body select:not([multiple]) .input-optgroup,
+  .bluelib select:not([multiple]) .input-optgroup,
+  body .input-select .input-optgroup,
+  .bluelib .input-select .input-optgroup {
+    background-color: #0d193b;
+  }
+}
+body select[multiple],
+.bluelib select[multiple],
+body .input-multiselect,
+.bluelib .input-multiselect {
+  cursor: vertical-text;
+  border-width: 0 0 0 2px;
+  border-radius: 0 4px 4px 0;
+}
+body select:not([multiple]),
+.bluelib select:not([multiple]),
+body .input-select,
+.bluelib .input-select,
+body select[multiple],
+.bluelib select[multiple],
+body .input-multiselect,
+.bluelib .input-multiselect {
+  padding: 6px 4px;
+}
+body select:not([multiple]) option,
+.bluelib select:not([multiple]) option,
+body .input-select option,
+.bluelib .input-select option,
+body select[multiple] option,
+.bluelib select[multiple] option,
+body .input-multiselect option,
+.bluelib .input-multiselect option,
+body select:not([multiple]) .input-option,
+.bluelib select:not([multiple]) .input-option,
+body .input-select .input-option,
+.bluelib .input-select .input-option,
+body select[multiple] .input-option,
+.bluelib select[multiple] .input-option,
+body .input-multiselect .input-option,
+.bluelib .input-multiselect .input-option {
+  font-weight: normal;
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  padding: 4px;
+}
+body select:not([multiple]) optgroup,
+.bluelib select:not([multiple]) optgroup,
+body .input-select optgroup,
+.bluelib .input-select optgroup,
+body select[multiple] optgroup,
+.bluelib select[multiple] optgroup,
+body .input-multiselect optgroup,
+.bluelib .input-multiselect optgroup,
+body select:not([multiple]) .input-optgroup,
+.bluelib select:not([multiple]) .input-optgroup,
+body .input-select .input-optgroup,
+.bluelib .input-select .input-optgroup,
+body select[multiple] .input-optgroup,
+.bluelib select[multiple] .input-optgroup,
+body .input-multiselect .input-optgroup,
+.bluelib .input-multiselect .input-optgroup {
+  font-weight: bold;
+  color: #ffffff;
+  padding: 4px;
+}
+body select:not([multiple]) optgroup option,
+.bluelib select:not([multiple]) optgroup option,
+body .input-select optgroup option,
+.bluelib .input-select optgroup option,
+body select[multiple] optgroup option,
+.bluelib select[multiple] optgroup option,
+body .input-multiselect optgroup option,
+.bluelib .input-multiselect optgroup option,
+body select:not([multiple]) .input-optgroup option,
+.bluelib select:not([multiple]) .input-optgroup option,
+body .input-select .input-optgroup option,
+.bluelib .input-select .input-optgroup option,
+body select[multiple] .input-optgroup option,
+.bluelib select[multiple] .input-optgroup option,
+body .input-multiselect .input-optgroup option,
+.bluelib .input-multiselect .input-optgroup option,
+body select:not([multiple]) optgroup .input-option,
+.bluelib select:not([multiple]) optgroup .input-option,
+body .input-select optgroup .input-option,
+.bluelib .input-select optgroup .input-option,
+body select[multiple] optgroup .input-option,
+.bluelib select[multiple] optgroup .input-option,
+body .input-multiselect optgroup .input-option,
+.bluelib .input-multiselect optgroup .input-option,
+body select:not([multiple]) .input-optgroup .input-option,
+.bluelib select:not([multiple]) .input-optgroup .input-option,
+body .input-select .input-optgroup .input-option,
+.bluelib .input-select .input-optgroup .input-option,
+body select[multiple] .input-optgroup .input-option,
+.bluelib select[multiple] .input-optgroup .input-option,
+body .input-multiselect .input-optgroup .input-option,
+.bluelib .input-multiselect .input-optgroup .input-option {
+  padding: 4px 20px;
+}
+body select:not([multiple]) optgroup option::before,
+.bluelib select:not([multiple]) optgroup option::before,
+body .input-select optgroup option::before,
+.bluelib .input-select optgroup option::before,
+body select[multiple] optgroup option::before,
+.bluelib select[multiple] optgroup option::before,
+body .input-multiselect optgroup option::before,
+.bluelib .input-multiselect optgroup option::before,
+body select:not([multiple]) .input-optgroup option::before,
+.bluelib select:not([multiple]) .input-optgroup option::before,
+body .input-select .input-optgroup option::before,
+.bluelib .input-select .input-optgroup option::before,
+body select[multiple] .input-optgroup option::before,
+.bluelib select[multiple] .input-optgroup option::before,
+body .input-multiselect .input-optgroup option::before,
+.bluelib .input-multiselect .input-optgroup option::before,
+body select:not([multiple]) optgroup .input-option::before,
+.bluelib select:not([multiple]) optgroup .input-option::before,
+body .input-select optgroup .input-option::before,
+.bluelib .input-select optgroup .input-option::before,
+body select[multiple] optgroup .input-option::before,
+.bluelib select[multiple] optgroup .input-option::before,
+body .input-multiselect optgroup .input-option::before,
+.bluelib .input-multiselect optgroup .input-option::before,
+body select:not([multiple]) .input-optgroup .input-option::before,
+.bluelib select:not([multiple]) .input-optgroup .input-option::before,
+body .input-select .input-optgroup .input-option::before,
+.bluelib .input-select .input-optgroup .input-option::before,
+body select[multiple] .input-optgroup .input-option::before,
+.bluelib select[multiple] .input-optgroup .input-option::before,
+body .input-multiselect .input-optgroup .input-option::before,
+.bluelib .input-multiselect .input-optgroup .input-option::before {
+  content: "";
+}
 body form,
 .bluelib form,
 body .form,
@@ -409,36 +757,46 @@ body .form,
   column-gap: 8px;
   grid-template-columns: minmax(auto, 1fr) 5fr;
 }
-body form,
-.bluelib form,
+body form label,
+.bluelib form label,
 body .form label,
 .bluelib .form label,
-body .form-label,
-.bluelib .form-label {
+body form .form-label,
+.bluelib form .form-label,
+body .form .form-label,
+.bluelib .form .form-label {
   grid-column: 1;
   justify-self: end;
   text-align: right;
 }
-body form,
-.bluelib form,
+body form input,
+.bluelib form input,
 body .form input,
 .bluelib .form input,
-body select,
-.bluelib select,
-body .input,
-.bluelib .input,
-body .form-input,
-.bluelib .form-input {
+body form select,
+.bluelib form select,
+body .form select,
+.bluelib .form select,
+body form .input,
+.bluelib form .input,
+body .form .input,
+.bluelib .form .input,
+body form .form-input,
+.bluelib form .form-input,
+body .form .form-input,
+.bluelib .form .form-input {
   grid-column: 2;
   justify-self: stretch;
   width: 100%;
 }
-body form,
-.bluelib form,
+body form div,
+.bluelib form div,
 body .form div,
 .bluelib .form div,
-body .form-row,
-.bluelib .form-row {
+body form .form-row,
+.bluelib form .form-row,
+body .form .form-row,
+.bluelib .form .form-row {
   grid-column-start: 1;
   grid-column-end: 3;
   display: flex;
@@ -615,345 +973,6 @@ body .button-toggle-on .status-disabled:active,
   border-color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
   color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
-}
-body input,
-.bluelib input,
-body select,
-.bluelib select,
-body .input,
-.bluelib .input {
-  border-style: solid;
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
-  font-family: inherit;
-  font-size: inherit;
-}
-body input::placeholder,
-.bluelib input::placeholder,
-body select::placeholder,
-.bluelib select::placeholder,
-body .input::placeholder,
-.bluelib .input::placeholder {
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.4);
-  opacity: 1;
-}
-body input:optional,
-.bluelib input:optional,
-body select:optional,
-.bluelib select:optional,
-body .input:optional,
-.bluelib .input:optional,
-body input:optional::placeholder,
-.bluelib input:optional::placeholder,
-body select:optional::placeholder,
-.bluelib select:optional::placeholder,
-body .input:optional::placeholder,
-.bluelib .input:optional::placeholder {
-  font-style: italic;
-}
-body input:invalid:not(:placeholder-shown),
-.bluelib input:invalid:not(:placeholder-shown),
-body select:invalid:not(:placeholder-shown),
-.bluelib select:invalid:not(:placeholder-shown),
-body .input:invalid:not(:placeholder-shown),
-.bluelib .input:invalid:not(:placeholder-shown) {
-  --bluelib-color-r: 255;
-  --bluelib-color-g: 125;
-  --bluelib-color-b: 125;
-}
-body input:hover,
-.bluelib input:hover,
-body select:hover,
-.bluelib select:hover,
-body .input:hover,
-.bluelib .input:hover,
-body input:focus,
-.bluelib input:focus,
-body select:focus,
-.bluelib select:focus,
-body .input:focus,
-.bluelib .input:focus {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.6);
-  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
-}
-body input:hover::placeholder,
-.bluelib input:hover::placeholder,
-body select:hover::placeholder,
-.bluelib select:hover::placeholder,
-body .input:hover::placeholder,
-.bluelib .input:hover::placeholder,
-body input:focus::placeholder,
-.bluelib input:focus::placeholder,
-body select:focus::placeholder,
-.bluelib select:focus::placeholder,
-body .input:focus::placeholder,
-.bluelib .input:focus::placeholder {
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7);
-}
-body input[disabled],
-.bluelib input[disabled],
-body select[disabled],
-.bluelib select[disabled],
-body .input[disabled],
-.bluelib .input[disabled],
-body input .status-disabled,
-.bluelib input .status-disabled,
-body select .status-disabled,
-.bluelib select .status-disabled,
-body .input .status-disabled,
-.bluelib .input .status-disabled {
-  border-style: dashed;
-}
-body input[disabled]:hover,
-.bluelib input[disabled]:hover,
-body select[disabled]:hover,
-.bluelib select[disabled]:hover,
-body .input[disabled]:hover,
-.bluelib .input[disabled]:hover,
-body input .status-disabled:hover,
-.bluelib input .status-disabled:hover,
-body select .status-disabled:hover,
-.bluelib select .status-disabled:hover,
-body .input .status-disabled:hover,
-.bluelib .input .status-disabled:hover,
-body input[disabled]:focus,
-.bluelib input[disabled]:focus,
-body select[disabled]:focus,
-.bluelib select[disabled]:focus,
-body .input[disabled]:focus,
-.bluelib .input[disabled]:focus,
-body input .status-disabled:focus,
-.bluelib input .status-disabled:focus,
-body select .status-disabled:focus,
-.bluelib select .status-disabled:focus,
-body .input .status-disabled:focus,
-.bluelib .input .status-disabled:focus {
-  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
-}
-body input[disabled]:hover::placeholder,
-.bluelib input[disabled]:hover::placeholder,
-body select[disabled]:hover::placeholder,
-.bluelib select[disabled]:hover::placeholder,
-body .input[disabled]:hover::placeholder,
-.bluelib .input[disabled]:hover::placeholder,
-body input .status-disabled:hover::placeholder,
-.bluelib input .status-disabled:hover::placeholder,
-body select .status-disabled:hover::placeholder,
-.bluelib select .status-disabled:hover::placeholder,
-body .input .status-disabled:hover::placeholder,
-.bluelib .input .status-disabled:hover::placeholder,
-body input[disabled]:focus::placeholder,
-.bluelib input[disabled]:focus::placeholder,
-body select[disabled]:focus::placeholder,
-.bluelib select[disabled]:focus::placeholder,
-body .input[disabled]:focus::placeholder,
-.bluelib .input[disabled]:focus::placeholder,
-body input .status-disabled:focus::placeholder,
-.bluelib input .status-disabled:focus::placeholder,
-body select .status-disabled:focus::placeholder,
-.bluelib select .status-disabled:focus::placeholder,
-body .input .status-disabled:focus::placeholder,
-.bluelib .input .status-disabled:focus::placeholder {
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.4);
-}
-body .input-field,
-.bluelib .input-field,
-body input[type="color"],
-.bluelib input[type="color"],
-body input[type="date"],
-.bluelib input[type="date"],
-body input[type="datetime-local"],
-.bluelib input[type="datetime-local"],
-body input[type="email"],
-.bluelib input[type="email"],
-body input[type="file"],
-.bluelib input[type="file"],
-body input[type="image"],
-.bluelib input[type="image"],
-body input[type="month"],
-.bluelib input[type="month"],
-body input[type="number"],
-.bluelib input[type="number"],
-body input[type="password"],
-.bluelib input[type="password"],
-body input[type="search"],
-.bluelib input[type="search"],
-body input[type="tel"],
-.bluelib input[type="tel"],
-body input[type="text"],
-.bluelib input[type="text"],
-body input[type="time"],
-.bluelib input[type="time"],
-body input[type="url"],
-.bluelib input[type="url"],
-body input[type="week"],
-.bluelib input[type="week"] {
-  cursor: text;
-  border-width: 0 0 2px 0;
-  border-radius: 4px 4px 0 0;
-  padding: 4px 6px;
-}
-body select:not([multiple]),
-.bluelib select:not([multiple]),
-body .input-select,
-.bluelib .input-select,
-body select[multiple],
-.bluelib select[multiple],
-body .input-multiselect,
-.bluelib .input-multiselect {
-  padding: 4px 2px;
-}
-body option,
-.bluelib option,
-body .input-select-option,
-.bluelib .input-select-option,
-body option,
-.bluelib option,
-body .input-multiselect-option,
-.bluelib .input-multiselect-option {
-  font-weight: normal;
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  padding: 4px 4px;
-}
-body optgroup,
-.bluelib optgroup,
-body .input-select-optgroup,
-.bluelib .input-select-optgroup,
-body optgroup,
-.bluelib optgroup,
-body .input-multiselect-optgroup,
-.bluelib .input-multiselect-optgroup {
-  font-weight: bold;
-  color: #ffffff;
-  padding: 4px 4px;
-}
-body optgroup option,
-.bluelib optgroup option,
-body .input-select-optgroup option,
-.bluelib .input-select-optgroup option,
-body optgroup option,
-.bluelib optgroup option,
-body .input-multiselect-optgroup option,
-.bluelib .input-multiselect-optgroup option,
-body optgroup .input-select-option,
-.bluelib optgroup .input-select-option,
-body .input-select-optgroup .input-select-option,
-.bluelib .input-select-optgroup .input-select-option,
-body optgroup .input-select-option,
-.bluelib optgroup .input-select-option,
-body .input-multiselect-optgroup .input-select-option,
-.bluelib .input-multiselect-optgroup .input-select-option,
-body optgroup option,
-.bluelib optgroup option,
-body .input-select-optgroup option,
-.bluelib .input-select-optgroup option,
-body optgroup option,
-.bluelib optgroup option,
-body .input-multiselect-optgroup option,
-.bluelib .input-multiselect-optgroup option,
-body optgroup .input-multiselect-option,
-.bluelib optgroup .input-multiselect-option,
-body .input-select-optgroup .input-multiselect-option,
-.bluelib .input-select-optgroup .input-multiselect-option,
-body optgroup .input-multiselect-option,
-.bluelib optgroup .input-multiselect-option,
-body .input-multiselect-optgroup .input-multiselect-option,
-.bluelib .input-multiselect-optgroup .input-multiselect-option {
-  padding: 4px 20px;
-}
-body optgroup option::before,
-.bluelib optgroup option::before,
-body .input-select-optgroup option::before,
-.bluelib .input-select-optgroup option::before,
-body optgroup option::before,
-.bluelib optgroup option::before,
-body .input-multiselect-optgroup option::before,
-.bluelib .input-multiselect-optgroup option::before,
-body optgroup .input-select-option::before,
-.bluelib optgroup .input-select-option::before,
-body .input-select-optgroup .input-select-option::before,
-.bluelib .input-select-optgroup .input-select-option::before,
-body optgroup .input-select-option::before,
-.bluelib optgroup .input-select-option::before,
-body .input-multiselect-optgroup .input-select-option::before,
-.bluelib .input-multiselect-optgroup .input-select-option::before,
-body optgroup option::before,
-.bluelib optgroup option::before,
-body .input-select-optgroup option::before,
-.bluelib .input-select-optgroup option::before,
-body optgroup option::before,
-.bluelib optgroup option::before,
-body .input-multiselect-optgroup option::before,
-.bluelib .input-multiselect-optgroup option::before,
-body optgroup .input-multiselect-option::before,
-.bluelib optgroup .input-multiselect-option::before,
-body .input-select-optgroup .input-multiselect-option::before,
-.bluelib .input-select-optgroup .input-multiselect-option::before,
-body optgroup .input-multiselect-option::before,
-.bluelib optgroup .input-multiselect-option::before,
-body .input-multiselect-optgroup .input-multiselect-option::before,
-.bluelib .input-multiselect-optgroup .input-multiselect-option::before {
-  content: "";
-}
-body optgroup,
-.bluelib optgroup,
-body .input-select-optgroup,
-.bluelib .input-select-optgroup,
-body option,
-.bluelib option,
-body .input-select-option,
-.bluelib .input-select-option,
-body optgroup,
-.bluelib optgroup,
-body .input-multiselect-optgroup,
-.bluelib .input-multiselect-optgroup,
-body option,
-.bluelib option,
-body .input-multiselect-option,
-.bluelib .input-multiselect-option {
-  font-family: inherit;
-  font-size: inherit;
-  font-style: inherit;
-}
-body select:not([multiple]),
-.bluelib select:not([multiple]),
-body .input-select,
-.bluelib .input-select {
-  cursor: context-menu;
-  border-width: 0 0 2px 0;
-  border-radius: 4px 4px 0 0;
-}
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  body select:not([multiple]) option,
-  .bluelib select:not([multiple]) option,
-  body .input-select option,
-  .bluelib .input-select option,
-  body select:not([multiple]) .input-select-option,
-  .bluelib select:not([multiple]) .input-select-option,
-  body .input-select .input-select-option,
-  .bluelib .input-select .input-select-option,
-  body select:not([multiple]) optgroup,
-  .bluelib select:not([multiple]) optgroup,
-  body .input-select optgroup,
-  .bluelib .input-select optgroup,
-  body select:not([multiple]) .input-select-optgroup,
-  .bluelib select:not([multiple]) .input-select-optgroup,
-  body .input-select .input-select-optgroup,
-  .bluelib .input-select .input-select-optgroup {
-    background-color: #0d193b;
-  }
-}
-body select[multiple],
-.bluelib select[multiple],
-body .input-multiselect,
-.bluelib .input-multiselect {
-  cursor: vertical-text;
-  border-width: 0 0 0 2px;
-  border-radius: 0 4px 4px 0;
 }
 body .element-title,
 .bluelib .element-title,
