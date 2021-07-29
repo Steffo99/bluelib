@@ -311,10 +311,14 @@
             font-style: italic;
         }
 
-        // If their contents fail validation, they should be recolored red
-        &:invalid:not(:placeholder-shown) {
-            .bluelib-color(@hex-red);
-        }
+        // Color the elements based on validation
+        // Temporarily disabled due to some browser quirks
+        // &:invalid {
+        //     .bluelib-color(@hex-red);
+        // }
+        // &:valid {
+        //     .bluelib-color(@hex-lime)
+        // }
 
         // If the browser wants the focus to be more appearent, don't draw an ugly focus ring and let every element define a better way
         &:focus-visible {
@@ -427,6 +431,72 @@
         }
     }
 
+    @{input-checkbox}, @{input-radio} {
+        // Disable the default browser style
+        appearance: none;
+
+        // Make the element feel clickable
+        cursor: pointer;
+
+        // Set a fixed size
+        width: 24px;
+        height: 24px;
+
+        // Override the default border width
+        border-width: 2px;
+
+        // Prepare the element to display something inside
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            // Force the creation of a pseudo-element inside
+            display: block;
+            content: "";
+
+            width: 14px;
+            height: 14px;
+        }
+
+        // If the element is checked, display it
+        &:checked::before {
+            background-color: @b9;
+        }
+
+        &:hover:checked::before {
+            background-color: @bB;
+        }
+
+        &:focus:checked::before {
+            background-color: @bD;
+        }
+
+        &:active:checked::before {
+            background-color: @bD;
+        }
+    }
+
+    // Checkbox buttons denote that multiple options can be selected
+    @{input-checkbox} {
+        // Checkboxes should be square
+        border-radius: 4px;
+
+        &::before {
+            border-radius: 2px;
+        }
+    }
+
+    // Radio buttons denote that only an option can be selected
+    @{input-radio} {
+        // Radios should be round
+        border-radius: 100%;
+
+        &::before {
+            border-radius: 100%;
+        }
+    }
+
     /// ===== Forms =====
     /// Forms are containers where interactable elements are contained.
     /// Every interactable is split in two parts: a label on the left and the control on the right.
@@ -456,7 +526,13 @@
             // They should be right-aligned
             justify-self: end;
             text-align: right;
+
+            // Give the labels the accent color
+            .bluelib-color(@hex-accent);
+            // And make them slightly bold
+            font-weight: 500;
         }
+
 
         @{form-input} {
             // Inputs are on the right column of the grid
@@ -464,6 +540,38 @@
             // They should occupy all the available space
             justify-self: stretch;
             width: 100%;
+        }
+
+        // Groups are similar to form-inputs, but may contain multiple inputs inside them
+        @{form-group} {
+            grid-column: 2;
+
+            display: flex;
+            gap: 8px 16px;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+
+            background-color: @b0;
+            padding: 6px;
+            border-radius: 4px;
+
+            @{form-group-label} {
+                display: flex;
+                gap: 6px;
+                justify-content: center;
+                align-items: center;
+
+                // Align text to the left
+                text-align: left;
+            }
+
+            @{form-group-row} {
+                flex-basis: 100%;
+
+                justify-content: start;
+            }
         }
 
         // An element filling a whole row of a form

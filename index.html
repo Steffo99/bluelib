@@ -381,22 +381,17 @@
                     <h3>
                         Inputs
                     </h3>
-                    <p>
-                        Bluelib allows for the easy creation of forms:
-                    </p>
                     <form>
                         <label for="input-text">Text</label>
                         <input id="input-text" type="text" placeholder="All fields have a customizable placeholder" required/>
                         <label for="input-password">Password</label>
                         <input id="input-password" type="password" placeholder="Field type determines how input is displayed" required/>
-                        <label for="input-email">Email</label>
-                        <input id="input-email" type="email" placeholder="Fields where the input is invalid are colored red"/>
                         <label for="input-phone">Phone</label>
                         <input id="input-phone" type="tel" placeholder="Optional fields have italic text"/>
-                        <label for="input-disabled">Fax</label>
-                        <input id="input-disabled" type="text" placeholder="Disabled fields have a dashed underline" disabled required/>
-                        <label for="input-select">Shirt size</label>
-                        <select id="input-select">
+                        <label for="input-fax">Fax</label>
+                        <input id="input-fax" type="text" placeholder="Disabled fields have a dashed underline" disabled required/>
+                        <label for="input-size">Shirt size</label>
+                        <select id="input-size" required>
                             <optgroup label="Smaller">
                                 <option>XXS</option>
                                 <option>XS</option>
@@ -409,8 +404,8 @@
                                 <option>XXL</option>
                             </optgroup>
                         </select>
-                        <label for="input-multiple">Colors</label>
-                        <select id="input-multiple" multiple>
+                        <label for="input-colors">Colors</label>
+                        <select id="input-colors" multiple required>
                             <option>Red</option>
                             <option>Yellow</option>
                             <option>Green</option>
@@ -421,8 +416,93 @@
                             </optgroup>
                         </select>
                         <div class="form-row">
-                            <input id="input-reset" type="reset" value="Reset"/>
-                            <input id="input-submit" type="submit" value="Submit"/>
+                            <input id="input-reset-1" type="reset" value="Reset"/>
+                            <input id="input-submit-1" type="submit" value="Submit"/>
+                        </div>
+                    </form>
+                </section>
+                <section>
+                    <h3>
+                        Groups
+                    </h3>
+                    <p>
+                        Form inputs can be grouped together.
+                    </p>
+                    <form>
+                        <label for="input-mood">Mood</label>
+                        <div id="input-mood" class="form-group">
+                            <label>
+                                <input type="radio" name="input-mood" value="happy"/>
+                                Happy
+                            </label>
+                            <label>
+                                <input type="radio" name="input-mood" value="sad"/>
+                                Sad
+                            </label>
+                            <label>
+                                <input type="radio" name="input-mood" value="angry"/>
+                                Angry
+                            </label>
+                        </div>
+                    </form>
+                    <p>
+                        They automatically wrap if the inputs don't fit on a single line.
+                    </p>
+                    <form>
+                        <label for="input-pets">Pets</label>
+                        <div id="input-pets" class="form-group">
+                            <label>
+                                <input type="checkbox" name="input-pets" value="cats"/>
+                                Cats
+                            </label>
+                            <label>
+                                <input type="checkbox" name="input-pets" value="dogs"/>
+                                Dogs
+                            </label>
+                            <label>
+                                <input type="checkbox" name="input-pets" value="sneks"/>
+                                Sneks
+                            </label>
+                            <label>
+                                <input type="checkbox" name="input-pets" value="bunnies"/>
+                                Bunnies
+                            </label>
+                            <label>
+                                <input type="checkbox" name="input-pets" value="frogs"/>
+                                Frogs
+                            </label>
+                            <label>
+                                <input type="checkbox" name="input-pets" value="ants"/>
+                                Ants
+                            </label>
+                            <label>
+                                <input type="checkbox" name="input-pets" value="parrots"/>
+                                Parrots
+                            </label>
+                        </div>
+                    </form>
+                    <p>
+                        Labels can be made to fill the whole line, forcing a wrap.
+                    </p>
+                    <form>
+                        <label for="input-roman">Fav. roman numeral</label>
+                        <div id="input-roman" class="form-group">
+                            <label class="form-group-row">
+                                <input type="radio" name="input-roman" value="i" required/>
+                                I (1)
+                            </label>
+                            <label class="form-group-row">
+                                <input type="radio" name="input-roman" value="v" required/>
+                                V (5)
+                            </label>
+                            <label class="form-group-row">
+                                <input type="radio" name="input-roman" value="x" required/>
+                                X (10)
+                            </label>
+                            <label class="form-group-row">
+                                <input type="radio" name="input-roman" value="i" required/>
+                                I (1)
+                            </label>
                         </div>
                     </form>
                 </section>
