@@ -347,11 +347,6 @@
 .bluelib .input:optional::placeholder {
   font-style: italic;
 }
-.bluelib .input:invalid:not(:placeholder-shown) {
-  --bluelib-color-r: 255;
-  --bluelib-color-g: 125;
-  --bluelib-color-b: 125;
-}
 .bluelib .input:focus-visible {
   outline: none;
 }
@@ -419,6 +414,52 @@
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
 }
+.bluelib .input-checkbox,
+.bluelib .input-radio {
+  appearance: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border-width: 2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.bluelib .input-checkbox::before,
+.bluelib .input-radio::before {
+  display: block;
+  content: "";
+  width: 14px;
+  height: 14px;
+}
+.bluelib .input-checkbox:checked::before,
+.bluelib .input-radio:checked::before {
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.9);
+}
+.bluelib .input-checkbox:hover:checked::before,
+.bluelib .input-radio:hover:checked::before {
+  background-color: rgba(calc(var(--bluelib-color-r) + 10), calc(var(--bluelib-color-g) + 10), calc(var(--bluelib-color-b) + 10), 1);
+}
+.bluelib .input-checkbox:focus:checked::before,
+.bluelib .input-radio:focus:checked::before {
+  background-color: rgba(calc(var(--bluelib-color-r) + 30), calc(var(--bluelib-color-g) + 30), calc(var(--bluelib-color-b) + 30), 1);
+}
+.bluelib .input-checkbox:active:checked::before,
+.bluelib .input-radio:active:checked::before {
+  background-color: rgba(calc(var(--bluelib-color-r) + 30), calc(var(--bluelib-color-g) + 30), calc(var(--bluelib-color-b) + 30), 1);
+}
+.bluelib .input-checkbox {
+  border-radius: 4px;
+}
+.bluelib .input-checkbox::before {
+  border-radius: 2px;
+}
+.bluelib .input-radio {
+  border-radius: 100%;
+}
+.bluelib .input-radio::before {
+  border-radius: 100%;
+}
 .bluelib .form {
   display: grid;
   align-items: center;
@@ -430,11 +471,38 @@
   grid-column: 1;
   justify-self: end;
   text-align: right;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 255;
+  --bluelib-color-b: 255;
+  font-weight: 500;
 }
 .bluelib .form .form-input {
   grid-column: 2;
   justify-self: stretch;
   width: 100%;
+}
+.bluelib .form .form-group {
+  grid-column: 2;
+  display: flex;
+  gap: 8px 16px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
+  padding: 6px;
+  border-radius: 4px;
+}
+.bluelib .form .form-group .form-group-label {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+.bluelib .form .form-group .form-group-row {
+  flex-basis: 100%;
+  justify-content: start;
 }
 .bluelib .form .form-row {
   grid-column-start: 1;
