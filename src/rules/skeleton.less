@@ -3,6 +3,7 @@
 /// Elements outside the root won't be styled at all, allowing Bluelib's styling to be contained in components or modules of a website.
 
 @{bluelib} {
+    // Get
 
     // Set the background defined in the palette
     background-color: @hex-background;
@@ -12,12 +13,129 @@
     // By default, text should use the main font
     .font-text();
 
-    // Define the color macros used through all the stylesheet
-    .define-bluelib-color-macros();
+    /// ===== Macros =====
+    /// Less allows defining variables to reduce the amount of boilerplate code to write while defining the rules.
+    /// In Bluelib, these are called macros.
+
+    //<editor-fold desc="Rules: Macros">
+
+    @b0: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.025
+    );
+    @b1: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.100
+    );
+    @b2: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.200
+    );
+    @b3: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.300
+    );
+    @b4: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.400
+    );
+    @b5: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.500
+    );
+    @b6: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.600
+    );
+    @b7: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.700
+    );
+    @b8: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.800
+    );
+    @b9: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            0.900
+    );
+    @bA: rgba(
+            var(--bluelib-color-r),
+            var(--bluelib-color-g),
+            var(--bluelib-color-b),
+            1.000
+    );
+    @bB: rgba(
+            calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 10)),
+            calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 10)),
+            calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 10)),
+            1.000
+    );
+    @bC: rgba(
+            calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 20)),
+            calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 20)),
+            calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 20)),
+            1.000
+    );
+    @bD: rgba(
+            calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 30)),
+            calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 30)),
+            calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 30)),
+            1.000
+    );
+    @bE: rgba(
+            calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 40)),
+            calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 40)),
+            calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 40)),
+            1.000
+    );
+    @bF: rgba(
+            calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)),
+            calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)),
+            calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)),
+            1.000
+    );
+
+    @bL: rgba(
+            calc(255 * ((var(--bluelib-polarity / 2) * -1) + 0.5)),
+            calc(255 * ((var(--bluelib-polarity / 2) * -1) + 0.5)),
+            calc(255 * ((var(--bluelib-polarity / 2) * -1) + 0.5)),
+            1.000
+    );
+    @bT: rgba(
+            calc(255 * (var(--bluelib-polarity / 2) + 0.5)),
+            calc(255 * (var(--bluelib-polarity / 2) + 0.5)),
+            calc(255 * (var(--bluelib-polarity / 2) + 0.5)),
+            1.000
+    );
+
+    //</editor-fold>
 
     /// ===== All =====
     /// By default, browsers style elements with some weird rules.
     /// This is an attempt to correct them, and to implement some Bluelib magic.
+
+    //<editor-fold desc="Rules: All">
 
     &, @{all} {
 
@@ -33,10 +151,14 @@
 
     }
 
+    //</editor-fold>
+
     /// ===== Layouts =====
     /// Layouts arrange the content displayed inside the root.
     /// Layouts are the second element in the Bluelib hierarchy, immediately following the root.
     /// Ideally, a single layout should be used per page.
+
+    //<editor-fold desc="Rules: Layouts">
 
     // The base layout class.
     @{layout} {
@@ -118,10 +240,14 @@
         }
     }
 
+    //</editor-fold>
+
     /// ===== Panels =====
     /// Panels are the main sectioning elements available in Bluelib.
     /// Many instance of them should be present on the page!
     /// They should group small amounts of tightly related content, which can be understood more or less separately from the rest of the page.
+
+    //<editor-fold desc="Rules: Panels">
 
     // The base panel class.
     @{panel} {
@@ -168,8 +294,12 @@
         font-size: smaller;
     }
 
-    /// ===== Split =====
+    //</editor-fold>
+
+    /// ===== Splits =====
     /// A split is an element which splits everything contained inside in multiple columns of equal width.
+
+    //<editor-fold desc="Rules: Splits">
 
     @{split} {
         display: flex;
@@ -197,8 +327,12 @@
         flex-basis: 100%;
     }
 
+    //</editor-fold>
+
     /// ===== Separators =====
     /// Separators are horizontal lines separating elements.
+
+    //<editor-fold desc="Rules: Separators">
 
     @{separator} {
         border-width: 1px;
@@ -214,8 +348,12 @@
         border-color: @bA;
     }
 
+    //</editor-fold>
+
     /// ===== Images =====
     /// Images are changed to block elements and are automatically centered.
+
+    //<editor-fold desc="Rules: Images">
 
     @{image} {
         display: block;
@@ -236,8 +374,12 @@
         max-height: max(14.1vw, 25vh);
     }
 
+    //</editor-fold>
+
     /// ===== Status =====
-    /// Statuses are classes that can be applied to elements to indicate that special interactions are available.
+    /// Status are classes that can be applied to elements to indicate that special interactions are available.
+
+    //<editor-fold desc="Rules: Status">
 
     @{status-disabled} {
         opacity: 50%;
@@ -248,8 +390,12 @@
         }
     }
 
+    //</editor-fold>
+
     /// ===== Inputs =====
     /// Inputs are the interactable parts of a website.
+
+    //<editor-fold desc="Rules: Inputs">
 
     @{input} {
         // Disable the browser font override
@@ -499,6 +645,8 @@
         }
     }
 
+    //</editor-fold>
+
     /// ===== Forms =====
     /// Forms are containers where interactable elements are contained.
     /// Every interactable is split in two parts: a label on the left and the control on the right.
@@ -511,6 +659,8 @@
     ///  Country | Italy ↓
     ///
     ///      [Submit]
+
+    //<editor-fold desc="Rules: Forms">
 
     @{form} {
         display: grid;
@@ -592,6 +742,8 @@
             margin-bottom: 8px;
         }
     }
+
+    //</editor-fold>
 
     // --- Elements ---
 
