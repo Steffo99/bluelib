@@ -701,7 +701,7 @@ body .input-radio:hover,
 body .input:hover,
 .bluelib .input:hover {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.6);
-  color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 20)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 20)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 20)), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
 body .input-field:hover::placeholder,
@@ -823,7 +823,7 @@ body .input-radio:focus,
 body .input:focus,
 .bluelib .input:focus {
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
 }
 body .input-field:focus::placeholder,
@@ -1748,8 +1748,8 @@ body input[type="reset"]:active,
 .bluelib input[type="reset"]:active,
 body .input-button:active,
 .bluelib .input-button:active {
-  border-color: rgba(calc(var(--bluelib-color-r) + 20), calc(var(--bluelib-color-g) + 20), calc(var(--bluelib-color-b) + 20), 1);
-  color: rgba(calc(var(--bluelib-color-r) + 50), calc(var(--bluelib-color-g) + 50), calc(var(--bluelib-color-b) + 50), 1);
+  border-color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 20)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 20)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 20)), 1);
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)), 1);
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
 }
 body button [disabled]:active,
@@ -1820,7 +1820,7 @@ body input[type="radio"]:hover:checked::before,
 .bluelib input[type="radio"]:hover:checked::before,
 body .input-radio:hover:checked::before,
 .bluelib .input-radio:hover:checked::before {
-  background-color: rgba(calc(var(--bluelib-color-r) + 10), calc(var(--bluelib-color-g) + 10), calc(var(--bluelib-color-b) + 10), 1);
+  background-color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 10)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 10)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 10)), 1);
 }
 body input[type="checkbox"]:focus:checked::before,
 .bluelib input[type="checkbox"]:focus:checked::before,
@@ -1830,7 +1830,7 @@ body input[type="radio"]:focus:checked::before,
 .bluelib input[type="radio"]:focus:checked::before,
 body .input-radio:focus:checked::before,
 .bluelib .input-radio:focus:checked::before {
-  background-color: rgba(calc(var(--bluelib-color-r) + 30), calc(var(--bluelib-color-g) + 30), calc(var(--bluelib-color-b) + 30), 1);
+  background-color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 30)), 1);
 }
 body input[type="checkbox"]:active:checked::before,
 .bluelib input[type="checkbox"]:active:checked::before,
@@ -1840,7 +1840,7 @@ body input[type="radio"]:active:checked::before,
 .bluelib input[type="radio"]:active:checked::before,
 body .input-radio:active:checked::before,
 .bluelib .input-radio:active:checked::before {
-  background-color: rgba(calc(var(--bluelib-color-r) + 30), calc(var(--bluelib-color-g) + 30), calc(var(--bluelib-color-b) + 30), 1);
+  background-color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 30)), 1);
 }
 body input[type="checkbox"],
 .bluelib input[type="checkbox"],
