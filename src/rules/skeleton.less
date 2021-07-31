@@ -11,15 +11,21 @@
 
     //<editor-fold desc="Rules: Palette">
 
-    // The background color.
+    // The background color
     .set-var-rgb(bluelib-background; 255; 255; 255);
-    // The main text color.
+    // The main text color
     .set-var-rgb(bluelib-foreground; 24; 24; 24);
     // A contrasting color to make important text more visible
     .set-var-rgb(bluelib-accent; 24; 24; 24);
 
     // The color of links
     .set-var-rgb(bluelib-link; 0; 147; 147);
+    // The color of broken links
+    .set-var-rgb(bluelib-broken; 245; 111; 0);
+    // The color of visited links
+    .set-var-rgb(bluelib-visited; 9; 101; 156);
+    // The color of download links
+    .set-var-rgb(bluelib-download; 0; 164; 106);
 
     // Extra builtin colors
     .set-var-rgb(bluelib-red; 200; 0; 0);
@@ -69,6 +75,21 @@
         var(--bluelib-link-r),
         var(--bluelib-link-g),
         var(--bluelib-link-b)
+    );
+    @rgb-broken: rgb(
+        var(--bluelib-broken-r),
+        var(--bluelib-broken-g),
+        var(--bluelib-broken-b)
+    );
+    @rgb-visited: rgb(
+        var(--bluelib-visited-r),
+        var(--bluelib-visited-g),
+        var(--bluelib-visited-b)
+    );
+    @rgb-download: rgb(
+        var(--bluelib-download-r),
+        var(--bluelib-download-g),
+        var(--bluelib-download-b)
     );
 
     @rgb-red: rgb(
@@ -900,114 +921,148 @@
         .use-var-font(bluelib-title);
     }
 
-    // --- Elements ---
+    /// ===== Anchors =====
+    /// Anchors are clickable links to another place, such as a paragraph or a page.
 
-    @{element-list-item} {
-        margin: 10px 0;
-    }
-
-    @{element-anchor} {
-        .map-var-rgb(bluelib-color, bluelib-link);
-
+    @{anchor} {
         text-decoration-line: underline;
-        text-decoration-style: solid;
-        text-decoration-color: currentColor;
         text-decoration-thickness: 1px;
-
-        &:hover, &:focus {
-            color: @cF;
-        }
 
         &:focus-visible {
             text-decoration-thickness: 2px;
         }
 
+        &:hover, &:focus {
+            color: @cD;
+        }
+
         &:active {
-            color: @cL;
-        }
-
-        &@{status-disabled} {
-            text-decoration-style: dashed;
-
-            &:hover, &:focus, &:active {
-                color: @cA;
-            }
+            color: @cG;
         }
     }
 
-    // --- Alignment ---
+    @{anchor-broken} {
+        cursor: not-allowed;
 
-    @{align-left} {
-        text-align: left;
+        .map-var-rgb(bluelib-color, bluelib-broken);
+        text-decoration-style: dashed;
+
+        &:hover, &:focus, &:active {
+            color: @cA;
+        }
     }
 
-    @{align-center} {
-        text-align: center;
+    @{anchor-link} {
+        cursor: pointer;
+
+        .map-var-rgb(bluelib-color, bluelib-link);
+        text-decoration-style: solid;
+
+        &:visited {
+            .map-var-rgb(bluelib-color, bluelib-visited);
+        }
     }
 
-    @{align-right} {
-        text-align: right;
+    @{anchor-download} {
+        cursor: pointer;
+
+        .map-var-rgb(bluelib-color, bluelib-download);
+        text-decoration-style: solid;
     }
 
-    // --- Sizes ---
+    /// ===== Ruby =====
+    /// Ruby text is used in various languages to add annotations to text.
+    /// Bluelib makes the annotations slightly transparent to differentiate them from the rest of the text.
+    /// See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby
 
-    @{size-xxl} {
+    @{ruby} {
         font-size: xx-large;
     }
 
-    @{size-xl} {
-        font-size: x-large;
+    @{ruby-parenthesis} {
+        color: @c1;
     }
 
-    @{size-l} {
-        font-size: large;
+    @{ruby-text} {
+        color: @c6;
     }
 
-    @{size-m} {
-        font-size: medium;
+    /// ===== Semantics =====
+    /// Semantics are special font effects applied to text with a certain meaning.
+
+    @{semantic-abbr} {
+
     }
 
-    @{size-s} {
-        font-size: small;
+    @{semantic-b} {
+
     }
 
-    @{size-xs} {
-        font-size: x-small;
+    @{semantic-cite} {
+
     }
 
-    @{size-xxs} {
-        font-size: xx-small;
+    @{semantic-code} {
+
     }
 
-    // --- Styles ---
+    @{semantic-data} {
 
-    @{style-bold} {
-        font-weight: bold;
-        .map-var-rgb(bluelib-color, bluelib-accent);
     }
 
-    @{style-italic} {
-        font-style: italic;
+    @{semantic-dfn} {
+
     }
 
-    @{style-underline} {
-        text-decoration-line: underline;
+    @{semantic-em} {
+
     }
 
-    @{style-strike} {
-        text-decoration-line: line-through;
+    @{semantic-i} {
+
     }
 
-    @{style-monospace} {
-        .use-var-font(bluelib-code);
+    @{semantic-kbd} {
+
     }
 
-    @{style-keyboard} {
-        .use-var-font(bluelib-code);
-        padding: 2px 4px;
-        border: 2px outset;
-        border-radius: 4px;
+    @{semantic-mark} {
+
     }
+
+    @{semantic-q} {
+
+    }
+
+    @{semantic-s} {
+
+    }
+
+    @{semantic-samp} {
+
+    }
+
+    @{semantic-small} {
+
+    }
+
+    @{semantic-strong} {
+
+    }
+
+    @{semantic-time} {
+
+    }
+
+    @{semantic-u} {
+
+    }
+
+    @{semantic-var} {
+
+    }
+
+
 
     // --- Colors ---
 

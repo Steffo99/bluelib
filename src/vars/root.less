@@ -49,25 +49,47 @@
 
 @heading: ~"h1, h2, h3, h4, h5, h6, .heading";
 
-@element-paragraph: ~".element-paragraph, p";
-@element-list-item: ~".element-list-item, li";
-@element-anchor: ~".element-anchor, a";
-@align-left: ~".align-left";
-@align-center: ~".align-center";
-@align-right: ~".align-right";
-@size-xxl: ~".size-xxl, h1";
-@size-xl: ~".size-xl, h2";
-@size-l: ~".size-l, h3";
-@size-m: ~".size-m, h4";
-@size-s: ~".size-s, h5";
-@size-xs: ~".size-xs, h6";
-@size-xxs: ~".size-xxs";
-@style-bold: ~".style-bold, b, strong";
-@style-italic: ~".style-italic, i, em";
-@style-underline: ~".style-underline, u";
+@anchor: ~"a, .anchor";
+@anchor-broken: ~'a:not([href]), a[href=""], .anchor-broken';
+@anchor-link: ~'a[href^="http://"], a[href^="https://"], .anchor-link';
+@anchor-download: ~'a[download], a[href]:not([href^="http://"]):not([href^="https://"]), .anchor-download';
+
+@ruby: ~"ruby, .ruby";
+@ruby-parenthesis: ~"rp, .ruby-parenthesis";
+@ruby-text: ~"rt, .ruby-text";
+
+@semantic-abbr: ~"abbr, .semantic-abbr";
+@semantic-b: ~"b, .semantic-b";
+@semantic-cite: ~"cite, .semantic-cite";
+@semantic-code: ~"code, .semantic-code";
+@semantic-data: ~"data, .semantic-data";
+@semantic-dfn: ~"dfn, .semantic-dfn";
+@semantic-em: ~"em, .semantic-em";
+@semantic-i: ~"i, .semantic-i";
+@semantic-kbd: ~"kbd, .semantic-kbd";
+@semantic-mark: ~"mark, .semantic-mark";
+@semantic-q: ~"q, .semantic-q";
+@semantic-s: ~"s, .semantic-s";
+@semantic-samp: ~"samp, .semantic-samp";
+@semantic-small: ~"small, .semantic-small";
+@semantic-strong: ~"strong, .semantic-strong";
+@semantic-time: ~"time, .semantic-time";
+@semantic-u: ~"u, .semantic-u";
+@semantic-var: ~"var, .semantic-var";
+
+
+@style-b: ~"b, .style-bringattention";
+@style-strong: ~"strong, .style-strong";
+@style-emphasis: ~".style-italic, i, em";
+@style-annotated: ~".style-underline, u";
 @style-strike: ~".style-strike, strike, s, del";
 @style-monospace: ~".style-monospace, code";
 @style-keyboard: ~".style-keyboard, kbd";
+
+@element-paragraph: ~".element-paragraph, p";
+@element-list-item: ~".element-list-item, li";
+
+
 @color-red: ~".color-red";
 @color-orange: ~".color-orange";
 @color-yellow: ~".color-yellow";

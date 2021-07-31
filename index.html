@@ -518,18 +518,78 @@
                         Headings
                     </h3>
                     <p>
-                        Bluelib (and HTML) supports up to 6 levels of headings:
+                        Bluelib styles up to 6 levels of headings:
                     </p>
-                    <section>
-                        <h1>Level-1</h1>
-                        <h2>Level-2</h2>
-                        <h3>Level-3</h3>
-                        <h4>Level-4</h4>
-                        <h5>Level-5</h5>
-                        <h6>Level-6</h6>
-                    </section>
+                    <h1>Level-1</h1>
+                    <h2>Level-2</h2>
+                    <h3>Level-3</h3>
+                    <h4>Level-4</h4>
+                    <h5>Level-5</h5>
+                    <h6>Level-6</h6>
                     <p>
                         Generally, panels look nicer if they start with a level-3 heading, but you may use whichever you want, as Bluelib will automatically handle the margin.
+                    </p>
+                </section>
+                <section>
+                    <h3>
+                        Anchors
+                    </h3>
+                    <p>
+                        Bluelib styles anchors, clickable links to different places:
+                    </p>
+                    <blockquote>
+                        This is an <a href="https://example.org" target="_blank">example</a>.
+                    </blockquote>
+                    <p>
+                        Visited anchors will have a different color.
+                    </p>
+                    <blockquote>
+                        Take me to <a href="https://wikipedia.org" target="_blank">Wikipedia</a>!
+                    </blockquote>
+                    <p>
+                        Anchors with no destination have a different style, so that the page author can notice and fix them.
+                    </p>
+                    <blockquote>
+                        <a>This link</a> leads nowhere.
+                    </blockquote>
+                    <p>
+                        Anchors which start a download or open an external program will have a different style:
+                    </p>
+                    <blockquote>
+                        Download <a href="magnet:?xt=urn:btih:377852690518c09acdcdd970068a5eaa47dd0a9d&dn=gimp-2.10.24-setup-3.exe&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&tr=https%3a%2f%2fashrise.com%3a443%2fphoenix%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&ws=https%3a%2f%2fartfiles.org%2fgimp.org%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fdownload.gimp.org%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.acc.umu.se%2fpub%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.cc.uoc.gr%2fmirrors%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.fau.de%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.gwdg.de%2fpub%2fmisc%2fgrafik%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.icm.edu.pl%2fpub%2fgraphics%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.lysator.liu.se%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.snt.utwente.nl%2fpub%2fsoftware%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fgimp.ip-connect.info%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirror.jaleco.com%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirror.klaus-uwe.me%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirror.umd.edu%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirrors.dotsrc.org%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirrors.syringanetworks.net%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirrors.ukfast.co.uk%2fsites%2fgimp.org%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirrors.xmission.com%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fwww.mirrorservice.org%2fsites%2fftp.gimp.org%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fwww.nic.funet.fi%2fpub%2fmirrors%2fftp.gimp.org%2fv2.10%2fwindows%2f">
+                            GIMP 2.10.24
+                        </a>
+                    </blockquote>
+                </section>
+            </div>
+            <h2>
+                Annotations
+            </h2>
+            <div class="split">
+                <section>
+                    <h3>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby">Ruby text</a>
+                    </h3>
+                    <p>
+                        Ruby text is made slightly transparent, to make the main text more evident.
+                    </p>
+                    <p>
+                        <ruby>
+                            Mo <rp>/</rp><rt>ˈmɒ</rt><rp>/</rp>
+                            de <rp>/</rp><rt>dɪ</rt><rp>/</rp>
+                            na <rp>/</rp><rt>nə</rt><rp>/</rp>
+                        </ruby>
+                    </p>
+                    <p>
+                        <ruby>
+                            漢 <rp>(</rp><rt>kan</rt><rp>)</rp>
+                            字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+                        </ruby>
+                    </p>
+                    <p>
+                        <ruby>
+                            明日 <rp>(</rp><rt>ashita</rt><rp>)</rp>
+                        </ruby>
                     </p>
                 </section>
             </div>

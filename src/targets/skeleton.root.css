@@ -13,6 +13,15 @@ body,
   --bluelib-link-r: 0;
   --bluelib-link-g: 147;
   --bluelib-link-b: 147;
+  --bluelib-broken-r: 245;
+  --bluelib-broken-g: 111;
+  --bluelib-broken-b: 0;
+  --bluelib-visited-r: 9;
+  --bluelib-visited-g: 101;
+  --bluelib-visited-b: 156;
+  --bluelib-download-r: 0;
+  --bluelib-download-g: 164;
+  --bluelib-download-b: 106;
   --bluelib-red-r: 200;
   --bluelib-red-g: 0;
   --bluelib-red-b: 0;
@@ -1998,185 +2007,118 @@ body .heading,
   font-family: var(--bluelib-title-family);
   font-weight: var(--bluelib-title-weight);
 }
-body .element-list-item,
-.bluelib .element-list-item,
-body li,
-.bluelib li {
-  margin: 10px 0;
-}
-body .element-anchor,
-.bluelib .element-anchor,
 body a,
-.bluelib a {
+.bluelib a,
+body .anchor,
+.bluelib .anchor {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+}
+body a:focus-visible,
+.bluelib a:focus-visible,
+body .anchor:focus-visible,
+.bluelib .anchor:focus-visible {
+  text-decoration-thickness: 2px;
+}
+body a:hover,
+.bluelib a:hover,
+body .anchor:hover,
+.bluelib .anchor:hover,
+body a:focus,
+.bluelib a:focus,
+body .anchor:focus,
+.bluelib .anchor:focus {
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 30)), 1);
+}
+body a:active,
+.bluelib a:active,
+body .anchor:active,
+.bluelib .anchor:active {
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 60)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 60)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 60)), 1);
+}
+body a:not([href]),
+.bluelib a:not([href]),
+body a[href=""],
+.bluelib a[href=""],
+body .anchor-broken,
+.bluelib .anchor-broken {
+  cursor: not-allowed;
+  --bluelib-color-r: var(--bluelib-broken-r);
+  --bluelib-color-g: var(--bluelib-broken-g);
+  --bluelib-color-b: var(--bluelib-broken-b);
+  text-decoration-style: dashed;
+}
+body a:not([href]):hover,
+.bluelib a:not([href]):hover,
+body a[href=""]:hover,
+.bluelib a[href=""]:hover,
+body .anchor-broken:hover,
+.bluelib .anchor-broken:hover,
+body a:not([href]):focus,
+.bluelib a:not([href]):focus,
+body a[href=""]:focus,
+.bluelib a[href=""]:focus,
+body .anchor-broken:focus,
+.bluelib .anchor-broken:focus,
+body a:not([href]):active,
+.bluelib a:not([href]):active,
+body a[href=""]:active,
+.bluelib a[href=""]:active,
+body .anchor-broken:active,
+.bluelib .anchor-broken:active {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+}
+body a[href^="http://"],
+.bluelib a[href^="http://"],
+body a[href^="https://"],
+.bluelib a[href^="https://"],
+body .anchor-link,
+.bluelib .anchor-link {
+  cursor: pointer;
   --bluelib-color-r: var(--bluelib-link-r);
   --bluelib-color-g: var(--bluelib-link-g);
   --bluelib-color-b: var(--bluelib-link-b);
-  text-decoration-line: underline;
   text-decoration-style: solid;
-  text-decoration-color: currentColor;
-  text-decoration-thickness: 1px;
 }
-body .element-anchor:hover,
-.bluelib .element-anchor:hover,
-body a:hover,
-.bluelib a:hover,
-body .element-anchor:focus,
-.bluelib .element-anchor:focus,
-body a:focus,
-.bluelib a:focus {
-  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)), 1);
+body a[href^="http://"]:visited,
+.bluelib a[href^="http://"]:visited,
+body a[href^="https://"]:visited,
+.bluelib a[href^="https://"]:visited,
+body .anchor-link:visited,
+.bluelib .anchor-link:visited {
+  --bluelib-color-r: var(--bluelib-visited-r);
+  --bluelib-color-g: var(--bluelib-visited-g);
+  --bluelib-color-b: var(--bluelib-visited-b);
 }
-body .element-anchor:focus-visible,
-.bluelib .element-anchor:focus-visible,
-body a:focus-visible,
-.bluelib a:focus-visible {
-  text-decoration-thickness: 2px;
+body a[download],
+.bluelib a[download],
+body a[href]:not([href^="http://"]):not([href^="https://"]),
+.bluelib a[href]:not([href^="http://"]):not([href^="https://"]),
+body .anchor-download,
+.bluelib .anchor-download {
+  cursor: pointer;
+  --bluelib-color-r: var(--bluelib-download-r);
+  --bluelib-color-g: var(--bluelib-download-g);
+  --bluelib-color-b: var(--bluelib-download-b);
+  text-decoration-style: solid;
 }
-body .element-anchor:active,
-.bluelib .element-anchor:active,
-body a:active,
-.bluelib a:active {
-  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 110)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 110)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 110)), 1);
-}
-body .element-anchor[disabled],
-.bluelib .element-anchor[disabled],
-body a[disabled],
-.bluelib a[disabled],
-body .element-anchor .status-disabled,
-.bluelib .element-anchor .status-disabled,
-body a .status-disabled,
-.bluelib a .status-disabled {
-  text-decoration-style: dashed;
-}
-body .element-anchor[disabled]:hover,
-.bluelib .element-anchor[disabled]:hover,
-body a[disabled]:hover,
-.bluelib a[disabled]:hover,
-body .element-anchor .status-disabled:hover,
-.bluelib .element-anchor .status-disabled:hover,
-body a .status-disabled:hover,
-.bluelib a .status-disabled:hover,
-body .element-anchor[disabled]:focus,
-.bluelib .element-anchor[disabled]:focus,
-body a[disabled]:focus,
-.bluelib a[disabled]:focus,
-body .element-anchor .status-disabled:focus,
-.bluelib .element-anchor .status-disabled:focus,
-body a .status-disabled:focus,
-.bluelib a .status-disabled:focus,
-body .element-anchor[disabled]:active,
-.bluelib .element-anchor[disabled]:active,
-body a[disabled]:active,
-.bluelib a[disabled]:active,
-body .element-anchor .status-disabled:active,
-.bluelib .element-anchor .status-disabled:active,
-body a .status-disabled:active,
-.bluelib a .status-disabled:active {
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-}
-body .align-left,
-.bluelib .align-left {
-  text-align: left;
-}
-body .align-center,
-.bluelib .align-center {
-  text-align: center;
-}
-body .align-right,
-.bluelib .align-right {
-  text-align: right;
-}
-body .size-xxl,
-.bluelib .size-xxl,
-body h1,
-.bluelib h1 {
+body ruby,
+.bluelib ruby,
+body .ruby,
+.bluelib .ruby {
   font-size: xx-large;
 }
-body .size-xl,
-.bluelib .size-xl,
-body h2,
-.bluelib h2 {
-  font-size: x-large;
+body rp,
+.bluelib rp,
+body .ruby-parenthesis,
+.bluelib .ruby-parenthesis {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
-body .size-l,
-.bluelib .size-l,
-body h3,
-.bluelib h3 {
-  font-size: large;
-}
-body .size-m,
-.bluelib .size-m,
-body h4,
-.bluelib h4 {
-  font-size: medium;
-}
-body .size-s,
-.bluelib .size-s,
-body h5,
-.bluelib h5 {
-  font-size: small;
-}
-body .size-xs,
-.bluelib .size-xs,
-body h6,
-.bluelib h6 {
-  font-size: x-small;
-}
-body .size-xxs,
-.bluelib .size-xxs {
-  font-size: xx-small;
-}
-body .style-bold,
-.bluelib .style-bold,
-body b,
-.bluelib b,
-body strong,
-.bluelib strong {
-  font-weight: bold;
-  --bluelib-color-r: var(--bluelib-accent-r);
-  --bluelib-color-g: var(--bluelib-accent-g);
-  --bluelib-color-b: var(--bluelib-accent-b);
-}
-body .style-italic,
-.bluelib .style-italic,
-body i,
-.bluelib i,
-body em,
-.bluelib em {
-  font-style: italic;
-}
-body .style-underline,
-.bluelib .style-underline,
-body u,
-.bluelib u {
-  text-decoration-line: underline;
-}
-body .style-strike,
-.bluelib .style-strike,
-body strike,
-.bluelib strike,
-body s,
-.bluelib s,
-body del,
-.bluelib del {
-  text-decoration-line: line-through;
-}
-body .style-monospace,
-.bluelib .style-monospace,
-body code,
-.bluelib code {
-  font-family: var(--bluelib-code-family);
-  font-weight: var(--bluelib-code-weight);
-}
-body .style-keyboard,
-.bluelib .style-keyboard,
-body kbd,
-.bluelib kbd {
-  font-family: var(--bluelib-code-family);
-  font-weight: var(--bluelib-code-weight);
-  padding: 2px 4px;
-  border: 2px outset;
-  border-radius: 4px;
+body rt,
+.bluelib rt,
+body .ruby-text,
+.bluelib .ruby-text {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.6);
 }
 body .color-red,
 .bluelib .color-red {
