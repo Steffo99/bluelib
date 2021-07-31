@@ -83,6 +83,7 @@
 }
 .bluelib .layout-threecol {
   padding: 4px;
+  grid-column-gap: 8px;
 }
 @media screen and (min-width: 1281px) {
   .bluelib .layout-threecol {
