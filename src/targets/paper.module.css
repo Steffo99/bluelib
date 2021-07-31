@@ -11,6 +11,15 @@
   --bluelib-link-r: 0;
   --bluelib-link-g: 147;
   --bluelib-link-b: 147;
+  --bluelib-broken-r: 245;
+  --bluelib-broken-g: 111;
+  --bluelib-broken-b: 0;
+  --bluelib-visited-r: 9;
+  --bluelib-visited-g: 101;
+  --bluelib-visited-b: 156;
+  --bluelib-download-r: 0;
+  --bluelib-download-g: 164;
+  --bluelib-download-b: 106;
   --bluelib-red-r: 200;
   --bluelib-red-g: 0;
   --bluelib-red-b: 0;

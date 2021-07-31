@@ -12,6 +12,15 @@
   --bluelib-link-r: 0;
   --bluelib-link-g: 147;
   --bluelib-link-b: 147;
+  --bluelib-broken-r: 245;
+  --bluelib-broken-g: 111;
+  --bluelib-broken-b: 0;
+  --bluelib-visited-r: 9;
+  --bluelib-visited-g: 101;
+  --bluelib-visited-b: 156;
+  --bluelib-download-r: 0;
+  --bluelib-download-g: 164;
+  --bluelib-download-b: 106;
   --bluelib-red-r: 200;
   --bluelib-red-g: 0;
   --bluelib-red-b: 0;
@@ -434,91 +443,55 @@
   font-family: var(--bluelib-title-family);
   font-weight: var(--bluelib-title-weight);
 }
-.bluelib .element-list-item {
-  margin: 10px 0;
+.bluelib a,
+.bluelib .anchor {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
 }
-.bluelib .element-anchor {
+.bluelib a:focus-visible,
+.bluelib .anchor:focus-visible {
+  text-decoration-thickness: 2px;
+}
+.bluelib a:hover,
+.bluelib .anchor:hover,
+.bluelib a:focus,
+.bluelib .anchor:focus {
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 30)), 1);
+}
+.bluelib a:active,
+.bluelib .anchor:active {
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 60)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 60)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 60)), 1);
+}
+.bluelib .anchor-broken {
+  cursor: not-allowed;
+  --bluelib-color-r: var(--bluelib-broken-r);
+  --bluelib-color-g: var(--bluelib-broken-g);
+  --bluelib-color-b: var(--bluelib-broken-b);
+  text-decoration-style: dashed;
+}
+.bluelib .anchor-broken:hover,
+.bluelib .anchor-broken:focus,
+.bluelib .anchor-broken:active {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+}
+.bluelib .anchor-link {
+  cursor: pointer;
   --bluelib-color-r: var(--bluelib-link-r);
   --bluelib-color-g: var(--bluelib-link-g);
   --bluelib-color-b: var(--bluelib-link-b);
-  text-decoration-line: underline;
   text-decoration-style: solid;
-  text-decoration-color: currentColor;
-  text-decoration-thickness: 1px;
 }
-.bluelib .element-anchor:hover,
-.bluelib .element-anchor:focus {
-  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)), 1);
+.bluelib .anchor-link:visited {
+  --bluelib-color-r: var(--bluelib-visited-r);
+  --bluelib-color-g: var(--bluelib-visited-g);
+  --bluelib-color-b: var(--bluelib-visited-b);
 }
-.bluelib .element-anchor:focus-visible {
-  text-decoration-thickness: 2px;
-}
-.bluelib .element-anchor:active {
-  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 110)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 110)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 110)), 1);
-}
-.bluelib .element-anchor.status-disabled {
-  text-decoration-style: dashed;
-}
-.bluelib .element-anchor.status-disabled:hover,
-.bluelib .element-anchor.status-disabled:focus,
-.bluelib .element-anchor.status-disabled:active {
-  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
-}
-.bluelib .align-left {
-  text-align: left;
-}
-.bluelib .align-center {
-  text-align: center;
-}
-.bluelib .align-right {
-  text-align: right;
-}
-.bluelib .size-xxl {
-  font-size: xx-large;
-}
-.bluelib .size-xl {
-  font-size: x-large;
-}
-.bluelib .size-l {
-  font-size: large;
-}
-.bluelib .size-m {
-  font-size: medium;
-}
-.bluelib .size-s {
-  font-size: small;
-}
-.bluelib .size-xs {
-  font-size: x-small;
-}
-.bluelib .size-xxs {
-  font-size: xx-small;
-}
-.bluelib .style-bold {
-  font-weight: bold;
-  --bluelib-color-r: var(--bluelib-accent-r);
-  --bluelib-color-g: var(--bluelib-accent-g);
-  --bluelib-color-b: var(--bluelib-accent-b);
-}
-.bluelib .style-italic {
-  font-style: italic;
-}
-.bluelib .style-underline {
-  text-decoration-line: underline;
-}
-.bluelib .style-strike {
-  text-decoration-line: line-through;
-}
-.bluelib .style-monospace {
-  font-family: var(--bluelib-code-family);
-  font-weight: var(--bluelib-code-weight);
-}
-.bluelib .style-keyboard {
-  font-family: var(--bluelib-code-family);
-  font-weight: var(--bluelib-code-weight);
-  padding: 2px 4px;
-  border: 2px outset;
-  border-radius: 4px;
+.bluelib .anchor-download {
+  cursor: pointer;
+  --bluelib-color-r: var(--bluelib-download-r);
+  --bluelib-color-g: var(--bluelib-download-g);
+  --bluelib-color-b: var(--bluelib-download-b);
+  text-decoration-style: solid;
 }
 .bluelib .color-red {
   --bluelib-color-r: var(--bluelib-red-r);
