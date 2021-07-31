@@ -3,15 +3,45 @@
 /// Elements outside the root won't be styled at all, allowing Bluelib's styling to be contained in components or modules of a website.
 
 @{bluelib} {
-    // Get
 
-    // Set the background defined in the palette
-    background-color: @hex-background;
+    /// ===== Palette =====
+    /// The palette used by bluelib is specified at the root level with attributes on the element.
+    /// The palette contains also the fonts bluelib should use.
+    /// By default, bluelib uses the "paper" palette.
 
-    // Set the base color to the foreground defined in the palette
-    .bluelib-color(@hex-foreground);
-    // By default, text should use the main font
-    .font-text();
+    //<editor-fold desc="Rules: Palette">
+
+    // The background color.
+    .set-var-rgb(bluelib-background; 255; 255; 255);
+    // The main text color.
+    .set-var-rgb(bluelib-foreground; 24; 24; 24);
+    // A contrasting color to make important text more visible
+    .set-var-rgb(bluelib-accent; 24; 24; 24);
+
+    // The color of links
+    .set-var-rgb(bluelib-link; 0; 147; 147);
+
+    // Extra builtin colors
+    .set-var-rgb(bluelib-red; 200; 0; 0);
+    .set-var-rgb(bluelib-orange; 200; 165; 0);
+    .set-var-rgb(bluelib-yellow; 200; 200; 0);
+    .set-var-rgb(bluelib-lime; 0; 200; 0);
+    .set-var-rgb(bluelib-cyan; 0; 200; 200);
+    .set-var-rgb(bluelib-blue; 0; 0; 200);
+    .set-var-rgb(bluelib-magenta; 200; 0; 200);
+    .set-var-rgb(bluelib-gray; 128; 128; 128);
+
+    // 1 for dark themes, -1 for light themes
+    --bluelib-polarity: -1;
+
+    // Font to be used in titles
+    .set-var-font(bluelib-title; sans-serif; bold);
+    // Font to be used in the rest of the text
+    .set-var-font(bluelib-text; sans-serif; normal);
+    // Font to be used in monospace contexts
+    .set-var-font(bluelib-code; monospace; normal);
+
+    //</editor-fold>
 
     /// ===== Macros =====
     /// Less allows defining variables to reduce the amount of boilerplate code to write while defining the rules.
@@ -19,114 +49,213 @@
 
     //<editor-fold desc="Rules: Macros">
 
-    @b0: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.025
+    @rgb-background: rgb(
+        var(--bluelib-background-r),
+        var(--bluelib-background-g),
+        var(--bluelib-background-b)
     );
-    @b1: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.100
+    @rgb-foreground: rgb(
+        var(--bluelib-foreground-r),
+        var(--bluelib-foreground-g),
+        var(--bluelib-foreground-b)
     );
-    @b2: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.200
-    );
-    @b3: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.300
-    );
-    @b4: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.400
-    );
-    @b5: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.500
-    );
-    @b6: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.600
-    );
-    @b7: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.700
-    );
-    @b8: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.800
-    );
-    @b9: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            0.900
-    );
-    @bA: rgba(
-            var(--bluelib-color-r),
-            var(--bluelib-color-g),
-            var(--bluelib-color-b),
-            1.000
-    );
-    @bB: rgba(
-            calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 10)),
-            calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 10)),
-            calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 10)),
-            1.000
-    );
-    @bC: rgba(
-            calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 20)),
-            calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 20)),
-            calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 20)),
-            1.000
-    );
-    @bD: rgba(
-            calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 30)),
-            calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 30)),
-            calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 30)),
-            1.000
-    );
-    @bE: rgba(
-            calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 40)),
-            calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 40)),
-            calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 40)),
-            1.000
-    );
-    @bF: rgba(
-            calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)),
-            calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)),
-            calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)),
-            1.000
+    @rgb-accent: rgb(
+        var(--bluelib-accent-r),
+        var(--bluelib-accent-g),
+        var(--bluelib-accent-b)
     );
 
-    @bL: rgba(
-            calc(255 * ((var(--bluelib-polarity / 2) * -1) + 0.5)),
-            calc(255 * ((var(--bluelib-polarity / 2) * -1) + 0.5)),
-            calc(255 * ((var(--bluelib-polarity / 2) * -1) + 0.5)),
-            1.000
+    @rgb-link: rgb(
+        var(--bluelib-link-r),
+        var(--bluelib-link-g),
+        var(--bluelib-link-b)
     );
-    @bT: rgba(
-            calc(255 * (var(--bluelib-polarity / 2) + 0.5)),
-            calc(255 * (var(--bluelib-polarity / 2) + 0.5)),
-            calc(255 * (var(--bluelib-polarity / 2) + 0.5)),
-            1.000
+
+    @rgb-red: rgb(
+        var(--bluelib-red-r),
+        var(--bluelib-red-g),
+        var(--bluelib-red-b)
+    );
+    @rgb-orange: rgb(
+        var(--bluelib-orange-r),
+        var(--bluelib-orange-g),
+        var(--bluelib-orange-b)
+    );
+    @rgb-yellow: rgb(
+        var(--bluelib-yellow-r),
+        var(--bluelib-yellow-g),
+        var(--bluelib-yellow-b)
+    );
+    @rgb-lime: rgb(
+        var(--bluelib-lime-r),
+        var(--bluelib-lime-g),
+        var(--bluelib-lime-b)
+    );
+    @rgb-cyan: rgb(
+        var(--bluelib-cyan-r),
+        var(--bluelib-cyan-g),
+        var(--bluelib-cyan-b)
+    );
+    @rgb-blue: rgb(
+        var(--bluelib-blue-r),
+        var(--bluelib-blue-g),
+        var(--bluelib-blue-b)
+    );
+    @rgb-magenta: rgb(
+        var(--bluelib-magenta-r),
+        var(--bluelib-magenta-g),
+        var(--bluelib-magenta-b)
+    );
+    @rgb-gray: rgb(
+        var(--bluelib-gray-r),
+        var(--bluelib-gray-g),
+        var(--bluelib-gray-b)
+    );
+
+    @rgb-leaving: rgba(
+        calc(255 * ((var(--bluelib-polarity / 2) * -1) + 0.5)),
+        calc(255 * ((var(--bluelib-polarity / 2) * -1) + 0.5)),
+        calc(255 * ((var(--bluelib-polarity / 2) * -1) + 0.5)),
+        1.000
+    );
+    @rgb-towards: rgba(
+        calc(255 * (var(--bluelib-polarity / 2) + 0.5)),
+        calc(255 * (var(--bluelib-polarity / 2) + 0.5)),
+        calc(255 * (var(--bluelib-polarity / 2) + 0.5)),
+        1.000
+    );
+
+    @c0: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.025
+    );
+    @c1: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.100
+    );
+    @c2: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.200
+    );
+    @c3: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.300
+    );
+    @c4: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.400
+    );
+    @c5: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.500
+    );
+    @c6: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.600
+    );
+    @c7: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.700
+    );
+    @c8: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.800
+    );
+    @c9: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.900
+    );
+    @cA: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        1.000
+    );
+    @cB: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 10)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 10)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 10)),
+        1.000
+    );
+    @cC: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 20)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 20)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 20)),
+        1.000
+    );
+    @cD: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 30)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 30)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 30)),
+        1.000
+    );
+    @cE: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 40)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 40)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 40)),
+        1.000
+    );
+    @cF: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)),
+        1.000
+    );
+    @cG: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 60)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 60)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 60)),
+        1.000
+    );
+    @cH: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 70)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 70)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 70)),
+        1.000
+    );
+    @cI: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 80)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 80)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 80)),
+        1.000
+    );
+    @cJ: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 90)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 90)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 90)),
+        1.000
+    );
+    @cK: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 100)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 100)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 100)),
+        1.000
+    );
+    @cL: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 110)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 110)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 110)),
+        1.000
     );
 
     //</editor-fold>
@@ -147,9 +276,25 @@
         // Bluelib magic!
         // This rule sets the color of all text to be equal to the current .bluelib-color() at 100% opacity.
         // Thanks, CSS variables!
-        color: @bA;
+        color: @cA;
 
     }
+
+    /// ===== Root =====
+    /// The root element has some rules itself.
+
+    //<editor-fold desc="Rules: Root">
+
+    // Set the background defined in the palette
+    background-color: @rgb-background;
+
+    // Set the base color to the foreground defined in the palette
+    .map-var-rgb(bluelib-color; bluelib-foreground);
+
+    // Set the base font
+    .use-var-font(bluelib-text);
+
+    //</editor-fold>
 
     //</editor-fold>
 
@@ -259,8 +404,8 @@
         // Panels should try to fill the most space possible
         width: 100%;
 
-        background-color: @b0;
-        border-color: @b1;
+        background-color: @c0;
+        border-color: @c1;
 
         // The first and last elements of a panel should not have a margin
         > @{all} {
@@ -337,15 +482,15 @@
     @{separator} {
         border-width: 1px;
         border-style: solid;
-        border-color: @b5;
+        border-color: @c5;
     }
 
     @{separator-light} {
-        border-color: @b1;
+        border-color: @c1;
     }
 
     @{separator-heavy} {
-        border-color: @bA;
+        border-color: @cA;
     }
 
     //</editor-fold>
@@ -409,47 +554,47 @@
         }
 
         // They should use the current bluelib color
-        border-color: @b3;
-        color: @bA;
-        background-color: @b0;
+        border-color: @c3;
+        color: @cA;
+        background-color: @c0;
 
         // Both for themselves and their placeholder
         &::placeholder {
-            color: @b4;
+            color: @c4;
             opacity: 1;
         }
 
         // They should become lighter if hovered
         &:hover {
-            border-color: @b6;
-            color: @bC;
-            background-color: @b1;
+            border-color: @c6;
+            color: @cC;
+            background-color: @c1;
 
             &::placeholder {
-                color: @b7;
+                color: @c7;
             }
         }
 
         // And even lighter if focused
         &:focus {
-            border-color: @bA;
-            color: @bF;
-            background-color: @b2;
+            border-color: @cA;
+            color: @cF;
+            background-color: @c2;
 
             &::placeholder {
-                color: @b7;
+                color: @c7;
             }
         }
 
         // Unless they are disabled
         &@{status-disabled} {
             &:hover, &:focus {
-                border-color: @b3;
-                color: @bA;
-                background-color: @b0;
+                border-color: @c3;
+                color: @cA;
+                background-color: @c0;
 
                 &::placeholder {
-                    color: @b4;
+                    color: @c4;
                 }
             }
         }
@@ -492,7 +637,7 @@
 
         @media screen and (-webkit-min-device-pixel-ratio:0) {
             @{input-option}, @{input-optgroup} {
-                background-color: @hex-background;
+                .use-var-rgb(background-color; bluelib-background);
             }
         }
     }
@@ -520,7 +665,7 @@
 
         @{input-option} {
             font-weight: normal;
-            color: @bA;
+            color: @cA;
 
             // Options should be slightly padded too
             padding: 4px;
@@ -529,7 +674,7 @@
         @{input-optgroup} {
             // Style option groups as titles
             font-weight: bold;
-            color: @hex-accent;
+            color: @rgb-accent;
 
             // Options groups should be slightly padded too
             padding: 4px;
@@ -564,17 +709,17 @@
         // Give them a good clicking feedback
         // (sadly it doesn't work if using the keyboard)
         &:active {
-            border-color: @bC;
-            color: @bF;
-            background-color: @b3;
+            border-color: @cC;
+            color: @cF;
+            background-color: @c3;
         }
 
         // But not if they're disabled
         @{status-disabled} {
             &:active {
-                border-color: @b3;
-                color: @bA;
-                background-color: @b0;
+                border-color: @c3;
+                color: @cA;
+                background-color: @c0;
             }
         }
     }
@@ -609,19 +754,19 @@
 
         // If the element is checked, display it
         &:checked::before {
-            background-color: @b9;
+            background-color: @c9;
         }
 
         &:hover:checked::before {
-            background-color: @bB;
+            background-color: @cB;
         }
 
         &:focus:checked::before {
-            background-color: @bD;
+            background-color: @cD;
         }
 
         &:active:checked::before {
-            background-color: @bD;
+            background-color: @cD;
         }
     }
 
@@ -680,7 +825,7 @@
             text-align: right;
 
             // Give the labels the accent color
-            .bluelib-color(@hex-accent);
+            .map-var-rgb(bluelib-color, bluelib-accent);
             // And make them slightly bold
             font-weight: 500;
         }
@@ -705,7 +850,7 @@
             flex-wrap: wrap;
             width: 100%;
 
-            background-color: @b0;
+            background-color: @c0;
             padding: 6px;
             border-radius: 4px;
 
@@ -749,8 +894,8 @@
 
     @{element-title} {
         text-align: center;
-        .bluelib-color(@hex-accent);
-        .font-title();
+        .map-var-rgb(bluelib-color, bluelib-accent);
+        .use-var-font(bluelib-title)
     }
 
     @{element-paragraph} {
@@ -762,14 +907,15 @@
     }
 
     @{element-anchor} {
-        .bluelib-color(@hex-link);
+        .map-var-rgb(bluelib-color, bluelib-link);
+
         text-decoration-line: underline;
         text-decoration-style: solid;
         text-decoration-color: currentColor;
         text-decoration-thickness: 1px;
 
         &:hover, &:focus {
-            .bluelib-color(@hex-link-hover);
+            color: @cF;
         }
 
         &:focus-visible {
@@ -777,18 +923,14 @@
         }
 
         &:active {
-            .bluelib-color(@hex-link-active);
+            color: @cL;
         }
 
         &@{status-disabled} {
             text-decoration-style: dashed;
 
-            &:hover, &:focus {
-                .bluelib-color(@hex-link);
-            }
-
-            &:active {
-                .bluelib-color(@hex-link);
+            &:hover, &:focus, &:active {
+                color: @cA;
             }
         }
     }
@@ -841,7 +983,7 @@
 
     @{style-bold} {
         font-weight: bold;
-        .bluelib-color(@hex-accent);
+        .map-var-rgb(bluelib-color, bluelib-accent);
     }
 
     @{style-italic} {
@@ -857,11 +999,11 @@
     }
 
     @{style-monospace} {
-        .font-code();
+        .use-var-font(bluelib-code);
     }
 
     @{style-keyboard} {
-        .font-code();
+        .use-var-font(bluelib-code);
         padding: 2px 4px;
         border: 2px outset;
         border-radius: 4px;
@@ -870,35 +1012,35 @@
     // --- Colors ---
 
     @{color-red} {
-        .bluelib-color(@hex-red)
+        .map-var-rgb(bluelib-color, bluelib-red);
     }
 
     @{color-orange} {
-        .bluelib-color(@hex-orange)
+        .map-var-rgb(bluelib-color, bluelib-orange);
     }
 
     @{color-yellow} {
-        .bluelib-color(@hex-yellow)
+        .map-var-rgb(bluelib-color, bluelib-yellow);
     }
 
     @{color-lime} {
-        .bluelib-color(@hex-lime)
+        .map-var-rgb(bluelib-color, bluelib-lime);
     }
 
     @{color-cyan} {
-        .bluelib-color(@hex-cyan)
+        .map-var-rgb(bluelib-color, bluelib-cyan);
     }
 
     @{color-blue} {
-        .bluelib-color(@hex-blue)
+        .map-var-rgb(bluelib-color, bluelib-blue);
     }
 
     @{color-magenta} {
-        .bluelib-color(@hex-magenta)
+        .map-var-rgb(bluelib-color, bluelib-magenta);
     }
 
     @{color-gray} {
-        .bluelib-color(@hex-gray)
+        .map-var-rgb(bluelib-color, bluelib-gray);
     }
 }
 
