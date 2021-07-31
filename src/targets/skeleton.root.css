@@ -92,6 +92,7 @@ body .layout-fill-single,
 body .layout-threecol,
 .bluelib .layout-threecol {
   padding: 4px;
+  grid-column-gap: 8px;
 }
 @media screen and (min-width: 1281px) {
   body .layout-threecol,
