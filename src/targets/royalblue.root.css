@@ -1,4 +1,3 @@
-@import "../normalize/normalize.css";
 @font-face {
   font-family: 'Fira Code';
   font-style: normal;
@@ -170,12 +169,6 @@ body,
   --bluelib-link-r: 0;
   --bluelib-link-g: 202;
   --bluelib-link-b: 202;
-  --bluelib-link-hover-r: 0;
-  --bluelib-link-hover-g: 255;
-  --bluelib-link-hover-b: 255;
-  --bluelib-link-active-r: 160;
-  --bluelib-link-active-g: 255;
-  --bluelib-link-active-b: 255;
   --bluelib-polarity: 1;
   --bluelib-title-family: "Fira Sans", sans-serif;
   --bluelib-title-weight: 500;
