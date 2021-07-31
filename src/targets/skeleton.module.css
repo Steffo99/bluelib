@@ -425,7 +425,7 @@
   margin-top: 8px;
   margin-bottom: 8px;
 }
-.bluelib .element-title {
+.bluelib .heading {
   text-align: center;
   --bluelib-color-r: var(--bluelib-accent-r);
   --bluelib-color-g: var(--bluelib-accent-g);

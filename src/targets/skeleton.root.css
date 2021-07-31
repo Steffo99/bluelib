@@ -1976,8 +1976,6 @@ body .form .form-row,
   margin-top: 8px;
   margin-bottom: 8px;
 }
-body .element-title,
-.bluelib .element-title,
 body h1,
 .bluelib h1,
 body h2,
@@ -1989,7 +1987,9 @@ body h4,
 body h5,
 .bluelib h5,
 body h6,
-.bluelib h6 {
+.bluelib h6,
+body .heading,
+.bluelib .heading {
   text-align: center;
   --bluelib-color-r: var(--bluelib-accent-r);
   --bluelib-color-g: var(--bluelib-accent-g);

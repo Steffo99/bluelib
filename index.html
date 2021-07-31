@@ -510,207 +510,27 @@
                 </section>
             </div>
             <h2>
-                Formatting
+                Various elements
             </h2>
             <div class="split">
                 <section>
                     <h3>
-                        Colors
+                        Headings
                     </h3>
                     <p>
-                        You can use colored text:
+                        Bluelib (and HTML) supports up to 6 levels of headings:
                     </p>
-                    <ul>
-                        <li><span class="color-red">Red</span></li>
-                        <li><span class="color-orange">Orange</span></li>
-                        <li><span class="color-yellow">Yellow</span></li>
-                        <li><span class="color-lime">Lime</span></li>
-                        <li><span class="color-cyan">Cyan</span></li>
-                        <li><span class="color-blue">Blue</span></li>
-                        <li><span class="color-magenta">Magenta</span></li>
-                        <li><span class="color-gray">Gray</span></li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>
-                        Size
-                    </h3>
-                    <p>
-                        You can set the text size:
-                    </p>
-                    <ul>
-                        <li><span class="size-xxl">XXL</span></li>
-                        <li><span class="size-xl">XL</span></li>
-                        <li><span class="size-l">L</span></li>
-                        <li><span class="size-m">M</span></li>
-                        <li><span class="size-s">S</span></li>
-                        <li><span class="size-xs">XS</span></li>
-                        <li><span class="size-xxs">XXS</span></li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>
-                        Alignment
-                    </h3>
-                    <p>
-                        You can set the text alignment (<i>only in block elements</i> such as div):
-                    </p>
-                    <div class="align-left">Left</div>
-                    <div class="align-center">Center</div>
-                    <div class="align-right">Right</div>
-                </section>
-                <section>
-                    <h3>
-                        Style
-                    </h3>
-                    <p>
-                        You can use all the usual text styles:
-                    </p>
-                    <ul>
-                        <li>Regular</li>
-                        <li><b>Bold</b></li>
-                        <li><i>Italic</i></li>
-                        <li><u>Underlined</u></li>
-                        <li><s>Struck</s></li>
-                        <li><code>Code</code></li>
-                        <li><b><i><u><s><code>All of them together</code></s></u></i></b></li>
-                    </ul>
-                </section>
-            </div>
-            <h2>
-                Elements
-            </h2>
-            <div class="split">
-                <section>
-                    <h3>
-                        Buttons
-                    </h3>
-                    <p>
-                        Bluelib supports buttons:
-                    </p>
-                    <p>
-                        <button>
-                            Hi, I'm a inline default button!
-                        </button>
-                        &nbsp;or&nbsp;
-                        <input class="color-lime" type="submit" value="Hi, I'm a lime submit button!"/>
-                    </p>
-                    <p>
-                        <button class="button-fill-width color-orange">
-                            I'm stretched horizontally!
-                        </button>
-                    </p>
-                    <p>
-                        <button disabled class="button-fill-width">
-                            Can't click on this!
-                        </button>
-                    </p>
-                </section>
-                <section>
-                    <h3>
-                        Toggle buttons
-                    </h3>
-                    <p>
-                        Bluelib supports buttons that can be toggled on and off:
-                    </p>
-                    <p>
-                        <button class="button-toggle button-toggle-off">
-                            Toggled off
-                        </button>
-                        &nbsp;
-                        <button class="button-toggle button-toggle-on">
-                            Toggled on
-                        </button>
-                    </p>
-                    <p>
-                        <button class="button-toggle button-toggle-off color-red">
-                            Colored off
-                        </button>
-                        &nbsp;
-                        <button class="button-toggle button-toggle-on color-lime">
-                            Colored on
-                        </button>
-                    </p>
-                    <p>
-                        <button disabled class="button-toggle button-toggle-off">
-                            Disabled off
-                        </button>
-                        &nbsp;
-                        <button disabled class="button-toggle button-toggle-on">
-                            Disabled on
-                        </button>
-                    </p>
-                </section>
-            </div>
-            <h2>
-                Coloring panels
-            </h2>
-            <div class="split">
-                <section class="color-red">
-                    <h3>
-                        Panels can be recolored!
-                    </h3>
-                    <p>
-                        Elements contained inside will be recolored accordingly.
-                    </p>
-                </section>
-                <blockquote class="color-lime">
-                    <h3>
-                        It works on all types of panels!
-                    </h3>
-                    <p>
-                        This blockquote should be green!
-                    </p>
-                    <hr/>
-                    <p>
-                        And so should be the separator above.
-                    </p>
-                </blockquote>
-                <aside class="color-blue">
-                    <h3>
-                        Smol blue aside
-                    </h3>
-                    <p>
-                        The buttons below should be automatically colored blue.
-                    </p>
-                    <button>
-                        Blue button
-                    </button>
-                    <button class="button-toggle button-toggle-off">
-                        Blue toggle off
-                    </button>
-                    <button class="button-toggle button-toggle-on">
-                        Blue toggle on
-                    </button>
-                </aside>
-            </div>
-            <h2>
-                Interactivity
-            </h2>
-            <div class="split">
-                <section>
-                    <h3>
-                        Tooltips
-                    </h3>
-                    <p>
-                        Text <abbr title="Hello world!">with a tooltip</abbr> is underlined and has a "help" cursor if
-                        hovered.
-                    </p>
-                </section>
-                <section>
-                    <h3>
-                        Disabled
-                    </h3>
-                    <p>
-                        Elements can be <span class="status-disabled">disabled</span> to reduce their opacity and display a
-                        "not allowed" cursor if hovered.
-                    </p>
-                    <p>
-                        It also works with <a disabled class="status-disabled">links</a>!
-                    </p>
-                    <section class="status-disabled">
-                        And panels!
+                    <section>
+                        <h1>Level-1</h1>
+                        <h2>Level-2</h2>
+                        <h3>Level-3</h3>
+                        <h4>Level-4</h4>
+                        <h5>Level-5</h5>
+                        <h6>Level-6</h6>
                     </section>
+                    <p>
+                        Generally, panels look nicer if they start with a level-3 heading, but you may use whichever you want, as Bluelib will automatically handle the margin.
+                    </p>
                 </section>
             </div>
         </main>
