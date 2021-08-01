@@ -163,6 +163,7 @@ body .panel,
 .bluelib .panel {
   margin: 8px 0;
   padding: 8px;
+  border-radius: 4px;
   width: 100%;
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.025);
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
@@ -177,13 +178,11 @@ body .panel > *:last-child,
 }
 body .panel-box,
 .bluelib .panel-box {
-  border-radius: 4px;
   border-width: 2px;
   border-style: solid;
 }
 body .panel-dialog,
 .bluelib .panel-dialog {
-  border-radius: 4px;
   border-width: 0 0 0 2px;
   border-style: solid;
 }
