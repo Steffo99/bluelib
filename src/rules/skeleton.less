@@ -422,6 +422,8 @@
         margin: 8px 0;
         // And a padding to separate them from their contents
         padding: 8px;
+        // And a nice round border
+        border-radius: 4px;
 
         // Panels should try to fill the most space possible
         width: 100%;
@@ -443,14 +445,12 @@
 
     // A panel which encloses its contents with a border.
     @{panel-box} {
-        border-radius: 4px;
         border-width: 2px;
         border-style: solid;
     }
 
     // A panel which encloses its contents with a quote-like border.
     @{panel-dialog} {
-        border-radius: 4px;
         border-width: 0 0 0 2px;
         border-style: solid;
     }
