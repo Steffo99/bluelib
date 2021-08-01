@@ -529,6 +529,36 @@
   --bluelib-color-b: 77;
   border-color: #FFCC4D;
 }
+.bluelib abbr,
+.bluelib .semantic-abbr {
+  cursor: help;
+  text-decoration: underline 1px dotted currentColor;
+}
+.bluelib b,
+.bluelib .semantic-b {
+  font-weight: 500;
+  color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
+}
+.bluelib code,
+.bluelib .semantic-code {
+  font-family: var(--bluelib-code-family);
+  font-weight: var(--bluelib-code-weight);
+}
+.bluelib dfn,
+.bluelib .semantic-dfn {
+  color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
+  font-style: italic;
+}
+.bluelib mark,
+.bluelib .semantic-mark {
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 20)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 20)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 20)), 1);
+}
+.bluelib strong,
+.bluelib .semantic-strong {
+  font-weight: 800;
+  color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
+}
 .bluelib .color-red {
   --bluelib-color-r: var(--bluelib-red-r);
   --bluelib-color-g: var(--bluelib-red-g);

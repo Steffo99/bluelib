@@ -1040,11 +1040,13 @@
     /// Semantics are special font effects applied to text with a certain meaning.
 
     @{semantic-abbr} {
-
+        cursor: help;
+        text-decoration: underline 1px dotted currentColor;
     }
 
     @{semantic-b} {
-
+        font-weight: 500;
+        color: @rgb-accent;
     }
 
     @{semantic-cite} {
@@ -1052,15 +1054,12 @@
     }
 
     @{semantic-code} {
-
-    }
-
-    @{semantic-data} {
-
+        .use-var-font(bluelib-code);
     }
 
     @{semantic-dfn} {
-
+        color: @rgb-accent;
+        font-style: italic;
     }
 
     @{semantic-em} {
@@ -1076,7 +1075,8 @@
     }
 
     @{semantic-mark} {
-
+        background-color: @c2;
+        color: @cC;
     }
 
     @{semantic-q} {
@@ -1096,11 +1096,8 @@
     }
 
     @{semantic-strong} {
-
-    }
-
-    @{semantic-time} {
-
+        font-weight: 800;
+        color: @rgb-accent;
     }
 
     @{semantic-u} {
