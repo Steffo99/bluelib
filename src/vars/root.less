@@ -9,13 +9,13 @@
 @layout-threecol-center: ~".layout-threecol-center";
 @layout-threecol-right: ~".layout-threecol-right";
 
-@panel: ~".panel, @{panel-box}, @{panel-blockquote}, @{panel-aside}";
-@panel-box: ~"section, .panel-box";
-@panel-blockquote: ~".panel-blockquote, blockquote";
-@panel-aside: ~".panel-aside, aside";
+@panel: ~".panel";
+@panel-box: ~".panel-box";
+@panel-dialog: ~".panel-dialog";
+@panel-parenthesis: ~".panel-parenthesis";
 
-@split: ~".split";
-@split-forcewrap: ~".split-forcewrap";
+@chapter: ~".chapter";
+@chapter-forcewrap: ~".chapter-forcewrap";
 
 @separator: ~"hr, .separator";
 @separator-light: ~".separator-light";
@@ -27,9 +27,10 @@
 
 @status-disabled: ~"[disabled], .status-disabled";
 
-@input: ~'@{input-field}, @{input-select}, @{input-multiselect}, @{input-button}, @{input-checkbox}, @{input-radio}, .input';
-@INPUT: ~'> @{input-field}, > @{input-select}, > @{input-multiselect}, > @{input-button}, > @{input-checkbox}, > @{input-radio}, > .input';
+@input: ~'@{input-field}, @{input-area}, @{input-select}, @{input-multiselect}, @{input-button}, @{input-checkbox}, @{input-radio}, .input';
+@INPUT: ~'> @{input-field}, > @{input-area}, > @{input-select}, > @{input-multiselect}, > @{input-button}, > @{input-checkbox}, > @{input-radio}, > .input';
 @input-field: ~'.input-field, input[type="color"], input[type="date"], input[type="datetime-local"], input[type="email"], input[type="file"], input[type="image"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]';
+@input-area: ~'textarea, .input-area';
 @input-select: ~'select:not([multiple]), .input-select';
 @input-multiselect: ~'select[multiple], .input-multiselect';
 @input-option: ~'option, .input-option';
@@ -48,6 +49,7 @@
 @form-group-row: ~'.form-group-row';
 
 @heading: ~"h1, h2, h3, h4, h5, h6, .heading";
+@HEADING: ~"> h1, > h2, > h3, > h4, > h5, > h6, > .heading";
 
 @anchor: ~"a, .anchor";
 @anchor-broken: ~'a:not([href]), a[href=""], .anchor-broken';
@@ -76,19 +78,6 @@
 @semantic-time: ~"time, .semantic-time";
 @semantic-u: ~"u, .semantic-u";
 @semantic-var: ~"var, .semantic-var";
-
-
-@style-b: ~"b, .style-bringattention";
-@style-strong: ~"strong, .style-strong";
-@style-emphasis: ~".style-italic, i, em";
-@style-annotated: ~".style-underline, u";
-@style-strike: ~".style-strike, strike, s, del";
-@style-monospace: ~".style-monospace, code";
-@style-keyboard: ~".style-keyboard, kbd";
-
-@element-paragraph: ~".element-paragraph, p";
-@element-list-item: ~".element-list-item, li";
-
 
 @color-red: ~".color-red";
 @color-orange: ~".color-orange";
