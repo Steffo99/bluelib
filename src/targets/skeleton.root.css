@@ -2233,6 +2233,12 @@ body .semantic-b,
   font-weight: 500;
   color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
 }
+body cite,
+.bluelib cite,
+body .semantic-cite,
+.bluelib .semantic-cite {
+  font-variant: small-caps;
+}
 body code,
 .bluelib code,
 body .semantic-code,
@@ -2244,7 +2250,19 @@ body dfn,
 .bluelib dfn,
 body .semantic-dfn,
 .bluelib .semantic-dfn {
+  text-decoration: underline 1px solid currentColor;
+  font-style: italic;
+}
+body em,
+.bluelib em,
+body .semantic-em,
+.bluelib .semantic-em {
   color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
+}
+body i,
+.bluelib i,
+body .semantic-i,
+.bluelib .semantic-i {
   font-style: italic;
 }
 body mark,
@@ -2252,13 +2270,43 @@ body mark,
 body .semantic-mark,
 .bluelib .semantic-mark {
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.2);
-  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 20)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 20)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 20)), 1);
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)), 1);
+}
+body q,
+.bluelib q,
+body .semantic-q,
+.bluelib .semantic-q {
+  font-style: oblique;
+}
+body q:before,
+.bluelib q:before,
+body .semantic-q:before,
+.bluelib .semantic-q:before,
+body q:after,
+.bluelib q:after,
+body .semantic-q:after,
+.bluelib .semantic-q:after {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.5);
+}
+body samp,
+.bluelib samp,
+body .semantic-samp,
+.bluelib .semantic-samp {
+  background-color: rgba(calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)), calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)), calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)), 1);
+  color: rgba(calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)), calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)), calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)), 1);
 }
 body strong,
 .bluelib strong,
 body .semantic-strong,
 .bluelib .semantic-strong {
   font-weight: 800;
+  color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
+}
+body var,
+.bluelib var,
+body .semantic-var,
+.bluelib .semantic-var {
+  font-style: normal;
   color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
 }
 body .color-red,
