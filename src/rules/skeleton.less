@@ -1014,16 +1014,26 @@
     /// Bluelib makes the annotations slightly transparent to differentiate them from the rest of the text.
     /// See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby
 
-    @{ruby} {
-        font-size: xx-large;
-    }
-
     @{ruby-parenthesis} {
         color: @c1;
     }
 
     @{ruby-text} {
         color: @c6;
+    }
+
+    /// ===== Ruby =====
+    /// Todos are used to mark unfinished parts of a website.
+    /// Their color ignores the palette and derives from the 🚧 emoji
+
+    @{todo} {
+        background-color: #292F33;
+
+        --bluelib-color-r: 255;
+        --bluelib-color-g: 204;
+        --bluelib-color-b: 77;
+
+        border-color: #FFCC4D;
     }
 
     /// ===== Semantics =====
@@ -1101,9 +1111,10 @@
 
     }
 
+    /// ===== Colors =====
+    /// Colors are classes which apply a certain color from the palette to the bluelib-color of the element which has them.
 
-
-    // --- Colors ---
+    //<editor-fold desc="Rules: Colors">
 
     @{color-red} {
         .map-var-rgb(bluelib-color, bluelib-red);
@@ -1136,5 +1147,7 @@
     @{color-gray} {
         .map-var-rgb(bluelib-color, bluelib-gray);
     }
+
+    //</editor-fold>
 }
 

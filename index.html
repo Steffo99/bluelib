@@ -224,7 +224,7 @@
                             Images can be <dfn id="dfn-limited">limited</dfn> to <b>prevent them from taking up too much screen space</b>.
                         </p>
                         <div class="chapter">
-                            <section class="panel panel-box">
+                            <section class="panel panel-box" id="panel-limited-half">
                                 <h3>
                                     Half
                                 </h3>
@@ -233,7 +233,7 @@
                                 </p>
                                 <img class="image-limit-half" src="https://i.redd.it/0b2r669b73f41.jpg" alt="USB key in a bottle"/>
                             </section>
-                            <section class="panel panel-box">
+                            <section class="panel panel-box" id="panel-limited-quarter">
                                 <h3>
                                     Quarter
                                 </h3>
@@ -268,7 +268,7 @@
                     <h2>
                         Inputs
                     </h2>
-                    <section class="panel panel-box">
+                    <section class="panel panel-box" id="panel-input">
                         <h3>
                             Input
                         </h3>
@@ -278,8 +278,8 @@
                         <p>
                             They come in multiple kinds:
                         </p>
-                        <section class="chapter">
-                            <section class="panel panel-box">
+                        <section class="chapter" id="chapter-input-kinds">
+                            <section class="panel panel-box" id="panel-input-field">
                                 <h3>
                                     Field
                                 </h3>
@@ -289,7 +289,7 @@
                                 <!--suppress HtmlFormInputWithoutLabel -->
                                 <input type="text" placeholder="This is called a placeholder, by the way."/>
                             </section>
-                            <section class="panel panel-box">
+                            <section class="panel panel-box" id="panel-input-select">
                                 <h3>
                                     Select
                                 </h3>
@@ -308,7 +308,7 @@
                                 </select>
                             </section>
                             <div class="chapter-forcewrap"></div>
-                            <section class="panel panel-box">
+                            <section class="panel panel-box" id="panel-input-area">
                                 <h3>
                                     Area
                                 </h3>
@@ -318,7 +318,7 @@
                                 <!--suppress HtmlFormInputWithoutLabel -->
                                 <textarea placeholder="Write something here!"></textarea>
                             </section>
-                            <section class="panel panel-box">
+                            <section class="panel panel-box" id="panel-input-multiselect">
                                 <h3>
                                     Multiselect
                                 </h3>
@@ -337,7 +337,7 @@
                                 </select>
                             </section>
                             <div class="chapter-forcewrap"></div>
-                            <section class="panel panel-box">
+                            <section class="panel panel-box" id="panel-input-radio">
                                 <h3>
                                     Radio
                                 </h3>
@@ -360,7 +360,7 @@
                                     </label>
                                 </p>
                             </section>
-                            <section class="panel panel-box">
+                            <section class="panel panel-box" id="panel-input-checkbox">
                                 <h3>
                                     Checkbox
                                 </h3>
@@ -384,7 +384,7 @@
                                 </p>
                             </section>
                             <div class="chapter-forcewrap"></div>
-                            <section class="panel panel-box">
+                            <section class="panel panel-box" id="panel-input-button">
                                 <h3>
                                     Button
                                 </h3>
@@ -404,7 +404,7 @@
                     <h2>
                         Forms
                     </h2>
-                    <section class="panel panel-box">
+                    <section class="panel panel-box" id="chapter-form-labels-inputs">
                         <h3>
                             Forms, labels and inputs
                         </h3>
@@ -446,7 +446,7 @@
                         </form>
                     </section>
                     <div class="chapter-forcewrap"></div>
-                    <section class="panel panel-box">
+                    <section class="panel panel-box" id="panel-form-groups">
                         <h3>
                             Form groups
                         </h3>
@@ -507,7 +507,7 @@
                             </div>
                         </form>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel panel-box" id="panel-form-groups-row">
                         <h3>
                             Row groups
                         </h3>
@@ -537,7 +537,7 @@
                         </form>
                     </section>
                     <div class="chapter-forcewrap"></div>
-                    <section class="panel panel-box">
+                    <section class="panel panel-box" id="panel-form-row">
                         <h3>
                             Form rows
                         </h3>
@@ -568,29 +568,30 @@
                         </form>
                     </section>
                 </section>
-                <section class="chapter">
+                <section class="chapter" id="chapter-common-elements">
                     <h2>
                         Common elements
-                    </h2><section class="panel panel-box">
-                    <h3>
-                        Headings
-                    </h3>
-                    <p>
-                        An <dfn id="dfn-heading">heading</dfn> is the <b>title</b> of an article, chapter or panel.
-                    </p>
-                    <section class="panel panel-box">
-                        <h1>Level-1</h1>
-                        <h2>Level-2</h2>
-                        <h3>Level-3</h3>
-                        <h4>Level-4</h4>
-                        <h5>Level-5</h5>
-                        <h6>Level-6</h6>
+                    </h2>
+                    <section class="panel panel-box" id="panel-headings">
+                        <h3>
+                            Headings
+                        </h3>
+                        <p>
+                            An <dfn id="dfn-heading">heading</dfn> is the <b>title</b> of an article, chapter or panel.
+                        </p>
+                        <section class="panel panel-box">
+                            <h1>Level-1</h1>
+                            <h2>Level-2</h2>
+                            <h3>Level-3</h3>
+                            <h4>Level-4</h4>
+                            <h5>Level-5</h5>
+                            <h6>Level-6</h6>
+                        </section>
+                        <blockquote class="panel panel-dialog">
+                            Generally, panels look nicer if they start with a level-3 heading, but you may use whichever you want, as Bluelib will automatically handle the margin.
+                        </blockquote>
                     </section>
-                    <blockquote class="panel panel-dialog">
-                        Generally, panels look nicer if they start with a level-3 heading, but you may use whichever you want, as Bluelib will automatically handle the margin.
-                    </blockquote>
-                </section>
-                    <section class="panel panel-box">
+                    <section class="panel panel-box" id="panel-anchors">
                         <h3>
                             Anchors
                         </h3>
@@ -623,39 +624,158 @@
                         </section>
                     </section>
                 </section>
-                <section class="chapter">
+                <section class="chapter" id="chapter-annotations">
                     <h2>
                         Annotations
                     </h2>
-                    <section class="panel panel-box">
+                    <section class="panel panel-box" id="panel-ruby">
                         <h3>
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby">Ruby text</a>
+                            Ruby text
                         </h3>
                         <p>
-                            Ruby text is made slightly transparent, to make the main text more evident.
+                            A <dfn id="dfn-ruby">ruby</dfn> is a text with annotations either above or below the
                         </p>
-                        <p>
+                        <p style="font-size: xx-large;">
                             <ruby>
                                 Mo <rp>/</rp><rt>ˈmɒ</rt><rp>/</rp>
                                 de <rp>/</rp><rt>dɪ</rt><rp>/</rp>
                                 na <rp>/</rp><rt>nə</rt><rp>/</rp>
                             </ruby>
                         </p>
-                        <p>
+                        <p style="font-size: xx-large;">
                             <ruby>
                                 漢 <rp>(</rp><rt>kan</rt><rp>)</rp>
                                 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
                             </ruby>
                         </p>
-                        <p>
+                        <p style="font-size: xx-large;">
                             <ruby>
                                 明日 <rp>(</rp><rt>ashita</rt><rp>)</rp>
                             </ruby>
                         </p>
                     </section>
+                    <section class="panel panel-box" id="panel-todo">
+                        <h3>
+                            Todo
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-todo">todo</dfn> is a panel marked as incomplete by the page author.
+                        </p>
+                        <p>
+                            Its colors are palette-independent and derive from the 🚧 Twemoji.
+                        </p>
+                        <div class="panel panel todo">
+                            🚧 Write a description for this element.
+                        </div>
+                        <div class="panel panel-box todo">
+                            🚧 Write a description for this element.
+                        </div>
+                        <div class="panel panel-dialog todo">
+                            🚧 Write a description for this element.
+                        </div>
+                        <div class="panel panel-parenthesis todo">
+                            🚧 Write a description for this element.
+                        </div>
+                    </section>
                 </section>
-                <div class="split">
-                </div>
+                <section class="chapter" id="chapter-colors">
+                    <h2>
+                        Colors
+                    </h2>
+                    <section class="panel panel-box">
+                        <h3>
+                            Bluelib color
+                        </h3>
+                        <p>
+                            All Bluelib elements get their <dfn id="dfn-bluelib-color">Bluelib color</dfn> dynamically from the <code>--bluelib-color-*</code> CSS variables, and then use it to <b>paint themselves</b>.
+                        </p>
+                        <p>
+                            It is possible to change this color to alter the color of not only text, but panels and other elements as well!
+                        </p>
+                    </section>
+                    <div class="chapter-forcewrap"></div>
+                    <section class="panel panel-box color-red" id="panel-red">
+                        <h3>
+                            Red
+                        </h3>
+                        <p>
+                            This is a <b>red</b> box.
+                        </p>
+                    </section>
+                    <section class="panel panel-box color-orange" id="panel-orange">
+                        <h3>
+                            Orange
+                        </h3>
+                        <p>
+                            This is an <b>orange</b> box.
+                        </p>
+                    </section>
+                    <section class="panel panel-box color-yellow" id="panel-yellow">
+                        <h3>
+                            Yellow
+                        </h3>
+                        <p>
+                            This is a <b>yellow</b> box.
+                        </p>
+                    </section>
+                    <section class="panel panel-box color-lime" id="panel-lime">
+                        <h3>
+                            Lime
+                        </h3>
+                        <p>
+                            This is a <b>lime</b> box.
+                        </p>
+                    </section>
+                    <section class="panel panel-box color-cyan" id="panel-cyan">
+                        <h3>
+                            Cyan
+                        </h3>
+                        <p>
+                            This is a <b>cyan</b> box.
+                        </p>
+                    </section>
+                    <section class="panel panel-box color-blue" id="panel-blue">
+                        <h3>
+                            Blue
+                        </h3>
+                        <p>
+                            This is a <b>blue</b> box.
+                        </p>
+                    </section>
+                    <section class="panel panel-box color-magenta" id="panel-magenta">
+                        <h3>
+                            Magenta
+                        </h3>
+                        <p>
+                            This is a <b>magenta</b> box.
+                        </p>
+                    </section>
+                    <section class="panel panel-box color-gray" id="panel-gray">
+                        <h3>
+                            Gray
+                        </h3>
+                        <p>
+                            This is a <b>gray</b> box.
+                        </p>
+                    </section>
+                    <div class="chapter-forcewrap"></div>
+                    <section class="panel panel-box" id="panel-white" style="--bluelib-color-r: 255; --bluelib-color-g: 255; --bluelib-color-b: 255;">
+                        <h3>
+                            White
+                        </h3>
+                        <p>
+                            This box has a custom color: it is always <b>white</b>!
+                        </p>
+                    </section>
+                    <section class="panel panel-box" id="panel-black" style="--bluelib-color-r: 0; --bluelib-color-g: 0; --bluelib-color-b: 0;">
+                        <h3>
+                            Black
+                        </h3>
+                        <p>
+                            This box has a custom color: it is always <b>black</b>!
+                        </p>
+                    </section>
+                </section>
             </article>
         </main>
     </div>

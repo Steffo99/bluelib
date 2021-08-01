@@ -516,14 +516,18 @@
   --bluelib-color-b: var(--bluelib-download-b);
   text-decoration-style: solid;
 }
-.bluelib .ruby {
-  font-size: xx-large;
-}
 .bluelib .ruby-parenthesis {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
 .bluelib .ruby-text {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.6);
+}
+.bluelib .todo {
+  background-color: #292F33;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 204;
+  --bluelib-color-b: 77;
+  border-color: #FFCC4D;
 }
 .bluelib .color-red {
   --bluelib-color-r: var(--bluelib-red-r);

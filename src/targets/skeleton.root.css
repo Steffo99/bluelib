@@ -2200,12 +2200,6 @@ body .anchor-download,
   --bluelib-color-b: var(--bluelib-download-b);
   text-decoration-style: solid;
 }
-body ruby,
-.bluelib ruby,
-body .ruby,
-.bluelib .ruby {
-  font-size: xx-large;
-}
 body rp,
 .bluelib rp,
 body .ruby-parenthesis,
@@ -2217,6 +2211,14 @@ body rt,
 body .ruby-text,
 .bluelib .ruby-text {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.6);
+}
+body .todo,
+.bluelib .todo {
+  background-color: #292F33;
+  --bluelib-color-r: 255;
+  --bluelib-color-g: 204;
+  --bluelib-color-b: 77;
+  border-color: #FFCC4D;
 }
 body .color-red,
 .bluelib .color-red {
