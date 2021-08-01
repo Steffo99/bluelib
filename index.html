@@ -14,596 +14,650 @@
 </head>
 <body class="theme-bluelib">
     <hgroup>
-        <h1>
-            Bluelib 2
-        </h1>
-        <h2>
-            RYG style, in pure CSS
-        </h2>
     </hgroup>
     <div class="layout layout-threecol">
         <main class="main layout-threecol-center">
-            <section>
-                <h3>
-                    Welcome to Bluelib!
-                </h3>
-                <p>
-                    This is an example page containing most of the elements present in Bluelib (layouts are obviously missing).
-                </p>
-                <p>
-                    This page uses the <code>royalblue.root.css</code> target; other targets are available and may have a different look and/or selector names.
-                </p>
-                <p>
-                    To see how an element is constructed, <kbd>Right Click</kbd> it and then press <kbd>Inspect Element</kbd>.
-                </p>
-                <img class="image-limited" src="https://i.imgur.com/M8sFJeO.png" alt="A screenshot showing how to Inspect Element.">
-            </section>
-            <h2>
-                Panels
-            </h2>
-            <section>
-                <h3>
-                    Box
-                </h3>
-                <p>
-                    This is a box.
-                </p>
-                <p>
-                    It usually represents a section of text about a topic described by the title above.
-                </p>
-            </section>
-            <blockquote>
-                <h3>
-                    Blockquote
-                </h3>
-                <p>
-                    This is a blockquote.
-                </p>
-                <p>
-                    Blockquotes are specially formatted panels, useful for quotes!
-                </p>
-            </blockquote>
-            <aside>
-                <h3>
-                    Aside
-                </h3>
-                <p>
-                    This is an aside.
-                </p>
-                <p>
-                    Asides are panels with no border and smaller text, useful to describe less important things while inside
-                    a panel.
-                </p>
-            </aside>
-            <section>
-                <h3>
-                    Nesting panels
-                </h3>
-                <p>
-                    Panels can be nested, as you are about to see:
-                </p>
-                <section>
-                    <p>
-                        Nested panels are exactly as regular panels, and they can have text as well.
-                    </p>
-                    <section>
+            <article>
+                <h1>
+                    Bluelib 2
+                </h1>
+                <section class="chapter">
+                    <h2>
+                        Panels
+                    </h2>
+                    <section class="panel" id="panel-panel">
+                        <h3>
+                            Panel
+                        </h3>
                         <p>
-                            How deep does the rabbit hole go?
+                            A <dfn id="dfn-panel">panel</dfn> is a <b>base container</b> styled with a <b>slight background color</b> and no borders.
                         </p>
-                        <blockquote>
-                            <b><a href="https://www.youtube.com/watch?v=G2jUhnCU9iA" target="_blank">PANELCEPTION.</a></b>
-                            <aside>
-                                BWOON.
-                                <aside>
-                                    BWOON.
-                                    <aside>
+                    </section>
+                    <section class="panel panel-box" id="panel-box">
+                        <h3>
+                            Box
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-box">box</dfn> panel is a <b>generic container</b> styled as a <b>box with borders on all four sides</b>.
+                        </p>
+                    </section>
+                    <section class="panel panel-dialog" id="panel-dialog">
+                        <h3>
+                            Dialog
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-dialog">dialog</dfn> panel is a <b>container for quotes or dialogues</b>, styled as a box with only the left border.
+                        </p>
+                    </section>
+                    <section class="panel panel-parenthesis" id="panel-parenthesis">
+                        <h3>
+                            Parenthesis
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-parenthesis">parenthesis</dfn> panel is a <b>container for text tangentially related to the rest of the document</b>, styled as a box with smaller text and no borders.
+                        </p>
+                    </section>
+                    <div class="chapter-forcewrap"></div>
+                    <section class="panel panel-box" id="panel-dimensions">
+                        <h3>
+                            Dimensions
+                        </h3>
+                        <p>
+                            Panels always have a <b><code>8px</code> margin</b> and <b><code>8px</code> of padding</b>.
+                        </p>
+                        <blockquote class="panel panel-dialog">
+                            Hi! This is me talking to you, the reader!
+                        </blockquote>
+                        <blockquote class="panel panel-dialog">
+                            I'm testing panel dimensions!
+                        </blockquote>
+                        <blockquote class="panel panel-dialog">
+                            See? The margin between these dialog panels is consistent!
+                        </blockquote>
+                    </section>
+                    <section class="panel panel-box" id="panel-nesting">
+                        <h3>
+                            Nesting
+                        </h3>
+                        <p>
+                            Panels of any kind can be <b>infinitely nested</b>.
+                        </p>
+                        <section class="panel">
+                            <p>
+                                Like this!
+                            </p>
+                            <section class="panel">
+                                <p>
+                                    How deep does this rabbit hole go?
+                                </p>
+                                <section class="panel">
+                                    <p>
                                         BWOON.
-                                    </aside>
-                                </aside>
-                            </aside>
+                                    </p>
+                                    <section class="panel">
+                                        <p>
+                                            BWOON.
+                                        </p>
+                                        <section class="panel">
+                                            <p>
+                                                BWOON.
+                                            </p>
+                                            <section class="panel">
+                                                <em>
+                                                    <a href="https://www.youtube.com/watch?v=G2jUhnCU9iA" target="_blank">
+                                                        PANELCEPTION.
+                                                    </a>
+                                                </em>
+                                            </section>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <section class="chapter" id="chapter-chapters">
+                    <h2>
+                        Chapters
+                    </h2>
+                    <section class="panel panel-box" id="panel-chapter">
+                        <h3>
+                            Chapter
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-chapter">chapter</dfn> is a grouping of an heading and multiple panels containing tightly related information.
+                        </p>
+                        <blockquote class="panel panel-dialog">
+                            You're seeing one right now!
+                        </blockquote>
+                    </section>
+                    <section class="panel panel-box" id="panel-panelheights">
+                        <h3>
+                            Panel heights
+                        </h3>
+                        <p>
+                            In a chapter, all panels on a row <b>inherit the height of the tallest panel in it</b>, so that no empty space is left.
+                        </p>
+                    </section>
+                    <section class="panel panel-box" id="panel-autowrap">
+                        <h3>
+                            Auto-wrapping
+                        </h3>
+                        <p>
+                            Additionaly, panels in a chapter will <b>automatically wrap</b> if their contents won't fit horizontally.
+                        </p>
+                    </section>
+                    <div class="chapter-forcewrap"></div>
+                    <section class="panel panel-box" id="panel-forcewrap">
+                        <h3>
+                            Force-wrapping
+                        </h3>
+                        <p>
+                            You can override the automatic wrapping and manually decide where a chapter should wrap by inserting a <dfn id="dfn-forcewrap">force-wrap</dfn> element where you want the chapter to wrap.
+                        </p>
+                        <section class="panel panel-parenthesis">
+                            Due to technical limitations, panels will have a <b><code>16px</code> vertical margin</b> when a chapter is force-wrapped.
+                        </section>
+                    </section>
+                </section>
+                <section class="chapter" id="chapter-separators">
+                    <h2>
+                        Separators
+                    </h2>
+                    <section class="panel panel-box" id="panel-separator">
+                        <h3>
+                            Separator
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-separator">separator</dfn> is a <b>horizontal line</b> that fills all the horizontal space available on a panel, forcing a line wrap.
+                        </p>
+                        <hr>
+                        <blockquote class="panel panel-dialog">
+                            Top Text
+                        </blockquote>
+                    </section>
+                    <div class="chapter-forcewrap"></div>
+                    <section class="panel panel-box" id="panel-separator-light">
+                        <h3>
+                            Light separator
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-separator-light">light separator</dfn> is a <b>slightly more transparent separator</b>, to be used if the regular color distracts too much from the flow of the text.
+                        </p>
+                        <hr class="separator-light">
+                        <blockquote class="panel panel-dialog">
+                            Bottom Text
+                        </blockquote>
+                    </section>
+                    <section class="panel panel-box" id="panel-separator-heavy">
+                        <h3>
+                            Heavy separator
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-separator-heavy">heavy separator</dfn> is a <b>non-transparent separator</b>, to be used if the regular color isn't apparent enough.
+                        </p>
+                        <hr class="separator-heavy">
+                        <blockquote class="panel panel-dialog">
+                            Bottom Text 2: Electric Boogaloo
                         </blockquote>
                     </section>
                 </section>
-            </section>
-            <section>
-                <h3>
-                    Panel margins
-                </h3>
-                <p>
-                    In most cases, panels adjust their margins automatically.
-                </p>
-                <p>
-                    Here's what three blockquotes next to each other look like:
-                </p>
-                <blockquote>
-                    <p>
-                        Snake?
-                    </p>
-                </blockquote>
-                <blockquote>
-                    <p>
-                        Snake!
-                    </p>
-                </blockquote>
-                <blockquote>
-                    <p>
-                        SNAAAAKE!!!
-                    </p>
-                </blockquote>
-            </section>
-            <h2>
-                Splits
-            </h2>
-            <section>
-                <h3>
-                    Split
-                </h3>
-                <p>
-                    You can split panels into multiple columns.
-                </p>
-                <div class="split">
-                    <section>
-                        <h3>Left</h3>
-                    </section>
-                    <section>
-                        <h3>Right</h3>
-                    </section>
-                </div>
-            </section>
-            <section>
-                <h3>
-                    Split heights
-                </h3>
-                <div class="split">
-                    <section>
+                <section class="chapter" id="chapter-images">
+                    <h2>
+                        Images
+                    </h2>
+                    <section class="panel panel-box" id="panel-images-default">
                         <h3>
-                            What's happening?
+                            Default
                         </h3>
                         <p>
-                            Split panels inherit the height of the tallest.
+                            Images are <b>automatically centered and resized to fit</b> the panel they are in.
                         </p>
+                        <img src="https://i.imgur.com/tpC5y1N.png" alt="Uno reverse card reverses water"/>
                     </section>
-                    <aside>
+                    <div class="chapter-forcewrap"></div>
+                    <section class="panel panel-box" id="panel-limited">
                         <h3>
-                            It's time to waste some space.
+                            Limited
                         </h3>
                         <p>
-                            Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It’s not a story the Jedi would tell you. It’s a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life… He had such a knowledge of the dark side that he could even keep the ones he cared about from dying. The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful… the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic. He could save others from death, but not himself.
+                            Images can be <dfn id="dfn-limited">limited</dfn> to <b>prevent them from taking up too much screen space</b>.
                         </p>
-                    </aside>
-                    <section>
-                        <h3>
-                            Split panel types
-                        </h3>
-                        <p>
-                            As you have just seen, splits can include panels of different types.
-                        </p>
+                        <div class="chapter">
+                            <section class="panel panel-box">
+                                <h3>
+                                    Half
+                                </h3>
+                                <p>
+                                    The following image has a limit of half the vertical viewport:
+                                </p>
+                                <img class="image-limit-half" src="https://i.redd.it/0b2r669b73f41.jpg" alt="USB key in a bottle"/>
+                            </section>
+                            <section class="panel panel-box">
+                                <h3>
+                                    Quarter
+                                </h3>
+                                <p>
+                                    The following image has a limit of a quarter of the vertical viewport:
+                                </p>
+                                <img class="image-limit-quarter" src="https://i.redd.it/0b2r669b73f41.jpg" alt="USB key in a bottle"/>
+                            </section>
+                        </div>
                     </section>
-                </div>
-            </section>
-            <section>
-                <h3>
-                    Wrapping
-                </h3>
-                <p>
-                    Splits will automatically wrap if one of their contents won't fit on the screen.
-                </p>
-                <div class="split">
-                    <section>
-                        <h3>First</h3>
-                    </section>
-                    <section>
-                        <h3>Second</h3>
-                    </section>
-                    <section>
-                        <h3>Third</h3>
-                    </section>
-                    <section>
-                        <h3>Fourth</h3>
-                    </section>
-                    <section>
-                        <h3>Fifth</h3>
-                    </section>
-                    <section>
-                        <h3>Sixth</h3>
-                    </section>
-                    <section>
-                        <h3>Seventh</h3>
-                    </section>
-                    <section>
-                        <h3>Eigth</h3>
-                    </section>
-                    <section>
-                        <h3>Ninth</h3>
-                    </section>
-                    <section>
-                        <h3>Tenth</h3>
-                    </section>
-                    <section>
-                        <h3>Eleventh</h3>
-                    </section>
-                    <section>
-                        <h3>Twelfth</h3>
-                    </section>
-                    <section>
-                        <h3>Thirtheenth</h3>
-                    </section>
-                </div>
-            </section>
-            <section>
-                <h3>
-                    Force-wrapping
-                </h3>
-                <p>
-                    You can manually force a split to wrap, fixing the vertical gap between the panels.
-                </p>
-                <div class="split">
-                    <section>
-                        <h3>First</h3>
-                    </section>
-                    <section>
-                        <h3>Second</h3>
-                    </section>
-                    <section>
-                        <h3>Third</h3>
-                    </section>
-                    <section>
-                        <h3>Fourth</h3>
-                    </section>
-                    <div class="split-forcewrap"></div>
-                    <section>
-                        <h3>Fifth</h3>
-                    </section>
-                    <section>
-                        <h3>Sixth</h3>
-                    </section>
-                    <section>
-                        <h3>Seventh</h3>
-                    </section>
-                    <div class="split-forcewrap"></div>
-                    <section>
-                        <h3>Eigth</h3>
-                    </section>
-                    <section>
-                        <h3>Ninth</h3>
-                    </section>
-                    <div class="split-forcewrap"></div>
-                    <section>
-                        <h3>Tenth</h3>
-                    </section>
-                </div>
-            </section>
-            <h2>
-                Separators
-            </h2>
-            <section>
-                <h3>
-                    Separator
-                </h3>
-                <p>
-                    Bluelib provides separators, horizontal lines that can be used to separate elements.
-                </p>
-                <hr>
-                <p>
-                    That was one of them.
-                </p>
-            </section>
-            <div class="split">
-                <section>
-                    <h3>
-                        Light separator
-                    </h3>
-                    <p>
-                        A lighter separator is available, if the regular color is too much distracting.
-                    </p>
-                    <hr class="separator-light">
-                    <p>
-                        That was one of them.
-                    </p>
                 </section>
-                <section>
-                    <h3>
-                        Heavy separator
-                    </h3>
-                    <p>
-                        A heavier separator is available, if the regular color isn't apparent enough.
-                    </p>
-                    <hr class="separator-heavy">
-                    <p>
-                        That was one of them.
-                    </p>
-                </section>
-            </div>
-            <h2>
-                Images
-            </h2>
-            <section>
-                <h3>
-                    Default images
-                </h3>
-                <p>
-                    Bluelib centers and automatically resizes images to fit the panel they are contained in.
-                </p>
-                <img src="https://i.imgur.com/tpC5y1N.png" alt="Uno reverse card reverses water"/>
-            </section>
-            <section>
-                <h3>
-                    Limited images
-                </h3>
-                <p>
-                    Images can be "limited", so that they never occupy too much screen real estate, especially if they're very tall.
-                </p>
-                <div class="split">
-                    <section>
-                        <h3>
-                            Half
-                        </h3>
-                        <p>
-                            The following image has a limit of half the vertical viewport:
-                        </p>
-                        <img class="image-limit-half" src="https://i.redd.it/0b2r669b73f41.jpg" alt="USB key in a bottle"/>
-                    </section>
-                    <section>
-                        <h3>
-                            Quarter
-                        </h3>
-                        <p>
-                            The following image has a limit of a quarter of the vertical viewport:
-                        </p>
-                        <img class="image-limit-quarter" src="https://i.redd.it/0b2r669b73f41.jpg" alt="USB key in a bottle"/>
-                    </section>
-                </div>
-            </section>
-            <h2>
-                Status
-            </h2>
-            <section>
-                <h3>
-                    Status
-                </h3>
-                <p>
-                    Status are classes that can be applied to elements to mark some special interaction property.
-                </p>
-                <div class="split">
-                    <section class="status-disabled">
+                <section class="chapter" id="chapter-status">
+                    <h2>
+                        Status
+                    </h2>
+                    <section class="panel panel-box" id="panel-disabled">
                         <h3>
                             Disabled
                         </h3>
                         <p>
-                            Disabled elements appear transparent, non-interactable and display a <code>not-allowed</code> cursor if hovered.
+                            An element can be <dfn id="dfn-disabled">disabled</dfn> to make it <b>partially transparent</b>, <b>non-interactable</b> and <b>displaying the <code>not-allowed</code> cursor</b> when hovered.
                         </p>
+                        <p>
+                            Any element, from a <code>&lt;span&gt;</code> to a chapter, can be disabled.
+                        </p>
+                        <section class="panel panel-dialog status-disabled">
+                            Please re-enable me, I did nothing wrong! I just said "AMOGU—"
+                        </section>
                     </section>
-                </div>
-            </section>
-            <h2>
-                Forms
-            </h2>
-            <div class="split">
-                <section>
-                    <h3>
+                </section>
+                <section class="chapter" id="chapter-inputs">
+                    <h2>
                         Inputs
-                    </h3>
-                    <form>
-                        <label for="input-text">Text</label>
-                        <input id="input-text" type="text" placeholder="All fields have a customizable placeholder" required/>
-                        <label for="input-password">Password</label>
-                        <input id="input-password" type="password" placeholder="Field type determines how input is displayed" required/>
-                        <label for="input-phone">Phone</label>
-                        <input id="input-phone" type="tel" placeholder="Optional fields have italic text"/>
-                        <label for="input-fax">Fax</label>
-                        <input id="input-fax" type="text" placeholder="Disabled fields have a dashed underline" disabled required/>
-                        <label for="input-size">Shirt size</label>
-                        <select id="input-size" required>
-                            <optgroup label="Smaller">
-                                <option>XXS</option>
-                                <option>XS</option>
-                                <option>S</option>
-                            </optgroup>
-                            <option>M</option>
-                            <optgroup label="Larger">
-                                <option>L</option>
-                                <option>XL</option>
-                                <option>XXL</option>
-                            </optgroup>
-                        </select>
-                        <label for="input-colors">Colors</label>
-                        <select id="input-colors" multiple required>
-                            <option>Red</option>
-                            <option>Yellow</option>
-                            <option>Green</option>
-                            <optgroup label="Blues">
-                                <option>Blue</option>
-                                <option>Purple</option>
-                                <option>Cyan</option>
-                            </optgroup>
-                        </select>
-                        <div class="form-row">
-                            <input id="input-reset-1" type="reset" value="Reset"/>
-                            <input id="input-submit-1" type="submit" value="Submit"/>
-                        </div>
-                    </form>
+                    </h2>
+                    <section class="panel panel-box">
+                        <h3>
+                            Input
+                        </h3>
+                        <p>
+                            An <dfn id="dfn-input">input</dfn> is an interactive element that allows the reader of the page to interact with it.
+                        </p>
+                        <p>
+                            They come in multiple kinds:
+                        </p>
+                        <section class="chapter">
+                            <section class="panel panel-box">
+                                <h3>
+                                    Field
+                                </h3>
+                                <p>
+                                    A <dfn id="dfn-input-field">field</dfn> is an input where the user can <b>insert text</b> with their keyboard.
+                                </p>
+                                <!--suppress HtmlFormInputWithoutLabel -->
+                                <input type="text" placeholder="This is called a placeholder, by the way."/>
+                            </section>
+                            <section class="panel panel-box">
+                                <h3>
+                                    Select
+                                </h3>
+                                <p>
+                                    A <dfn id="dfn-input-select">select</dfn> is an input where the user can select <b>one between multiple options</b>.
+                                </p>
+                                <!--suppress HtmlFormInputWithoutLabel -->
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <optgroup label="3">
+                                        <option>3.1</option>
+                                        <option>3.2</option>
+                                        <option>3.3</option>
+                                    </optgroup>
+                                </select>
+                            </section>
+                            <div class="chapter-forcewrap"></div>
+                            <section class="panel panel-box">
+                                <h3>
+                                    Area
+                                </h3>
+                                <p>
+                                    A <dfn id="dfn-input-area">area</dfn> is a <b>resizable</b> input where the user can <b>insert multiple lines of text</b> with their keyboard.
+                                </p>
+                                <!--suppress HtmlFormInputWithoutLabel -->
+                                <textarea placeholder="Write something here!"></textarea>
+                            </section>
+                            <section class="panel panel-box">
+                                <h3>
+                                    Multiselect
+                                </h3>
+                                <p>
+                                    A <dfn id="dfn-input-multiselect">multiselect</dfn> is an input where the user can select <b>many options from a list</b>.
+                                </p>
+                                <!--suppress HtmlFormInputWithoutLabel -->
+                                <select multiple>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <optgroup label="3">
+                                        <option>3.1</option>
+                                        <option>3.2</option>
+                                        <option>3.3</option>
+                                    </optgroup>
+                                </select>
+                            </section>
+                            <div class="chapter-forcewrap"></div>
+                            <section class="panel panel-box">
+                                <h3>
+                                    Radio
+                                </h3>
+                                <p>
+                                    A <dfn id="dfn-input-radio">radio</dfn> is an input which the user can <b>either select or not</b>, deselecting the other radios with the same name.
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="input-radio-example"/> 1
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="input-radio-example"/> 2
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="input-radio-example"/> 3
+                                    </label>
+                                </p>
+                            </section>
+                            <section class="panel panel-box">
+                                <h3>
+                                    Checkbox
+                                </h3>
+                                <p>
+                                    A <dfn id="dfn-input-checkbox">checkbox</dfn> is an input which the user can <b>either select or not</b>.
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="checkbox" name="input-checkbox-example"/> 1
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="checkbox" name="input-checkbox-example"/> 2
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="checkbox" name="input-checkbox-example"/> 3
+                                    </label>
+                                </p>
+                            </section>
+                            <div class="chapter-forcewrap"></div>
+                            <section class="panel panel-box">
+                                <h3>
+                                    Button
+                                </h3>
+                                <p>
+                                    A <dfn id="dfn-input-button">button</dfn> is an input which the user can <b>interact with to trigger a reaction</b>.
+                                </p>
+                                <p>
+                                    <button>
+                                        Do nothing
+                                    </button>
+                                </p>
+                            </section>
+                        </section>
+                    </section>
                 </section>
-                <section>
-                    <h3>
-                        Groups
-                    </h3>
-                    <p>
-                        Form inputs can be grouped together.
-                    </p>
-                    <form>
-                        <label for="input-mood">Mood</label>
-                        <div id="input-mood" class="form-group">
-                            <label>
-                                <input type="radio" name="input-mood" value="happy"/>
-                                Happy
-                            </label>
-                            <label>
-                                <input type="radio" name="input-mood" value="sad"/>
-                                Sad
-                            </label>
-                            <label>
-                                <input type="radio" name="input-mood" value="angry"/>
-                                Angry
-                            </label>
-                        </div>
-                    </form>
-                    <p>
-                        They automatically wrap if the inputs don't fit on a single line.
-                    </p>
-                    <form>
-                        <label for="input-pets">Pets</label>
-                        <div id="input-pets" class="form-group">
-                            <label>
-                                <input type="checkbox" name="input-pets" value="cats"/>
-                                Cats
-                            </label>
-                            <label>
-                                <input type="checkbox" name="input-pets" value="dogs"/>
-                                Dogs
-                            </label>
-                            <label>
-                                <input type="checkbox" name="input-pets" value="sneks"/>
-                                Sneks
-                            </label>
-                            <label>
-                                <input type="checkbox" name="input-pets" value="bunnies"/>
-                                Bunnies
-                            </label>
-                            <label>
-                                <input type="checkbox" name="input-pets" value="frogs"/>
-                                Frogs
-                            </label>
-                            <label>
-                                <input type="checkbox" name="input-pets" value="ants"/>
-                                Ants
-                            </label>
-                            <label>
-                                <input type="checkbox" name="input-pets" value="parrots"/>
-                                Parrots
-                            </label>
-                        </div>
-                    </form>
-                    <p>
-                        Labels can be made to fill the whole line, forcing a wrap.
-                    </p>
-                    <form>
-                        <label for="input-roman">Fav. roman numeral</label>
-                        <div id="input-roman" class="form-group">
-                            <label class="form-group-row">
-                                <input type="radio" name="input-roman" value="i" required/>
-                                I (1)
-                            </label>
-                            <label class="form-group-row">
-                                <input type="radio" name="input-roman" value="v" required/>
-                                V (5)
-                            </label>
-                            <label class="form-group-row">
-                                <input type="radio" name="input-roman" value="x" required/>
-                                X (10)
-                            </label>
-                            <label class="form-group-row">
-                                <input type="radio" name="input-roman" value="i" required/>
-                                I (1)
-                            </label>
-                        </div>
-                    </form>
+                <section class="chapter" id="chapter-forms">
+                    <h2>
+                        Forms
+                    </h2>
+                    <section class="panel panel-box">
+                        <h3>
+                            Forms, labels and inputs
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-form">form</dfn> is a grouping of <dfn id="dfn-label">labels</dfn> and <i>inputs</i> with the same purpose, with the <b>former describing what should be entered in the latter</b>.
+                        </p>
+                        <form>
+                            <label for="input-username">Username</label>
+                            <input id="input-username" type="text" placeholder="Required fields have regular text" required/>
+                            <label for="input-phone">Phone</label>
+                            <input id="input-phone" type="tel" placeholder="Optional fields have italic text"/>
+                            <label for="input-fax">Fax</label>
+                            <input id="input-fax" type="text" placeholder="Disabled fields have a dashed underline" disabled required/>
+                            <label for="input-size">Shirt size</label>
+                            <select id="input-size" required>
+                                <optgroup label="Smaller">
+                                    <option>XXS</option>
+                                    <option>XS</option>
+                                    <option>S</option>
+                                </optgroup>
+                                <option>M</option>
+                                <optgroup label="Larger">
+                                    <option>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </optgroup>
+                            </select>
+                            <label for="input-colors">Colors</label>
+                            <select id="input-colors" multiple required>
+                                <option>Red</option>
+                                <option>Yellow</option>
+                                <option>Green</option>
+                                <optgroup label="Blues">
+                                    <option>Blue</option>
+                                    <option>Purple</option>
+                                    <option>Cyan</option>
+                                </optgroup>
+                            </select>
+                        </form>
+                    </section>
+                    <div class="chapter-forcewrap"></div>
+                    <section class="panel panel-box">
+                        <h3>
+                            Form groups
+                        </h3>
+                        <p>
+                            Inputs such as <i>radios</i> or <i>checkboxes</i> should be <em>grouped</em> together when inserted in a form.
+                        </p>
+                        <form>
+                            <label for="input-mood">Current mood</label>
+                            <div id="input-mood" class="form-group">
+                                <label>
+                                    <input type="radio" name="input-mood" value="happy"/>
+                                    Happy
+                                </label>
+                                <label>
+                                    <input type="radio" name="input-mood" value="sad"/>
+                                    Sad
+                                </label>
+                                <label>
+                                    <input type="radio" name="input-mood" value="angry"/>
+                                    Angry
+                                </label>
+                            </div>
+                        </form>
+                        <p>
+                            Groups <b>automatically wrap</b> if the inputs don't fit on a single line.
+                        </p>
+                        <form>
+                            <label for="input-pets">Owned pets</label>
+                            <div id="input-pets" class="form-group">
+                                <label>
+                                    <input type="checkbox" name="input-pets" value="cats"/>
+                                    Cats
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="input-pets" value="dogs"/>
+                                    Dogs
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="input-pets" value="sneks"/>
+                                    Sneks
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="input-pets" value="bunnies"/>
+                                    Bunnies
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="input-pets" value="frogs"/>
+                                    Frogs
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="input-pets" value="ants"/>
+                                    Ants
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="input-pets" value="parrots"/>
+                                    Parrots
+                                </label>
+                            </div>
+                        </form>
+                    </section>
+                    <section class="panel panel-box">
+                        <h3>
+                            Row groups
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-form-groups-row">row group</dfn> is a <b>form group</b> where the <b>inputs are arranged vertically</b> instead of horizontally.
+                        </p>
+                        <form>
+                            <label for="input-roman">Fav. roman numeral</label>
+                            <div id="input-roman" class="form-group">
+                                <label class="form-group-row">
+                                    <input type="radio" name="input-roman" value="i" required/>
+                                    I (1)
+                                </label>
+                                <label class="form-group-row">
+                                    <input type="radio" name="input-roman" value="v" required/>
+                                    V (5)
+                                </label>
+                                <label class="form-group-row">
+                                    <input type="radio" name="input-roman" value="x" required/>
+                                    X (10)
+                                </label>
+                                <label class="form-group-row">
+                                    <input type="radio" name="input-roman" value="i" required/>
+                                    L (50)
+                                </label>
+                            </div>
+                        </form>
+                    </section>
+                    <div class="chapter-forcewrap"></div>
+                    <section class="panel panel-box">
+                        <h3>
+                            Form rows
+                        </h3>
+                        <p>
+                            Forms can also contain <dfn id="dfn-form-row">form rows</dfn>, elements which ignore the form columns and instead <b>take up the whole row</b>.
+                        </p>
+                        <form>
+                            <label for="input-email">Email</label>
+                            <input id="input-email" type="email" placeholder="Enter your email here" required/>
+                            <label for="input-password">Password</label>
+                            <input id="input-password" type="text" placeholder="Enter your password here" required/>
+                            <div class="form-row">
+                                <blockquote class="panel panel-parenthesis">
+                                    By logging in, you agree to sell your soul to the devil and to be tracked endlessly by all the corporations in the world.
+                                </blockquote>
+                            </div>
+                            <label for="input-consent">Consent</label>
+                            <div id="input-consent" class="form-group">
+                                <label class="form-group-row">
+                                    <input type="checkbox" name="input-consent" value="accept"/>
+                                    I accept the conditions detailed above
+                                </label>
+                            </div>
+                            <div class="form-row">
+                                <input id="input-reset-2" type="reset" value="Reset"/>
+                                <input id="input-submit-2" type="submit" value="Submit"/>
+                            </div>
+                        </form>
+                    </section>
                 </section>
-            </div>
-            <h2>
-                Various elements
-            </h2>
-            <div class="split">
-                <section>
+                <section class="chapter">
+                    <h2>
+                        Common elements
+                    </h2><section class="panel panel-box">
                     <h3>
                         Headings
                     </h3>
                     <p>
-                        Bluelib styles up to 6 levels of headings:
+                        An <dfn id="dfn-heading">heading</dfn> is the <b>title</b> of an article, chapter or panel.
                     </p>
-                    <h1>Level-1</h1>
-                    <h2>Level-2</h2>
-                    <h3>Level-3</h3>
-                    <h4>Level-4</h4>
-                    <h5>Level-5</h5>
-                    <h6>Level-6</h6>
-                    <p>
+                    <section class="panel panel-box">
+                        <h1>Level-1</h1>
+                        <h2>Level-2</h2>
+                        <h3>Level-3</h3>
+                        <h4>Level-4</h4>
+                        <h5>Level-5</h5>
+                        <h6>Level-6</h6>
+                    </section>
+                    <blockquote class="panel panel-dialog">
                         Generally, panels look nicer if they start with a level-3 heading, but you may use whichever you want, as Bluelib will automatically handle the margin.
-                    </p>
+                    </blockquote>
                 </section>
-                <section>
-                    <h3>
-                        Anchors
-                    </h3>
-                    <p>
-                        Bluelib styles anchors, clickable links to different places:
-                    </p>
-                    <blockquote>
-                        This is an <a href="https://example.org" target="_blank">example</a>.
-                    </blockquote>
-                    <p>
-                        Visited anchors will have a different color.
-                    </p>
-                    <blockquote>
-                        Take me to <a href="https://wikipedia.org" target="_blank">Wikipedia</a>!
-                    </blockquote>
-                    <p>
-                        Anchors with no destination have a different style, so that the page author can notice and fix them.
-                    </p>
-                    <blockquote>
-                        <a>This link</a> leads nowhere.
-                    </blockquote>
-                    <p>
-                        Anchors which start a download or open an external program will have a different style:
-                    </p>
-                    <blockquote>
-                        Download <a href="magnet:?xt=urn:btih:377852690518c09acdcdd970068a5eaa47dd0a9d&dn=gimp-2.10.24-setup-3.exe&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&tr=https%3a%2f%2fashrise.com%3a443%2fphoenix%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&ws=https%3a%2f%2fartfiles.org%2fgimp.org%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fdownload.gimp.org%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.acc.umu.se%2fpub%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.cc.uoc.gr%2fmirrors%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.fau.de%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.gwdg.de%2fpub%2fmisc%2fgrafik%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.icm.edu.pl%2fpub%2fgraphics%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.lysator.liu.se%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.snt.utwente.nl%2fpub%2fsoftware%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fgimp.ip-connect.info%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirror.jaleco.com%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirror.klaus-uwe.me%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirror.umd.edu%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirrors.dotsrc.org%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirrors.syringanetworks.net%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirrors.ukfast.co.uk%2fsites%2fgimp.org%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirrors.xmission.com%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fwww.mirrorservice.org%2fsites%2fftp.gimp.org%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fwww.nic.funet.fi%2fpub%2fmirrors%2fftp.gimp.org%2fv2.10%2fwindows%2f">
+                    <section class="panel panel-box">
+                        <h3>
+                            Anchors
+                        </h3>
+                        <p>
+                            An <dfn id="dfn-anchor">anchor</dfn> is a part of text which can be clicked to move to a different page or part of page.
+                        </p>
+                        <section class="panel panel-box">
+                            This is an <a href="https://example.org" target="_blank">example anchor</a>.
+                        </section>
+                        <p>
+                            Visited anchors have a slightly different color.
+                        </p>
+                        <section class="panel panel-box">
+                            Take me to <a href="https://wikipedia.org" target="_blank">Wikipedia</a>!
+                        </section>
+                        <p>
+                            Anchors with no destination are colored differently, so that the page author can notice and fix them.
+                        </p>
+                        <section class="panel panel-box">
+                            <a>This link</a> leads nowhere.
+                        </section>
+                        <p>
+                            Anchors which start a download or open an external program have also have slightly different color.
+                        </p>
+                        <section class="panel panel-box">
+                            Download <!--suppress HtmlUnknownTarget -->
+                            <a href="magnet:?xt=urn:btih:377852690518c09acdcdd970068a5eaa47dd0a9d&dn=gimp-2.10.24-setup-3.exe&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&tr=https%3a%2f%2fashrise.com%3a443%2fphoenix%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&ws=https%3a%2f%2fartfiles.org%2fgimp.org%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fdownload.gimp.org%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.acc.umu.se%2fpub%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.cc.uoc.gr%2fmirrors%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.fau.de%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.gwdg.de%2fpub%2fmisc%2fgrafik%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.icm.edu.pl%2fpub%2fgraphics%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.lysator.liu.se%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fftp.snt.utwente.nl%2fpub%2fsoftware%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fgimp.ip-connect.info%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirror.jaleco.com%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirror.klaus-uwe.me%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirror.umd.edu%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirrors.dotsrc.org%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirrors.syringanetworks.net%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirrors.ukfast.co.uk%2fsites%2fgimp.org%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fmirrors.xmission.com%2fgimp%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fwww.mirrorservice.org%2fsites%2fftp.gimp.org%2fpub%2fgimp%2fv2.10%2fwindows%2f&ws=https%3a%2f%2fwww.nic.funet.fi%2fpub%2fmirrors%2fftp.gimp.org%2fv2.10%2fwindows%2f">
                             GIMP 2.10.24
                         </a>
-                    </blockquote>
+                        </section>
+                    </section>
                 </section>
-            </div>
-            <h2>
-                Annotations
-            </h2>
-            <div class="split">
-                <section>
-                    <h3>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby">Ruby text</a>
-                    </h3>
-                    <p>
-                        Ruby text is made slightly transparent, to make the main text more evident.
-                    </p>
-                    <p>
-                        <ruby>
-                            Mo <rp>/</rp><rt>ˈmɒ</rt><rp>/</rp>
-                            de <rp>/</rp><rt>dɪ</rt><rp>/</rp>
-                            na <rp>/</rp><rt>nə</rt><rp>/</rp>
-                        </ruby>
-                    </p>
-                    <p>
-                        <ruby>
-                            漢 <rp>(</rp><rt>kan</rt><rp>)</rp>
-                            字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-                        </ruby>
-                    </p>
-                    <p>
-                        <ruby>
-                            明日 <rp>(</rp><rt>ashita</rt><rp>)</rp>
-                        </ruby>
-                    </p>
+                <section class="chapter">
+                    <h2>
+                        Annotations
+                    </h2>
+                    <section class="panel panel-box">
+                        <h3>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby">Ruby text</a>
+                        </h3>
+                        <p>
+                            Ruby text is made slightly transparent, to make the main text more evident.
+                        </p>
+                        <p>
+                            <ruby>
+                                Mo <rp>/</rp><rt>ˈmɒ</rt><rp>/</rp>
+                                de <rp>/</rp><rt>dɪ</rt><rp>/</rp>
+                                na <rp>/</rp><rt>nə</rt><rp>/</rp>
+                            </ruby>
+                        </p>
+                        <p>
+                            <ruby>
+                                漢 <rp>(</rp><rt>kan</rt><rp>)</rp>
+                                字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+                            </ruby>
+                        </p>
+                        <p>
+                            <ruby>
+                                明日 <rp>(</rp><rt>ashita</rt><rp>)</rp>
+                            </ruby>
+                        </p>
+                    </section>
                 </section>
-            </div>
+                <div class="split">
+                </div>
+            </article>
         </main>
-        <nav class="layout-threecol-left">
-            <section>
-                I'm wrong. :(
-            </section>
-        </nav>
-        <nav class="layout-threecol-right">
-            <section>
-                I'm right! ;P
-            </section>
-        </nav>
     </div>
 </body>
 </html>

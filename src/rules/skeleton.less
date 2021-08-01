@@ -449,49 +449,74 @@
     }
 
     // A panel which encloses its contents with a quote-like border.
-    @{panel-blockquote} {
+    @{panel-dialog} {
         border-radius: 4px;
         border-width: 0 0 0 2px;
         border-style: solid;
     }
 
     // A panel with no border whose contents are made smaller.
-    @{panel-aside} {
+    @{panel-parenthesis} {
         border-width: 0;
         font-size: smaller;
     }
 
     //</editor-fold>
 
-    /// ===== Splits =====
-    /// A split is an element which splits everything contained inside in multiple columns of equal width.
+    /// ===== Chapters =====
+    /// A chapter is an element represents a larger section of text.
 
-    //<editor-fold desc="Rules: Splits">
+    //<editor-fold desc="Rules: Chapters">
 
-    @{split} {
+    @{chapter} {
         display: flex;
         flex-wrap: wrap;
-        gap: 4px 8px;
-        justify-content: center;
+        gap: 8px;
+        justify-content: stretch;
+        align-items: stretch;
+
+        margin: 8px 0;
+
+        > @{all} {
+            // Allow all children to grow
+            flex-grow: 1;
+            // But not to shrink
+            flex-shrink: 0;
+        }
+
+        @{HEADING} {
+            // Headings should fill up all horizontal space available and force a wrap
+            flex-basis: 100%;
+
+            // They should have a bit of margin to separate them from the other elements
+            margin-top: 0.2rem;
+            margin-bottom: 0.2rem;
+
+            // Especially if they are the first or the last children of a chapter, where they have to separate the chapters from each other
+            &:first-child {
+                margin-top: 1rem;
+            }
+            &:last-child {
+                margin-bottom: 1rem;
+            }
+        }
 
         > @{panel} {
-            // Add a horizontal margin to panels
+            // Remove the innate margin panels have
             margin: 0;
-        }
-
-        // Allow contained elements to grow
-        > @{all} {
-            flex-grow: 1;
-            flex-shrink: 0;
+            // Have panels split the free space in equal parts
             flex-basis: 0;
         }
+
     }
 
     // Force a split to wrap
-    @{split-forcewrap} {
+    @{chapter-forcewrap} {
         flex-grow: 0;
         flex-shrink: 0;
         flex-basis: 100%;
+
+        position: relative;
     }
 
     //</editor-fold>
@@ -567,6 +592,9 @@
     @{input} {
         // Disable the browser font override
         font: inherit;
+
+        // Use the maximum width possible
+        width: 100%;
 
         // They should have a solid border
         border-style: solid;
@@ -647,6 +675,14 @@
 
         border-width: 0 0 2px 0;
         border-radius: 4px 4px 0 0;
+        padding: 6px;
+    }
+
+    @{input-area} {
+        cursor: text;
+
+        border-width: 0 0 0 2px;
+        border-radius: 0 4px 4px 0;
         padding: 6px;
     }
 
@@ -858,7 +894,6 @@
             grid-column: 2;
             // They should occupy all the available space
             justify-self: stretch;
-            width: 100%;
         }
 
         // Groups are similar to form-inputs, but may contain multiple inputs inside them
@@ -907,6 +942,10 @@
 
             margin-top: 8px;
             margin-bottom: 8px;
+
+            @{panel} {
+                margin: 0;
+            }
         }
     }
 

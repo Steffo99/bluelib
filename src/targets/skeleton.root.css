@@ -160,19 +160,7 @@ body .layout-threecol-right,
   }
 }
 body .panel,
-.bluelib .panel,
-body section,
-.bluelib section,
-body .panel-box,
-.bluelib .panel-box,
-body .panel-blockquote,
-.bluelib .panel-blockquote,
-body blockquote,
-.bluelib blockquote,
-body .panel-aside,
-.bluelib .panel-aside,
-body aside,
-.bluelib aside {
+.bluelib .panel {
   margin: 8px 0;
   padding: 8px;
   width: 100%;
@@ -180,94 +168,105 @@ body aside,
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
 }
 body .panel > *:first-child,
-.bluelib .panel > *:first-child,
-body section > *:first-child,
-.bluelib section > *:first-child,
-body .panel-box > *:first-child,
-.bluelib .panel-box > *:first-child,
-body .panel-blockquote > *:first-child,
-.bluelib .panel-blockquote > *:first-child,
-body blockquote > *:first-child,
-.bluelib blockquote > *:first-child,
-body .panel-aside > *:first-child,
-.bluelib .panel-aside > *:first-child,
-body aside > *:first-child,
-.bluelib aside > *:first-child {
+.bluelib .panel > *:first-child {
   margin-top: 0;
 }
 body .panel > *:last-child,
-.bluelib .panel > *:last-child,
-body section > *:last-child,
-.bluelib section > *:last-child,
-body .panel-box > *:last-child,
-.bluelib .panel-box > *:last-child,
-body .panel-blockquote > *:last-child,
-.bluelib .panel-blockquote > *:last-child,
-body blockquote > *:last-child,
-.bluelib blockquote > *:last-child,
-body .panel-aside > *:last-child,
-.bluelib .panel-aside > *:last-child,
-body aside > *:last-child,
-.bluelib aside > *:last-child {
+.bluelib .panel > *:last-child {
   margin-bottom: 0;
 }
-body section,
-.bluelib section,
 body .panel-box,
 .bluelib .panel-box {
   border-radius: 4px;
   border-width: 2px;
   border-style: solid;
 }
-body .panel-blockquote,
-.bluelib .panel-blockquote,
-body blockquote,
-.bluelib blockquote {
+body .panel-dialog,
+.bluelib .panel-dialog {
   border-radius: 4px;
   border-width: 0 0 0 2px;
   border-style: solid;
 }
-body .panel-aside,
-.bluelib .panel-aside,
-body aside,
-.bluelib aside {
+body .panel-parenthesis,
+.bluelib .panel-parenthesis {
   border-width: 0;
   font-size: smaller;
 }
-body .split,
-.bluelib .split {
+body .chapter,
+.bluelib .chapter {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 8px;
-  justify-content: center;
+  gap: 8px;
+  justify-content: stretch;
+  align-items: stretch;
+  margin: 8px 0;
 }
-body .split > .panel,
-.bluelib .split > .panel,
-body .split section,
-.bluelib .split section,
-body .split .panel-box,
-.bluelib .split .panel-box,
-body .split .panel-blockquote,
-.bluelib .split .panel-blockquote,
-body .split blockquote,
-.bluelib .split blockquote,
-body .split .panel-aside,
-.bluelib .split .panel-aside,
-body .split aside,
-.bluelib .split aside {
-  margin: 0;
-}
-body .split > *,
-.bluelib .split > * {
+body .chapter > *,
+.bluelib .chapter > * {
   flex-grow: 1;
   flex-shrink: 0;
+}
+body .chapter > h1,
+.bluelib .chapter > h1,
+body .chapter > h2,
+.bluelib .chapter > h2,
+body .chapter > h3,
+.bluelib .chapter > h3,
+body .chapter > h4,
+.bluelib .chapter > h4,
+body .chapter > h5,
+.bluelib .chapter > h5,
+body .chapter > h6,
+.bluelib .chapter > h6,
+body .chapter > .heading,
+.bluelib .chapter > .heading {
+  flex-basis: 100%;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+body .chapter > h1:first-child,
+.bluelib .chapter > h1:first-child,
+body .chapter > h2:first-child,
+.bluelib .chapter > h2:first-child,
+body .chapter > h3:first-child,
+.bluelib .chapter > h3:first-child,
+body .chapter > h4:first-child,
+.bluelib .chapter > h4:first-child,
+body .chapter > h5:first-child,
+.bluelib .chapter > h5:first-child,
+body .chapter > h6:first-child,
+.bluelib .chapter > h6:first-child,
+body .chapter > .heading:first-child,
+.bluelib .chapter > .heading:first-child {
+  margin-top: 1rem;
+}
+body .chapter > h1:last-child,
+.bluelib .chapter > h1:last-child,
+body .chapter > h2:last-child,
+.bluelib .chapter > h2:last-child,
+body .chapter > h3:last-child,
+.bluelib .chapter > h3:last-child,
+body .chapter > h4:last-child,
+.bluelib .chapter > h4:last-child,
+body .chapter > h5:last-child,
+.bluelib .chapter > h5:last-child,
+body .chapter > h6:last-child,
+.bluelib .chapter > h6:last-child,
+body .chapter > .heading:last-child,
+.bluelib .chapter > .heading:last-child {
+  margin-bottom: 1rem;
+}
+body .chapter > .panel,
+.bluelib .chapter > .panel {
+  margin: 0;
   flex-basis: 0;
 }
-body .split-forcewrap,
-.bluelib .split-forcewrap {
+body .chapter-forcewrap,
+.bluelib .chapter-forcewrap {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 100%;
+  position: relative;
 }
 body hr,
 .bluelib hr,
@@ -351,6 +350,10 @@ body input[type="url"],
 .bluelib input[type="url"],
 body input[type="week"],
 .bluelib input[type="week"],
+body textarea,
+.bluelib textarea,
+body .input-area,
+.bluelib .input-area,
 body select:not([multiple]),
 .bluelib select:not([multiple]),
 body .input-select,
@@ -378,6 +381,7 @@ body .input-radio,
 body .input,
 .bluelib .input {
   font: inherit;
+  width: 100%;
   border-style: solid;
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
@@ -415,6 +419,10 @@ body input[type="url"][disabled],
 .bluelib input[type="url"][disabled],
 body input[type="week"][disabled],
 .bluelib input[type="week"][disabled],
+body textarea[disabled],
+.bluelib textarea[disabled],
+body .input-area[disabled],
+.bluelib .input-area[disabled],
 body select:not([multiple])[disabled],
 .bluelib select:not([multiple])[disabled],
 body .input-select[disabled],
@@ -473,6 +481,10 @@ body input[type="url"] .status-disabled,
 .bluelib input[type="url"] .status-disabled,
 body input[type="week"] .status-disabled,
 .bluelib input[type="week"] .status-disabled,
+body textarea .status-disabled,
+.bluelib textarea .status-disabled,
+body .input-area .status-disabled,
+.bluelib .input-area .status-disabled,
 body select:not([multiple]) .status-disabled,
 .bluelib select:not([multiple]) .status-disabled,
 body .input-select .status-disabled,
@@ -533,6 +545,10 @@ body input[type="url"]::placeholder,
 .bluelib input[type="url"]::placeholder,
 body input[type="week"]::placeholder,
 .bluelib input[type="week"]::placeholder,
+body textarea::placeholder,
+.bluelib textarea::placeholder,
+body .input-area::placeholder,
+.bluelib .input-area::placeholder,
 body select:not([multiple])::placeholder,
 .bluelib select:not([multiple])::placeholder,
 body .input-select::placeholder,
@@ -594,6 +610,10 @@ body input[type="url"]:hover,
 .bluelib input[type="url"]:hover,
 body input[type="week"]:hover,
 .bluelib input[type="week"]:hover,
+body textarea:hover,
+.bluelib textarea:hover,
+body .input-area:hover,
+.bluelib .input-area:hover,
 body select:not([multiple]):hover,
 .bluelib select:not([multiple]):hover,
 body .input-select:hover,
@@ -656,6 +676,10 @@ body input[type="url"]:hover::placeholder,
 .bluelib input[type="url"]:hover::placeholder,
 body input[type="week"]:hover::placeholder,
 .bluelib input[type="week"]:hover::placeholder,
+body textarea:hover::placeholder,
+.bluelib textarea:hover::placeholder,
+body .input-area:hover::placeholder,
+.bluelib .input-area:hover::placeholder,
 body select:not([multiple]):hover::placeholder,
 .bluelib select:not([multiple]):hover::placeholder,
 body .input-select:hover::placeholder,
@@ -716,6 +740,10 @@ body input[type="url"]:focus,
 .bluelib input[type="url"]:focus,
 body input[type="week"]:focus,
 .bluelib input[type="week"]:focus,
+body textarea:focus,
+.bluelib textarea:focus,
+body .input-area:focus,
+.bluelib .input-area:focus,
 body select:not([multiple]):focus,
 .bluelib select:not([multiple]):focus,
 body .input-select:focus,
@@ -778,6 +806,10 @@ body input[type="url"]:focus::placeholder,
 .bluelib input[type="url"]:focus::placeholder,
 body input[type="week"]:focus::placeholder,
 .bluelib input[type="week"]:focus::placeholder,
+body textarea:focus::placeholder,
+.bluelib textarea:focus::placeholder,
+body .input-area:focus::placeholder,
+.bluelib .input-area:focus::placeholder,
 body select:not([multiple]):focus::placeholder,
 .bluelib select:not([multiple]):focus::placeholder,
 body .input-select:focus::placeholder,
@@ -838,6 +870,10 @@ body input[type="url"][disabled]:hover,
 .bluelib input[type="url"][disabled]:hover,
 body input[type="week"][disabled]:hover,
 .bluelib input[type="week"][disabled]:hover,
+body textarea[disabled]:hover,
+.bluelib textarea[disabled]:hover,
+body .input-area[disabled]:hover,
+.bluelib .input-area[disabled]:hover,
 body select:not([multiple])[disabled]:hover,
 .bluelib select:not([multiple])[disabled]:hover,
 body .input-select[disabled]:hover,
@@ -896,6 +932,10 @@ body input[type="url"] .status-disabled:hover,
 .bluelib input[type="url"] .status-disabled:hover,
 body input[type="week"] .status-disabled:hover,
 .bluelib input[type="week"] .status-disabled:hover,
+body textarea .status-disabled:hover,
+.bluelib textarea .status-disabled:hover,
+body .input-area .status-disabled:hover,
+.bluelib .input-area .status-disabled:hover,
 body select:not([multiple]) .status-disabled:hover,
 .bluelib select:not([multiple]) .status-disabled:hover,
 body .input-select .status-disabled:hover,
@@ -954,6 +994,10 @@ body input[type="url"][disabled]:focus,
 .bluelib input[type="url"][disabled]:focus,
 body input[type="week"][disabled]:focus,
 .bluelib input[type="week"][disabled]:focus,
+body textarea[disabled]:focus,
+.bluelib textarea[disabled]:focus,
+body .input-area[disabled]:focus,
+.bluelib .input-area[disabled]:focus,
 body select:not([multiple])[disabled]:focus,
 .bluelib select:not([multiple])[disabled]:focus,
 body .input-select[disabled]:focus,
@@ -1012,6 +1056,10 @@ body input[type="url"] .status-disabled:focus,
 .bluelib input[type="url"] .status-disabled:focus,
 body input[type="week"] .status-disabled:focus,
 .bluelib input[type="week"] .status-disabled:focus,
+body textarea .status-disabled:focus,
+.bluelib textarea .status-disabled:focus,
+body .input-area .status-disabled:focus,
+.bluelib .input-area .status-disabled:focus,
 body select:not([multiple]) .status-disabled:focus,
 .bluelib select:not([multiple]) .status-disabled:focus,
 body .input-select .status-disabled:focus,
@@ -1074,6 +1122,10 @@ body input[type="url"][disabled]:hover::placeholder,
 .bluelib input[type="url"][disabled]:hover::placeholder,
 body input[type="week"][disabled]:hover::placeholder,
 .bluelib input[type="week"][disabled]:hover::placeholder,
+body textarea[disabled]:hover::placeholder,
+.bluelib textarea[disabled]:hover::placeholder,
+body .input-area[disabled]:hover::placeholder,
+.bluelib .input-area[disabled]:hover::placeholder,
 body select:not([multiple])[disabled]:hover::placeholder,
 .bluelib select:not([multiple])[disabled]:hover::placeholder,
 body .input-select[disabled]:hover::placeholder,
@@ -1132,6 +1184,10 @@ body input[type="url"] .status-disabled:hover::placeholder,
 .bluelib input[type="url"] .status-disabled:hover::placeholder,
 body input[type="week"] .status-disabled:hover::placeholder,
 .bluelib input[type="week"] .status-disabled:hover::placeholder,
+body textarea .status-disabled:hover::placeholder,
+.bluelib textarea .status-disabled:hover::placeholder,
+body .input-area .status-disabled:hover::placeholder,
+.bluelib .input-area .status-disabled:hover::placeholder,
 body select:not([multiple]) .status-disabled:hover::placeholder,
 .bluelib select:not([multiple]) .status-disabled:hover::placeholder,
 body .input-select .status-disabled:hover::placeholder,
@@ -1190,6 +1246,10 @@ body input[type="url"][disabled]:focus::placeholder,
 .bluelib input[type="url"][disabled]:focus::placeholder,
 body input[type="week"][disabled]:focus::placeholder,
 .bluelib input[type="week"][disabled]:focus::placeholder,
+body textarea[disabled]:focus::placeholder,
+.bluelib textarea[disabled]:focus::placeholder,
+body .input-area[disabled]:focus::placeholder,
+.bluelib .input-area[disabled]:focus::placeholder,
 body select:not([multiple])[disabled]:focus::placeholder,
 .bluelib select:not([multiple])[disabled]:focus::placeholder,
 body .input-select[disabled]:focus::placeholder,
@@ -1248,6 +1308,10 @@ body input[type="url"] .status-disabled:focus::placeholder,
 .bluelib input[type="url"] .status-disabled:focus::placeholder,
 body input[type="week"] .status-disabled:focus::placeholder,
 .bluelib input[type="week"] .status-disabled:focus::placeholder,
+body textarea .status-disabled:focus::placeholder,
+.bluelib textarea .status-disabled:focus::placeholder,
+body .input-area .status-disabled:focus::placeholder,
+.bluelib .input-area .status-disabled:focus::placeholder,
 body select:not([multiple]) .status-disabled:focus::placeholder,
 .bluelib select:not([multiple]) .status-disabled:focus::placeholder,
 body .input-select .status-disabled:focus::placeholder,
@@ -1308,6 +1372,10 @@ body input[type="url"]:optional,
 .bluelib input[type="url"]:optional,
 body input[type="week"]:optional,
 .bluelib input[type="week"]:optional,
+body textarea:optional,
+.bluelib textarea:optional,
+body .input-area:optional,
+.bluelib .input-area:optional,
 body select:not([multiple]):optional,
 .bluelib select:not([multiple]):optional,
 body .input-select:optional,
@@ -1366,6 +1434,10 @@ body input[type="url"]:optional::placeholder,
 .bluelib input[type="url"]:optional::placeholder,
 body input[type="week"]:optional::placeholder,
 .bluelib input[type="week"]:optional::placeholder,
+body textarea:optional::placeholder,
+.bluelib textarea:optional::placeholder,
+body .input-area:optional::placeholder,
+.bluelib .input-area:optional::placeholder,
 body select:not([multiple]):optional::placeholder,
 .bluelib select:not([multiple]):optional::placeholder,
 body .input-select:optional::placeholder,
@@ -1426,6 +1498,10 @@ body input[type="url"]:focus-visible,
 .bluelib input[type="url"]:focus-visible,
 body input[type="week"]:focus-visible,
 .bluelib input[type="week"]:focus-visible,
+body textarea:focus-visible,
+.bluelib textarea:focus-visible,
+body .input-area:focus-visible,
+.bluelib .input-area:focus-visible,
 body select:not([multiple]):focus-visible,
 .bluelib select:not([multiple]):focus-visible,
 body .input-select:focus-visible,
@@ -1489,6 +1565,15 @@ body input[type="week"],
   cursor: text;
   border-width: 0 0 2px 0;
   border-radius: 4px 4px 0 0;
+  padding: 6px;
+}
+body textarea,
+.bluelib textarea,
+body .input-area,
+.bluelib .input-area {
+  cursor: text;
+  border-width: 0 0 0 2px;
+  border-radius: 0 4px 4px 0;
   padding: 6px;
 }
 body select:not([multiple]),
@@ -1876,6 +1961,14 @@ body form input[type="week"],
 .bluelib form input[type="week"],
 body .form input[type="week"],
 .bluelib .form input[type="week"],
+body form > textarea,
+.bluelib form > textarea,
+body .form > textarea,
+.bluelib .form > textarea,
+body form .input-area,
+.bluelib form .input-area,
+body .form .input-area,
+.bluelib .form .input-area,
 body form > select:not([multiple]),
 .bluelib form > select:not([multiple]),
 body .form > select:not([multiple]),
@@ -1934,7 +2027,6 @@ body .form .form-input,
 .bluelib .form .form-input {
   grid-column: 2;
   justify-self: stretch;
-  width: 100%;
 }
 body form .form-group,
 .bluelib form .form-group,
@@ -1985,6 +2077,12 @@ body .form .form-row,
   width: 100%;
   margin-top: 8px;
   margin-bottom: 8px;
+}
+body form .form-row .panel,
+.bluelib form .form-row .panel,
+body .form .form-row .panel,
+.bluelib .form .form-row .panel {
+  margin: 0;
 }
 body h1,
 .bluelib h1,

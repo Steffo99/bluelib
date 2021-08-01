@@ -161,34 +161,48 @@
   border-width: 2px;
   border-style: solid;
 }
-.bluelib .panel-blockquote {
+.bluelib .panel-dialog {
   border-radius: 4px;
   border-width: 0 0 0 2px;
   border-style: solid;
 }
-.bluelib .panel-aside {
+.bluelib .panel-parenthesis {
   border-width: 0;
   font-size: smaller;
 }
-.bluelib .split {
+.bluelib .chapter {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 8px;
-  justify-content: center;
+  gap: 8px;
+  justify-content: stretch;
+  align-items: stretch;
+  margin: 8px 0;
 }
-.bluelib .split > .panel {
-  margin: 0;
-}
-.bluelib .split > *,
-.bluelib .split .all {
+.bluelib .chapter > *,
+.bluelib .chapter .all {
   flex-grow: 1;
   flex-shrink: 0;
+}
+.bluelib .chapter > .heading {
+  flex-basis: 100%;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.bluelib .chapter > .heading:first-child {
+  margin-top: 1rem;
+}
+.bluelib .chapter > .heading:last-child {
+  margin-bottom: 1rem;
+}
+.bluelib .chapter > .panel {
+  margin: 0;
   flex-basis: 0;
 }
-.bluelib .split-forcewrap {
+.bluelib .chapter-forcewrap {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 100%;
+  position: relative;
 }
 .bluelib .separator {
   border-width: 1px;
@@ -225,6 +239,7 @@
 }
 .bluelib .input {
   font: inherit;
+  width: 100%;
   border-style: solid;
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.3);
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
@@ -274,6 +289,12 @@
   cursor: text;
   border-width: 0 0 2px 0;
   border-radius: 4px 4px 0 0;
+  padding: 6px;
+}
+.bluelib .input-area {
+  cursor: text;
+  border-width: 0 0 0 2px;
+  border-radius: 0 4px 4px 0;
   padding: 6px;
 }
 .bluelib .input-select {
@@ -399,7 +420,6 @@
 .bluelib .form .form-input {
   grid-column: 2;
   justify-self: stretch;
-  width: 100%;
 }
 .bluelib .form .form-group {
   grid-column: 2;
@@ -434,6 +454,9 @@
   width: 100%;
   margin-top: 8px;
   margin-bottom: 8px;
+}
+.bluelib .form .form-row .panel {
+  margin: 0;
 }
 .bluelib .heading {
   text-align: center;
@@ -492,6 +515,15 @@
   --bluelib-color-g: var(--bluelib-download-g);
   --bluelib-color-b: var(--bluelib-download-b);
   text-decoration-style: solid;
+}
+.bluelib .ruby {
+  font-size: xx-large;
+}
+.bluelib .ruby-parenthesis {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.1);
+}
+.bluelib .ruby-text {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.6);
 }
 .bluelib .color-red {
   --bluelib-color-r: var(--bluelib-red-r);
