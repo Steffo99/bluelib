@@ -134,15 +134,15 @@
     );
 
     @rgb-leaving: rgba(
-        calc(255 * ((var(--bluelib-polarity / 2) * -1) + 0.5)),
-        calc(255 * ((var(--bluelib-polarity / 2) * -1) + 0.5)),
-        calc(255 * ((var(--bluelib-polarity / 2) * -1) + 0.5)),
+        calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)),
+        calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)),
+        calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)),
         1.000
     );
     @rgb-towards: rgba(
-        calc(255 * (var(--bluelib-polarity / 2) + 0.5)),
-        calc(255 * (var(--bluelib-polarity / 2) + 0.5)),
-        calc(255 * (var(--bluelib-polarity / 2) + 0.5)),
+        calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)),
+        calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)),
+        calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)),
         1.000
     );
 
@@ -954,14 +954,20 @@
     /// ===== Headings =====
     /// Headings are titles with a block display.
 
+    //<editor-fold desc="Rules: Headings">
+
     @{heading} {
         text-align: center;
         .map-var-rgb(bluelib-color, bluelib-accent);
         .use-var-font(bluelib-title);
     }
 
+    //</editor-fold>
+
     /// ===== Anchors =====
     /// Anchors are clickable links to another place, such as a paragraph or a page.
+
+    //<editor-fold desc="Rules: Anchors">
 
     @{anchor} {
         text-decoration-line: underline;
@@ -1009,10 +1015,14 @@
         text-decoration-style: solid;
     }
 
+    //</editor-fold>
+
     /// ===== Ruby =====
     /// Ruby text is used in various languages to add annotations to text.
     /// Bluelib makes the annotations slightly transparent to differentiate them from the rest of the text.
     /// See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby
+
+    //<editor-fold desc="Rules: Ruby">
 
     @{ruby-parenthesis} {
         color: @c1;
@@ -1022,9 +1032,13 @@
         color: @c6;
     }
 
-    /// ===== Ruby =====
+    //</editor-fold>
+
+    /// ===== Todos =====
     /// Todos are used to mark unfinished parts of a website.
     /// Their color ignores the palette and derives from the 🚧 emoji
+
+    //<editor-fold desc="Rules: Todos">
 
     @{todo} {
         background-color: #292F33;
@@ -1036,8 +1050,12 @@
         border-color: #FFCC4D;
     }
 
+    //</editor-fold>
+
     /// ===== Semantics =====
     /// Semantics are special font effects applied to text with a certain meaning.
+
+    //<editor-fold desc="Rules: Semantics">
 
     @{semantic-abbr} {
         cursor: help;
@@ -1050,7 +1068,7 @@
     }
 
     @{semantic-cite} {
-
+        font-variant: small-caps;
     }
 
     @{semantic-code} {
@@ -1058,16 +1076,16 @@
     }
 
     @{semantic-dfn} {
-        color: @rgb-accent;
+        text-decoration: underline 1px solid currentColor;
         font-style: italic;
     }
 
     @{semantic-em} {
-
+        color: @rgb-accent;
     }
 
     @{semantic-i} {
-
+        font-style: italic;
     }
 
     @{semantic-kbd} {
@@ -1076,11 +1094,15 @@
 
     @{semantic-mark} {
         background-color: @c2;
-        color: @cC;
+        color: @cF;
     }
 
     @{semantic-q} {
+        font-style: oblique;
 
+        &:before, &:after {
+            color: @c5;
+        }
     }
 
     @{semantic-s} {
@@ -1088,7 +1110,8 @@
     }
 
     @{semantic-samp} {
-
+        background-color: @rgb-leaving;
+        color: @rgb-towards;
     }
 
     @{semantic-small} {
@@ -1105,8 +1128,11 @@
     }
 
     @{semantic-var} {
-
+        font-style: normal;
+        color: @rgb-accent;
     }
+
+    //</editor-fold>
 
     /// ===== Colors =====
     /// Colors are classes which apply a certain color from the palette to the bluelib-color of the element which has them.
