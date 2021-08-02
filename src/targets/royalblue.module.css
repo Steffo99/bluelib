@@ -182,7 +182,7 @@
   --bluelib-title-weight: 500;
   --bluelib-text-family: "Fira Sans", sans-serif;
   --bluelib-text-weight: 400;
-  --bluelib-code-family: "Fira Code", sans-serif;
+  --bluelib-code-family: "Fira Code", monospace;
   --bluelib-code-weight: 400;
 }
 /*# sourceMappingURL=royalblue.module.css.map */
