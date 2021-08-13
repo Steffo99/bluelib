@@ -301,6 +301,98 @@ body .image-limit-quarter,
 .bluelib .image-limit-quarter {
   max-height: max(14.1vw, 25vh);
 }
+body table,
+.bluelib table,
+body .table,
+.bluelib .table {
+  display: table;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.03);
+  border-width: 2px 2px 2px 2px;
+  border-style: solid;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
+  border-radius: 0 0 4px 4px;
+  border-collapse: collapse;
+  padding: 8px;
+  margin: 8px 0;
+}
+body table caption,
+.bluelib table caption,
+body .table-caption,
+.bluelib .table-caption {
+  display: table-caption;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.03);
+  padding: 4px;
+  font-style: italic;
+  font-size: small;
+}
+body table caption,
+.bluelib table caption,
+body .table-caption-top,
+.bluelib .table-caption-top {
+  caption-side: top;
+  border-width: 2px 2px 0 2px;
+  border-style: solid;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
+  border-radius: 4px 4px 0 0;
+}
+body .table-caption-bottom,
+.bluelib .table-caption-bottom {
+  caption-side: bottom;
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
+  border-radius: 0 0 4px 4px;
+}
+body table thead,
+.bluelib table thead,
+body .table-header,
+.bluelib .table-header {
+  display: table-header-group;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.03);
+}
+body table tbody,
+.bluelib table tbody,
+body .table-body,
+.bluelib .table-body {
+  display: table-row-group;
+}
+body table tfoot,
+.bluelib table tfoot,
+body .table-footer,
+.bluelib .table-footer {
+  display: table-footer-group;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.03);
+}
+body table tr,
+.bluelib table tr,
+body .table-row,
+.bluelib .table-row {
+  display: table-row;
+  border: 1px solid rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
+}
+body table td,
+.bluelib table td,
+body .table-data,
+.bluelib .table-data,
+body table th,
+.bluelib table th,
+body .table-head,
+.bluelib .table-head {
+  display: table-cell;
+  border: 1px solid rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
+  padding: 8px;
+}
+body table th,
+.bluelib table th,
+body .table-head,
+.bluelib .table-head {
+  color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
+}
+body .table-mark,
+.bluelib .table-mark {
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.22);
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)), 1);
+}
 body [disabled],
 .bluelib [disabled],
 body .status-disabled,

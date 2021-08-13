@@ -227,6 +227,66 @@
 .bluelib .image-limit-quarter {
   max-height: max(14.1vw, 25vh);
 }
+.bluelib .table {
+  display: table;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.03);
+  border-width: 2px 2px 2px 2px;
+  border-style: solid;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
+  border-radius: 0 0 4px 4px;
+  border-collapse: collapse;
+  padding: 8px;
+  margin: 8px 0;
+}
+.bluelib .table-caption {
+  display: table-caption;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.03);
+  padding: 4px;
+  font-style: italic;
+  font-size: small;
+}
+.bluelib .table-caption-top {
+  caption-side: top;
+  border-width: 2px 2px 0 2px;
+  border-style: solid;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
+  border-radius: 4px 4px 0 0;
+}
+.bluelib .table-caption-bottom {
+  caption-side: bottom;
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
+  border-radius: 0 0 4px 4px;
+}
+.bluelib .table-header {
+  display: table-header-group;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.03);
+}
+.bluelib .table-body {
+  display: table-row-group;
+}
+.bluelib .table-footer {
+  display: table-footer-group;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.03);
+}
+.bluelib .table-row {
+  display: table-row;
+  border: 1px solid rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
+}
+.bluelib .table-data,
+.bluelib .table-head {
+  display: table-cell;
+  border: 1px solid rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
+  padding: 8px;
+}
+.bluelib .table-head {
+  color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
+}
+.bluelib .table-mark {
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.22);
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)), 1);
+}
 .bluelib .status-disabled {
   opacity: 50%;
 }

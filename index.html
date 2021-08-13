@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="src/targets/skeleton.root.css">
     <link rel="stylesheet" href="src/targets/paper.root.css">
     <link rel="stylesheet" href="src/targets/hacker.root.css">
-    <link rel="stylesheet" href="src/targets/sophon.root.css">
     <link rel="stylesheet" href="src/targets/royalblue.root.css">
+    <link rel="stylesheet" href="src/targets/sophon.root.css">
     <title>Bluelib 2</title>
     <style>
         body {
@@ -246,6 +246,104 @@
                                 <img class="image-limit-quarter" src="https://i.redd.it/0b2r669b73f41.jpg" alt="USB key in a bottle"/>
                             </section>
                         </div>
+                    </section>
+                </section>
+                <section class="chapter" id="chapter-tables">
+                    <h2>
+                        Tables
+                    </h2>
+                    <section class="panel panel-box" id="panel-table">
+                        <h3>
+                            Table
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-table">table</dfn> is an element displaying data aligned and ordered by rows and columns.
+                        </p>
+                        <table>
+                            <caption class="table-caption-top">What do the brothers think of the following elements?</caption>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Mario</th>
+                                    <th>Luigi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Tables</th>
+                                    <td>They're cool and allow you to do cool stuff</td>
+                                    <td>They need chairs to be useful</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Flexboxes</th>
+                                    <td>They're very useful</td>
+                                    <td>Not enough flexible for me</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Grids</th>
+                                    <td>I love them</td>
+                                    <td>Bleargh</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th scope="row">Overall</th>
+                                    <td>&lt;3</td>
+                                    <td>0/10</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <p>
+                            Elements in tables can be marked to increase their contrast with the rest.
+                        </p>
+                        <table>
+                            <caption class="table-caption-top">
+                                A game of tic-tac-toe.
+                            </caption>
+                            <tbody>
+                                <tr>
+                                    <td>O</td>
+                                    <td></td>
+                                    <td class="table-mark">X</td>
+                                </tr>
+                                <tr>
+                                    <td>X</td>
+                                    <td class="table-mark">X</td>
+                                    <td>O</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-mark">X</td>
+                                    <td>O</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            Captions can are above the table by default, but they can be moved below the table.
+                        </p>
+                        <table>
+                            <caption class="table-caption-bottom">
+                                HTML elements tier list
+                            </caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">S</th>
+                                    <td><code>&lt;span&gt;</code></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">A</th>
+                                    <td><code>&lt;a&gt;</code></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">B</th>
+                                    <td>&lt;body&gt;</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C</th>
+                                    <td>&lt;caption&gt;</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </section>
                 </section>
                 <section class="chapter" id="chapter-status">

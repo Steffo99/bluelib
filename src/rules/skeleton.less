@@ -568,6 +568,94 @@
 
     //</editor-fold>
 
+    /// ===== Tables =====
+
+    @{table} {
+        display: table;
+
+        background-color: @c0;
+
+        border-width: 2px 2px 2px 2px;
+        border-style: solid;
+        border-color: @c1;
+        border-radius: 0 0 4px 4px;
+        border-collapse: collapse;
+
+        padding: 8px;
+        margin: 8px 0;
+    }
+
+    @{table-caption} {
+        display: table-caption;
+
+        background-color: @c0;
+
+        padding: 4px;
+
+        font-style: italic;
+        font-size: small;
+    }
+
+    @{table-caption-top} {
+        caption-side: top;
+
+        border-width: 2px 2px 0 2px;
+        border-style: solid;
+        border-color: @c1;
+        border-radius: 4px 4px 0 0;
+    }
+
+    @{table-caption-bottom} {
+        caption-side: bottom;
+
+        border-width: 0 2px 2px 2px;
+        border-style: solid;
+        border-color: @c1;
+        border-radius: 0 0 4px 4px;
+    }
+
+    @{table-header} {
+        display: table-header-group;
+
+        background-color: @c0;
+    }
+
+    @{table-body} {
+        display: table-row-group;
+    }
+
+    @{table-footer} {
+        display: table-footer-group;
+
+        background-color: @c0;
+    }
+
+    @{table-row} {
+        display: table-row;
+
+        border: 1px solid @c1;
+    }
+
+    @{table-data}, @{table-head} {
+        display: table-cell;
+
+        border: 1px solid @c1;
+        padding: 8px;
+    }
+
+    @{table-data} {
+
+    }
+
+    @{table-head} {
+        color: @rgb-accent;
+    }
+
+    @{table-mark} {
+        background-color: @c2;
+        color: @cF;
+    }
+
     /// ===== Status =====
     /// Status are classes that can be applied to elements to indicate that special interactions are available.
 
