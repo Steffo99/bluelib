@@ -393,6 +393,34 @@ body .table-mark,
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.22);
   color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)), 1);
 }
+body li,
+.bluelib li,
+body .list-item,
+.bluelib .list-item {
+  margin: 0.35rem 0;
+}
+body li::marker,
+.bluelib li::marker,
+body .list-item::marker,
+.bluelib .list-item::marker {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.505);
+}
+body dt,
+.bluelib dt,
+body .list-description-key,
+.bluelib .list-description-key {
+  margin-top: 0.7rem;
+  margin-bottom: 0.35rem;
+  font-size: larger;
+}
+body dd,
+.bluelib dd,
+body .list-description-value,
+.bluelib .list-description-value {
+  margin-top: 0.35rem;
+  margin-bottom: 0.7rem;
+  margin-left: 16px;
+}
 body [disabled],
 .bluelib [disabled],
 body .status-disabled,

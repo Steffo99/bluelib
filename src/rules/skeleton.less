@@ -656,6 +656,41 @@
         color: @cF;
     }
 
+    /// ===== Lists =====
+
+    @{list} {
+
+    }
+
+    @{list-unordered} {
+
+    }
+
+    @{list-ordered} {
+
+    }
+
+    @{list-item} {
+        margin: 0.35rem 0;
+
+        &::marker {
+            color: @c5;
+        }
+    }
+
+    @{list-description-key} {
+        margin-top: 0.7rem;
+        margin-bottom: 0.35rem;
+
+        font-size: larger;
+    }
+
+    @{list-description-value} {
+        margin-top: 0.35rem;
+        margin-bottom: 0.7rem;
+        margin-left: 16px;
+    }
+
     /// ===== Status =====
     /// Status are classes that can be applied to elements to indicate that special interactions are available.
 

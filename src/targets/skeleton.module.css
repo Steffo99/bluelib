@@ -287,6 +287,22 @@
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.22);
   color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)), 1);
 }
+.bluelib .list-item {
+  margin: 0.35rem 0;
+}
+.bluelib .list-item::marker {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.505);
+}
+.bluelib .list-description-key {
+  margin-top: 0.7rem;
+  margin-bottom: 0.35rem;
+  font-size: larger;
+}
+.bluelib .list-description-value {
+  margin-top: 0.35rem;
+  margin-bottom: 0.7rem;
+  margin-left: 16px;
+}
 .bluelib .status-disabled {
   opacity: 50%;
 }
