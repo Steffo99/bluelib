@@ -1,0 +1,3 @@
+[submodule "bluelib"]
+	path = src/bluelib
+	url = https://github.com/Steffo99/bluelib
