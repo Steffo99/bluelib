@@ -108,7 +108,7 @@
     grid-template-areas: "center center" "left right";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    max-width: 1024px;
+    width: 1024px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -118,6 +118,7 @@
 }
 @media screen and (min-width: 1281px) {
   .bluelib .layout-threecol-left {
+    width: 128px;
     justify-self: end;
   }
 }
@@ -135,6 +136,7 @@
 }
 @media screen and (min-width: 1281px) {
   .bluelib .layout-threecol-right {
+    width: 128px;
     justify-self: start;
   }
 }

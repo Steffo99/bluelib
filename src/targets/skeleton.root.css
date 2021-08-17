@@ -119,7 +119,7 @@ body .layout-threecol,
     grid-template-areas: "center center" "left right";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    max-width: 1024px;
+    width: 1024px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -131,6 +131,7 @@ body .layout-threecol-left,
 @media screen and (min-width: 1281px) {
   body .layout-threecol-left,
   .bluelib .layout-threecol-left {
+    width: 128px;
     justify-self: end;
   }
 }
@@ -152,6 +153,7 @@ body .layout-threecol-right,
 @media screen and (min-width: 1281px) {
   body .layout-threecol-right,
   .bluelib .layout-threecol-right {
+    width: 128px;
     justify-self: start;
   }
 }
