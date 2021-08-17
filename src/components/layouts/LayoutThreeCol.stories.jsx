@@ -2,6 +2,7 @@ import * as React from "react"
 import * as ReactDOM from "react-dom"
 import * as Decorators from "../../utils/Decorators"
 import { LayoutThreeCol } from "./LayoutThreeCol"
+import { Box } from "../panels/Box"
 
 
 export default {
@@ -17,13 +18,19 @@ export default {
 export const Default = props => (
     <LayoutThreeCol {...props}>
         <LayoutThreeCol.Left>
-            Left
+            <Box>
+                Left
+            </Box>
         </LayoutThreeCol.Left>
         <LayoutThreeCol.Center>
-            Center
+            <Box>
+                Center
+            </Box>
         </LayoutThreeCol.Center>
         <LayoutThreeCol.Right>
-            Right
+            <Box>
+                Right
+            </Box>
         </LayoutThreeCol.Right>
     </LayoutThreeCol>
 )

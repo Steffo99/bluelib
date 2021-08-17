@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom"
 import * as Decorators from "../../utils/Decorators"
 import { LayoutFill } from "./LayoutFill"
 import { Bluelib } from "../Bluelib"
+import { Box } from "../panels/Box"
 
 
 export default {
@@ -18,7 +19,9 @@ export default {
 export const Default = props => (
     <LayoutFill {...props}>
         <LayoutFill.Single>
-            Single
+            <Box>
+                Single
+            </Box>
         </LayoutFill.Single>
     </LayoutFill>
 )
