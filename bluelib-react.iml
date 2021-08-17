@@ -6,7 +6,6 @@
       <sourceFolder url="file://$MODULE_DIR$/public" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/node_modules" />
-      <excludeFolder url="file://$MODULE_DIR$/.storybook" />
       <excludeFolder url="file://$MODULE_DIR$/src/bluelib" />
     </content>
     <orderEntry type="inheritedJdk" />

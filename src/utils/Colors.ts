@@ -1,6 +1,5 @@
 import Color from "color"
 
-export type CustomColor = Color;
 
 /**
  * The classNames of the colors builtin in Bluelib.
@@ -17,13 +16,7 @@ export enum BuiltinColor {
 
 
 /**
- * A bluelib color of any type, either builtin or custom.
- */
-export type AnyColor = BuiltinColor | CustomColor
-
-
-/**
- * Convert a {@link CustomColor} to an object containing the `--bluelib-${name}-r`, `--bluelib-${name}-g` and `--bluelib-${name}-b` properties, to be passed in
+ * Convert a {@link Color} to an object containing the `--bluelib-${name}-r`, `--bluelib-${name}-g` and `--bluelib-${name}-b` properties, to be passed in
  * a `style` prop.
  *
  * Will return `None` if the `color` parameter is falsy.
@@ -31,16 +24,18 @@ export type AnyColor = BuiltinColor | CustomColor
  * @param name - The property "name", to be filled in the template string described above.
  * @param color - The color to convert.
  */
-export function colorToBluelibStyle(name: string, color?: CustomColor): {[key: string]: number} {
+export function colorToBluelibStyle(name: string, color?: typeof Color): {[key: string]: number} {
+    const colorObj = Color(color)
+
     if(!color) {
         return {}
     }
 
     const result: {[key: string]: number} = {}
 
-    result[`--bluelib-${name}-r`] = color.red()
-    result[`--bluelib-${name}-g`] = color.green()
-    result[`--bluelib-${name}-b`] = color.blue()
+    result[`--bluelib-${name}-r`] = colorObj.red()
+    result[`--bluelib-${name}-g`] = colorObj.green()
+    result[`--bluelib-${name}-b`] = colorObj.blue()
 
     return result
 }

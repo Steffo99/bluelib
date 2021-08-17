@@ -2,8 +2,9 @@ import * as React from "react"
 import * as ReactDOM from "react-dom"
 import * as Types from "../types"
 import * as Colors from "../utils/Colors"
+import Color from "color"
 import mergeClassNames from "classnames"
-import {BaseElement} from "../abstract/BaseElement"
+import {BaseElement} from "./BaseElement"
 import PaperTheme from "../bluelib/src/targets/paper.module.css"
 import RoyalBlueTheme from "../bluelib/src/targets/royalblue.module.css"
 import HackerTheme from "../bluelib/src/targets/hacker.module.css"
@@ -21,21 +22,21 @@ const BuiltinThemes = {
 export interface BluelibProps {
     theme: "paper" | "royalblue" | "hacker" | "sophon",
 
-    backgroundColor?: Colors.CustomColor,
-    foregroundColor?: Colors.CustomColor,
-    accentColor?: Colors.CustomColor,
-    linkColor?: Colors.CustomColor,
-    brokenColor?: Colors.CustomColor,
-    visitedColor?: Colors.CustomColor,
-    downloadColor?: Colors.CustomColor,
-    redColor?: Colors.CustomColor,
-    orangeColor?: Colors.CustomColor,
-    yellowColor?: Colors.CustomColor,
-    limeColor?: Colors.CustomColor,
-    cyanColor?: Colors.CustomColor,
-    blueColor?: Colors.CustomColor,
-    magentaColor?: Colors.CustomColor,
-    grayColor?: Colors.CustomColor,
+    backgroundColor?: typeof Color,
+    foregroundColor?: typeof Color,
+    accentColor?: typeof Color,
+    linkColor?: typeof Color,
+    brokenColor?: typeof Color,
+    visitedColor?: typeof Color,
+    downloadColor?: typeof Color,
+    redColor?: typeof Color,
+    orangeColor?: typeof Color,
+    yellowColor?: typeof Color,
+    limeColor?: typeof Color,
+    cyanColor?: typeof Color,
+    blueColor?: typeof Color,
+    magentaColor?: typeof Color,
+    grayColor?: typeof Color,
     polarity?: number,
 
     [props: string]: any,
@@ -64,8 +65,6 @@ export function Bluelib({
 }: BluelibProps): JSX.Element {
 
     props.className = mergeClassNames(props.className, BuiltinThemes[theme]["bluelib"])
-
-    console.debug(props.style)
 
     if(backgroundColor) props.style = {...props.style, ...Colors.colorToBluelibStyle("background", backgroundColor)}
     if(foregroundColor) props.style = {...props.style, ...Colors.colorToBluelibStyle("foreground", foregroundColor)}

@@ -3,26 +3,26 @@ import * as ReactDOM from "react-dom"
 import * as Types from "../types"
 import * as Colors from "../utils/Colors"
 import * as BluelibMapper from "../utils/BluelibMapper"
-import classNames, {Argument as ClassNamesArgument} from "classnames"
+import Color from "color"
+import mergeClassNames, {Argument as ClassNamesArgument} from "classnames"
 
 
 export interface BaseElementProps {
     kind: Types.ComponentKind,
     bluelibClassNames?: Types.ClassNames,
-    color?: Colors.AnyColor,
+    customColor?: typeof Color,
 
     [props: string]: any,
 }
 
 
-export function BaseElement({kind, bluelibClassNames, color, ...props}: BaseElementProps): JSX.Element {
+export function BaseElement({kind, bluelibClassNames, customColor, ...props}: BaseElementProps): JSX.Element {
     // Set the Bluelib color
-    if(typeof color === "string") bluelibClassNames += ` ${color}`
-    else if(color) props.style = {...props.style, ...Colors.colorToBluelibStyle("color", color)}
+    if(customColor) props.style = {...props.style, ...Colors.colorToBluelibStyle("color", customColor)}
 
     // Map regular class names to module class names
     bluelibClassNames = BluelibMapper.rootToModule(bluelibClassNames)
-    props.className = classNames(props.className, bluelibClassNames)
+    props.className = mergeClassNames(props.className, bluelibClassNames)
 
     // Dynamically determine the element kind
     const Kind = kind
