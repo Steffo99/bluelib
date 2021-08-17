@@ -2,6 +2,7 @@ import * as React from "react"
 import * as ReactDOM from "react-dom"
 import * as Types from "../types"
 import * as Colors from "../utils/Colors"
+import mergeClassNames from "classnames"
 import {BaseElement} from "../abstract/BaseElement"
 import PaperTheme from "../bluelib/src/targets/paper.module.css"
 import RoyalBlueTheme from "../bluelib/src/targets/royalblue.module.css"
@@ -17,7 +18,7 @@ const BuiltinThemes = {
 }
 
 
-interface BluelibProps {
+export interface BluelibProps {
     theme: "paper" | "royalblue" | "hacker" | "sophon",
 
     backgroundColor?: Colors.CustomColor,
@@ -37,7 +38,7 @@ interface BluelibProps {
     grayColor?: Colors.CustomColor,
     polarity?: number,
 
-    [extra: string]: any,
+    [props: string]: any,
 }
 
 
@@ -62,7 +63,9 @@ export function Bluelib({
     ...props
 }: BluelibProps): JSX.Element {
 
-    props.className += ` ${BuiltinThemes[theme]["bluelib"]}`
+    props.className = mergeClassNames(props.className, BuiltinThemes[theme]["bluelib"])
+
+    console.debug(props.style)
 
     if(backgroundColor) props.style = {...props.style, ...Colors.colorToBluelibStyle("background", backgroundColor)}
     if(foregroundColor) props.style = {...props.style, ...Colors.colorToBluelibStyle("foreground", foregroundColor)}

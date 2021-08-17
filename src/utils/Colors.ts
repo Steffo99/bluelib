@@ -1,6 +1,6 @@
 import Color from "color"
 
-export type CustomColor = Color
+export type CustomColor = Color;
 
 /**
  * The classNames of the colors builtin in Bluelib.
@@ -19,7 +19,7 @@ export enum BuiltinColor {
 /**
  * A bluelib color of any type, either builtin or custom.
  */
-export type AnyColor = BuiltinColor | Color
+export type AnyColor = BuiltinColor | CustomColor
 
 
 /**
