@@ -22,3 +22,15 @@ export const Default = props => (
     </Box>
 )
 Default.args = {}
+
+
+export const Nested = props => (
+    <Box {...props}>
+        <Box>
+            <Box>
+                These are three nested Boxes.
+            </Box>
+        </Box>
+    </Box>
+)
+Nested.args = {}

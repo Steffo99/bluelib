@@ -22,3 +22,15 @@ export const Default = props => (
     </Dialog>
 )
 Default.args = {}
+
+
+export const Nested = props => (
+    <Dialog {...props}>
+        <Dialog>
+            <Dialog>
+                These are three nested Dialogs.
+            </Dialog>
+        </Dialog>
+    </Dialog>
+)
+Nested.args = {}

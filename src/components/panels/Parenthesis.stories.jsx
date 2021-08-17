@@ -22,3 +22,16 @@ export const Default = props => (
     </Parenthesis>
 )
 Default.args = {}
+
+
+export const Nested = props => (
+    <Parenthesis {...props}>
+        <Parenthesis>
+            <Parenthesis>
+                These are three nested Parentheses.
+            </Parenthesis>
+        </Parenthesis>
+    </Parenthesis>
+)
+Nested.args = {}
+

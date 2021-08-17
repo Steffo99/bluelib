@@ -22,3 +22,15 @@ export const Default = props => (
     </Panel>
 )
 Default.args = {}
+
+
+export const Nested = props => (
+    <Panel {...props}>
+        <Panel>
+            <Panel>
+                These are three nested Panels.
+            </Panel>
+        </Panel>
+    </Panel>
+)
+Nested.args = {}
