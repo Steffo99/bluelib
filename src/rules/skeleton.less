@@ -301,6 +301,8 @@
 
     }
 
+    //</editor-fold>
+
     /// ===== Root =====
     /// The root element has some rules itself.
 
@@ -308,6 +310,10 @@
 
     // Set the background defined in the palette
     background-color: @rgb-background;
+
+    // Make the element fill all available space
+    width: 100%;
+    height: 100%;
 
     // Set the base color to the foreground defined in the palette
     .map-var-rgb(bluelib-color; bluelib-foreground);
@@ -317,7 +323,6 @@
 
     //</editor-fold>
 
-    //</editor-fold>
 
     /// ===== Layouts =====
     /// Layouts arrange the content displayed inside the root.
