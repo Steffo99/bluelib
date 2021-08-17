@@ -34,3 +34,19 @@ export const Nested = props => (
     </Box>
 )
 Nested.args = {}
+
+
+export const NestedMultiple = props => (
+    <Box {...props}>
+        <Box>
+            This is the first Box in a Box.
+        </Box>
+        <Box>
+            This is the second Box in a Box.
+        </Box>
+        <Box>
+            This is the third Box in a Box.
+        </Box>
+    </Box>
+)
+NestedMultiple.args = {}

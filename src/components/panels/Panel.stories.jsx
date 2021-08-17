@@ -34,3 +34,19 @@ export const Nested = props => (
     </Panel>
 )
 Nested.args = {}
+
+
+export const NestedMultiple = props => (
+    <Panel {...props}>
+        <Panel>
+            This is the first Panel in a Panel.
+        </Panel>
+        <Panel>
+            This is the second Panel in a Panel.
+        </Panel>
+        <Panel>
+            This is the third Panel in a Panel.
+        </Panel>
+    </Panel>
+)
+NestedMultiple.args = {}

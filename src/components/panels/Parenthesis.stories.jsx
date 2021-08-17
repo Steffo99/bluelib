@@ -35,3 +35,18 @@ export const Nested = props => (
 )
 Nested.args = {}
 
+
+export const NestedMultiple = props => (
+    <Parenthesis {...props}>
+        <Parenthesis>
+            This is the first Parenthesis in a Parenthesis.
+        </Parenthesis>
+        <Parenthesis>
+            This is the second Parenthesis in a Parenthesis.
+        </Parenthesis>
+        <Parenthesis>
+            This is the third Parenthesis in a Parenthesis.
+        </Parenthesis>
+    </Parenthesis>
+)
+NestedMultiple.args = {}

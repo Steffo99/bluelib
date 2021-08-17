@@ -34,3 +34,19 @@ export const Nested = props => (
     </Dialog>
 )
 Nested.args = {}
+
+
+export const NestedMultiple = props => (
+    <Dialog {...props}>
+        <Dialog>
+            This is the first Dialog in a Dialog.
+        </Dialog>
+        <Dialog>
+            This is the second Dialog in a Dialog.
+        </Dialog>
+        <Dialog>
+            This is the third Dialog in a Dialog.
+        </Dialog>
+    </Dialog>
+)
+NestedMultiple.args = {}
