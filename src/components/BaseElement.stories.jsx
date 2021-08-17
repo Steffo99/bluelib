@@ -12,8 +12,8 @@ export default {
     argTypes: {
         customColor: {
             control: {type: "color"},
-        }
-    }
+        },
+    },
 }
 
 
