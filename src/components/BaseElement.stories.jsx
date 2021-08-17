@@ -7,7 +7,7 @@ import { Bluelib } from "./Bluelib"
 
 export default {
     component: BaseElement,
-    title: "Abstract/BaseElement",
+    title: "Bluelib/BaseElement",
     decorators: [Decorators.Bluelib],
     argTypes: {
         customColor: {
