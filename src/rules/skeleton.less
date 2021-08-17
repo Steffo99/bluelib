@@ -375,7 +375,7 @@
             grid-template-rows: auto auto;
 
             // Keep the container limited to 1024px and centered
-            width: 1024px;
+            max-width: 1024px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -397,8 +397,14 @@
     @{layout-threecol-center} {
         grid-area: center;
 
-        // Ensure the container doesn't eat up all the space
-        max-width: 1024px;
+        @media screen and (min-width: 1281px) {
+            width: 1024px;
+        }
+
+        @media screen and (max-width: 1280px) {
+            // Ensure the container doesn't eat up all the space
+            max-width: 1024px;
+        }
     }
 
     @{layout-threecol-right} {

@@ -119,7 +119,7 @@ body .layout-threecol,
     grid-template-areas: "center center" "left right";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    width: 1024px;
+    max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -144,7 +144,18 @@ body .layout-threecol-left,
 body .layout-threecol-center,
 .bluelib .layout-threecol-center {
   grid-area: center;
-  max-width: 1024px;
+}
+@media screen and (min-width: 1281px) {
+  body .layout-threecol-center,
+  .bluelib .layout-threecol-center {
+    width: 1024px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  body .layout-threecol-center,
+  .bluelib .layout-threecol-center {
+    max-width: 1024px;
+  }
 }
 body .layout-threecol-right,
 .bluelib .layout-threecol-right {
