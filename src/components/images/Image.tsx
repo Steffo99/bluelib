@@ -20,7 +20,7 @@ const LIMIT_CLASSES = {
 }
 
 
-export function Image({limit, ...props}: ImageProps): JSX.Element {
+export function Image({limit = "no", ...props}: ImageProps): JSX.Element {
     props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "image")
 
     if(limit) {
