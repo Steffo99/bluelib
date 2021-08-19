@@ -12,6 +12,9 @@ export default {
         customColor: {
             control: {type: "color"},
         },
+        disabled: {
+            control: {type: "boolean"},
+        },
     },
 }
 
@@ -84,7 +87,9 @@ export const Brothers = props => (
         </Table.Footer>
     </Table>
 )
-Brothers.args = {}
+Brothers.args = {
+    disabled: false,
+}
 
 
 export const TicTacToe = props => (
@@ -129,7 +134,9 @@ export const TicTacToe = props => (
         </Table.Body>
     </Table>
 )
-TicTacToe.args = {}
+TicTacToe.args = {
+    disabled: false,
+}
 
 
 export const TierList = props => (
@@ -173,6 +180,8 @@ export const TierList = props => (
         </Table.Body>
     </Table>
 )
-TicTacToe.args = {}
+TierList.args = {
+    disabled: false,
+}
 
 

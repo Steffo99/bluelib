@@ -26,12 +26,14 @@ Regular.args = {
 
 export const Heavy = Regular.bind({})
 Heavy.args = {
+    ...Regular.args,
     weight: "heavy",
 }
 
 
 export const Light = Regular.bind({})
 Light.args = {
+    ...Regular.args,
     weight: "light",
 }
 

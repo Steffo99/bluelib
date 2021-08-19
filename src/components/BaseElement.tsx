@@ -11,6 +11,7 @@ export interface BaseElementProps {
     kind: Types.ComponentKind,
     bluelibClassNames?: Types.ClassNames,
     customColor?: typeof Color,
+    disabled?: boolean,
 
     [props: string]: any,
 }
@@ -19,6 +20,9 @@ export interface BaseElementProps {
 export function BaseElement({kind, bluelibClassNames, customColor, ...props}: BaseElementProps): JSX.Element {
     // Set the Bluelib color
     if(customColor) props.style = {...props.style, ...Colors.colorToBluelibStyle("color", customColor)}
+
+    // Possibly disable the element
+    if(props.disabled) bluelibClassNames = mergeClassNames(bluelibClassNames, "status-disabled")
 
     // Map regular class names to module class names
     bluelibClassNames = BluelibMapper.rootToModule(bluelibClassNames)

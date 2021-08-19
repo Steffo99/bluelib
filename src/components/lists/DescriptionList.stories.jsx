@@ -12,6 +12,9 @@ export default {
         customColor: {
             control: {type: "color"},
         },
+        disabled: {
+            control: {type: "boolean"},
+        },
     },
 }
 
@@ -38,4 +41,6 @@ export const Default = props => (
         </DescriptionList.Value>
     </DescriptionList>
 )
-Default.args = {}
+Default.args = {
+    disabled: false,
+}

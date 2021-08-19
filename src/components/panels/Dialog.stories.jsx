@@ -12,6 +12,9 @@ export default {
         customColor: {
             control: {type: "color"},
         },
+        disabled: {
+            control: {type: "boolean"},
+        },
     },
 }
 
@@ -21,7 +24,9 @@ export const Default = props => (
         This is a Dialog.
     </Dialog>
 )
-Default.args = {}
+Default.args = {
+    disabled: false,
+}
 
 
 export const Nested = props => (
@@ -33,7 +38,9 @@ export const Nested = props => (
         </Dialog>
     </Dialog>
 )
-Nested.args = {}
+Nested.args = {
+    disabled: false,
+}
 
 
 export const NestedMultiple = props => (
@@ -49,4 +56,6 @@ export const NestedMultiple = props => (
         </Dialog>
     </Dialog>
 )
-NestedMultiple.args = {}
+NestedMultiple.args = {
+    disabled: false,
+}

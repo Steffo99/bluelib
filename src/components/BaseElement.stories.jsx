@@ -24,6 +24,7 @@ export const Default = props => (
 )
 Default.args = {
     kind: "div",
+    disabled: false,
 }
 
 
@@ -31,4 +32,11 @@ export const CustomColor = Default.bind({})
 CustomColor.args = {
     ...Default.args,
     customColor: "#ff7f00",
+}
+
+
+export const Disabled = Default.bind({})
+Disabled.args = {
+    ...Default.args,
+    disabled: true,
 }

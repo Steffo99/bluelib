@@ -12,6 +12,9 @@ export default {
         customColor: {
             control: {type: "color"},
         },
+        disabled: {
+            control: {type: "boolean"},
+        },
     },
 }
 
@@ -24,11 +27,13 @@ export const Unordered = props => (
     </List>
 )
 Unordered.args = {
+    disabled: false,
     ordered: false,
 }
 
 
 export const Ordered = Unordered.bind({})
 Ordered.args = {
+    ...Unordered.args,
     ordered: true,
 }

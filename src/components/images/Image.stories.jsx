@@ -9,6 +9,11 @@ export default {
     component: Image,
     title: "Images/Image",
     decorators: [Decorators.Bluelib],
+    argTypes: {
+        disabled: {
+            control: {type: "boolean"},
+        },
+    },
 }
 
 
@@ -18,6 +23,7 @@ export const NoLimit = props => (
 NoLimit.args = {
     src: PineappleWithSunglasses,
     limit: "no",
+    disabled: false,
 }
 
 

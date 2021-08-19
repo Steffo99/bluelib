@@ -13,6 +13,9 @@ export default {
         customColor: {
             control: {type: "color"},
         },
+        disabled: {
+            control: {type: "boolean"},
+        },
     },
 }
 
@@ -24,7 +27,9 @@ export const Default = props => (
         <Box>Third</Box>
     </Chapter>
 )
-Default.args = {}
+Default.args = {
+    disabled: false,
+}
 
 
 export const AutoWrap = props => (
@@ -46,7 +51,9 @@ export const AutoWrap = props => (
         <Box>Fiftheenth</Box>
     </Chapter>
 )
-AutoWrap.args = {}
+AutoWrap.args = {
+    disabled: false,
+}
 
 
 export const ForceWrap = props => (
@@ -58,4 +65,6 @@ export const ForceWrap = props => (
         <Box>Fourth</Box>
     </Chapter>
 )
-ForceWrap.args = {}
+ForceWrap.args = {
+    disabled: false,
+}
