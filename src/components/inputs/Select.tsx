@@ -3,13 +3,13 @@ import * as ReactDOM from "react-dom"
 import * as Types from "../../types"
 import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
+import {SelectContext} from "./SelectContext";
 
 
 interface SelectProps {
     disabled?: boolean,
 
     onChange?: (contents: string) => boolean,
-    value?: string,
 
     children: React.ReactNode,
 
@@ -17,7 +17,8 @@ interface SelectProps {
 }
 
 
-export function Select({onChange, children, ...props}: SelectProps): JSX.Element {
+export function Select({onChange, ...props}: SelectProps): JSX.Element {
+
     props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "input", "input-select")
 
     const onChangeWrapper = React.useCallback(
@@ -36,8 +37,6 @@ export function Select({onChange, children, ...props}: SelectProps): JSX.Element
     )
 
     return (
-        <BaseElement kind={"select"} multiple={false} {...props}>
-            // TODO
-        </BaseElement>
+        <BaseElement kind={"select"} multiple={false} onChange={onChangeWrapper} {...props}/>
     )
 }

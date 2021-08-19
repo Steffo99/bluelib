@@ -7,3 +7,7 @@ export type {Argument as ClassNames} from "classnames"
 // export type ClassComponentKind = typeof React.Component
 // export type ComponentKind = IntrinsicComponentKind | FunctionComponentKind | ClassComponentKind
 export type ComponentKind = any
+
+
+
+export type UseStateContext<S> = React.Context<null | [S, React.Dispatch<React.SetStateAction<S>>]>

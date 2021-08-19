@@ -8,17 +8,34 @@ import mergeClassNames from "classnames"
 interface MultiselectProps {
     disabled?: boolean,
 
-    onChange?: (event: React.FormEvent<HTMLInputElement>) => boolean,
+    onChange?: (contents: string[]) => boolean,
+
+    children: React.ReactNode,
 
     [props: string]: any,
 }
 
 
-export function Multiselect({...props}: MultiselectProps): JSX.Element {
-
+export function Multiselect({onChange, ...props}: MultiselectProps): JSX.Element {
     props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "input", "input-multiselect")
 
+    const onChangeWrapper = React.useCallback(
+
+        (event: React.ChangeEvent<HTMLSelectElement>): boolean => {
+            const options = Array.from(event.target.selectedOptions)
+            const contents = options.map((option: HTMLOptionElement) => option.value)
+
+            if(onChange) {
+                return onChange(contents)
+            }
+
+            return false
+        },
+
+        [onChange]
+    )
+
     return (
-        <BaseElement kind={"select"} multiple={true} {...props}/>
+        <BaseElement kind={"select"} multiple={true} onChange={onChangeWrapper} {...props}/>
     )
 }
