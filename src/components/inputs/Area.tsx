@@ -5,7 +5,7 @@ import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
 
 
-interface FieldProps {
+interface AreaProps {
     placeholder: string,
     required?: boolean,
     disabled?: boolean,
@@ -17,8 +17,8 @@ interface FieldProps {
 }
 
 
-export function Field({onChange, value, ...props}: FieldProps): JSX.Element {
-    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "input", "input-field")
+export function Area({onChange, ...props}: AreaProps): JSX.Element {
+    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "input", "input-area")
 
     const onChangeWrapper = React.useCallback(
 
@@ -36,6 +36,6 @@ export function Field({onChange, value, ...props}: FieldProps): JSX.Element {
     )
 
     return (
-        <BaseElement kind={"input"} onChange={onChangeWrapper} {...props}/>
+        <BaseElement kind={"textarea"} onChange={onChangeWrapper} {...props}/>
     )
 }

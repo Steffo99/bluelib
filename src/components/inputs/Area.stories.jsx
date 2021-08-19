@@ -1,12 +1,12 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
 import * as Decorators from "../../utils/Decorators"
-import { Field } from "./Field"
+import { Area } from "./Area"
 
 
 export default {
-    component: Field,
-    title: "Inputs/Field",
+    component: Area,
+    title: "Inputs/Area",
     decorators: [Decorators.Bluelib],
     argTypes: {
         customColor: {
@@ -17,10 +17,10 @@ export default {
 
 
 export const Default = props => (
-    <Field {...props}/>
+    <Area {...props}/>
 )
 Default.args = {
-    placeholder: "Enter text here",
+    placeholder: "Enter multiline text here\n\nThis component can be resized",
     disabled: false,
     required: false,
 }

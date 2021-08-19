@@ -5,20 +5,20 @@ import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
 
 
-interface FieldProps {
-    placeholder: string,
-    required?: boolean,
+interface SelectProps {
     disabled?: boolean,
 
-    onChange: (contents: string) => boolean,
+    onChange?: (contents: string) => boolean,
     value?: string,
+
+    children: React.ReactNode,
 
     [props: string]: any,
 }
 
 
-export function Field({onChange, value, ...props}: FieldProps): JSX.Element {
-    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "input", "input-field")
+export function Select({onChange, children, ...props}: SelectProps): JSX.Element {
+    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "input", "input-select")
 
     const onChangeWrapper = React.useCallback(
 
@@ -36,6 +36,8 @@ export function Field({onChange, value, ...props}: FieldProps): JSX.Element {
     )
 
     return (
-        <BaseElement kind={"input"} onChange={onChangeWrapper} {...props}/>
+        <BaseElement kind={"select"} multiple={false} {...props}>
+            // TODO
+        </BaseElement>
     )
 }
