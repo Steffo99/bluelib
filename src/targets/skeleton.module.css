@@ -77,6 +77,11 @@
 .bluelib .all::after {
   box-sizing: border-box;
 }
+.bluelib .page-footer {
+  margin-top: 1em;
+  text-align: center;
+  font-size: x-small;
+}
 .bluelib .layout {
   display: grid;
   justify-content: stretch;

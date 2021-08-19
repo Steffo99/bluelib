@@ -82,6 +82,14 @@ body *::after,
 .bluelib *::after {
   box-sizing: border-box;
 }
+body footer,
+.bluelib footer,
+body .page-footer,
+.bluelib .page-footer {
+  margin-top: 1em;
+  text-align: center;
+  font-size: x-small;
+}
 body .layout,
 .bluelib .layout {
   display: grid;
