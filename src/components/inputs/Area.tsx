@@ -22,7 +22,7 @@ export function Area({onChange, ...props}: AreaProps): JSX.Element {
 
     const onChangeWrapper = React.useCallback(
 
-        (event: React.ChangeEvent<HTMLInputElement>): boolean => {
+        (event: React.ChangeEvent<HTMLTextAreaElement>): boolean => {
             const contents = event.target.value
 
             if(onChange) {
