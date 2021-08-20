@@ -27,13 +27,13 @@ export const Default = props => (
 export const ThreeCheckboxes = props => (
     <BaseElement kind={"div"}>
         <BaseElement kind={"div"} bluelibClassNames={"color-blue"}>
-            <Checkbox value={"articuno"} {...props}/> Articuno
+            <Checkbox value={"suicune"} {...props}/> Suicune
         </BaseElement>
         <BaseElement kind={"div"} bluelibClassNames={"color-yellow"}>
-            <Checkbox value={"zapdos"} {...props}/> Zapdos
+            <Checkbox value={"raikou"} {...props}/> Raikou
         </BaseElement>
         <BaseElement kind={"div"} bluelibClassNames={"color-red"}>
-            <Checkbox value={"moltres"} {...props}/> Moltres
+            <Checkbox value={"entei"} {...props}/> Entei
         </BaseElement>
     </BaseElement>
 )
