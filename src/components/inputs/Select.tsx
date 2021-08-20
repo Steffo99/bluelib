@@ -23,7 +23,7 @@ export function Select({onChange, ...props}: SelectProps): JSX.Element {
 
     const onChangeWrapper = React.useCallback(
 
-        (event: React.ChangeEvent<HTMLInputElement>): boolean => {
+        (event: React.ChangeEvent<HTMLSelectElement>): boolean => {
             const contents = event.target.value
 
             if(onChange) {
