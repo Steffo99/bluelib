@@ -8,7 +8,7 @@ import mergeClassNames from "classnames"
 interface CheckboxProps {
     disabled?: boolean,
 
-    onChange?: (checked: boolean, value: string) => boolean,
+    onChange?: (value: string, checked: boolean) => boolean,
 
     name: string,
     value: string,
@@ -27,7 +27,7 @@ export function Checkbox({onChange, ...props}: CheckboxProps): JSX.Element {
             const value = event.target.value
 
             if(onChange) {
-                return onChange(checked, value)
+                return onChange(value, checked)
             }
 
             return false
