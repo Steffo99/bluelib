@@ -5,10 +5,10 @@ import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
 
 
-interface RadioProps {
+interface CheckboxProps {
     disabled?: boolean,
 
-    onChange?: (value: string) => boolean,
+    onChange?: (checked: boolean, value: string) => boolean,
 
     name: string,
     value: string,
@@ -17,16 +17,17 @@ interface RadioProps {
 }
 
 
-export function Radio({onChange, ...props}: RadioProps): JSX.Element {
-    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "input", "input-radio")
+export function Checkbox({onChange, ...props}: CheckboxProps): JSX.Element {
+    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "input", "input-checkbox")
 
     const onChangeWrapper = React.useCallback(
 
         (event: React.ChangeEvent<HTMLInputElement>): boolean => {
+            const checked = event.target.checked
             const value = event.target.value
 
             if(onChange) {
-                return onChange(value)
+                return onChange(checked, value)
             }
 
             return false
@@ -36,6 +37,6 @@ export function Radio({onChange, ...props}: RadioProps): JSX.Element {
     )
 
     return (
-        <BaseElement kind={"input"} type={"radio"} onChange={onChangeWrapper} {...props}/>
+        <BaseElement kind={"input"} type={"checkbox"} onChange={onChangeWrapper} {...props}/>
     )
 }
