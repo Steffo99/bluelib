@@ -311,12 +311,12 @@
 .bluelib .list-item::marker {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.505);
 }
-.bluelib .list-description-key {
+.bluelib .list-description-term {
   margin-top: 0.7rem;
   margin-bottom: 0.35rem;
   font-size: larger;
 }
-.bluelib .list-description-value {
+.bluelib .list-description-details {
   margin-top: 0.35rem;
   margin-bottom: 0.7rem;
   margin-left: 16px;

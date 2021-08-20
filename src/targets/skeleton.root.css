@@ -430,16 +430,16 @@ body .list-item::marker,
 }
 body dt,
 .bluelib dt,
-body .list-description-key,
-.bluelib .list-description-key {
+body .list-description-term,
+.bluelib .list-description-term {
   margin-top: 0.7rem;
   margin-bottom: 0.35rem;
   font-size: larger;
 }
 body dd,
 .bluelib dd,
-body .list-description-value,
-.bluelib .list-description-value {
+body .list-description-details,
+.bluelib .list-description-details {
   margin-top: 0.35rem;
   margin-bottom: 0.7rem;
   margin-left: 16px;
