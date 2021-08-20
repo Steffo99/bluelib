@@ -40,3 +40,11 @@ export const ThreeRadios = props => (
 ThreeRadios.args = {
     name: "example"
 }
+ThreeRadios.argTypes = {
+    customColor: {
+        control: {type: "color"},
+    },
+    value: {
+        control: {type: "null"},
+    },
+}
