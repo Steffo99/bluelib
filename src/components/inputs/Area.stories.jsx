@@ -1,25 +1,24 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
 import * as Decorators from "../../utils/Decorators"
-import { Area } from "./Area"
+import { Area as AreaComponent } from "./Area"
 
 
 export default {
-    component: Area,
+    component: AreaComponent,
     title: "Inputs/Area",
     decorators: [Decorators.Bluelib],
     argTypes: {
-        customColor: {
-            control: {type: "color"},
-        },
+        onChange: {action: "Change"},
+        onSimpleChange: {action: "SimpleChange"},
     },
 }
 
 
-export const Default = props => (
-    <Area {...props}/>
+export const Area = props => (
+    <AreaComponent {...props}/>
 )
-Default.args = {
+Area.args = {
     placeholder: "Enter multiline text here\n\nThis component can be resized",
     disabled: false,
     required: false,

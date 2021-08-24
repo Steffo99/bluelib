@@ -19,7 +19,7 @@ const BuiltinThemes = {
 }
 
 
-export interface BluelibProps {
+export interface BluelibProps extends Types.BluelibHTMLProps<HTMLDivElement> {
     theme: "paper" | "royalblue" | "hacker" | "sophon",
 
     backgroundColor?: typeof Color,
@@ -38,8 +38,6 @@ export interface BluelibProps {
     magentaColor?: typeof Color,
     grayColor?: typeof Color,
     polarity?: number,
-
-    [props: string]: any,
 }
 
 
@@ -81,7 +79,10 @@ export function Bluelib({
     if(blueColor) props.style = {...props.style, ...Colors.colorToBluelibStyle("blue", blueColor)}
     if(magentaColor) props.style = {...props.style, ...Colors.colorToBluelibStyle("magenta", magentaColor)}
     if(grayColor) props.style = {...props.style, ...Colors.colorToBluelibStyle("gray", grayColor)}
-    if(polarity) props.style["--bluelib-polarity"] = polarity
+    if(polarity) {
+        // @ts-ignore
+        props.style["--bluelib-polarity"] = polarity
+    }
 
     return (
         <BaseElement

@@ -2,20 +2,19 @@ import * as React from "react"
 import * as ReactDOM from "react-dom"
 import * as Decorators from "../../utils/Decorators"
 import { Table } from "./Table"
+import { TableCaption } from "./TableCaption"
+import { TableHeader } from "./TableHeader"
+import { TableBody } from "./TableBody"
+import { TableFooter } from "./TableFooter"
+import { TableRow } from "./TableRow"
+import { TableCell } from "./TableCell"
 
 
 export default {
     component: Table,
+    subcomponents: {TableCaption, TableHeader, TableBody, TableFooter, TableRow, TableCell},
     title: "Tables/Table",
     decorators: [Decorators.Bluelib],
-    argTypes: {
-        customColor: {
-            control: {type: "color"},
-        },
-        disabled: {
-            control: {type: "boolean"},
-        },
-    },
 }
 
 
@@ -150,7 +149,7 @@ export const TierList = props => (
                     S
                 </Table.Cell>
                 <Table.Cell>
-                    span
+                    &lt;span&gt;
                 </Table.Cell>
             </Table.Row>
             <Table.Row>
@@ -158,7 +157,7 @@ export const TierList = props => (
                     A
                 </Table.Cell>
                 <Table.Cell>
-                    a
+                    &lt;a&gt;
                 </Table.Cell>
             </Table.Row>
             <Table.Row>
@@ -166,7 +165,7 @@ export const TierList = props => (
                     B
                 </Table.Cell>
                 <Table.Cell>
-                    body
+                    &lt;body&gt;
                 </Table.Cell>
             </Table.Row>
             <Table.Row>
@@ -174,7 +173,7 @@ export const TierList = props => (
                     C
                 </Table.Cell>
                 <Table.Cell>
-                    caption
+                    &lt;caption&gt;
                 </Table.Cell>
             </Table.Row>
         </Table.Body>

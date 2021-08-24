@@ -1,25 +1,24 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
 import * as Decorators from "../../utils/Decorators"
-import { Field } from "./Field"
+import { Field as FieldComponent } from "./Field"
 
 
 export default {
-    component: Field,
+    component: FieldComponent,
     title: "Inputs/Field",
     decorators: [Decorators.Bluelib],
     argTypes: {
-        customColor: {
-            control: {type: "color"},
-        },
+        onChange: {action: "Change"},
+        onSimpleChange: {action: "SimpleChange"},
     },
 }
 
 
-export const Default = props => (
-    <Field {...props}/>
+export const Field = props => (
+    <FieldComponent {...props}/>
 )
-Default.args = {
+Field.args = {
     placeholder: "Enter text here",
     disabled: false,
     required: false,

@@ -7,7 +7,7 @@ import Color from "color"
 
 export default {
     component: Bluelib,
-    title: "Bluelib/Bluelib",
+    title: "Core/Bluelib",
     decorators: [Decorators.Fill],
     parameters: {
         layout: "fullscreen",

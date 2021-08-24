@@ -5,14 +5,10 @@ import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
 
 
-interface LayoutProps {
-
-    [props: string]: any,
-}
+export interface BaseLayoutProps extends Types.BluelibHTMLProps<HTMLDivElement> {}
 
 
-export function BaseLayout({...props}: LayoutProps): JSX.Element {
-
+export function BaseLayout({...props}: BaseLayoutProps): JSX.Element {
     props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "layout")
 
     return (

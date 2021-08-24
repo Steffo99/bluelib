@@ -5,29 +5,25 @@ import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
 
 
-interface ImageProps {
-    src: string,
-    limit?: "no" | "half" | "quarter",
-
-    [props: string]: any,
+export interface ImageProps extends Types.BluelibHTMLProps<HTMLImageElement> {
+    limit?: "full" | "half" | "quarter",
 }
 
 
 const LIMIT_CLASSES = {
-    no: "",
+    full: "",
     half: "image-limit-half",
     quarter: "image-limit-quarter",
 }
 
 
-export function Image({limit = "no", ...props}: ImageProps): JSX.Element {
+export function Image({limit = "full", ...props}: ImageProps): JSX.Element {
     props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "image")
 
     if(limit) {
         props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, LIMIT_CLASSES[limit])
     }
-
-    // TODO: Capture the src and make the image clickable
+    
     return (
         <BaseElement kind={"img"} {...props}/>
     )

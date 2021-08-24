@@ -5,7 +5,7 @@ import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
 
 
-interface OptionGroupProps {
+export interface OptionGroupProps {
     label: string,
 
     [props: string]: any,

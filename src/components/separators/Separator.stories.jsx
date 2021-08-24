@@ -6,13 +6,8 @@ import { Separator } from "./Separator"
 
 export default {
     component: Separator,
-    title: "Separator/Separator",
+    title: "Separators/Separator",
     decorators: [Decorators.Bluelib],
-    argTypes: {
-        customColor: {
-            control: {type: "color"},
-        },
-    },
 }
 
 

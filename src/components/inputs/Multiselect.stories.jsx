@@ -8,40 +8,40 @@ import { Multiselect } from "./Multiselect"
 
 export default {
     component: Multiselect,
+    subcomponents: {Option, OptionGroup},
     title: "Inputs/Multiselect",
     decorators: [Decorators.Bluelib],
     argTypes: {
-        customColor: {
-            control: {type: "color"},
-        },
+        onChange: {action: "Change"},
+        onSimpleChange: {action: "SimpleChange"},
     },
 }
 
 
-export const Default = props => (
+export const Basic = props => (
     <Multiselect {...props}>
-        <Option label={"Yes"}/>
-        <Option label={"Maybe"}/>
-        <Option label={"No"}/>
+        <Multiselect.Option value={"Yes"}/>
+        <Multiselect.Option value={"Maybe"}/>
+        <Multiselect.Option value={"No"}/>
     </Multiselect>
 )
-Default.args = {
+Basic.args = {
     disabled: false,
 }
 
 
 export const WithGroups = props => (
     <Multiselect {...props}>
-        <OptionGroup label={"A"}>
-            <Option label={"Anchor"}/>
-            <Option label={"Angel"}/>
-            <Option label={"Anti-air"}/>
-        </OptionGroup>
-        <OptionGroup label={"B"}>
-            <Option label={"Banana"}/>
-            <Option label={"Boat"}/>
-            <Option label={"Bus"}/>
-        </OptionGroup>
+        <Multiselect.Group label={"A"}>
+            <Multiselect.Option value={"Anchor"}/>
+            <Multiselect.Option value={"Angel"}/>
+            <Multiselect.Option value={"Anti-air"}/>
+        </Multiselect.Group>
+        <Multiselect.Group label={"B"}>
+            <Multiselect.Option value={"Banana"}/>
+            <Multiselect.Option value={"Boat"}/>
+            <Multiselect.Option value={"Bus"}/>
+        </Multiselect.Group>
     </Multiselect>
 )
 WithGroups.args = {

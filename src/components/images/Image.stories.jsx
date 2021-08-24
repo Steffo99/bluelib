@@ -17,25 +17,28 @@ export default {
 }
 
 
-export const NoLimit = props => (
+export const FullLimit = props => (
     <Image {...props}/>
 )
-NoLimit.args = {
+FullLimit.args = {
     src: PineappleWithSunglasses,
+
     limit: "no",
     disabled: false,
 }
 
 
-export const HalfLimit = NoLimit.bind({})
+export const HalfLimit = FullLimit.bind({})
 HalfLimit.args = {
-    ...NoLimit.args,
+    ...FullLimit.args,
+
     limit: "half",
 }
 
 
-export const QuarterLimit = NoLimit.bind({})
+export const QuarterLimit = FullLimit.bind({})
 QuarterLimit.args = {
-    ...NoLimit.args,
+    ...FullLimit.args,
+
     limit: "quarter",
 }

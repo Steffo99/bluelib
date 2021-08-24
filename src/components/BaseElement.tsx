@@ -7,29 +7,28 @@ import Color from "color"
 import mergeClassNames, {Argument as ClassNamesArgument} from "classnames"
 
 
-export interface BaseElementProps {
-    kind: Types.ComponentKind,
+export interface BaseElementProps extends React.HTMLProps<any> {
+    kind: string,
     bluelibClassNames?: Types.ClassNames,
-    customColor?: typeof Color,
     disabled?: boolean,
-
-    [props: string]: any,
+    customColor?: typeof Color,
 }
 
 
-export function BaseElement({kind, bluelibClassNames, customColor, ...props}: BaseElementProps): JSX.Element {
+export function BaseElement({kind = "div", bluelibClassNames, disabled = false, customColor, ...props}: BaseElementProps): JSX.Element {
     // Set the Bluelib color
-    if(customColor) props.style = {...props.style, ...Colors.colorToBluelibStyle("color", customColor)}
+    if(customColor) {
+        props.style = {...props.style, ...Colors.colorToBluelibStyle("color", customColor)}
+    }
 
     // Possibly disable the element
-    if(props.disabled) bluelibClassNames = mergeClassNames(bluelibClassNames, "status-disabled")
+    bluelibClassNames = mergeClassNames(bluelibClassNames, disabled ? "status-disabled" : "")
+    // @ts-ignore
+    props.disabled = disabled
 
     // Map regular class names to module class names
     bluelibClassNames = BluelibMapper.rootToModule(bluelibClassNames)
     props.className = mergeClassNames(props.className, bluelibClassNames)
 
-    // Dynamically determine the element kind
-    const Kind = kind
-
-    return <Kind {...props}/>
+    return React.createElement(kind, props)
 }

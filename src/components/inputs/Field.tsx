@@ -5,37 +5,25 @@ import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
 
 
-interface FieldProps {
-    placeholder: string,
-    required?: boolean,
-    disabled?: boolean,
-
-    onChange: (contents: string) => boolean,
+export interface FieldProps extends Types.BluelibHTMLProps<HTMLInputElement> {
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
+    onSimpleChange?: (value: string) => void,
     value?: string,
-
-    [props: string]: any,
 }
 
 
-export function Field({onChange, value, ...props}: FieldProps): JSX.Element {
+export function Field({onChange, onSimpleChange, ...props}: FieldProps): JSX.Element {
     props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "input", "input-field")
 
-    const onChangeWrapper = React.useCallback(
-
-        (event: React.ChangeEvent<HTMLInputElement>): boolean => {
-            const contents = event.target.value
-
-            if(onChange) {
-                return onChange(contents)
-            }
-
-            return false
+    const onChangeWrapped = React.useCallback(
+        event => {
+            if(onChange) onChange(event)
+            if(onSimpleChange) onSimpleChange(event.target.value)
         },
-
-        [onChange]
+        [onChange, onSimpleChange]
     )
 
     return (
-        <BaseElement kind={"input"} onChange={onChangeWrapper} {...props}/>
+        <BaseElement kind={"input"} onChange={onChangeWrapped} {...props}/>
     )
 }

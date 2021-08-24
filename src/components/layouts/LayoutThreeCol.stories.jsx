@@ -1,13 +1,17 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
 import * as Decorators from "../../utils/Decorators"
-import { LayoutThreeCol } from "./LayoutThreeCol"
+import { LayoutThreeCol as LayoutThreeColComponent } from "./LayoutThreeCol"
+import { LayoutThreeColLeft } from "./LayoutThreeColLeft"
+import { LayoutThreeColCenter } from "./LayoutThreeColCenter"
+import { LayoutThreeColRight } from "./LayoutThreeColRight"
 import { Box } from "../panels/Box"
 
 
 export default {
-    component: LayoutThreeCol,
-    title: "Layouts/LayoutThreeCol",
+    component: LayoutThreeColComponent,
+    subcomponents: {LayoutThreeColLeft, LayoutThreeColCenter, LayoutThreeColRight},
+    title: "Layouts/Layout Three Col",
     decorators: [Decorators.Bluelib, Decorators.Fill],
     parameters: {
         layout: "fullscreen",
@@ -15,23 +19,23 @@ export default {
 }
 
 
-export const Default = props => (
-    <LayoutThreeCol {...props}>
-        <LayoutThreeCol.Left>
+export const LayoutThreeCol = props => (
+    <LayoutThreeColComponent {...props}>
+        <LayoutThreeColComponent.Left>
             <Box>
                 Left
             </Box>
-        </LayoutThreeCol.Left>
-        <LayoutThreeCol.Center>
+        </LayoutThreeColComponent.Left>
+        <LayoutThreeColComponent.Center>
             <Box>
                 Center
             </Box>
-        </LayoutThreeCol.Center>
-        <LayoutThreeCol.Right>
+        </LayoutThreeColComponent.Center>
+        <LayoutThreeColComponent.Right>
             <Box>
                 Right
             </Box>
-        </LayoutThreeCol.Right>
-    </LayoutThreeCol>
+        </LayoutThreeColComponent.Right>
+    </LayoutThreeColComponent>
 )
-Default.args = {}
+LayoutThreeCol.args = {}

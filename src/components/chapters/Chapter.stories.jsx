@@ -20,16 +20,14 @@ export default {
 }
 
 
-export const Default = props => (
+export const Basic = props => (
     <Chapter {...props}>
         <Box>First</Box>
         <Box>Second</Box>
         <Box>Third</Box>
     </Chapter>
 )
-Default.args = {
-    disabled: false,
-}
+Basic.args = {}
 
 
 export const AutoWrap = props => (
@@ -46,14 +44,18 @@ export const AutoWrap = props => (
         <Box>Tenth</Box>
         <Box>Eleventh</Box>
         <Box>Twelfth</Box>
-        <Box>Thirtheenth</Box>
-        <Box>Fourtheenth</Box>
-        <Box>Fiftheenth</Box>
+        <Box>Thirteenth</Box>
+        <Box>Fourteenth</Box>
+        <Box>Fifteenth</Box>
+        <Box>Sixteenth</Box>
+        <Box>Seventeenth</Box>
+        <Box>Eighteenth</Box>
+        <Box>Ninteenth</Box>
+        <Box>Ninteenth</Box>
+        <Box>Twentieth</Box>
     </Chapter>
 )
-AutoWrap.args = {
-    disabled: false,
-}
+AutoWrap.args = {}
 
 
 export const ForceWrap = props => (
@@ -65,6 +67,4 @@ export const ForceWrap = props => (
         <Box>Fourth</Box>
     </Chapter>
 )
-ForceWrap.args = {
-    disabled: false,
-}
+ForceWrap.args = {}

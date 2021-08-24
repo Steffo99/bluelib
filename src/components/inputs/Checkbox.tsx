@@ -5,38 +5,26 @@ import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
 
 
-interface CheckboxProps {
-    disabled?: boolean,
-
-    onChange?: (value: string, checked: boolean) => boolean,
-
-    name: string,
+export interface CheckboxProps extends Types.BluelibHTMLProps<HTMLInputElement> {
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
+    onSimpleChange?: (value: string, checked: boolean) => void,
+    checked?: boolean,
     value: string,
-
-    [props: string]: any,
 }
 
 
-export function Checkbox({onChange, ...props}: CheckboxProps): JSX.Element {
+export function Checkbox({onChange, onSimpleChange, ...props}: CheckboxProps): JSX.Element {
     props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "input", "input-checkbox")
 
-    const onChangeWrapper = React.useCallback(
-
-        (event: React.ChangeEvent<HTMLInputElement>): boolean => {
-            const checked = event.target.checked
-            const value = event.target.value
-
-            if(onChange) {
-                return onChange(value, checked)
-            }
-
-            return false
+    const onChangeWrapped = React.useCallback(
+        event => {
+            if(onChange) onChange(event)
+            if(onSimpleChange) onSimpleChange(event.target.value, event.target.checked)
         },
-
-        [onChange]
+        [onChange, onSimpleChange]
     )
 
     return (
-        <BaseElement kind={"input"} type={"checkbox"} onChange={onChangeWrapper} {...props}/>
+        <BaseElement kind={"input"} type={"checkbox"} onChange={onChangeWrapped} {...props}/>
     )
 }

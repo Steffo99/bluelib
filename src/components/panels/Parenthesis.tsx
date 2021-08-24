@@ -1,13 +1,11 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
 import * as Types from "../../types"
-import {Panel} from "./Panel";
+import {Panel, PanelProps} from "./Panel";
 import mergeClassNames from "classnames"
 
 
-interface ParenthesisProps {
-    [props: string]: any,
-}
+export interface ParenthesisProps extends PanelProps {}
 
 
 export function Parenthesis({...props}: ParenthesisProps): JSX.Element {

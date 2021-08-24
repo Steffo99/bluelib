@@ -1,13 +1,11 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
 import * as Types from "../../types"
-import {Panel} from "./Panel";
+import {Panel, PanelProps} from "./Panel";
 import mergeClassNames from "classnames"
 
 
-interface DialogProps {
-    [props: string]: any,
-}
+export interface DialogProps extends PanelProps {}
 
 
 export function Dialog({...props}: DialogProps): JSX.Element {

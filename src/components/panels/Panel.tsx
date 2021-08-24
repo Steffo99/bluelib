@@ -5,9 +5,7 @@ import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
 
 
-interface PanelProps {
-    [props: string]: any,
-}
+export interface PanelProps extends Types.BluelibHTMLProps<HTMLElement> {}
 
 
 export function Panel({...props}: PanelProps): JSX.Element {

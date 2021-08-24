@@ -3,11 +3,10 @@ import * as ReactDOM from "react-dom"
 import * as Types from "../../types"
 import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
+import {ChapterForceWrap} from "./ChapterForceWrap";
 
 
-interface ChapterProps {
-    [props: string]: any,
-}
+export interface ChapterProps extends Types.BluelibHTMLProps<HTMLDivElement> {}
 
 
 export function Chapter({...props}: ChapterProps): JSX.Element {
@@ -19,15 +18,4 @@ export function Chapter({...props}: ChapterProps): JSX.Element {
 }
 
 
-interface ChapterForceWrapProps {
-    [props: string]: any,
-}
-
-
-Chapter.ForceWrap = function({...props}: ChapterForceWrapProps): JSX.Element {
-    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "chapter-forcewrap")
-
-    return (
-        <BaseElement kind={"div"} {...props}/>
-    )
-}
+Chapter.ForceWrap = ChapterForceWrap

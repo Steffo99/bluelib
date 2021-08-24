@@ -3,10 +3,13 @@ import * as ReactDOM from "react-dom"
 import * as Types from "../../types"
 import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
-import {BaseLayout} from "./BaseLayout";
+import {BaseLayout, BaseLayoutProps} from "./BaseLayout";
+import {LayoutThreeColLeft} from "./LayoutThreeColLeft";
+import {LayoutThreeColCenter} from "./LayoutThreeColCenter";
+import {LayoutThreeColRight} from "./LayoutThreeColRight";
 
 
-interface LayoutThreeColProps {
+export interface LayoutThreeColProps extends BaseLayoutProps {
     [props: string]: any,
 }
 
@@ -20,37 +23,6 @@ export function LayoutThreeCol({...props}: LayoutThreeColProps): JSX.Element {
 }
 
 
-interface LayoutThreeColLeftProps {
-    [props: string]: any,
-}
-
-
-LayoutThreeCol.Left = function({...props}: LayoutThreeColLeftProps): JSX.Element {
-    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "layout-threecol-left")
-
-    return <BaseElement kind={"div"} {...props}/>
-}
-
-
-interface LayoutThreeColCenterProps {
-    [props: string]: any,
-}
-
-
-LayoutThreeCol.Center = function({...props}: LayoutThreeColCenterProps): JSX.Element {
-    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "layout-threecol-center")
-
-    return <BaseElement kind={"div"} {...props}/>
-}
-
-
-interface LayoutThreeColRightProps {
-    [props: string]: any,
-}
-
-
-LayoutThreeCol.Right = function({...props}: LayoutThreeColRightProps): JSX.Element {
-    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "layout-threecol-right")
-
-    return <BaseElement kind={"div"} {...props}/>
-}
+LayoutThreeCol.Left = LayoutThreeColLeft
+LayoutThreeCol.Center = LayoutThreeColCenter
+LayoutThreeCol.Right = LayoutThreeColRight

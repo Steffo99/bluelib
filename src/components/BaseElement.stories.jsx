@@ -1,42 +1,23 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
 import * as Decorators from "../utils/Decorators"
-import { BaseElement } from "./BaseElement"
+import { BaseElement as BaseElementComponent } from "./BaseElement"
 import { Bluelib } from "./Bluelib"
 
 
 export default {
-    component: BaseElement,
-    title: "Bluelib/BaseElement",
+    component: BaseElementComponent,
+    title: "Internals/Base Element",
     decorators: [Decorators.Bluelib],
-    argTypes: {
-        customColor: {
-            control: {type: "color"},
-        },
-    },
 }
 
 
-export const Default = props => (
-    <BaseElement kind={"div"} {...props}>
+export const BaseElement = props => (
+    <BaseElementComponent kind={"div"} {...props}>
         This is a text node child.
-    </BaseElement>
+    </BaseElementComponent>
 )
-Default.args = {
+BaseElement.args = {
     kind: "div",
     disabled: false,
-}
-
-
-export const CustomColor = Default.bind({})
-CustomColor.args = {
-    ...Default.args,
-    customColor: "#ff7f00",
-}
-
-
-export const Disabled = Default.bind({})
-Disabled.args = {
-    ...Default.args,
-    disabled: true,
 }

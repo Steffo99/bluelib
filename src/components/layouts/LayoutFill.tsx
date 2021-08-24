@@ -3,12 +3,11 @@ import * as ReactDOM from "react-dom"
 import * as Types from "../../types"
 import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
-import {BaseLayout} from "./BaseLayout";
+import {BaseLayout, BaseLayoutProps} from "./BaseLayout";
+import {LayoutFillSingle} from "./LayoutFillSingle";
 
 
-interface LayoutFillProps {
-    [props: string]: any,
-}
+export interface LayoutFillProps extends BaseLayoutProps {}
 
 
 export function LayoutFill({...props}: LayoutFillProps): JSX.Element {
@@ -18,12 +17,4 @@ export function LayoutFill({...props}: LayoutFillProps): JSX.Element {
 }
 
 
-interface LayoutFillSingleProps {
-    [props: string]: any,
-}
-
-LayoutFill.Single = function({...props}: LayoutFillSingleProps): JSX.Element {
-    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "layout-fill-single")
-
-    return <BaseElement kind={"div"} {...props}/>
-}
+LayoutFill.Single = LayoutFillSingle

@@ -5,37 +5,26 @@ import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
 
 
-interface RadioProps {
-    disabled?: boolean,
-
-    onChange?: (value: string) => boolean,
-
-    name: string,
+export interface RadioProps extends Types.BluelibHTMLProps<HTMLInputElement> {
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
+    onSimpleChange?: (value: string) => void,
+    checked?: boolean,
     value: string,
-
-    [props: string]: any,
 }
 
 
-export function Radio({onChange, ...props}: RadioProps): JSX.Element {
+export function Radio({onChange, onSimpleChange, ...props}: RadioProps): JSX.Element {
     props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "input", "input-radio")
 
-    const onChangeWrapper = React.useCallback(
-
-        (event: React.ChangeEvent<HTMLInputElement>): boolean => {
-            const value = event.target.value
-
-            if(onChange) {
-                return onChange(value)
-            }
-
-            return false
+    const onChangeWrapped = React.useCallback(
+        event => {
+            if(onChange) onChange(event)
+            if(onSimpleChange) onSimpleChange(event.target.value)
         },
-
-        [onChange]
+        [onChange, onSimpleChange]
     )
 
     return (
-        <BaseElement kind={"input"} type={"radio"} onChange={onChangeWrapper} {...props}/>
+        <BaseElement kind={"input"} type={"radio"} onChange={onChangeWrapped} {...props}/>
     )
 }
