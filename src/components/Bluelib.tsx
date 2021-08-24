@@ -92,3 +92,7 @@ export function Bluelib({
         />
     )
 }
+
+
+Bluelib.Element = BaseElement
+
