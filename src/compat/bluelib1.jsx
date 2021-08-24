@@ -1,6 +1,6 @@
 // noinspection JSUnusedGlobalSymbols,JSDeprecatedSymbols
 
-import { Box } from "../components/panels/Box";
+import { Box } from "../components/panels/Box"
 import { Heading } from "../components/common/Heading"
 import { Chapter } from "../components/chapters/Chapter"
 import { Table } from "../components/tables/Table"
