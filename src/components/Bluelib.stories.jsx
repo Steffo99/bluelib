@@ -3,6 +3,11 @@ import * as ReactDOM from "react-dom"
 import * as Decorators from "../utils/Decorators"
 import {Bluelib} from "./Bluelib"
 import Color from "color"
+import { LayoutThreeCol } from "./layouts/LayoutThreeCol"
+import { Box } from "./panels/Box"
+import { Heading } from "./common/Heading"
+import { Idiomatic } from "./semantics/Idiomatic"
+import { Mark } from "./semantics/Mark"
 
 
 export default {
@@ -64,7 +69,21 @@ export default {
 
 export const Paper = props => (
     <Bluelib {...props}>
-        <div>Hello world!</div>
+        <LayoutThreeCol>
+            <LayoutThreeCol.Center>
+                <Box>
+                    <Heading level={1}>
+                        Bluelib React
+                    </Heading>
+                    <p>
+                        This is a mini-webpage-in-a-page using <Idiomatic>Bluelib React</Idiomatic>!
+                    </p>
+                    <p>
+                        Test out the various themes by switching to the various <Mark>stories</Mark> of this component, or create your own by tweaking the <Mark>props</Mark> displayed below.
+                    </p>
+                </Box>
+            </LayoutThreeCol.Center>
+        </LayoutThreeCol>
     </Bluelib>
 )
 Paper.args = {
@@ -95,8 +114,8 @@ Sophon.args = {
 export const CustomRed = Paper.bind({})
 CustomRed.args = {
     ...Paper.args,
-    foregroundColor: "#ff0000",
+    foregroundColor: "#660000",
     backgroundColor: "#ffcccc",
-    accentColor: "#000000",
+    accentColor: "#ff0000",
     polarity: -1,
 }
