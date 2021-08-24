@@ -37,13 +37,11 @@
     "babel-loader": "8.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 30060 -s public",
-    "build-storybook": "build-storybook -s public",
-    "deploy-storybook": "storybook-to-ghpages"
+    "start": "start-storybook -p 30060 -s public",
+    "build": "build-storybook -s public",
+    "deploy": "storybook-to-ghpages"
   },
   "browserslist": {
     "production": [
