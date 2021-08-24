@@ -558,22 +558,17 @@
   font-family: var(--bluelib-title-family);
   font-weight: var(--bluelib-title-weight);
 }
-.bluelib a,
 .bluelib .anchor {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
 }
-.bluelib a:focus-visible,
 .bluelib .anchor:focus-visible {
   text-decoration-thickness: 2px;
 }
-.bluelib a:hover,
 .bluelib .anchor:hover,
-.bluelib a:focus,
 .bluelib .anchor:focus {
   color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 30)), 1);
 }
-.bluelib a:active,
 .bluelib .anchor:active {
   color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 60)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 60)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 60)), 1);
 }
@@ -626,59 +621,46 @@
   cursor: help;
   text-decoration: underline 1px dotted currentColor;
 }
-.bluelib b,
 .bluelib .semantic-b {
   font-weight: 500;
   color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
 }
-.bluelib cite,
 .bluelib .semantic-cite {
   font-variant: small-caps;
 }
-.bluelib code,
 .bluelib .semantic-code {
   font-family: var(--bluelib-code-family);
   font-weight: var(--bluelib-code-weight);
 }
-.bluelib dfn,
 .bluelib .semantic-dfn {
   text-decoration: underline 1px solid currentColor;
   font-style: italic;
 }
-.bluelib em,
 .bluelib .semantic-em {
   color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
 }
-.bluelib i,
 .bluelib .semantic-i {
   font-style: italic;
 }
-.bluelib mark,
 .bluelib .semantic-mark {
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.22);
   color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)), 1);
 }
-.bluelib q,
 .bluelib .semantic-q {
   font-style: oblique;
 }
-.bluelib q:before,
 .bluelib .semantic-q:before,
-.bluelib q:after,
 .bluelib .semantic-q:after {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.505);
 }
-.bluelib samp,
 .bluelib .semantic-samp {
   background-color: rgba(calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)), calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)), calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)), 1);
   color: rgba(calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)), calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)), calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)), 1);
 }
-.bluelib strong,
 .bluelib .semantic-strong {
   font-weight: 800;
   color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
 }
-.bluelib var,
 .bluelib .semantic-var {
   font-style: normal;
   color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
