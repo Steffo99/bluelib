@@ -8,8 +8,12 @@ import mergeClassNames from "classnames"
 export interface DialogProps extends PanelProps {}
 
 
-export function Dialog({...props}: DialogProps): JSX.Element {
-    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "panel-dialog")
+export function Dialog({todo, ...props}: DialogProps): JSX.Element {
+    if(todo) {
+        console.warn(`TODO: ${props.children}`)
+    }
+
+    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "panel-dialog", todo ? "todo" : "")
 
     return (
         <Panel {...props}/>

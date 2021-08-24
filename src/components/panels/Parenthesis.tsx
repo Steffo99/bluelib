@@ -8,8 +8,12 @@ import mergeClassNames from "classnames"
 export interface ParenthesisProps extends PanelProps {}
 
 
-export function Parenthesis({...props}: ParenthesisProps): JSX.Element {
-    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "panel-parenthesis")
+export function Parenthesis({todo, ...props}: ParenthesisProps): JSX.Element {
+    if(todo) {
+        console.warn(`TODO: ${props.children}`)
+    }
+
+    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "panel-parenthesis", todo ? "todo" : "")
 
     return (
         <Panel {...props}/>

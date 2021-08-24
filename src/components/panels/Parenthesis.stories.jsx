@@ -15,6 +15,9 @@ export default {
         disabled: {
             control: {type: "boolean"},
         },
+        todo: {
+            defaultValue: false,
+        },
     },
 }
 
@@ -58,4 +61,10 @@ export const NestedMultiple = props => (
 )
 NestedMultiple.args = {
     disabled: false,
+}
+
+
+export const Todo = Default.bind({})
+Todo.args = {
+    todo: true,
 }

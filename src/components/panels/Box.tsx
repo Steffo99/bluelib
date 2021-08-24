@@ -8,8 +8,12 @@ import mergeClassNames from "classnames"
 export interface BoxProps extends PanelProps {}
 
 
-export function Box({...props}: BoxProps): JSX.Element {
-    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "panel-box")
+export function Box({todo, ...props}: BoxProps): JSX.Element {
+    if(todo) {
+        console.warn(`TODO: ${props.children}`)
+    }
+
+    props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "panel-box", todo ? "todo" : "")
 
     return (
         <Panel {...props}/>
