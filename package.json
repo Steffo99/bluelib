@@ -24,6 +24,20 @@
     },
     "license": "AGPL-3.0-or-later",
     "dependencies": {
+        "classnames": "^2.3.1",
+        "color": "https://github.com/Steffo99/color",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "uuid": "^8.3.2",
+        "web-vitals": "^1.0.1"
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^6.3.7",
+        "@storybook/addon-essentials": "^6.3.7",
+        "@storybook/addon-links": "^6.3.7",
+        "@storybook/node-logger": "^6.3.7",
+        "@storybook/preset-create-react-app": "^3.2.0",
+        "@storybook/react": "^6.3.7",
         "@storybook/addon-docs": "^6.3.7",
         "@storybook/addons": "^6.3.7",
         "@storybook/storybook-deployer": "^2.8.10",
@@ -37,22 +51,8 @@
         "@types/react": "^17.0.0",
         "@types/react-dom": "^17.0.0",
         "@types/uuid": "^8.3.1",
-        "classnames": "^2.3.1",
-        "color": "https://github.com/Steffo99/color",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
         "react-scripts": "4.0.3",
-        "typescript": "^4.1.2",
-        "uuid": "^8.3.2",
-        "web-vitals": "^1.0.1"
-    },
-    "devDependencies": {
-        "@storybook/addon-actions": "^6.3.7",
-        "@storybook/addon-essentials": "^6.3.7",
-        "@storybook/addon-links": "^6.3.7",
-        "@storybook/node-logger": "^6.3.7",
-        "@storybook/preset-create-react-app": "^3.2.0",
-        "@storybook/react": "^6.3.7"
+        "typescript": "^4.1.2"
     },
     "resolutions": {
         "babel-loader": "8.1.0"
