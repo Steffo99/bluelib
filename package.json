@@ -1,5 +1,5 @@
 {
-    "name": "bluelib-react",
+    "name": "@steffo/bluelib-react",
     "version": "3.0.3",
     "description": "React bindings for Bluelib",
     "keywords": [
