@@ -75,11 +75,12 @@
         "babel-loader": "8.1.0"
     },
     "files": [
-        "dist/bluelib-react.js"
+        "dist/**/*"
     ],
     "main": "dist/bluelib-react.js",
+    "types": "dist/index.d.ts",
     "scripts": {
-        "package:build": "webpack",
+        "package:build": "rollup -c",
         "storybook:start": "start-storybook -p 30060 -s public",
         "storybook:build": "build-storybook -s public",
         "storybook:deploy": "storybook-to-ghpages"

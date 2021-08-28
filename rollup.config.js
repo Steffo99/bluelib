@@ -25,7 +25,9 @@ export default {
         postcss({
             modules: true,
         }),
-        typescript(),
+        typescript({
+            tsconfig: "./tsconfig.json",
+        }),
         babel({
             babelHelpers: "runtime",
             presets: ["@babel/preset-env", "@babel/preset-react"],
