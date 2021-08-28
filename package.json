@@ -25,6 +25,7 @@
     },
     "license": "AGPL-3.0-or-later",
     "dependencies": {
+        "@babel/runtime": "^7.15.3",
         "classnames": "^2.3.1",
         "color": "https://github.com/Steffo99/color",
         "uuid": "^8.3.2"
@@ -34,15 +35,15 @@
         "react-dom": "^17.0.2"
     },
     "devDependencies": {
-        "rollup": "^2.56.3",
-        "rollup-plugin-postcss": "^4.0.1",
-        "@rollup/plugin-babel": "^5.3.0",
-        "@rollup/plugin-commonjs": "^20.0.0",
-        "@rollup/plugin-node-resolve": "^13.0.4",
         "@babel/core": "^7.15.0",
+        "@babel/plugin-transform-runtime": "^7.15.0",
         "@babel/preset-env": "^7.15.0",
         "@babel/preset-react": "^7.14.5",
         "@babel/preset-typescript": "^7.15.0",
+        "@rollup/plugin-babel": "^5.3.0",
+        "@rollup/plugin-commonjs": "^20.0.0",
+        "@rollup/plugin-node-resolve": "^13.0.4",
+        "@rollup/plugin-typescript": "^8.2.5",
         "@storybook/addon-actions": "^6.3.7",
         "@storybook/addon-docs": "^6.3.7",
         "@storybook/addon-essentials": "^6.3.7",
@@ -62,9 +63,12 @@
         "@types/react": "^17.0.0",
         "@types/react-dom": "^17.0.0",
         "@types/uuid": "^8.3.1",
+        "postcss": "^8.3.6",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-scripts": "4.0.3",
+        "rollup": "^2.56.3",
+        "rollup-plugin-postcss": "^4.0.1",
         "typescript": "^4.1.2"
     },
     "resolutions": {
