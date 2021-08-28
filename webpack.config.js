@@ -3,7 +3,7 @@ const path = require("path")
 
 module.exports = {
     // Mode: setting this to development preconfigure webpack with some defaults
-    mode: "development",
+    mode: "production",
 
     // Loaders: these allow various non-js filetypes to be imported
     module: {
