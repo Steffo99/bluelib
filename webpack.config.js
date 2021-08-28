@@ -3,7 +3,7 @@ const path = require("path")
 
 module.exports = {
     // Mode: setting this to development preconfigure webpack with some defaults
-    mode: "production",
+    mode: "development",
 
     // Loaders: these allow various non-js filetypes to be imported
     module: {
@@ -11,19 +11,26 @@ module.exports = {
             {
                 test: /[.]css$/,
                 exclude: /node_modules/,
-                use: [{
-                    loader: "css-loader",
-                }],
+                use: [
+                    {
+                        loader: "style-loader"
+                    },
+                    {
+                        loader: "css-loader"
+                    },
+                ],
             },
             {
                 test: /[.]js$/,
                 exclude: /node_modules/,
-                use: [{
-                    loader: "babel-loader",
-                    options: {
-                        presets: ["@babel/preset-env"]
-                    },
-                }],
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            presets: ["@babel/preset-env"]
+                        },
+                    }
+                ],
             },
             {
                 test: /[.]jsx$/,
