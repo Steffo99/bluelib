@@ -75,9 +75,9 @@
         "babel-loader": "8.1.0"
     },
     "files": [
-        "dist/bluelib-react.umd.js"
+        "dist/bluelib-react.js"
     ],
-    "main": "dist/bluelib-react.umd.js",
+    "main": "dist/bluelib-react.js",
     "scripts": {
         "package:build": "webpack",
         "storybook:start": "start-storybook -p 30060 -s public",
