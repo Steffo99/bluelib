@@ -38,6 +38,6 @@ export function Anchor({displayStyle, href, ...props}: AnchorProps): JSX.Element
     props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "anchor", DISPLAY_STYLE_CLASSES[displayStyle])
 
     return (
-        <BaseElement kind={"a"} {...props}/>
+        <BaseElement kind={"a"} href={href} {...props}/>
     )
 }
