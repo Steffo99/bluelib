@@ -19,11 +19,19 @@ import {Button} from "../inputs/Button";
 export interface FormProps extends Types.BluelibHTMLProps<HTMLFormElement> {}
 
 
-export function Form({...props}: FormProps): JSX.Element {
+export function Form({onSubmit, ...props}: FormProps): JSX.Element {
     props.bluelibClassNames = mergeClassNames(props.bluelibClassNames, "form")
 
+    const onSubmitPreventDefault = React.useCallback(
+        event => {
+            if(onSubmit) onSubmit(event)
+            event.preventDefault()
+        },
+        [onSubmit]
+    )
+
     return (
-        <BaseElement kind={"form"} {...props}/>
+        <BaseElement kind={"form"} onSubmit={onSubmitPreventDefault} {...props}/>
     )
 }
 
