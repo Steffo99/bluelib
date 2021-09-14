@@ -23,13 +23,13 @@ export function FormPair({id, label, input, validity, bluelibClassNames, customC
     }
 
     let validityClass = ""
-    if(validity === "running") {
+    if(validity === null) {
         validityClass = "color-yellow"
     }
-    else if(validity === "ok") {
+    else if(validity === true) {
         validityClass = "color-lime"
     }
-    else if(validity === "error") {
+    else if(validity === false) {
         validityClass = "color-red"
     }
 
