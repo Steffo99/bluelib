@@ -22,22 +22,15 @@ export function FormPair({id, label, input, validity, bluelibClassNames, customC
         id = UUID.v4()
     }
 
-    let validityClass
-    // If the input is valid
-    if(validity === true) {
+    let validityClass = ""
+    if(validity === "running") {
+        validityClass = "color-yellow"
+    }
+    else if(validity === "ok") {
         validityClass = "color-lime"
     }
-    // If the input is invalid
-    else if(validity === false) {
+    else if(validity === "error") {
         validityClass = "color-red"
-    }
-    // If the input has no validity
-    else if(validity === null) {
-        validityClass = ""
-    }
-    // If no validity has been passed
-    else {
-        validityClass = ""
     }
 
     label = React.cloneElement(label, {

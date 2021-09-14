@@ -21,4 +21,4 @@ export interface BluelibHTMLProps<Element extends HTMLElement> extends BluelibPr
 
 
 export type InputValue = readonly string[] | string | number | undefined
-export type Validity = boolean | null
+export type Validity = null | "running" | "ok" | "error"
