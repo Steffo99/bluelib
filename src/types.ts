@@ -7,7 +7,6 @@ export type ClassNames = ClassNamesArgument
 
 
 export type State<Value> = [Value, React.Dispatch<React.SetStateAction<Value>>]
-export type StateContext<Value> = React.Context<State<Value> | undefined>
 
 
 export interface BluelibProps {
@@ -18,9 +17,6 @@ export interface BluelibProps {
 
 
 export interface BluelibHTMLProps<Element extends HTMLElement> extends BluelibProps, React.HTMLProps<Element> {}
-
-
-export type InputValue = readonly string[] | string | number | undefined
 
 
 /**
@@ -41,4 +37,3 @@ export type Validator<T> = (value: T, abort: AbortSignal) => Promise<Validity> |
  * - `null` means that the value is in progress of being checked.
  */
 export type Validity = boolean | null | undefined
-

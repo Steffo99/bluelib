@@ -12,7 +12,7 @@ import { FormCheckboxGroup } from "./FormCheckboxGroup"
 import { FormRow } from "./FormRow"
 import { Button } from "../inputs/Button"
 import { Parenthesis } from "../panels/Parenthesis"
-import { useFormState } from "../../hooks/useValidatedState"
+import { useFormState } from "../../hooks/useFormState"
 
 
 export default {
