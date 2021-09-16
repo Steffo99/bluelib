@@ -17,7 +17,7 @@ export interface FormPairProps extends Types.BluelibProps {
 }
 
 
-export function FormPair({id, label, input, validity, bluelibClassNames, customColor, disabled}: FormPairProps): JSX.Element {
+export function FormPair({id, label, input, validity, bluelibClassNames, customColor}: FormPairProps): JSX.Element {
     if(!id) {
         id = UUID.v4()
     }
@@ -43,7 +43,6 @@ export function FormPair({id, label, input, validity, bluelibClassNames, customC
         id: id,
         bluelibClassNames: mergeClassNames(bluelibClassNames, validityClass),
         customColor: customColor,
-        disabled: disabled,
     })
 
     return <>
