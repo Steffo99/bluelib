@@ -1,6 +1,6 @@
 {
     "name": "@steffo/bluelib-react",
-    "version": "3.2.1",
+    "version": "3.2.3",
     "description": "React bindings for Bluelib",
     "keywords": [
         "react",
