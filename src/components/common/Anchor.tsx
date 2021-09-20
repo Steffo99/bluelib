@@ -23,7 +23,7 @@ export function Anchor({displayStyle, href, ...props}: AnchorProps): JSX.Element
     if(!displayStyle) {
         if(href) {
             // noinspection HttpUrlsUsage
-            if(href.startsWith("http://") || href.startsWith("https://")) {
+            if(href.startsWith("http://") || href.startsWith("https://") || href.startsWith("/") || !href.includes(":")) {
                 displayStyle = "link"
             }
             else {
