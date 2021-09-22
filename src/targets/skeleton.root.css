@@ -2475,7 +2475,9 @@ body .color-yellow,
   --bluelib-color-b: var(--bluelib-yellow-b);
 }
 body .color-lime,
-.bluelib .color-lime {
+.bluelib .color-lime,
+body .color-green,
+.bluelib .color-green {
   --bluelib-color-r: var(--bluelib-lime-r);
   --bluelib-color-g: var(--bluelib-lime-g);
   --bluelib-color-b: var(--bluelib-lime-b);
