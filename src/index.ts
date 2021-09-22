@@ -6,6 +6,7 @@ export {Chapter} from "./components/chapters/Chapter"
 
 export {Anchor} from "./components/common/Anchor"
 export {Heading} from "./components/common/Heading"
+export {Details} from "./components/common/Details"
 
 export {Form} from "./components/forms/Form"
 
