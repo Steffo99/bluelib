@@ -74,6 +74,12 @@
 @heading: ~"h1, h2, h3, h4, h5, h6, .heading";
 @HEADING: ~"> h1, > h2, > h3, > h4, > h5, > h6, > .heading";
 
+@details: ~".details, details";
+@DETAILS: ~"> .details, > details";
+@details-open: ~".details[open], details[open]";
+@details-summary: ~"> .details-summary, > summary";
+@details-content: ~"> .details-content, > :not(summary)";
+
 @anchor: ~"a, .anchor";
 @anchor-broken: ~'a:not([href]), a[href=""], .anchor-broken';
 @anchor-link: ~'a[href^="http://"], a[href^="https://"], a[href^="/"], .anchor-link';

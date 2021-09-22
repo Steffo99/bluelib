@@ -603,6 +603,30 @@
   --bluelib-color-b: var(--bluelib-download-b);
   text-decoration-style: solid;
 }
+.bluelib .details {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.bluelib .details > .details-summary {
+  cursor: pointer;
+  font-size: larger;
+  user-select: none;
+}
+.bluelib .details > .details-summary:hover {
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 20)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 20)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 20)), 1);
+}
+.bluelib .details > .details-summary:focus-visible {
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 30)), 1);
+}
+.bluelib .details > .details-summary:active {
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 90)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 90)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 90)), 1);
+}
+.bluelib .details > .details-content {
+  margin-top: 0.5rem;
+}
+.bluelib .details > .details {
+  margin-left: 16px;
+}
 .bluelib .ruby-parenthesis {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
 }

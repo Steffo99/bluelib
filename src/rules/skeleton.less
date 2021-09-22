@@ -718,6 +718,7 @@
         margin-bottom: 0.7rem;
         margin-left: 16px;
     }
+
     //</editor-fold>
 
     /// ===== Status =====
@@ -1168,6 +1169,43 @@
     }
 
     //</editor-fold>
+
+    /// ===== Details and summaries =====
+    /// Details are collapsible elements which only display their summary until they are clicked.
+
+    @{details} {
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        @{details-summary} {
+            cursor: pointer;
+
+            font-size: larger;
+
+            // Prevent the user from accidentaly selecting the summary
+            user-select: none;
+
+            &:hover {
+                color: @cC;
+            }
+
+            &:focus-visible {
+                color: @cD;
+            }
+
+            &:active {
+                color: @cJ;
+            }
+        }
+
+        @{details-content} {
+            margin-top: 0.5rem;
+        }
+
+        @{DETAILS} {
+            margin-left: 16px;
+        }
+    }
 
     /// ===== Ruby =====
     /// Ruby text is used in various languages to add annotations to text.

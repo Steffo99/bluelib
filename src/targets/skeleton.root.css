@@ -2346,6 +2346,75 @@ body .anchor-download,
   --bluelib-color-b: var(--bluelib-download-b);
   text-decoration-style: solid;
 }
+body .details,
+.bluelib .details,
+body details,
+.bluelib details {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+body .details > .details-summary,
+.bluelib .details > .details-summary,
+body details > .details-summary,
+.bluelib details > .details-summary,
+body .details > summary,
+.bluelib .details > summary,
+body details > summary,
+.bluelib details > summary {
+  cursor: pointer;
+  font-size: larger;
+  user-select: none;
+}
+body .details > .details-summary:hover,
+.bluelib .details > .details-summary:hover,
+body details > .details-summary:hover,
+.bluelib details > .details-summary:hover,
+body .details > summary:hover,
+.bluelib .details > summary:hover,
+body details > summary:hover,
+.bluelib details > summary:hover {
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 20)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 20)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 20)), 1);
+}
+body .details > .details-summary:focus-visible,
+.bluelib .details > .details-summary:focus-visible,
+body details > .details-summary:focus-visible,
+.bluelib details > .details-summary:focus-visible,
+body .details > summary:focus-visible,
+.bluelib .details > summary:focus-visible,
+body details > summary:focus-visible,
+.bluelib details > summary:focus-visible {
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 30)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 30)), 1);
+}
+body .details > .details-summary:active,
+.bluelib .details > .details-summary:active,
+body details > .details-summary:active,
+.bluelib details > .details-summary:active,
+body .details > summary:active,
+.bluelib .details > summary:active,
+body details > summary:active,
+.bluelib details > summary:active {
+  color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 90)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 90)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 90)), 1);
+}
+body .details > .details-content,
+.bluelib .details > .details-content,
+body details > .details-content,
+.bluelib details > .details-content,
+body .details > :not(summary),
+.bluelib .details > :not(summary),
+body details > :not(summary),
+.bluelib details > :not(summary) {
+  margin-top: 0.5rem;
+}
+body .details > .details,
+.bluelib .details > .details,
+body details > .details,
+.bluelib details > .details,
+body .details > details,
+.bluelib .details > details,
+body details > details,
+.bluelib details > details {
+  margin-left: 16px;
+}
 body rp,
 .bluelib rp,
 body .ruby-parenthesis,
