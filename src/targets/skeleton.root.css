@@ -2312,6 +2312,8 @@ body a[href^="http://"],
 .bluelib a[href^="http://"],
 body a[href^="https://"],
 .bluelib a[href^="https://"],
+body a[href^="/"],
+.bluelib a[href^="/"],
 body .anchor-link,
 .bluelib .anchor-link {
   cursor: pointer;
@@ -2324,6 +2326,8 @@ body a[href^="http://"]:visited,
 .bluelib a[href^="http://"]:visited,
 body a[href^="https://"]:visited,
 .bluelib a[href^="https://"]:visited,
+body a[href^="/"]:visited,
+.bluelib a[href^="/"]:visited,
 body .anchor-link:visited,
 .bluelib .anchor-link:visited {
   --bluelib-color-r: var(--bluelib-visited-r);
