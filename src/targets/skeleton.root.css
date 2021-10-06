@@ -2575,4 +2575,12 @@ body .color-gray,
   --bluelib-color-g: var(--bluelib-gray-g);
   --bluelib-color-b: var(--bluelib-gray-b);
 }
+body .special-remove,
+.bluelib .special-remove {
+  display: none;
+}
+body .special-hide,
+.bluelib .special-hide {
+  visibility: hidden;
+}
 /*# sourceMappingURL=skeleton.root.css.map */

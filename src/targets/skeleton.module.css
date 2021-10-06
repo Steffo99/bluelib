@@ -729,4 +729,10 @@
   --bluelib-color-g: var(--bluelib-gray-g);
   --bluelib-color-b: var(--bluelib-gray-b);
 }
+.bluelib .special-remove {
+  display: none;
+}
+.bluelib .special-hide {
+  visibility: hidden;
+}
 /*# sourceMappingURL=skeleton.module.css.map */
