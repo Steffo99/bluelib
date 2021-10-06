@@ -2576,7 +2576,9 @@ body .color-gray,
   --bluelib-color-b: var(--bluelib-gray-b);
 }
 body .special-remove,
-.bluelib .special-remove {
+.bluelib .special-remove,
+body .indexbreakrow,
+.bluelib .indexbreakrow {
   display: none !important;
 }
 body .special-hide,
@@ -2584,8 +2586,10 @@ body .special-hide,
   visibility: hidden !important;
 }
 body .special-block-center,
-.bluelib .special-block-center {
+.bluelib .special-block-center,
+body #indexlist,
+.bluelib #indexlist {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-/*# sourceMappingURL=skeleton.root.css.map */
+/*# sourceMappingURL=skeleton.apache.css.map */

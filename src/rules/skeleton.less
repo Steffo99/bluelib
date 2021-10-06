@@ -1367,11 +1367,16 @@
     /// Special rules apply particular properties to certain pre-existing elements for certain targets.
 
     @{special-remove} {
-        display: none;
+        display: none !important;
     }
 
     @{special-hide} {
-        visibility: hidden;
+        visibility: hidden !important;
+    }
+
+    @{special-block-center} {
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
 

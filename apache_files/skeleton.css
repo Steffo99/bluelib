@@ -2577,15 +2577,10 @@ body .color-gray,
 }
 body .special-remove,
 .bluelib .special-remove {
-  display: none !important;
+  display: none;
 }
 body .special-hide,
 .bluelib .special-hide {
-  visibility: hidden !important;
-}
-body .special-block-center,
-.bluelib .special-block-center {
-  margin-left: auto !important;
-  margin-right: auto !important;
+  visibility: hidden;
 }
 /*# sourceMappingURL=skeleton.root.css.map */

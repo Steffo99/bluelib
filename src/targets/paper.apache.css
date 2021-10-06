@@ -1,0 +1,57 @@
+@import "../normalize/normalize.css";
+body,
+.bluelib {
+  --bluelib-background-r: 255;
+  --bluelib-background-g: 255;
+  --bluelib-background-b: 255;
+  --bluelib-foreground-r: 24;
+  --bluelib-foreground-g: 24;
+  --bluelib-foreground-b: 24;
+  --bluelib-accent-r: 24;
+  --bluelib-accent-g: 24;
+  --bluelib-accent-b: 24;
+  --bluelib-link-r: 0;
+  --bluelib-link-g: 147;
+  --bluelib-link-b: 147;
+  --bluelib-broken-r: 245;
+  --bluelib-broken-g: 111;
+  --bluelib-broken-b: 0;
+  --bluelib-visited-r: 9;
+  --bluelib-visited-g: 101;
+  --bluelib-visited-b: 156;
+  --bluelib-download-r: 0;
+  --bluelib-download-g: 164;
+  --bluelib-download-b: 106;
+  --bluelib-red-r: 200;
+  --bluelib-red-g: 0;
+  --bluelib-red-b: 0;
+  --bluelib-orange-r: 200;
+  --bluelib-orange-g: 165;
+  --bluelib-orange-b: 0;
+  --bluelib-yellow-r: 200;
+  --bluelib-yellow-g: 200;
+  --bluelib-yellow-b: 0;
+  --bluelib-lime-r: 0;
+  --bluelib-lime-g: 200;
+  --bluelib-lime-b: 0;
+  --bluelib-cyan-r: 0;
+  --bluelib-cyan-g: 200;
+  --bluelib-cyan-b: 200;
+  --bluelib-blue-r: 0;
+  --bluelib-blue-g: 0;
+  --bluelib-blue-b: 200;
+  --bluelib-magenta-r: 200;
+  --bluelib-magenta-g: 0;
+  --bluelib-magenta-b: 200;
+  --bluelib-gray-r: 128;
+  --bluelib-gray-g: 128;
+  --bluelib-gray-b: 128;
+  --bluelib-polarity: -1;
+  --bluelib-title-family: sans-serif;
+  --bluelib-title-weight: bold;
+  --bluelib-text-family: sans-serif;
+  --bluelib-text-weight: normal;
+  --bluelib-code-family: monospace;
+  --bluelib-code-weight: normal;
+}
+/*# sourceMappingURL=paper.apache.css.map */

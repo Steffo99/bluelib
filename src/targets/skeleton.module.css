@@ -730,9 +730,13 @@
   --bluelib-color-b: var(--bluelib-gray-b);
 }
 .bluelib .special-remove {
-  display: none;
+  display: none !important;
 }
 .bluelib .special-hide {
-  visibility: hidden;
+  visibility: hidden !important;
+}
+.bluelib .special-block-center {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 /*# sourceMappingURL=skeleton.module.css.map */
