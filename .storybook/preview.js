@@ -9,6 +9,13 @@ export const parameters = {
             description: "Additional Bluelib classNames to be appended to the element's classNames",
             table: {category: "Global props"}
         },
+        builtinColor: {
+            type: "string",
+            options: ["", "red", "orange", "yellow", "lime", "cyan", "blue", "magenta", "gray"],
+            control: {type: "select"},
+            description: "Apply a Bluelib builtin color to the element",
+            table: {category: "Global props"}
+        },
         customColor: {
             type: "string",
             control: {type: "color"},

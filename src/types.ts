@@ -37,3 +37,9 @@ export type Validator<T> = (value: T, abort: AbortSignal) => Promise<Validity> |
  * - `null` means that the value is in progress of being checked.
  */
 export type Validity = boolean | null | undefined
+
+
+/**
+ * Bluelib's builtin colors, as strings.
+ */
+export type BuiltinColor = "red" | "orange" | "yellow" | "lime" | "cyan" | "blue" | "magenta" | "gray"
