@@ -25,4 +25,9 @@ export const FormSelect = props => (
 )
 FormSelect.args = {
     label: "Ready check",
+    options: {
+        "I'm ready!": "READY",
+        "Please wait...": "WAIT",
+        "I won't be there.": "NO",
+    },
 }

@@ -8,25 +8,41 @@ import {FormLabel, FormLabelProps} from "./FormLabel";
 import {Select, SelectProps} from "../inputs/Select";
 
 
+export interface FormSelectOptions {
+    [key: string]: any,
+}
+
+
 export interface FormSelectProps extends SelectProps {
     label: string,
 
     validity?: Types.Validity,
+
+    options: FormSelectOptions,
 
     pairProps?: FormPairProps,
     labelProps?: FormLabelProps,
 }
 
 
-export function FormSelect({label, validity, pairProps, labelProps, ...props}: FormSelectProps): JSX.Element {
+export function FormSelect({label, validity, options, pairProps, labelProps, onSimpleChange, ...props}: FormSelectProps): JSX.Element {
+    const onSimpleChangeWrapped = React.useCallback(
+        value => {
+            onSimpleChange?.(options[value])
+        },
+        [onSimpleChange, options]
+    )
+
     return (
         <FormPair
             label={<FormLabel {...labelProps}>{label}</FormLabel>}
-            input={<Select {...props}/>}
+            input={
+                <Select onSimpleChange={onSimpleChangeWrapped} {...props}>
+                    {Object.keys(options).map(key => <Select.Option value={key}/>)}
+                </Select>
+            }
             validity={validity}
             {...pairProps}
         />
     )
 }
-
-FormSelect.Option = Select.Option

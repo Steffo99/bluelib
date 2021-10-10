@@ -32,4 +32,16 @@ export const FormMultiselect = props => (
 )
 FormMultiselect.args = {
     label: "Favourite colors",
+    options: {
+        "Red": "COLOR_RED",
+        "Orange": "COLOR_ORANGE",
+        "Yellow": "COLOR_YELLOW",
+        "Green": "COLOR_GREEN",
+        "Cyan": "COLOR_CYAN",
+        "Blue": "COLOR_BLUE",
+        "Purple": "COLOR_PURPLE",
+        "White": "COLOR_WHITE",
+        "Black": "COLOR_BLACK",
+        "Grey": "COLOR_GREY",
+    }
 }
