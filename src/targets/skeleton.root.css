@@ -2336,8 +2336,8 @@ body .anchor-link:visited,
 }
 body a[download],
 .bluelib a[download],
-body a[href]:not([href^="http://"]):not([href^="https://"]),
-.bluelib a[href]:not([href^="http://"]):not([href^="https://"]),
+body a[href]:not([href^="http://"]):not([href^="https://"]):not([href^="/"]),
+.bluelib a[href]:not([href^="http://"]):not([href^="https://"]):not([href^="/"]),
 body .anchor-download,
 .bluelib .anchor-download {
   cursor: pointer;
