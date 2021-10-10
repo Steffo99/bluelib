@@ -8,8 +8,8 @@ import mergeClassNames from "classnames"
 export interface BoxProps extends PanelProps {}
 
 
-export function Box({todo, ...props}: BoxProps): JSX.Element {
-    if(todo) {
+export function Box({todo, warn = true, ...props}: BoxProps): JSX.Element {
+    if(todo && warn) {
         console.warn(`TODO: ${props.children}`)
     }
 

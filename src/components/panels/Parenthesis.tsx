@@ -8,8 +8,8 @@ import mergeClassNames from "classnames"
 export interface ParenthesisProps extends PanelProps {}
 
 
-export function Parenthesis({todo, ...props}: ParenthesisProps): JSX.Element {
-    if(todo) {
+export function Parenthesis({todo, warn = true, ...props}: ParenthesisProps): JSX.Element {
+    if(todo && warn) {
         console.warn(`TODO: ${props.children}`)
     }
 

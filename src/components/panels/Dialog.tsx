@@ -8,8 +8,8 @@ import mergeClassNames from "classnames"
 export interface DialogProps extends PanelProps {}
 
 
-export function Dialog({todo, ...props}: DialogProps): JSX.Element {
-    if(todo) {
+export function Dialog({todo, warn = true, ...props}: DialogProps): JSX.Element {
+    if(todo && warn) {
         console.warn(`TODO: ${props.children}`)
     }
 

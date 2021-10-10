@@ -7,11 +7,12 @@ import mergeClassNames from "classnames"
 
 export interface PanelProps extends Types.BluelibHTMLProps<HTMLElement> {
     todo?: boolean,
+    warn?: boolean,
 }
 
 
-export function Panel({todo, ...props}: PanelProps): JSX.Element {
-    if(todo) {
+export function Panel({todo, warn = true, ...props}: PanelProps): JSX.Element {
+    if(todo && warn) {
         console.warn(`TODO: ${props.children}`)
     }
 
