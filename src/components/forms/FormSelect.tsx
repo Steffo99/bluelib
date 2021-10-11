@@ -26,7 +26,7 @@ export interface FormSelectProps extends SelectProps {
 }
 
 
-export function FormSelect({label, validity, options, pairProps, labelProps, onSimpleChange, ...props}: FormSelectProps): JSX.Element {
+export function FormSelect({label, validity, options, pairProps, labelProps, onSimpleChange, value, ...props}: FormSelectProps): JSX.Element {
     const onSimpleChangeWrapped = React.useCallback(
         value => {
             onSimpleChange?.(options[value])
@@ -35,7 +35,7 @@ export function FormSelect({label, validity, options, pairProps, labelProps, onS
     )
 
     const optionComponents = React.useMemo(
-        () => Object.keys(options).map(key => <Select.Option value={key} key={key}/>),
+        () => Object.keys(options).map(key => <Select.Option value={key} key={key} selected={value === key}/>),
         [options],
     )
 

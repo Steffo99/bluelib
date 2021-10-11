@@ -26,7 +26,7 @@ export interface FormMultiselectProps extends MultiselectProps {
 }
 
 
-export function FormMultiselect({label, validity, pairProps, labelProps, onSimpleChange, options, ...props}: FormMultiselectProps): JSX.Element {
+export function FormMultiselect({label, validity, pairProps, labelProps, onSimpleChange, options, value, ...props}: FormMultiselectProps): JSX.Element {
     const onSimpleChangeWrapped = React.useCallback(
         values => {
             onSimpleChange?.(values.map((val: string) => options[val]))
@@ -35,7 +35,7 @@ export function FormMultiselect({label, validity, pairProps, labelProps, onSimpl
     )
 
     const optionComponents = React.useMemo(
-        () => Object.keys(options).map(key => <Multiselect.Option value={key} key={key}/>),
+        () => Object.keys(options).map(key => <Multiselect.Option value={key} key={key} selected={value?.includes(key)}/>),
         [options],
     )
 
