@@ -9,24 +9,28 @@ import {FormLabel, FormLabelProps} from "./FormLabel";
 import {Select, SelectProps} from "../inputs/Select";
 
 
-export interface FormSelectOptions {
-    [key: string]: any,
+export interface FormSelectOptions<T> {
+    [key: string]: T,
 }
 
 
-export interface FormSelectProps extends SelectProps {
+export interface FormSelectProps<T> {
     label: string,
 
     validity?: Types.Validity,
 
-    options: FormSelectOptions,
+    options: FormSelectOptions<T>,
 
     pairProps?: FormPairProps,
     labelProps?: FormLabelProps,
+
+    onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void,
+    onSimpleChange?: (value: T) => void,
+    value?: T,
 }
 
 
-export function FormSelect({label, validity, options, pairProps, labelProps, onSimpleChange, value, ...props}: FormSelectProps): JSX.Element {
+export function FormSelect<T>({label, validity, options, pairProps, labelProps, onSimpleChange, value, ...props}: FormSelectProps<T>): JSX.Element {
     const onSimpleChangeWrapped = React.useCallback(
         value => {
             onSimpleChange?.(options[value])
@@ -35,7 +39,7 @@ export function FormSelect({label, validity, options, pairProps, labelProps, onS
     )
 
     const optionComponents = React.useMemo(
-        () => Object.keys(options).map(key => <Select.Option value={key} key={key} selected={value === key}/>),
+        () => Object.entries(options).map(([optKey, optValue]) => <Select.Option value={optKey} key={optKey} selected={value === optValue}/>),
         [options],
     )
 
