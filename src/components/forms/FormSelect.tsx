@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom"
 import * as Types from "../../types"
 import {BaseElement} from "../BaseElement"
 import mergeClassNames from "classnames"
+import {Multiselect} from "../inputs/Multiselect"
 import {FormPair, FormPairProps} from "./FormPair";
 import {FormLabel, FormLabelProps} from "./FormLabel";
 import {Select, SelectProps} from "../inputs/Select";
@@ -33,12 +34,17 @@ export function FormSelect({label, validity, options, pairProps, labelProps, onS
         [onSimpleChange, options]
     )
 
+    const optionComponents = React.useMemo(
+        () => Object.keys(options).map(key => <Select.Option value={key} key={key}/>),
+        [options],
+    )
+
     return (
         <FormPair
             label={<FormLabel {...labelProps}>{label}</FormLabel>}
             input={
                 <Select onSimpleChange={onSimpleChangeWrapped} {...props}>
-                    {Object.keys(options).map(key => <Select.Option value={key} key={key}/>)}
+                    {optionComponents}
                 </Select>
             }
             validity={validity}

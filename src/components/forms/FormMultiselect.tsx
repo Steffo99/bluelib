@@ -34,12 +34,17 @@ export function FormMultiselect({label, validity, pairProps, labelProps, onSimpl
         [onSimpleChange, options]
     )
 
+    const optionComponents = React.useMemo(
+        () => Object.keys(options).map(key => <Multiselect.Option value={key} key={key}/>),
+        [options],
+    )
+
     return (
         <FormPair
             label={<FormLabel {...labelProps}>{label}</FormLabel>}
             input={
                 <Multiselect onSimpleChange={onSimpleChangeWrapped} {...props}>
-                    {Object.keys(options).map(key => <Multiselect.Option value={key} key={key}/>)}
+                    {optionComponents}
                 </Multiselect>
             }
             validity={validity}
