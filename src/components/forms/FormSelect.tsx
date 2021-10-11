@@ -38,7 +38,7 @@ export function FormSelect({label, validity, options, pairProps, labelProps, onS
             label={<FormLabel {...labelProps}>{label}</FormLabel>}
             input={
                 <Select onSimpleChange={onSimpleChangeWrapped} {...props}>
-                    {Object.keys(options).map(key => <Select.Option value={key}/>)}
+                    {Object.keys(options).map(key => <Select.Option value={key} key={key}/>)}
                 </Select>
             }
             validity={validity}

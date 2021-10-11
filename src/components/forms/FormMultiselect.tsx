@@ -39,7 +39,7 @@ export function FormMultiselect({label, validity, pairProps, labelProps, onSimpl
             label={<FormLabel {...labelProps}>{label}</FormLabel>}
             input={
                 <Multiselect onSimpleChange={onSimpleChangeWrapped} {...props}>
-                    {Object.keys(options).map(key => <Multiselect.Option value={key}/>)}
+                    {Object.keys(options).map(key => <Multiselect.Option value={key} key={key}/>)}
                 </Multiselect>
             }
             validity={validity}
