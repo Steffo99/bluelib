@@ -14,7 +14,7 @@ export interface FormSelectOptions<T> {
 }
 
 
-export interface FormSelectProps<T> {
+export interface FormSelectProps<T> extends Types.BluelibProps {
     label: string,
 
     validity?: Types.Validity,
