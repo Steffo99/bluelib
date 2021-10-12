@@ -11,6 +11,7 @@ export type State<Value> = [Value, React.Dispatch<React.SetStateAction<Value>>]
 
 export interface BluelibProps {
     bluelibClassNames?: ClassNames,
+    builtinColor?: BuiltinColor,
     customColor?: typeof Color,
     disabled?: boolean,
 }
