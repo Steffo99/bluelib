@@ -1,6 +1,6 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
-import {BluelibTheme, BluelibThemes} from "../types"
+import {BluelibTheme} from "../types"
 import * as Types from "../types"
 import * as Colors from "../utils/Colors"
 import Color from "color"
