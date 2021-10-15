@@ -550,6 +550,12 @@
 .bluelib .form .form-row .panel {
   margin: 0;
 }
+.bluelib .form .form-row:first-child {
+  margin-top: 0;
+}
+.bluelib .form .form-row:last-child {
+  margin-bottom: 0;
+}
 .bluelib .heading {
   text-align: center;
   --bluelib-color-r: var(--bluelib-accent-r);

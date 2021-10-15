@@ -2226,6 +2226,18 @@ body .form .form-row .panel,
 .bluelib .form .form-row .panel {
   margin: 0;
 }
+body form .form-row:first-child,
+.bluelib form .form-row:first-child,
+body .form .form-row:first-child,
+.bluelib .form .form-row:first-child {
+  margin-top: 0;
+}
+body form .form-row:last-child,
+.bluelib form .form-row:last-child,
+body .form .form-row:last-child,
+.bluelib .form .form-row:last-child {
+  margin-bottom: 0;
+}
 body h1,
 .bluelib h1,
 body h2,
