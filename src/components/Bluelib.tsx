@@ -1,5 +1,6 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
+import {BluelibTheme, BluelibThemes} from "../types"
 import * as Types from "../types"
 import * as Colors from "../utils/Colors"
 import Color from "color"
@@ -9,6 +10,7 @@ import PaperTheme from "../bluelib/src/targets/paper.module.css"
 import RoyalBlueTheme from "../bluelib/src/targets/royalblue.module.css"
 import HackerTheme from "../bluelib/src/targets/hacker.module.css"
 import SophonTheme from "../bluelib/src/targets/sophon.module.css"
+import GestioneAmberTheme from "../bluelib/src/targets/amber.module.css"
 
 
 const BuiltinThemes = {
@@ -16,11 +18,12 @@ const BuiltinThemes = {
     "royalblue": RoyalBlueTheme,
     "hacker": HackerTheme,
     "sophon": SophonTheme,
+    "amber": GestioneAmberTheme,
 }
 
 
 export interface BluelibProps extends Types.BluelibHTMLProps<HTMLDivElement> {
-    theme: "paper" | "royalblue" | "hacker" | "sophon",
+    theme: BluelibTheme,
 
     backgroundColor?: typeof Color,
     foregroundColor?: typeof Color,

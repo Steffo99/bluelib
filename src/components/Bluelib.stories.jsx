@@ -111,6 +111,14 @@ Sophon.args = {
     theme: "sophon",
 }
 
+
+export const GestioneAmber = Paper.bind({})
+GestioneAmber.args = {
+    ...Paper.args,
+    theme: "amber",
+}
+
+
 export const CustomRed = Paper.bind({})
 CustomRed.args = {
     ...Paper.args,

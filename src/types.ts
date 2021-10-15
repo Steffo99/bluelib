@@ -44,3 +44,9 @@ export type Validity = boolean | null | undefined
  * Bluelib's builtin colors, as strings.
  */
 export type BuiltinColor = "red" | "orange" | "yellow" | "lime" | "cyan" | "blue" | "magenta" | "gray"
+
+
+/**
+ * Bluelib default themes, as strings.
+ */
+export type BluelibTheme = "royalblue" | "sophon" | "hacker" | "paper" | "amber"
