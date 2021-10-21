@@ -188,6 +188,7 @@ body .panel,
   padding: 8px;
   border-radius: 4px;
   width: 100%;
+  min-width: 312px;
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.03);
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
 }
