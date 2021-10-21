@@ -95,7 +95,6 @@ body .layout,
   display: grid;
   justify-content: stretch;
   align-items: stretch;
-  width: 100%;
 }
 body .layout-fill,
 .bluelib .layout-fill {

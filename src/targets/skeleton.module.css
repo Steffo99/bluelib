@@ -86,7 +86,6 @@
   display: grid;
   justify-content: stretch;
   align-items: stretch;
-  width: 100%;
 }
 .bluelib .layout-fill {
   padding: 4px;
