@@ -80,6 +80,7 @@
     "main": "dist/bluelib-react.js",
     "types": "dist/index.d.ts",
     "scripts": {
+        "release": "yarn run package:build && yarn publish && yarn run storybook:deploy",
         "package:build": "rollup -c",
         "storybook:start": "start-storybook -p 30060 -s public",
         "storybook:build": "build-storybook -s public",
