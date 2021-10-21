@@ -299,6 +299,8 @@
         // Thanks, CSS variables!
         color: @cA;
 
+        // Get the scrollbar color from the theme
+        scrollbar-color: @rgb-foreground @rgb-background;
     }
 
     //</editor-fold>
@@ -346,8 +348,6 @@
         display: grid;
         justify-content: stretch;
         align-items: stretch;
-
-        width: 100%;
     }
 
     // A layout with a single container spanning the whole screen.
@@ -434,7 +434,7 @@
 
     /// ===== Panels =====
     /// Panels are the main sectioning elements available in Bluelib.
-    /// Many instance of them should be present on the page!
+    /// Many instances of them should be present on the page!
     /// They should group small amounts of tightly related content, which can be understood more or less separately from the rest of the page.
 
     //<editor-fold desc="Rules: Panels">
@@ -450,6 +450,9 @@
 
         // Panels should try to fill the most space possible
         width: 100%;
+
+        // And should be wide at least 312px
+        min-width: 312px;
 
         background-color: @c0;
         border-color: @c1;

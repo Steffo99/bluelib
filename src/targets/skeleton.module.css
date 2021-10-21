@@ -65,6 +65,7 @@
 .bluelib *,
 .bluelib .all {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  scrollbar-color: rgb(var(--bluelib-foreground-r), var(--bluelib-foreground-g), var(--bluelib-foreground-b)) rgb(var(--bluelib-background-r), var(--bluelib-background-g), var(--bluelib-background-b));
 }
 .bluelib,
 .bluelib *,
@@ -86,7 +87,6 @@
   display: grid;
   justify-content: stretch;
   align-items: stretch;
-  width: 100%;
 }
 .bluelib .layout-fill {
   padding: 4px;
@@ -164,6 +164,7 @@
   padding: 8px;
   border-radius: 4px;
   width: 100%;
+  min-width: 312px;
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.03);
   border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125);
 }
