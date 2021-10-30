@@ -123,7 +123,6 @@
 }
 @media screen and (min-width: 1281px) {
   .bluelib .layout-threecol-left {
-    width: 128px;
     justify-self: end;
   }
 }
@@ -150,7 +149,6 @@
 }
 @media screen and (min-width: 1281px) {
   .bluelib .layout-threecol-right {
-    width: 128px;
     justify-self: start;
   }
 }
