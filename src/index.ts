@@ -1,5 +1,7 @@
 import {BluelibHTMLProps, BluelibProps, ClassNames, State, Validator, Validity} from "./types";
 
+export {BaseElement} from "./components/BaseElement"
+
 export {Ruby} from "./components/annotations/Ruby"
 
 export {Chapter} from "./components/chapters/Chapter"
