@@ -35,7 +35,7 @@ export const Bluelib = (props: BluelibProps): JSX.Element => {
     const element = React.useMemo(
         () => (
             <BaseElement
-                ref={ref}
+                childRef={ref}
                 kind={"div"}
                 bluelibClassNames={"bluelib"}
                 {...baseElementProps}

@@ -14,10 +14,13 @@ export interface BaseElementProps extends React.HTMLProps<any> {
     disabled?: boolean,
     builtinColor?: BuiltinColor,
     customColor?: typeof Color,
+    childRef?: React.RefObject<HTMLElement>,
 }
 
 
-export const BaseElement = React.forwardRef(({kind = "div", bluelibClassNames, disabled = false, builtinColor, customColor, ...props}: BaseElementProps, ref): JSX.Element => {
+// forwardRef has some strange behaviour in TypeScript, so I'm not using it
+
+export const BaseElement = ({kind = "div", bluelibClassNames, disabled = false, builtinColor, customColor, childRef, ...props}: BaseElementProps): JSX.Element => {
     // Set the Bluelib color
     if(customColor) {
         props.style = {...props.style, ...Colors.colorToBluelibStyle("color", customColor)}
@@ -37,7 +40,9 @@ export const BaseElement = React.forwardRef(({kind = "div", bluelibClassNames, d
     props.className = mergeClassNames(props.className, bluelibClassNames)
 
     // Set the ref on the child element
-    props.ref = ref
+    if(childRef) {
+        props.ref = childRef
+    }
 
     return React.createElement(kind, props)
-})
+}
