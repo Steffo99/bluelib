@@ -17,7 +17,7 @@ export interface BaseElementProps extends React.HTMLProps<any> {
 }
 
 
-export function BaseElement({kind = "div", bluelibClassNames, disabled = false, builtinColor, customColor, ...props}: BaseElementProps): JSX.Element {
+export const BaseElement = React.forwardRef(({kind = "div", bluelibClassNames, disabled = false, builtinColor, customColor, ...props}: BaseElementProps, ref): JSX.Element => {
     // Set the Bluelib color
     if(customColor) {
         props.style = {...props.style, ...Colors.colorToBluelibStyle("color", customColor)}
@@ -36,5 +36,8 @@ export function BaseElement({kind = "div", bluelibClassNames, disabled = false, 
     bluelibClassNames = BluelibMapper.rootToModule(bluelibClassNames)
     props.className = mergeClassNames(props.className, bluelibClassNames)
 
+    // Set the ref on the child element
+    props.ref = ref
+
     return React.createElement(kind, props)
-}
+})
