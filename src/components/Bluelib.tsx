@@ -37,7 +37,6 @@ export const Bluelib = (props: BluelibProps): JSX.Element => {
             <BaseElement
                 childRef={ref}
                 kind={"div"}
-                bluelibClassNames={"bluelib"}
                 {...baseElementProps}
             />
         ),

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { BluelibTheme } from "../types"
-import mergeClassNames from "classnames"
+import * as BluelibMapper from "../utils/BluelibMapper"
 import Color from "color";
 import * as Colors from "../utils/Colors"
 
@@ -47,8 +47,10 @@ export function useBluelib(ref: React.RefObject<HTMLElement>, options: UseBlueli
             const target = ref.current
             if(!target) return
 
-            let extraClassName: string = ""
-            if(options.theme) extraClassName = BuiltinThemes[options.theme]["bluelib"]
+            let extraClassName: string[] = [
+                BluelibMapper.rootToModule("bluelib"),
+            ]
+            if(options.theme) extraClassName.push(BuiltinThemes[options.theme]["bluelib"])
 
             let extraStyle: {[_: string]: number} = {}
             if(options.backgroundColor) extraStyle = {...extraStyle, ...Colors.colorToBluelibStyle("background", options.backgroundColor)}
@@ -72,7 +74,9 @@ export function useBluelib(ref: React.RefObject<HTMLElement>, options: UseBlueli
                     target.classList.remove(className)
                 }
             })
-            target.classList.add(extraClassName)
+            extraClassName.forEach((className) => {
+                target.classList.add(className)
+            })
             
             Object.entries(extraStyle).forEach(([k, v]) => {
                 target.style.setProperty(k, v.toString(), "")
