@@ -4,51 +4,6 @@
 
 @{bluelib} {
 
-    /// ===== Palette =====
-    /// The palette used by bluelib is specified at the root level with attributes on the element.
-    /// The palette contains also the fonts bluelib should use.
-    /// By default, bluelib uses the "paper" palette.
-
-    //<editor-fold desc="Rules: Palette">
-
-    // The background color
-    .set-var-rgb(bluelib-background; 255; 255; 255);
-    // The main text color
-    .set-var-rgb(bluelib-foreground; 24; 24; 24);
-    // A contrasting color to make important text more visible
-    .set-var-rgb(bluelib-accent; 24; 24; 24);
-
-    // The color of links
-    .set-var-rgb(bluelib-link; 0; 147; 147);
-    // The color of broken links
-    .set-var-rgb(bluelib-broken; 245; 111; 0);
-    // The color of visited links
-    .set-var-rgb(bluelib-visited; 9; 101; 156);
-    // The color of download links
-    .set-var-rgb(bluelib-download; 0; 164; 106);
-
-    // Extra builtin colors
-    .set-var-rgb(bluelib-red; 200; 0; 0);
-    .set-var-rgb(bluelib-orange; 200; 165; 0);
-    .set-var-rgb(bluelib-yellow; 200; 200; 0);
-    .set-var-rgb(bluelib-lime; 0; 200; 0);
-    .set-var-rgb(bluelib-cyan; 0; 200; 200);
-    .set-var-rgb(bluelib-blue; 0; 0; 200);
-    .set-var-rgb(bluelib-magenta; 200; 0; 200);
-    .set-var-rgb(bluelib-gray; 128; 128; 128);
-
-    // 1 for dark themes, -1 for light themes
-    --bluelib-polarity: -1;
-
-    // Font to be used in titles
-    .set-var-font(bluelib-title; sans-serif; bold);
-    // Font to be used in the rest of the text
-    .set-var-font(bluelib-text; sans-serif; normal);
-    // Font to be used in monospace contexts
-    .set-var-font(bluelib-code; monospace; normal);
-
-    //</editor-fold>
-
     /// ===== Macros =====
     /// Less allows defining variables to reduce the amount of boilerplate code to write while defining the rules.
     /// In Bluelib, these are called macros.
