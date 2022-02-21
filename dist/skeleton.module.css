@@ -202,6 +202,9 @@
   padding: 8px;
   margin: 8px 0;
 }
+.bluelib .table.status-disabled > .table-caption {
+  opacity: 50%;
+}
 .bluelib .table-caption {
   display: table-caption;
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.03);

@@ -294,6 +294,24 @@ body .table-caption,
   font-style: italic;
   font-size: small;
 }
+body table[disabled] caption,
+.bluelib table[disabled] caption,
+body table.status-disabled caption,
+.bluelib table.status-disabled caption,
+body .table[disabled] caption,
+.bluelib .table[disabled] caption,
+body .table.status-disabled caption,
+.bluelib .table.status-disabled caption,
+body table[disabled] .table-caption,
+.bluelib table[disabled] .table-caption,
+body table.status-disabled .table-caption,
+.bluelib table.status-disabled .table-caption,
+body .table[disabled] .table-caption,
+.bluelib .table[disabled] .table-caption,
+body .table.status-disabled .table-caption,
+.bluelib .table.status-disabled .table-caption {
+  opacity: 50%;
+}
 body table caption,
 .bluelib table caption,
 body .table-caption-top,

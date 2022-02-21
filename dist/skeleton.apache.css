@@ -284,6 +284,20 @@ body .table,
   padding: 8px;
   margin: 8px 0;
 }
+body table[disabled],
+.bluelib table[disabled],
+body .table[disabled],
+.bluelib .table[disabled],
+body table .status-disabled > table caption,
+.bluelib table .status-disabled > table caption,
+body .table .status-disabled > table caption,
+.bluelib .table .status-disabled > table caption,
+body table .table-caption,
+.bluelib table .table-caption,
+body .table .table-caption,
+.bluelib .table .table-caption {
+  opacity: 50%;
+}
 body table caption,
 .bluelib table caption,
 body .table-caption,
