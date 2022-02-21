@@ -1,4 +1,5 @@
 #!/bin/bash
+# Maybe a Makefile would be better...
 
 echo "Finding targets..."
 targets=$(ls ../src/targets/*.less)

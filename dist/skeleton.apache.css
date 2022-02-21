@@ -284,20 +284,6 @@ body .table,
   padding: 8px;
   margin: 8px 0;
 }
-body table[disabled],
-.bluelib table[disabled],
-body .table[disabled],
-.bluelib .table[disabled],
-body table .status-disabled > table caption,
-.bluelib table .status-disabled > table caption,
-body .table .status-disabled > table caption,
-.bluelib .table .status-disabled > table caption,
-body table .table-caption,
-.bluelib table .table-caption,
-body .table .table-caption,
-.bluelib .table .table-caption {
-  opacity: 50%;
-}
 body table caption,
 .bluelib table caption,
 body .table-caption,
@@ -307,6 +293,24 @@ body .table-caption,
   padding: 4px;
   font-style: italic;
   font-size: small;
+}
+body table[disabled] caption,
+.bluelib table[disabled] caption,
+body table.status-disabled caption,
+.bluelib table.status-disabled caption,
+body .table[disabled] caption,
+.bluelib .table[disabled] caption,
+body .table.status-disabled caption,
+.bluelib .table.status-disabled caption,
+body table[disabled] .table-caption,
+.bluelib table[disabled] .table-caption,
+body table.status-disabled .table-caption,
+.bluelib table.status-disabled .table-caption,
+body .table[disabled] .table-caption,
+.bluelib .table[disabled] .table-caption,
+body .table.status-disabled .table-caption,
+.bluelib .table.status-disabled .table-caption {
+  opacity: 50%;
 }
 body table caption,
 .bluelib table caption,
@@ -2250,8 +2254,6 @@ body .anchor:active,
 }
 body a:not([href]),
 .bluelib a:not([href]),
-body a[href=""],
-.bluelib a[href=""],
 body .anchor-broken,
 .bluelib .anchor-broken {
   cursor: not-allowed;
@@ -2262,30 +2264,20 @@ body .anchor-broken,
 }
 body a:not([href]):hover,
 .bluelib a:not([href]):hover,
-body a[href=""]:hover,
-.bluelib a[href=""]:hover,
 body .anchor-broken:hover,
 .bluelib .anchor-broken:hover,
 body a:not([href]):focus,
 .bluelib a:not([href]):focus,
-body a[href=""]:focus,
-.bluelib a[href=""]:focus,
 body .anchor-broken:focus,
 .bluelib .anchor-broken:focus,
 body a:not([href]):active,
 .bluelib a:not([href]):active,
-body a[href=""]:active,
-.bluelib a[href=""]:active,
 body .anchor-broken:active,
 .bluelib .anchor-broken:active {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
 }
-body a[href^="http://"],
-.bluelib a[href^="http://"],
-body a[href^="https://"],
-.bluelib a[href^="https://"],
-body a[href^="/"],
-.bluelib a[href^="/"],
+body a[href],
+.bluelib a[href],
 body .anchor-link,
 .bluelib .anchor-link {
   cursor: pointer;
@@ -2294,12 +2286,8 @@ body .anchor-link,
   --bluelib-color-b: var(--bluelib-link-b);
   text-decoration-style: solid;
 }
-body a[href^="http://"]:visited,
-.bluelib a[href^="http://"]:visited,
-body a[href^="https://"]:visited,
-.bluelib a[href^="https://"]:visited,
-body a[href^="/"]:visited,
-.bluelib a[href^="/"]:visited,
+body a[href]:visited,
+.bluelib a[href]:visited,
 body .anchor-link:visited,
 .bluelib .anchor-link:visited {
   --bluelib-color-r: var(--bluelib-visited-r);
@@ -2308,8 +2296,6 @@ body .anchor-link:visited,
 }
 body a[download],
 .bluelib a[download],
-body a[href]:not([href^="http://"]):not([href^="https://"]),
-.bluelib a[href]:not([href^="http://"]):not([href^="https://"]),
 body .anchor-download,
 .bluelib .anchor-download {
   cursor: pointer;
