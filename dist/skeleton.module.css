@@ -1,4 +1,10 @@
 .bluelib {
+  --bluelib-title-family: sans-serif;
+  --bluelib-title-weight: 400;
+  --bluelib-text-family: sans-serif;
+  --bluelib-text-weight: 400;
+  --bluelib-code-family: monospace;
+  --bluelib-code-weight: 400;
   background-color: rgb(var(--bluelib-background-r), var(--bluelib-background-g), var(--bluelib-background-b));
   width: 100%;
   height: 100%;
@@ -639,6 +645,10 @@
 .bluelib .semantic-mark {
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.22);
   color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)), 1);
+}
+.bluelib .semantic-pre {
+  font-family: var(--bluelib-text-family);
+  font-weight: var(--bluelib-text-weight);
 }
 .bluelib .semantic-q {
   font-style: oblique;

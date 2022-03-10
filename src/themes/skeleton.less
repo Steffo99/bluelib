@@ -265,6 +265,15 @@
 
     //<editor-fold desc="Rules: Root">
 
+    // Set default fonts
+    --bluelib-title-family: sans-serif;
+    --bluelib-title-weight: 400;
+    --bluelib-text-family: sans-serif;
+    --bluelib-text-weight: 400;
+    --bluelib-code-family: monospace;
+    --bluelib-code-weight: 400;
+    
+
     // Set the background defined in the palette
     background-color: @rgb-background;
 
@@ -1274,6 +1283,11 @@
     @{semantic-mark} {
         background-color: @c2;
         color: @cF;
+    }
+
+    @{semantic-pre} {
+        // Override the default browser behaviour of applying a monospace font to basic pre tags
+        .use-var-font(bluelib-text)
     }
 
     @{semantic-q} {
