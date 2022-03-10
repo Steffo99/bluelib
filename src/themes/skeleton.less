@@ -545,6 +545,26 @@
         max-height: max(14.1vw, 25vh);
     }
 
+    @{figure} {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 8px;
+
+        font-size: small;
+        font-style: italic;
+        text-align: center;
+
+        margin: 8px 0;
+        padding: 8px;
+        
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 4px;
+
+        background-color: @c1;
+        border-color: @c2;
+    }
+
     //</editor-fold>
 
     /// ===== Tables =====
@@ -555,7 +575,7 @@
 
         background-color: @c0;
 
-        border-width: 2px 2px 2px 2px;
+        border-width: 2px;
         border-style: solid;
         border-color: @c1;
         border-radius: 0 0 4px 4px;
