@@ -7,6 +7,13 @@
             "request": "launch",
             "reAttach": true,
             "file": "${workspaceFolder}/index.html",
-        }
+        },
+        {
+            "name": "Preview Apache httpd page",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "file": "${workspaceFolder}/apache.html",
+        },
     ]
 }
