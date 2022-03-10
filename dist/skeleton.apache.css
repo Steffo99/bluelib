@@ -2463,6 +2463,40 @@ body .semantic-i,
 .bluelib .semantic-i {
   font-style: italic;
 }
+body kbd,
+.bluelib kbd,
+body .semantic-kbd,
+.bluelib .semantic-kbd {
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgb(var(--bluelib-background-r), var(--bluelib-background-g), var(--bluelib-background-b));
+  border-width: 3px;
+  border-style: ridge;
+  padding: 1px;
+  font-family: var(--bluelib-code-family);
+  font-weight: var(--bluelib-code-weight);
+}
+body kbd > kbd,
+.bluelib kbd > kbd,
+body .semantic-kbd > kbd,
+.bluelib .semantic-kbd > kbd,
+body kbd .semantic-kbd,
+.bluelib kbd .semantic-kbd,
+body .semantic-kbd .semantic-kbd,
+.bluelib .semantic-kbd .semantic-kbd {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  font-weight: 600;
+}
+body .semantic-kbd-press,
+.bluelib .semantic-kbd-press {
+  border-style: inset;
+}
+body .semantic-kbd-release,
+.bluelib .semantic-kbd-release {
+  border-style: outset;
+}
 body mark,
 .bluelib mark,
 body .semantic-mark,
@@ -2493,6 +2527,12 @@ body .semantic-q:after,
 .bluelib .semantic-q:after {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.505);
 }
+body s,
+.bluelib s,
+body .semantic-s,
+.bluelib .semantic-s {
+  text-decoration: currentColor line-through;
+}
 body samp,
 .bluelib samp,
 body .semantic-samp,
@@ -2500,12 +2540,24 @@ body .semantic-samp,
   background-color: rgba(calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)), calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)), calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)), 1);
   color: rgba(calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)), calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)), calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)), 1);
 }
+body small,
+.bluelib small,
+body .semantic-small,
+.bluelib .semantic-small {
+  font-size: smaller;
+}
 body strong,
 .bluelib strong,
 body .semantic-strong,
 .bluelib .semantic-strong {
   font-weight: 800;
   color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
+}
+body u,
+.bluelib u,
+body .semantic-u,
+.bluelib .semantic-u {
+  text-decoration: currentColor underline;
 }
 body var,
 .bluelib var,

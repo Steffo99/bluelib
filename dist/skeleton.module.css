@@ -642,6 +642,28 @@
 .bluelib .semantic-i {
   font-style: italic;
 }
+.bluelib .semantic-kbd {
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 1);
+  color: rgb(var(--bluelib-background-r), var(--bluelib-background-g), var(--bluelib-background-b));
+  border-width: 3px;
+  border-style: ridge;
+  padding: 1px;
+  font-family: var(--bluelib-code-family);
+  font-weight: var(--bluelib-code-weight);
+}
+.bluelib .semantic-kbd > .semantic-kbd {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  font-weight: 600;
+}
+.bluelib .semantic-kbd-press {
+  border-style: inset;
+}
+.bluelib .semantic-kbd-release {
+  border-style: outset;
+}
 .bluelib .semantic-mark {
   background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.22);
   color: rgba(calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)), calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)), 1);
@@ -657,13 +679,22 @@
 .bluelib .semantic-q:after {
   color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.505);
 }
+.bluelib .semantic-s {
+  text-decoration: currentColor line-through;
+}
 .bluelib .semantic-samp {
   background-color: rgba(calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)), calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)), calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)), 1);
   color: rgba(calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)), calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)), calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)), 1);
 }
+.bluelib .semantic-small {
+  font-size: smaller;
+}
 .bluelib .semantic-strong {
   font-weight: 800;
   color: rgb(var(--bluelib-accent-r), var(--bluelib-accent-g), var(--bluelib-accent-b));
+}
+.bluelib .semantic-u {
+  text-decoration: currentColor underline;
 }
 .bluelib .semantic-var {
   font-style: normal;

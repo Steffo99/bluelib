@@ -1277,7 +1277,31 @@
     }
 
     @{semantic-kbd} {
+        background-color: @cA;
+        border-color: @cA;
+        color: @rgb-background;
 
+        border-width: 3px;
+        border-style: ridge;
+
+        padding: 1px;
+        .use-var-font(bluelib-code);
+
+        > @{semantic-kbd} {
+            border: none;
+            padding: 0;
+            background-color: transparent;
+
+            font-weight: 600;
+        }
+    }
+
+    @{semantic-kbd-press} {
+        border-style: inset;
+    }
+
+    @{semantic-kbd-release} {
+        border-style: outset;
     }
 
     @{semantic-mark} {
@@ -1299,7 +1323,7 @@
     }
 
     @{semantic-s} {
-
+        text-decoration: currentColor line-through;
     }
 
     @{semantic-samp} {
@@ -1308,7 +1332,7 @@
     }
 
     @{semantic-small} {
-
+        font-size: smaller;
     }
 
     @{semantic-strong} {
@@ -1317,7 +1341,7 @@
     }
 
     @{semantic-u} {
-
+        text-decoration: currentColor underline;
     }
 
     @{semantic-var} {
