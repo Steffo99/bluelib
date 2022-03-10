@@ -1,0 +1,1408 @@
+/// ===== Root =====
+/// Every HTML document using Bluelib must define a root, an element where all bluelib styles can start being applied.
+/// Elements outside the root won't be styled at all, allowing Bluelib's styling to be contained in components or modules of a website.
+
+@{bluelib} {
+
+    /// ===== Macros =====
+    /// Less allows defining variables to reduce the amount of boilerplate code to write while defining the rules.
+    /// In Bluelib, these are called macros.
+
+    //<editor-fold desc="Rules: Macros">
+
+    @rgb-background: rgb(
+        var(--bluelib-background-r),
+        var(--bluelib-background-g),
+        var(--bluelib-background-b)
+    );
+    @rgb-foreground: rgb(
+        var(--bluelib-foreground-r),
+        var(--bluelib-foreground-g),
+        var(--bluelib-foreground-b)
+    );
+    @rgb-accent: rgb(
+        var(--bluelib-accent-r),
+        var(--bluelib-accent-g),
+        var(--bluelib-accent-b)
+    );
+
+    @rgb-link: rgb(
+        var(--bluelib-link-r),
+        var(--bluelib-link-g),
+        var(--bluelib-link-b)
+    );
+    @rgb-broken: rgb(
+        var(--bluelib-broken-r),
+        var(--bluelib-broken-g),
+        var(--bluelib-broken-b)
+    );
+    @rgb-visited: rgb(
+        var(--bluelib-visited-r),
+        var(--bluelib-visited-g),
+        var(--bluelib-visited-b)
+    );
+    @rgb-download: rgb(
+        var(--bluelib-download-r),
+        var(--bluelib-download-g),
+        var(--bluelib-download-b)
+    );
+
+    @rgb-red: rgb(
+        var(--bluelib-red-r),
+        var(--bluelib-red-g),
+        var(--bluelib-red-b)
+    );
+    @rgb-orange: rgb(
+        var(--bluelib-orange-r),
+        var(--bluelib-orange-g),
+        var(--bluelib-orange-b)
+    );
+    @rgb-yellow: rgb(
+        var(--bluelib-yellow-r),
+        var(--bluelib-yellow-g),
+        var(--bluelib-yellow-b)
+    );
+    @rgb-lime: rgb(
+        var(--bluelib-lime-r),
+        var(--bluelib-lime-g),
+        var(--bluelib-lime-b)
+    );
+    @rgb-cyan: rgb(
+        var(--bluelib-cyan-r),
+        var(--bluelib-cyan-g),
+        var(--bluelib-cyan-b)
+    );
+    @rgb-blue: rgb(
+        var(--bluelib-blue-r),
+        var(--bluelib-blue-g),
+        var(--bluelib-blue-b)
+    );
+    @rgb-magenta: rgb(
+        var(--bluelib-magenta-r),
+        var(--bluelib-magenta-g),
+        var(--bluelib-magenta-b)
+    );
+    @rgb-gray: rgb(
+        var(--bluelib-gray-r),
+        var(--bluelib-gray-g),
+        var(--bluelib-gray-b)
+    );
+
+    @rgb-leaving: rgba(
+        calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)),
+        calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)),
+        calc(255 * (((var(--bluelib-polarity) / 2) * -1) + 0.5)),
+        1.000
+    );
+    @rgb-towards: rgba(
+        calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)),
+        calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)),
+        calc(255 * ((var(--bluelib-polarity) / 2) + 0.5)),
+        1.000
+    );
+
+    @c0: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.030
+    );
+    @c1: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.125
+    );
+    @c2: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.220
+    );
+    @c3: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.315
+    );
+    @c4: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.410
+    );
+    @c5: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.505
+    );
+    @c6: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.600
+    );
+    @c7: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.700
+    );
+    @c8: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.800
+    );
+    @c9: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        0.900
+    );
+    @cA: rgba(
+        var(--bluelib-color-r),
+        var(--bluelib-color-g),
+        var(--bluelib-color-b),
+        1.000
+    );
+    @cB: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 10)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 10)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 10)),
+        1.000
+    );
+    @cC: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 20)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 20)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 20)),
+        1.000
+    );
+    @cD: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 30)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 30)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 30)),
+        1.000
+    );
+    @cE: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 40)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 40)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 40)),
+        1.000
+    );
+    @cF: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 50)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 50)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 50)),
+        1.000
+    );
+    @cG: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 60)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 60)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 60)),
+        1.000
+    );
+    @cH: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 70)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 70)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 70)),
+        1.000
+    );
+    @cI: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 80)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 80)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 80)),
+        1.000
+    );
+    @cJ: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 90)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 90)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 90)),
+        1.000
+    );
+    @cK: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 100)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 100)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 100)),
+        1.000
+    );
+    @cL: rgba(
+        calc(var(--bluelib-color-r) + (var(--bluelib-polarity) * 110)),
+        calc(var(--bluelib-color-g) + (var(--bluelib-polarity) * 110)),
+        calc(var(--bluelib-color-b) + (var(--bluelib-polarity) * 110)),
+        1.000
+    );
+
+    //</editor-fold>
+
+    /// ===== All =====
+    /// By default, browsers style elements with some weird rules.
+    /// This is an attempt to correct them, and to implement some Bluelib magic.
+
+    //<editor-fold desc="Rules: All">
+
+    &, @{all} {
+
+        // Globally set the box-sizing to border-box, as content-box is completely insane
+        &, &::before, &::after {
+            box-sizing: border-box;
+        }
+
+        // Bluelib magic!
+        // This rule sets the color of all text to be equal to the current .bluelib-color() at 100% opacity.
+        // Thanks, CSS variables!
+        color: @cA;
+
+        // Get the scrollbar color from the theme
+        scrollbar-color: @rgb-foreground @rgb-background;
+    }
+
+    //</editor-fold>
+
+    /// ===== Root =====
+    /// The root element has some rules itself.
+
+    //<editor-fold desc="Rules: Root">
+
+    // Set default fonts
+    --bluelib-title-family: sans-serif;
+    --bluelib-title-weight: 400;
+    --bluelib-text-family: sans-serif;
+    --bluelib-text-weight: 400;
+    --bluelib-code-family: monospace;
+    --bluelib-code-weight: 400;
+    
+
+    // Set the background defined in the palette
+    background-color: @rgb-background;
+
+    // Make the element fill all available space
+    width: 100%;
+    height: 100%;
+
+    // Set the base color to the foreground defined in the palette
+    .map-var-rgb(bluelib-color; bluelib-foreground);
+
+    // Set the base font
+    .use-var-font(bluelib-text);
+
+    //</editor-fold>
+
+    /// ===== Page =====
+    /// These rules apply to the four page areas: main, aside, header and footer
+
+    //<editor-fold desc="Rules: Page">
+    @{page-footer} {
+        margin-top: 1em;
+        text-align: center;
+        font-size: x-small;
+    }
+    //</editor-fold>
+
+    /// ===== Layouts =====
+    /// Layouts arrange the content displayed inside the root.
+    /// Layouts are the second element in the Bluelib hierarchy, immediately following the root.
+    /// Ideally, a single layout should be used per page.
+
+    //<editor-fold desc="Rules: Layouts">
+
+    // The base layout class.
+    @{layout} {
+        display: grid;
+        justify-content: stretch;
+        align-items: stretch;
+    }
+
+    // A layout with a single container spanning the whole screen.
+    @{layout-fill} {
+        padding: 4px;
+
+        grid-template-areas:
+            "single";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    @{layout-fill-single} {
+        grid-area: single;
+    }
+
+    // A layout with a centered 1024px wide main container and two symmetric containers at the sides.
+    @{layout-threecol} {
+        padding: 4px;
+        grid-column-gap: 8px;
+
+        @media screen and (min-width: 1281px) {
+            grid-template-areas:
+            "left center right";
+            grid-template-columns: 1fr auto 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        // If the side containers would be smaller than 128px (if the screen is narrower than 1280px), the smaller containers are moved below the main one.
+        @media screen and (max-width: 1280px) {
+            grid-template-areas:
+                "center center"
+                "left right";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+
+            // Keep the container limited to 1024px and centered
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @{layout-threecol-left} {
+        grid-area: left;
+
+        @media screen and (min-width: 1281px) {
+            justify-self: end;
+        }
+
+        @media screen and (max-width: 1280px) {
+            justify-self: stretch;
+        }
+    }
+
+    @{layout-threecol-center} {
+        grid-area: center;
+
+        @media screen and (min-width: 1281px) {
+            width: 1024px;
+        }
+
+        @media screen and (max-width: 1280px) {
+            // Ensure the container doesn't eat up all the space
+            max-width: 1024px;
+        }
+    }
+
+    @{layout-threecol-right} {
+        grid-area: right;
+
+        @media screen and (min-width: 1281px) {
+            justify-self: start;
+        }
+
+        @media screen and (max-width: 1280px) {
+            justify-self: stretch;
+        }
+    }
+
+    //</editor-fold>
+
+    /// ===== Panels =====
+    /// Panels are the main sectioning elements available in Bluelib.
+    /// Many instances of them should be present on the page!
+    /// They should group small amounts of tightly related content, which can be understood more or less separately from the rest of the page.
+
+    //<editor-fold desc="Rules: Panels">
+
+    // The base panel class.
+    @{panel} {
+        // Panels have a margin to separate them from other elements
+        margin: 8px 0;
+        // And a padding to separate them from their contents
+        padding: 8px;
+        // And a nice round border
+        border-radius: 4px;
+
+        // Panels should try to fill the most space possible
+        width: 100%;
+
+        // And should be wide at least 312px
+        min-width: 312px;
+
+        background-color: @c0;
+        border-color: @c1;
+
+        // The first and last elements of a panel should not have a margin
+        > @{all} {
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // A panel which encloses its contents with a border.
+    @{panel-box} {
+        border-width: 2px;
+        border-style: solid;
+    }
+
+    // A panel which encloses its contents with a quote-like border.
+    @{panel-dialog} {
+        border-width: 0 0 0 2px;
+        border-style: solid;
+    }
+
+    // A panel with no border whose contents are made smaller.
+    @{panel-parenthesis} {
+        border-width: 0;
+        font-size: smaller;
+    }
+
+    //</editor-fold>
+
+    /// ===== Chapters =====
+    /// A chapter is an element represents a larger section of text.
+
+    //<editor-fold desc="Rules: Chapters">
+
+    @{chapter} {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: stretch;
+        align-items: stretch;
+
+        margin: 8px 0;
+
+        > @{all} {
+            // Allow all children to grow
+            flex-grow: 1;
+            // But not to shrink
+            flex-shrink: 0;
+        }
+
+        @{HEADING} {
+            // Headings should fill up all horizontal space available and force a wrap
+            flex-basis: 100%;
+
+            // They should have a bit of margin to separate them from the other elements
+            margin-top: 0.2rem;
+            margin-bottom: 0.2rem;
+
+            // Especially if they are the first or the last children of a chapter, where they have to separate the chapters from each other
+            &:first-child {
+                margin-top: 1rem;
+            }
+            &:last-child {
+                margin-bottom: 1rem;
+            }
+        }
+
+        > @{panel} {
+            // Remove the innate margin panels have
+            margin: 0;
+            // Have panels split the free space in equal parts
+            flex-basis: 0;
+        }
+
+    }
+
+    // Force a split to wrap
+    @{chapter-forcewrap} {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 100%;
+
+        position: relative;
+    }
+
+    //</editor-fold>
+
+    /// ===== Separators =====
+    /// Separators are horizontal lines separating elements.
+
+    //<editor-fold desc="Rules: Separators">
+
+    @{separator} {
+        border-width: 1px;
+        border-style: solid;
+        border-color: @c5;
+    }
+
+    @{separator-light} {
+        border-color: @c1;
+    }
+
+    @{separator-heavy} {
+        border-color: @cA;
+    }
+
+    //</editor-fold>
+
+    /// ===== Images =====
+    /// Images are changed to block elements and are automatically centered.
+
+    //<editor-fold desc="Rules: Images">
+
+    @{image} {
+        display: block;
+
+        max-width: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        object-fit: contain;
+    }
+
+    @{image-limit-half} {
+        max-height: max(28.2vw, 50vh);
+    }
+
+    @{image-limit-quarter} {
+        max-height: max(14.1vw, 25vh);
+    }
+
+    @{figure} {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 8px;
+
+        font-size: small;
+        font-style: italic;
+        text-align: center;
+
+        margin: 8px 0;
+        padding: 8px;
+        
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 4px;
+
+        background-color: @c1;
+        border-color: @c2;
+    }
+
+    //</editor-fold>
+
+    /// ===== Tables =====
+
+    //<editor-fold desc="Rules: Tables">
+    @{table} {
+        display: table;
+
+        background-color: @c0;
+
+        border-width: 2px;
+        border-style: solid;
+        border-color: @c1;
+        border-radius: 0 0 4px 4px;
+        border-collapse: collapse;
+
+        padding: 8px;
+        margin: 8px 0;
+    }
+
+    @{table-caption} {
+        display: table-caption;
+
+        background-color: @c0;
+
+        padding: 4px;
+
+        font-style: italic;
+        font-size: small;
+    }
+    
+    // Fix for table-caption not disabling itself
+    @{table-caption-fixer} {
+        opacity: 50%;
+    }
+
+    @{table-caption-top} {
+        caption-side: top;
+
+        border-width: 2px 2px 0 2px;
+        border-style: solid;
+        border-color: @c1;
+        border-radius: 4px 4px 0 0;
+    }
+
+    @{table-caption-bottom} {
+        caption-side: bottom;
+
+        border-width: 0 2px 2px 2px;
+        border-style: solid;
+        border-color: @c1;
+        border-radius: 0 0 4px 4px;
+    }
+
+    @{table-header} {
+        display: table-header-group;
+
+        background-color: @c0;
+    }
+
+    @{table-body} {
+        display: table-row-group;
+    }
+
+    @{table-footer} {
+        display: table-footer-group;
+
+        background-color: @c0;
+    }
+
+    @{table-row} {
+        display: table-row;
+
+        border: 1px solid @c1;
+    }
+
+    @{table-data}, @{table-head} {
+        display: table-cell;
+
+        border: 1px solid @c1;
+        padding: 8px;
+    }
+
+    @{table-data} {
+
+    }
+
+    @{table-head} {
+        color: @rgb-accent;
+    }
+
+    @{table-mark} {
+        background-color: @c2;
+        color: @cF;
+    }
+
+    /// ===== Lists =====
+
+    @{list} {
+
+    }
+
+    @{list-unordered} {
+
+    }
+
+    @{list-ordered} {
+
+    }
+
+    @{list-item} {
+        margin: 0.35rem 0;
+
+        &::marker {
+            color: @c5;
+        }
+    }
+
+    @{list-description} {
+
+    }
+
+    @{list-description-term} {
+        margin-top: 0.7rem;
+        margin-bottom: 0.35rem;
+
+        font-size: larger;
+    }
+
+    @{list-description-details} {
+        margin-top: 0.35rem;
+        margin-bottom: 0.7rem;
+        margin-left: 16px;
+    }
+
+    //</editor-fold>
+
+    /// ===== Status =====
+    /// Status are classes that can be applied to elements to indicate that special interactions are available.
+
+    //<editor-fold desc="Rules: Status">
+
+    @{status-disabled} {
+        opacity: 50%;
+
+        // All sub-elements of a disabled element should have a not-allowed cursor
+        &, @{all} {
+            cursor: not-allowed !important;
+        }
+    }
+
+    //</editor-fold>
+
+    /// ===== Inputs =====
+    /// Inputs are the interactable parts of a website.
+
+    //<editor-fold desc="Rules: Inputs">
+
+    @{input} {
+        // Disable the browser font override
+        font: inherit;
+
+        // Use the maximum width possible
+        width: 100%;
+
+        // They should have a solid border
+        border-style: solid;
+        // Unless they are disabled, then they should have a dashed one
+        &@{status-disabled} {
+            border-style: dashed;
+        }
+
+        // They should use the current bluelib color
+        border-color: @c3;
+        color: @cA;
+        background-color: @c0;
+
+        // Both for themselves and their placeholder
+        &::placeholder {
+            color: @c4;
+            opacity: 1;
+        }
+
+        // They should become lighter if hovered
+        &:hover {
+            border-color: @c6;
+            color: @cC;
+            background-color: @c1;
+
+            &::placeholder {
+                color: @c7;
+            }
+        }
+
+        // And even lighter if focused
+        &:focus {
+            border-color: @cA;
+            color: @cF;
+            background-color: @c2;
+
+            &::placeholder {
+                color: @c7;
+            }
+        }
+
+        // Unless they are disabled
+        &@{status-disabled} {
+            &:hover, &:focus {
+                border-color: @c3;
+                color: @cA;
+                background-color: @c0;
+
+                &::placeholder {
+                    color: @c4;
+                }
+            }
+        }
+
+        // If they are optional, their contents should be in italic
+        &:optional, &:optional::placeholder {
+            font-style: italic;
+        }
+
+        // Color the elements based on validation
+        // Temporarily disabled due to some browser quirks
+        // &:invalid {
+        //     .bluelib-color(@hex-red);
+        // }
+        // &:valid {
+        //     .bluelib-color(@hex-lime)
+        // }
+
+        // If the browser wants the focus to be more appearent, don't draw an ugly focus ring and let every element define a better way
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    /// Fields are inputs where text can be entered
+    @{input-field} {
+        cursor: text;
+
+        border-width: 0 0 2px 0;
+        border-radius: 4px 4px 0 0;
+        padding: 6px;
+    }
+
+    @{input-area} {
+        cursor: text;
+
+        border-width: 0 0 0 2px;
+        border-radius: 0 4px 4px 0;
+        padding: 6px;
+    }
+
+    /// Selects are inputs where one option between many can be selected
+    @{input-select} {
+        cursor: context-menu;
+
+        border-width: 0 0 2px 0;
+        border-radius: 4px 4px 0 0;
+
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            @{input-option}, @{input-optgroup} {
+                .use-var-rgb(background-color; bluelib-background);
+            }
+        }
+    }
+
+    /// Multiselects are inputs where multiple options between many can be selected
+    @{input-multiselect} {
+        cursor: vertical-text;
+
+        border-width: 0 0 0 2px;
+        border-radius: 0 4px 4px 0;
+
+        // This is how you change color of the selected options of the multiselect
+        // But it is very quirky and never works as expected, so it is disabled
+        // @{input-option} {
+        //     &:checked {
+        //         background-image: linear-gradient(0deg, @bA 0%, @bA 100%);
+        //     }
+        // }
+    }
+
+    // Some rules apply to both of them
+    @{input-select}, @{input-multiselect} {
+        // Browsers add 4px of unremovable horizontal padding to options for some reason
+        padding: 6px 4px;
+
+        @{input-option} {
+            font-weight: normal;
+            color: @cA;
+
+            // Options should be slightly padded too
+            padding: 4px;
+        }
+
+        @{input-optgroup} {
+            // Style option groups as titles
+            font-weight: bold;
+            color: @rgb-accent;
+
+            // Options groups should be slightly padded too
+            padding: 4px;
+
+            @{input-option} {
+                // Add a slight indentation
+                padding: 4px 20px;
+
+                &::before {
+                    // Remove the tabs that Chrome adds before the options
+                    content: "";
+                }
+            }
+        }
+
+        // Nested optgroups aren't allowed by browsers, so no need to worry about that
+    }
+
+    @{input-button} {
+        cursor: pointer;
+
+        // Buttons are rendered as inline elements, but should arrange their contents as if they were flex
+        display: inline-flex;
+        // Center the button contents both vertically and horizontally
+        justify-content: center;
+        align-items: center;
+
+        // Give the button a nice shape
+        padding: 6px 16px;
+        border-radius: 4px;
+
+        // Give them a good clicking feedback
+        // (sadly it doesn't work if using the keyboard)
+        &:active {
+            border-color: @cC;
+            color: @cF;
+            background-color: @c3;
+        }
+
+        // But not if they're disabled
+        @{status-disabled} {
+            &:active {
+                border-color: @c3;
+                color: @cA;
+                background-color: @c0;
+            }
+        }
+    }
+
+    @{input-checkbox}, @{input-radio} {
+        // Disable the default browser style
+        appearance: none;
+
+        // Make the element feel clickable
+        cursor: pointer;
+
+        // Set a fixed size
+        width: 24px;
+        height: 24px;
+
+        // Override the default border width
+        border-width: 2px;
+
+        // Prepare the element to display something inside
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            // Force the creation of a pseudo-element inside
+            display: block;
+            content: "";
+
+            width: 14px;
+            height: 14px;
+        }
+
+        // If the element is checked, display it
+        &:checked::before {
+            background-color: @c9;
+        }
+
+        &:hover:checked::before {
+            background-color: @cB;
+        }
+
+        &:focus:checked::before {
+            background-color: @cD;
+        }
+
+        &:active:checked::before {
+            background-color: @cD;
+        }
+    }
+
+    // Checkbox buttons denote that multiple options can be selected
+    @{input-checkbox} {
+        // Checkboxes should be square
+        border-radius: 4px;
+
+        &::before {
+            border-radius: 2px;
+        }
+    }
+
+    // Radio buttons denote that only an option can be selected
+    @{input-radio} {
+        // Radios should be round
+        border-radius: 100%;
+
+        &::before {
+            border-radius: 100%;
+        }
+    }
+
+    //</editor-fold>
+
+    /// ===== Forms =====
+    /// Forms are containers where interactable elements are contained.
+    /// Every interactable is split in two parts: a label on the left and the control on the right.
+    ///
+    /// Example:
+    ///
+    /// Username | Steffo
+    ///    Email | ste.pigozzi@gmail.com
+    /// Password | ············
+    ///  Country | Italy ↓
+    ///
+    ///      [Submit]
+
+    //<editor-fold desc="Rules: Forms">
+
+    @{form} {
+        display: grid;
+
+        align-items: center;
+        row-gap: 4px;
+        column-gap: 8px;
+
+        // Labels should have the greater width between the one they require and 1/6 of the form width.
+        grid-template-columns: minmax(auto, 1fr) 5fr;
+
+        @{form-label} {
+            // Labels are on the left column of the grid
+            grid-column: 1;
+            // They should be right-aligned
+            justify-self: end;
+            text-align: right;
+
+            // Give the labels the accent color
+            .map-var-rgb(bluelib-color, bluelib-accent);
+            // And make them slightly bold
+            font-weight: 500;
+        }
+
+
+        @{form-input} {
+            // Inputs are on the right column of the grid
+            grid-column: 2;
+            // They should occupy all the available space
+            justify-self: stretch;
+        }
+
+        // Groups are similar to form-inputs, but may contain multiple inputs inside them
+        @{form-group} {
+            grid-column: 2;
+
+            display: flex;
+            gap: 8px 16px;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+
+            background-color: @c0;
+            padding: 6px;
+            border-radius: 4px;
+
+            @{form-group-label} {
+                display: flex;
+                gap: 6px;
+                justify-content: center;
+                align-items: center;
+
+                // Align text to the left
+                text-align: left;
+            }
+
+            @{form-group-row} {
+                flex-basis: 100%;
+
+                justify-content: start;
+            }
+        }
+
+        // An element filling a whole row of a form
+        // Useful for adding buttons or similar flow interruptions
+        @{form-row} {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            margin-top: 8px;
+            margin-bottom: 8px;
+
+            @{panel} {
+                margin: 0;
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    //</editor-fold>
+
+    /// ===== Headings =====
+    /// Headings are titles with a block display.
+
+    //<editor-fold desc="Rules: Headings">
+
+    @{heading} {
+        text-align: center;
+        .map-var-rgb(bluelib-color, bluelib-accent);
+        .use-var-font(bluelib-title);
+    }
+
+    //</editor-fold>
+
+    /// ===== Anchors =====
+    /// Anchors are clickable links to another place, such as a paragraph or a page.
+
+    //<editor-fold desc="Rules: Anchors">
+
+    @{anchor} {
+        text-decoration-line: underline;
+        text-decoration-thickness: 1px;
+
+        &:focus-visible {
+            text-decoration-thickness: 2px;
+        }
+
+        &:hover, &:focus {
+            color: @cD;
+        }
+
+        &:active {
+            color: @cG;
+        }
+    }
+
+    @{anchor-broken} {
+        cursor: not-allowed;
+
+        .map-var-rgb(bluelib-color, bluelib-broken);
+        text-decoration-style: dashed;
+
+        &:hover, &:focus, &:active {
+            color: @cA;
+        }
+    }
+
+    @{anchor-link} {
+        cursor: pointer;
+
+        .map-var-rgb(bluelib-color, bluelib-link);
+        text-decoration-style: solid;
+
+        &:visited {
+            .map-var-rgb(bluelib-color, bluelib-visited);
+        }
+    }
+
+    @{anchor-download} {
+        cursor: pointer;
+
+        .map-var-rgb(bluelib-color, bluelib-download);
+        text-decoration-style: solid;
+    }
+
+    //</editor-fold>
+
+    /// ===== Details and summaries =====
+    /// Details are collapsible elements which only display their summary until they are clicked.
+
+    @{details} {
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        @{details-summary} {
+            cursor: pointer;
+
+            font-size: larger;
+
+            // Prevent the user from accidentaly selecting the summary
+            user-select: none;
+
+            &:hover {
+                color: @cC;
+            }
+
+            &:focus-visible {
+                color: @cD;
+            }
+
+            &:active {
+                color: @cJ;
+            }
+        }
+
+        @{details-content} {
+            margin-top: 0.5rem;
+        }
+
+        @{DETAILS} {
+            margin-left: 16px;
+        }
+    }
+
+    /// ===== Ruby =====
+    /// Ruby text is used in various languages to add annotations to text.
+    /// Bluelib makes the annotations slightly transparent to differentiate them from the rest of the text.
+    /// See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby
+
+    //<editor-fold desc="Rules: Ruby">
+
+    @{ruby-parenthesis} {
+        color: @c1;
+    }
+
+    @{ruby-text} {
+        color: @c6;
+    }
+
+    //</editor-fold>
+
+    /// ===== Todos =====
+    /// Todos are used to mark unfinished parts of a website.
+    /// Their color ignores the palette and derives from the 🚧 emoji
+
+    //<editor-fold desc="Rules: Todos">
+
+    @{todo} {
+        background-color: #292F33;
+
+        --bluelib-color-r: 255;
+        --bluelib-color-g: 204;
+        --bluelib-color-b: 77;
+
+        border-color: #FFCC4D;
+    }
+
+    //</editor-fold>
+
+    /// ===== Semantics =====
+    /// Semantics are special font effects applied to text with a certain meaning.
+
+    //<editor-fold desc="Rules: Semantics">
+
+    @{semantic-abbr} {
+        cursor: help;
+        text-decoration: underline 1px dotted currentColor;
+    }
+
+    @{semantic-b} {
+        font-weight: 500;
+        color: @rgb-accent;
+    }
+
+    @{semantic-cite} {
+        font-variant: small-caps;
+    }
+
+    @{semantic-code} {
+        .use-var-font(bluelib-code);
+    }
+
+    @{semantic-dfn} {
+        text-decoration: underline 1px solid currentColor;
+        font-style: italic;
+    }
+
+    @{semantic-em} {
+        color: @rgb-accent;
+    }
+
+    @{semantic-i} {
+        font-style: italic;
+    }
+
+    @{semantic-kbd} {
+        background-color: @cA;
+        border-color: @cA;
+        color: @rgb-background;
+
+        border-width: 3px;
+        border-style: ridge;
+
+        padding: 1px;
+        .use-var-font(bluelib-code);
+
+        > @{semantic-kbd} {
+            border: none;
+            padding: 0;
+            background-color: transparent;
+
+            font-weight: 600;
+        }
+    }
+
+    @{semantic-kbd-press} {
+        border-style: inset;
+    }
+
+    @{semantic-kbd-release} {
+        border-style: outset;
+    }
+
+    @{semantic-mark} {
+        background-color: @c2;
+        color: @cF;
+    }
+
+    @{semantic-pre} {
+        // Override the default browser behaviour of applying a monospace font to basic pre tags
+        .use-var-font(bluelib-text)
+    }
+
+    @{semantic-q} {
+        font-style: oblique;
+
+        &:before, &:after {
+            color: @c5;
+        }
+    }
+
+    @{semantic-s} {
+        text-decoration: currentColor line-through;
+    }
+
+    @{semantic-samp} {
+        background-color: @rgb-leaving;
+        color: @rgb-towards;
+    }
+
+    @{semantic-small} {
+        font-size: smaller;
+    }
+
+    @{semantic-strong} {
+        font-weight: 800;
+        color: @rgb-accent;
+    }
+
+    @{semantic-u} {
+        text-decoration: currentColor underline;
+    }
+
+    @{semantic-var} {
+        font-style: normal;
+        color: @rgb-accent;
+    }
+
+    //</editor-fold>
+
+    /// ===== Colors =====
+    /// Colors are classes which apply a certain color from the palette to the bluelib-color of the element which has them.
+
+    //<editor-fold desc="Rules: Colors">
+
+    @{color-red} {
+        .map-var-rgb(bluelib-color, bluelib-red);
+    }
+
+    @{color-orange} {
+        .map-var-rgb(bluelib-color, bluelib-orange);
+    }
+
+    @{color-yellow} {
+        .map-var-rgb(bluelib-color, bluelib-yellow);
+    }
+
+    @{color-lime} {
+        .map-var-rgb(bluelib-color, bluelib-lime);
+    }
+
+    @{color-cyan} {
+        .map-var-rgb(bluelib-color, bluelib-cyan);
+    }
+
+    @{color-blue} {
+        .map-var-rgb(bluelib-color, bluelib-blue);
+    }
+
+    @{color-magenta} {
+        .map-var-rgb(bluelib-color, bluelib-magenta);
+    }
+
+    @{color-gray} {
+        .map-var-rgb(bluelib-color, bluelib-gray);
+    }
+
+    //</editor-fold>
+
+    /// ===== Special =====
+    /// Special rules apply particular properties to certain pre-existing elements for certain targets.
+
+    @{special-remove} {
+        display: none !important;
+    }
+
+    @{special-hide} {
+        visibility: hidden !important;
+    }
+
+    @{special-block-center} {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
