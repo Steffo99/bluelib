@@ -1,0 +1,49 @@
+{
+    "name": "@steffo99/bluelib",
+    "version": "4.0.0",
+    "description": "A stylesheet that supports fast dynamic recoloring via variables",
+    "keywords": [
+        "bluelib",
+        "css",
+        "less"
+    ],
+    "homepage": "https://gh.steffo.eu/bluelib/",
+    "bugs": {
+        "url": "https://github.com/Steffo99/bluelib/issues",
+        "email": "me@steffo.eu"
+    },
+    "author": {
+        "name": "Stefano Pigozzi",
+        "email": "me@steffo.eu",
+        "url": "https://www.steffo.eu"
+    },
+    "contributors": [
+        {
+            "name": "Stefano Pigozzi",
+            "email": "me@steffo.eu",
+            "url": "https://www.steffo.eu"
+        },
+        {
+            "name": "Lorenzo Balugani",
+            "email": "lorenzo.balugani@fermitech.info",
+            "url": "https://www.fermitech.info"
+        }
+    ],
+    "funding": [
+        {
+            "type": "individual",
+            "url": "https://ko-fi.com/steffo"
+        }
+    ],
+    "files": [
+        "dist/**/*.less",
+        "dist/**/*.css",
+        "dist/**/*.css.map"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Steffo99/bluelib.git"
+    },
+    "license": "AGPL-3.0-or-later",
+    "private": false
+}
