@@ -271,8 +271,7 @@
     --bluelib-text-family: sans-serif;
     --bluelib-text-weight: 400;
     --bluelib-code-family: monospace;
-    --bluelib-code-weight: 400;
-    
+    --bluelib-code-weight: 400;    
 
     // Set the background defined in the palette
     background-color: @rgb-background;
@@ -280,6 +279,9 @@
     // Make the element fill all available space
     width: 100%;
     height: 100%;
+
+    // And remove its margin, in case it is the body
+    margin: 0;
 
     // Set the base color to the foreground defined in the palette
     .map-var-rgb(bluelib-color; bluelib-foreground);

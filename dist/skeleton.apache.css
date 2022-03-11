@@ -9,6 +9,7 @@ body,
   background-color: rgb(var(--bluelib-background-r), var(--bluelib-background-g), var(--bluelib-background-b));
   width: 100%;
   height: 100%;
+  margin: 0;
   --bluelib-color-r: var(--bluelib-foreground-r);
   --bluelib-color-g: var(--bluelib-foreground-g);
   --bluelib-color-b: var(--bluelib-foreground-b);
