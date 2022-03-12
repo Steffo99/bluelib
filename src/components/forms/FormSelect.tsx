@@ -39,7 +39,7 @@ export function FormSelect<T>({label, validity, options, pairProps, labelProps, 
     )
 
     const optionComponents = React.useMemo(
-        () => Object.entries(options).map(([optKey, optValue]) => <Select.Option value={optKey} key={optKey}/>),
+        () => Object.entries(options).map(([optKey, optValue]) => <Select.Option value={optKey} key={optKey} selected={value === optValue}/>),
         [options],
     )
 
@@ -47,7 +47,7 @@ export function FormSelect<T>({label, validity, options, pairProps, labelProps, 
         <FormPair
             label={<FormLabel {...labelProps}>{label}</FormLabel>}
             input={
-                <Select onSimpleChange={onSimpleChangeWrapped} value={value} {...props}>
+                <Select onSimpleChange={onSimpleChangeWrapped} {...props}>
                     {optionComponents}
                 </Select>
             }
