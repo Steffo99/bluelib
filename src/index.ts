@@ -13,6 +13,7 @@ export {Details} from "./components/common/Details"
 export {Form} from "./components/forms/Form"
 
 export {Image} from "./components/images/Image"
+export {Figure} from "./components/images/Figure"
 
 export {Area} from "./components/inputs/Area"
 export {Button} from "./components/inputs/Button"
