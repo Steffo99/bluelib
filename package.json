@@ -26,6 +26,7 @@
     "license": "AGPL-3.0-or-later",
     "dependencies": {
         "@babel/runtime": "^7.15.3",
+        "@steffo/bluelib": "^4.0.1",
         "classnames": "^2.3.1",
         "color": "https://github.com/Steffo99/color",
         "uuid": "^8.3.2"

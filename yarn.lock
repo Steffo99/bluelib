@@ -1789,6 +1789,11 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@steffo/bluelib@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.npmjs.org/@steffo/bluelib/-/bluelib-4.0.1.tgz#addd4f53d938e25299fa9a75239d4ab41acc575e"
+  integrity sha512-LQdQLuLZIlifvEmenTkwVWVFrULuKJA6NK1qav2kiL8haG8NT2TAes2G/r2x1U2ycIFwJTsJnJ6BPLxhTxXGgg==
+
 "@storybook/addon-actions@6.4.18", "@storybook/addon-actions@^6.3.7":
   version "6.4.18"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.4.18.tgz#e997060e1b0af62f9f831301a56a3addfc1f1365"

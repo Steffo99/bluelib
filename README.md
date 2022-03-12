@@ -1,6 +1,6 @@
 # `bluelib-react`
 
-React bindings for [`bluelib@3`](https://github.com/Steffo99/bluelib)
+React bindings for [`bluelib@4`](https://github.com/Steffo99/bluelib)
 
 ## Documentation
 
