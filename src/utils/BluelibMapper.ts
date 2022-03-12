@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import * as Types from "../types"
-import Skeleton from "../bluelib/src/targets/skeleton.module.css"
+import Skeleton from "@steffo/bluelib/dist/skeleton.module.css"
 
 
 /**

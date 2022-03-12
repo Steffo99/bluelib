@@ -4,11 +4,11 @@ import * as BluelibMapper from "../utils/BluelibMapper"
 import Color from "color";
 import * as Colors from "../utils/Colors"
 
-import PaperTheme from "../bluelib/src/targets/paper.module.css"
-import RoyalBlueTheme from "../bluelib/src/targets/royalblue.module.css"
-import HackerTheme from "../bluelib/src/targets/hacker.module.css"
-import SophonTheme from "../bluelib/src/targets/sophon.module.css"
-import GestioneAmberTheme from "../bluelib/src/targets/amber.module.css"
+import PaperTheme from "@steffo/bluelib/dist/paper.module.css"
+import RoyalBlueTheme from "@steffo/bluelib/dist/royalblue.module.css"
+import HackerTheme from "@steffo/bluelib/dist/hacker.module.css"
+import SophonTheme from "@steffo/bluelib/dist/sophon.module.css"
+import GestioneAmberTheme from "@steffo/bluelib/dist/amber.module.css"
 
 
 const BuiltinThemes = {
