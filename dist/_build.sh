@@ -31,7 +31,7 @@ tee "$base.less" << EOF
 @import (less) "$theme";
 EOF
 
-lessc "$base.less" "$base.css" --source-map="$base.css.map" 
+lessc "$base.less" "$base.css"
 
 echo
 
