@@ -1,6 +1,6 @@
 {
     "name": "@steffo/bluelib",
-    "version": "4.0.2",
+    "version": "5.0.0",
     "description": "A stylesheet that supports fast dynamic recoloring via CSS variables",
     "keywords": [
         "bluelib",
