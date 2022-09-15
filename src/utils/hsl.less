@@ -5,7 +5,7 @@
 //! Color mixins can only be defined via HSL due to the absence of color interpolation functions in the CSS Color Level 4 Specification.
 
 
-/// Set the CSS variables of a certain group to the given values.
+/// Set the CSS variables of a certain color group to the given values.
 ///
 /// See also `.use-color-group`.
 .create-color-group(@name; @hue; @saturation; @lightness) {
@@ -15,13 +15,28 @@
 }
 
 
-/// Set a CSS property to the color obtained from the CSS variables of the given group.
+/// Set a CSS property to the color obtained from the CSS variables of the given color group.
 ///
-/// The color may be altered via the third, fourth and fifth parameters, which specify a string calculation to be appended to the CSS variables in a calc function.
+/// The color may be altered via the @hue-changes, @saturation-changes and @lightness-changes parameters, which specify a string calculation to be appended to the CSS variables in a calc function.
 ///
 /// For example, acceptable parameters may be: "+ 10deg", "/ 2", "* 1000", "- var(--something)", and so on.
 ///
 /// See also `.create-color-group`.
+.use-color-group(@property; @name) {
+    @property: hsl(
+        var(~"--@{name}-hue")
+        var(~"--@{name}-saturation")
+        var(~"--@{name}-lightness")
+    );
+}
+.use-color-group(@property; @name; @alpha) {
+    @property: hsl(
+        var(~"--@{name}-hue")
+        var(~"--@{name}-saturation")
+        var(~"--@{name}-lightness")
+        / @alpha
+    );
+}
 .use-color-group(@property; @name; @hue-changes; @saturation-changes; @lightness-changes; @alpha) {
     @property: hsl(
         calc(var(~"--@{name}-hue") ~"@{hue-changes}")
