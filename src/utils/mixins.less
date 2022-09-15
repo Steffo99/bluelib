@@ -26,18 +26,3 @@
         @alpha
     );
 }
-
-.set-var-font(@property; @family; @weight) {
-    --@{property}-family: @family;
-    --@{property}-weight: @weight;
-}
-
-.map-var-font(@property; @source) {
-    --@{property}-family: var( ~"--@{source}-family");
-    --@{property}-weight: var( ~"--@{source}-weight");
-}
-
-.use-var-font(@source) {
-    font-family: var( ~"--@{source}-family");
-    font-weight: var( ~"--@{source}-weight");
-}
