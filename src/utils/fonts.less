@@ -3,9 +3,9 @@
 //! For example, all h1, h2, h3, and .title elements might use the "title" group, whose font may be dynamically changed at the time of the page viewing.
 
 
-/// Set the CSS variables of a certain font name with the given values.
+/// Set the CSS variables of a certain font group to the given values.
 ///
-/// See `.use-var-font`.
+/// See `.use-font-group`.
 .create-font-group(@name; @style; @variant; @weight; @stretch; @size; @height; @family) {
     --@{name}-style:   @style;
     --@{name}-variant: @variant;
@@ -17,9 +17,9 @@
 }
 
 
-/// Set the CSS properties to the CSS variables of the given font name.
+/// Set the `font` CSS property to the CSS variables of the given font name.
 ///
-/// See `.set-var-font`.
+/// See `.create-font-group`.
 .use-font-group(@name) {
     font: var(~"--@{name}-style")
           var(~"--@{name}-variant")
