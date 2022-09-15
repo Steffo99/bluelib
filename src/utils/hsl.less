@@ -1,0 +1,32 @@
+//! These mixins allow the abstraction of the colors used by elements by having them use named "groups".
+//!
+//! For example, the body's foreground color and the buttons' background color might use the "foreground" group, whose color may be dynamically changed at the time of the page viewing.
+//!
+//! Color mixins can only be defined via HSL due to the absence of color interpolation functions in the CSS Color Level 4 Specification.
+
+
+/// Set the CSS variables of a certain group to the given values.
+///
+/// See also `.use-color-group`.
+.create-color-group(@name; @hue; @saturation; @lightness) {
+    --@{name}-hue: @hue;
+    --@{name}-saturation: @saturation;
+    --@{name}-lightness: @lightness;
+}
+
+
+/// Set a CSS property to the color obtained from the CSS variables of the given group.
+///
+/// The color may be altered via the third, fourth and fifth parameters, which specify a string calculation to be appended to the CSS variables in a calc function.
+///
+/// For example, acceptable parameters may be: "+ 10deg", "/ 2", "* 1000", "- var(--something)", and so on.
+///
+/// See also `.create-color-group`.
+.use-color-group(@property; @name; @hue-changes; @saturation-changes; @lightness-changes; @alpha) {
+    @property: hsl(
+        calc(var(~"--@{name}-hue") ~"@{hue-changes}")
+        calc(var(~"--@{name}-saturation") ~"@{saturation-changes}")
+        calc(var(~"--@{name}-lightness") ~"@{lightness-changes}")
+        / @alpha
+    );
+}
