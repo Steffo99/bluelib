@@ -6,12 +6,14 @@
 /// Set the CSS variables of a certain font name with the given values.
 ///
 /// See `.use-var-font`.
-.create-font-group(@name; @family; @weight; @style; @size; @variant) {
-    --@{name}-family:  @family;
-    --@{name}-weight:  @weight;
+.create-font-group(@name; @style; @variant; @weight; @stretch; @size; @height; @family) {
     --@{name}-style:   @style;
-    --@{name}-size:    @size;
     --@{name}-variant: @variant;
+    --@{name}-weight:  @weight;
+    --@{name}-stretch: @stretch;
+    --@{name}-size:    @size;
+    --@{name}-height:  @height;
+    --@{name}-family:  @family;
 }
 
 
@@ -19,9 +21,11 @@
 ///
 /// See `.set-var-font`.
 .use-font-group(@name) {
-    font-family:  var( ~"--@{name}-family"  );
-    font-weight:  var( ~"--@{name}-weight"  );
-    font-style:   var( ~"--@{name}-style"   );
-    font-size:    var( ~"--@{name}-size"    );
-    font-variant: var( ~"--@{name}-variant" );
+    font: var(~"--@{name}-style")
+          var(~"--@{name}-variant")
+          var(~"--@{name}-weight")
+          var(~"--@{name}-stretch")
+          var(~"--@{name}-size")
+          var(~"--@{name}-height")
+          var(~"--@{name}-family");
 }
