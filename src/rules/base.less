@@ -76,7 +76,7 @@
         margin-top: auto;
     }
     @{float-left} {
-        margin-left: auto;
+        margin-right: auto;
     }
     @{float-hcenter} {
         margin-left: auto;
@@ -250,18 +250,22 @@
     //<editor-fold desc="Rules: Images">
 
     @{image} {
+        // Change images to block
         display: block;
 
+        // Limit their width
         max-width: 100%;
-
+        // Resize the contained image to fully fit the element
         object-fit: contain;
     }
 
     @{image-limit-half} {
+        // Limit the image size to half of the vertical viewport
         max-height: max(28.2vw, 50vh);
     }
 
     @{image-limit-quarter} {
+        // Limit the image size to a quarter of the vertical viewport
         max-height: max(14.1vw, 25vh);
     }
 }
