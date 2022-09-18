@@ -29,11 +29,14 @@
     //<editor-fold desc="Rules: All">
 
     &, @{all} {
-
         // Globally set the box-sizing to border-box, as content-box is completely insane
         &, &::before, &::after {
             box-sizing: border-box;
         }
+
+        // Remove all default margins and paddings
+        margin: 0;
+        padding: 0;
 
         // Bluelib magic!
         // This rule sets the color of all text to be equal to the current .bluelib-color() at 100% opacity.
@@ -53,11 +56,171 @@
     //<editor-fold desc="Rules: Page">
 
     @{page-footer} {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin: 1rem 0;
         text-align: center;
         font-size: x-small;
     }
 
     //</editor-fold>
+
+    /// ===== Floats =====
+    /// Floats allow for elements to be automatically positioned in a different position than normal.
+
+    @{float-top} {
+        margin-bottom: auto;
+    }
+    @{float-right} {
+        margin-left: auto;
+    }
+    @{float-bottom} {
+        margin-top: auto;
+    }
+    @{float-left} {
+        margin-left: auto;
+    }
+    @{float-hcenter} {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @{float-vcenter} {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    /// ===== Headers =====
+    /// Headers are the titles of the page.
+
+    @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
+        text-align: center;
+    }
+
+    /// ===== Panels =====
+    /// Panels are the main sectioning elements available in Bluelib.
+    /// Many instances of them should be present on the page!
+    /// They should group small amounts of tightly related content, which can be understood more or less separately from the rest of the page.
+
+    //<editor-fold desc="Rules: Panels">
+
+    // The base panel class.
+    @{panel} {
+        // And a padding to separate them from their contents
+        padding-top: 8px;
+        padding-right: 8px;
+        padding-left: 8px;
+        padding-bottom: 8px;
+        // Remove the border, just to be sure
+        border-width: 0;
+        border-style: solid;
+
+        // Panels should try to fill the most space possible
+        width: 100%;
+
+        // Have panels be column-flex objects to facilitate alignments
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        // Make borders togglable
+        &@{border-top}, &@{panel-box} {
+            border-top-width: 2px;
+            padding-top: 6px;
+        }
+        &@{border-right}, &@{panel-box} {
+            border-right-width: 2px;
+            padding-right: 6px;
+        }
+        &@{border-left}, &@{panel-box}, &@{panel-dialog} {
+            border-left-width: 2px;
+            padding-left: 6px;
+        }
+        &@{border-bottom}, &@{panel-box} {
+            border-bottom-width: 2px;
+            padding-bottom: 6px;
+        }
+
+        // For compatibility, make panel-parenthesis available
+        &@{panel-parenthesis} {
+            font-size: smaller;
+        }
+    }
+
+    //</editor-fold>
+
+
+    /// ===== Chapters =====
+    /// A chapter is a decorative element separating its children in a certain number of columns.
+
+    //<editor-fold desc="Rules: Chapters">
+
+    @{chapter-1}, @{chapter-2}, @{chapter-3}, @{chapter-4}, @{chapter-5}, @{chapter-6}, @{chapter-7}, @{chapter-8}, @{chapter-9} {
+        // Be a row flexbox to separate elements in columns
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: stretch;
+        align-items: stretch;
+
+        // Add the gap as a vertical margin, so that multiple chapters can be placed next to each other
+        margin: 8px;
+
+        > @{all} {
+            // Allow all children to grow
+            flex-grow: 1;
+            // But not to shrink
+            flex-shrink: 0;
+        }
+
+        > @{header-1}, > @{header-2}, > @{header-3}, > @{header-4}, > @{header-5}, > @{header-6} {
+            // Headings should fill up all horizontal space available and force a wrap
+            flex-basis: 100%;
+        }
+    }
+
+    // Set the basis of elements of the various chapter sizes
+    @{chapter-1} {
+        > @{all} {
+            flex-basis: calc(100% / 2);
+        }
+    }
+    @{chapter-2} {
+        > @{all} {
+            flex-basis: calc(100% / 3);
+        }
+    }
+    @{chapter-3} {
+        > @{all} {
+            flex-basis: calc(100% / 4);
+        }
+    }
+    @{chapter-4} {
+        > @{all} {
+            flex-basis: calc(100% / 5);
+        }
+    }
+    @{chapter-5} {
+        > @{all} {
+            flex-basis: calc(100% / 6);
+        }
+    }
+    @{chapter-6} {
+        > @{all} {
+            flex-basis: calc(100% / 7);
+        }
+    }
+    @{chapter-7} {
+        > @{all} {
+            flex-basis: calc(100% / 8);
+        }
+    }
+    @{chapter-8} {
+        > @{all} {
+            flex-basis: calc(100% / 9);
+        }
+    }
+    @{chapter-9} {
+        > @{all} {
+            flex-basis: calc(100% / 10);
+        }
+    }
 }

@@ -18,7 +18,7 @@
                 <h1>
                     Bluelib Example
                 </h1>
-                <section class="chapter">
+                <div class="chapter-4">
                     <h2>
                         Panels
                     </h2>
@@ -54,13 +54,14 @@
                             A <dfn id="dfn-parenthesis">parenthesis</dfn> panel is a <b>container for text tangentially related to the rest of the document</b>, styled as a box with smaller text and no borders.
                         </p>
                     </section>
-                    <div class="chapter-forcewrap"></div>
+                </div>
+                <div class="chapter-2">
                     <section class="panel panel-box" id="panel-dimensions">
                         <h3>
                             Dimensions
                         </h3>
                         <p>
-                            Panels always have a <b><code>8px</code> margin</b> and <b><code>8px</code> of padding</b>.
+                            Panels always use <code>8px</code> dimensions to be more aesthetically pleasing.
                         </p>
                         <blockquote class="panel panel-dialog">
                             Hi! This is me talking to you, the reader!
@@ -112,8 +113,8 @@
                             </section>
                         </section>
                     </section>
-                </section>
-                <section class="chapter" id="chapter-chapters">
+                </div>
+                <div class="chapter-3" id="chapter-chapters">
                     <h2>
                         Chapters
                     </h2>
@@ -127,6 +128,12 @@
                         <blockquote class="panel panel-dialog">
                             You're seeing one right now!
                         </blockquote>
+                        <p>
+                            They split their children into a preset amount of columns: this one, for example, splits panels <b>into two columns</b>.
+                        </p>
+                        <p>
+                            The maximum number of columns in a chapter is 9; beyond that, you'll need to write your own chapter code.
+                        </p>
                     </section>
                     <section class="panel panel-box" id="panel-panelheights">
                         <h3>
@@ -134,6 +141,17 @@
                         </h3>
                         <p>
                             In a chapter, all panels on a row <b>inherit the height of the tallest panel in it</b>, so that no empty space is left.
+                        </p>
+                    </section>
+                    <section class="panel panel-box" id="panel-float">
+                        <h3>
+                            Element floats
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-float">float</dfn> is a utility class to align items in panels without having to write CSS.
+                        </p>
+                        <p class="float-bottom">
+                            For example, if a panel has some empty space, elements can be made to <b>float to the bottom</b>, which can be useful for example for buttons in sibling panels.
                         </p>
                     </section>
                     <section class="panel panel-box" id="panel-autowrap">
@@ -144,20 +162,19 @@
                             Additionaly, panels in a chapter will <b>automatically wrap</b> if their contents won't fit horizontally.
                         </p>
                     </section>
-                    <div class="chapter-forcewrap"></div>
-                    <section class="panel panel-box" id="panel-forcewrap">
+                    <section class="panel panel-box" id="panel-heightsreset">
                         <h3>
-                            Force-wrapping
+                            Reset heights
                         </h3>
                         <p>
-                            You can override the automatic wrapping and manually decide where a chapter should wrap by inserting a <dfn id="dfn-forcewrap">force-wrap</dfn> element where you want the chapter to wrap.
+                            Wrapped panels' heights ignore the height of panels in other rows.
                         </p>
-                        <section class="panel panel-parenthesis">
-                            Due to technical limitations, panels will have a <b><code>16px</code> vertical margin</b> when a chapter is force-wrapped.
-                        </section>
+                        <p>
+                            To have a constant height, one has to be set manually.
+                        </p>
                     </section>
-                </section>
-                <section class="chapter" id="chapter-separators">
+                </div>
+                <section class="chapter-3" id="chapter-separators">
                     <h2>
                         Separators
                     </h2>
@@ -168,12 +185,11 @@
                         <p>
                             A <dfn id="dfn-separator">separator</dfn> is a <b>horizontal line</b> that fills all the horizontal space available on a panel, forcing a line wrap.
                         </p>
-                        <hr>
+                        <hr class="float-bottom">
                         <blockquote class="panel panel-dialog">
                             Top Text
                         </blockquote>
                     </section>
-                    <div class="chapter-forcewrap"></div>
                     <section class="panel panel-box" id="panel-separator-light">
                         <h3>
                             Light separator
@@ -181,7 +197,7 @@
                         <p>
                             A <dfn id="dfn-separator-light">light separator</dfn> is a <b>slightly more transparent separator</b>, to be used if the regular color distracts too much from the flow of the text.
                         </p>
-                        <hr class="separator-light">
+                        <hr class="separator-light float-bottom">
                         <blockquote class="panel panel-dialog">
                             Bottom Text
                         </blockquote>
@@ -193,7 +209,7 @@
                         <p>
                             A <dfn id="dfn-separator-heavy">heavy separator</dfn> is a <b>non-transparent separator</b>, to be used if the regular color isn't apparent enough.
                         </p>
-                        <hr class="separator-heavy">
+                        <hr class="separator-heavy float-bottom">
                         <blockquote class="panel panel-dialog">
                             Bottom Text 2: Electric Boogaloo
                         </blockquote>
