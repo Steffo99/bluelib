@@ -243,4 +243,25 @@
     }
 
     //</editor-fold>
+
+    /// ===== Images =====
+    /// Images are changed to block elements and automatically resized to fit their container.
+
+    //<editor-fold desc="Rules: Images">
+
+    @{image} {
+        display: block;
+
+        max-width: 100%;
+
+        object-fit: contain;
+    }
+
+    @{image-limit-half} {
+        max-height: max(28.2vw, 50vh);
+    }
+
+    @{image-limit-quarter} {
+        max-height: max(14.1vw, 25vh);
+    }
 }
