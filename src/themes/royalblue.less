@@ -1,21 +1,19 @@
 @{bluelib} {
-    .set-var-rgb(bluelib-background; 13; 25; 59);
-    .set-var-rgb(bluelib-foreground; 160; 204; 255);
-    .set-var-rgb(bluelib-accent; 255; 255; 255);
+    .create-color-group("background"; 224; 64%; 14%);
+    .create-color-group("foreground"; 212; 100%; 81%);
+    .create-color-group("accent"; 0; 0%; 100%);
 
-    .set-var-rgb(bluelib-link; 0; 202; 202);
-    .set-var-rgb(bluelib-broken; 255; 116; 0);
-    .set-var-rgb(bluelib-visited; 12; 134; 207);
-    .set-var-rgb(bluelib-download; 0; 211; 137);
+    .create-color-group("link"; 180; 100%; 40%);
+    .create-color-group("broken"; 27; 100%; 50%);
+    .create-color-group("visited"; 202; 89%; 43%);
+    .create-color-group("download"; 159; 100%; 41%);
 
-    .set-var-rgb(bluelib-red; 255; 125; 125);
-    .set-var-rgb(bluelib-orange; 255; 187; 125);
-    .set-var-rgb(bluelib-yellow; 255; 255; 125);
-    .set-var-rgb(bluelib-lime; 125; 255; 125);
-    .set-var-rgb(bluelib-cyan; 125; 255; 255);
-    .set-var-rgb(bluelib-blue; 125; 125; 255);
-    .set-var-rgb(bluelib-magenta; 255; 125; 255);
-    .set-var-rgb(bluelib-gray; 187; 187; 187);
-
-    --bluelib-polarity: 1;
+    .create-color-group("red"; 0; 100%; 75%);
+    .create-color-group("orange"; 29; 100%; 75%);
+    .create-color-group("yellow"; 60; 100%; 75%);
+    .create-color-group("lime"; 120; 100%; 75%);
+    .create-color-group("cyan"; 180; 100%; 75%);
+    .create-color-group("blue"; 240; 100%; 75%);
+    .create-color-group("magenta"; 300; 100%; 75%);
+    .create-color-group("gray"; 0; 0%; 73%);
 }
