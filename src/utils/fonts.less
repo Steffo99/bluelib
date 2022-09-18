@@ -7,13 +7,13 @@
 ///
 /// See `.use-font-group`.
 .create-font-group(@name; @style; @variant; @weight; @stretch; @size; @height; @family) {
-    --@{name}-style:   @style;
-    --@{name}-variant: @variant;
-    --@{name}-weight:  @weight;
-    --@{name}-stretch: @stretch;
-    --@{name}-size:    @size;
-    --@{name}-height:  @height;
-    --@{name}-family:  @family;
+    --bfont-@{name}-style:   @style;
+    --bfont-@{name}-variant: @variant;
+    --bfont-@{name}-weight:  @weight;
+    --bfont-@{name}-stretch: @stretch;
+    --bfont-@{name}-size:    @size;
+    --bfont-@{name}-height:  @height;
+    --bfont-@{name}-family:  @family;
 }
 
 
@@ -21,11 +21,11 @@
 ///
 /// See `.create-font-group`.
 .use-font-group(@name) {
-    font: var(~"--@{name}-style")
-          var(~"--@{name}-variant")
-          var(~"--@{name}-weight")
-          var(~"--@{name}-stretch")
-          var(~"--@{name}-size")
-          var(~"--@{name}-height")
-          var(~"--@{name}-family");
+    font: var(~"--bfont-@{name}-style")
+          var(~"--bfont-@{name}-variant")
+          var(~"--bfont-@{name}-weight")
+          var(~"--bfont-@{name}-stretch")
+          var(~"--bfont-@{name}-size")
+          var(~"--bfont-@{name}-height")
+          var(~"--bfont-@{name}-family");
 }
