@@ -9,9 +9,9 @@
 ///
 /// See also `.use-color-group`.
 .create-color-group(@name; @hue; @saturation; @lightness) {
-    --@{name}-hue: @hue;
-    --@{name}-saturation: @saturation;
-    --@{name}-lightness: @lightness;
+    --bhsl-@{name}-hue: @hue;
+    --bhsl-@{name}-saturation: @saturation;
+    --bhsl-@{name}-lightness: @lightness;
 }
 
 
@@ -24,24 +24,24 @@
 /// See also `.create-color-group`.
 .use-color-group(@property; @name) {
     @property: hsl(
-        var(~"--@{name}-hue")
-        var(~"--@{name}-saturation")
-        var(~"--@{name}-lightness")
+        var(~"--bhsl-@{name}-hue")
+        var(~"--bhsl-@{name}-saturation")
+        var(~"--bhsl-@{name}-lightness")
     );
 }
 .use-color-group(@property; @name; @alpha) {
     @property: hsl(
-        var(~"--@{name}-hue")
-        var(~"--@{name}-saturation")
-        var(~"--@{name}-lightness")
+        var(~"--bhsl-@{name}-hue")
+        var(~"--bhsl-@{name}-saturation")
+        var(~"--bhsl-@{name}-lightness")
         / @alpha
     );
 }
 .use-color-group(@property; @name; @hue-changes; @saturation-changes; @lightness-changes; @alpha) {
     @property: hsl(
-        calc(var(~"--@{name}-hue") ~"@{hue-changes}")
-        calc(var(~"--@{name}-saturation") ~"@{saturation-changes}")
-        calc(var(~"--@{name}-lightness") ~"@{lightness-changes}")
+        calc(var(~"--bhsl-@{name}-hue") ~"@{hue-changes}")
+        calc(var(~"--bhsl-@{name}-saturation") ~"@{saturation-changes}")
+        calc(var(~"--bhsl-@{name}-lightness") ~"@{lightness-changes}")
         / @alpha
     );
 }
