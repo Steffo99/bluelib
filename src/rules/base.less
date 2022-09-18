@@ -1,0 +1,47 @@
+@{bluelib} {
+
+    /// ===== Body =====
+    /// The body element has some rules.
+
+    //<editor-fold desc="Rules: Body">
+
+    & {
+        // Set the current color
+        .map-hsl-group(current, foreground);
+
+        // Set the background defined in the palette
+        background-color: .hsl-group(background)[@c];
+
+        // Make the element fill all available space
+        width: 100%;
+        height: 100%;
+
+        // And remove its margin, in case it is the "real" body
+        margin: 0;
+    }
+
+    //</editor-fold>
+
+    /// ===== All =====
+    /// By default, browsers style elements with some weird rules.
+    /// This is an attempt to correct them, and to implement some Bluelib magic.
+
+    //<editor-fold desc="Rules: All">
+
+    &, @{all} {
+
+        // Globally set the box-sizing to border-box, as content-box is completely insane
+        &, &::before, &::after {
+            box-sizing: border-box;
+        }
+
+        // Bluelib magic!
+        // This rule sets the color of all text to be equal to the current .bluelib-color() at 100% opacity.
+        // Thanks, CSS variables!
+        color: .hsl-group(current)[@c];
+        border-color: .hsl-group(current)[@c];
+
+        // Get the scrollbar color from the theme
+        scrollbar-color: .hsl-group(current)[@c] .hsl-group(background)[@c];
+    }
+}

@@ -1,0 +1,31 @@
+//! These mixins allow the abstraction of the fonts used by elements by having them use named "mixins".
+//!
+//! For example, all h1, h2, h3, and .title elements might use the "title" group, whose font may be dynamically changed at the time of the page viewing.
+
+
+/// Set the CSS variables of a certain font group to the given values.
+///
+/// See `.use-font-group`.
+.create-font-group(@name; @style; @variant; @weight; @stretch; @size; @height; @family) {
+    --bfont-@{name}-style:   @style;
+    --bfont-@{name}-variant: @variant;
+    --bfont-@{name}-weight:  @weight;
+    --bfont-@{name}-stretch: @stretch;
+    --bfont-@{name}-size:    @size;
+    --bfont-@{name}-height:  @height;
+    --bfont-@{name}-family:  @family;
+}
+
+
+/// Set the `font` CSS property to the CSS variables of the given font name.
+///
+/// See `.create-font-group`.
+.use-font-group(@name) {
+    font: var(~"--bfont-@{name}-style")
+          var(~"--bfont-@{name}-variant")
+          var(~"--bfont-@{name}-weight")
+          var(~"--bfont-@{name}-stretch")
+          var(~"--bfont-@{name}-size")
+          var(~"--bfont-@{name}-height")
+          var(~"--bfont-@{name}-family");
+}

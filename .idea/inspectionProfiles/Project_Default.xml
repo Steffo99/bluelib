@@ -56,7 +56,9 @@
     <inspection_tool class="RegExpRedundantNestedCharacterClass" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="RegExpRepeatedSpace" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="RegExpUnexpectedAnchor" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="ShellCheck" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="ShellCheck" enabled="true" level="WARNING" enabled_by_default="true">
+      <shellcheck_settings value="SC2129" />
+    </inspection_tool>
     <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
       <option name="processCode" value="true" />
       <option name="processLiterals" value="true" />
