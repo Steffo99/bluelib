@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="stylesheet/less" href="../dist/base.root.less" type="text/css">
-    <link rel="stylesheet/less" href="../dist/royalblue.root.less" type="text/css">
+    <link rel="stylesheet/less" href="../dist/colors-royalblue.root.less" type="text/css">
+    <link rel="stylesheet/less" href="../dist/fonts-fira-ghpages.root.less" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
     <title>Bluelib</title>
 </head>
@@ -253,7 +254,7 @@
                         <img class="image-limit-quarter" src="https://images.unsplash.com/photo-1593415553970-bd0145efc369" alt="Neon ice cream"/>
                     </section>
                 </div>
-                <section class="chapter" id="chapter-tables">
+                <div class="chapter-2" id="chapter-tables">
                     <h2>
                         Tables
                     </h2>
@@ -262,44 +263,173 @@
                             Table
                         </h3>
                         <p>
-                            A <dfn id="dfn-table">table</dfn> is an element displaying data aligned and ordered by rows and columns.
+                            A <dfn id="dfn-table">table</dfn> is an element whose children are aligned in a grid.
                         </p>
                         <table>
-                            <caption class="table-caption-top">What do the brothers think of the following elements?</caption>
                             <thead>
                                 <tr>
-                                    <th></th>
-                                    <th>Mario</th>
-                                    <th>Luigi</th>
+                                    <th>Emoji</th>
+                                    <th>Meaning</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">Tables</th>
-                                    <td>They're cool and allow you to do cool stuff</td>
-                                    <td>They need chairs to be useful</td>
+                                    <td>🙂</td>
+                                    <td>Slightly Smiling Face</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Flexboxes</th>
-                                    <td>They're very useful</td>
-                                    <td>Not enough flexible for me</td>
+                                    <td>🌑</td>
+                                    <td>New Moon</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Grids</th>
-                                    <td>I love them</td>
-                                    <td>Bleargh</td>
+                                    <td>🌚</td>
+                                    <td>New Moon with Face</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section class="panel panel-box" id="panel-tablecaption">
+                        <h3>
+                            Table caption
+                        </h3>
+                        <p>
+                            Tables can have captions attached to their top.
+                        </p>
+                        <table>
+                            <caption class="table-caption-top">
+                                Apple emoji meanings
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th>Emoji</th>
+                                    <th>Meaning</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>🍎</td>
+                                    <td>Red Apple</td>
+                                </tr>
+                                <tr>
+                                    <td>🍏</td>
+                                    <td>Green Apple</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Hopefully a square with <code>F8FF</code> written inside it</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            Tables can also have headings and captions attached to their bottom.
+                        </p>
+                        <table>
+                            <caption class="table-caption-bottom">
+                                Pear emoji meanings
+                            </caption>
+                            <tbody>
+                                <tr>
+                                    <td>🍐</td>
+                                    <td>Pear</td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th scope="row">Overall</th>
-                                    <td>&lt;3</td>
-                                    <td>0/10</td>
+                                    <th>Emoji</th>
+                                    <th>Meaning</th>
                                 </tr>
                             </tfoot>
                         </table>
+                    </section>
+                    <table class="panel panel-box" id="panel-tablepanel">
+                        <caption class="table-caption-top">
+                            <h3>
+                                Table panels
+                            </h3>
+                            <p>
+                                A <dfn id="dfn-tablepanel">table panel</dfn> is a special table which is rendered as a panel.
+                            </p>
+                            <p>
+                                This table in particular is rendered as a box panel, and is about what two brothers think of the following objects:
+                            </p>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Mario</th>
+                                <th>Luigi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Tables</th>
+                                <td>They're cool and allow you to do cool stuff</td>
+                                <td>They need chairs to be useful</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Flexboxes</th>
+                                <td>They're very useful</td>
+                                <td>Not enough flexible for me</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Grids</th>
+                                <td>I love them</td>
+                                <td>Bleargh</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row">Overall</th>
+                                <td>&lt;3</td>
+                                <td>0/10</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table class="panel panel-dialog">
+                        <caption>
+                            <h3>
+                                Table dialogs
+                            </h3>
+                            <p>
+                                Panel tables can also be dialogs and parentheses.
+                            </p>
+                            <p>
+                                This table in particular is a dialog panel, and is about example features for a robot:
+                            </p>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Base</th>
+                                <td>All the base features of your home robot!</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Extra</th>
+                                <td>Everything a robot should be able to do, plus an infinite bubblewrap dispenser!</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Super</th>
+                                <td>The robot is now armed with a non-free printer, and is ready to conquer the world!</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row">Ultimate</th>
+                                <td>A time machine has been embedded into the robot, and it is free to use it at will.</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <section class="panel panel-box">
+                        <h3>
+                            Cell marking
+                        </h3>
                         <p>
-                            Elements in tables can be marked to increase their contrast with the rest.
+                            Cells in tables can be marked to make their contents more evident.
                         </p>
                         <table>
                             <caption class="table-caption-top">
@@ -323,35 +453,9 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <p>
-                            Captions can are above the table by default, but they can be moved below the table.
-                        </p>
-                        <table>
-                            <caption class="table-caption-bottom">
-                                HTML elements tier list
-                            </caption>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">S</th>
-                                    <td><code>&lt;span&gt;</code></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">A</th>
-                                    <td><code>&lt;a&gt;</code></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">B</th>
-                                    <td><code>&lt;body&gt;</code></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">C</th>
-                                    <td><code>&lt;caption&gt;</code></td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </section>
-                </section>
-                <section class="chapter" id="chapter-lists">
+                </div>
+                <div class="chapter-2" id="chapter-lists">
                     <h2>
                         Lists
                     </h2>
@@ -405,7 +509,7 @@
                             </dd>
                         </dl>
                     </section>
-                </section>
+                </div>
                 <section class="chapter" id="chapter-status">
                     <h2>
                         Status

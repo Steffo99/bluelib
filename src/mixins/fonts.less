@@ -11,7 +11,6 @@
     --bfont-@{name}-variant: @variant;
     --bfont-@{name}-weight:  @weight;
     --bfont-@{name}-stretch: @stretch;
-    --bfont-@{name}-size:    @size;
     --bfont-@{name}-height:  @height;
     --bfont-@{name}-family:  @family;
 }
@@ -21,11 +20,10 @@
 ///
 /// See `.create-font-group`.
 .use-font-group(@name) {
-    font: var(~"--bfont-@{name}-style")
-          var(~"--bfont-@{name}-variant")
-          var(~"--bfont-@{name}-weight")
-          var(~"--bfont-@{name}-stretch")
-          var(~"--bfont-@{name}-size")
-          var(~"--bfont-@{name}-height")
-          var(~"--bfont-@{name}-family");
+    font-style: var(~"--bfont-@{name}-style");
+    font-variant: var(~"--bfont-@{name}-variant");
+    font-weight: var(~"--bfont-@{name}-weight");
+    font-stretch: var(~"--bfont-@{name}-stretch");
+    line-height: var(~"--bfont-@{name}-height");
+    font-family: var(~"--bfont-@{name}-family");
 }

@@ -44,6 +44,10 @@
         color: .hsl-group(current)[@c];
         border-color: .hsl-group(current)[@c];
 
+        // Set the default border properties for no unexpected behaviour from browser styles
+        border-width: 0;
+        border-style: solid;
+
         // Get the scrollbar color from the theme
         scrollbar-color: .hsl-group(current)[@c] .hsl-group(background)[@c];
     }
@@ -66,6 +70,8 @@
     /// ===== Floats =====
     /// Floats allow for elements to be automatically positioned in a different position than normal.
 
+    //<editor-fold desc="Rules: Floats">
+
     @{float-top} {
         margin-bottom: auto;
     }
@@ -87,12 +93,18 @@
         margin-bottom: auto;
     }
 
+    //</editor-fold>
+
     /// ===== Headers =====
     /// Headers are the titles of the page.
+
+    //<editor-fold desc="Rules: Headers">
 
     @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
         text-align: center;
     }
+
+    //</editor-fold>
 
     /// ===== Panels =====
     /// Panels are the main sectioning elements available in Bluelib.
@@ -174,8 +186,12 @@
         > @{header-1}, > @{header-2}, > @{header-3}, > @{header-4}, > @{header-5}, > @{header-6} {
             // Headings should fill up all horizontal space available and force a wrap
             flex-basis: 100%;
+
+            margin-top: 1.2em;
         }
     }
+
+    //</editor-fold>
 
     // Set the basis of elements of the various chapter sizes
     @{chapter-1} {
@@ -224,6 +240,8 @@
         }
     }
 
+    //</editor-fold>
+
     /// ===== Separators =====
     /// Separators are horizontal lines separating elements.
 
@@ -268,4 +286,132 @@
         // Limit the image size to a quarter of the vertical viewport
         max-height: max(14.1vw, 25vh);
     }
+
+    //</editor-fold>
+
+    /// ===== Tables =====
+
+    //<editor-fold desc="Rules: Tables">
+
+    @{table} {
+        // Prevent ugly stacking borders
+        border-collapse: collapse;
+
+        @{table-head}, @{table-data} {
+            // Leave a little breathing room between table elements, even if not as much as with a table panel
+            padding: 3px 7px;
+            border-width: 1px;
+        }
+
+        @{table-caption} {
+            // Make captions have the same border as the cells
+            border-width: 1px;
+
+            &@{table-caption-top} {
+                // Place captions on the correct side of the table
+                caption-side: top;
+                // Remove the bottom border as it cannot collapse
+                border-bottom-width: 0;
+            }
+
+            &@{table-caption-bottom} {
+                // Place captions on the correct side of the table
+                caption-side: bottom;
+                // Remove the top border as it cannot collapse
+                border-top-width: 0;
+            }
+        }
+
+        @{table-mark} {
+
+        }
+
+        /// ----- Panels -----
+        /// Tables can be integrated with panels!
+
+        &@{panel} {
+            // Override the flex display of panels
+            display: table;
+
+            @{table-head}, @{table-data} {
+                // Have more space between cells
+                padding: 8px;
+            }
+
+            @{table-caption} {
+                // Behave as a regular panel and have text where it usually is
+                text-align: inherit;
+
+                // Use the same padding as cells
+                padding: 8px;
+
+                // Since captions can't be made flex, go back to the old style of defining margins
+                @{all} {
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &@{panel-box} {
+            @{table-row} {
+                border-width: 1px;
+            }
+
+            @{table-head}, @{table-data} {
+                border-width: 1px;
+                padding: 7px;
+            }
+
+            @{table-caption} {
+                border-width: 2px;
+                padding: 6px;
+
+                &@{table-caption-top} {
+                    // Remove the bottom border again because specificity
+                    border-bottom-width: 0;
+                }
+
+                &@{table-caption-bottom} {
+                    // Remove the top border again because specificity
+                    border-top-width: 0;
+                }
+            }
+        }
+
+        &@{panel-dialog} {
+            @{table-header} > @{table-row} {
+                border-bottom-width: 1px;
+            }
+
+            @{table-body} > @{table-row} {
+                border-width: 0;
+            }
+
+            @{table-footer} > @{table-row} {
+                border-top-width: 1px;
+            }
+
+            @{table-head}, @{table-data} {
+                border-width: 0 0 0 1px;
+                padding: 8px 8px 8px 7px;
+            }
+
+            @{table-caption} {
+                border-width: 0 0 0 2px;
+                padding: 8px 8px 8px 6px;
+            }
+        }
+    }
+
+    //</editor-fold>
+
 }
