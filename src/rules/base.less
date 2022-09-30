@@ -166,7 +166,7 @@
 
     //<editor-fold desc="Rules: Chapters">
 
-    @{chapter-1}, @{chapter-2}, @{chapter-3}, @{chapter-4}, @{chapter-5}, @{chapter-6}, @{chapter-7}, @{chapter-8}, @{chapter-9} {
+    @{chapter-0}, @{chapter-1}, @{chapter-2}, @{chapter-3}, @{chapter-4}, @{chapter-5}, @{chapter-6}, @{chapter-7}, @{chapter-8}, @{chapter-9} {
         // Be a row flexbox to separate elements in columns
         display: flex;
         flex-wrap: wrap;
@@ -190,6 +190,16 @@
             flex-basis: 100%;
 
             margin-top: 1.2em;
+        }
+    }
+
+    // Chapter zero means that the number of panels is not set and they should not be wrapped
+    @{chapter-0} {
+        flex-wrap: nowrap;
+
+        > @{all} {
+            // Elements inside may be forced to shrink
+            flex-shrink: 1;
         }
     }
 
@@ -308,6 +318,9 @@
             // Make captions have the same border as the cells
             border-width: 1px;
 
+            // Assign captions to their own font group
+            .use-font-group(caption);
+
             &@{table-caption-top} {
                 // Place captions on the correct side of the table
                 caption-side: top;
@@ -324,7 +337,12 @@
         }
 
         @{table-mark} {
-            // TODO
+            // Use the set color as background for marking
+            background-color: .hsl-group(mark-bg)[@c];
+            color: .hsl-group(mark-fg)[@c];
+
+            // Assign marks to their own font group
+            .use-font-group(mark);
         }
 
         /// ----- Panels -----
@@ -424,6 +442,26 @@
         & > @{all} {
             margin-left: 4.5ex;
         }
+    }
+
+    //</editor-fold>
+
+    /// ===== Glossaries =====
+    /// Glossaries are key-value pairs of items
+
+    //<editor-fold desc="Rules: Glossaries">
+
+    @{glossary-term} {
+        margin-top: 0.5em;
+
+        .use-font-group(term);
+    }
+
+    @{glossary-description} {
+        margin-left: 4.5ex;
+        margin-bottom: 0.5em;
+
+        .use-font-group(description)
     }
 
     //</editor-fold>

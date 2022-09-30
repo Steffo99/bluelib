@@ -160,18 +160,56 @@
                             Auto-wrapping
                         </h3>
                         <p>
-                            Additionaly, panels in a chapter will <b>automatically wrap</b> if their contents won't fit horizontally.
+                            Panels in a numbered chapter will <b>automatically wrap</b> if their contents won't fit horizontally.
                         </p>
-                    </section>
-                    <section class="panel panel-box" id="panel-heightsreset">
-                        <h3>
-                            Reset heights
-                        </h3>
                         <p>
                             Wrapped panels' heights ignore the height of panels in other rows.
                         </p>
-                        <p>
+                        <p class="float-bottom">
                             To have a constant height, one has to be set manually.
+                        </p>
+                    </section>
+                    <section class="panel panel-box">
+                        <h3>
+                            Auto-sizing
+                        </h3>
+                        <p>
+                            Panels in a "zero" chapter will instead <b>automatically resize</b> to fit everything in a single row.
+                        </p>
+                        <div class="chapter-0">
+                            <div class="panel">
+                                1
+                            </div>
+                            <div class="panel">
+                                2
+                            </div>
+                            <div class="panel">
+                                3
+                            </div>
+                            <div class="panel">
+                                4
+                            </div>
+                            <div class="panel">
+                                5
+                            </div>
+                            <div class="panel">
+                                6
+                            </div>
+                            <div class="panel">
+                                7
+                            </div>
+                            <div class="panel">
+                                8
+                            </div>
+                            <div class="panel">
+                                9
+                            </div>
+                            <div class="panel">
+                                10
+                            </div>
+                        </div>
+                        <p class="float-bottom">
+                            To set a constant width, one has to be set manually.
                         </p>
                     </section>
                 </div>
@@ -503,25 +541,30 @@
                             <li>Twelfth</li>
                         </ul>
                     </section>
-                    <section class="panel panel-box" id="panel-list-description">
+                </div>
+                <div class="chapter-1" id="chapter-glossaries">
+                    <h2>
+                        Glossaries
+                    </h2>
+                    <section class="panel panel-box" id="panel-glossary">
                         <h3>
-                            Description lists
+                            Glossaries
                         </h3>
                         <p>
-                            A <dfn id="dfn-list-description">description list</dfn> displays a series of name-description pairs.
+                            A <dfn id="dfn-glossary">glossary</dfn> displays a series of term-description pairs.
                         </p>
                         <dl>
                             <dt>
-                                Key
+                                Term
                             </dt>
                             <dd>
-                                Value
+                                Description
                             </dd>
                             <dt>
-                                Other key
+                                Other term
                             </dt>
                             <dd>
-                                Other value
+                                Other description
                             </dd>
                         </dl>
                     </section>
