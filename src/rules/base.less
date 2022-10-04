@@ -102,6 +102,8 @@
 
     @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
         text-align: center;
+
+        .map-hsl-group(current; primary)
     }
 
     //</editor-fold>
@@ -336,15 +338,6 @@
             }
         }
 
-        @{table-mark} {
-            // Use the set color as background for marking
-            background-color: .hsl-group(mark-bg)[@c];
-            color: .hsl-group(mark-fg)[@c];
-
-            // Assign marks to their own font group
-            .use-font-group(mark);
-        }
-
         /// ----- Panels -----
         /// Tables can be integrated with panels!
 
@@ -438,9 +431,9 @@
 
     //<editor-fold desc="Rules: Lists">
 
-    @{list-unordered}, @{list-ordered} {
-        & > @{all} {
-            margin-left: 4.5ex;
+    @{panel} {
+        > @{list-unordered}, > @{list-ordered} {
+            margin-left: 6ex;
         }
     }
 
@@ -465,4 +458,59 @@
     }
 
     //</editor-fold>
+
+    /// ===== Modifiers =====
+
+    @{modifier-fade} {
+        opacity: 0.3;
+    }
+
+    @{modifier-mark}, @{element-mark} {
+        // Assign marks to their own font group
+        .use-font-group(mark);
+
+        // Use the set color as background for marking
+        background-color: .hsl-group(mark-background)[@c];
+        .map-hsl-group(current; mark-foreground);
+
+        // If applied twice, go back to "normality"
+        @{modifier-mark}, @{element-mark} {
+            background-color: .hsl-group(background)[@c];
+            .map-hsl-group(current; foreground);
+
+            // If applied thrice, mark again and not anymore
+            @{modifier-mark}, @{element-mark} {
+                background-color: .hsl-group(mark-background)[@c];
+                .map-hsl-group(current; mark-foreground);
+            }
+        }
+    }
+
+    @{modifier-todo} {
+        background-color: .hsl-group(todo-background)[@c];
+        .map-hsl-group(current; todo-foreground);
+
+        &, @{all} {
+            border-style: dashed;
+        }
+    }
+
+    @{modifier-red} {
+        .map-hsl-group(current; red);
+    }
+    @{modifier-yellow} {
+        .map-hsl-group(current; yellow);
+    }
+    @{modifier-green} {
+        .map-hsl-group(current; green);
+    }
+    @{modifier-cyan} {
+        .map-hsl-group(current; cyan);
+    }
+    @{modifier-blue} {
+        .map-hsl-group(current; blue);
+    }
+    @{modifier-magenta} {
+        .map-hsl-group(current; magenta);
+    }
 }
