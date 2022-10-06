@@ -18,6 +18,9 @@
 
         // And remove its margin, in case it is the "real" body
         margin: 0;
+
+        // Set the default font family
+        .use-font-group(text)
     }
 
     //</editor-fold>
@@ -103,10 +106,10 @@
     @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
         text-align: center;
 
-        .map-hsl-group(current; primary)
-    }
+        .map-hsl-group(current; primary);
 
-    //</editor-fold>
+        .use-font-group(header);
+    }
 
     //</editor-fold>
 

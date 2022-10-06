@@ -2,14 +2,6 @@
 /// It may break if the repository's structure is changed, do not use it if possible.
 
 
-@{bluelib} {
-    //                    @name;  @style;@variant; @weight;@stretch;   @size; @height; @family
-    .create-font-group(    text;  normal;  normal;  normal;  normal; regular;     1.3; "Fira Sans", sans-serif);
-    .create-font-group(  header;  normal;  normal;     500;  normal; regular;     1.7; "Fira Sans", sans-serif);
-    .create-font-group(    code;  normal;  normal;  normal;  normal; regular;     1.3; "Fira Code", monospace);
-}
-
-
 @font-face {
     font-family: 'Fira Sans';
     src: url('https://mozilla.github.io/Fira/eot/FiraSans-Hair.eot');
@@ -229,4 +221,12 @@
          url('https://mozilla.github.io/Fira/ttf/FiraMono-Bold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
+}
+
+
+@{bluelib} {
+    //                    @name;  @style;@variant; @weight;@stretch;   @size; @height; @family
+    .create-font-group(    text;  normal;  normal;  normal;  normal; regular;     1.3; "Fira Sans", sans-serif);
+    .create-font-group(  header;  normal;  normal;     500;  normal; regular;     1.7; "Fira Sans", sans-serif);
+    .create-font-group(    code;  normal;  normal;  normal;  normal; regular;     1.3; "Fira Code", monospace);
 }

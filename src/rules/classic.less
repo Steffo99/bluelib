@@ -1,0 +1,119 @@
+@{bluelib} {
+
+    /// ===== Body =====
+
+    //<editor-fold desc="Rules: Body">
+
+    & {
+        // Set the default values of the variables used in these rules
+
+        // Sets the border radius of all panels
+        --panel-border-radius: 8px;
+        // Sets the backdrop-filter blur radius of all panels
+        // WARNING: VERY RESOURCE INTENSIVE!
+        --panel-blur-radius: 4px;
+    }
+
+    //</editor-fold>
+
+
+    /// ===== All =====
+
+    &, @{all} {
+        border-color: .hsl-group(current; 0.15)[@c];
+    }
+
+    /// ===== Headers =====
+
+    //<editor-fold desc="Rules: Headers">
+
+    // Give headers a slight shadow so they are easier to read outside of panels
+    @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
+        text-shadow: 2px 2px 4px .hsl-group(background)[@c];
+    }
+
+    // But do not give it to headers inside panels
+    @{panel} {
+        @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
+            text-shadow: none;
+        }
+    }
+
+    //</editor-fold>
+
+    /// ===== Panels =====
+
+    //<editor-fold desc="Rules: Panels">
+
+    @{panel} {
+        border-radius: var(--panel-border-radius);
+
+        // Give the first panel in a stack a fixed background color, so it may be seen against a background
+        background-color: .hsl-group(background; 0.7)[@c];
+        // Optionally, give it a blur effect too
+        // FIXME: SUPER EXPENSIVE
+        backdrop-filter: blur(var(--panel-blur-radius));
+        // And a shadow effect, which I'm not sure looks good
+        // FIXME: SUPER EXPENSIVE
+        box-shadow: 2px 2px 4px .hsl-group(background)[@c];
+
+        // Do not give the same effects to nested panels
+        @{panel} {
+            background-color: .hsl-group(current; 0.03)[@c];
+            backdrop-filter: none;
+            box-shadow: none;
+        }
+    }
+
+    // Make sure mark still works, even considering specificity
+    @{modifier-mark}, @{element-mark}, @{panel}@{modifier-mark} {
+        background-color: .hsl-group(mark-background)[@c];
+
+        // Make the modifier toggle properly
+        @{modifier-mark}, @{element-mark}, @{panel}@{modifier-mark} {
+            background-color: .hsl-group(background)[@c];
+
+            // Make the modifier toggle properly
+            @{modifier-mark}, @{element-mark}, @{panel}@{modifier-mark} {
+                background-color: .hsl-group(mark-background)[@c];
+            }
+        }
+    }
+
+    // Make sure to-do still works, even considering specificity
+    @{modifier-todo}, @{panel}@{modifier-todo} {
+        background-color: .hsl-group(todo-background)[@c];
+        border-color: .hsl-group(todo-foreground)[@c];
+
+        // Make the modifier inherit properly
+        @{panel} {
+            background-color: .hsl-group(todo-background)[@c];
+            border-color: .hsl-group(todo-foreground)[@c];
+        }
+    }
+
+    //</editor-fold>
+
+    /// ===== Tables =====
+
+    //<editor-fold desc="Rules: Tables">
+
+    @{table}@{panel} {
+        // Ensure table panels have no rounded borders
+        border-radius: 0;
+    }
+
+    @{panel} {
+        @{table-caption} {
+            // Give the first panel in a stack a fixed background color, so it may be seen against a background
+            background-color: .hsl-group(background; 0.7)[@c];
+            // Optionally, give it a blur effect too
+            // FIXME: SUPER EXPENSIVE
+            backdrop-filter: blur(var(--panel-blur-radius));
+            // FIXME: box-shadow does not work correctly
+            box-shadow: 2px 2px 4px .hsl-group(background)[@c];
+        }
+    }
+
+    //</editor-fold>
+}
