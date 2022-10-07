@@ -11,7 +11,7 @@
         --panel-border-radius: 8px;
         // Sets the backdrop-filter blur radius of all panels
         // WARNING: VERY RESOURCE INTENSIVE!
-        --panel-blur-radius: 4px;
+        --panel-blur-radius: 16px;
     }
 
     //</editor-fold>
@@ -49,7 +49,7 @@
         border-radius: var(--panel-border-radius);
 
         // Give the first panel in a stack a fixed background color, so it may be seen against a background
-        background-color: .hsl-group(background; 0.7)[@c];
+        background-color: .hsl-group(current; 0.05)[@c];
         // Optionally, give it a blur effect too
         // FIXME: SUPER EXPENSIVE
         backdrop-filter: blur(var(--panel-blur-radius));
