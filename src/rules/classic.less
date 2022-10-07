@@ -10,7 +10,6 @@
         // Sets the border radius of all panels
         --panel-border-radius: 8px;
         // Sets the backdrop-filter blur radius of all panels
-        // WARNING: VERY RESOURCE INTENSIVE!
         --panel-blur-radius: 16px;
     }
 
@@ -45,21 +44,20 @@
 
     //<editor-fold desc="Rules: Panels">
 
-    @{panel} {
+    // FIXME: table caption is stacked here and may increase code complexity
+    @{panel}, @{table}@{panel} > @{table-caption} {
         border-radius: var(--panel-border-radius);
 
         // Give the first panel in a stack a fixed background color, so it may be seen against a background
-        background-color: .hsl-group(current; 0.05)[@c];
+        background-color: .hsl-group(current; 0.1)[@c];
         // Optionally, give it a blur effect too
-        // FIXME: SUPER EXPENSIVE
         backdrop-filter: blur(var(--panel-blur-radius));
         // And a shadow effect, which I'm not sure looks good
-        // FIXME: SUPER EXPENSIVE
         box-shadow: 2px 2px 4px .hsl-group(background)[@c];
 
         // Do not give the same effects to nested panels
         @{panel} {
-            background-color: .hsl-group(current; 0.03)[@c];
+            background-color: .hsl-group(current; 0.1)[@c];
             backdrop-filter: none;
             box-shadow: none;
         }
@@ -101,22 +99,18 @@
     @{table}@{panel} {
         // Ensure table panels have no rounded borders
         border-radius: 0;
-    }
-
-    @{table-caption} {
-        background-color: transparent;
-    }
-
-    @{panel} {
+        
         > @{table-caption} {
-            // Give the first panel in a stack a fixed background color, so it may be seen against a background
-            background-color: .hsl-group(background; 0.7)[@c];
-            // Optionally, give it a blur effect too
-            // FIXME: SUPER EXPENSIVE
-            backdrop-filter: blur(var(--panel-blur-radius));
-            // FIXME: box-shadow does not work correctly
-            box-shadow: 2px 2px 4px .hsl-group(background)[@c];
+            // And ensure neither do table panel captions
+            border-radius: 0;
+            
+            // Minimize the visibility of the caption's box shadow
+            box-shadow: 1px 0 4px .hsl-group(background)[@c];
         }
+    }
+
+    @{table}@{panel-dialog} > @{table-caption} {
+        border-bottom-width: 2px;
     }
 
     //</editor-fold>
