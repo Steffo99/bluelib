@@ -2,6 +2,9 @@
     "name": "@steffo/bluelib",
     "version": "5.0.0",
     "description": "A stylesheet that supports fast dynamic recoloring via CSS variables",
+    "scripts": {
+        "dev": "web-dev-server --watch"
+    },
     "keywords": [
         "bluelib",
         "css",
@@ -45,5 +48,8 @@
         "url": "https://github.com/Steffo99/bluelib.git"
     },
     "license": "AGPL-3.0-or-later",
-    "private": false
+    "private": false,
+    "devDependencies": {
+        "@web/dev-server": "^0.1.34"
+    }
 }
