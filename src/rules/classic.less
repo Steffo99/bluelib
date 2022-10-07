@@ -103,8 +103,12 @@
         border-radius: 0;
     }
 
+    @{table-caption} {
+        background-color: transparent;
+    }
+
     @{panel} {
-        @{table-caption} {
+        > @{table-caption} {
             // Give the first panel in a stack a fixed background color, so it may be seen against a background
             background-color: .hsl-group(background; 0.7)[@c];
             // Optionally, give it a blur effect too
