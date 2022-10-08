@@ -8,9 +8,12 @@
       <option name="myIgnoreVendorSpecificProperties" value="false" />
       <option name="myCustomPropertiesList">
         <value>
-          <list size="2">
+          <list size="5">
             <item index="0" class="java.lang.String" itemvalue="text-decoration-thickness" />
             <item index="1" class="java.lang.String" itemvalue="scrollbar-color" />
+            <item index="2" class="java.lang.String" itemvalue="syntax" />
+            <item index="3" class="java.lang.String" itemvalue="initial-value" />
+            <item index="4" class="java.lang.String" itemvalue="inherits" />
           </list>
         </value>
       </option>

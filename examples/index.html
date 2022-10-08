@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="stylesheet/less" type="text/css" href="../dist/base.root.less" title="Bluelib Base">
-    <link rel="stylesheet/less" type="text/css" href="../dist/classic.root.less" title="Bluelib Classic">
-    <link rel="stylesheet/less" type="text/css" href="../dist/colors-royalblue.root.less" title="Bluelib Royal Blue">
-    <link rel="stylesheet/less" type="text/css" href="../dist/fonts-fira-ghpages.root.less" title="Bluelib Fira">
+    <link rel="stylesheet/less" type="text/css" href="../dist/base.root.less">
+    <link rel="stylesheet/less" type="text/css" href="../dist/classic.root.less">
+    <link rel="stylesheet/less" type="text/css" href="../dist/colors-royalblue.root.less">
+    <link rel="stylesheet/less" type="text/css" href="../dist/fonts-fira-ghpages.root.less">
+    <link rel="stylesheet/less" type="text/css" href="../dist/glass.root.less">
+    <link rel="stylesheet/less" type="text/css" href="../dist/fun.root.less">
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
     <style>
         body {
@@ -25,102 +27,147 @@
         <main class="main layout-threecol-center">
             <article>
                 <h1>
-                    Bluelib Example
+                    Bluelib 5.0.0
                 </h1>
                 <div class="chapter-4">
                     <h2>
                         Panels
                     </h2>
-                    <section class="panel" id="panel-panel">
+                    <section class="panel panel-box" id="panel-panel">
                         <h3>
                             Panel
                         </h3>
                         <p>
-                            A <dfn id="dfn-panel">panel</dfn> is a <b>base container</b> styled with a <b>slight background color</b> and no borders.
+                            A <dfn id="dfn-panel">Panel</dfn> is a <b>container</b> styled with a <b>slight background color</b> and no borders.
                         </p>
+                        <div class="panel float-bottom">
+                            Hello world! I am a Panel!
+                        </div>
                     </section>
                     <section class="panel panel-box" id="panel-box">
                         <h3>
                             Box
                         </h3>
                         <p>
-                            A <dfn id="dfn-box">box</dfn> panel is a <b>generic container</b> styled as a <b>box with borders on all four sides</b>.
+                            A <dfn id="dfn-box">Box</dfn> is a <b>container</b> adding <b>borders of all four sides</b> to the base appearence of a Panel.
                         </p>
+                        <div class="panel panel-box float-bottom">
+                            This Box contains a hidden Snake. <span style="display: none;">🐍</span>
+                        </div>
                     </section>
-                    <section class="panel panel-dialog" id="panel-dialog">
+                    <section class="panel panel-box" id="panel-dialog">
                         <h3>
                             Dialog
                         </h3>
                         <p>
-                            A <dfn id="dfn-dialog">dialog</dfn> panel is a <b>container for quotes or dialogues</b>, styled as a box with only the left border.
+                            A <dfn id="dfn-dialog">Dialog</dfn> is a <b>container</b> adding a <b>left border</b> to the base appearence of a Panel.
                         </p>
+                        <blockquote class="panel panel-dialog float-bottom">
+                            <q>Snake? Snake??? SNAKEEEEEEE!</q>
+                        </blockquote>
                     </section>
-                    <section class="panel panel-parenthesis" id="panel-parenthesis">
+                    <section class="panel panel-box" id="panel-parenthesis">
                         <h3>
                             Parenthesis
                         </h3>
                         <p>
-                            A <dfn id="dfn-parenthesis">parenthesis</dfn> panel is a <b>container for text tangentially related to the rest of the document</b>, styled as a box with smaller text and no borders.
+                            A <dfn id="dfn-parenthesis">Parenthesis</dfn> is a <b>container</b> styled as a Panel and with smaller text.
+                        </p>
+                        <div class="panel panel-parenthesis float-bottom">
+                            I think we lost the Snake...
+                        </div>
+                    </section>
+                    <section class="panel panel-box" id="panel-when-panel">
+                        <h3>
+                            Panel usage
+                        </h3>
+                        <p>
+                            When using Bluelib, text should always be either an <b>header</b> or <b>inside a <i>Panel</i></b>.
+                        </p>
+                        <p>
+                            Since <i>Panels</i> often denote "sections" of text, they should usually be <b><code>&lt;section&gt;</code> elements</b>.
+                        </p>
+                        <p>
+                            When they are only used cosmetically, <b><code>&lt;div&gt;</code> elements</b> should be used instead.
+                        </p>
+                    </section>
+                    <section class="panel panel-box" id="panel-when-box">
+                        <h3>
+                            Box usage
+                        </h3>
+                        <p>
+                            A <i>Box</i> creates a visible <b>separation</b> between the <b>content inside it</b> and the <b>content outside it</b>, and should be used when this separation is desired, like when <b>describing a topic</b> (like here).
+                        </p>
+                        <p>
+                            To achieve the best visual style, <i>Boxes</i> should always be the outmost panels: you should <b><em>never</em> place a <i>Box</i> inside a Panel or a Dialog</b>, but you can place one inside another <i>Box</i>.
+                        </p>
+                    </section>
+                    <section class="panel panel-box" id="panel-when-dialog">
+                        <h3>
+                            Dialog usage
+                        </h3>
+                        <p>
+                            A <i>Dialog</i> creates a visible <b>indentation</b> of the <b>content inside it</b>, and should be used when this indentation is desired, like in <b>quotes</b> or <b>examples</b>.
+                        </p>
+                        <p>
+                            When containing a quote, they should use <b><code>&lt;blockquote&gt;</code> elements</b>.
+                        </p>
+                        <p>
+                            Like Boxes, <i>Dialogs</i> should <b><em>never</em></b> be placed <b>into containers with less borders</b> than them, such as Panels.
+                        </p>
+                    </section>
+                    <section class="panel panel-box" id="panel-when-parenthesis">
+                        <h3>
+                            Parenthesis usage
+                        </h3>
+                        <p>
+                            A <i>Parenthesis</i> <b>removes importance from its contents</b>, and therefore makes for a great container for notes or additional information about a topic.
+                        </p>
+                        <p>
+                            Having no borders, they should be considered as Panels when placing them: never add Boxes or Dialogs inside them.
                         </p>
                     </section>
                 </div>
                 <div class="chapter-2">
-                    <section class="panel panel-box" id="panel-dimensions">
-                        <h3>
-                            Dimensions
-                        </h3>
-                        <p>
-                            Panels always use <code>8px</code> dimensions to be more aesthetically pleasing.
-                        </p>
-                        <blockquote class="panel panel-dialog">
-                            Hi! This is me talking to you, the reader!
-                        </blockquote>
-                        <blockquote class="panel panel-dialog">
-                            I'm testing panel dimensions!
-                        </blockquote>
-                        <blockquote class="panel panel-dialog">
-                            See? The margin between these dialog panels is consistent!
-                        </blockquote>
-                    </section>
                     <section class="panel panel-box" id="panel-nesting">
                         <h3>
                             Nesting
                         </h3>
                         <p>
-                            Panels of any kind can be <b>infinitely nested</b>.
+                            As you have seen in the sections before, panels can be <b>nested</b> many times (until the text becomes undistinguishable)!
                         </p>
-                        <section class="panel">
+                        <div class="panel panel-parenthesis">
                             <p>
                                 Like this!
                             </p>
-                            <section class="panel">
+                            <div class="panel panel-parenthesis">
                                 <p>
-                                    How deep does this rabbit hole go?
+                                    How deep does this Panel hole go?
                                 </p>
-                                <section class="panel">
+                                <div class="panel panel-parenthesis">
                                     <p>
                                         BWOON.
                                     </p>
-                                    <section class="panel">
+                                    <div class="panel panel-parenthesis">
                                         <p>
                                             BWOON.
                                         </p>
-                                        <section class="panel">
+                                        <div class="panel panel-parenthesis">
                                             <p>
                                                 BWOON.
                                             </p>
-                                            <section class="panel">
+                                            <div class="panel panel-parenthesis">
                                                 <em>
                                                     <a href="https://www.youtube.com/watch?v=G2jUhnCU9iA" target="_blank">
                                                         PANELCEPTION.
                                                     </a>
                                                 </em>
-                                            </section>
-                                        </section>
-                                    </section>
-                                </section>
-                            </section>
-                        </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                 </div>
                 <div class="chapter-3" id="chapter-chapters">
@@ -134,9 +181,6 @@
                         <p>
                             A <dfn id="dfn-chapter">chapter</dfn> is a grouping of an heading and multiple panels containing tightly related information.
                         </p>
-                        <blockquote class="panel panel-dialog">
-                            You're seeing one right now!
-                        </blockquote>
                         <p>
                             They split their children into a preset amount of columns: this one, for example, splits panels <b>into two columns</b>.
                         </p>

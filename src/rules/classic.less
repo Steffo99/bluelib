@@ -1,30 +1,19 @@
+/*
+ * Bluelib Classic
+ * by <me@steffo.eu>
+ */
+
 @{bluelib} {
 
-    /// ===== Body =====
-
-    //<editor-fold desc="Rules: Body">
-
     & {
-        // Set the default values of the variables used in these rules
-
         // Sets the border radius of all panels
-        --panel-border-radius: 8px;
-        // Sets the backdrop-filter blur radius of all panels
-        --panel-blur-radius: 16px;
+        --b-panel-border-radius: 8px;
     }
-
-    //</editor-fold>
-
-
-    /// ===== All =====
 
     &, @{all} {
+        // Lower the default border opacity
         border-color: .hsl-group(current; 0.15)[@c];
     }
-
-    /// ===== Headers =====
-
-    //<editor-fold desc="Rules: Headers">
 
     // Give headers a slight shadow so they are easier to read outside of panels
     @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
@@ -38,26 +27,17 @@
         }
     }
 
-    //</editor-fold>
-
-    /// ===== Panels =====
-
-    //<editor-fold desc="Rules: Panels">
-
-    // FIXME: table caption is stacked here and may increase code complexity
     @{panel}, @{table}@{panel} > @{table-caption} {
-        border-radius: var(--panel-border-radius);
+        border-radius: var(--b-panel-border-radius);
 
         // Give the first panel in a stack a fixed background color, so it may be seen against a background
-        background-color: .hsl-group(current; 0.1)[@c];
-        // Optionally, give it a blur effect too
-        backdrop-filter: blur(var(--panel-blur-radius));
-        // And a shadow effect, which I'm not sure looks good
+        background-color: .hsl-group(background)[@c];
+        // And a shadow effect
         box-shadow: 2px 2px 4px .hsl-group(background)[@c];
 
         // Do not give the same effects to nested panels
         @{panel} {
-            background-color: .hsl-group(current; 0.1)[@c];
+            background-color: .hsl-group(foreground; 0.075)[@c];
             backdrop-filter: none;
             box-shadow: none;
         }
@@ -90,12 +70,7 @@
         }
     }
 
-    //</editor-fold>
-
-    /// ===== Tables =====
-
-    //<editor-fold desc="Rules: Tables">
-
+    // Fixup table panels
     @{table}@{panel} {
         // Ensure table panels have no rounded borders
         border-radius: 0;
@@ -104,14 +79,12 @@
             // And ensure neither do table panel captions
             border-radius: 0;
             
-            // Minimize the visibility of the caption's box shadow
-            box-shadow: 1px 0 4px .hsl-group(background)[@c];
+            // Minimize the visibility of the caption's box shadow to prevent overlap with the table itself
+            box-shadow: 0.0625em 0 0.25em .hsl-group(background)[@c];
         }
     }
 
     @{table}@{panel-dialog} > @{table-caption} {
         border-bottom-width: 2px;
     }
-
-    //</editor-fold>
 }
