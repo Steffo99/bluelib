@@ -464,6 +464,8 @@
 
     /// ===== Modifiers =====
 
+    //<editor-fold desc="Rules: Modifiers">
+
     @{modifier-fade} {
         opacity: 0.3;
     }
@@ -516,4 +518,42 @@
     @{modifier-magenta} {
         .map-hsl-group(current; magenta);
     }
+
+    //</editor-fold>
+
+    /// ===== Inputs =====
+
+    //<editor-fold desc="Rules: Inputs">
+
+    @{input} {
+        // Disable the browser font override
+        font: inherit;
+
+        // Uniform the various properties of the elements
+        border-width: 1px;
+        background-color: .hsl-group(background)[@c];
+
+        // Add some padding to avoid visual overload
+        padding: 2px 4px;
+
+        &:focus {
+            outline-width: 4px;
+            outline-color: .hsl-group(primary)[@c];
+            outline-style: solid;
+        }
+    }
+
+    // Mark interactivity by changing the mouse cursor
+    @{input-field}, @{input-area} {
+        cursor: text;
+    }
+    @{input-select} {
+        cursor: default;
+    }
+    @{input-multiselect} {
+        cursor: vertical-text;
+    }
+
+    //</editor-fold>
+
 }
