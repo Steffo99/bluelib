@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="stylesheet/less" type="text/css" href="../dist/base.root.less">
-    <link rel="stylesheet/less" type="text/css" href="../dist/classic.root.less">
     <link rel="stylesheet/less" type="text/css" href="../dist/colors-royalblue.root.less">
     <link rel="stylesheet/less" type="text/css" href="../dist/fonts-fira-ghpages.root.less">
+    <link rel="stylesheet/less" type="text/css" href="../dist/classic.root.less">
     <link rel="stylesheet/less" type="text/css" href="../dist/glass.root.less">
-    <link rel="stylesheet/less" type="text/css" href="../dist/fun.root.less">
-    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <!--link rel="stylesheet/less" type="text/css" href="../dist/fun.root.less"-->
     <style>
         body {
             background-image: url("Space_Default.jpg");
@@ -18,6 +17,7 @@
             background-size: cover;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
     <title>Bluelib</title>
 </head>
 <body class="theme-bluelib">
@@ -89,6 +89,9 @@
                         </p>
                         <p>
                             When they are only used cosmetically, <b><code>&lt;div&gt;</code> elements</b> should be used instead.
+                        </p>
+                        <p>
+                            When used to create forms, they may also be <b><code>&lt;form&gt;</code> elements</b>.
                         </p>
                     </section>
                     <section class="panel panel-box" id="panel-when-box">
@@ -350,31 +353,49 @@
                                 <h4>
                                     Red
                                 </h4>
+                                <p>
+                                    * warns angrily!
+                                </p>
                             </div>
                             <div class="panel panel-box yellow">
                                 <h4>
                                     Yellow
                                 </h4>
+                                <p>
+                                    * warns.
+                                </p>
                             </div>
                             <div class="panel panel-box green">
                                 <h4>
                                     Green
                                 </h4>
+                                <p>
+                                    * is a success!
+                                </p>
                             </div>
                             <div class="panel panel-box cyan">
                                 <h4>
                                     Cyan
                                 </h4>
+                                <p>
+                                    * informs...
+                                </p>
                             </div>
                             <div class="panel panel-box blue">
                                 <h4>
                                     Blue
                                 </h4>
+                                <p>
+                                    * annotates
+                                </p>
                             </div>
                             <div class="panel panel-box magenta">
                                 <h4>
                                     Magenta
                                 </h4>
+                                <p>
+                                    * asks a question?
+                                </p>
                             </div>
                         </div>
                     </section>
@@ -833,198 +854,366 @@
                 </div>
                 <div class="chapter-1" id="chapter-inputs-forms">
                     <h2>
-                        Inputs and forms
+                        Inputs
                     </h2>
-                    <section class="panel panel-box">
+                    <section class="panel panel-box" id="panel-input">
                         <h3>
-                            Inputs
+                            Input
                         </h3>
                         <p>
-                            An <dfn id="dfn-input">input</dfn> is an interactive element which allows the user to interact with the web page.
+                            An <dfn id="dfn-input">Input</dfn> is an interactive element which allows the user to interact with the web page.
                         </p>
                     </section>
                 </div>
                 <div class="chapter-2">
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Field
                         </h3>
                         <p>
-                            <label>
-                                Text
-                                <input type="text" placeholder="Text">
-                            </label>
+                            A <dfn id="dfn-field">Field</dfn> is an <i>Input</i> which allows the user to enter <b>single-line</b> free-form text.
                         </p>
+                        <form class="panel">
+                            <p>
+                                <label>
+                                    First name
+                                    <input type="text" placeholder="Text">
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Last name
+                                    <input type="text" placeholder="Text">
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Nickname
+                                    <input type="text" placeholder="Text">
+                                </label>
+                            </p>
+                        </form>
+                        <hr/>
+                        <h4>
+                            Special types of <i>Field</i>s
+                        </h4>
                         <p>
-                            <label>
-                                Password
-                                <input type="password" placeholder="Password">
-                            </label>
+                            A <i>Field</i> may require a particular <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#type">type</a> of data, such as an email or a phone number.
                         </p>
-                        <p>
-                            <label>
-                                Email
-                                <input type="email" placeholder="Email">
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                Number
-                                <input type="number" placeholder="Number">
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                Search
-                                <input type="search" placeholder="Search">
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                Telephone
-                                <input type="tel" placeholder="Telephone">
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                Date & time
-                                <input type="datetime-local" placeholder="Date & time">
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                Date
-                                <input type="date" placeholder="Date">
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                Time
-                                <input type="time" placeholder="Time">
-                            </label>
-                        </p>
+                        <form class="panel">
+                            <p>
+                                <label>
+                                    Email
+                                    <input type="email" placeholder="Email">
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Password
+                                    <input type="password" placeholder="Password">
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Age
+                                    <input type="number" placeholder="Number">
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Phone
+                                    <input type="tel" placeholder="Telephone">
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Birthday
+                                    <input type="date" placeholder="Date">
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Had lunch at
+                                    <input type="time" placeholder="Time">
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Last party attended
+                                    <input type="datetime-local" placeholder="Date & time">
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Search for a friend
+                                    <input type="search" placeholder="Search">
+                                </label>
+                            </p>
+                        </form>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Area
                         </h3>
                         <p>
-                            <label>
-                                Text area
-                                <textarea></textarea>
-                            </label>
+                            An <dfn id="dfn-area">Area</dfn> is a resizable <i>Input</i> which allows the user to enter <b>multi-line</b> free-form text.
                         </p>
+                        <form class="panel">
+                            <p>
+                                <label>
+                                    Interests
+                                    <textarea></textarea>
+                                </label>
+                            </p>
+                        </form>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Select
                         </h3>
                         <p>
-                            <label>
-                                Select
-                                <select>
-                                    <option>A</option>
-                                    <option>B</option>
-                                    <option>C</option>
-                                </select>
-                            </label>
+                            A <dfn id="dfn-select">Select</dfn> is an <i>Input</i> which allow the user to select between <b>one of multiple options</b>.
                         </p>
+                        <form class="panel">
+                            <p>
+                                <label>
+                                    Favourite primary color
+                                    <select>
+                                        <optgroup label="RGB">
+                                            <option>Red</option>
+                                            <option>Green</option>
+                                            <option>Blue</option>
+                                        </optgroup>
+                                        <optgroup label="CYM">
+                                            <option>Cyan</option>
+                                            <option>Yellow</option>
+                                            <option>Magenta</option>
+                                        </optgroup>
+                                    </select>
+                                </label>
+                            </p>
+                        </form>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Multiselect
                         </h3>
                         <p>
-                            <label>
-                                Multiselect
-                                <select multiple>
-                                    <option>A</option>
-                                    <option>B</option>
-                                    <option>C</option>
-                                </select>
-                            </label>
+                            A <dfn id="dfn-multiselect">Multiselect</dfn> is an <i>Input</i> which allows the user to <b>enable or disable multiple options</b>.
                         </p>
+                        <p>
+                            Be aware that the average user will probably not know how to interact with the <i>Multiselect</i>: to select options not adjacent to each other on a desktop browser, it requires holding the <kbd>Ctrl</kbd> key.
+                        </p>
+                        <form class="panel">
+                            <p>
+                                <label>
+                                    Defeated rivals
+                                    <select multiple>
+                                        <optgroup label="1st generation">
+                                            <option>Blue</option>
+                                        </optgroup>
+                                        <optgroup label="2nd generation">
+                                            <option>Silver</option>
+                                        </optgroup>
+                                        <optgroup label="3rd generation">
+                                            <option>Brendan</option>
+                                            <option>May</option>
+                                        </optgroup>
+                                        <optgroup label="4th generation">
+                                            <option>Barry</option>
+                                            <option>Silver</option>
+                                        </optgroup>
+                                        <optgroup label="5th generation">
+                                            <option>Cheren</option>
+                                            <option>Bianca</option>
+                                            <option>Hugh</option>
+                                        </optgroup>
+                                        <option>Other</option>
+                                    </select>
+                                </label>
+                            </p>
+                        </form>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Radio
                         </h3>
                         <p>
-                            <label>
-                                A
-                                <input type="radio">
-                            </label>
-                            <label>
-                                B
-                                <input type="radio">
-                            </label>
-                            <label>
-                                C
-                                <input type="radio">
-                            </label>
+                            <dfn id="dfn-radio">Radios</dfn> are <i>Input</i>s which, like a <i>Select</i>, allow the user to select between <b>one of multiple options</b> when grouped together.
                         </p>
+                        <form class="panel">
+                            <p>
+                                <label>
+                                    <input type="radio" name="example-size">
+                                    XL
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" name="example-size">
+                                    L
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" name="example-size">
+                                    M
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" name="example-size">
+                                    S
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" name="example-size">
+                                    XS
+                                </label>
+                            </p>
+                        </form>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Checkbox
                         </h3>
                         <p>
-                            <label>
-                                A
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                B
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                C
-                                <input type="checkbox">
-                            </label>
+                            <dfn id="dfn-checkbox">Checkboxes</dfn> are <i>Input</i>s which, like a <i>Multiselect</i>, allows the user to <b>enable or disable multiple options</b> when grouped together.
                         </p>
+                        <form class="panel">
+                            <p>
+                                <label>
+                                    <input type="checkbox">
+                                    Monday
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox">
+                                    Tuesday
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox">
+                                    Wednesday
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox">
+                                    Thursday
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox">
+                                    Friday
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox">
+                                    Saturday
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox">
+                                    Sunday
+                                </label>
+                            </p>
+                        </form>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Color
                         </h3>
                         <p>
-                            <label>
-                                Color
-                                <input type="color">
-                            </label>
+                            A <dfn id="dfn-color-input">Color (Input)</dfn> is an <i>Input</i> which allows the user to select a RGB color.
                         </p>
+                        <p>
+                            Since browsers usually delegate the rendering of this element to the operating system, it cannot be styled.
+                        </p>
+                        <form class="panel">
+                            <p>
+                                <label>
+                                    Favourite color
+                                    <input type="color">
+                                </label>
+                            </p>
+                        </form>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             File
                         </h3>
                         <p>
-                            <label>
-                                File
-                                <input type="file">
-                            </label>
+                            A <dfn id="dfn-file-input">File</dfn> is an <i>Input</i> which allows the user to <b>upload a file</b> from their computer.
                         </p>
+                        <p>
+                            Since browsers usually delegate the rendering of this element to the operating system, it cannot be styled.
+                        </p>
+                        <form class="panel">
+                            <p>
+                                <label>
+                                    Attached homework
+                                    <input type="file">
+                                </label>
+                            </p>
+                        </form>
                     </section>
                     <section class="panel panel-box todo">
                         <h3>
                             Range
                         </h3>
                         <p>
-                            <label>
-                                Range
-                                <input type="range">
-                            </label>
+                            A <dfn id="dfn-range">Range</dfn> is an <i>Input</i> which allows the user to inaccurately <b>select a value from a given range</b>.
                         </p>
+                        <form class="panel">
+                            <p>
+                                <label>
+                                    No sugar
+                                    <input type="range">
+                                    Only sugar
+                                </label>
+                            </p>
+                        </form>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Button
                         </h3>
                         <p>
-                            <label>
-                                Button
-                                <button>heya</button>
-                            </label>
+                            A <dfn id="dfn-button">Button</dfn> is an <i>Input</i> which the user can click to <b>trigger an action</b>.
+                        </p>
+                        <form class="panel">
+                            <p>
+                                <label>
+                                    Space Station Controls
+                                    <button>Launch</button>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Food Delivery
+                                </label>
+                                <button>Lunch</button>
+                            </p>
+                        </form>
+                    </section>
+                </div>
+                <div class="chapter-1">
+                    <h2>
+                        Forms
+                    </h2>
+                    <section class="panel panel-box" id="panel-form">
+                        <h3>
+                            Form
+                        </h3>
+                        <p>
+                            An <dfn id="dfn-form">form</dfn> is a non-interactive element which <b>positions <i>Inputs</i></b> in commonly used ways.
                         </p>
                     </section>
                 </div>

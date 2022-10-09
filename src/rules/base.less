@@ -58,6 +58,13 @@
 
         // Get the scrollbar color from the theme
         scrollbar-color: .hsl-group(current)[@c] .hsl-group(background)[@c];
+
+        // TODO: I HATE HOW BROWSERS HANDLE THIS
+        &:focus-visible {
+            outline-width: 4px;
+            outline-style: solid;
+            outline-color: .hsl-group(current; 0.3)[@c];
+        }
     }
 
     //</editor-fold>
@@ -154,6 +161,9 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
+
+        // Give the first panel in a stack a fixed background color, so it may be seen against a background
+        background-color: .hsl-group(background)[@c];
 
         // Make borders togglable
         &@{border-top}, &@{panel-box} {
@@ -373,6 +383,9 @@
                 // Behave as a regular panel and have text where it usually is
                 text-align: inherit;
 
+                // Add a background color to top-level table panel captions as if they were panels themselves
+                background-color: .hsl-group(background)[@c];
+
                 // Use the same padding as cells
                 padding: 8px;
 
@@ -508,11 +521,12 @@
     }
 
     @{modifier-todo} {
-        background-color: .hsl-group(todo-background)[@c];
         .map-hsl-group(current; todo-foreground);
 
-        &, @{all} {
+        // Ensure it overrides properly the background color of panels
+        &, @{panel} {
             border-style: dashed;
+            background-color: .hsl-group(todo-background)[@c];
         }
     }
 
@@ -545,29 +559,197 @@
         // Disable the browser font override
         font: inherit;
 
+        // Make the element feel clickable
+        cursor: pointer;
+
         // Uniform the various properties of the elements
-        border-width: 1px;
-        background-color: .hsl-group(background)[@c];
+        background-color: transparent;
 
         // Add some padding to avoid visual overload
-        padding: 2px 4px;
+        padding: 0.125em 0.75ex;
 
-        &:focus {
-            outline-width: 4px;
-            outline-color: .hsl-group(primary)[@c];
-            outline-style: solid;
+        // Align all inputs to the middle
+        vertical-align: middle;
+
+
+        // By default, no borders should be present
+        border-width: 0;
+
+        border-color: .hsl-group(current; 0.4)[@c];
+
+        &::placeholder {
+            opacity: 1;
+            color: .hsl-group(current; 0.4)[@c];
         }
+
+        &:hover {
+            border-color: .hsl-group(current; 0.7)[@c];
+
+            &::placeholder {
+                color: .hsl-group(current; 0.7)[@c];
+            }
+        }
+
+        &:active, &:focus {
+            border-color: .hsl-group(current)[@c];
+        }
+    }
+
+    // Prevent the wild resizing of areas
+    @{input-area} {
+        resize: vertical;
+    }
+
+    @{input-field}, @{input-select}  {
+        // Fields and selects should have a bottom border
+        border-bottom-width: 2px;
+    }
+    @{input-area}, @{input-multiselect} {
+        // Areas and multiselects should have a left border
+        border-left-width: 2px;
     }
 
     // Mark interactivity by changing the mouse cursor
     @{input-field}, @{input-area} {
         cursor: text;
     }
-    @{input-select} {
-        cursor: default;
-    }
-    @{input-multiselect} {
+    @{input-select}, @{input-multiselect} {
         cursor: vertical-text;
+    }
+    @{input-range} {
+        cursor: ew-resize;
+    }
+
+    // Configure option display
+    @{input-select}, @{input-multiselect} {
+        & optgroup {
+            // Clearly display the grouping of options
+            padding-bottom: 0.25em;
+
+            // Use the header font
+            .use-font-group(header);
+
+            & option {
+                // Indent and pad
+                padding: 0.125em 0 0.125em 2ex;
+            }
+        }
+
+        & option {
+            // Use the regular font
+            .use-font-group(text)
+        }
+    }
+
+    // Override the default browser appearence for radios and checkboxes
+    @{input-radio}, @{input-checkbox} {
+        appearance: none;
+
+        // Make the element feel clickable
+        cursor: pointer;
+
+        // Set a fixed size
+        width: 1em;
+        height: 1em;
+
+        // Remove the padding
+        padding: 2px;
+
+        // Override the default border width
+        border-width: 2px;
+
+        // Prepare the element to display something inside
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            // Force the creation of a pseudo-element inside
+            display: block;
+            content: "";
+
+            width: 100%;
+            height: 100%;
+        }
+
+        // If the element is checked, display it
+        &:checked::before {
+            background-color: .hsl-group(current)[@c];
+        }
+    }
+    @{input-radio} {
+        // Radios should be round
+        border-radius: 100%;
+
+        &::before {
+            border-radius: 100%;
+        }
+    }
+
+    @{input-range} {
+        padding: 0;
+
+        /*
+        appearance: none;
+
+        &::-moz-range-thumb {
+            width: 0;
+            border-radius: 0;
+            border-style: outset;
+
+            border-color: .hsl-group(current)[@c];
+            border-width: 4px;
+
+            background-color: .hsl-group(primary)[@c];
+        }
+
+        &::-moz-range-track {
+            height: 0.125em;
+            background-color: .hsl-group(current)[@c];
+        }
+
+        &::-moz-range-progress {
+            height: 0.5em;
+            background-color: .hsl-group(current)[@c];
+        }
+         */
+    }
+
+    @{input-button} {
+        border-width: 2px;
+
+        // Borders should reflect the interactible feeling of the element
+        border-style: outset;
+
+        &:active {
+            border-style: inset;
+        }
+    }
+
+    // Unmanaged inputs
+    @{input-file}, @{input-color} {
+        padding: 0;
+    }
+
+    // Webkit hacks
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        // Make the icons that webkit randomly add to fields AT LEAST use the correct color
+        @{input-field} {
+            &::-webkit-calendar-picker-indicator {
+                // smh why doesn't it support fill
+                filter: invert(calc(calc(var(--bhsl-current-lightness) - 50%) * 1000))
+            }
+        }
+
+        // Draw a background color on the option dropdown menu
+        @{input-select} optgroup, @{input-select} option {
+            background-color: .hsl-group(background)[@c];
+
+            &::before {
+                // Remove the tabs that Chrome adds before the options
+                content: "";
+            }
+        }
     }
 
     //</editor-fold>

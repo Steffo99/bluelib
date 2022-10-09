@@ -7,7 +7,7 @@
 
     & {
         // Sets the border radius of all panels
-        --b-panel-border-radius: 8px;
+        --b-border-radius: 8px;
     }
 
     &, @{all} {
@@ -28,10 +28,8 @@
     }
 
     @{panel}, @{table}@{panel} > @{table-caption} {
-        border-radius: var(--b-panel-border-radius);
+        border-radius: var(--b-border-radius);
 
-        // Give the first panel in a stack a fixed background color, so it may be seen against a background
-        background-color: .hsl-group(background)[@c];
         // And a shadow effect
         box-shadow: 2px 2px 4px .hsl-group(background)[@c];
 
@@ -61,12 +59,12 @@
     // Make sure to-do still works, even considering specificity
     @{modifier-todo}, @{panel}@{modifier-todo} {
         background-color: .hsl-group(todo-background)[@c];
-        border-color: .hsl-group(todo-foreground)[@c];
+        border-color: .hsl-group(current)[@c];
 
         // Make the modifier inherit properly
         @{panel} {
             background-color: .hsl-group(todo-background)[@c];
-            border-color: .hsl-group(todo-foreground)[@c];
+            border-color: .hsl-group(current)[@c];
         }
     }
 
@@ -86,5 +84,15 @@
 
     @{table}@{panel-dialog} > @{table-caption} {
         border-bottom-width: 2px;
+    }
+
+    @{input-field}, @{input-select} {
+        border-radius: var(--b-border-radius) var(--b-border-radius) 0 0;
+    }
+    @{input-area}, @{input-multiselect} {
+        border-radius: 0 var(--b-border-radius) var(--b-border-radius) 0;
+    }
+    @{input-button} {
+        border-radius: var(--b-border-radius);
     }
 }
