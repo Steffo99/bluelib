@@ -86,6 +86,18 @@
         border-bottom-width: 2px;
     }
 
+    @{input} {
+        background-color: .hsl-group(current; 0.025)[@c];
+
+        &:hover {
+            background-color: .hsl-group(current; 0.05)[@c];
+        }
+
+        &:active {
+            background-color: .hsl-group(current; 0.075)[@c];
+        }
+    }
+
     @{input-field}, @{input-select} {
         border-radius: var(--b-border-radius) var(--b-border-radius) 0 0;
     }
@@ -120,5 +132,34 @@
         &:active::marker {
             color: .hsl-group(current)[@c];
         }
+    }
+
+    // FIXME: may not work well for lighter themes
+    @{text-anchor} {
+        &:hover {
+            color: .hsl-group(link; "+ 0deg"; "+ 0%"; "+ 20%"; 1.0)[@c];
+        }
+
+        &:active {
+            color: .hsl-group(link; "+ 0deg"; "+ 0%"; "+ 40%"; 1.0)[@c];
+        }
+    }
+
+    @{text-input}, @{text-output} {
+        border-radius: calc(var(--b-border-radius) / 4);
+    }
+
+    @{text-variable} {
+        color: .hsl-group(current; 0.7)[@c];
+    }
+
+    @{text-quote} {
+        &::before, &::after {
+            color: .hsl-group(current; 0.7)[@c];
+        }
+    }
+
+    @{text-ruby-annotation} {
+        color: .hsl-group(current; 0.7)[@c];
     }
 }

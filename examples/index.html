@@ -16,6 +16,36 @@
             background-attachment: fixed;
             background-size: cover;
         }
+
+        .chapter-1 > .panel,
+        .chapter-2 > .panel,
+        .chapter-3 > .panel,
+        .chapter-4 > .panel,
+        .chapter-5 > .panel,
+        .chapter-6 > .panel,
+        .chapter-7 > .panel,
+        .chapter-8 > .panel,
+        .chapter-9 > .panel {
+            min-width: 200px;
+        }
+
+        .panel .chapter-1 > .panel,
+        .panel .chapter-2 > .panel,
+        .panel .chapter-3 > .panel,
+        .panel .chapter-4 > .panel,
+        .panel .chapter-5 > .panel,
+        .panel .chapter-6 > .panel,
+        .panel .chapter-7 > .panel,
+        .panel .chapter-8 > .panel,
+        .panel .chapter-9 > .panel {
+            min-width: unset;
+        }
+
+        article {
+            margin: 0 auto;
+
+            max-width: 1600px;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
     <title>Bluelib</title>
@@ -24,7 +54,7 @@
     <hgroup>
     </hgroup>
     <div class="layout layout-threecol">
-        <main class="main layout-threecol-center">
+        <main>
             <article>
                 <h1>
                     Bluelib 5.0.0
@@ -521,7 +551,7 @@
                             Collapsible details
                         </h3>
                         <p>
-                            A <dfn id="dfn-details">details</dfn> element <b>hides its contents</b>, displaying only a <dfn id="dfn-summary">summary</dfn> until either the marker or the summary itself <b>is clicked</b>.
+                            A <dfn id="dfn-details">details</dfn> element <b>hides its contents</b>, displaying only a <dfn id="dfn-summary">summary</dfn> until either the marker or the summary itself <b>is activated</b>.
                         </p>
                         <details>
                             <summary>Something</summary>
@@ -537,89 +567,283 @@
                         </details>
                     </section>
                 </div>
-                <div class="chapter-4" id="chapter-text">
+                <div class="chapter-1" id="chapter-text">
                     <h2>
                         Text
                     </h2>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
-                            Anchors
+                            <u>A</u>nchors
                         </h3>
+                        <p>
+                            An <dfn id="dfn-anchor">anchor</dfn> is an interactable element which can be clicked to <b>go to a different page</b>, or a <b>different part of the same page</b>, or to <b>perform an action with a different application</b>!
+                        </p>
+                        <div class="panel">
+                            <p>
+                                Do you want to <a href="https://example.org/">go to example.org</a>?
+                            </p>
+                            <p>
+                                Or perhaps to <a href="#chapter-glossaries">the chapter about glossaries</a>?
+                            </p>
+                            <p>
+                                Or perhaps to <a href="magnet:?xt=urn:btih:dd8255ecdc7ca55fb0bbf81323d87062db1f6d1c&dn=Big+Buck+Bunny&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&ws=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2F&xs=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2Fbig-buck-bunny.torrent">download Big Buck Bunny</a> with a torrent client?
+                            </p>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                </div>
+                <div class="chapter-4">
+                    <section class="panel panel-box">
                         <h3>
-                            Idiomatic expressions
+                            <u>I</u>diomatic expressions
                         </h3>
+                        <p>
+                            An <dfn id="dfn-idiomatic">idiomatic expression</dfn> should be used when a <b>domain-specific term</b> is used.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p>
+                                This is an <i>idiomatic expression</i>.
+                            </p>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
-                            Emphasis
+                            <u>Em</u>phasis
                         </h3>
+                        <p>
+                            An <dfn id="dfn-emphasis">emphasis</dfn> should be used when a certain word should be <b>stressed more</b> than the others in a text.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p>
+                                You're doing <em>what</em>?!
+                            </p>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
-                            Bring attention
+                            <u>B</u>ring attention
                         </h3>
+                        <p>
+                            An <dfn id="dfn-attention">attention-bringer</dfn> element denotes parts of text as <b>more important</b> than the others.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p>
+                                I used attention-bringers basically <b>everywhere in this page</b>.
+                            </p>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
-                            Strong emphasis
+                            <u>Strong</u> importance
                         </h3>
+                        <p>
+                            A <dfn id="dfn-strong">strong importance</dfn> element denotes parts of text that are <b>even more important</b> than the ones denoted by <i>attention-bringers</i>.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p>
+                                Pls <strong>notice me</strong> senpai!!1!
+                            </p>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
-                            Uncommented annotations
+                            <u>U</u>narticulated annotations
                         </h3>
+                        <p>
+                            An <dfn id="dfn-annotation">unarticulated annotation</dfn> denotes parts of text that were given an <b>annotation</b> without any comment.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p>
+                                Just look at the <u>h</u>eaders of level <u>3</u> of these panels!
+                            </p>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
-                            Struck, inserted and deleted text
+                            <u>S</u>trike
                         </h3>
+                        <p>
+                            A <dfn id="dfn-strike">strike</dfn> marks a part of text as <b>incorrect</b>.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p>
+                                I'm <s>plotting to conquer the world</s> completely innocent and not an evil villain!
+                            </p>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
-                            Side comment
+                            <u>Ins</u>erted and <u>del</u>eted text
                         </h3>
+                        <p>
+                            When comparing changes to a text, parts of it can be marked as <dfn id="dfn-inserted">inserted</dfn> or <dfn id="dfn-removed">removed</dfn>.
+                        </p>
+                        <div class="panel float-bottom">
+                            <h4 style="text-align: left;">
+                                Bluelib 5.0.0
+                            </h4>
+                            <ul>
+                                <li>Added: <ins>more bugs</ins></li>
+                                <li>Removed: <del>cool features</del></li>
+                            </ul>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
+                        <h3>
+                            <u>Small</u> comment
+                        </h3>
+                        <p>
+                            A <dfn id="dfn-small">small comment</dfn> element denotes a part of a text as less important than the others.
+                        </p>
+                        <p>
+                            It can be considered the opposite of <i>attention-bringers</i>, and similar to the <i>parenthesis</i> panel.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p>
+                                Bluelib is great! <small>I'm joking, of course.</small>
+                            </p>
+                        </div>
+                    </section>
+                    <section class="panel panel-box">
                         <h3>
                             Preformatted text
                         </h3>
+                        <p>
+                            A <dfn id="dfn-preformatted">preformatted text</dfn> element denotes text where <b>lines and positioning are significant</b>; this prevents them from being <b>rearranged</b> by the browser.
+                        </p>
+                        <p>
+                            It should be used for <b>poetry</b>, <b>code</b>, <b>ASCII art</b>, <b>kaomoji</b>, etc.
+                        </p>
+                        <div class="panel float-bottom">
+                            <pre>   mm    mmmm    mmm  mmmmm  mmmmm
+   ##   #"   " m"   "   #      #
+  #  #  "#mmm  #        #      #
+  #mm#      "# #        #      #
+ #    # "mmm#"  "mmm" mm#mm  mm#mm</pre>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Code snippets
                         </h3>
+                        <p>
+                            A <dfn id="dfn-code">code</dfn> element denotes that its contents are some kind of <b>code</b> (probably belonging to a programming language).
+                        </p>
+                        <p>
+                            If displayed as a block instead of inline, it should be used with a <i>preformatted text</i> element.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p>
+                                How to create a <code>section.panel</code> with Bluelib:
+                            </p>
+                            <pre><code>&lt;div class=&quot;panel&quot;&gt;
+    &lt;p&gt;
+        Contents
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Sample input and output
                         </h3>
+                        <p>
+                            <dfn id="dfn-sample-input">Input samples</dfn> and <dfn id="dfn-sample-output">output samples</dfn> from a computer have elements which denote them, and are formatted appropriately.
+                        </p>
+                        <p>
+                            A <i>sample</i> inside another creates emphasises the individual element, creating a combination.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p>
+                                If you press <kbd><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd></kbd>, something will happen!
+                            </p>
+                            <p>
+                                If you're on Windows, a menu will appear, and one of the options will say <samp>Task Manager</samp>.
+                            </p>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Variables
                         </h3>
+                        <p>
+                            A <dfn id="dfn-variable">variable</dfn> denotes a placeholder for something in a formula or algorithm.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p>
+                                <u>Sum</u>: <var>Whatever</var> + <var>Anything</var> = <var>Something</var>
+                            </p>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Quotes and citations
                         </h3>
+                        <p>
+                            A <dfn id="dfn-quote">quote</dfn> element indicates an <b>inline quote</b>, and may be optionally include a <dfn id="dfn-citation">citation</dfn> element indicating the <b>source of the quote</b>.
+                        </p>
+                        <div class="panel panel-dialog float-bottom">
+                            <p>
+                                <q>Objection!</q><br/>
+                                —<cite>Phoenix Wright</cite>, Ace Attorney
+                            </p>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Definitions
                         </h3>
+                        <p>
+                            A <dfn id="dfn-definition">definition</dfn> element indicates the <b>term that is being defined</b> in the contained paragraph.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p>
+                                This <dfn>definition example</dfn> is getting a bit too <i>meta</i> for my tastes.
+                            </p>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Abbreviations
                         </h3>
+                        <p>
+                            An <dfn id="dfn-abbreviation">abbreviation</dfn> element marks its contents as an <b>acronym</b> or <b>abbreviation</b> and allows the user to view the expanded abbreviation by hovering it with the mouse.
+                        </p>
+                        <p>
+                            Note that no mobile browsers currently support this feature, so you'll have to <b>manually provide an alternative</b> for mobile users to see the full abbreviation.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p>
+                                Two companies against each other: <abbr class="blue" title="Builders League United">BLU</abbr> vs. <abbr class="red" title="Reliable Excavation Demolition">RED</abbr>!
+                            </p>
+                        </div>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel panel-box">
                         <h3>
                             Ruby
                         </h3>
+                        <p>
+                            A <dfn id="dnf-ruby">ruby text</dfn> element is <b>text with small annotations above</b>, commonly used in East Asian texts.
+                        </p>
+                        <div class="panel float-bottom">
+                            <p style="font-size: xx-large;">
+                                <ruby>
+                                    Mo <rp>/</rp><rt>ˈmɒ</rt><rp>/</rp>
+                                    de <rp>/</rp><rt>dɪ</rt><rp>/</rp>
+                                    na <rp>/</rp><rt>nə</rt><rp>/</rp>
+                                </ruby>
+                            </p>
+                            <p style="font-size: xx-large;">
+                                <ruby>
+                                    漢 <rp>(</rp><rt>kan</rt><rp>)</rp>
+                                    字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+                                </ruby>
+                            </p>
+                            <p style="font-size: xx-large;">
+                                <ruby>
+                                    明日 <rp>(</rp><rt>ashita</rt><rp>)</rp>
+                                </ruby>
+                            </p>
+                        </div>
                     </section>
                 </div>
                 <div class="chapter-2" id="chapter-tables">
@@ -971,7 +1195,7 @@
                             <p>
                                 <label>
                                     Interests
-                                    <textarea></textarea>
+                                    <textarea placeholder="Text"></textarea>
                                 </label>
                             </p>
                         </form>
@@ -983,7 +1207,7 @@
                         <p>
                             A <dfn id="dfn-select">Select</dfn> is an <i>Input</i> which allow the user to select between <b>one of multiple options</b>.
                         </p>
-                        <form class="panel">
+                        <form class="panel float-bottom">
                             <p>
                                 <label>
                                     Favourite primary color
@@ -1013,7 +1237,7 @@
                         <p>
                             Be aware that the average user will probably not know how to interact with the <i>Multiselect</i>: to select options not adjacent to each other on a desktop browser, it requires holding the <kbd>Ctrl</kbd> key.
                         </p>
-                        <form class="panel">
+                        <form class="panel float-bottom">
                             <p>
                                 <label>
                                     Defeated rivals
@@ -1050,7 +1274,7 @@
                         <p>
                             <dfn id="dfn-radio">Radios</dfn> are <i>Input</i>s which, like a <i>Select</i>, allow the user to select between <b>one of multiple options</b> when grouped together.
                         </p>
-                        <form class="panel">
+                        <form class="panel float-bottom">
                             <p>
                                 <label>
                                     <input type="radio" name="example-size">
@@ -1090,7 +1314,7 @@
                         <p>
                             <dfn id="dfn-checkbox">Checkboxes</dfn> are <i>Input</i>s which, like a <i>Multiselect</i>, allows the user to <b>enable or disable multiple options</b> when grouped together.
                         </p>
-                        <form class="panel">
+                        <form class="panel float-bottom">
                             <p>
                                 <label>
                                     <input type="checkbox">
@@ -1145,7 +1369,7 @@
                         <p>
                             Since browsers usually delegate the rendering of this element to the operating system, it cannot be styled.
                         </p>
-                        <form class="panel">
+                        <form class="panel float-bottom">
                             <p>
                                 <label>
                                     Favourite color
@@ -1164,7 +1388,7 @@
                         <p>
                             Since browsers usually delegate the rendering of this element to the operating system, it cannot be styled.
                         </p>
-                        <form class="panel">
+                        <form class="panel float-bottom">
                             <p>
                                 <label>
                                     Attached homework
@@ -1180,7 +1404,7 @@
                         <p>
                             A <dfn id="dfn-range">Range</dfn> is an <i>Input</i> which allows the user to inaccurately <b>select a value from a given range</b>.
                         </p>
-                        <form class="panel">
+                        <form class="panel float-bottom">
                             <p>
                                 <label>
                                     No sugar
@@ -1197,7 +1421,7 @@
                         <p>
                             A <dfn id="dfn-button">Button</dfn> is an <i>Input</i> which the user can click to <b>trigger an action</b>.
                         </p>
-                        <form class="panel">
+                        <form class="panel float-bottom">
                             <p>
                                 <label>
                                     Space Station Controls

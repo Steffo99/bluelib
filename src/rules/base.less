@@ -478,6 +478,7 @@
 
     @{glossary-term} {
         margin-top: 0.5em;
+        padding: 0.2em 0;
 
         .map-hsl-group(current; primary);
 
@@ -497,6 +498,7 @@
         cursor: pointer;
 
         margin-left: -4ex;
+        padding: 0.2em 0;
 
         .use-font-group(summary);
 
@@ -768,5 +770,80 @@
     }
 
     //</editor-fold>
+
+    /// ===== Text =====
+
+    //<editor-fold desc="Rules: Text">
+
+    @{text-anchor} {
+        .map-hsl-group(current; link);
+    }
+
+    @{text-idiomatic} {
+        .use-font-group(idiomatic);
+    }
+    @{text-emphasis} {
+        .use-font-group(emphasis);
+    }
+
+    @{text-attention} {
+        .use-font-group(attention);
+    }
+    @{text-strong} {
+        .use-font-group(strong);
+    }
+
+    @{text-inserted} {
+        .map-hsl-group(current; inserted);
+    }
+    @{text-deleted} {
+        .map-hsl-group(current; deleted);
+    }
+
+    @{text-code}, @{text-preformatted}, @{text-input}, @{text-output} {
+        .use-font-group(code);
+    }
+    @{text-preformatted} {
+        overflow-x: scroll;
+    }
+    @{text-input}, @{text-output} {
+        padding: 0 0.25ex;
+    }
+    @{text-input} {
+        background-color: .hsl-group(sample-output)[@c];
+        .map-hsl-group(current; sample-input);
+
+        @{text-input} {
+            .use-font-group(boldcode);
+        }
+    }
+    @{text-output} {
+        background-color: .hsl-group(sample-input)[@c];
+        .map-hsl-group(current; sample-output);
+
+        @{text-output} {
+            .use-font-group(boldcode);
+        }
+    }
+
+    @{text-variable} {
+        .use-font-group(variable);
+    }
+
+    @{text-citation} {
+        .use-font-group(citation);
+    }
+
+    @{text-definition} {
+        .use-font-group(term);
+        .map-hsl-group(current; primary);
+    }
+
+    @{text-abbreviation} {
+        cursor: help;
+    }
+
+    //</editor-fold>
+
 
 }
