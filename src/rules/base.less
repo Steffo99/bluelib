@@ -479,14 +479,29 @@
     @{glossary-term} {
         margin-top: 0.5em;
 
+        .map-hsl-group(current; primary);
+
         .use-font-group(term);
     }
 
     @{glossary-description} {
         margin-left: 4.5ex;
         margin-bottom: 0.5em;
+    }
 
-        .use-font-group(description)
+    @{glossary-details} {
+        margin-left: 4.5ex;
+    }
+
+    @{glossary-summary} {
+        cursor: pointer;
+
+        margin-left: -4ex;
+
+        .use-font-group(summary);
+
+        // Prevent the user from accidentaly selecting the summary
+        user-select: none;
     }
 
     //</editor-fold>

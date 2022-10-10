@@ -95,4 +95,30 @@
     @{input-button} {
         border-radius: var(--b-border-radius);
     }
+
+    @{list-unordered}, @{list-ordered} {
+        > *::marker {
+            color: .hsl-group(current; 0.5)[@c];
+        }
+    }
+
+    @{glossary-summary} {
+        color: .hsl-group(current; 0.7)[@c];
+
+        &::marker {
+            color: .hsl-group(current; 0.5)[@c];
+        }
+
+        &:hover {
+            color: .hsl-group(current)[@c];
+        }
+
+        &:hover::marker {
+            color: .hsl-group(current; 0.7)[@c];
+        }
+
+        &:active::marker {
+            color: .hsl-group(current)[@c];
+        }
+    }
 }
