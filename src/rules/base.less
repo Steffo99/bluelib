@@ -771,6 +771,48 @@
 
     //</editor-fold>
 
+    /// ===== Forms =====
+
+    //<editor-fold desc="Rules: Inputs">
+
+    @{form-flex} {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: stretch;
+
+        > @{element-paragraph} {
+            margin: 0.5em 0;
+        }
+
+        > @{element-label} {
+            display: flex;
+            gap: 1ex;
+
+            > @{element-span}:first-child, > @{element-span}:last-child {
+                margin: auto 0;
+                flex-basis: 15%;
+
+                .use-font-group(label);
+                .map-hsl-group(current; primary);
+            }
+
+            > @{element-span}:first-child {
+                text-align: right;
+            }
+
+            > @{element-span}:last-child {
+                text-align: left;
+            }
+
+            > @{input} {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    //</editor-fold>
+
     /// ===== Text =====
 
     //<editor-fold desc="Rules: Text">

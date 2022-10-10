@@ -9,44 +9,8 @@
     <link rel="stylesheet/less" type="text/css" href="../dist/fonts-fira-ghpages.root.less">
     <link rel="stylesheet/less" type="text/css" href="../dist/classic.root.less">
     <link rel="stylesheet/less" type="text/css" href="../dist/glass.root.less">
-    <!--link rel="stylesheet/less" type="text/css" href="../dist/fun.root.less"-->
-    <style>
-        body {
-            background-image: url("Space_Default.jpg");
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-        .chapter-1 > .panel,
-        .chapter-2 > .panel,
-        .chapter-3 > .panel,
-        .chapter-4 > .panel,
-        .chapter-5 > .panel,
-        .chapter-6 > .panel,
-        .chapter-7 > .panel,
-        .chapter-8 > .panel,
-        .chapter-9 > .panel {
-            min-width: 200px;
-        }
-
-        .panel .chapter-1 > .panel,
-        .panel .chapter-2 > .panel,
-        .panel .chapter-3 > .panel,
-        .panel .chapter-4 > .panel,
-        .panel .chapter-5 > .panel,
-        .panel .chapter-6 > .panel,
-        .panel .chapter-7 > .panel,
-        .panel .chapter-8 > .panel,
-        .panel .chapter-9 > .panel {
-            min-width: unset;
-        }
-
-        article {
-            margin: 0 auto;
-
-            max-width: 1600px;
-        }
-    </style>
+    <link rel="stylesheet/less" type="text/css" href="../dist/fun.root.less">
+    <link rel="stylesheet" type="text/css" href="./index.css">
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
     <title>Bluelib</title>
 </head>
@@ -1448,6 +1412,63 @@
                         <p>
                             An <dfn id="dfn-form">form</dfn> is a non-interactive element which <b>positions <i>Inputs</i></b> in commonly used ways.
                         </p>
+                    </section>
+                    <section class="panel panel-box">
+                        <h3>
+                            Flex form
+                        </h3>
+                        <p>
+                            A <dfn>flex form</dfn> is a <b>block form</b> aligning labels and inputs to a pseudo-grid.
+                        </p>
+                        <form class="panel form-flex">
+                            <h4>
+                                Life University Enrolment Form
+                            </h4>
+                            <p>
+                                Please enter your personal details here:
+                            </p>
+                            <label>
+                                <span>First name</span>
+                                <input type="text" placeholder="Mario">
+                                <span></span>
+                            </label>
+                            <label>
+                                <span>Last name</span>
+                                <input type="text" placeholder="Rossi">
+                                <span></span>
+                            </label>
+                            <label>
+                                <span>Second name</span>
+                                <input type="text" placeholder="Luigi">
+                                <span><small>Silver medal winning name</small></span>
+                            </label>
+                            <p>
+                                Now, please enter some information about yourself:
+                            </p>
+                            <label>
+                                <span>Lazyness 0%</span>
+                                <input type="range">
+                                <span>100%</span>
+                            </label>
+                            <label>
+                                <span>Birthday</span>
+                                <input type="date">
+                                <span><small>feel old yet?</small></span>
+                            </label>
+                            <label>
+                                <span></span>
+                                <input type="text" placeholder="Not at all">
+                                <span>Right alignment</span>
+                            </label>
+                            <p>
+                                Finally, you can submit the form, and see whether you'll be accepted or not:
+                            </p>
+                            <label>
+                                <span></span>
+                                <input type="button" value="Submit">
+                                <span></span>
+                            </label>
+                        </form>
                     </section>
                 </div>
             </article>
