@@ -9,57 +9,62 @@
         --b-panel-blur: 16px;
     }
 
-    @{panel}, @{table}@{panel} > @{table-caption} {
-        background-color: .hsl-group(background; 0.3)[@c];
-        backdrop-filter:
-            blur(var(--b-panel-blur))
-            hue-rotate(calc(var(--bhsl-current-hue) - var(--bhsl-foreground-hue)))
-        ;
+    // Ensure that browsers not supporting backdrop-filter do not apply this style
+    @supports (backdrop-filter: blur(var(--b-panel-blur))) {
 
-        @{panel} {
-            background-color: .hsl-group(current; 0.075)[@c];
-            backdrop-filter: none;
+        @{panel}, @{table}@{panel} > @{table-caption} {
+            background-color: .hsl-group(background; 0.3)[@c];
+            backdrop-filter:
+                blur(var(--b-panel-blur))
+                hue-rotate(calc(var(--bhsl-current-hue) - var(--bhsl-foreground-hue)))
+            ;
+
+            @{panel} {
+                background-color: .hsl-group(current; 0.075)[@c];
+                backdrop-filter: none;
+            }
         }
-    }
 
-    // Make sure mark still works, even considering specificity
-    @{modifier-mark}, @{element-mark}, @{panel}@{modifier-mark} {
-        background-color: .hsl-group(mark-background)[@c];
-        backdrop-filter: none;
-
-        // Make the modifier toggle properly
+        // Make sure mark still works, even considering specificity
         @{modifier-mark}, @{element-mark}, @{panel}@{modifier-mark} {
-            background-color: .hsl-group(background)[@c];
+            background-color: .hsl-group(mark-background)[@c];
+            backdrop-filter: none;
 
             // Make the modifier toggle properly
             @{modifier-mark}, @{element-mark}, @{panel}@{modifier-mark} {
-                background-color: .hsl-group(mark-background)[@c];
+                background-color: .hsl-group(background)[@c];
+
+                // Make the modifier toggle properly
+                @{modifier-mark}, @{element-mark}, @{panel}@{modifier-mark} {
+                    background-color: .hsl-group(mark-background)[@c];
+                }
             }
         }
-    }
 
-    // Make sure to-do still works, even considering specificity
-    @{modifier-todo}, @{panel}@{modifier-todo} {
-        background-color: .hsl-group(todo-background)[@c];
-
-        // Make the modifier inherit properly
-        @{panel} {
+        // Make sure to-do still works, even considering specificity
+        @{modifier-todo}, @{panel}@{modifier-todo} {
             background-color: .hsl-group(todo-background)[@c];
-            backdrop-filter: none;
-        }
-    }
 
-    // Make to-do have a glass background too
-    @{panel}@{modifier-todo} {
-        background-color: .hsl-group(todo-background; 0.3)[@c];
-        backdrop-filter:
-            blur(var(--b-panel-blur))
-            grayscale(100%)
-        ;
-    }
-    @{panel} {
+            // Make the modifier inherit properly
+            @{panel} {
+                background-color: .hsl-group(todo-background)[@c];
+                backdrop-filter: none;
+            }
+        }
+
+        // Make to-do have a glass background too
         @{panel}@{modifier-todo} {
-            background-color: .hsl-group(todo-background)[@c];
+            background-color: .hsl-group(todo-background; 0.3)[@c];
+            backdrop-filter:
+                blur(var(--b-panel-blur))
+                grayscale(100%)
+            ;
         }
+        @{panel} {
+            @{panel}@{modifier-todo} {
+                background-color: .hsl-group(todo-background)[@c];
+            }
+        }
+
     }
 }
