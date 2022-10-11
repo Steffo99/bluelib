@@ -1,39 +1,53 @@
 #!/bin/bash
 # Maybe a Makefile would be better...
 
-echo "Finding targets..."
-targets=$(ls ../src/targets/*.less)
-echo "Targets:"
-echo "$targets"
+echo "Finding mixins..."
+mixins=$(ls ../src/mixins/**.less)
+echo "Mixins:"
+echo "$mixins"
 echo
 
-echo "Finding themes..."
-themes=$(ls ../src/themes/*.less)
-echo "Themes:"
-echo "$themes"
+echo "Finding rules..."
+rules=$(ls ../src/rules/*.less ../src/rules/**/*.less)
+echo "Rules:"
+echo "$rules"
 echo
 
-for target in $targets
+echo "Finding selectors..."
+selectors=$(ls ../src/selectors/*.less ../src/selectors/**/*.less)
+echo "Selectors:"
+echo "$selectors"
+echo
+
+for selector in $selectors
 do
-for theme in $themes
+for rule in $rules
 do
 
-btarget=$(basename $target .less)
-btheme=$(basename $theme .less)
+bselector=$(basename "$selector" ".less")
+brule=$(basename "$rule" ".less")
 # Dot notation is used so .module.css files can be generated
-base="$btheme.$btarget"
+base="$brule.$bselector"
 
-echo "Building $base with the following rules:"
+echo "Creating $base.less..."
 
-tee "$base.less" << EOF
-@import (less) "../src/utils/mixins.less";
-@import (less) "$target";
-@import (less) "$theme";
-EOF
+echo "// Mixins" > "$base.less"
+for mixin in $mixins
+do
+echo "@import (less) \"$mixin\";" >> "$base.less"
+done
+echo >> "$base.less"
 
+echo "// Selector" >> "$base.less"
+echo "@import (less) \"$selector\";" >> "$base.less"
+echo >> "$base.less"
+
+echo "// Rule" >> "$base.less"
+echo "@import (less) \"$rule\";" >> "$base.less"
+echo >> "$base.less"
+
+echo "Compiling $base.css..."
 lessc "$base.less" "$base.css"
-
-echo
 
 done
 done

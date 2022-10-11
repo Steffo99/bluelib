@@ -1,0 +1,891 @@
+/*
+ * Bluelib Base
+ * by <me@steffo.eu>
+ */
+
+@{bluelib} {
+
+    /// ===== Body =====
+    /// The body element has some rules.
+
+    //<editor-fold desc="Rules: Body">
+
+    & {
+        // Set the current color
+        .map-hsl-group(current, foreground);
+
+        // Set the background defined in the palette
+        background-color: .hsl-group(background)[@c];
+
+        // Make the element fill all available space
+        width: 100%;
+        height: 100%;
+
+        // And remove its margin, in case it is the "real" body
+        margin: 0;
+
+        // Set the default font family
+        .use-font-group(text)
+    }
+
+    //</editor-fold>
+
+    /// ===== All =====
+    /// By default, browsers style elements with some weird rules.
+    /// This is an attempt to correct them, and to implement some Bluelib magic.
+
+    //<editor-fold desc="Rules: All">
+
+    &, @{all} {
+        // Globally set the box-sizing to border-box, as content-box is completely insane
+        &, &::before, &::after {
+            box-sizing: border-box;
+        }
+
+        // Remove all default margins and paddings
+        margin: 0;
+        padding: 0;
+
+        // Bluelib magic!
+        // This rule sets the color of all text to be equal to the current .bluelib-color() at 100% opacity.
+        // Thanks, CSS variables!
+        color: .hsl-group(current)[@c];
+        border-color: .hsl-group(current)[@c];
+
+        // Set the default border properties for no unexpected behaviour from browser styles
+        border-width: 0;
+        border-style: solid;
+
+        // Get the scrollbar color from the theme
+        scrollbar-color: .hsl-group(current)[@c] .hsl-group(background)[@c];
+
+        // TODO: I HATE HOW BROWSERS HANDLE THIS
+        &:focus-visible {
+            outline-width: 4px;
+            outline-style: solid;
+            outline-color: .hsl-group(current; 0.3)[@c];
+        }
+    }
+
+    //</editor-fold>
+
+    /// ===== Page =====
+    /// These rules apply to the four page areas: main, aside, header and footer
+
+    //<editor-fold desc="Rules: Page">
+
+    @{page-footer} {
+        margin: 1rem 0;
+        text-align: center;
+        font-size: x-small;
+    }
+
+    //</editor-fold>
+
+    /// ===== Floats =====
+    /// Floats allow for elements to be automatically positioned in a different position than normal.
+
+    //<editor-fold desc="Rules: Floats">
+
+    @{float-top} {
+        margin-bottom: auto;
+    }
+    @{float-right} {
+        margin-left: auto;
+    }
+    @{float-bottom} {
+        margin-top: auto;
+    }
+    @{float-left} {
+        margin-right: auto;
+    }
+    @{float-hcenter} {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @{float-vcenter} {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    //</editor-fold>
+
+    /// ===== Headers =====
+    /// Headers are the titles of the page.
+
+    //<editor-fold desc="Rules: Headers">
+
+    @{header-1} {
+        // Make h1 larger than h2
+        // Why is it not so by default?!
+        font-size: 2.5em;
+    }
+
+    @{header-2} {
+        // Make h2 a bit larger as well
+        font-size: 1.75em;
+    }
+
+    @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
+        text-align: center;
+
+        .map-hsl-group(current; primary);
+
+        .use-font-group(header);
+    }
+
+    //</editor-fold>
+
+    /// ===== Panels =====
+    /// Panels are the main sectioning elements available in Bluelib.
+    /// Many instances of them should be present on the page!
+    /// They should group small amounts of tightly related content, which can be understood more or less separately from the rest of the page.
+
+    //<editor-fold desc="Rules: Panels">
+
+    // The base panel class.
+    @{panel} {
+        // And a padding to separate them from their contents
+        padding-top: 0.5em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        padding-bottom: 0.5em;
+        // Remove the border, just to be sure
+        border-width: 0;
+        border-style: solid;
+
+        // Panels should try to fill the most space possible
+        width: 100%;
+
+        // Have panels be column-flex objects to facilitate alignments
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        // Give the first panel in a stack a fixed background color, so it may be seen against a background
+        background-color: .hsl-group(background)[@c];
+
+        // Make borders togglable
+        &@{border-top}, &@{panel-box} {
+            border-top-width: 2px;
+            padding-top: calc(0.5em - 2px);
+        }
+        &@{border-right}, &@{panel-box} {
+            border-right-width: 2px;
+            padding-right: calc(0.5em - 2px);
+        }
+        &@{border-left}, &@{panel-box}, &@{panel-dialog} {
+            border-left-width: 2px;
+            padding-left: calc(0.5em - 2px);
+        }
+        &@{border-bottom}, &@{panel-box} {
+            border-bottom-width: 2px;
+            padding-bottom: calc(0.5em - 2px);
+        }
+
+        // For compatibility, make panel-parenthesis available
+        &@{panel-parenthesis} {
+            font-size: smaller;
+        }
+    }
+
+    //</editor-fold>
+
+
+    /// ===== Chapters =====
+    /// A chapter is a decorative element separating its children in a certain number of columns.
+
+    //<editor-fold desc="Rules: Chapters">
+
+    @{chapter-0}, @{chapter-1}, @{chapter-2}, @{chapter-3}, @{chapter-4}, @{chapter-5}, @{chapter-6}, @{chapter-7}, @{chapter-8}, @{chapter-9} {
+        // Be a row flexbox to separate elements in columns
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 0.5em;
+        justify-content: stretch;
+        align-items: stretch;
+
+        // Add the gap as a vertical margin, so that multiple chapters can be placed next to each other
+        margin: 0.5em;
+
+        > @{all} {
+            // Allow all children to grow
+            flex-grow: 1;
+            // But not to shrink
+            flex-shrink: 0;
+        }
+
+        > @{header-1}, > @{header-2}, > @{header-3}, > @{header-4}, > @{header-5}, > @{header-6} {
+            // Headings should fill up all horizontal space available and force a wrap
+            flex-basis: 100%;
+
+            margin-top: 1.2em;
+        }
+    }
+
+    // Chapter zero means that the number of panels is not set and they should not be wrapped
+    @{chapter-0} {
+        flex-wrap: nowrap;
+
+        > @{all} {
+            // Elements inside may be forced to shrink
+            flex-shrink: 1;
+        }
+    }
+
+    // Set the basis of elements of the various chapter sizes
+    @{chapter-1} {
+        > @{all} {
+            flex-basis: calc(100% / 2);
+        }
+    }
+    @{chapter-2} {
+        > @{all} {
+            flex-basis: calc(100% / 3);
+        }
+    }
+    @{chapter-3} {
+        > @{all} {
+            flex-basis: calc(100% / 4);
+        }
+    }
+    @{chapter-4} {
+        > @{all} {
+            flex-basis: calc(100% / 5);
+        }
+    }
+    @{chapter-5} {
+        > @{all} {
+            flex-basis: calc(100% / 6);
+        }
+    }
+    @{chapter-6} {
+        > @{all} {
+            flex-basis: calc(100% / 7);
+        }
+    }
+    @{chapter-7} {
+        > @{all} {
+            flex-basis: calc(100% / 8);
+        }
+    }
+    @{chapter-8} {
+        > @{all} {
+            flex-basis: calc(100% / 9);
+        }
+    }
+    @{chapter-9} {
+        > @{all} {
+            flex-basis: calc(100% / 10);
+        }
+    }
+
+    //</editor-fold>
+
+    /// ===== Separators =====
+    /// Separators are horizontal lines separating elements.
+
+    //<editor-fold desc="Rules: Separators">
+
+    @{separator} {
+        border-width: 1px;
+        border-style: dashed;
+    }
+
+    @{separator-light} {
+        border-style: dotted;
+    }
+
+    @{separator-heavy} {
+        border-style: solid;
+    }
+
+    //</editor-fold>
+
+    /// ===== Images =====
+    /// Images are changed to block elements and automatically resized to fit their container.
+
+    //<editor-fold desc="Rules: Images">
+
+    @{image} {
+        // Change images to block
+        display: block;
+
+        // Limit their width
+        max-width: 100%;
+        // Resize the contained image to fully fit the element
+        object-fit: contain;
+    }
+
+    @{image-limit-half} {
+        // Limit the image size to half of the vertical viewport
+        max-height: max(28.2vw, 50vh);
+    }
+
+    @{image-limit-quarter} {
+        // Limit the image size to a quarter of the vertical viewport
+        max-height: max(14.1vw, 25vh);
+    }
+
+    //</editor-fold>
+
+    /// ===== Tables =====
+    /// Tables are elements whose children are aligned in a grid.
+
+    //<editor-fold desc="Rules: Tables">
+
+    @{table} {
+        // Prevent ugly stacking borders
+        border-collapse: collapse;
+
+        @{table-head}, @{table-data} {
+            // Leave a little breathing room between table elements, even if not as much as with a table panel
+            padding: 3px 7px;
+            border-width: 1px;
+        }
+
+        @{table-caption} {
+            // Make captions have the same border as the cells
+            border-width: 1px;
+
+            // Assign captions to their own font group
+            .use-font-group(caption);
+
+            &@{table-caption-top} {
+                // Place captions on the correct side of the table
+                caption-side: top;
+                // Remove the bottom border as it cannot collapse
+                border-bottom-width: 0;
+            }
+
+            &@{table-caption-bottom} {
+                // Place captions on the correct side of the table
+                caption-side: bottom;
+                // Remove the top border as it cannot collapse
+                border-top-width: 0;
+            }
+        }
+
+        /// ----- Panels -----
+        /// Tables can be integrated with panels!
+
+        &@{panel} {
+            // Override the flex display of panels
+            display: table;
+
+            @{table-head}, @{table-data} {
+                // Have more space between cells
+                padding: 8px;
+            }
+
+            @{table-caption} {
+                // Behave as a regular panel and have text where it usually is
+                text-align: inherit;
+
+                // Add a background color to top-level table panel captions as if they were panels themselves
+                background-color: .hsl-group(background)[@c];
+
+                // Use the same padding as cells
+                padding: 8px;
+
+                // Since captions can't be made flex, go back to the old style of defining margins
+                @{all} {
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &@{panel-box} {
+            @{table-row} {
+                border-width: 1px;
+            }
+
+            @{table-head}, @{table-data} {
+                border-width: 1px;
+                padding: 7px;
+            }
+
+            @{table-caption} {
+                border-width: 2px;
+                padding: 6px;
+
+                &@{table-caption-top} {
+                    // Remove the bottom border again because specificity
+                    border-bottom-width: 0;
+                }
+
+                &@{table-caption-bottom} {
+                    // Remove the top border again because specificity
+                    border-top-width: 0;
+                }
+            }
+        }
+
+        &@{panel-dialog} {
+            @{table-header} > @{table-row} {
+                border-bottom-width: 1px;
+            }
+
+            @{table-body} > @{table-row} {
+                border-width: 0;
+            }
+
+            @{table-footer} > @{table-row} {
+                border-top-width: 1px;
+            }
+
+            @{table-head}, @{table-data} {
+                border-width: 0 0 0 1px;
+                padding: 8px 8px 8px 7px;
+            }
+
+            @{table-caption} {
+                border-width: 0 0 0 2px;
+                padding: 8px 8px 8px 6px;
+            }
+        }
+    }
+
+    //</editor-fold>
+
+    /// ===== Lists =====
+    /// Lists are marked series of children elements
+
+    //<editor-fold desc="Rules: Lists">
+
+    @{panel} {
+        > @{list-unordered}, > @{list-ordered} {
+            margin-left: 6ex;
+        }
+    }
+
+    //</editor-fold>
+
+    /// ===== Glossaries =====
+    /// Glossaries are key-value pairs of items
+
+    //<editor-fold desc="Rules: Glossaries">
+
+    @{glossary-term} {
+        margin-top: 0.5em;
+        padding: 0.2em 0;
+
+        .map-hsl-group(current; primary);
+
+        .use-font-group(term);
+    }
+
+    @{glossary-description} {
+        margin-left: 4.5ex;
+        margin-bottom: 0.5em;
+    }
+
+    @{glossary-details} {
+        margin-left: 4.5ex;
+    }
+
+    @{glossary-summary} {
+        cursor: pointer;
+
+        margin-left: -4ex;
+        padding: 0.2em 0;
+
+        .use-font-group(summary);
+
+        // Prevent the user from accidentaly selecting the summary
+        user-select: none;
+    }
+
+    //</editor-fold>
+
+    /// ===== Modifiers =====
+
+    //<editor-fold desc="Rules: Modifiers">
+
+    @{modifier-fade} {
+        opacity: 0.3;
+    }
+
+    @{modifier-mark}, @{element-mark} {
+        // Assign marks to their own font group
+        .use-font-group(mark);
+
+        // Use the set color as background for marking
+        background-color: .hsl-group(mark-background)[@c];
+        .map-hsl-group(current; mark-foreground);
+
+        // If applied twice, go back to "normality"
+        @{modifier-mark}, @{element-mark} {
+            background-color: .hsl-group(background)[@c];
+            .map-hsl-group(current; foreground);
+
+            // If applied thrice, mark again and not anymore
+            @{modifier-mark}, @{element-mark} {
+                background-color: .hsl-group(mark-background)[@c];
+                .map-hsl-group(current; mark-foreground);
+            }
+        }
+    }
+
+    @{modifier-todo} {
+        .map-hsl-group(current; todo-foreground);
+
+        // Ensure it overrides properly the background color of panels
+        &, @{panel} {
+            border-style: dashed;
+            background-color: .hsl-group(todo-background)[@c];
+        }
+    }
+
+    @{modifier-red} {
+        .map-hsl-group(current; red);
+    }
+    @{modifier-yellow} {
+        .map-hsl-group(current; yellow);
+    }
+    @{modifier-green} {
+        .map-hsl-group(current; green);
+    }
+    @{modifier-cyan} {
+        .map-hsl-group(current; cyan);
+    }
+    @{modifier-blue} {
+        .map-hsl-group(current; blue);
+    }
+    @{modifier-magenta} {
+        .map-hsl-group(current; magenta);
+    }
+
+    //</editor-fold>
+
+    /// ===== Inputs =====
+
+    //<editor-fold desc="Rules: Inputs">
+
+    @{input} {
+        // Disable the browser font override
+        font: inherit;
+
+        // Make the element feel clickable
+        cursor: pointer;
+
+        // Uniform the various properties of the elements
+        background-color: transparent;
+
+        // Add some padding to avoid visual overload
+        padding: 0.125em 0.75ex;
+
+        // Align all inputs to the middle
+        vertical-align: middle;
+
+
+        // By default, no borders should be present
+        border-width: 0;
+
+        border-color: .hsl-group(current; 0.4)[@c];
+
+        &::placeholder {
+            opacity: 1;
+            color: .hsl-group(current; 0.4)[@c];
+        }
+
+        &:hover {
+            border-color: .hsl-group(current; 0.7)[@c];
+
+            &::placeholder {
+                color: .hsl-group(current; 0.7)[@c];
+            }
+        }
+
+        &:active, &:focus {
+            border-color: .hsl-group(current)[@c];
+        }
+    }
+
+    // Prevent the wild resizing of areas
+    @{input-area} {
+        resize: vertical;
+    }
+
+    @{input-field}, @{input-select}  {
+        // Fields and selects should have a bottom border
+        border-bottom-width: 2px;
+    }
+    @{input-area}, @{input-multiselect} {
+        // Areas and multiselects should have a left border
+        border-left-width: 2px;
+    }
+
+    // Mark interactivity by changing the mouse cursor
+    @{input-field}, @{input-area} {
+        cursor: text;
+    }
+    @{input-select}, @{input-multiselect} {
+        cursor: vertical-text;
+    }
+    @{input-range} {
+        cursor: ew-resize;
+    }
+
+    // Configure option display
+    @{input-select}, @{input-multiselect} {
+        & optgroup {
+            // Clearly display the grouping of options
+            padding-bottom: 0.25em;
+
+            // Use the header font
+            .use-font-group(header);
+
+            & option {
+                // Indent and pad
+                padding: 0.125em 0 0.125em 2ex;
+            }
+        }
+
+        & option {
+            // Use the regular font
+            .use-font-group(text)
+        }
+    }
+
+    // Override the default browser appearence for radios and checkboxes
+    @{input-radio}, @{input-checkbox} {
+        appearance: none;
+
+        // Make the element feel clickable
+        cursor: pointer;
+
+        // Set a fixed size
+        width: 1em;
+        height: 1em;
+
+        // Remove the padding
+        padding: 2px;
+
+        // Override the default border width
+        border-width: 2px;
+
+        // Prepare the element to display something inside
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            // Force the creation of a pseudo-element inside
+            display: block;
+            content: "";
+
+            width: 100%;
+            height: 100%;
+        }
+
+        // If the element is checked, display it
+        &:checked::before {
+            background-color: .hsl-group(current)[@c];
+        }
+    }
+    @{input-radio} {
+        // Radios should be round
+        border-radius: 100%;
+
+        &::before {
+            border-radius: 100%;
+        }
+    }
+
+    @{input-range} {
+        padding: 0;
+
+        /*
+        appearance: none;
+
+        &::-moz-range-thumb {
+            width: 0;
+            border-radius: 0;
+            border-style: outset;
+
+            border-color: .hsl-group(current)[@c];
+            border-width: 4px;
+
+            background-color: .hsl-group(primary)[@c];
+        }
+
+        &::-moz-range-track {
+            height: 0.125em;
+            background-color: .hsl-group(current)[@c];
+        }
+
+        &::-moz-range-progress {
+            height: 0.5em;
+            background-color: .hsl-group(current)[@c];
+        }
+         */
+    }
+
+    @{input-button} {
+        border-width: 2px;
+
+        // Borders should reflect the interactible feeling of the element
+        border-style: outset;
+
+        &:active {
+            border-style: inset;
+        }
+    }
+
+    // Unmanaged inputs
+    @{input-file}, @{input-color} {
+        padding: 0;
+    }
+
+    // Webkit hacks
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        // Make the icons that webkit randomly add to fields AT LEAST use the correct color
+        @{input-field} {
+            &::-webkit-calendar-picker-indicator {
+                // smh why doesn't it support fill
+                filter: invert(calc(calc(var(--bhsl-current-lightness) - 50%) * 1000))
+            }
+        }
+
+        // Draw a background color on the option dropdown menu
+        @{input-select} optgroup, @{input-select} option {
+            background-color: .hsl-group(background)[@c];
+
+            &::before {
+                // Remove the tabs that Chrome adds before the options
+                content: "";
+            }
+        }
+    }
+
+    //</editor-fold>
+
+    /// ===== Forms =====
+
+    //<editor-fold desc="Rules: Inputs">
+
+    @{form-flex} {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: stretch;
+
+        > @{element-paragraph} {
+            margin: 0.5em 0;
+        }
+
+        > @{element-label} {
+            display: flex;
+            gap: 1ex;
+
+            > @{element-span}:first-child, > @{element-span}:last-child {
+                margin: auto 0;
+                flex-basis: 15%;
+
+                .use-font-group(label);
+                .map-hsl-group(current; primary);
+            }
+
+            > @{element-span}:first-child {
+                text-align: right;
+            }
+
+            > @{element-span}:last-child {
+                text-align: left;
+            }
+
+            > @{input} {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    //</editor-fold>
+
+    /// ===== Text =====
+
+    //<editor-fold desc="Rules: Text">
+
+    @{text-anchor} {
+        .map-hsl-group(current; link);
+    }
+
+    @{text-idiomatic} {
+        .use-font-group(idiomatic);
+    }
+    @{text-emphasis} {
+        .use-font-group(emphasis);
+    }
+
+    @{text-attention} {
+        .use-font-group(attention);
+    }
+    @{text-strong} {
+        .use-font-group(strong);
+    }
+
+    @{text-inserted} {
+        .map-hsl-group(current; inserted);
+    }
+    @{text-deleted} {
+        .map-hsl-group(current; deleted);
+    }
+
+    @{text-code}, @{text-preformatted}, @{text-input}, @{text-output} {
+        .use-font-group(code);
+    }
+    @{text-preformatted} {
+        overflow-x: scroll;
+    }
+    @{text-input}, @{text-output} {
+        padding: 0 0.25ex;
+    }
+    @{text-input} {
+        background-color: .hsl-group(sample-output)[@c];
+        .map-hsl-group(current; sample-input);
+
+        @{text-input} {
+            .use-font-group(boldcode);
+        }
+    }
+    @{text-output} {
+        background-color: .hsl-group(sample-input)[@c];
+        .map-hsl-group(current; sample-output);
+
+        @{text-output} {
+            .use-font-group(boldcode);
+        }
+    }
+
+    @{text-variable} {
+        .use-font-group(variable);
+    }
+
+    @{text-citation} {
+        .use-font-group(citation);
+    }
+
+    @{text-definition} {
+        .use-font-group(term);
+        .map-hsl-group(current; primary);
+    }
+
+    @{text-abbreviation} {
+        cursor: help;
+    }
+
+    //</editor-fold>
+
+
+}

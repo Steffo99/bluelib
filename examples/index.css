@@ -1,0 +1,35 @@
+body {
+    background-image: url("Space_Default.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.chapter-1 > .panel,
+.chapter-2 > .panel,
+.chapter-3 > .panel,
+.chapter-4 > .panel,
+.chapter-5 > .panel,
+.chapter-6 > .panel,
+.chapter-7 > .panel,
+.chapter-8 > .panel,
+.chapter-9 > .panel {
+    min-width: 200px;
+}
+
+.panel .chapter-1 > .panel,
+.panel .chapter-2 > .panel,
+.panel .chapter-3 > .panel,
+.panel .chapter-4 > .panel,
+.panel .chapter-5 > .panel,
+.panel .chapter-6 > .panel,
+.panel .chapter-7 > .panel,
+.panel .chapter-8 > .panel,
+.panel .chapter-9 > .panel {
+    min-width: unset;
+}
+
+article {
+    margin: 0 auto;
+
+    max-width: 1600px;
+}
