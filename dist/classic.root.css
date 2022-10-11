@@ -1,0 +1,180 @@
+/*
+ * Bluelib Classic
+ * by <me@steffo.eu>
+ */
+body {
+  --b-border-radius: 8px;
+}
+body,
+body * {
+  border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.15);
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  text-shadow: 2px 2px 4px hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
+}
+body .panel h1,
+body .panel h2,
+body .panel h3,
+body .panel h4,
+body .panel h5,
+body .panel h6 {
+  text-shadow: none;
+}
+body .panel,
+body table.panel > caption {
+  border-radius: var(--b-border-radius);
+  box-shadow: 2px 2px 4px hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
+}
+body .panel .panel,
+body table.panel > caption .panel {
+  background-color: hsl(var(--bhsl-foreground-hue) var(--bhsl-foreground-saturation) var(--bhsl-foreground-lightness) / 0.075);
+  backdrop-filter: none;
+  box-shadow: none;
+}
+body .mark,
+body mark,
+body .panel.mark {
+  background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
+}
+body .mark .mark,
+body mark .mark,
+body .panel.mark .mark,
+body .mark mark,
+body mark mark,
+body .panel.mark mark,
+body .mark .panel.mark,
+body mark .panel.mark,
+body .panel.mark .panel.mark {
+  background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
+}
+body .mark .mark .mark,
+body mark .mark .mark,
+body .panel.mark .mark .mark,
+body .mark mark .mark,
+body mark mark .mark,
+body .panel.mark mark .mark,
+body .mark .panel.mark .mark,
+body mark .panel.mark .mark,
+body .panel.mark .panel.mark .mark,
+body .mark .mark mark,
+body mark .mark mark,
+body .panel.mark .mark mark,
+body .mark mark mark,
+body mark mark mark,
+body .panel.mark mark mark,
+body .mark .panel.mark mark,
+body mark .panel.mark mark,
+body .panel.mark .panel.mark mark,
+body .mark .mark .panel.mark,
+body mark .mark .panel.mark,
+body .panel.mark .mark .panel.mark,
+body .mark mark .panel.mark,
+body mark mark .panel.mark,
+body .panel.mark mark .panel.mark,
+body .mark .panel.mark .panel.mark,
+body mark .panel.mark .panel.mark,
+body .panel.mark .panel.mark .panel.mark {
+  background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
+}
+body .todo,
+body .panel.todo {
+  background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
+  border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
+}
+body .todo .panel,
+body .panel.todo .panel {
+  background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
+  border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
+}
+body table.panel {
+  border-radius: 0;
+}
+body table.panel > caption {
+  border-radius: 0;
+  box-shadow: 0.0625em 0 0.25em hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
+}
+body table.panel-dialog > caption {
+  border-bottom-width: 2px;
+}
+body input,
+body textarea,
+body select,
+body button {
+  background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.025);
+}
+body input:hover,
+body textarea:hover,
+body select:hover,
+body button:hover {
+  background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.05);
+}
+body input:active,
+body textarea:active,
+body select:active,
+body button:active {
+  background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.075);
+}
+body input[type="text"],
+body input[type="password"],
+body input[type="email"],
+body input[type="number"],
+body input[type="search"],
+body input[type="tel"],
+body input[type="datetime-local"],
+body input[type="date"],
+body input[type="time"],
+body select:not([multiple]) {
+  border-radius: var(--b-border-radius) var(--b-border-radius) 0 0;
+}
+body textarea,
+body select[multiple] {
+  border-radius: 0 var(--b-border-radius) var(--b-border-radius) 0;
+}
+body input[type="button"],
+body button {
+  border-radius: var(--b-border-radius);
+}
+body ul > *::marker,
+body ol > *::marker {
+  color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.5);
+}
+body summary {
+  color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
+}
+body summary::marker {
+  color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.5);
+}
+body summary:hover {
+  color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
+}
+body summary:hover::marker {
+  color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
+}
+body summary:active::marker {
+  color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
+}
+body a:hover {
+  color: hsl(calc(var(--bhsl-link-hue) + 0deg) calc(var(--bhsl-link-saturation) + 0%) calc(var(--bhsl-link-lightness) + 20%) / 1);
+}
+body a:active {
+  color: hsl(calc(var(--bhsl-link-hue) + 0deg) calc(var(--bhsl-link-saturation) + 0%) calc(var(--bhsl-link-lightness) + 40%) / 1);
+}
+body kbd,
+body samp {
+  border-radius: calc(var(--b-border-radius) / 4);
+}
+body var {
+  color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
+}
+body q::before,
+body q::after {
+  color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
+}
+body rt {
+  color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
+}

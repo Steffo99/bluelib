@@ -1,0 +1,81 @@
+/*
+ * Bluelib Glass
+ * by <me@steffo.eu>
+ */
+body {
+  --b-panel-blur: 16px;
+}
+@supports (backdrop-filter: blur(var(--b-panel-blur))) {
+  body .panel,
+  body table.panel > caption {
+    background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness) / 0.3);
+    backdrop-filter: blur(var(--b-panel-blur)) hue-rotate(calc(var(--bhsl-current-hue) - var(--bhsl-foreground-hue)));
+  }
+  body .panel .panel,
+  body table.panel > caption .panel {
+    background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.075);
+    backdrop-filter: none;
+  }
+  body .mark,
+  body mark,
+  body .panel.mark {
+    background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
+    backdrop-filter: none;
+  }
+  body .mark .mark,
+  body mark .mark,
+  body .panel.mark .mark,
+  body .mark mark,
+  body mark mark,
+  body .panel.mark mark,
+  body .mark .panel.mark,
+  body mark .panel.mark,
+  body .panel.mark .panel.mark {
+    background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
+  }
+  body .mark .mark .mark,
+  body mark .mark .mark,
+  body .panel.mark .mark .mark,
+  body .mark mark .mark,
+  body mark mark .mark,
+  body .panel.mark mark .mark,
+  body .mark .panel.mark .mark,
+  body mark .panel.mark .mark,
+  body .panel.mark .panel.mark .mark,
+  body .mark .mark mark,
+  body mark .mark mark,
+  body .panel.mark .mark mark,
+  body .mark mark mark,
+  body mark mark mark,
+  body .panel.mark mark mark,
+  body .mark .panel.mark mark,
+  body mark .panel.mark mark,
+  body .panel.mark .panel.mark mark,
+  body .mark .mark .panel.mark,
+  body mark .mark .panel.mark,
+  body .panel.mark .mark .panel.mark,
+  body .mark mark .panel.mark,
+  body mark mark .panel.mark,
+  body .panel.mark mark .panel.mark,
+  body .mark .panel.mark .panel.mark,
+  body mark .panel.mark .panel.mark,
+  body .panel.mark .panel.mark .panel.mark {
+    background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
+  }
+  body .todo,
+  body .panel.todo {
+    background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
+  }
+  body .todo .panel,
+  body .panel.todo .panel {
+    background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
+    backdrop-filter: none;
+  }
+  body .panel.todo {
+    background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness) / 0.3);
+    backdrop-filter: blur(var(--b-panel-blur)) grayscale(100%);
+  }
+  body .panel .panel.todo {
+    background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
+  }
+}

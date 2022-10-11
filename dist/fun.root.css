@@ -1,0 +1,20 @@
+/*
+ * Bluelib Fun Experiments
+ * by <me@steffo.eu>
+ */
+@property --bhsl-current-hue {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: true;
+}
+@keyframes rainbow {
+  0% {
+    --bhsl-current-hue: 0deg;
+  }
+  100% {
+    --bhsl-current-hue: 360deg;
+  }
+}
+.rainbow {
+  animation: 2s linear infinite rainbow;
+}
