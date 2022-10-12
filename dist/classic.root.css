@@ -32,7 +32,7 @@ body table.panel > caption {
 }
 body .panel .panel,
 body table.panel > caption .panel {
-  background-color: hsl(var(--bhsl-foreground-hue) var(--bhsl-foreground-saturation) var(--bhsl-foreground-lightness) / 0.075);
+  background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.075);
   backdrop-filter: none;
   box-shadow: none;
 }

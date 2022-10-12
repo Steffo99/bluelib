@@ -140,7 +140,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   gap: 0.5em;
-  justify-content: stretch;
+  justify-content: center;
   align-items: stretch;
   margin: 0.5em;
 }
