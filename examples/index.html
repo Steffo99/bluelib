@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="stylesheet/less" type="text/css" href="../dist/base.root.less" id="css-base">
-    <link rel="stylesheet/less" type="text/css" href="../dist/colors-royalblue.root.less" id="css-colors-royalblue">
-    <link rel="stylesheet/less" type="text/css" href="../dist/fonts-fira-ghpages.root.less" id="css-fonts-fira-ghpages">
-    <link rel="stylesheet/less" type="text/css" href="../dist/classic.root.less" id="css-classic">
-    <link rel="stylesheet/less" type="text/css" href="../dist/glass.root.less" id="css-glass">
-    <link rel="stylesheet/less" type="text/css" href="../dist/fun.root.less" id="css-fun">
+    <link rel="stylesheet/less" type="text/css" href="../dist/base.root.less" id="css:base">
+    <link rel="stylesheet/less" type="text/css" href="../dist/colors-royalblue.root.less" id="css:colors">
+    <link rel="stylesheet/less" type="text/css" href="../dist/fonts-fira-ghpages.root.less" id="css:fonts">
+    <link rel="stylesheet/less" type="text/css" href="../dist/classic.root.less" id="css:classic">
+    <link rel="stylesheet/less" type="text/css" href="../dist/glass.root.less" id="css:glass">
+    <link rel="stylesheet/less" type="text/css" href="../dist/fun.root.less" id="css:fun">
     <link rel="stylesheet" type="text/css" href="./index.css" id="css-thispage">
+    <script>
+        less = {
+          env: "development",
+        };
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="./index.js"></script>
     <title>Bluelib 5</title>
 </head>
 <body class="theme-bluelib">
@@ -23,6 +29,84 @@
                 <h1>
                     Bluelib 5
                 </h1>
+                <div class="chapter-2" id="chapter-welcome">
+                    <h2>
+                        Welcome to Bluelib!
+                    </h2>
+                    <section class="panel box">
+                        <h3>
+                            What is Bluelib?
+                        </h3>
+                        <p>
+                            <dfn id="dfn-bluelib">Bluelib</dfn> is a modular <i>CSS</i> library for web pages which aims to provide <b>great customization</b> and <b>flexibility</b> while trying to keep <b>HTML as "basic" as possible</b>.
+                        </p>
+                        <p>
+                            This page itself acts both as a <b>documentation</b> of the library and as a <b>live preview</b> of its capabilities. 
+                        </p>
+                        <p>
+                            If you're on a browser which supports that, you can right click any element of this page and then click <kbd>Inspect Element</kbd> to see how something is done.
+                        </p>
+                        <div class="panel parenthesis">
+                            <p>
+                                This page is also used for development, therefore it uses un-minified sources and imports many development scripts.
+                            </p>
+                            <p>
+                                Do not judge the library efficiency from this page, or perform any benchmarks on it, as they will probably be wrong!
+                            </p>
+                        </div>
+                    </section>
+                    <section class="panel box">
+                        <h3>
+                            Rulesets
+                        </h3>
+                        <p>
+                            Bluelib splits its features into rulesets, which can be enabled and disabled in this preview via the following <i>form</i>.
+                        </p>
+                        <form class="panel form-flex float-bottom">
+                            <label class="fade">
+                                <span>Base</span>
+                                <div>
+                                    <input type="checkbox" checked name="bluelib-base" onChange="onRulesetChange(this)" disabled>
+                                    <small>Basic layout and styling</small>
+                                </div>
+                                <span></span>
+                            </label>
+                            <label>
+                                <span>Classic</span>
+                                <div>
+                                    <input type="checkbox" checked name="bluelib-classic" onChange="onRulesetChange(this)">
+                                    <small>Round semi-transparent panels</small>
+                                </div>
+                                <span></span>
+                            </label>
+                            <label>
+                                <span>Glass</span>
+                                <div>
+                                    <input type="checkbox" checked name="bluelib-glass" onChange="onRulesetChange(this)">
+                                    <small>Tinted blurred glass panels</small>
+                                </div>
+                                <span></span>
+                            </label>
+                            <label class="fade">
+                                <span>Colors</span>
+                                <select name="bluelib-colors" onChange="onRulesetChange(this)" disabled>
+                                    <option value="">[None]</option>
+                                    <option value="royalblue">Royal Blue</option>
+                                    <option value="amber">Gestione Amber</option>
+                                </select>
+                                <span><small>Color palette</small></span>
+                            </label>
+                            <label class="fade">
+                                <span>Fonts</span>
+                                <select name="bluelib-colors" onChange="onRulesetChange(this)" disabled>
+                                    <option value="">[None]</option>
+                                    <option value="fira-ghpages">Fira (via GitHub Pages)</option>
+                                </select>
+                                <span><small>Font set</small></span>
+                            </label>
+                        </form>
+                    </section>
+                </div>
                 <div class="chapter-4">
                     <h2>
                         Panels
