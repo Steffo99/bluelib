@@ -98,7 +98,7 @@ body table.panel > caption {
   border-radius: 0;
   box-shadow: 0.0625em 0 0.25em hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
-body table.panel-dialog > caption {
+body table.dialog > caption {
   border-bottom-width: 2px;
 }
 body input,

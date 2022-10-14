@@ -7,14 +7,14 @@ echo "Mixins:"
 echo "$mixins"
 echo
 
-echo "Finding rules..."
-rules=$(ls ../src/rules/*.less ../src/rules/**/*.less)
+echo "Finding rulesets..."
+rules=$(ls ../src/rulesets/*.less ../src/rulesets/**/*.less)
 echo "Rules:"
 echo "$rules"
 echo
 
 echo "Finding selectors..."
-selectors=$(ls ../src/selectors/*.less ../src/selectors/**/*.less)
+selectors=$(ls ../src/selectorsets/*.less ../src/selectorsets/**/*.less)
 echo "Selectors:"
 echo "$selectors"
 echo

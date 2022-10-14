@@ -103,27 +103,27 @@ body .panel {
   background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
 body .panel.border-top,
-body .panel.panel-box {
+body .panel.box {
   border-top-width: 2px;
   padding-top: calc(0.5em - 2px);
 }
 body .panel.border-right,
-body .panel.panel-box {
+body .panel.box {
   border-right-width: 2px;
   padding-right: calc(0.5em - 2px);
 }
 body .panel.border-left,
-body .panel.panel-box,
-body .panel.panel-dialog {
+body .panel.box,
+body .panel.dialog {
   border-left-width: 2px;
   padding-left: calc(0.5em - 2px);
 }
 body .panel.border-bottom,
-body .panel.panel-box {
+body .panel.box {
   border-bottom-width: 2px;
   padding-bottom: calc(0.5em - 2px);
 }
-body .panel.panel-parenthesis {
+body .panel.parenthesis {
   font-size: smaller;
 }
 body .chapter-0,
@@ -321,39 +321,39 @@ body table.panel caption *:first-child {
 body table.panel caption *:last-child {
   margin-bottom: 0;
 }
-body table.panel-box tr {
+body table.box tr {
   border-width: 1px;
 }
-body table.panel-box th,
-body table.panel-box td {
+body table.box th,
+body table.box td {
   border-width: 1px;
   padding: 7px;
 }
-body table.panel-box caption {
+body table.box caption {
   border-width: 2px;
   padding: 6px;
 }
-body table.panel-box caption.table-caption-top {
+body table.box caption.table-caption-top {
   border-bottom-width: 0;
 }
-body table.panel-box caption.table-caption-bottom {
+body table.box caption.table-caption-bottom {
   border-top-width: 0;
 }
-body table.panel-dialog thead > tr {
+body table.dialog thead > tr {
   border-bottom-width: 1px;
 }
-body table.panel-dialog tbody > tr {
+body table.dialog tbody > tr {
   border-width: 0;
 }
-body table.panel-dialog tfoot > tr {
+body table.dialog tfoot > tr {
   border-top-width: 1px;
 }
-body table.panel-dialog th,
-body table.panel-dialog td {
+body table.dialog th,
+body table.dialog td {
   border-width: 0 0 0 1px;
   padding: 8px 8px 8px 7px;
 }
-body table.panel-dialog caption {
+body table.dialog caption {
   border-width: 0 0 0 2px;
   padding: 8px 8px 8px 6px;
 }
@@ -675,10 +675,11 @@ body .form-flex > label {
   display: flex;
   gap: 1ex;
 }
-body .form-flex > label > span:first-child,
-body .form-flex > label > span:last-child {
+body .form-flex > label > *:first-child,
+body .form-flex > label > *:last-child {
   margin: auto 0;
   flex-basis: 15%;
+  flex-grow: 0;
   font-style: var(--bfont-label-style);
   font-variant: var(--bfont-label-variant);
   font-weight: var(--bfont-label-weight);
@@ -689,17 +690,20 @@ body .form-flex > label > span:last-child {
   --bhsl-current-saturation: var(--bhsl-primary-saturation);
   --bhsl-current-lightness: var(--bhsl-primary-lightness);
 }
-body .form-flex > label > span:first-child {
-  text-align: right;
-}
-body .form-flex > label > span:last-child {
-  text-align: left;
-}
-body .form-flex > label > input,
-body .form-flex > label textarea,
-body .form-flex > label select,
-body .form-flex > label button {
+body .form-flex > label > * {
   flex-grow: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 4px;
+}
+body .form-flex > label > *:first-child {
+  text-align: right;
+  display: block;
+}
+body .form-flex > label > *:last-child {
+  text-align: left;
+  display: block;
 }
 body a {
   --bhsl-current-hue: var(--bhsl-link-hue);

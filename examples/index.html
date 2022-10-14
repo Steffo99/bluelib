@@ -29,11 +29,11 @@
                 <h1>
                     Bluelib
                 </h1>
-                <div class="chapter-2" id="chapter-welcome">
+                <div class="chapter-1" id="chapter-welcome">
                     <h2>
                         Welcome to Bluelib!
                     </h2>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-what-is-bluelib">
                         <h3>
                             What is Bluelib?
                         </h3>
@@ -48,66 +48,223 @@
                         </p>
                         <div class="panel parenthesis float-bottom">
                             <p>
-                                This page is also used for development, therefore it uses un-minified sources and imports many development scripts.
+                                This page is also used for development, therefore it uses un-minified sources and imports some development scripts.
                             </p>
                             <p>
-                                Do not judge the library efficiency from this page, or perform any benchmarks on it, as they will probably be wrong!
+                                Do not try to determine the performance of Bluelib from this page, as the development features are somewhat heavy on the browser!
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                </div>
+                <div class="chapter-2">
+                    <section class="panel box" id="panel-index">
                         <h3>
-                            Rulesets
+                            Table of contents
                         </h3>
-                        <p>
-                            Bluelib splits its features into rulesets, which can be enabled and disabled in this preview via the following <i>form</i>.
-                        </p>
-                        <form class="panel form-flex float-bottom">
-                            <label class="fade">
-                                <span>Base</span>
-                                <div>
-                                    <input type="checkbox" checked name="bluelib-base" onChange="onRulesetChange(this)" disabled>
-                                    <small>Basic layout and styling</small>
-                                </div>
-                                <span></span>
-                            </label>
-                            <label>
-                                <span>Classic</span>
-                                <div>
-                                    <input type="checkbox" checked name="bluelib-classic" onChange="onRulesetChange(this)">
-                                    <small>Round semi-transparent panels</small>
-                                </div>
-                                <span></span>
-                            </label>
-                            <label>
-                                <span>Glass</span>
-                                <div>
-                                    <input type="checkbox" checked name="bluelib-glass" onChange="onRulesetChange(this)">
-                                    <small>Tinted blurred glass panels</small>
-                                </div>
-                                <span></span>
-                            </label>
-                            <label class="fade">
-                                <span>Colors</span>
-                                <select name="bluelib-colors" onChange="onRulesetChange(this)" disabled>
-                                    <option value="">[None]</option>
-                                    <option value="royalblue">Royal Blue</option>
-                                    <option value="amber">Gestione Amber</option>
-                                </select>
-                                <span><small>Color palette</small></span>
-                            </label>
-                            <label class="fade">
-                                <span>Fonts</span>
-                                <select name="bluelib-colors" onChange="onRulesetChange(this)" disabled>
-                                    <option value="">[None]</option>
-                                    <option value="fira-ghpages">Fira (via GitHub Pages)</option>
-                                </select>
-                                <span><small>Font set</small></span>
-                            </label>
-                        </form>
+                        <ol>
+                            <li><a href="#chapter-welcome">Welcome to Bluelib!</a></li>
+                            <li><a href="#chapter-targets">Rulesets, selectorsets, targets</a></li>
+                            <li><a href="#chapter-install">Installation and usage</a></li>
+                            <li><a href="#chapter-panels">Panels</a></li>
+                            <li><a href="#chapter-chapters">Chapters</a></li>
+                            <li><a href="#chapter-modifiers">Modifiers</a></li>
+                            <li><a href="#chapter-separators">Separators</a></li>
+                            <li><a href="#chapter-lists">Lists</a></li>
+                            <li><a href="#chapter-glossaries">Glossaries</a></li>
+                            <li><a href="#chapter-text">Text elements</a></li>
+                            <li><a href="#chapter-tables">Tables</a></li>
+                            <li><a href="#chapter-images">Images</a></li>
+                            <li><a href="#chapter-inputs">Inputs</a></li>
+                            <li><a href="#chapter-forms">Forms</a></li>
+                        </ol>
+                    </section>
+                    <section class="panel box" id="panel-glossary">
+                        <h3>
+                            Glossary
+                        </h3>
+                        <ul style="column-width: 12ex;">
+                            <li><a href="#dfn-abbreviation">Abbreviation</a></li>
+                            <li><a href="#dfn-anchor">Anchor</a></li>
+                            <li><a href="#dfn-annotation">Annotation, unarticulated</a></li>
+                            <li><a href="#dfn-area">Area</a></li>
+                            <li><a href="#dfn-attention">Bring attention</a></li>
+                            <li><a href="#dfn-bluelib">Bluelib</a></li>
+                            <li><a href="#dfn-box">Box</a></li>
+                            <li><a href="#dfn-button">Button</a></li>
+                            <li><a href="#dfn-chapter">Chapter</a></li>
+                            <li><a href="#dfn-checkbox">Checkbox</a></li>
+                            <li><a href="#dfn-citation">Citation</a></li>
+                            <li><a href="#dfn-code">Code</a></li>
+                            <li><a href="#dfn-color">Color</a></li>
+                            <li><a href="#dfn-color-input">Color input</a></li>
+                            <li><a href="#dfn-definition">Definition</a></li>
+                            <li><a href="#dfn-deleted">Deleted text</a></li>
+                            <li><a href="#dfn-details">Details</a></li>
+                            <li><a href="#dfn-dialog">Dialog</a></li>
+                            <li><a href="#dfn-fade">Fade</a></li>
+                            <li><a href="#dfn-field">Field</a></li>
+                            <li><a href="#dfn-file-input">File input</a></li>
+                            <li><a href="#dfn-float">Float</a></li>
+                            <li><a href="#dfn-form">Form</a></li>
+                            <li><a href="#dfn-form-flex">Flex form</a></li>
+                            <li><a href="#dfn-idiomatic">Idiomatic expressions</a></li>
+                            <li><a href="#dfn-input">Input</a></li>
+                            <li><a href="#dfn-inserted">Inserted text</a></li>
+                            <li><a href="#dfn-limited">Limited images</a></li>
+                            <li><a href="#dfn-list-definition">List, definition</a></li>
+                            <li><a href="#dfn-list-ordered">List, ordered</a></li>
+                            <li><a href="#dfn-list-unordered">List, unordered</a></li>
+                            <li><a href="#dfn-mark">Mark</a></li>
+                            <li><a href="#dfn-multiselect">Multiselect</a></li>
+                            <li><a href="#dfn-panel">Panel</a></li>
+                            <li><a href="#dfn-parenthesis">Parenthesis</a></li>
+                            <li><a href="#dfn-preformatted">Preformatted text</a></li>
+                            <li><a href="#dfn-quote">Quote</a></li>
+                            <li><a href="#dfn-radio">Radio</a></li>
+                            <li><a href="#dfn-range">Range</a></li>
+                            <li><a href="#dfn-ruby">Ruby</a></li>
+                            <li><a href="#dfn-ruleset">Ruleset</a></li>
+                            <li><a href="#dfn-sample-input">Sample, input</a></li>
+                            <li><a href="#dfn-sample-output">Sample, output</a></li>
+                            <li><a href="#dfn-select">Select</a></li>
+                            <li><a href="#dfn-selectorset">Selectorset</a></li>
+                            <li><a href="#dfn-separator">Separator</a></li>
+                            <li><a href="#dfn-separator-heavy">Separator, heavy</a></li>
+                            <li><a href="#dfn-separator-light">Separator, light</a></li>
+                            <li><a href="#dfn-small">Small comment</a></li>
+                            <li><a href="#dfn-strike">Strike</a></li>
+                            <li><a href="#dfn-strong">Strong importance</a></li>
+                            <li><a href="#dfn-table">Table</a></li>
+                            <li><a href="#dfn-tablepanel">Table panel</a></li>
+                            <li><a href="#dfn-target">Target</a></li>
+                            <li><a href="#dfn-todo">Todo</a></li>
+                            <li><a href="#dfn-variable">Variable</a></li>
+                        </ul>
                     </section>
                 </div>
-                <div class="chapter-4">
+                <div class="chapter-3" id="chapter-targets">
+                    <h2>
+                        Rulesets, selectorsets, targets
+                    </h2>
+                    <section class="panel box" id="panel-targets">
+                        <h3>
+                            Targets
+                        </h3>
+                        <p>
+                            A Bluelib <dfn id="dfn-target">target</dfn> is a CSS document where CSS rulesets of a certain type are grouped together.
+                        </p>
+                        <p>
+                            It is composed by two parts: the <dfn id="dfn-ruleset">ruleset</dfn>, determining the CSS rules to use, and the <dfn id="dfn-selectorset">selectorset</dfn>, determining the elements to apply the CSS rules on.
+                        </p>
+                        <hr/>
+                        <p>
+                            <i>Targets</i> always have a predictable name, which is:
+                        </p>
+                        <div class="panel">
+                            <p>
+                                <code>dist/<var>RULESET</var>.<var>SELECTORSET</var>.css</code>
+                            </p>
+                        </div>
+                        <p>
+                            Be sure to choose the ones matching your needs!
+                        </p>
+                        <hr/>
+                        <p>
+                            By running <code>dist/_build.sh</code>, new targets are generated and compiled from <a href="https://lesscss.org/">Less</a> to CSS.
+                        </p>
+                        <p>
+                            The <a href="https://en.wikipedia.org/wiki/Cartesian_product">cartesian product</a> is applied between all <i>rulesets</i> in <code>src/rulesets</code> and all <i>selectorsets</i> in <code>src/selectorsets</code>, compiling a new target for each pair.
+                        </p>
+                    </section>
+                    <section class="panel box" id="panel-rulesets">
+                        <h3>
+                            Available rulesets
+                        </h3>
+                        <dl>
+                            <dt><label><input type="checkbox" disabled checked name="ruleset-base"> Base</label></dt>
+                            <dd>
+                                The base <i>ruleset</i>, providing the layout and basic high contrast theming.
+                            </dd>
+                            <dt><label><input type="checkbox" disabled checked name="ruleset-classic"> Classic</label></dt>
+                            <dd>
+                                Inspired by the older Bluelib versions, with semi-transparent panels and rounded borders.
+                            </dd>
+                            <dt><label><input type="checkbox" disabled checked name="ruleset-glass"> Glass</label></dt>
+                            <dd>
+                                Made to celebrate the addition of <code>backdrop-filter</code> to Firefox, makes panels have a <q>stained glass</q> background.
+                            </dd>
+                            <dt><label><input type="checkbox" disabled checked name="ruleset-fun"> Fun</label></dt>
+                            <dd>
+                                Experimental <i>ruleset</i> with bizzare or buggy but fun rules. Unsupported, do not use in production!
+                            </dd>
+                            <dt>Colors</dt>
+                            <dd>
+                               <dl>
+                                   <dt><label><input type="radio" disabled checked name="ruleset-colors"> Royal Blue</label></dt>
+                                   <dd>
+                                       <a href="https://github.com/Steffo99">Steffo</a>'s signature color theme, based upon RYG⁵'s logo colors.
+                                   </dd>
+                                   <dt><label><input type="radio" disabled name="ruleset-colors"> Gestione Amber</label></dt>
+                                   <dd>
+                                       <a href="https://github.com/Nemesis-FT">Nemesis</a>' own color theme, with a "coffee-like" look.
+                                   </dd>
+                               </dl>
+                            </dd>
+                            <dt>Fonts</dt>
+                            <dd>
+                                <dl>
+                                    <dt><label><input type="radio" disabled checked name="ruleset-fonts"> Fira</label></dt>
+                                    <dd>
+                                        Font theme based upon Mozilla's <a href="https://github.com/mozilla/Fira">Fira</a> font.
+                                    </dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section class="panel box" id="panel-selectorsets">
+                        <h3>
+                            Available selectorsets
+                        </h3>
+                        <dl>
+                            <dt><label><input type="radio" disabled checked name="selectorset"> Root</label></dt>
+                            <dd>
+                                Simple selectors for usage in plain HTML pages, with short and human-friendly class names.
+                            </dd>
+                            <dt><label><input type="radio" disabled name="selectorset"> Module</label></dt>
+                            <dd>
+                                All selectors use class names, allowing the usage of the target with <a href="https://github.com/css-modules/css-modules">CSS Modules</a>. Useful for React or similar web app projects.
+                            </dd>
+                        </dl>
+                    </section>
+                </div>
+                <div class="chapter-3" id="chapter-install">
+                    <h2>
+                        Installation and usage
+                    </h2>
+                    <section class="panel box" id="panel-unpkg">
+                        <h3>
+                            Via UNPKG
+                        </h3>
+                        <p>
+                            The easiest way to use Bluelib on your website is by using <a href="https://unpkg.com/">UNPKG</a>.
+                        </p>
+                        <p>
+                            Simply link the stylesheets in the header of your project like this:
+                        </p>
+                        <div class="panel">
+                            <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/@steffo/bluelib@<var>VERSION</var>/dist/<var>RULESET</var>.<var>SELECTORSET</var>.css&quot; type=&quot;text/css&quot;/&gt;</code>
+                        </div>
+                    </section>
+                    <section class="panel box todo" id="panel-installtbd">
+                        <h3>
+                            Coming soon
+                        </h3>
+                        <p>
+                            More installation methods coming soon!
+                        </p>
+                    </section>
+                </div>
+                <div class="chapter-4" id="chapter-panels">
                     <h2>
                         Panels
                     </h2>
@@ -302,7 +459,7 @@
                             To have a constant height, one has to be set manually.
                         </p>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-autosizing">
                         <h3>
                             Auto-sizing
                         </h3>
@@ -346,7 +503,7 @@
                         </p>
                     </section>
                 </div>
-                <div class="chapter-3" id="chapter-status">
+                <div class="chapter-3" id="chapter-modifiers">
                     <h2>
                         Modifiers
                     </h2>
@@ -373,7 +530,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="panel box" id="paenl-mark">
+                    <section class="panel box" id="panel-mark">
                         <h3>
                             Mark
                         </h3>
@@ -617,9 +774,9 @@
                 </div>
                 <div class="chapter-1" id="chapter-text">
                     <h2>
-                        Text
+                        Text elements
                     </h2>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-anchor">
                         <h3>
                             <u>A</u>nchors
                         </h3>
@@ -640,7 +797,7 @@
                     </section>
                 </div>
                 <div class="chapter-4">
-                    <section class="panel box">
+                    <section class="panel box" id="panel-idiomatic">
                         <h3>
                             <u>I</u>diomatic expressions
                         </h3>
@@ -653,7 +810,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-emphasis">
                         <h3>
                             <u>Em</u>phasis
                         </h3>
@@ -666,7 +823,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-attention">
                         <h3>
                             <u>B</u>ring attention
                         </h3>
@@ -679,7 +836,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-strong">
                         <h3>
                             <u>Strong</u> importance
                         </h3>
@@ -692,7 +849,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-annotation">
                         <h3>
                             <u>U</u>narticulated annotations
                         </h3>
@@ -705,7 +862,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-strike">
                         <h3>
                             <u>S</u>trike
                         </h3>
@@ -718,12 +875,12 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-insdel">
                         <h3>
                             <u>Ins</u>erted and <u>del</u>eted text
                         </h3>
                         <p>
-                            When comparing changes to a text, parts of it can be marked as <dfn id="dfn-inserted">inserted</dfn> or <dfn id="dfn-removed">removed</dfn>.
+                            When comparing changes to a text, parts of it can be marked as <dfn id="dfn-inserted">inserted</dfn> or <dfn id="dfn-deleted">deleted</dfn>.
                         </p>
                         <div class="panel float-bottom">
                             <h4 style="text-align: left;">
@@ -735,7 +892,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-small">
                         <h3>
                             <u>Small</u> comment
                         </h3>
@@ -751,9 +908,9 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-preformatted">
                         <h3>
-                            Preformatted text
+                            <u>Pre</u>formatted text
                         </h3>
                         <p>
                             A <dfn id="dfn-preformatted">preformatted text</dfn> element denotes text where <b>lines and positioning are significant</b>; this prevents them from being <b>rearranged</b> by the browser.
@@ -769,9 +926,9 @@
  #    # "mmm#"  "mmm" mm#mm  mm#mm</pre>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-code">
                         <h3>
-                            Code snippets
+                            Code
                         </h3>
                         <p>
                             A <dfn id="dfn-code">code</dfn> element denotes that its contents are some kind of <b>code</b> (probably belonging to a programming language).
@@ -790,7 +947,7 @@
 &lt;/div&gt;</code></pre>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-sample">
                         <h3>
                             Sample input and output
                         </h3>
@@ -809,7 +966,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-variable">
                         <h3>
                             Variables
                         </h3>
@@ -822,7 +979,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-quote">
                         <h3>
                             Quotes and citations
                         </h3>
@@ -836,7 +993,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-definition">
                         <h3>
                             Definitions
                         </h3>
@@ -849,7 +1006,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-abbreviation">
                         <h3>
                             Abbreviations
                         </h3>
@@ -865,12 +1022,12 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-ruby">
                         <h3>
                             Ruby
                         </h3>
                         <p>
-                            A <dfn id="dnf-ruby">ruby text</dfn> element is <b>text with small annotations above</b>, commonly used in East Asian texts.
+                            A <dfn id="dfn-ruby">ruby text</dfn> element is <b>text with small annotations above</b>, commonly used in East Asian texts.
                         </p>
                         <div class="panel float-bottom">
                             <p style="font-size: xx-large;">
@@ -1133,7 +1290,7 @@
                         <img class="image-limit-quarter" src="https://images.unsplash.com/photo-1593415553970-bd0145efc369" alt="Neon ice cream"/>
                     </section>
                 </div>
-                <div class="chapter-1" id="chapter-inputs-forms">
+                <div class="chapter-1" id="chapter-inputs">
                     <h2>
                         Inputs
                     </h2>
@@ -1147,7 +1304,7 @@
                     </section>
                 </div>
                 <div class="chapter-2">
-                    <section class="panel box">
+                    <section class="panel box" id="panel-field">
                         <h3>
                             Field
                         </h3>
@@ -1232,7 +1389,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-area">
                         <h3>
                             Area
                         </h3>
@@ -1248,7 +1405,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-select">
                         <h3>
                             Select
                         </h3>
@@ -1275,7 +1432,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-multiselect">
                         <h3>
                             Multiselect
                         </h3>
@@ -1315,7 +1472,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-radio">
                         <h3>
                             Radio
                         </h3>
@@ -1355,7 +1512,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-checkbox">
                         <h3>
                             Checkbox
                         </h3>
@@ -1407,12 +1564,12 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-color">
                         <h3>
                             Color
                         </h3>
                         <p>
-                            A <dfn id="dfn-color-input">Color (Input)</dfn> is an <i>Input</i> which allows the user to select a RGB color.
+                            A <dfn id="dfn-color-input">color input</dfn> is an <i>Input</i> which allows the user to select a RGB color.
                         </p>
                         <p>
                             Since browsers usually delegate the rendering of this element to the operating system, it cannot be styled.
@@ -1426,12 +1583,12 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-file">
                         <h3>
                             File
                         </h3>
                         <p>
-                            A <dfn id="dfn-file-input">File</dfn> is an <i>Input</i> which allows the user to <b>upload a file</b> from their computer.
+                            A <dfn id="dfn-file-input">file input</dfn> is an <i>Input</i> which allows the user to <b>upload a file</b> from their computer.
                         </p>
                         <p>
                             Since browsers usually delegate the rendering of this element to the operating system, it cannot be styled.
@@ -1445,7 +1602,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel box todo">
+                    <section class="panel box todo" id="panel-range">
                         <h3>
                             Range
                         </h3>
@@ -1462,7 +1619,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-button">
                         <h3>
                             Button
                         </h3>
@@ -1485,7 +1642,7 @@
                         </form>
                     </section>
                 </div>
-                <div class="chapter-1">
+                <div class="chapter-1" id="chapter-forms">
                     <h2>
                         Forms
                     </h2>
@@ -1497,12 +1654,12 @@
                             An <dfn id="dfn-form">form</dfn> is a non-interactive element which <b>positions <i>Inputs</i></b> in commonly used ways.
                         </p>
                     </section>
-                    <section class="panel box">
+                    <section class="panel box" id="panel-form-flex">
                         <h3>
                             Flex form
                         </h3>
                         <p>
-                            A <dfn>flex form</dfn> is a <b>block form</b> aligning labels and inputs to a pseudo-grid.
+                            A <dfn id="dfn-form-flex">flex form</dfn> is a <b>block form</b> aligning labels and inputs to a pseudo-grid.
                         </p>
                         <form class="panel form-flex">
                             <h4>

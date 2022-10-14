@@ -631,10 +631,11 @@
   display: flex;
   gap: 1ex;
 }
-.bluelib .form-flex > .element-label > .element-span:first-child,
-.bluelib .form-flex > .element-label > .element-span:last-child {
+.bluelib .form-flex > .element-label > *:first-child,
+.bluelib .form-flex > .element-label > *:last-child {
   margin: auto 0;
   flex-basis: 15%;
+  flex-grow: 0;
   font-style: var(--bfont-label-style);
   font-variant: var(--bfont-label-variant);
   font-weight: var(--bfont-label-weight);
@@ -645,14 +646,20 @@
   --bhsl-current-saturation: var(--bhsl-primary-saturation);
   --bhsl-current-lightness: var(--bhsl-primary-lightness);
 }
-.bluelib .form-flex > .element-label > .element-span:first-child {
-  text-align: right;
-}
-.bluelib .form-flex > .element-label > .element-span:last-child {
-  text-align: left;
-}
-.bluelib .form-flex > .element-label > .input {
+.bluelib .form-flex > .element-label > * {
   flex-grow: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 4px;
+}
+.bluelib .form-flex > .element-label > *:first-child {
+  text-align: right;
+  display: block;
+}
+.bluelib .form-flex > .element-label > *:last-child {
+  text-align: left;
+  display: block;
 }
 .bluelib .text-anchor {
   --bhsl-current-hue: var(--bhsl-link-hue);
