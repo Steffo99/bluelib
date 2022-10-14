@@ -1,34 +1,34 @@
-body {
+#body {
     background-image: url("Space_Default.jpg");
     background-attachment: fixed;
     background-size: cover;
 }
 
-.chapter-1 > .panel,
-.chapter-2 > .panel,
-.chapter-3 > .panel,
-.chapter-4 > .panel,
-.chapter-5 > .panel,
-.chapter-6 > .panel,
-.chapter-7 > .panel,
-.chapter-8 > .panel,
-.chapter-9 > .panel {
+#body .chapter-1 > .panel,
+#body .chapter-2 > .panel,
+#body .chapter-3 > .panel,
+#body .chapter-4 > .panel,
+#body .chapter-5 > .panel,
+#body .chapter-6 > .panel,
+#body .chapter-7 > .panel,
+#body .chapter-8 > .panel,
+#body .chapter-9 > .panel {
     min-width: 200px;
 }
 
-.panel .chapter-1 > .panel,
-.panel .chapter-2 > .panel,
-.panel .chapter-3 > .panel,
-.panel .chapter-4 > .panel,
-.panel .chapter-5 > .panel,
-.panel .chapter-6 > .panel,
-.panel .chapter-7 > .panel,
-.panel .chapter-8 > .panel,
-.panel .chapter-9 > .panel {
+#body .panel .chapter-1 > .panel,
+#body .panel .chapter-2 > .panel,
+#body .panel .chapter-3 > .panel,
+#body .panel .chapter-4 > .panel,
+#body .panel .chapter-5 > .panel,
+#body .panel .chapter-6 > .panel,
+#body .panel .chapter-7 > .panel,
+#body .panel .chapter-8 > .panel,
+#body .panel .chapter-9 > .panel {
     min-width: unset;
 }
 
-article {
+#body article {
     margin: 0 auto;
 
     max-width: 1600px;
