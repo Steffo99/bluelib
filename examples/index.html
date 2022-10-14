@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="stylesheet/less" type="text/css" href="../dist/base.root.less">
-    <link rel="stylesheet/less" type="text/css" href="../dist/colors-royalblue.root.less">
-    <link rel="stylesheet/less" type="text/css" href="../dist/fonts-fira-ghpages.root.less">
-    <link rel="stylesheet/less" type="text/css" href="../dist/classic.root.less">
-    <link rel="stylesheet/less" type="text/css" href="../dist/glass.root.less">
-    <link rel="stylesheet/less" type="text/css" href="../dist/fun.root.less">
-    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet/less" type="text/css" href="../dist/base.root.less" id="css-base">
+    <link rel="stylesheet/less" type="text/css" href="../dist/colors-royalblue.root.less" id="css-colors-royalblue">
+    <link rel="stylesheet/less" type="text/css" href="../dist/fonts-fira-ghpages.root.less" id="css-fonts-fira-ghpages">
+    <link rel="stylesheet/less" type="text/css" href="../dist/classic.root.less" id="css-classic">
+    <link rel="stylesheet/less" type="text/css" href="../dist/glass.root.less" id="css-glass">
+    <link rel="stylesheet/less" type="text/css" href="../dist/fun.root.less" id="css-fun">
+    <link rel="stylesheet" type="text/css" href="./index.css" id="css-thispage">
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
-    <title>Bluelib</title>
+    <title>Bluelib 5</title>
 </head>
 <body class="theme-bluelib">
     <hgroup>
@@ -27,7 +27,7 @@
                     <h2>
                         Panels
                     </h2>
-                    <section class="panel panel-box" id="panel-panel">
+                    <section class="panel box" id="panel-panel">
                         <h3>
                             Panel
                         </h3>
@@ -38,40 +38,40 @@
                             Hello world! I am a Panel!
                         </div>
                     </section>
-                    <section class="panel panel-box" id="panel-box">
+                    <section class="panel box" id="panel-box">
                         <h3>
                             Box
                         </h3>
                         <p>
                             A <dfn id="dfn-box">Box</dfn> is a <b>container</b> adding <b>borders of all four sides</b> to the base appearence of a Panel.
                         </p>
-                        <div class="panel panel-box float-bottom">
+                        <div class="panel box float-bottom">
                             This Box contains a hidden Snake. <span style="display: none;">🐍</span>
                         </div>
                     </section>
-                    <section class="panel panel-box" id="panel-dialog">
+                    <section class="panel box" id="panel-dialog">
                         <h3>
                             Dialog
                         </h3>
                         <p>
                             A <dfn id="dfn-dialog">Dialog</dfn> is a <b>container</b> adding a <b>left border</b> to the base appearence of a Panel.
                         </p>
-                        <blockquote class="panel panel-dialog float-bottom">
+                        <blockquote class="panel dialog float-bottom">
                             <q>Snake? Snake??? SNAKEEEEEEE!</q>
                         </blockquote>
                     </section>
-                    <section class="panel panel-box" id="panel-parenthesis">
+                    <section class="panel box" id="panel-parenthesis">
                         <h3>
                             Parenthesis
                         </h3>
                         <p>
                             A <dfn id="dfn-parenthesis">Parenthesis</dfn> is a <b>container</b> styled as a Panel and with smaller text.
                         </p>
-                        <div class="panel panel-parenthesis float-bottom">
+                        <div class="panel parenthesis float-bottom">
                             I think we lost the Snake...
                         </div>
                     </section>
-                    <section class="panel panel-box" id="panel-when-panel">
+                    <section class="panel box" id="panel-when-panel">
                         <h3>
                             Panel usage
                         </h3>
@@ -88,7 +88,7 @@
                             When used to create forms, they may also be <b><code>&lt;form&gt;</code> elements</b>.
                         </p>
                     </section>
-                    <section class="panel panel-box" id="panel-when-box">
+                    <section class="panel box" id="panel-when-box">
                         <h3>
                             Box usage
                         </h3>
@@ -99,7 +99,7 @@
                             To achieve the best visual style, <i>Boxes</i> should always be the outmost panels: you should <b><em>never</em> place a <i>Box</i> inside a Panel or a Dialog</b>, but you can place one inside another <i>Box</i>.
                         </p>
                     </section>
-                    <section class="panel panel-box" id="panel-when-dialog">
+                    <section class="panel box" id="panel-when-dialog">
                         <h3>
                             Dialog usage
                         </h3>
@@ -113,7 +113,7 @@
                             Like Boxes, <i>Dialogs</i> should <b><em>never</em></b> be placed <b>into containers with less borders</b> than them, such as Panels.
                         </p>
                     </section>
-                    <section class="panel panel-box" id="panel-when-parenthesis">
+                    <section class="panel box" id="panel-when-parenthesis">
                         <h3>
                             Parenthesis usage
                         </h3>
@@ -126,34 +126,34 @@
                     </section>
                 </div>
                 <div class="chapter-2">
-                    <section class="panel panel-box" id="panel-nesting">
+                    <section class="panel box" id="panel-nesting">
                         <h3>
                             Nesting
                         </h3>
                         <p>
                             As you have seen in the sections before, panels can be <b>nested</b> many times (until the text becomes undistinguishable)!
                         </p>
-                        <div class="panel panel-parenthesis">
+                        <div class="panel parenthesis">
                             <p>
                                 Like this!
                             </p>
-                            <div class="panel panel-parenthesis">
+                            <div class="panel parenthesis">
                                 <p>
                                     How deep does this Panel hole go?
                                 </p>
-                                <div class="panel panel-parenthesis">
+                                <div class="panel parenthesis">
                                     <p>
                                         BWOON.
                                     </p>
-                                    <div class="panel panel-parenthesis">
+                                    <div class="panel parenthesis">
                                         <p>
                                             BWOON.
                                         </p>
-                                        <div class="panel panel-parenthesis">
+                                        <div class="panel parenthesis">
                                             <p>
                                                 BWOON.
                                             </p>
-                                            <div class="panel panel-parenthesis">
+                                            <div class="panel parenthesis">
                                                 <em>
                                                     <a href="https://www.youtube.com/watch?v=G2jUhnCU9iA" target="_blank">
                                                         PANELCEPTION.
@@ -171,7 +171,7 @@
                     <h2>
                         Chapters
                     </h2>
-                    <section class="panel panel-box" id="panel-chapter">
+                    <section class="panel box" id="panel-chapter">
                         <h3>
                             Chapter
                         </h3>
@@ -185,7 +185,7 @@
                             The maximum number of columns in a chapter is 9; beyond that, you'll need to write your own chapter code.
                         </p>
                     </section>
-                    <section class="panel panel-box" id="panel-panelheights">
+                    <section class="panel box" id="panel-panelheights">
                         <h3>
                             Panel heights
                         </h3>
@@ -193,7 +193,7 @@
                             In a chapter, all panels on a row <b>inherit the height of the tallest panel in it</b>, so that no empty space is left.
                         </p>
                     </section>
-                    <section class="panel panel-box" id="panel-float">
+                    <section class="panel box" id="panel-float">
                         <h3>
                             Element floats
                         </h3>
@@ -204,7 +204,7 @@
                             For example, if a panel has some empty space, elements can be made to <b>float to the bottom</b>, which can be useful for example for buttons in sibling panels.
                         </p>
                     </section>
-                    <section class="panel panel-box" id="panel-autowrap">
+                    <section class="panel box" id="panel-autowrap">
                         <h3>
                             Auto-wrapping
                         </h3>
@@ -218,7 +218,7 @@
                             To have a constant height, one has to be set manually.
                         </p>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Auto-sizing
                         </h3>
@@ -266,22 +266,22 @@
                     <h2>
                         Modifiers
                     </h2>
-                    <section class="panel panel-box" id="panel-fade">
+                    <section class="panel box" id="panel-fade">
                         <h3>
                             Fade
                         </h3>
                         <p>
                             The <dfn id="dfn-fade">fade</dfn> modifier <b>reduces the opacity</b> of the elements it is applied to.
                         </p>
-                        <div class="panel panel-box fade float-bottom">
+                        <div class="panel box fade float-bottom">
                             <p>
                                 I'm a faded box!
                             </p>
-                            <div class="panel panel-box">
+                            <div class="panel box">
                                 <p>
                                     I'm faded too!
                                 </p>
-                                <div class="panel panel-box fade">
+                                <div class="panel box fade">
                                     <p>
                                         But they can be faded <b>more</b>.
                                     </p>
@@ -289,22 +289,22 @@
                             </div>
                         </div>
                     </section>
-                    <section class="panel panel-box" id="paenl-mark">
+                    <section class="panel box" id="paenl-mark">
                         <h3>
                             Mark
                         </h3>
                         <p>
                             The <dfn id="dfn-mark">mark</dfn> modifier <b>distinguishes</b> the elements it is applied to from the surrounding ones by applying a <b>strong color contrast</b>.
                         </p>
-                        <div class="panel panel-box mark float-bottom">
+                        <div class="panel box mark float-bottom">
                             <p>
                                 Think of it like an <b>highlighter</b>, but for <mark>anything</mark>!
                             </p>
-                            <div class="panel panel-box mark">
+                            <div class="panel box mark">
                                 <p>
                                     Which can be nested to <mark>negate</mark> its effect.
                                 </p>
-                                <div class="panel panel-box mark">
+                                <div class="panel box mark">
                                     <p>
                                         Up to 3 times and <mark>not any more</mark>.
                                     </p>
@@ -312,22 +312,22 @@
                             </div>
                         </div>
                     </section>
-                    <section class="panel panel-box" id="panel-todo">
+                    <section class="panel box" id="panel-todo">
                         <h3>
                             To do
                         </h3>
                         <p>
                             The <dfn id="dfn-todo">todo</dfn> modifier emphasises that the contents of the elements it is applied to are not correct or final.
                         </p>
-                        <div class="panel panel-box todo float-bottom">
+                        <div class="panel box todo float-bottom">
                             <p>
                                 Like this!
                             </p>
-                            <div class="panel panel-box">
+                            <div class="panel box">
                                 <p>
                                     As with other modifiers, it is inherited.
                                 </p>
-                                <div class="panel panel-box todo">
+                                <div class="panel box todo">
                                     <p>
                                         And it does nothing if reapplied.
                                     </p>
@@ -335,7 +335,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="panel panel-box" id="panel-colors">
+                    <section class="panel box" id="panel-colors">
                         <h3>
                             Color modifiers
                         </h3>
@@ -343,7 +343,7 @@
                             The <dfn id="dfn-color">color</dfn> modifiers change the colors of the elements they are applied to.
                         </p>
                         <div class="chapter-6 float-bottom">
-                            <div class="panel panel-box red">
+                            <div class="panel box red">
                                 <h4>
                                     Red
                                 </h4>
@@ -351,7 +351,7 @@
                                     * warns angrily!
                                 </p>
                             </div>
-                            <div class="panel panel-box yellow">
+                            <div class="panel box yellow">
                                 <h4>
                                     Yellow
                                 </h4>
@@ -359,7 +359,7 @@
                                     * warns.
                                 </p>
                             </div>
-                            <div class="panel panel-box green">
+                            <div class="panel box green">
                                 <h4>
                                     Green
                                 </h4>
@@ -367,7 +367,7 @@
                                     * is a success!
                                 </p>
                             </div>
-                            <div class="panel panel-box cyan">
+                            <div class="panel box cyan">
                                 <h4>
                                     Cyan
                                 </h4>
@@ -375,7 +375,7 @@
                                     * informs...
                                 </p>
                             </div>
-                            <div class="panel panel-box blue">
+                            <div class="panel box blue">
                                 <h4>
                                     Blue
                                 </h4>
@@ -383,7 +383,7 @@
                                     * annotates
                                 </p>
                             </div>
-                            <div class="panel panel-box magenta">
+                            <div class="panel box magenta">
                                 <h4>
                                     Magenta
                                 </h4>
@@ -398,7 +398,7 @@
                     <h2>
                         Separators
                     </h2>
-                    <section class="panel panel-box" id="panel-separator">
+                    <section class="panel box" id="panel-separator">
                         <h3>
                             Separator
                         </h3>
@@ -406,11 +406,11 @@
                             A <dfn id="dfn-separator">separator</dfn> is a <b>horizontal line</b> that fills all the horizontal space available on a panel, forcing a line wrap.
                         </p>
                         <hr class="float-bottom">
-                        <blockquote class="panel panel-dialog">
+                        <blockquote class="panel dialog">
                             Top Text
                         </blockquote>
                     </section>
-                    <section class="panel panel-box" id="panel-separator-light">
+                    <section class="panel box" id="panel-separator-light">
                         <h3>
                             Light separator
                         </h3>
@@ -418,11 +418,11 @@
                             A <dfn id="dfn-separator-light">light separator</dfn> is a <b>less eye-catching separator</b>, to be used if the regular separator distracts too much from the flow of the text.
                         </p>
                         <hr class="separator-light float-bottom">
-                        <blockquote class="panel panel-dialog">
+                        <blockquote class="panel dialog">
                             Bottom Text
                         </blockquote>
                     </section>
-                    <section class="panel panel-box" id="panel-separator-heavy">
+                    <section class="panel box" id="panel-separator-heavy">
                         <h3>
                             Heavy separator
                         </h3>
@@ -430,7 +430,7 @@
                             A <dfn id="dfn-separator-heavy">heavy separator</dfn> is a <b>very eye-catching separator</b>, to be used if the regular separator isn't apparent enough.
                         </p>
                         <hr class="separator-heavy float-bottom">
-                        <blockquote class="panel panel-dialog">
+                        <blockquote class="panel dialog">
                             Bottom Text 2: Electric Boogaloo
                         </blockquote>
                     </section>
@@ -439,7 +439,7 @@
                     <h2>
                         Lists
                     </h2>
-                    <section class="panel panel-box" id="panel-list-ordered">
+                    <section class="panel box" id="panel-list-ordered">
                         <h3>
                             Ordered list
                         </h3>
@@ -461,7 +461,7 @@
                             <li>Twelfth</li>
                         </ol>
                     </section>
-                    <section class="panel panel-box" id="panel-list-unordered">
+                    <section class="panel box" id="panel-list-unordered">
                         <h3>
                             Unordered list
                         </h3>
@@ -488,7 +488,7 @@
                     <h2>
                         Glossaries
                     </h2>
-                    <section class="panel panel-box" id="panel-list-definition">
+                    <section class="panel box" id="panel-list-definition">
                         <h3>
                             Definition list
                         </h3>
@@ -510,7 +510,7 @@
                             </dd>
                         </dl>
                     </section>
-                    <section class="panel panel-box" id="panel-details">
+                    <section class="panel box" id="panel-details">
                         <h3>
                             Collapsible details
                         </h3>
@@ -535,7 +535,7 @@
                     <h2>
                         Text
                     </h2>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             <u>A</u>nchors
                         </h3>
@@ -556,7 +556,7 @@
                     </section>
                 </div>
                 <div class="chapter-4">
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             <u>I</u>diomatic expressions
                         </h3>
@@ -569,7 +569,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             <u>Em</u>phasis
                         </h3>
@@ -582,7 +582,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             <u>B</u>ring attention
                         </h3>
@@ -595,7 +595,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             <u>Strong</u> importance
                         </h3>
@@ -608,7 +608,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             <u>U</u>narticulated annotations
                         </h3>
@@ -621,7 +621,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             <u>S</u>trike
                         </h3>
@@ -634,7 +634,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             <u>Ins</u>erted and <u>del</u>eted text
                         </h3>
@@ -651,7 +651,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             <u>Small</u> comment
                         </h3>
@@ -667,7 +667,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Preformatted text
                         </h3>
@@ -685,7 +685,7 @@
  #    # "mmm#"  "mmm" mm#mm  mm#mm</pre>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Code snippets
                         </h3>
@@ -706,7 +706,7 @@
 &lt;/div&gt;</code></pre>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Sample input and output
                         </h3>
@@ -725,7 +725,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Variables
                         </h3>
@@ -738,21 +738,21 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Quotes and citations
                         </h3>
                         <p>
                             A <dfn id="dfn-quote">quote</dfn> element indicates an <b>inline quote</b>, and may be optionally include a <dfn id="dfn-citation">citation</dfn> element indicating the <b>source of the quote</b>.
                         </p>
-                        <div class="panel panel-dialog float-bottom">
+                        <div class="panel dialog float-bottom">
                             <p>
                                 <q>Objection!</q><br/>
                                 —<cite>Phoenix Wright</cite>, Ace Attorney
                             </p>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Definitions
                         </h3>
@@ -765,7 +765,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Abbreviations
                         </h3>
@@ -781,7 +781,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Ruby
                         </h3>
@@ -814,7 +814,7 @@
                     <h2>
                         Tables
                     </h2>
-                    <section class="panel panel-box" id="panel-table">
+                    <section class="panel box" id="panel-table">
                         <h3>
                             Table
                         </h3>
@@ -844,7 +844,7 @@
                             </tbody>
                         </table>
                     </section>
-                    <section class="panel panel-box" id="panel-tablecaption">
+                    <section class="panel box" id="panel-tablecaption">
                         <h3>
                             Table caption
                         </h3>
@@ -897,7 +897,7 @@
                             </tfoot>
                         </table>
                     </section>
-                    <table class="panel panel-box" id="panel-tablepanel">
+                    <table class="panel box" id="panel-tablepanel">
                         <caption class="table-caption-top">
                             <h3>
                                 Table panels
@@ -941,7 +941,7 @@
                             </tr>
                         </tfoot>
                     </table>
-                    <table class="panel panel-dialog" id="panel-tabledialogs">
+                    <table class="panel dialog" id="panel-tabledialogs">
                         <caption>
                             <h3>
                                 Table dialogs
@@ -980,7 +980,7 @@
                             </tr>
                         </tfoot>
                     </table>
-                    <table class="panel panel-box" id="panel-cellmodifiers">
+                    <table class="panel box" id="panel-cellmodifiers">
                         <caption class="table-caption-top">
                             <h3>
                                 Cell modifiers
@@ -1015,7 +1015,7 @@
                     <h2>
                         Images
                     </h2>
-                    <section class="panel panel-box" id="panel-images-default">
+                    <section class="panel box" id="panel-images-default">
                         <h3>
                             Default
                         </h3>
@@ -1024,7 +1024,7 @@
                         </p>
                         <img class="float-bottom" src="https://images.unsplash.com/photo-1593415553970-bd0145efc369" alt="Neon Ice Cream"/>
                     </section>
-                    <section class="panel panel-box" id="panel-limited">
+                    <section class="panel box" id="panel-limited">
                         <h3>
                             Limited
                         </h3>
@@ -1053,7 +1053,7 @@
                     <h2>
                         Inputs
                     </h2>
-                    <section class="panel panel-box" id="panel-input">
+                    <section class="panel box" id="panel-input">
                         <h3>
                             Input
                         </h3>
@@ -1063,7 +1063,7 @@
                     </section>
                 </div>
                 <div class="chapter-2">
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Field
                         </h3>
@@ -1148,7 +1148,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Area
                         </h3>
@@ -1164,7 +1164,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Select
                         </h3>
@@ -1191,7 +1191,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Multiselect
                         </h3>
@@ -1231,7 +1231,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Radio
                         </h3>
@@ -1271,7 +1271,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Checkbox
                         </h3>
@@ -1323,7 +1323,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Color
                         </h3>
@@ -1342,7 +1342,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             File
                         </h3>
@@ -1361,7 +1361,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel panel-box todo">
+                    <section class="panel box todo">
                         <h3>
                             Range
                         </h3>
@@ -1378,7 +1378,7 @@
                             </p>
                         </form>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Button
                         </h3>
@@ -1405,7 +1405,7 @@
                     <h2>
                         Forms
                     </h2>
-                    <section class="panel panel-box" id="panel-form">
+                    <section class="panel box" id="panel-form">
                         <h3>
                             Form
                         </h3>
@@ -1413,7 +1413,7 @@
                             An <dfn id="dfn-form">form</dfn> is a non-interactive element which <b>positions <i>Inputs</i></b> in commonly used ways.
                         </p>
                     </section>
-                    <section class="panel panel-box">
+                    <section class="panel box">
                         <h3>
                             Flex form
                         </h3>
