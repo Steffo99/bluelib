@@ -789,25 +789,33 @@
             display: flex;
             gap: 1ex;
 
-            > @{element-span}:first-child, > @{element-span}:last-child {
+            > @{all}:first-child, > @{all}:last-child {
                 margin: auto 0;
                 flex-basis: 15%;
+                flex-grow: 0;
 
                 .use-font-group(label);
                 .map-hsl-group(current; primary);
             }
 
-            > @{element-span}:first-child {
-                text-align: right;
-            }
-
-            > @{element-span}:last-child {
-                text-align: left;
-            }
-
-            > @{input} {
+            > @{all} {
                 flex-grow: 1;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 4px;
             }
+
+            > @{all}:first-child {
+                text-align: right;
+                display: block;
+            }
+
+            > @{all}:last-child {
+                text-align: left;
+                display: block;
+            }
+
         }
     }
 
