@@ -547,6 +547,11 @@
         }
     }
 
+    @{property-disabled} {
+        border-style: dashed;
+        cursor: not-allowed;
+    }
+
     @{modifier-red} {
         .map-hsl-group(current; red);
     }
@@ -599,7 +604,7 @@
             color: .hsl-group(current; 0.4)[@c];
         }
 
-        &:hover {
+        &:hover:not(@{property-disabled}) {
             border-color: .hsl-group(current; 0.7)[@c];
 
             &::placeholder {
@@ -607,7 +612,7 @@
             }
         }
 
-        &:active, &:focus {
+        &:active:not(@{property-disabled}), &:focus:not(@{property-disabled}) {
             border-color: .hsl-group(current)[@c];
         }
     }
@@ -627,14 +632,17 @@
     }
 
     // Mark interactivity by changing the mouse cursor
-    @{input-field}, @{input-area} {
+    @{input-field}:not(@{property-disabled}), @{input-area}:not(@{property-disabled}) {
         cursor: text;
     }
-    @{input-select}, @{input-multiselect} {
+    @{input-select}:not(@{property-disabled}), @{input-multiselect}:not(@{property-disabled}) {
         cursor: vertical-text;
     }
-    @{input-range} {
+    @{input-range}:not(@{property-disabled}) {
         cursor: ew-resize;
+    }
+    @{input-radio}:not(@{property-disabled}), @{input-checkbox}:not(@{property-disabled}), @{input-button}:not(@{property-disabled}), @{input-color}:not(@{property-disabled}) {
+        cursor: pointer;
     }
 
     // Configure option display
@@ -661,9 +669,6 @@
     // Override the default browser appearence for radios and checkboxes
     @{input-radio}, @{input-checkbox} {
         appearance: none;
-
-        // Make the element feel clickable
-        cursor: pointer;
 
         // Set a fixed size
         width: 1em;
