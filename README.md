@@ -4,3 +4,4 @@ A versatile and easy to use CSS stylesheet that supports fast dynamic recoloring
 
 \[ [**Demo + Documentation**](https://gh.steffo.eu/bluelib/examples/index.html) | [**npm**](https://www.npmjs.com/package/@steffo/bluelib) \]
 
+![Screenshot](media/screenshot-1.png)
