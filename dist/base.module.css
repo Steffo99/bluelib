@@ -441,6 +441,10 @@
   border-style: dashed;
   background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
 }
+.bluelib .property-disabled {
+  border-style: dashed;
+  cursor: not-allowed;
+}
 .bluelib .modifier-red {
   --bhsl-current-hue: var(--bhsl-red-hue);
   --bhsl-current-saturation: var(--bhsl-red-saturation);
@@ -484,14 +488,14 @@
   opacity: 1;
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.4);
 }
-.bluelib .input:hover {
+.bluelib .input:hover:not(.property-disabled) {
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-.bluelib .input:hover::placeholder {
+.bluelib .input:hover:not(.property-disabled)::placeholder {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-.bluelib .input:active,
-.bluelib .input:focus {
+.bluelib .input:active:not(.property-disabled),
+.bluelib .input:focus:not(.property-disabled) {
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
 .bluelib .input-area {
@@ -505,16 +509,22 @@
 .bluelib .input-multiselect {
   border-left-width: 2px;
 }
-.bluelib .input-field,
-.bluelib .input-area {
+.bluelib .input-field:not(.property-disabled),
+.bluelib .input-area:not(.property-disabled) {
   cursor: text;
 }
-.bluelib .input-select,
-.bluelib .input-multiselect {
+.bluelib .input-select:not(.property-disabled),
+.bluelib .input-multiselect:not(.property-disabled) {
   cursor: vertical-text;
 }
-.bluelib .input-range {
+.bluelib .input-range:not(.property-disabled) {
   cursor: ew-resize;
+}
+.bluelib .input-radio:not(.property-disabled),
+.bluelib .input-checkbox:not(.property-disabled),
+.bluelib .input-button:not(.property-disabled),
+.bluelib .input-color:not(.property-disabled) {
+  cursor: pointer;
 }
 .bluelib .input-select optgroup,
 .bluelib .input-multiselect optgroup {
@@ -542,7 +552,6 @@
 .bluelib .input-radio,
 .bluelib .input-checkbox {
   appearance: none;
-  cursor: pointer;
   width: 1em;
   height: 1em;
   padding: 2px;

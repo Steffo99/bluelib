@@ -441,6 +441,10 @@ body .todo .panel {
   border-style: dashed;
   background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
 }
+body [disabled] {
+  border-style: dashed;
+  cursor: not-allowed;
+}
 body .red {
   --bhsl-current-hue: var(--bhsl-red-hue);
   --bhsl-current-saturation: var(--bhsl-red-saturation);
@@ -490,26 +494,26 @@ body button::placeholder {
   opacity: 1;
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.4);
 }
-body input:hover,
-body textarea:hover,
-body select:hover,
-body button:hover {
+body input:hover:not([disabled]),
+body textarea:hover:not([disabled]),
+body select:hover:not([disabled]),
+body button:hover:not([disabled]) {
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-body input:hover::placeholder,
-body textarea:hover::placeholder,
-body select:hover::placeholder,
-body button:hover::placeholder {
+body input:hover:not([disabled])::placeholder,
+body textarea:hover:not([disabled])::placeholder,
+body select:hover:not([disabled])::placeholder,
+body button:hover:not([disabled])::placeholder {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-body input:active,
-body textarea:active,
-body select:active,
-body button:active,
-body input:focus,
-body textarea:focus,
-body select:focus,
-body button:focus {
+body input:active:not([disabled]),
+body textarea:active:not([disabled]),
+body select:active:not([disabled]),
+body button:active:not([disabled]),
+body input:focus:not([disabled]),
+body textarea:focus:not([disabled]),
+body select:focus:not([disabled]),
+body button:focus:not([disabled]) {
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
 body textarea {
@@ -539,16 +543,23 @@ body input[type="search"],
 body input[type="tel"],
 body input[type="datetime-local"],
 body input[type="date"],
-body input[type="time"],
-body textarea {
+body input[type="time"]:not([disabled]),
+body textarea:not([disabled]) {
   cursor: text;
 }
-body select:not([multiple]),
-body select[multiple] {
+body select:not([multiple]):not([disabled]),
+body select[multiple]:not([disabled]) {
   cursor: vertical-text;
 }
-body input[type="range"] {
+body input[type="range"]:not([disabled]) {
   cursor: ew-resize;
+}
+body input[type="radio"]:not([disabled]),
+body input[type="checkbox"]:not([disabled]),
+body input[type="button"],
+body button:not([disabled]),
+body input[type="color"]:not([disabled]) {
+  cursor: pointer;
 }
 body select:not([multiple]) optgroup,
 body select[multiple] optgroup {
@@ -576,7 +587,6 @@ body select[multiple] option {
 body input[type="radio"],
 body input[type="checkbox"] {
   appearance: none;
-  cursor: pointer;
   width: 1em;
   height: 1em;
   padding: 2px;
