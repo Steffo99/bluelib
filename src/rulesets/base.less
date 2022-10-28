@@ -146,10 +146,10 @@
     // The base panel class.
     @{panel} {
         // And a padding to separate them from their contents
-        padding-top: 0.5em;
-        padding-right: 0.5em;
-        padding-left: 0.5em;
-        padding-bottom: 0.5em;
+        padding-top: 8px;
+        padding-right: 8px;
+        padding-left: 8px;
+        padding-bottom: 8px;
         // Remove the border, just to be sure
         border-width: 0;
         border-style: solid;
@@ -168,19 +168,19 @@
         // Make borders togglable
         &@{border-top}, &@{panel-box} {
             border-top-width: 2px;
-            padding-top: calc(0.5em - 2px);
+            padding-top: 6px;
         }
         &@{border-right}, &@{panel-box} {
             border-right-width: 2px;
-            padding-right: calc(0.5em - 2px);
+            padding-right: 6px;
         }
         &@{border-left}, &@{panel-box}, &@{panel-dialog} {
             border-left-width: 2px;
-            padding-left: calc(0.5em - 2px);
+            padding-left: 6px;
         }
         &@{border-bottom}, &@{panel-box} {
             border-bottom-width: 2px;
-            padding-bottom: calc(0.5em - 2px);
+            padding-bottom: 6px;
         }
 
         // For compatibility, make panel-parenthesis available
