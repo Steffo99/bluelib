@@ -21,9 +21,6 @@
         width: 100%;
         height: 100%;
 
-        // And remove its margin, in case it is the "real" body
-        margin: 0;
-
         // Set the default font family
         .use-font-group(text)
     }
@@ -202,12 +199,12 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        gap: 0.5em;
+        gap: 8px;
         justify-content: center;
         align-items: stretch;
 
         // Add the gap as a vertical margin, so that multiple chapters can be placed next to each other
-        margin: 0.5em;
+        margin: 8px 0;
 
         > @{all} {
             // Allow all children to grow

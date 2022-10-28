@@ -2,6 +2,20 @@
     background-image: url("Space_Default.jpg");
     background-attachment: fixed;
     background-size: cover;
+
+    padding: 0 16px;
+}
+
+@media screen and (max-width: 800px) {
+    #body {
+        padding: 0 8px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #body {
+        padding: 0 4px;
+    }
 }
 
 #body .chapter-1 > .panel,
