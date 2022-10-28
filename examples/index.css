@@ -27,7 +27,7 @@
 #body .chapter-7 > .panel,
 #body .chapter-8 > .panel,
 #body .chapter-9 > .panel {
-    min-width: 200px;
+    min-width: 360px;
 }
 
 #body .panel .chapter-1 > .panel,
