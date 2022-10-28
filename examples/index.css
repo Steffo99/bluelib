@@ -1,20 +1,39 @@
-#body {
-    background-image: url("Space_Default.jpg");
-    background-attachment: fixed;
-    background-size: cover;
+#background {
+    width: 100vw;
+    height: 120vh;
 
+    position: fixed;
+    z-index: -1;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+#body {
     padding: 0 16px;
+}
+
+#background {
+    margin: 0 -16px;
 }
 
 @media screen and (max-width: 800px) {
     #body {
         padding: 0 8px;
     }
+
+    #background {
+        margin: 0 -8px;
+    }
 }
 
 @media screen and (max-width: 400px) {
     #body {
         padding: 0 4px;
+    }
+
+    #background {
+        margin: 0 -4px;
     }
 }
 
