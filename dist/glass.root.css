@@ -4,16 +4,18 @@
  */
 body {
   --b-panel-blur: 16px;
+  --b-panel-initial-opacity: 0.3;
+  --b-panel-nested-opacity: 0.075;
 }
 @supports (backdrop-filter: blur(var(--b-panel-blur))) {
   body .panel,
   body table.panel > caption {
-    background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness) / 0.3);
+    background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness) / var(--b-panel-initial-opacity));
     backdrop-filter: blur(var(--b-panel-blur)) hue-rotate(calc(var(--bhsl-current-hue) - var(--bhsl-foreground-hue)));
   }
   body .panel .panel,
   body table.panel > caption .panel {
-    background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.075);
+    background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / var(--b-panel-nested-opacity));
     backdrop-filter: none;
   }
   body .mark,

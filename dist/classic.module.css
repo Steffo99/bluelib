@@ -4,6 +4,7 @@
  */
 .bluelib {
   --b-border-radius: 8px;
+  --b-outer-shadow: 2px 2px 4px hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
 .bluelib,
 .bluelib * {
@@ -15,7 +16,7 @@
 .bluelib .header-4,
 .bluelib .header-5,
 .bluelib .header-6 {
-  text-shadow: 2px 2px 4px hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
+  text-shadow: var(--b-outer-shadow);
 }
 .bluelib .panel .header-1,
 .bluelib .panel .header-2,
@@ -28,7 +29,7 @@
 .bluelib .panel,
 .bluelib .table.panel > .table-caption {
   border-radius: var(--b-border-radius);
-  box-shadow: 2px 2px 4px hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
+  box-shadow: var(--b-outer-shadow);
 }
 .bluelib .panel .panel,
 .bluelib .table.panel > .table-caption .panel {
@@ -96,7 +97,7 @@
 }
 .bluelib .table.panel > .table-caption {
   border-radius: 0;
-  box-shadow: 0.0625em 0 0.25em hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
+  box-shadow: var(--b-outer-shadow);
 }
 .bluelib .table.panel-dialog > .table-caption {
   border-bottom-width: 2px;

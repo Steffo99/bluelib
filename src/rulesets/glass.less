@@ -9,21 +9,22 @@
         --b-panel-blur: 16px;
 
         // Set the opacity of the glass panels
-        --b-panel-opacity: 0.075;
+        --b-panel-initial-opacity: 0.300;
+        --b-panel-nested-opacity: 0.075;
     }
 
     // Ensure that browsers not supporting backdrop-filter do not apply this style
     @supports (backdrop-filter: blur(var(--b-panel-blur))) {
 
         @{panel}, @{table}@{panel} > @{table-caption} {
-            background-color: .hsl-group(background; calc(4 * var(--b-panel-opacity)))[@c];
+            background-color: .hsl-group(background; var(--b-panel-initial-opacity))[@c];
             backdrop-filter:
                 blur(var(--b-panel-blur))
                 hue-rotate(calc(var(--bhsl-current-hue) - var(--bhsl-foreground-hue)))
             ;
 
             @{panel} {
-                background-color: .hsl-group(current; var(--b-panel-opacity))[@c];
+                background-color: .hsl-group(current; var(--b-panel-nested-opacity))[@c];
                 backdrop-filter: none;
             }
         }

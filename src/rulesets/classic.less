@@ -8,6 +8,9 @@
     & {
         // Sets the border radius of all panels
         --b-border-radius: 8px;
+
+        // Set the shadow drawn on element placed directly on the background
+        --b-outer-shadow: 2px 2px 4px .hsl-group(background)[@c];
     }
 
     &, @{all} {
@@ -17,7 +20,7 @@
 
     // Give headers a slight shadow so they are easier to read outside of panels
     @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
-        text-shadow: 2px 2px 4px .hsl-group(background)[@c];
+        text-shadow: var(--b-outer-shadow);
     }
 
     // But do not give it to headers inside panels
@@ -31,7 +34,7 @@
         border-radius: var(--b-border-radius);
 
         // And a shadow effect
-        box-shadow: 2px 2px 4px .hsl-group(background)[@c];
+        box-shadow: var(--b-outer-shadow);
 
         // Do not give the same effects to nested panels
         @{panel} {
@@ -78,7 +81,7 @@
             border-radius: 0;
             
             // Minimize the visibility of the caption's box shadow to prevent overlap with the table itself
-            box-shadow: 0.0625em 0 0.25em .hsl-group(background)[@c];
+            box-shadow: var(--b-outer-shadow);
         }
     }
 

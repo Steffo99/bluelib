@@ -4,6 +4,7 @@
  */
 body {
   --b-border-radius: 8px;
+  --b-outer-shadow: 2px 2px 4px hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
 body,
 body * {
@@ -15,7 +16,7 @@ body h3,
 body h4,
 body h5,
 body h6 {
-  text-shadow: 2px 2px 4px hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
+  text-shadow: var(--b-outer-shadow);
 }
 body .panel h1,
 body .panel h2,
@@ -28,7 +29,7 @@ body .panel h6 {
 body .panel,
 body table.panel > caption {
   border-radius: var(--b-border-radius);
-  box-shadow: 2px 2px 4px hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
+  box-shadow: var(--b-outer-shadow);
 }
 body .panel .panel,
 body table.panel > caption .panel {
@@ -96,7 +97,7 @@ body table.panel {
 }
 body table.panel > caption {
   border-radius: 0;
-  box-shadow: 0.0625em 0 0.25em hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
+  box-shadow: var(--b-outer-shadow);
 }
 body table.dialog > caption {
   border-bottom-width: 2px;
