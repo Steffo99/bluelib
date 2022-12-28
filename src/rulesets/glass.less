@@ -7,20 +7,23 @@
     & {
         // Sets the backdrop-filter blur radius of all panels
         --b-panel-blur: 16px;
+
+        // Set the opacity of the glass panels
+        --b-panel-opacity: 0.075;
     }
 
     // Ensure that browsers not supporting backdrop-filter do not apply this style
     @supports (backdrop-filter: blur(var(--b-panel-blur))) {
 
         @{panel}, @{table}@{panel} > @{table-caption} {
-            background-color: .hsl-group(background; 0.3)[@c];
+            background-color: .hsl-group(background; calc(4 * var(--b-panel-opacity)))[@c];
             backdrop-filter:
                 blur(var(--b-panel-blur))
                 hue-rotate(calc(var(--bhsl-current-hue) - var(--bhsl-foreground-hue)))
             ;
 
             @{panel} {
-                background-color: .hsl-group(current; 0.075)[@c];
+                background-color: .hsl-group(current; var(--b-panel-opacity))[@c];
                 backdrop-filter: none;
             }
         }
