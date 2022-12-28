@@ -35,6 +35,7 @@ const enabledByDefault = [
 let lessStyles = undefined
 let lessColors = undefined
 let lessFonts = undefined
+let background = undefined
 
 
 async function enableChanges() {
@@ -70,6 +71,9 @@ async function enableChanges() {
     )
     console.debug("Found Less fonts:", lessFonts)
 
+    background = document.querySelector("#background")
+    console.debug("Found background:", background)
+
     for(const [k, v] of Object.entries(lessStyles)) {
         v.disabled = !enabledByDefault.includes(k)
     }
@@ -97,7 +101,7 @@ function toggleStyle(name) {
 }
 
 
-function selectColor(name) {
+function selectColor(name, bgsrc) {
     if(lessColors === undefined) {
         console.error("Less stylesheets are not yet available.")
         return
@@ -114,6 +118,7 @@ function selectColor(name) {
     }
 
     style.disabled = false
+    background.src = bgsrc
 }
 
 
