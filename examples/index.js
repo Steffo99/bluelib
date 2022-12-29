@@ -27,7 +27,7 @@ const enabledByDefault = [
     "less:bluelib-dist-base:root",
     "less:bluelib-dist-classic:root",
     "less:bluelib-dist-glass:root",
-    "less:bluelib-dist-colors-royalblue:root",
+    "less:bluelib-dist-colors-pixeldawn:root",
     "less:bluelib-dist-fonts-fira-ghpages:root",
 ]
 
