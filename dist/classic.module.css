@@ -2,162 +2,162 @@
  * Bluelib Classic
  * by <me@steffo.eu>
  */
-.bluelib {
+:where(.bluelib) {
   --b-border-radius: 8px;
   --b-outer-shadow: 2px 2px 4px hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
-.bluelib,
-.bluelib * {
+:where(.bluelib),
+:where(.bluelib) * {
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.15);
 }
-.bluelib .header-1,
-.bluelib .header-2,
-.bluelib .header-3,
-.bluelib .header-4,
-.bluelib .header-5,
-.bluelib .header-6 {
+:where(.bluelib) .header-1,
+:where(.bluelib) .header-2,
+:where(.bluelib) .header-3,
+:where(.bluelib) .header-4,
+:where(.bluelib) .header-5,
+:where(.bluelib) .header-6 {
   text-shadow: var(--b-outer-shadow);
 }
-.bluelib .panel .header-1,
-.bluelib .panel .header-2,
-.bluelib .panel .header-3,
-.bluelib .panel .header-4,
-.bluelib .panel .header-5,
-.bluelib .panel .header-6 {
+:where(.bluelib) .panel .header-1,
+:where(.bluelib) .panel .header-2,
+:where(.bluelib) .panel .header-3,
+:where(.bluelib) .panel .header-4,
+:where(.bluelib) .panel .header-5,
+:where(.bluelib) .panel .header-6 {
   text-shadow: none;
 }
-.bluelib .panel,
-.bluelib .table.panel > .table-caption {
+:where(.bluelib) .panel,
+:where(.bluelib) .table.panel > .table-caption {
   border-radius: var(--b-border-radius);
   box-shadow: var(--b-outer-shadow);
 }
-.bluelib .panel .panel,
-.bluelib .table.panel > .table-caption .panel {
+:where(.bluelib) .panel .panel,
+:where(.bluelib) .table.panel > .table-caption .panel {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.075);
   backdrop-filter: none;
   box-shadow: none;
 }
-.bluelib .modifier-mark,
-.bluelib .element-mark,
-.bluelib .panel.modifier-mark {
+:where(.bluelib) .modifier-mark,
+:where(.bluelib) .element-mark,
+:where(.bluelib) .panel.modifier-mark {
   background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
 }
-.bluelib .modifier-mark .modifier-mark,
-.bluelib .element-mark .modifier-mark,
-.bluelib .panel.modifier-mark .modifier-mark,
-.bluelib .modifier-mark .element-mark,
-.bluelib .element-mark .element-mark,
-.bluelib .panel.modifier-mark .element-mark,
-.bluelib .modifier-mark .panel.modifier-mark,
-.bluelib .element-mark .panel.modifier-mark,
-.bluelib .panel.modifier-mark .panel.modifier-mark {
+:where(.bluelib) .modifier-mark .modifier-mark,
+:where(.bluelib) .element-mark .modifier-mark,
+:where(.bluelib) .panel.modifier-mark .modifier-mark,
+:where(.bluelib) .modifier-mark .element-mark,
+:where(.bluelib) .element-mark .element-mark,
+:where(.bluelib) .panel.modifier-mark .element-mark,
+:where(.bluelib) .modifier-mark .panel.modifier-mark,
+:where(.bluelib) .element-mark .panel.modifier-mark,
+:where(.bluelib) .panel.modifier-mark .panel.modifier-mark {
   background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
-.bluelib .modifier-mark .modifier-mark .modifier-mark,
-.bluelib .element-mark .modifier-mark .modifier-mark,
-.bluelib .panel.modifier-mark .modifier-mark .modifier-mark,
-.bluelib .modifier-mark .element-mark .modifier-mark,
-.bluelib .element-mark .element-mark .modifier-mark,
-.bluelib .panel.modifier-mark .element-mark .modifier-mark,
-.bluelib .modifier-mark .panel.modifier-mark .modifier-mark,
-.bluelib .element-mark .panel.modifier-mark .modifier-mark,
-.bluelib .panel.modifier-mark .panel.modifier-mark .modifier-mark,
-.bluelib .modifier-mark .modifier-mark .element-mark,
-.bluelib .element-mark .modifier-mark .element-mark,
-.bluelib .panel.modifier-mark .modifier-mark .element-mark,
-.bluelib .modifier-mark .element-mark .element-mark,
-.bluelib .element-mark .element-mark .element-mark,
-.bluelib .panel.modifier-mark .element-mark .element-mark,
-.bluelib .modifier-mark .panel.modifier-mark .element-mark,
-.bluelib .element-mark .panel.modifier-mark .element-mark,
-.bluelib .panel.modifier-mark .panel.modifier-mark .element-mark,
-.bluelib .modifier-mark .modifier-mark .panel.modifier-mark,
-.bluelib .element-mark .modifier-mark .panel.modifier-mark,
-.bluelib .panel.modifier-mark .modifier-mark .panel.modifier-mark,
-.bluelib .modifier-mark .element-mark .panel.modifier-mark,
-.bluelib .element-mark .element-mark .panel.modifier-mark,
-.bluelib .panel.modifier-mark .element-mark .panel.modifier-mark,
-.bluelib .modifier-mark .panel.modifier-mark .panel.modifier-mark,
-.bluelib .element-mark .panel.modifier-mark .panel.modifier-mark,
-.bluelib .panel.modifier-mark .panel.modifier-mark .panel.modifier-mark {
+:where(.bluelib) .modifier-mark .modifier-mark .modifier-mark,
+:where(.bluelib) .element-mark .modifier-mark .modifier-mark,
+:where(.bluelib) .panel.modifier-mark .modifier-mark .modifier-mark,
+:where(.bluelib) .modifier-mark .element-mark .modifier-mark,
+:where(.bluelib) .element-mark .element-mark .modifier-mark,
+:where(.bluelib) .panel.modifier-mark .element-mark .modifier-mark,
+:where(.bluelib) .modifier-mark .panel.modifier-mark .modifier-mark,
+:where(.bluelib) .element-mark .panel.modifier-mark .modifier-mark,
+:where(.bluelib) .panel.modifier-mark .panel.modifier-mark .modifier-mark,
+:where(.bluelib) .modifier-mark .modifier-mark .element-mark,
+:where(.bluelib) .element-mark .modifier-mark .element-mark,
+:where(.bluelib) .panel.modifier-mark .modifier-mark .element-mark,
+:where(.bluelib) .modifier-mark .element-mark .element-mark,
+:where(.bluelib) .element-mark .element-mark .element-mark,
+:where(.bluelib) .panel.modifier-mark .element-mark .element-mark,
+:where(.bluelib) .modifier-mark .panel.modifier-mark .element-mark,
+:where(.bluelib) .element-mark .panel.modifier-mark .element-mark,
+:where(.bluelib) .panel.modifier-mark .panel.modifier-mark .element-mark,
+:where(.bluelib) .modifier-mark .modifier-mark .panel.modifier-mark,
+:where(.bluelib) .element-mark .modifier-mark .panel.modifier-mark,
+:where(.bluelib) .panel.modifier-mark .modifier-mark .panel.modifier-mark,
+:where(.bluelib) .modifier-mark .element-mark .panel.modifier-mark,
+:where(.bluelib) .element-mark .element-mark .panel.modifier-mark,
+:where(.bluelib) .panel.modifier-mark .element-mark .panel.modifier-mark,
+:where(.bluelib) .modifier-mark .panel.modifier-mark .panel.modifier-mark,
+:where(.bluelib) .element-mark .panel.modifier-mark .panel.modifier-mark,
+:where(.bluelib) .panel.modifier-mark .panel.modifier-mark .panel.modifier-mark {
   background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
 }
-.bluelib .modifier-todo,
-.bluelib .panel.modifier-todo {
+:where(.bluelib) .modifier-todo,
+:where(.bluelib) .panel.modifier-todo {
   background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-.bluelib .modifier-todo .panel,
-.bluelib .panel.modifier-todo .panel {
+:where(.bluelib) .modifier-todo .panel,
+:where(.bluelib) .panel.modifier-todo .panel {
   background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-.bluelib .table.panel {
+:where(.bluelib) .table.panel {
   border-radius: 0;
 }
-.bluelib .table.panel > .table-caption {
+:where(.bluelib) .table.panel > .table-caption {
   border-radius: 0;
   box-shadow: var(--b-outer-shadow);
 }
-.bluelib .table.panel-dialog > .table-caption {
+:where(.bluelib) .table.panel-dialog > .table-caption {
   border-bottom-width: 2px;
 }
-.bluelib .input {
+:where(.bluelib) .input {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.025);
 }
-.bluelib .input:hover {
+:where(.bluelib) .input:hover {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.05);
 }
-.bluelib .input:active {
+:where(.bluelib) .input:active {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.075);
 }
-.bluelib .input-field,
-.bluelib .input-select {
+:where(.bluelib) .input-field,
+:where(.bluelib) .input-select {
   border-radius: var(--b-border-radius) var(--b-border-radius) 0 0;
 }
-.bluelib .input-area,
-.bluelib .input-multiselect {
+:where(.bluelib) .input-area,
+:where(.bluelib) .input-multiselect {
   border-radius: 0 var(--b-border-radius) var(--b-border-radius) 0;
 }
-.bluelib .input-button {
+:where(.bluelib) .input-button {
   border-radius: var(--b-border-radius);
 }
-.bluelib .list-unordered > *::marker,
-.bluelib .list-ordered > *::marker {
+:where(.bluelib) .list-unordered > *::marker,
+:where(.bluelib) .list-ordered > *::marker {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.5);
 }
-.bluelib .glossary-summary {
+:where(.bluelib) .glossary-summary {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-.bluelib .glossary-summary::marker {
+:where(.bluelib) .glossary-summary::marker {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.5);
 }
-.bluelib .glossary-summary:hover {
+:where(.bluelib) .glossary-summary:hover {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-.bluelib .glossary-summary:hover::marker {
+:where(.bluelib) .glossary-summary:hover::marker {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-.bluelib .glossary-summary:active::marker {
+:where(.bluelib) .glossary-summary:active::marker {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-.bluelib .text-anchor:hover {
+:where(.bluelib) .text-anchor:hover {
   color: hsl(calc(var(--bhsl-link-hue) + 0deg) calc(var(--bhsl-link-saturation) + 0%) calc(var(--bhsl-link-lightness) + 20%) / 1);
 }
-.bluelib .text-anchor:active {
+:where(.bluelib) .text-anchor:active {
   color: hsl(calc(var(--bhsl-link-hue) + 0deg) calc(var(--bhsl-link-saturation) + 0%) calc(var(--bhsl-link-lightness) + 40%) / 1);
 }
-.bluelib .text-input,
-.bluelib .text-output {
+:where(.bluelib) .text-input,
+:where(.bluelib) .text-output {
   border-radius: calc(var(--b-border-radius) / 4);
 }
-.bluelib .text-variable {
+:where(.bluelib) .text-variable {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-.bluelib .text-quote::before,
-.bluelib .text-quote::after {
+:where(.bluelib) .text-quote::before,
+:where(.bluelib) .text-quote::after {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-.bluelib .text-ruby-annotation {
+:where(.bluelib) .text-ruby-annotation {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }

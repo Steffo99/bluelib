@@ -142,7 +142,7 @@
   font-weight: 600;
   font-style: normal;
 }
-body {
+:where(body) {
   --bfont-text-style: normal;
   --bfont-text-variant: normal;
   --bfont-text-weight: 400;

@@ -142,7 +142,7 @@
   font-weight: 600;
   font-style: normal;
 }
-.bluelib {
+:where(.bluelib) {
   --bfont-text-style: normal;
   --bfont-text-variant: normal;
   --bfont-text-weight: 400;

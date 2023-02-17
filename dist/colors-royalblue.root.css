@@ -2,7 +2,7 @@
  * Bluelib Royal Blue Colors
  * by <me@steffo.eu>
  */
-body {
+:where(body) {
   --bhsl-background-hue: 224deg;
   --bhsl-background-saturation: 64%;
   --bhsl-background-lightness: 14%;

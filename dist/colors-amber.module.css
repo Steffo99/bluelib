@@ -3,7 +3,7 @@
  * by <lorenzo.balugani@gmail.com>
  * ported to v5 by <me@steffo.eu>
  */
-.bluelib {
+:where(.bluelib) {
   --bhsl-background-hue: 0deg;
   --bhsl-background-saturation: 8%;
   --bhsl-background-lightness: 14%;
