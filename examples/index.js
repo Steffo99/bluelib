@@ -24,11 +24,11 @@ async function sleepUntilLessIsDone() {
 
 
 const enabledByDefault = [
-    "less:bluelib-dist-base:root",
-    "less:bluelib-dist-classic:root",
-    "less:bluelib-dist-glass:root",
-    "less:bluelib-dist-colors-royalblue:root",
-    "less:bluelib-dist-fonts-fira-ghpages:root",
+    "less:dist-base:root",
+    "less:dist-classic:root",
+    "less:dist-glass:root",
+    "less:dist-colors-royalblue:root",
+    "less:dist-fonts-fira-ghpages:root",
 ]
 
 
@@ -42,7 +42,7 @@ async function enableChanges() {
     await sleepUntilLessIsDone()
 
     lessStyles = [...document.styleSheets].filter(
-        (s) => s.ownerNode.id.startsWith("less:bluelib-dist")
+        (s) => s.ownerNode.id.startsWith("less:dist")
     ).map(
         (s) => ({[s.ownerNode.id]: s})
     ).reduce(
@@ -52,7 +52,7 @@ async function enableChanges() {
     console.debug("Found Less stylesheets:", lessStyles)
 
     lessColors = [...document.styleSheets].filter(
-        (s) => s.ownerNode.id.startsWith("less:bluelib-dist-colors")
+        (s) => s.ownerNode.id.startsWith("less:dist-colors")
     ).map(
         (s) => ({[s.ownerNode.id]: s})
     ).reduce(
@@ -62,7 +62,7 @@ async function enableChanges() {
     console.debug("Found Less colors:", lessColors)
 
     lessFonts = [...document.styleSheets].filter(
-        (s) => s.ownerNode.id.startsWith("less:bluelib-dist-fonts")
+        (s) => s.ownerNode.id.startsWith("less:dist-fonts")
     ).map(
         (s) => ({[s.ownerNode.id]: s})
     ).reduce(
