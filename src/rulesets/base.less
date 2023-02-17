@@ -783,18 +783,20 @@
 
         justify-content: stretch;
 
-        > @{element-paragraph} {
+        > @{form-flex-content} {
             margin: 0.5em 0;
         }
 
-        > @{element-label} {
+        > @{form-flex-choice} {
             display: flex;
             gap: 1ex;
+            min-height: 1.675em;  // Not sure why this specific number, but it looks good...
 
             > @{all}:first-child, > @{all}:last-child {
                 margin: auto 0;
                 flex-basis: 15%;
                 flex-grow: 0;
+                flex-shrink: 0;
 
                 .use-font-group(label);
                 .map-hsl-group(current; primary);
@@ -803,9 +805,10 @@
             > @{all} {
                 flex-grow: 1;
                 display: flex;
-                justify-content: start;
+                justify-content: space-between;
+                flex-wrap: wrap;
                 align-items: center;
-                gap: 4px;
+                gap: 1ex;
             }
 
             > @{all}:first-child {
@@ -817,7 +820,6 @@
                 text-align: left;
                 display: block;
             }
-
         }
     }
 
