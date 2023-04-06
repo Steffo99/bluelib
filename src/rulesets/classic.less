@@ -19,13 +19,13 @@
     }
 
     // Give headers a slight shadow so they are easier to read outside of panels
-    @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
+    @{header} {
         text-shadow: var(--b-outer-shadow);
     }
 
     // But do not give it to headers inside panels
     @{panel} {
-        @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
+        @{header} {
             text-shadow: none;
         }
     }
