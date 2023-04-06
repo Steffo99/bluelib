@@ -123,7 +123,7 @@
         font-size: 1.75em;
     }
 
-    @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
+    @{header} {
         text-align: center;
 
         .map-hsl-group(current; primary);
@@ -194,33 +194,6 @@
 
     //<editor-fold desc="Rules: Chapters">
 
-    @{chapter-0}, @{chapter-1}, @{chapter-2}, @{chapter-3}, @{chapter-4}, @{chapter-5}, @{chapter-6}, @{chapter-7}, @{chapter-8}, @{chapter-9} {
-        // Be a row flexbox to separate elements in columns
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        gap: 8px;
-        justify-content: center;
-        align-items: stretch;
-
-        // Add the gap as a vertical margin, so that multiple chapters can be placed next to each other
-        margin: 8px 0;
-
-        > @{all} {
-            // Allow all children to grow
-            flex-grow: 1;
-            // But not to shrink
-            flex-shrink: 0;
-        }
-
-        > @{header-1}, > @{header-2}, > @{header-3}, > @{header-4}, > @{header-5}, > @{header-6} {
-            // Headings should fill up all horizontal space available and force a wrap
-            flex-basis: 100%;
-
-            margin-top: 1.2em;
-        }
-    }
-
     // Chapter zero means that the number of panels is not set and they should not be wrapped
     @{chapter-0} {
         flex-wrap: nowrap;
@@ -275,6 +248,33 @@
     @{chapter-9} {
         > @{all} {
             flex-basis: calc(100% / 10);
+        }
+    }
+
+    @{chapter} {
+        // Be a row flexbox to separate elements in columns
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: center;
+        align-items: stretch;
+
+        // Add the gap as a vertical margin, so that multiple chapters can be placed next to each other
+        margin: 8px 0;
+
+        > @{all} {
+            // Allow all children to grow
+            flex-grow: 1;
+            // But not to shrink
+            flex-shrink: 0;
+        }
+
+        > @{header} {
+            // Headings should fill up all horizontal space available and force a wrap
+            flex-basis: 100%;
+
+            margin-top: 1.2em;
         }
     }
 
@@ -513,7 +513,7 @@
         opacity: 0.3;
     }
 
-    @{modifier-mark}, @{element-mark} {
+    @{modifier-mark} {
         // Assign marks to their own font group
         .use-font-group(mark);
 
@@ -522,12 +522,12 @@
         .map-hsl-group(current; mark-foreground);
 
         // If applied twice, go back to "normality"
-        @{modifier-mark}, @{element-mark} {
+        @{modifier-mark} {
             background-color: .hsl-group(background)[@c];
             .map-hsl-group(current; foreground);
 
             // If applied thrice, mark again and not anymore
-            @{modifier-mark}, @{element-mark} {
+            @{modifier-mark} {
                 background-color: .hsl-group(mark-background)[@c];
                 .map-hsl-group(current; mark-foreground);
             }
