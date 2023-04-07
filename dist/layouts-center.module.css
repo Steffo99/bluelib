@@ -1,0 +1,8 @@
+:where(.bluelib) :where(.layout-center) :where(.layout-center-background) {
+  width: 100vw;
+  height: 120vh;
+  position: fixed;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}

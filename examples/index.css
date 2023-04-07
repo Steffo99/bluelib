@@ -1,52 +1,7 @@
-#background {
-    width: 100vw;
-    height: 120vh;
-
-    position: fixed;
-    z-index: -1;
-
-    object-fit: cover;
-    object-position: center;
-}
-
-#body {
-    padding: 0 16px;
-}
-
-#background {
-    margin: 0 -16px;
-}
-
-@media screen and (max-width: 800px) {
-    #body {
-        padding: 0 8px;
-    }
-
-    #background {
-        margin: 0 -8px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    #body {
-        padding: 0 4px;
-    }
-
-    #background {
-        margin: 0 -4px;
-    }
-}
-
 #body :is(.chapter-1, .chapter-2, .chapter-3, .chapter-4, .chapter-5, .chapter-6, .chapter-7, .chapter-8, .chapter-9) > .panel {
     min-width: 360px;
 }
 
 #body .panel :is(.chapter-1, .chapter-2, .chapter-3, .chapter-4, .chapter-5, .chapter-6, .chapter-7, .chapter-8, .chapter-9) > .panel {
     min-width: unset;
-}
-
-#body article {
-    margin: 0 auto;
-
-    max-width: 1600px;
 }

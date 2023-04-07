@@ -1,0 +1,46 @@
+/**
+ * Bluelib Layouts Center
+ * by <me@steffo.eu>
+ */
+
+@{bluelib} {
+
+	&@{layout-center} {
+		padding: 0 16px;
+	}
+
+
+	@media screen and (max-width: 900px) {
+		&@{layout-center} {
+			padding: 0 8px;
+		}
+	}
+
+	@media screen and (max-width: 450px) {
+		&@{layout-center} {
+			padding: 0 4px;
+		}
+	}
+
+	min-height: 100vh;
+	max-width: 1600px;
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+
+	> @{layout-center-background} {	
+		position: fixed;
+		z-index: -100;
+
+		top: 0;
+		left: 0;
+		width: 110vw;
+		height: 110vh;
+	
+		object-fit: cover;
+		object-position: center;
+	}
+}

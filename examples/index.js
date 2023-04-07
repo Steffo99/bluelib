@@ -27,6 +27,7 @@ const enabledByDefault = [
     "less:dist-base:root",
     "less:dist-classic:root",
     "less:dist-glass:root",
+    "less:dist-layouts-center:root",
     "less:dist-colors-royalblue:root",
     "less:dist-fonts-fira-ghpages:root",
 ]
@@ -71,7 +72,7 @@ async function enableChanges() {
     )
     console.debug("Found Less fonts:", lessFonts)
 
-    background = document.querySelector("#background")
+    background = document.querySelector(".layout-center-background")
     console.debug("Found background:", background)
 
     for(const [k, v] of Object.entries(lessStyles)) {

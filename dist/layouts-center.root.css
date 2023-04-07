@@ -1,0 +1,8 @@
+:where(body) :where(.layout-center) > :where(img) {
+  width: 100vw;
+  height: 120vh;
+  position: fixed;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}
