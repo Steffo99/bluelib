@@ -48,6 +48,8 @@ echo >> "$base.less"
 
 echo "Compiling $base.css..."
 lessc "$base.less" "$base.css"
+echo "Compiling $base.min.css..."
+lessc "$base.less" --clean-css "$base.min.css"
 
 done
 done
