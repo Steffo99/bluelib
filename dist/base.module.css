@@ -40,9 +40,12 @@
   outline-style: solid;
   outline-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.3);
 }
+:where(.bluelib) :where(.page-header),
+:where(.bluelib) :where(.page-footer) {
+  text-align: center;
+}
 :where(.bluelib) :where(.page-footer) {
   margin: 1rem 0;
-  text-align: center;
   font-size: x-small;
 }
 :where(.bluelib) :where(.float-top) {
