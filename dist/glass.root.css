@@ -8,76 +8,51 @@
   --b-panel-nested-opacity: 0.075;
 }
 @supports (backdrop-filter: blur(var(--b-panel-blur))) {
-  :where(body) .panel,
-  :where(body) table.panel > caption {
+  :where(body) :where(.panel),
+  :where(body) :where(table):where(.panel) > :where(caption) {
     background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness) / var(--b-panel-initial-opacity));
     backdrop-filter: blur(var(--b-panel-blur)) hue-rotate(calc(var(--bhsl-current-hue) - var(--bhsl-foreground-hue)));
   }
-  :where(body) .panel .panel,
-  :where(body) table.panel > caption .panel {
+  :where(body) :where(.panel) :where(.panel),
+  :where(body) :where(table):where(.panel) > :where(caption) :where(.panel) {
     background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / var(--b-panel-nested-opacity));
     backdrop-filter: none;
   }
-  :where(body) .mark,
-  :where(body) mark,
-  :where(body) .panel.mark {
+  :where(body) :where(mark, .mark),
+  :where(body) :where(.panel):where(mark, .mark) {
     background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
     backdrop-filter: none;
   }
-  :where(body) .mark .mark,
-  :where(body) mark .mark,
-  :where(body) .panel.mark .mark,
-  :where(body) .mark mark,
-  :where(body) mark mark,
-  :where(body) .panel.mark mark,
-  :where(body) .mark .panel.mark,
-  :where(body) mark .panel.mark,
-  :where(body) .panel.mark .panel.mark {
+  :where(body) :where(mark, .mark) :where(mark, .mark),
+  :where(body) :where(.panel):where(mark, .mark) :where(mark, .mark),
+  :where(body) :where(mark, .mark) :where(.panel):where(mark, .mark),
+  :where(body) :where(.panel):where(mark, .mark) :where(.panel):where(mark, .mark) {
     background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
   }
-  :where(body) .mark .mark .mark,
-  :where(body) mark .mark .mark,
-  :where(body) .panel.mark .mark .mark,
-  :where(body) .mark mark .mark,
-  :where(body) mark mark .mark,
-  :where(body) .panel.mark mark .mark,
-  :where(body) .mark .panel.mark .mark,
-  :where(body) mark .panel.mark .mark,
-  :where(body) .panel.mark .panel.mark .mark,
-  :where(body) .mark .mark mark,
-  :where(body) mark .mark mark,
-  :where(body) .panel.mark .mark mark,
-  :where(body) .mark mark mark,
-  :where(body) mark mark mark,
-  :where(body) .panel.mark mark mark,
-  :where(body) .mark .panel.mark mark,
-  :where(body) mark .panel.mark mark,
-  :where(body) .panel.mark .panel.mark mark,
-  :where(body) .mark .mark .panel.mark,
-  :where(body) mark .mark .panel.mark,
-  :where(body) .panel.mark .mark .panel.mark,
-  :where(body) .mark mark .panel.mark,
-  :where(body) mark mark .panel.mark,
-  :where(body) .panel.mark mark .panel.mark,
-  :where(body) .mark .panel.mark .panel.mark,
-  :where(body) mark .panel.mark .panel.mark,
-  :where(body) .panel.mark .panel.mark .panel.mark {
+  :where(body) :where(mark, .mark) :where(mark, .mark) :where(mark, .mark),
+  :where(body) :where(.panel):where(mark, .mark) :where(mark, .mark) :where(mark, .mark),
+  :where(body) :where(mark, .mark) :where(.panel):where(mark, .mark) :where(mark, .mark),
+  :where(body) :where(.panel):where(mark, .mark) :where(.panel):where(mark, .mark) :where(mark, .mark),
+  :where(body) :where(mark, .mark) :where(mark, .mark) :where(.panel):where(mark, .mark),
+  :where(body) :where(.panel):where(mark, .mark) :where(mark, .mark) :where(.panel):where(mark, .mark),
+  :where(body) :where(mark, .mark) :where(.panel):where(mark, .mark) :where(.panel):where(mark, .mark),
+  :where(body) :where(.panel):where(mark, .mark) :where(.panel):where(mark, .mark) :where(.panel):where(mark, .mark) {
     background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
   }
-  :where(body) .todo,
-  :where(body) .panel.todo {
+  :where(body) :where(.todo),
+  :where(body) :where(.panel):where(.todo) {
     background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
   }
-  :where(body) .todo .panel,
-  :where(body) .panel.todo .panel {
+  :where(body) :where(.todo) :where(.panel),
+  :where(body) :where(.panel):where(.todo) :where(.panel) {
     background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
     backdrop-filter: none;
   }
-  :where(body) .panel.todo {
+  :where(body) :where(.panel):where(.todo) {
     background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness) / 0.3);
     backdrop-filter: blur(var(--b-panel-blur)) grayscale(100%);
   }
-  :where(body) .panel .panel.todo {
+  :where(body) :where(.panel) :where(.panel):where(.todo) {
     background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
   }
 }

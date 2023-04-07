@@ -75,21 +75,21 @@
   --b-border-radius: 0;
   --b-outer-shadow: none;
 }
-:where(body):is(:where(body)) h1,
-:where(body):is(:where(body)) h2,
-:where(body):is(:where(body)) h3,
-:where(body):is(:where(body)) h4,
-:where(body):is(:where(body)) h5,
-:where(body):is(:where(body)) h6 {
+:where(body):is(:where(body)) :where(h1),
+:where(body):is(:where(body)) :where(h2),
+:where(body):is(:where(body)) :where(h3),
+:where(body):is(:where(body)) :where(h4),
+:where(body):is(:where(body)) :where(h5),
+:where(body):is(:where(body)) :where(h6) {
   color: white;
   text-shadow: 2px 2px 0 #9832ce;
 }
-:where(body):is(:where(body)) .panel h1,
-:where(body):is(:where(body)) .panel h2,
-:where(body):is(:where(body)) .panel h3,
-:where(body):is(:where(body)) .panel h4,
-:where(body):is(:where(body)) .panel h5,
-:where(body):is(:where(body)) .panel h6 {
+:where(body):is(:where(body)) :where(.panel) :where(h1),
+:where(body):is(:where(body)) :where(.panel) :where(h2),
+:where(body):is(:where(body)) :where(.panel) :where(h3),
+:where(body):is(:where(body)) :where(.panel) :where(h4),
+:where(body):is(:where(body)) :where(.panel) :where(h5),
+:where(body):is(:where(body)) :where(.panel) :where(h6) {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
   text-shadow: none;
 }

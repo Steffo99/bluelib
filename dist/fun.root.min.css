@@ -1,0 +1,1 @@
+@keyframes rainbow{0%{--bhsl-current-hue:0deg}100%{--bhsl-current-hue:360deg}}:where(.rainbow){animation:2s linear infinite rainbow}

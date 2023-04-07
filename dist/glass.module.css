@@ -8,76 +8,51 @@
   --b-panel-nested-opacity: 0.075;
 }
 @supports (backdrop-filter: blur(var(--b-panel-blur))) {
-  :where(.bluelib) .panel,
-  :where(.bluelib) .table.panel > .table-caption {
+  :where(.bluelib) :where(.panel),
+  :where(.bluelib) :where(.table):where(.panel) > :where(.table-caption) {
     background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness) / var(--b-panel-initial-opacity));
     backdrop-filter: blur(var(--b-panel-blur)) hue-rotate(calc(var(--bhsl-current-hue) - var(--bhsl-foreground-hue)));
   }
-  :where(.bluelib) .panel .panel,
-  :where(.bluelib) .table.panel > .table-caption .panel {
+  :where(.bluelib) :where(.panel) :where(.panel),
+  :where(.bluelib) :where(.table):where(.panel) > :where(.table-caption) :where(.panel) {
     background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / var(--b-panel-nested-opacity));
     backdrop-filter: none;
   }
-  :where(.bluelib) .modifier-mark,
-  :where(.bluelib) .element-mark,
-  :where(.bluelib) .panel.modifier-mark {
+  :where(.bluelib) :where(.modifier-mark),
+  :where(.bluelib) :where(.panel):where(.modifier-mark) {
     background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
     backdrop-filter: none;
   }
-  :where(.bluelib) .modifier-mark .modifier-mark,
-  :where(.bluelib) .element-mark .modifier-mark,
-  :where(.bluelib) .panel.modifier-mark .modifier-mark,
-  :where(.bluelib) .modifier-mark .element-mark,
-  :where(.bluelib) .element-mark .element-mark,
-  :where(.bluelib) .panel.modifier-mark .element-mark,
-  :where(.bluelib) .modifier-mark .panel.modifier-mark,
-  :where(.bluelib) .element-mark .panel.modifier-mark,
-  :where(.bluelib) .panel.modifier-mark .panel.modifier-mark {
+  :where(.bluelib) :where(.modifier-mark) :where(.modifier-mark),
+  :where(.bluelib) :where(.panel):where(.modifier-mark) :where(.modifier-mark),
+  :where(.bluelib) :where(.modifier-mark) :where(.panel):where(.modifier-mark),
+  :where(.bluelib) :where(.panel):where(.modifier-mark) :where(.panel):where(.modifier-mark) {
     background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
   }
-  :where(.bluelib) .modifier-mark .modifier-mark .modifier-mark,
-  :where(.bluelib) .element-mark .modifier-mark .modifier-mark,
-  :where(.bluelib) .panel.modifier-mark .modifier-mark .modifier-mark,
-  :where(.bluelib) .modifier-mark .element-mark .modifier-mark,
-  :where(.bluelib) .element-mark .element-mark .modifier-mark,
-  :where(.bluelib) .panel.modifier-mark .element-mark .modifier-mark,
-  :where(.bluelib) .modifier-mark .panel.modifier-mark .modifier-mark,
-  :where(.bluelib) .element-mark .panel.modifier-mark .modifier-mark,
-  :where(.bluelib) .panel.modifier-mark .panel.modifier-mark .modifier-mark,
-  :where(.bluelib) .modifier-mark .modifier-mark .element-mark,
-  :where(.bluelib) .element-mark .modifier-mark .element-mark,
-  :where(.bluelib) .panel.modifier-mark .modifier-mark .element-mark,
-  :where(.bluelib) .modifier-mark .element-mark .element-mark,
-  :where(.bluelib) .element-mark .element-mark .element-mark,
-  :where(.bluelib) .panel.modifier-mark .element-mark .element-mark,
-  :where(.bluelib) .modifier-mark .panel.modifier-mark .element-mark,
-  :where(.bluelib) .element-mark .panel.modifier-mark .element-mark,
-  :where(.bluelib) .panel.modifier-mark .panel.modifier-mark .element-mark,
-  :where(.bluelib) .modifier-mark .modifier-mark .panel.modifier-mark,
-  :where(.bluelib) .element-mark .modifier-mark .panel.modifier-mark,
-  :where(.bluelib) .panel.modifier-mark .modifier-mark .panel.modifier-mark,
-  :where(.bluelib) .modifier-mark .element-mark .panel.modifier-mark,
-  :where(.bluelib) .element-mark .element-mark .panel.modifier-mark,
-  :where(.bluelib) .panel.modifier-mark .element-mark .panel.modifier-mark,
-  :where(.bluelib) .modifier-mark .panel.modifier-mark .panel.modifier-mark,
-  :where(.bluelib) .element-mark .panel.modifier-mark .panel.modifier-mark,
-  :where(.bluelib) .panel.modifier-mark .panel.modifier-mark .panel.modifier-mark {
+  :where(.bluelib) :where(.modifier-mark) :where(.modifier-mark) :where(.modifier-mark),
+  :where(.bluelib) :where(.panel):where(.modifier-mark) :where(.modifier-mark) :where(.modifier-mark),
+  :where(.bluelib) :where(.modifier-mark) :where(.panel):where(.modifier-mark) :where(.modifier-mark),
+  :where(.bluelib) :where(.panel):where(.modifier-mark) :where(.panel):where(.modifier-mark) :where(.modifier-mark),
+  :where(.bluelib) :where(.modifier-mark) :where(.modifier-mark) :where(.panel):where(.modifier-mark),
+  :where(.bluelib) :where(.panel):where(.modifier-mark) :where(.modifier-mark) :where(.panel):where(.modifier-mark),
+  :where(.bluelib) :where(.modifier-mark) :where(.panel):where(.modifier-mark) :where(.panel):where(.modifier-mark),
+  :where(.bluelib) :where(.panel):where(.modifier-mark) :where(.panel):where(.modifier-mark) :where(.panel):where(.modifier-mark) {
     background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
   }
-  :where(.bluelib) .modifier-todo,
-  :where(.bluelib) .panel.modifier-todo {
+  :where(.bluelib) :where(.modifier-todo),
+  :where(.bluelib) :where(.panel):where(.modifier-todo) {
     background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
   }
-  :where(.bluelib) .modifier-todo .panel,
-  :where(.bluelib) .panel.modifier-todo .panel {
+  :where(.bluelib) :where(.modifier-todo) :where(.panel),
+  :where(.bluelib) :where(.panel):where(.modifier-todo) :where(.panel) {
     background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
     backdrop-filter: none;
   }
-  :where(.bluelib) .panel.modifier-todo {
+  :where(.bluelib) :where(.panel):where(.modifier-todo) {
     background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness) / 0.3);
     backdrop-filter: blur(var(--b-panel-blur)) grayscale(100%);
   }
-  :where(.bluelib) .panel .panel.modifier-todo {
+  :where(.bluelib) :where(.panel) :where(.panel):where(.modifier-todo) {
     background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
   }
 }

@@ -17,7 +17,7 @@
   font-family: var(--bfont-text-family);
 }
 :where(.bluelib),
-:where(.bluelib) * {
+:where(.bluelib) :where(*) {
   margin: 0;
   padding: 0;
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
@@ -27,56 +27,51 @@
   scrollbar-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness)) hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
 :where(.bluelib),
-:where(.bluelib) *,
+:where(.bluelib) :where(*),
 :where(.bluelib)::before,
-:where(.bluelib) *::before,
+:where(.bluelib) :where(*)::before,
 :where(.bluelib)::after,
-:where(.bluelib) *::after {
+:where(.bluelib) :where(*)::after {
   box-sizing: border-box;
 }
 :where(.bluelib):focus-visible,
-:where(.bluelib) *:focus-visible {
+:where(.bluelib) :where(*):focus-visible {
   outline-width: 4px;
   outline-style: solid;
   outline-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.3);
 }
-:where(.bluelib) .page-footer {
+:where(.bluelib) :where(.page-footer) {
   margin: 1rem 0;
   text-align: center;
   font-size: x-small;
 }
-:where(.bluelib) .float-top {
+:where(.bluelib) :where(.float-top) {
   margin-bottom: auto;
 }
-:where(.bluelib) .float-right {
+:where(.bluelib) :where(.float-right) {
   margin-left: auto;
 }
-:where(.bluelib) .float-bottom {
+:where(.bluelib) :where(.float-bottom) {
   margin-top: auto;
 }
-:where(.bluelib) .float-left {
+:where(.bluelib) :where(.float-left) {
   margin-right: auto;
 }
-:where(.bluelib) .float-hcenter {
+:where(.bluelib) :where(.float-hcenter) {
   margin-left: auto;
   margin-right: auto;
 }
-:where(.bluelib) .float-vcenter {
+:where(.bluelib) :where(.float-vcenter) {
   margin-top: auto;
   margin-bottom: auto;
 }
-:where(.bluelib) .header-1 {
+:where(.bluelib) :where(.header-1) {
   font-size: 2.5em;
 }
-:where(.bluelib) .header-2 {
+:where(.bluelib) :where(.header-2) {
   font-size: 1.75em;
 }
-:where(.bluelib) .header-1,
-:where(.bluelib) .header-2,
-:where(.bluelib) .header-3,
-:where(.bluelib) .header-4,
-:where(.bluelib) .header-5,
-:where(.bluelib) .header-6 {
+:where(.bluelib) :where(h1, h2, h3, h4, h5, h6) {
   text-align: center;
   --bhsl-current-hue: var(--bhsl-primary-hue);
   --bhsl-current-saturation: var(--bhsl-primary-saturation);
@@ -88,7 +83,7 @@
   line-height: var(--bfont-header-height);
   font-family: var(--bfont-header-family);
 }
-:where(.bluelib) .panel {
+:where(.bluelib) :where(.panel) {
   padding-top: 8px;
   padding-right: 8px;
   padding-left: 8px;
@@ -101,40 +96,64 @@
   gap: 8px;
   background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
-:where(.bluelib) .panel.border-top,
-:where(.bluelib) .panel.panel-box {
+:where(.bluelib) :where(.panel):where(.border-top),
+:where(.bluelib) :where(.panel):where(.panel-box) {
   border-top-width: 2px;
   padding-top: 6px;
 }
-:where(.bluelib) .panel.border-right,
-:where(.bluelib) .panel.panel-box {
+:where(.bluelib) :where(.panel):where(.border-right),
+:where(.bluelib) :where(.panel):where(.panel-box) {
   border-right-width: 2px;
   padding-right: 6px;
 }
-:where(.bluelib) .panel.border-left,
-:where(.bluelib) .panel.panel-box,
-:where(.bluelib) .panel.panel-dialog {
+:where(.bluelib) :where(.panel):where(.border-left),
+:where(.bluelib) :where(.panel):where(.panel-box),
+:where(.bluelib) :where(.panel):where(.panel-dialog) {
   border-left-width: 2px;
   padding-left: 6px;
 }
-:where(.bluelib) .panel.border-bottom,
-:where(.bluelib) .panel.panel-box {
+:where(.bluelib) :where(.panel):where(.border-bottom),
+:where(.bluelib) :where(.panel):where(.panel-box) {
   border-bottom-width: 2px;
   padding-bottom: 6px;
 }
-:where(.bluelib) .panel.panel-parenthesis {
+:where(.bluelib) :where(.panel):where(.panel-parenthesis) {
   font-size: smaller;
 }
-:where(.bluelib) .chapter-0,
-:where(.bluelib) .chapter-1,
-:where(.bluelib) .chapter-2,
-:where(.bluelib) .chapter-3,
-:where(.bluelib) .chapter-4,
-:where(.bluelib) .chapter-5,
-:where(.bluelib) .chapter-6,
-:where(.bluelib) .chapter-7,
-:where(.bluelib) .chapter-8,
-:where(.bluelib) .chapter-9 {
+:where(.bluelib) :where(.chapter-0) {
+  flex-wrap: nowrap;
+}
+:where(.bluelib) :where(.chapter-0) > :where(*) {
+  flex-shrink: 1;
+}
+:where(.bluelib) :where(.chapter-1) > :where(*) {
+  flex-basis: calc(100% / 2);
+}
+:where(.bluelib) :where(.chapter-2) > :where(*) {
+  flex-basis: calc(100% / 3);
+}
+:where(.bluelib) :where(.chapter-3) > :where(*) {
+  flex-basis: calc(100% / 4);
+}
+:where(.bluelib) :where(.chapter-4) > :where(*) {
+  flex-basis: calc(100% / 5);
+}
+:where(.bluelib) :where(.chapter-5) > :where(*) {
+  flex-basis: calc(100% / 6);
+}
+:where(.bluelib) :where(.chapter-6) > :where(*) {
+  flex-basis: calc(100% / 7);
+}
+:where(.bluelib) :where(.chapter-7) > :where(*) {
+  flex-basis: calc(100% / 8);
+}
+:where(.bluelib) :where(.chapter-8) > :where(*) {
+  flex-basis: calc(100% / 9);
+}
+:where(.bluelib) :where(.chapter-9) > :where(*) {
+  flex-basis: calc(100% / 10);
+}
+:where(.bluelib) :where(.chapter-0, .chapter-1, .chapter-2, .chapter-3, .chapter-4, .chapter-5, .chapter-6, .chapter-7, .chapter-8, .chapter-9) {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -143,145 +162,44 @@
   align-items: stretch;
   margin: 8px 0;
 }
-:where(.bluelib) .chapter-0 > *,
-:where(.bluelib) .chapter-1 > *,
-:where(.bluelib) .chapter-2 > *,
-:where(.bluelib) .chapter-3 > *,
-:where(.bluelib) .chapter-4 > *,
-:where(.bluelib) .chapter-5 > *,
-:where(.bluelib) .chapter-6 > *,
-:where(.bluelib) .chapter-7 > *,
-:where(.bluelib) .chapter-8 > *,
-:where(.bluelib) .chapter-9 > * {
+:where(.bluelib) :where(.chapter-0, .chapter-1, .chapter-2, .chapter-3, .chapter-4, .chapter-5, .chapter-6, .chapter-7, .chapter-8, .chapter-9) > :where(*) {
   flex-grow: 1;
   flex-shrink: 0;
 }
-:where(.bluelib) .chapter-0 > .header-1,
-:where(.bluelib) .chapter-1 > .header-1,
-:where(.bluelib) .chapter-2 > .header-1,
-:where(.bluelib) .chapter-3 > .header-1,
-:where(.bluelib) .chapter-4 > .header-1,
-:where(.bluelib) .chapter-5 > .header-1,
-:where(.bluelib) .chapter-6 > .header-1,
-:where(.bluelib) .chapter-7 > .header-1,
-:where(.bluelib) .chapter-8 > .header-1,
-:where(.bluelib) .chapter-9 > .header-1,
-:where(.bluelib) .chapter-0 > .header-2,
-:where(.bluelib) .chapter-1 > .header-2,
-:where(.bluelib) .chapter-2 > .header-2,
-:where(.bluelib) .chapter-3 > .header-2,
-:where(.bluelib) .chapter-4 > .header-2,
-:where(.bluelib) .chapter-5 > .header-2,
-:where(.bluelib) .chapter-6 > .header-2,
-:where(.bluelib) .chapter-7 > .header-2,
-:where(.bluelib) .chapter-8 > .header-2,
-:where(.bluelib) .chapter-9 > .header-2,
-:where(.bluelib) .chapter-0 > .header-3,
-:where(.bluelib) .chapter-1 > .header-3,
-:where(.bluelib) .chapter-2 > .header-3,
-:where(.bluelib) .chapter-3 > .header-3,
-:where(.bluelib) .chapter-4 > .header-3,
-:where(.bluelib) .chapter-5 > .header-3,
-:where(.bluelib) .chapter-6 > .header-3,
-:where(.bluelib) .chapter-7 > .header-3,
-:where(.bluelib) .chapter-8 > .header-3,
-:where(.bluelib) .chapter-9 > .header-3,
-:where(.bluelib) .chapter-0 > .header-4,
-:where(.bluelib) .chapter-1 > .header-4,
-:where(.bluelib) .chapter-2 > .header-4,
-:where(.bluelib) .chapter-3 > .header-4,
-:where(.bluelib) .chapter-4 > .header-4,
-:where(.bluelib) .chapter-5 > .header-4,
-:where(.bluelib) .chapter-6 > .header-4,
-:where(.bluelib) .chapter-7 > .header-4,
-:where(.bluelib) .chapter-8 > .header-4,
-:where(.bluelib) .chapter-9 > .header-4,
-:where(.bluelib) .chapter-0 > .header-5,
-:where(.bluelib) .chapter-1 > .header-5,
-:where(.bluelib) .chapter-2 > .header-5,
-:where(.bluelib) .chapter-3 > .header-5,
-:where(.bluelib) .chapter-4 > .header-5,
-:where(.bluelib) .chapter-5 > .header-5,
-:where(.bluelib) .chapter-6 > .header-5,
-:where(.bluelib) .chapter-7 > .header-5,
-:where(.bluelib) .chapter-8 > .header-5,
-:where(.bluelib) .chapter-9 > .header-5,
-:where(.bluelib) .chapter-0 > .header-6,
-:where(.bluelib) .chapter-1 > .header-6,
-:where(.bluelib) .chapter-2 > .header-6,
-:where(.bluelib) .chapter-3 > .header-6,
-:where(.bluelib) .chapter-4 > .header-6,
-:where(.bluelib) .chapter-5 > .header-6,
-:where(.bluelib) .chapter-6 > .header-6,
-:where(.bluelib) .chapter-7 > .header-6,
-:where(.bluelib) .chapter-8 > .header-6,
-:where(.bluelib) .chapter-9 > .header-6 {
+:where(.bluelib) :where(.chapter-0, .chapter-1, .chapter-2, .chapter-3, .chapter-4, .chapter-5, .chapter-6, .chapter-7, .chapter-8, .chapter-9) > :where(h1, h2, h3, h4, h5, h6) {
   flex-basis: 100%;
   margin-top: 1.2em;
 }
-:where(.bluelib) .chapter-0 {
-  flex-wrap: nowrap;
-}
-:where(.bluelib) .chapter-0 > * {
-  flex-shrink: 1;
-}
-:where(.bluelib) .chapter-1 > * {
-  flex-basis: calc(100% / 2);
-}
-:where(.bluelib) .chapter-2 > * {
-  flex-basis: calc(100% / 3);
-}
-:where(.bluelib) .chapter-3 > * {
-  flex-basis: calc(100% / 4);
-}
-:where(.bluelib) .chapter-4 > * {
-  flex-basis: calc(100% / 5);
-}
-:where(.bluelib) .chapter-5 > * {
-  flex-basis: calc(100% / 6);
-}
-:where(.bluelib) .chapter-6 > * {
-  flex-basis: calc(100% / 7);
-}
-:where(.bluelib) .chapter-7 > * {
-  flex-basis: calc(100% / 8);
-}
-:where(.bluelib) .chapter-8 > * {
-  flex-basis: calc(100% / 9);
-}
-:where(.bluelib) .chapter-9 > * {
-  flex-basis: calc(100% / 10);
-}
-:where(.bluelib) .separator {
+:where(.bluelib) :where(.separator) {
   border-width: 1px;
   border-style: dashed;
 }
-:where(.bluelib) .separator-light {
+:where(.bluelib) :where(.separator-light) {
   border-style: dotted;
 }
-:where(.bluelib) .separator-heavy {
+:where(.bluelib) :where(.separator-heavy) {
   border-style: solid;
 }
-:where(.bluelib) .image {
+:where(.bluelib) :where(.image) {
   display: block;
   max-width: 100%;
   object-fit: contain;
 }
-:where(.bluelib) .image-limit-half {
+:where(.bluelib) :where(.image-limit-half) {
   max-height: max(28.2vw, 50vh);
 }
-:where(.bluelib) .image-limit-quarter {
+:where(.bluelib) :where(.image-limit-quarter) {
   max-height: max(14.1vw, 25vh);
 }
-:where(.bluelib) .table {
+:where(.bluelib) :where(.table) {
   border-collapse: collapse;
 }
-:where(.bluelib) .table .table-head,
-:where(.bluelib) .table .table-data {
+:where(.bluelib) :where(.table) :where(.table-head),
+:where(.bluelib) :where(.table) :where(.table-data) {
   padding: 3px 7px;
   border-width: 1px;
 }
-:where(.bluelib) .table .table-caption {
+:where(.bluelib) :where(.table) :where(.table-caption) {
   border-width: 1px;
   font-style: var(--bfont-caption-style);
   font-variant: var(--bfont-caption-variant);
@@ -290,77 +208,77 @@
   line-height: var(--bfont-caption-height);
   font-family: var(--bfont-caption-family);
 }
-:where(.bluelib) .table .table-caption.table-caption-top {
+:where(.bluelib) :where(.table) :where(.table-caption):where(.table-caption-top) {
   caption-side: top;
   border-bottom-width: 0;
 }
-:where(.bluelib) .table .table-caption.table-caption-bottom {
+:where(.bluelib) :where(.table) :where(.table-caption):where(.table-caption-bottom) {
   caption-side: bottom;
   border-top-width: 0;
 }
-:where(.bluelib) .table.panel {
+:where(.bluelib) :where(.table):where(.panel) {
   display: table;
 }
-:where(.bluelib) .table.panel .table-head,
-:where(.bluelib) .table.panel .table-data {
+:where(.bluelib) :where(.table):where(.panel) :where(.table-head),
+:where(.bluelib) :where(.table):where(.panel) :where(.table-data) {
   padding: 8px;
 }
-:where(.bluelib) .table.panel .table-caption {
+:where(.bluelib) :where(.table):where(.panel) :where(.table-caption) {
   text-align: inherit;
   background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
   padding: 8px;
 }
-:where(.bluelib) .table.panel .table-caption * {
+:where(.bluelib) :where(.table):where(.panel) :where(.table-caption) :where(*) {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-:where(.bluelib) .table.panel .table-caption *:first-child {
+:where(.bluelib) :where(.table):where(.panel) :where(.table-caption) :where(*):first-child {
   margin-top: 0;
 }
-:where(.bluelib) .table.panel .table-caption *:last-child {
+:where(.bluelib) :where(.table):where(.panel) :where(.table-caption) :where(*):last-child {
   margin-bottom: 0;
 }
-:where(.bluelib) .table.panel-box .table-row {
+:where(.bluelib) :where(.table):where(.panel-box) :where(.table-row) {
   border-width: 1px;
 }
-:where(.bluelib) .table.panel-box .table-head,
-:where(.bluelib) .table.panel-box .table-data {
+:where(.bluelib) :where(.table):where(.panel-box) :where(.table-head),
+:where(.bluelib) :where(.table):where(.panel-box) :where(.table-data) {
   border-width: 1px;
   padding: 7px;
 }
-:where(.bluelib) .table.panel-box .table-caption {
+:where(.bluelib) :where(.table):where(.panel-box) :where(.table-caption) {
   border-width: 2px;
   padding: 6px;
 }
-:where(.bluelib) .table.panel-box .table-caption.table-caption-top {
+:where(.bluelib) :where(.table):where(.panel-box) :where(.table-caption):where(.table-caption-top) {
   border-bottom-width: 0;
 }
-:where(.bluelib) .table.panel-box .table-caption.table-caption-bottom {
+:where(.bluelib) :where(.table):where(.panel-box) :where(.table-caption):where(.table-caption-bottom) {
   border-top-width: 0;
 }
-:where(.bluelib) .table.panel-dialog .table-header > .table-row {
+:where(.bluelib) :where(.table):where(.panel-dialog) :where(.table-header) > :where(.table-row) {
   border-bottom-width: 1px;
 }
-:where(.bluelib) .table.panel-dialog .table-body > .table-row {
+:where(.bluelib) :where(.table):where(.panel-dialog) :where(.table-body) > :where(.table-row) {
   border-width: 0;
 }
-:where(.bluelib) .table.panel-dialog .table-footer > .table-row {
+:where(.bluelib) :where(.table):where(.panel-dialog) :where(.table-footer) > :where(.table-row) {
   border-top-width: 1px;
 }
-:where(.bluelib) .table.panel-dialog .table-head,
-:where(.bluelib) .table.panel-dialog .table-data {
+:where(.bluelib) :where(.table):where(.panel-dialog) :where(.table-head),
+:where(.bluelib) :where(.table):where(.panel-dialog) :where(.table-data) {
   border-width: 0 0 0 1px;
   padding: 8px 8px 8px 7px;
 }
-:where(.bluelib) .table.panel-dialog .table-caption {
+:where(.bluelib) :where(.table):where(.panel-dialog) :where(.table-caption) {
   border-width: 0 0 0 2px;
   padding: 8px 8px 8px 6px;
 }
-:where(.bluelib) .panel > .list-unordered,
-:where(.bluelib) .panel > .list-ordered {
+:where(.bluelib) :where(.panel) > :where(.list-unordered),
+:where(.bluelib) :where(.panel) > :where(.list-ordered) {
   margin-left: 6ex;
 }
-:where(.bluelib) .glossary-term {
+:where(.bluelib) :where(.glossary-term) {
   margin-top: 0.5em;
   padding: 0.2em 0;
   --bhsl-current-hue: var(--bhsl-primary-hue);
@@ -373,14 +291,14 @@
   line-height: var(--bfont-term-height);
   font-family: var(--bfont-term-family);
 }
-:where(.bluelib) .glossary-description {
+:where(.bluelib) :where(.glossary-description) {
   margin-left: 4.5ex;
   margin-bottom: 0.5em;
 }
-:where(.bluelib) .glossary-details {
+:where(.bluelib) :where(.glossary-details) {
   margin-left: 4.5ex;
 }
-:where(.bluelib) .glossary-summary {
+:where(.bluelib) :where(.glossary-summary) {
   cursor: pointer;
   margin-left: -4ex;
   padding: 0.2em 0;
@@ -392,11 +310,10 @@
   font-family: var(--bfont-summary-family);
   user-select: none;
 }
-:where(.bluelib) .modifier-fade {
+:where(.bluelib) :where(.modifier-fade) {
   opacity: 0.3;
 }
-:where(.bluelib) .modifier-mark,
-:where(.bluelib) .element-mark {
+:where(.bluelib) :where(.modifier-mark) {
   font-style: var(--bfont-mark-style);
   font-variant: var(--bfont-mark-variant);
   font-weight: var(--bfont-mark-weight);
@@ -408,73 +325,63 @@
   --bhsl-current-saturation: var(--bhsl-mark-foreground-saturation);
   --bhsl-current-lightness: var(--bhsl-mark-foreground-lightness);
 }
-:where(.bluelib) .modifier-mark .modifier-mark,
-:where(.bluelib) .element-mark .modifier-mark,
-:where(.bluelib) .modifier-mark .element-mark,
-:where(.bluelib) .element-mark .element-mark {
+:where(.bluelib) :where(.modifier-mark) :where(.modifier-mark) {
   background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
   --bhsl-current-hue: var(--bhsl-foreground-hue);
   --bhsl-current-saturation: var(--bhsl-foreground-saturation);
   --bhsl-current-lightness: var(--bhsl-foreground-lightness);
 }
-:where(.bluelib) .modifier-mark .modifier-mark .modifier-mark,
-:where(.bluelib) .element-mark .modifier-mark .modifier-mark,
-:where(.bluelib) .modifier-mark .element-mark .modifier-mark,
-:where(.bluelib) .element-mark .element-mark .modifier-mark,
-:where(.bluelib) .modifier-mark .modifier-mark .element-mark,
-:where(.bluelib) .element-mark .modifier-mark .element-mark,
-:where(.bluelib) .modifier-mark .element-mark .element-mark,
-:where(.bluelib) .element-mark .element-mark .element-mark {
+:where(.bluelib) :where(.modifier-mark) :where(.modifier-mark) :where(.modifier-mark) {
   background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
   --bhsl-current-hue: var(--bhsl-mark-foreground-hue);
   --bhsl-current-saturation: var(--bhsl-mark-foreground-saturation);
   --bhsl-current-lightness: var(--bhsl-mark-foreground-lightness);
 }
-:where(.bluelib) .modifier-todo {
+:where(.bluelib) :where(.modifier-todo) {
   --bhsl-current-hue: var(--bhsl-todo-foreground-hue);
   --bhsl-current-saturation: var(--bhsl-todo-foreground-saturation);
   --bhsl-current-lightness: var(--bhsl-todo-foreground-lightness);
 }
-:where(.bluelib) .modifier-todo,
-:where(.bluelib) .modifier-todo .panel {
+:where(.bluelib) :where(.modifier-todo),
+:where(.bluelib) :where(.modifier-todo) :where(.panel) {
   border-style: dashed;
   background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
 }
-:where(.bluelib) .property-disabled {
+:where(.bluelib) :where(.property-disabled) {
   border-style: dashed;
   cursor: not-allowed;
 }
-:where(.bluelib) .modifier-red {
+:where(.bluelib) :where(.modifier-red) {
   --bhsl-current-hue: var(--bhsl-red-hue);
   --bhsl-current-saturation: var(--bhsl-red-saturation);
   --bhsl-current-lightness: var(--bhsl-red-lightness);
 }
-:where(.bluelib) .modifier-yellow {
+:where(.bluelib) :where(.modifier-yellow) {
   --bhsl-current-hue: var(--bhsl-yellow-hue);
   --bhsl-current-saturation: var(--bhsl-yellow-saturation);
   --bhsl-current-lightness: var(--bhsl-yellow-lightness);
 }
-:where(.bluelib) .modifier-green {
+:where(.bluelib) :where(.modifier-green) {
   --bhsl-current-hue: var(--bhsl-green-hue);
   --bhsl-current-saturation: var(--bhsl-green-saturation);
   --bhsl-current-lightness: var(--bhsl-green-lightness);
 }
-:where(.bluelib) .modifier-cyan {
+:where(.bluelib) :where(.modifier-cyan) {
   --bhsl-current-hue: var(--bhsl-cyan-hue);
   --bhsl-current-saturation: var(--bhsl-cyan-saturation);
   --bhsl-current-lightness: var(--bhsl-cyan-lightness);
 }
-:where(.bluelib) .modifier-blue {
+:where(.bluelib) :where(.modifier-blue) {
   --bhsl-current-hue: var(--bhsl-blue-hue);
   --bhsl-current-saturation: var(--bhsl-blue-saturation);
   --bhsl-current-lightness: var(--bhsl-blue-lightness);
 }
-:where(.bluelib) .modifier-magenta {
+:where(.bluelib) :where(.modifier-magenta) {
   --bhsl-current-hue: var(--bhsl-magenta-hue);
   --bhsl-current-saturation: var(--bhsl-magenta-saturation);
   --bhsl-current-lightness: var(--bhsl-magenta-lightness);
 }
-:where(.bluelib) .input {
+:where(.bluelib) :where(.input) {
   font: inherit;
   cursor: pointer;
   background-color: transparent;
@@ -484,50 +391,50 @@
   border-width: 0;
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.4);
 }
-:where(.bluelib) .input::placeholder {
+:where(.bluelib) :where(.input)::placeholder {
   opacity: 1;
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.4);
 }
-:where(.bluelib) .input:hover:not(.property-disabled) {
+:where(.bluelib) :where(.input):hover:not(:where(.property-disabled)) {
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-:where(.bluelib) .input:hover:not(.property-disabled)::placeholder {
+:where(.bluelib) :where(.input):hover:not(:where(.property-disabled))::placeholder {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-:where(.bluelib) .input:active:not(.property-disabled),
-:where(.bluelib) .input:focus:not(.property-disabled) {
+:where(.bluelib) :where(.input):active:not(:where(.property-disabled)),
+:where(.bluelib) :where(.input):focus:not(:where(.property-disabled)) {
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-:where(.bluelib) .input-area {
+:where(.bluelib) :where(.input-area) {
   resize: vertical;
 }
-:where(.bluelib) .input-field,
-:where(.bluelib) .input-select {
+:where(.bluelib) :where(.input-field),
+:where(.bluelib) :where(.input-select) {
   border-bottom-width: 2px;
 }
-:where(.bluelib) .input-area,
-:where(.bluelib) .input-multiselect {
+:where(.bluelib) :where(.input-area),
+:where(.bluelib) :where(.input-multiselect) {
   border-left-width: 2px;
 }
-:where(.bluelib) .input-field:not(.property-disabled),
-:where(.bluelib) .input-area:not(.property-disabled) {
+:where(.bluelib) :where(.input-field):not(:where(.property-disabled)),
+:where(.bluelib) :where(.input-area):not(:where(.property-disabled)) {
   cursor: text;
 }
-:where(.bluelib) .input-select:not(.property-disabled),
-:where(.bluelib) .input-multiselect:not(.property-disabled) {
+:where(.bluelib) :where(.input-select):not(:where(.property-disabled)),
+:where(.bluelib) :where(.input-multiselect):not(:where(.property-disabled)) {
   cursor: vertical-text;
 }
-:where(.bluelib) .input-range:not(.property-disabled) {
+:where(.bluelib) :where(.input-range):not(:where(.property-disabled)) {
   cursor: ew-resize;
 }
-:where(.bluelib) .input-radio:not(.property-disabled),
-:where(.bluelib) .input-checkbox:not(.property-disabled),
-:where(.bluelib) .input-button:not(.property-disabled),
-:where(.bluelib) .input-color:not(.property-disabled) {
+:where(.bluelib) :where(.input-radio):not(:where(.property-disabled)),
+:where(.bluelib) :where(.input-checkbox):not(:where(.property-disabled)),
+:where(.bluelib) :where(.input-button):not(:where(.property-disabled)),
+:where(.bluelib) :where(.input-color):not(:where(.property-disabled)) {
   cursor: pointer;
 }
-:where(.bluelib) .input-select optgroup,
-:where(.bluelib) .input-multiselect optgroup {
+:where(.bluelib) :where(.input-select) optgroup,
+:where(.bluelib) :where(.input-multiselect) optgroup {
   padding-bottom: 0.25em;
   font-style: var(--bfont-header-style);
   font-variant: var(--bfont-header-variant);
@@ -536,12 +443,12 @@
   line-height: var(--bfont-header-height);
   font-family: var(--bfont-header-family);
 }
-:where(.bluelib) .input-select optgroup option,
-:where(.bluelib) .input-multiselect optgroup option {
+:where(.bluelib) :where(.input-select) optgroup option,
+:where(.bluelib) :where(.input-multiselect) optgroup option {
   padding: 0.125em 0 0.125em 2ex;
 }
-:where(.bluelib) .input-select option,
-:where(.bluelib) .input-multiselect option {
+:where(.bluelib) :where(.input-select) option,
+:where(.bluelib) :where(.input-multiselect) option {
   font-style: var(--bfont-text-style);
   font-variant: var(--bfont-text-variant);
   font-weight: var(--bfont-text-weight);
@@ -549,8 +456,8 @@
   line-height: var(--bfont-text-height);
   font-family: var(--bfont-text-family);
 }
-:where(.bluelib) .input-radio,
-:where(.bluelib) .input-checkbox {
+:where(.bluelib) :where(.input-radio),
+:where(.bluelib) :where(.input-checkbox) {
   appearance: none;
   width: 1em;
   height: 1em;
@@ -560,89 +467,65 @@
   justify-content: center;
   align-items: center;
 }
-:where(.bluelib) .input-radio::before,
-:where(.bluelib) .input-checkbox::before {
+:where(.bluelib) :where(.input-radio)::before,
+:where(.bluelib) :where(.input-checkbox)::before {
   display: block;
   content: "";
   width: 100%;
   height: 100%;
 }
-:where(.bluelib) .input-radio:checked::before,
-:where(.bluelib) .input-checkbox:checked::before {
+:where(.bluelib) :where(.input-radio):checked::before,
+:where(.bluelib) :where(.input-checkbox):checked::before {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-:where(.bluelib) .input-radio {
+:where(.bluelib) :where(.input-radio) {
   border-radius: 100%;
 }
-:where(.bluelib) .input-radio::before {
+:where(.bluelib) :where(.input-radio)::before {
   border-radius: 100%;
 }
-:where(.bluelib) .input-range {
+:where(.bluelib) :where(.input-range) {
   padding: 0;
-  /*
-        appearance: none;
-
-        &::-moz-range-thumb {
-            width: 0;
-            border-radius: 0;
-            border-style: outset;
-
-            border-color: .hsl-group(current)[@c];
-            border-width: 4px;
-
-            background-color: .hsl-group(primary)[@c];
-        }
-
-        &::-moz-range-track {
-            height: 0.125em;
-            background-color: .hsl-group(current)[@c];
-        }
-
-        &::-moz-range-progress {
-            height: 0.5em;
-            background-color: .hsl-group(current)[@c];
-        }
-         */
 }
-:where(.bluelib) .input-button {
+:where(.bluelib) :where(.input-button) {
   border-width: 2px;
   border-style: outset;
 }
-:where(.bluelib) .input-button:active {
+:where(.bluelib) :where(.input-button):active {
   border-style: inset;
 }
-:where(.bluelib) .input-file,
-:where(.bluelib) .input-color {
+:where(.bluelib) :where(.input-file),
+:where(.bluelib) :where(.input-color) {
   padding: 0;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  :where(.bluelib) .input-field::-webkit-calendar-picker-indicator {
+  :where(.bluelib) :where(.input-field)::-webkit-calendar-picker-indicator {
     filter: invert(calc(calc(var(--bhsl-current-lightness) - 50%) * 1000));
   }
-  :where(.bluelib) .input-select optgroup,
-  :where(.bluelib) .input-select option {
+  :where(.bluelib) :where(.input-select) optgroup,
+  :where(.bluelib) :where(.input-select) option {
     background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
   }
-  :where(.bluelib) .input-select optgroup::before,
-  :where(.bluelib) .input-select option::before {
+  :where(.bluelib) :where(.input-select) optgroup::before,
+  :where(.bluelib) :where(.input-select) option::before {
     content: "";
   }
 }
-:where(.bluelib) .form-flex {
+:where(.bluelib) :where(.form-flex) {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
 }
-:where(.bluelib) .form-flex > .form-flex-content {
+:where(.bluelib) :where(.form-flex) > :where(.form-flex-content) {
   margin: 0.5em 0;
 }
-:where(.bluelib) .form-flex > .form-flex-choice {
+:where(.bluelib) :where(.form-flex) > :where(.form-flex-choice) {
   display: flex;
   gap: 1ex;
   min-height: 1.675em;
 }
-:where(.bluelib) .form-flex > .form-flex-choice > *:first-child,
-:where(.bluelib) .form-flex > .form-flex-choice > *:last-child {
+:where(.bluelib) :where(.form-flex) > :where(.form-flex-choice) > :where(*):first-child,
+:where(.bluelib) :where(.form-flex) > :where(.form-flex-choice) > :where(*):last-child {
   margin: auto 0;
   flex-basis: 15%;
   flex-grow: 0;
@@ -657,7 +540,7 @@
   --bhsl-current-saturation: var(--bhsl-primary-saturation);
   --bhsl-current-lightness: var(--bhsl-primary-lightness);
 }
-:where(.bluelib) .form-flex > .form-flex-choice > * {
+:where(.bluelib) :where(.form-flex) > :where(.form-flex-choice) > :where(*) {
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
@@ -665,20 +548,20 @@
   align-items: stretch;
   gap: 1ex;
 }
-:where(.bluelib) .form-flex > .form-flex-choice > *:first-child {
+:where(.bluelib) :where(.form-flex) > :where(.form-flex-choice) > :where(*):first-child {
   text-align: right;
   display: block;
 }
-:where(.bluelib) .form-flex > .form-flex-choice > *:last-child {
+:where(.bluelib) :where(.form-flex) > :where(.form-flex-choice) > :where(*):last-child {
   text-align: left;
   display: block;
 }
-:where(.bluelib) .text-anchor {
+:where(.bluelib) :where(.text-anchor) {
   --bhsl-current-hue: var(--bhsl-link-hue);
   --bhsl-current-saturation: var(--bhsl-link-saturation);
   --bhsl-current-lightness: var(--bhsl-link-lightness);
 }
-:where(.bluelib) .text-idiomatic {
+:where(.bluelib) :where(.text-idiomatic) {
   font-style: var(--bfont-idiomatic-style);
   font-variant: var(--bfont-idiomatic-variant);
   font-weight: var(--bfont-idiomatic-weight);
@@ -686,7 +569,7 @@
   line-height: var(--bfont-idiomatic-height);
   font-family: var(--bfont-idiomatic-family);
 }
-:where(.bluelib) .text-emphasis {
+:where(.bluelib) :where(.text-emphasis) {
   font-style: var(--bfont-emphasis-style);
   font-variant: var(--bfont-emphasis-variant);
   font-weight: var(--bfont-emphasis-weight);
@@ -694,7 +577,7 @@
   line-height: var(--bfont-emphasis-height);
   font-family: var(--bfont-emphasis-family);
 }
-:where(.bluelib) .text-attention {
+:where(.bluelib) :where(.text-attention) {
   font-style: var(--bfont-attention-style);
   font-variant: var(--bfont-attention-variant);
   font-weight: var(--bfont-attention-weight);
@@ -702,7 +585,7 @@
   line-height: var(--bfont-attention-height);
   font-family: var(--bfont-attention-family);
 }
-:where(.bluelib) .text-strong {
+:where(.bluelib) :where(.text-strong) {
   font-style: var(--bfont-strong-style);
   font-variant: var(--bfont-strong-variant);
   font-weight: var(--bfont-strong-weight);
@@ -710,20 +593,20 @@
   line-height: var(--bfont-strong-height);
   font-family: var(--bfont-strong-family);
 }
-:where(.bluelib) .text-inserted {
+:where(.bluelib) :where(.text-inserted) {
   --bhsl-current-hue: var(--bhsl-inserted-hue);
   --bhsl-current-saturation: var(--bhsl-inserted-saturation);
   --bhsl-current-lightness: var(--bhsl-inserted-lightness);
 }
-:where(.bluelib) .text-deleted {
+:where(.bluelib) :where(.text-deleted) {
   --bhsl-current-hue: var(--bhsl-deleted-hue);
   --bhsl-current-saturation: var(--bhsl-deleted-saturation);
   --bhsl-current-lightness: var(--bhsl-deleted-lightness);
 }
-:where(.bluelib) .text-code,
-:where(.bluelib) .text-preformatted,
-:where(.bluelib) .text-input,
-:where(.bluelib) .text-output {
+:where(.bluelib) :where(.text-code),
+:where(.bluelib) :where(.text-preformatted),
+:where(.bluelib) :where(.text-input),
+:where(.bluelib) :where(.text-output) {
   font-style: var(--bfont-code-style);
   font-variant: var(--bfont-code-variant);
   font-weight: var(--bfont-code-weight);
@@ -731,20 +614,20 @@
   line-height: var(--bfont-code-height);
   font-family: var(--bfont-code-family);
 }
-:where(.bluelib) .text-preformatted {
+:where(.bluelib) :where(.text-preformatted) {
   overflow-x: scroll;
 }
-:where(.bluelib) .text-input,
-:where(.bluelib) .text-output {
+:where(.bluelib) :where(.text-input),
+:where(.bluelib) :where(.text-output) {
   padding: 0 0.25ex;
 }
-:where(.bluelib) .text-input {
+:where(.bluelib) :where(.text-input) {
   background-color: hsl(var(--bhsl-sample-output-hue) var(--bhsl-sample-output-saturation) var(--bhsl-sample-output-lightness));
   --bhsl-current-hue: var(--bhsl-sample-input-hue);
   --bhsl-current-saturation: var(--bhsl-sample-input-saturation);
   --bhsl-current-lightness: var(--bhsl-sample-input-lightness);
 }
-:where(.bluelib) .text-input .text-input {
+:where(.bluelib) :where(.text-input) :where(.text-input) {
   font-style: var(--bfont-boldcode-style);
   font-variant: var(--bfont-boldcode-variant);
   font-weight: var(--bfont-boldcode-weight);
@@ -752,13 +635,13 @@
   line-height: var(--bfont-boldcode-height);
   font-family: var(--bfont-boldcode-family);
 }
-:where(.bluelib) .text-output {
+:where(.bluelib) :where(.text-output) {
   background-color: hsl(var(--bhsl-sample-input-hue) var(--bhsl-sample-input-saturation) var(--bhsl-sample-input-lightness));
   --bhsl-current-hue: var(--bhsl-sample-output-hue);
   --bhsl-current-saturation: var(--bhsl-sample-output-saturation);
   --bhsl-current-lightness: var(--bhsl-sample-output-lightness);
 }
-:where(.bluelib) .text-output .text-output {
+:where(.bluelib) :where(.text-output) :where(.text-output) {
   font-style: var(--bfont-boldcode-style);
   font-variant: var(--bfont-boldcode-variant);
   font-weight: var(--bfont-boldcode-weight);
@@ -766,7 +649,7 @@
   line-height: var(--bfont-boldcode-height);
   font-family: var(--bfont-boldcode-family);
 }
-:where(.bluelib) .text-variable {
+:where(.bluelib) :where(.text-variable) {
   font-style: var(--bfont-variable-style);
   font-variant: var(--bfont-variable-variant);
   font-weight: var(--bfont-variable-weight);
@@ -774,7 +657,7 @@
   line-height: var(--bfont-variable-height);
   font-family: var(--bfont-variable-family);
 }
-:where(.bluelib) .text-citation {
+:where(.bluelib) :where(.text-citation) {
   font-style: var(--bfont-citation-style);
   font-variant: var(--bfont-citation-variant);
   font-weight: var(--bfont-citation-weight);
@@ -782,7 +665,7 @@
   line-height: var(--bfont-citation-height);
   font-family: var(--bfont-citation-family);
 }
-:where(.bluelib) .text-definition {
+:where(.bluelib) :where(.text-definition) {
   font-style: var(--bfont-term-style);
   font-variant: var(--bfont-term-variant);
   font-weight: var(--bfont-term-weight);
@@ -793,6 +676,6 @@
   --bhsl-current-saturation: var(--bhsl-primary-saturation);
   --bhsl-current-lightness: var(--bhsl-primary-lightness);
 }
-:where(.bluelib) .text-abbreviation {
+:where(.bluelib) :where(.text-abbreviation) {
   cursor: help;
 }

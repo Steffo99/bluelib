@@ -75,21 +75,21 @@
   --b-border-radius: 0;
   --b-outer-shadow: none;
 }
-:where(.bluelib):is(:where(.bluelib)) .header-1,
-:where(.bluelib):is(:where(.bluelib)) .header-2,
-:where(.bluelib):is(:where(.bluelib)) .header-3,
-:where(.bluelib):is(:where(.bluelib)) .header-4,
-:where(.bluelib):is(:where(.bluelib)) .header-5,
-:where(.bluelib):is(:where(.bluelib)) .header-6 {
+:where(.bluelib):is(:where(.bluelib)) :where(.header-1),
+:where(.bluelib):is(:where(.bluelib)) :where(.header-2),
+:where(.bluelib):is(:where(.bluelib)) :where(.header-3),
+:where(.bluelib):is(:where(.bluelib)) :where(.header-4),
+:where(.bluelib):is(:where(.bluelib)) :where(.header-5),
+:where(.bluelib):is(:where(.bluelib)) :where(.header-6) {
   color: white;
   text-shadow: 2px 2px 0 #9832ce;
 }
-:where(.bluelib):is(:where(.bluelib)) .panel .header-1,
-:where(.bluelib):is(:where(.bluelib)) .panel .header-2,
-:where(.bluelib):is(:where(.bluelib)) .panel .header-3,
-:where(.bluelib):is(:where(.bluelib)) .panel .header-4,
-:where(.bluelib):is(:where(.bluelib)) .panel .header-5,
-:where(.bluelib):is(:where(.bluelib)) .panel .header-6 {
+:where(.bluelib):is(:where(.bluelib)) :where(.panel) :where(.header-1),
+:where(.bluelib):is(:where(.bluelib)) :where(.panel) :where(.header-2),
+:where(.bluelib):is(:where(.bluelib)) :where(.panel) :where(.header-3),
+:where(.bluelib):is(:where(.bluelib)) :where(.panel) :where(.header-4),
+:where(.bluelib):is(:where(.bluelib)) :where(.panel) :where(.header-5),
+:where(.bluelib):is(:where(.bluelib)) :where(.panel) :where(.header-6) {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
   text-shadow: none;
 }
