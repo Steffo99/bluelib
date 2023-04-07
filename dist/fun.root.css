@@ -15,6 +15,6 @@
     --bhsl-current-hue: 360deg;
   }
 }
-.rainbow {
+:where(.rainbow) {
   animation: 2s linear infinite rainbow;
 }

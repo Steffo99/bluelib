@@ -7,175 +7,122 @@
   --b-outer-shadow: 2px 2px 4px hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
 :where(body),
-:where(body) * {
+:where(body) :where(*) {
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.15);
 }
-:where(body) h1,
-:where(body) h2,
-:where(body) h3,
-:where(body) h4,
-:where(body) h5,
-:where(body) h6 {
+:where(body) :where(h1, h2, h3, h4, h5, h6) {
   text-shadow: var(--b-outer-shadow);
 }
-:where(body) .panel h1,
-:where(body) .panel h2,
-:where(body) .panel h3,
-:where(body) .panel h4,
-:where(body) .panel h5,
-:where(body) .panel h6 {
+:where(body) :where(.panel) :where(h1, h2, h3, h4, h5, h6) {
   text-shadow: none;
 }
-:where(body) .panel,
-:where(body) table.panel > caption {
+:where(body) :where(.panel),
+:where(body) :where(table):where(.panel) > :where(caption) {
   border-radius: var(--b-border-radius);
   box-shadow: var(--b-outer-shadow);
 }
-:where(body) .panel .panel,
-:where(body) table.panel > caption .panel {
+:where(body) :where(.panel) :where(.panel),
+:where(body) :where(table):where(.panel) > :where(caption) :where(.panel) {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.075);
   backdrop-filter: none;
   box-shadow: none;
 }
-:where(body) .mark,
-:where(body) mark,
-:where(body) .panel.mark {
+:where(body) :where(mark, .mark),
+:where(body) :where(.panel):where(mark, .mark) {
   background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
 }
-:where(body) .mark .mark,
-:where(body) mark .mark,
-:where(body) .panel.mark .mark,
-:where(body) .mark mark,
-:where(body) mark mark,
-:where(body) .panel.mark mark,
-:where(body) .mark .panel.mark,
-:where(body) mark .panel.mark,
-:where(body) .panel.mark .panel.mark {
+:where(body) :where(mark, .mark) :where(mark, .mark),
+:where(body) :where(.panel):where(mark, .mark) :where(mark, .mark),
+:where(body) :where(mark, .mark) :where(.panel):where(mark, .mark),
+:where(body) :where(.panel):where(mark, .mark) :where(.panel):where(mark, .mark) {
   background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
-:where(body) .mark .mark .mark,
-:where(body) mark .mark .mark,
-:where(body) .panel.mark .mark .mark,
-:where(body) .mark mark .mark,
-:where(body) mark mark .mark,
-:where(body) .panel.mark mark .mark,
-:where(body) .mark .panel.mark .mark,
-:where(body) mark .panel.mark .mark,
-:where(body) .panel.mark .panel.mark .mark,
-:where(body) .mark .mark mark,
-:where(body) mark .mark mark,
-:where(body) .panel.mark .mark mark,
-:where(body) .mark mark mark,
-:where(body) mark mark mark,
-:where(body) .panel.mark mark mark,
-:where(body) .mark .panel.mark mark,
-:where(body) mark .panel.mark mark,
-:where(body) .panel.mark .panel.mark mark,
-:where(body) .mark .mark .panel.mark,
-:where(body) mark .mark .panel.mark,
-:where(body) .panel.mark .mark .panel.mark,
-:where(body) .mark mark .panel.mark,
-:where(body) mark mark .panel.mark,
-:where(body) .panel.mark mark .panel.mark,
-:where(body) .mark .panel.mark .panel.mark,
-:where(body) mark .panel.mark .panel.mark,
-:where(body) .panel.mark .panel.mark .panel.mark {
+:where(body) :where(mark, .mark) :where(mark, .mark) :where(mark, .mark),
+:where(body) :where(.panel):where(mark, .mark) :where(mark, .mark) :where(mark, .mark),
+:where(body) :where(mark, .mark) :where(.panel):where(mark, .mark) :where(mark, .mark),
+:where(body) :where(.panel):where(mark, .mark) :where(.panel):where(mark, .mark) :where(mark, .mark),
+:where(body) :where(mark, .mark) :where(mark, .mark) :where(.panel):where(mark, .mark),
+:where(body) :where(.panel):where(mark, .mark) :where(mark, .mark) :where(.panel):where(mark, .mark),
+:where(body) :where(mark, .mark) :where(.panel):where(mark, .mark) :where(.panel):where(mark, .mark),
+:where(body) :where(.panel):where(mark, .mark) :where(.panel):where(mark, .mark) :where(.panel):where(mark, .mark) {
   background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
 }
-:where(body) .todo,
-:where(body) .panel.todo {
+:where(body) :where(.todo),
+:where(body) :where(.panel):where(.todo) {
   background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-:where(body) .todo .panel,
-:where(body) .panel.todo .panel {
+:where(body) :where(.todo) :where(.panel),
+:where(body) :where(.panel):where(.todo) :where(.panel) {
   background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-:where(body) table.panel {
+:where(body) :where(table):where(.panel) {
   border-radius: 0;
 }
-:where(body) table.panel > caption {
+:where(body) :where(table):where(.panel) > :where(caption) {
   border-radius: 0;
   box-shadow: var(--b-outer-shadow);
 }
-:where(body) table.dialog > caption {
+:where(body) :where(table):where(.dialog) > :where(caption) {
   border-bottom-width: 2px;
 }
-:where(body) input,
-:where(body) textarea,
-:where(body) select,
-:where(body) button {
+:where(body) :where(input, textarea, select, button) {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.025);
 }
-:where(body) input:hover,
-:where(body) textarea:hover,
-:where(body) select:hover,
-:where(body) button:hover {
+:where(body) :where(input, textarea, select, button):hover {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.05);
 }
-:where(body) input:active,
-:where(body) textarea:active,
-:where(body) select:active,
-:where(body) button:active {
+:where(body) :where(input, textarea, select, button):active {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.075);
 }
-:where(body) input[type="text"],
-:where(body) input[type="password"],
-:where(body) input[type="email"],
-:where(body) input[type="number"],
-:where(body) input[type="search"],
-:where(body) input[type="tel"],
-:where(body) input[type="datetime-local"],
-:where(body) input[type="date"],
-:where(body) input[type="time"],
-:where(body) select:not([multiple]) {
+:where(body) :where(input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="datetime-local"], input[type="date"], input[type="time"]),
+:where(body) :where(select:not([multiple])) {
   border-radius: var(--b-border-radius) var(--b-border-radius) 0 0;
 }
-:where(body) textarea,
-:where(body) select[multiple] {
+:where(body) :where(textarea),
+:where(body) :where(select[multiple]) {
   border-radius: 0 var(--b-border-radius) var(--b-border-radius) 0;
 }
-:where(body) input[type="button"],
-:where(body) button {
+:where(body) :where(input[type="button"], button) {
   border-radius: var(--b-border-radius);
 }
-:where(body) ul > *::marker,
-:where(body) ol > *::marker {
+:where(body) :where(ul) > *::marker,
+:where(body) :where(ol) > *::marker {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.5);
 }
-:where(body) summary {
+:where(body) :where(summary) {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-:where(body) summary::marker {
+:where(body) :where(summary)::marker {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.5);
 }
-:where(body) summary:hover {
+:where(body) :where(summary):hover {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-:where(body) summary:hover::marker {
+:where(body) :where(summary):hover::marker {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-:where(body) summary:active::marker {
+:where(body) :where(summary):active::marker {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-:where(body) a:hover {
+:where(body) :where(a):hover {
   color: hsl(calc(var(--bhsl-link-hue) + 0deg) calc(var(--bhsl-link-saturation) + 0%) calc(var(--bhsl-link-lightness) + 20%) / 1);
 }
-:where(body) a:active {
+:where(body) :where(a):active {
   color: hsl(calc(var(--bhsl-link-hue) + 0deg) calc(var(--bhsl-link-saturation) + 0%) calc(var(--bhsl-link-lightness) + 40%) / 1);
 }
-:where(body) kbd,
-:where(body) samp {
+:where(body) :where(kbd),
+:where(body) :where(samp) {
   border-radius: calc(var(--b-border-radius) / 4);
 }
-:where(body) var {
+:where(body) :where(var) {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-:where(body) q::before,
-:where(body) q::after {
+:where(body) :where(q)::before,
+:where(body) :where(q)::after {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-:where(body) rt {
+:where(body) :where(rt) {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }

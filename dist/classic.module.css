@@ -7,157 +7,122 @@
   --b-outer-shadow: 2px 2px 4px hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
 :where(.bluelib),
-:where(.bluelib) * {
+:where(.bluelib) :where(*) {
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.15);
 }
-:where(.bluelib) .header-1,
-:where(.bluelib) .header-2,
-:where(.bluelib) .header-3,
-:where(.bluelib) .header-4,
-:where(.bluelib) .header-5,
-:where(.bluelib) .header-6 {
+:where(.bluelib) :where(h1, h2, h3, h4, h5, h6) {
   text-shadow: var(--b-outer-shadow);
 }
-:where(.bluelib) .panel .header-1,
-:where(.bluelib) .panel .header-2,
-:where(.bluelib) .panel .header-3,
-:where(.bluelib) .panel .header-4,
-:where(.bluelib) .panel .header-5,
-:where(.bluelib) .panel .header-6 {
+:where(.bluelib) :where(.panel) :where(h1, h2, h3, h4, h5, h6) {
   text-shadow: none;
 }
-:where(.bluelib) .panel,
-:where(.bluelib) .table.panel > .table-caption {
+:where(.bluelib) :where(.panel),
+:where(.bluelib) :where(.table):where(.panel) > :where(.table-caption) {
   border-radius: var(--b-border-radius);
   box-shadow: var(--b-outer-shadow);
 }
-:where(.bluelib) .panel .panel,
-:where(.bluelib) .table.panel > .table-caption .panel {
+:where(.bluelib) :where(.panel) :where(.panel),
+:where(.bluelib) :where(.table):where(.panel) > :where(.table-caption) :where(.panel) {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.075);
   backdrop-filter: none;
   box-shadow: none;
 }
-:where(.bluelib) .modifier-mark,
-:where(.bluelib) .element-mark,
-:where(.bluelib) .panel.modifier-mark {
+:where(.bluelib) :where(.modifier-mark),
+:where(.bluelib) :where(.panel):where(.modifier-mark) {
   background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
 }
-:where(.bluelib) .modifier-mark .modifier-mark,
-:where(.bluelib) .element-mark .modifier-mark,
-:where(.bluelib) .panel.modifier-mark .modifier-mark,
-:where(.bluelib) .modifier-mark .element-mark,
-:where(.bluelib) .element-mark .element-mark,
-:where(.bluelib) .panel.modifier-mark .element-mark,
-:where(.bluelib) .modifier-mark .panel.modifier-mark,
-:where(.bluelib) .element-mark .panel.modifier-mark,
-:where(.bluelib) .panel.modifier-mark .panel.modifier-mark {
+:where(.bluelib) :where(.modifier-mark) :where(.modifier-mark),
+:where(.bluelib) :where(.panel):where(.modifier-mark) :where(.modifier-mark),
+:where(.bluelib) :where(.modifier-mark) :where(.panel):where(.modifier-mark),
+:where(.bluelib) :where(.panel):where(.modifier-mark) :where(.panel):where(.modifier-mark) {
   background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
-:where(.bluelib) .modifier-mark .modifier-mark .modifier-mark,
-:where(.bluelib) .element-mark .modifier-mark .modifier-mark,
-:where(.bluelib) .panel.modifier-mark .modifier-mark .modifier-mark,
-:where(.bluelib) .modifier-mark .element-mark .modifier-mark,
-:where(.bluelib) .element-mark .element-mark .modifier-mark,
-:where(.bluelib) .panel.modifier-mark .element-mark .modifier-mark,
-:where(.bluelib) .modifier-mark .panel.modifier-mark .modifier-mark,
-:where(.bluelib) .element-mark .panel.modifier-mark .modifier-mark,
-:where(.bluelib) .panel.modifier-mark .panel.modifier-mark .modifier-mark,
-:where(.bluelib) .modifier-mark .modifier-mark .element-mark,
-:where(.bluelib) .element-mark .modifier-mark .element-mark,
-:where(.bluelib) .panel.modifier-mark .modifier-mark .element-mark,
-:where(.bluelib) .modifier-mark .element-mark .element-mark,
-:where(.bluelib) .element-mark .element-mark .element-mark,
-:where(.bluelib) .panel.modifier-mark .element-mark .element-mark,
-:where(.bluelib) .modifier-mark .panel.modifier-mark .element-mark,
-:where(.bluelib) .element-mark .panel.modifier-mark .element-mark,
-:where(.bluelib) .panel.modifier-mark .panel.modifier-mark .element-mark,
-:where(.bluelib) .modifier-mark .modifier-mark .panel.modifier-mark,
-:where(.bluelib) .element-mark .modifier-mark .panel.modifier-mark,
-:where(.bluelib) .panel.modifier-mark .modifier-mark .panel.modifier-mark,
-:where(.bluelib) .modifier-mark .element-mark .panel.modifier-mark,
-:where(.bluelib) .element-mark .element-mark .panel.modifier-mark,
-:where(.bluelib) .panel.modifier-mark .element-mark .panel.modifier-mark,
-:where(.bluelib) .modifier-mark .panel.modifier-mark .panel.modifier-mark,
-:where(.bluelib) .element-mark .panel.modifier-mark .panel.modifier-mark,
-:where(.bluelib) .panel.modifier-mark .panel.modifier-mark .panel.modifier-mark {
+:where(.bluelib) :where(.modifier-mark) :where(.modifier-mark) :where(.modifier-mark),
+:where(.bluelib) :where(.panel):where(.modifier-mark) :where(.modifier-mark) :where(.modifier-mark),
+:where(.bluelib) :where(.modifier-mark) :where(.panel):where(.modifier-mark) :where(.modifier-mark),
+:where(.bluelib) :where(.panel):where(.modifier-mark) :where(.panel):where(.modifier-mark) :where(.modifier-mark),
+:where(.bluelib) :where(.modifier-mark) :where(.modifier-mark) :where(.panel):where(.modifier-mark),
+:where(.bluelib) :where(.panel):where(.modifier-mark) :where(.modifier-mark) :where(.panel):where(.modifier-mark),
+:where(.bluelib) :where(.modifier-mark) :where(.panel):where(.modifier-mark) :where(.panel):where(.modifier-mark),
+:where(.bluelib) :where(.panel):where(.modifier-mark) :where(.panel):where(.modifier-mark) :where(.panel):where(.modifier-mark) {
   background-color: hsl(var(--bhsl-mark-background-hue) var(--bhsl-mark-background-saturation) var(--bhsl-mark-background-lightness));
 }
-:where(.bluelib) .modifier-todo,
-:where(.bluelib) .panel.modifier-todo {
+:where(.bluelib) :where(.modifier-todo),
+:where(.bluelib) :where(.panel):where(.modifier-todo) {
   background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-:where(.bluelib) .modifier-todo .panel,
-:where(.bluelib) .panel.modifier-todo .panel {
+:where(.bluelib) :where(.modifier-todo) :where(.panel),
+:where(.bluelib) :where(.panel):where(.modifier-todo) :where(.panel) {
   background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
   border-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-:where(.bluelib) .table.panel {
+:where(.bluelib) :where(.table):where(.panel) {
   border-radius: 0;
 }
-:where(.bluelib) .table.panel > .table-caption {
+:where(.bluelib) :where(.table):where(.panel) > :where(.table-caption) {
   border-radius: 0;
   box-shadow: var(--b-outer-shadow);
 }
-:where(.bluelib) .table.panel-dialog > .table-caption {
+:where(.bluelib) :where(.table):where(.panel-dialog) > :where(.table-caption) {
   border-bottom-width: 2px;
 }
-:where(.bluelib) .input {
+:where(.bluelib) :where(.input) {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.025);
 }
-:where(.bluelib) .input:hover {
+:where(.bluelib) :where(.input):hover {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.05);
 }
-:where(.bluelib) .input:active {
+:where(.bluelib) :where(.input):active {
   background-color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.075);
 }
-:where(.bluelib) .input-field,
-:where(.bluelib) .input-select {
+:where(.bluelib) :where(.input-field),
+:where(.bluelib) :where(.input-select) {
   border-radius: var(--b-border-radius) var(--b-border-radius) 0 0;
 }
-:where(.bluelib) .input-area,
-:where(.bluelib) .input-multiselect {
+:where(.bluelib) :where(.input-area),
+:where(.bluelib) :where(.input-multiselect) {
   border-radius: 0 var(--b-border-radius) var(--b-border-radius) 0;
 }
-:where(.bluelib) .input-button {
+:where(.bluelib) :where(.input-button) {
   border-radius: var(--b-border-radius);
 }
-:where(.bluelib) .list-unordered > *::marker,
-:where(.bluelib) .list-ordered > *::marker {
+:where(.bluelib) :where(.list-unordered) > *::marker,
+:where(.bluelib) :where(.list-ordered) > *::marker {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.5);
 }
-:where(.bluelib) .glossary-summary {
+:where(.bluelib) :where(.glossary-summary) {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-:where(.bluelib) .glossary-summary::marker {
+:where(.bluelib) :where(.glossary-summary)::marker {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.5);
 }
-:where(.bluelib) .glossary-summary:hover {
+:where(.bluelib) :where(.glossary-summary):hover {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-:where(.bluelib) .glossary-summary:hover::marker {
+:where(.bluelib) :where(.glossary-summary):hover::marker {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-:where(.bluelib) .glossary-summary:active::marker {
+:where(.bluelib) :where(.glossary-summary):active::marker {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness));
 }
-:where(.bluelib) .text-anchor:hover {
+:where(.bluelib) :where(.text-anchor):hover {
   color: hsl(calc(var(--bhsl-link-hue) + 0deg) calc(var(--bhsl-link-saturation) + 0%) calc(var(--bhsl-link-lightness) + 20%) / 1);
 }
-:where(.bluelib) .text-anchor:active {
+:where(.bluelib) :where(.text-anchor):active {
   color: hsl(calc(var(--bhsl-link-hue) + 0deg) calc(var(--bhsl-link-saturation) + 0%) calc(var(--bhsl-link-lightness) + 40%) / 1);
 }
-:where(.bluelib) .text-input,
-:where(.bluelib) .text-output {
+:where(.bluelib) :where(.text-input),
+:where(.bluelib) :where(.text-output) {
   border-radius: calc(var(--b-border-radius) / 4);
 }
-:where(.bluelib) .text-variable {
+:where(.bluelib) :where(.text-variable) {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-:where(.bluelib) .text-quote::before,
-:where(.bluelib) .text-quote::after {
+:where(.bluelib) :where(.text-quote)::before,
+:where(.bluelib) :where(.text-quote)::after {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
-:where(.bluelib) .text-ruby-annotation {
+:where(.bluelib) :where(.text-ruby-annotation) {
   color: hsl(var(--bhsl-current-hue) var(--bhsl-current-saturation) var(--bhsl-current-lightness) / 0.7);
 }
