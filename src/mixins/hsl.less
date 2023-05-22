@@ -7,17 +7,17 @@
 
 /// Set the CSS variables of a certain color group to the given values.
 .create-hsl-group(@name; @hue; @saturation; @lightness) {
-    --bhsl-@{name}-hue: @hue;
-    --bhsl-@{name}-saturation: @saturation;
-    --bhsl-@{name}-lightness: @lightness;
+	--bhsl-@{name}-hue: @hue;
+	--bhsl-@{name}-saturation: @saturation;
+	--bhsl-@{name}-lightness: @lightness;
 }
 
 
 /// Set the CSS variables of a certain color group to the ones of another.
 .map-hsl-group(@to; @from) {
-    --bhsl-@{to}-hue: var(~"--bhsl-@{from}-hue");
-    --bhsl-@{to}-saturation: var(~"--bhsl-@{from}-saturation");
-    --bhsl-@{to}-lightness: var(~"--bhsl-@{from}-lightness");
+	--bhsl-@{to}-hue: var(~"--bhsl-@{from}-hue");
+	--bhsl-@{to}-saturation: var(~"--bhsl-@{from}-saturation");
+	--bhsl-@{to}-lightness: var(~"--bhsl-@{from}-lightness");
 }
 
 
@@ -27,25 +27,17 @@
 ///
 /// For example, acceptable parameters may be: "+ 10deg", "/ 2", "* 1000", "- var(--something)", and so on.
 .hsl-group(@name) {
-    @c: hsl(
-        var(~"--bhsl-@{name}-hue")
-        var(~"--bhsl-@{name}-saturation")
-        var(~"--bhsl-@{name}-lightness")
-    );
+	@c: hsl(var(~"--bhsl-@{name}-hue") var(~"--bhsl-@{name}-saturation") var(~"--bhsl-@{name}-lightness"));
 }
+
 .hsl-group(@name; @alpha) {
-    @c: hsl(
-        var(~"--bhsl-@{name}-hue")
-        var(~"--bhsl-@{name}-saturation")
-        var(~"--bhsl-@{name}-lightness")
-        / @alpha
-    );
+	@c: hsl(var(~"--bhsl-@{name}-hue") var(~"--bhsl-@{name}-saturation")
+		var(~"--bhsl-@{name}-lightness")
+		/ @alpha);
 }
+
 .hsl-group(@name; @hue-changes; @saturation-changes; @lightness-changes; @alpha) {
-    @c: hsl(
-        calc(var(~"--bhsl-@{name}-hue") ~"@{hue-changes}")
-        calc(var(~"--bhsl-@{name}-saturation") ~"@{saturation-changes}")
-        calc(var(~"--bhsl-@{name}-lightness") ~"@{lightness-changes}")
-        / @alpha
-    );
+	@c: hsl(calc(var(~"--bhsl-@{name}-hue") ~"@{hue-changes}") calc(var(~"--bhsl-@{name}-saturation") ~"@{saturation-changes}")
+		calc(var(~"--bhsl-@{name}-lightness") ~"@{lightness-changes}")
+		/ @alpha);
 }

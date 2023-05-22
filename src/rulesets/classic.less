@@ -5,164 +5,166 @@
 
 @{bluelib} {
 
-    & {
-        // Sets the border radius of all panels
-        --b-border-radius: 8px;
+	& {
+		// Sets the border radius of all panels
+		--b-border-radius: 8px;
 
-        // Set the shadow drawn on element placed directly on the background
-        --b-outer-shadow: 2px 2px 4px .hsl-group(background)[@c];
-    }
+		// Set the shadow drawn on element placed directly on the background
+		--b-outer-shadow: 2px 2px 4px .hsl-group(background)[@c];
+	}
 
-    &, @{all} {
-        // Lower the default border opacity
-        border-color: .hsl-group(current; 0.15)[@c];
-    }
+	&, @{all} {
+		// Lower the default border opacity
+		border-color: .hsl-group(current; 0.15)[@c];
+	}
 
-    // Give headers a slight shadow so they are easier to read outside of panels
-    @{header} {
-        text-shadow: var(--b-outer-shadow);
-    }
+	// Give headers a slight shadow so they are easier to read outside of panels
+	@{header} {
+		text-shadow: var(--b-outer-shadow);
+	}
 
-    // But do not give it to headers inside panels
-    @{panel} {
-        @{header} {
-            text-shadow: none;
-        }
-    }
+	// But do not give it to headers inside panels
+	@{panel} {
+		@{header} {
+			text-shadow: none;
+		}
+	}
 
-    @{panel}, @{table}@{panel} > @{table-caption} {
-        border-radius: var(--b-border-radius);
+	@{panel}, @{table}@{panel} > @{table-caption} {
+		border-radius: var(--b-border-radius);
 
-        // And a shadow effect
-        box-shadow: var(--b-outer-shadow);
+		// And a shadow effect
+		box-shadow: var(--b-outer-shadow);
 
-        // Do not give the same effects to nested panels
-        @{panel} {
-            background-color: .hsl-group(current; 0.075)[@c];
-            backdrop-filter: none;
-            box-shadow: none;
-        }
-    }
+		// Do not give the same effects to nested panels
+		@{panel} {
+			background-color: .hsl-group(current; 0.075)[@c];
+			backdrop-filter: none;
+			box-shadow: none;
+		}
+	}
 
-    // Make sure mark still works, even considering specificity
-    @{modifier-mark}, @{panel}@{modifier-mark} {
-        background-color: .hsl-group(mark-background)[@c];
+	// Make sure mark still works, even considering specificity
+	@{modifier-mark}, @{panel}@{modifier-mark} {
+		background-color: .hsl-group(mark-background)[@c];
 
-        // Make the modifier toggle properly
-        @{modifier-mark}, @{panel}@{modifier-mark} {
-            background-color: .hsl-group(background)[@c];
+		// Make the modifier toggle properly
+		@{modifier-mark}, @{panel}@{modifier-mark} {
+			background-color: .hsl-group(background)[@c];
 
-            // Make the modifier toggle properly
-            @{modifier-mark}, @{panel}@{modifier-mark} {
-                background-color: .hsl-group(mark-background)[@c];
-            }
-        }
-    }
+			// Make the modifier toggle properly
+			@{modifier-mark}, @{panel}@{modifier-mark} {
+				background-color: .hsl-group(mark-background)[@c];
+			}
+		}
+	}
 
-    // Make sure to-do still works, even considering specificity
-    @{modifier-todo}, @{panel}@{modifier-todo} {
-        background-color: .hsl-group(todo-background)[@c];
-        border-color: .hsl-group(current)[@c];
+	// Make sure to-do still works, even considering specificity
+	@{modifier-todo}, @{panel}@{modifier-todo} {
+		background-color: .hsl-group(todo-background)[@c];
+		border-color: .hsl-group(current)[@c];
 
-        // Make the modifier inherit properly
-        @{panel} {
-            background-color: .hsl-group(todo-background)[@c];
-            border-color: .hsl-group(current)[@c];
-        }
-    }
+		// Make the modifier inherit properly
+		@{panel} {
+			background-color: .hsl-group(todo-background)[@c];
+			border-color: .hsl-group(current)[@c];
+		}
+	}
 
-    // Fixup table panels
-    @{table}@{panel} {
-        // Ensure table panels have no rounded borders
-        border-radius: 0;
-        
-        > @{table-caption} {
-            // And ensure neither do table panel captions
-            border-radius: 0;
-            
-            // Minimize the visibility of the caption's box shadow to prevent overlap with the table itself
-            box-shadow: var(--b-outer-shadow);
-        }
-    }
+	// Fixup table panels
+	@{table}@{panel} {
+		// Ensure table panels have no rounded borders
+		border-radius: 0;
 
-    @{table}@{panel-dialog} > @{table-caption} {
-        border-bottom-width: 2px;
-    }
+		> @{table-caption} {
+			// And ensure neither do table panel captions
+			border-radius: 0;
 
-    @{input} {
-        background-color: .hsl-group(current; 0.025)[@c];
+			// Minimize the visibility of the caption's box shadow to prevent overlap with the table itself
+			box-shadow: var(--b-outer-shadow);
+		}
+	}
 
-        &:hover {
-            background-color: .hsl-group(current; 0.05)[@c];
-        }
+	@{table}@{panel-dialog} > @{table-caption} {
+		border-bottom-width: 2px;
+	}
 
-        &:active {
-            background-color: .hsl-group(current; 0.075)[@c];
-        }
-    }
+	@{input} {
+		background-color: .hsl-group(current; 0.025)[@c];
 
-    @{input-field}, @{input-select} {
-        border-radius: var(--b-border-radius) var(--b-border-radius) 0 0;
-    }
-    @{input-area}, @{input-multiselect} {
-        border-radius: 0 var(--b-border-radius) var(--b-border-radius) 0;
-    }
-    @{input-button} {
-        border-radius: var(--b-border-radius);
-    }
+		&:hover {
+			background-color: .hsl-group(current; 0.05)[@c];
+		}
 
-    @{list-unordered}, @{list-ordered} {
-        > *::marker {
-            color: .hsl-group(current; 0.5)[@c];
-        }
-    }
+		&:active {
+			background-color: .hsl-group(current; 0.075)[@c];
+		}
+	}
 
-    @{glossary-summary} {
-        color: .hsl-group(current; 0.7)[@c];
+	@{input-field}, @{input-select} {
+		border-radius: var(--b-border-radius) var(--b-border-radius) 0 0;
+	}
 
-        &::marker {
-            color: .hsl-group(current; 0.5)[@c];
-        }
+	@{input-area}, @{input-multiselect} {
+		border-radius: 0 var(--b-border-radius) var(--b-border-radius) 0;
+	}
 
-        &:hover {
-            color: .hsl-group(current)[@c];
-        }
+	@{input-button} {
+		border-radius: var(--b-border-radius);
+	}
 
-        &:hover::marker {
-            color: .hsl-group(current; 0.7)[@c];
-        }
+	@{list-unordered}, @{list-ordered} {
+		> *::marker {
+			color: .hsl-group(current; 0.5)[@c];
+		}
+	}
 
-        &:active::marker {
-            color: .hsl-group(current)[@c];
-        }
-    }
+	@{glossary-summary} {
+		color: .hsl-group(current; 0.7)[@c];
 
-    // FIXME: may not work well for lighter themes
-    @{text-anchor} {
-        &:hover {
-            color: .hsl-group(link; "+ 0deg"; "+ 0%"; "+ 20%"; 1.0)[@c];
-        }
+		&::marker {
+			color: .hsl-group(current; 0.5)[@c];
+		}
 
-        &:active {
-            color: .hsl-group(link; "+ 0deg"; "+ 0%"; "+ 40%"; 1.0)[@c];
-        }
-    }
+		&:hover {
+			color: .hsl-group(current)[@c];
+		}
 
-    @{text-input}, @{text-output} {
-        border-radius: calc(var(--b-border-radius) / 4);
-    }
+		&:hover::marker {
+			color: .hsl-group(current; 0.7)[@c];
+		}
 
-    @{text-variable} {
-        color: .hsl-group(current; 0.7)[@c];
-    }
+		&:active::marker {
+			color: .hsl-group(current)[@c];
+		}
+	}
 
-    @{text-quote} {
-        &::before, &::after {
-            color: .hsl-group(current; 0.7)[@c];
-        }
-    }
+	// FIXME: may not work well for lighter themes
+	@{text-anchor} {
+		&:hover {
+			color: .hsl-group(link; "+ 0deg"; "+ 0%"; "+ 20%"; 1.0)[@c];
+		}
 
-    @{text-ruby-annotation} {
-        color: .hsl-group(current; 0.7)[@c];
-    }
+		&:active {
+			color: .hsl-group(link; "+ 0deg"; "+ 0%"; "+ 40%"; 1.0)[@c];
+		}
+	}
+
+	@{text-input}, @{text-output} {
+		border-radius: calc(var(--b-border-radius) / 4);
+	}
+
+	@{text-variable} {
+		color: .hsl-group(current; 0.7)[@c];
+	}
+
+	@{text-quote} {
+		&::before, &::after {
+			color: .hsl-group(current; 0.7)[@c];
+		}
+	}
+
+	@{text-ruby-annotation} {
+		color: .hsl-group(current; 0.7)[@c];
+	}
 }

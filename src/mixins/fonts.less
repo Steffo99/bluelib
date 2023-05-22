@@ -7,12 +7,12 @@
 ///
 /// See `.use-font-group`.
 .create-font-group(@name; @style; @variant; @weight; @stretch; @size; @height; @family) {
-    --bfont-@{name}-style:   @style;
-    --bfont-@{name}-variant: @variant;
-    --bfont-@{name}-weight:  @weight;
-    --bfont-@{name}-stretch: @stretch;
-    --bfont-@{name}-height:  @height;
-    --bfont-@{name}-family:  @family;
+	--bfont-@{name}-style: @style;
+	--bfont-@{name}-variant: @variant;
+	--bfont-@{name}-weight: @weight;
+	--bfont-@{name}-stretch: @stretch;
+	--bfont-@{name}-height: @height;
+	--bfont-@{name}-family: @family;
 }
 
 
@@ -20,10 +20,10 @@
 ///
 /// See `.create-font-group`.
 .use-font-group(@name) {
-    font-style: var(~"--bfont-@{name}-style");
-    font-variant: var(~"--bfont-@{name}-variant");
-    font-weight: var(~"--bfont-@{name}-weight");
-    font-stretch: var(~"--bfont-@{name}-stretch");
-    line-height: var(~"--bfont-@{name}-height");
-    font-family: var(~"--bfont-@{name}-family");
+	font-style: var(~"--bfont-@{name}-style");
+	font-variant: var(~"--bfont-@{name}-variant");
+	font-weight: var(~"--bfont-@{name}-weight");
+	font-stretch: var(~"--bfont-@{name}-stretch");
+	line-height: var(~"--bfont-@{name}-height");
+	font-family: var(~"--bfont-@{name}-family");
 }

@@ -4,58 +4,58 @@
  */
 
 @{bluelib} {
-    .create-hsl-group(background; 14deg; 85%; 74%);
-    .create-hsl-group(foreground; 340deg; 40%; 20%);
-    .create-hsl-group(primary; 220deg; 92%; 11%);
-    .create-hsl-group(link; 237deg; 80%; 41%);
+	.create-hsl-group(background; 14deg; 85%; 74%);
+	.create-hsl-group(foreground; 340deg; 40%; 20%);
+	.create-hsl-group(primary; 220deg; 92%; 11%);
+	.create-hsl-group(link; 237deg; 80%; 41%);
 
-    .create-hsl-group(mark-foreground; 194deg; 64%; 14%);
-    .create-hsl-group(mark-background; 194deg; 100%; 81%);
+	.create-hsl-group(mark-foreground; 194deg; 64%; 14%);
+	.create-hsl-group(mark-background; 194deg; 100%; 81%);
 
-    .create-hsl-group(todo-foreground; 43deg; 100%; 65%);
-    .create-hsl-group(todo-background; 204deg; 11%; 18%);
+	.create-hsl-group(todo-foreground; 43deg; 100%; 65%);
+	.create-hsl-group(todo-background; 204deg; 11%; 18%);
 
-    .create-hsl-group(sample-input; 0deg; 100%; 0%);
-    .create-hsl-group(sample-output; 0deg; 100%; 100%);
+	.create-hsl-group(sample-input; 0deg; 100%; 0%);
+	.create-hsl-group(sample-output; 0deg; 100%; 100%);
 
-    .create-hsl-group(red; 0deg; 100%; 15%);
-    .create-hsl-group(yellow; 60deg; 100%; 15%);
-    .create-hsl-group(green; 120deg; 100%; 15%);
-    .create-hsl-group(cyan; 180deg; 100%; 15%);
-    .create-hsl-group(blue; 240deg; 100%; 15%);
-    .create-hsl-group(magenta; 300deg; 100%; 15%);
+	.create-hsl-group(red; 0deg; 100%; 15%);
+	.create-hsl-group(yellow; 60deg; 100%; 15%);
+	.create-hsl-group(green; 120deg; 100%; 15%);
+	.create-hsl-group(cyan; 180deg; 100%; 15%);
+	.create-hsl-group(blue; 240deg; 100%; 15%);
+	.create-hsl-group(magenta; 300deg; 100%; 15%);
 
-    .map-hsl-group(inserted; green);
-    .map-hsl-group(deleted; red);
+	.map-hsl-group(inserted; green);
+	.map-hsl-group(deleted; red);
 
-    &:is(@{bluelib}) {
-        --b-panel-initial-opacity: 0.500;
-        --b-border-radius: 0;
-        --b-outer-shadow: none;
+	&:is(@{bluelib}) {
+		--b-panel-initial-opacity: 0.500;
+		--b-border-radius: 0;
+		--b-outer-shadow: none;
 
-        @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
-            color: white;
-            text-shadow: 2px 2px 0 #9832ce;
-        }
+		@{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
+			color: white;
+			text-shadow: 2px 2px 0 #9832ce;
+		}
 
-        @{panel} {
-            @{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
-                color: .hsl-group(current)[@c];
-                text-shadow: none;
-            }
-        }
-    }
+		@{panel} {
+			@{header-1}, @{header-2}, @{header-3}, @{header-4}, @{header-5}, @{header-6} {
+				color: .hsl-group(current)[@c];
+				text-shadow: none;
+			}
+		}
+	}
 
-    /*
-    @{panel} {
-        
-        @{panel} {
-            background-color: .hsl-group(background; 0; - 8%; - 5%; 1.0)[@c] !important;
+	/*
+	@{panel} {
 
-            @{panel} {
-                background-color: .hsl-group(background; 0; - 16%; - 10%; 1.0)[@c] !important;
-            }
-        }
-    }
-    */
+		@{panel} {
+			background-color: .hsl-group(background; 0; - 8%; - 5%; 1.0)[@c] !important;
+
+			@{panel} {
+				background-color: .hsl-group(background; 0; - 16%; - 10%; 1.0)[@c] !important;
+			}
+		}
+	}
+	*/
 }

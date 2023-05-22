@@ -1,62 +1,62 @@
 {
-    "name": "@steffo/bluelib",
-    "version": "8.1.0",
-    "description": "A stylesheet that supports fast dynamic recoloring via CSS variables",
-    "scripts": {
-        "dev": "web-dev-server --watch --port 8080",
-        "build": "cd dist && ./_build.sh && cd .."
-    },
-    "keywords": [
-        "bluelib",
-        "css",
-        "less"
-    ],
-    "homepage": "https://gh.steffo.eu/bluelib/",
-    "bugs": {
-        "url": "https://github.com/Steffo99/bluelib/issues",
-        "email": "me@steffo.eu"
-    },
-    "author": {
-        "name": "Stefano Pigozzi",
-        "email": "me@steffo.eu",
-        "url": "https://www.steffo.eu"
-    },
-    "contributors": [
-        {
-            "name": "Stefano Pigozzi",
-            "email": "me@steffo.eu",
-            "url": "https://www.steffo.eu"
-        },
-        {
-            "name": "Lorenzo Balugani",
-            "email": "lorenzo.balugani@fermitech.info",
-            "url": "https://www.fermitech.info"
-        },
-        {
-            "name": "Francesca Peres",
-            "email": "Viktya@users.noreply.github.com"
-        }
-    ],
-    "funding": [
-        {
-            "type": "individual",
-            "url": "https://ko-fi.com/steffo"
-        }
-    ],
-    "files": [
-        "dist/**/*.less",
-        "dist/**/*.css",
-        "dist/**/*.css.map"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Steffo99/bluelib.git"
-    },
-    "license": "AGPL-3.0-or-later",
-    "private": false,
-    "devDependencies": {
-        "@web/dev-server": "^0.1.34",
-        "less": "^4.1.3",
-        "less-plugin-clean-css": "^1.5.1"
-    }
+	"name": "@steffo/bluelib",
+	"version": "8.1.0",
+	"description": "A stylesheet that supports fast dynamic recoloring via CSS variables",
+	"scripts": {
+		"dev": "web-dev-server --watch --port 8080",
+		"build": "cd dist && ./_build.sh && cd .."
+	},
+	"keywords": [
+		"bluelib",
+		"css",
+		"less"
+	],
+	"homepage": "https://gh.steffo.eu/bluelib/",
+	"bugs": {
+		"url": "https://github.com/Steffo99/bluelib/issues",
+		"email": "me@steffo.eu"
+	},
+	"author": {
+		"name": "Stefano Pigozzi",
+		"email": "me@steffo.eu",
+		"url": "https://www.steffo.eu"
+	},
+	"contributors": [
+		{
+			"name": "Stefano Pigozzi",
+			"email": "me@steffo.eu",
+			"url": "https://www.steffo.eu"
+		},
+		{
+			"name": "Lorenzo Balugani",
+			"email": "lorenzo.balugani@fermitech.info",
+			"url": "https://www.fermitech.info"
+		},
+		{
+			"name": "Francesca Peres",
+			"email": "Viktya@users.noreply.github.com"
+		}
+	],
+	"funding": [
+		{
+			"type": "individual",
+			"url": "https://ko-fi.com/steffo"
+		}
+	],
+	"files": [
+		"dist/**/*.less",
+		"dist/**/*.css",
+		"dist/**/*.css.map"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Steffo99/bluelib.git"
+	},
+	"license": "AGPL-3.0-or-later",
+	"private": false,
+	"devDependencies": {
+		"@web/dev-server": "^0.1.34",
+		"less": "^4.1.3",
+		"less-plugin-clean-css": "^1.5.1"
+	}
 }
