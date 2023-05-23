@@ -24,6 +24,11 @@ async function sleepUntilLessIsDone() {
 }
 
 
+/**
+ * List of stylesheet ids that should be enabled on page load.
+ *
+ * @type {string[]}
+ */
 const enabledByDefault = [
 	"less:dist-base:root",
 	"less:dist-classic:root",
