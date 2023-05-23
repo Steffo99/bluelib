@@ -39,16 +39,43 @@ const enabledByDefault = [
 ]
 
 
+/**
+ * List of all `<style>` {@link HTMLElement}s with an id starting with `less:dist`.
+ *
+ * @type {{string: HTMLElement} | undefined}
+ */
 let lessStyles = undefined
+
+/**
+ * List of all `<style>` {@link HTMLElement}s with an id starting with `less:dist-colors`.
+ *
+ * @type {{string: HTMLElement} | undefined}
+ */
 let lessColors = undefined
+
+/**
+ * List of all `<style>` {@link HTMLElement}s with an id starting with `less:dist-fonts`.
+ *
+ * @type {{string: HTMLElement} | undefined}
+ */
 let lessFonts = undefined
+
+/**
+ * The background element.
+ *
+ * @type {HTMLElement | undefined}
+ */
 let background = undefined
 
 
-async function enableChanges() {
-	await sleepUntilLessIsDone()
-
-	lessStyles = [...document.styleSheets].filter(
+/**
+ * Find the `<style>` {@link HTMLElement}s with an id starting with `less:dist`, and compile them into a {`id`: `element`} object.
+ *
+ * @returns {{string: HTMLElement}}
+ */
+function findLessStyles() {
+	// noinspection JSValidateTypes
+	return [...document.styleSheets].filter(
 		(s) => s.ownerNode.id.startsWith("less:dist"),
 	).map(
 		(s) => (
@@ -60,9 +87,16 @@ async function enableChanges() {
 		),
 		{},
 	)
-	console.debug("Found Less stylesheets:", lessStyles)
+}
 
-	lessColors = [...document.styleSheets].filter(
+/**
+ * Find the `<style>` {@link HTMLElement}s with an id starting with `less:dist-colors`, and compile them into a {`id`: `element`} object.
+ *
+ * @returns {{string: HTMLElement}}
+ */
+function findLessColors() {
+	// noinspection JSValidateTypes
+	return [...document.styleSheets].filter(
 		(s) => s.ownerNode.id.startsWith("less:dist-colors"),
 	).map(
 		(s) => (
@@ -74,9 +108,16 @@ async function enableChanges() {
 		),
 		{},
 	)
-	console.debug("Found Less colors:", lessColors)
+}
 
-	lessFonts = [...document.styleSheets].filter(
+/**
+ * Find the `<style>` {@link HTMLElement}s with an id starting with `less:dist-fonts`, and compile them into a {`id`: `element`} object.
+ *
+ * @returns {{string: HTMLElement}}
+ */
+function findLessFonts() {
+	// noinspection JSValidateTypes
+	return [...document.styleSheets].filter(
 		(s) => s.ownerNode.id.startsWith("less:dist-fonts"),
 	).map(
 		(s) => (
@@ -88,9 +129,41 @@ async function enableChanges() {
 		),
 		{},
 	)
+}
+
+/**
+ * Find and return the {@link HTMLElement} with the `layout-center-background` class.
+ *
+ * @returns {HTMLElement}
+ */
+function findBackground() {
+	return document.getElementsByClassName("layout-center-background")[0]
+}
+
+/**
+ * Allows the user to dynamically interact with bluelib via the interactive components available on the page.
+ *
+ * Set the values of {@link lessStyles}, {@link lessColors}, {@link lessFonts} and {@link background}.
+ *
+ * Sets the enabled state of the all {@link lessStyles} depending on their inclusion in the {@link enabledByDefault} array.
+ *
+ * Enables and unfades all input elements with the class `ruleset-toggle`.
+ *
+ * @returns {Promise<void>}
+ */
+async function enableChanges() {
+	await sleepUntilLessIsDone()
+
+	lessStyles = findLessStyles()
+	console.debug("Found Less stylesheets:", lessStyles)
+
+	lessColors = findLessColors()
+	console.debug("Found Less colors:", lessColors)
+
+	lessFonts = findLessFonts()
 	console.debug("Found Less fonts:", lessFonts)
 
-	background = document.querySelector(".layout-center-background")
+	background = findBackground()
 	console.debug("Found background:", background)
 
 	for(const [k, v] of Object.entries(lessStyles)) {
