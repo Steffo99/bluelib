@@ -19,6 +19,7 @@ function isLessDone() {
 async function sleepUntilLessIsDone() {
 	while(!isLessDone()) {
 		await new Promise(resolve => setTimeout(resolve, 100))
+		console.debug("[Bluelib] Less seems to be done processing.")
 	}
 }
 
