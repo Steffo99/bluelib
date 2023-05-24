@@ -610,7 +610,7 @@
 }
 :where(body) :where(input[type="radio"]):not(:where([disabled])),
 :where(body) :where(input[type="checkbox"]):not(:where([disabled])),
-:where(body) :where(input[type="button"], button):not(:where([disabled])),
+:where(body) :where(input[type="button"], .input[type="submit"], .input[type="reset"], button):not(:where([disabled])),
 :where(body) :where(input[type="color"]):not(:where([disabled])) {
   cursor: pointer;
 }
@@ -668,11 +668,11 @@
 :where(body) :where(input[type="range"]) {
   padding: 0;
 }
-:where(body) :where(input[type="button"], button) {
+:where(body) :where(input[type="button"], .input[type="submit"], .input[type="reset"], button) {
   border-width: 2px;
   border-style: outset;
 }
-:where(body) :where(input[type="button"], button):active {
+:where(body) :where(input[type="button"], .input[type="submit"], .input[type="reset"], button):active {
   border-style: inset;
 }
 :where(body) :where(input[type="file"]),

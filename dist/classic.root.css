@@ -84,7 +84,7 @@
 :where(body) :where(select[multiple]) {
   border-radius: 0 var(--b-border-radius) var(--b-border-radius) 0;
 }
-:where(body) :where(input[type="button"], button) {
+:where(body) :where(input[type="button"], .input[type="submit"], .input[type="reset"], button) {
   border-radius: var(--b-border-radius);
 }
 :where(body) :where(ul) > *::marker,
