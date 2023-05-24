@@ -3,6 +3,138 @@
  * by <me@steffo.eu>
  */
 :where(.bluelib) {
+  --bhsl-background-hue: 0deg;
+  --bhsl-background-saturation: 0%;
+  --bhsl-background-lightness: 100%;
+  --bhsl-foreground-hue: 0deg;
+  --bhsl-foreground-saturation: 0%;
+  --bhsl-foreground-lightness: 15%;
+  --bhsl-primary-hue: 0deg;
+  --bhsl-primary-saturation: 0%;
+  --bhsl-primary-lightness: 0%;
+  --bhsl-link-hue: 210deg;
+  --bhsl-link-saturation: 100%;
+  --bhsl-link-lightness: 30%;
+  --bhsl-mark-foreground-hue: 0deg;
+  --bhsl-mark-foreground-saturation: 0%;
+  --bhsl-mark-foreground-lightness: 0%;
+  --bhsl-mark-background-hue: 60deg;
+  --bhsl-mark-background-saturation: 100%;
+  --bhsl-mark-background-lightness: 75%;
+  --bhsl-todo-foreground-hue: 204deg;
+  --bhsl-todo-foreground-saturation: 11%;
+  --bhsl-todo-foreground-lightness: 18%;
+  --bhsl-todo-background-hue: 43deg;
+  --bhsl-todo-background-saturation: 100%;
+  --bhsl-todo-background-lightness: 65%;
+  --bhsl-sample-input-hue: 0deg;
+  --bhsl-sample-input-saturation: 100%;
+  --bhsl-sample-input-lightness: 0%;
+  --bhsl-sample-output-hue: 0deg;
+  --bhsl-sample-output-saturation: 100%;
+  --bhsl-sample-output-lightness: 100%;
+  --bhsl-red-hue: 0deg;
+  --bhsl-red-saturation: 100%;
+  --bhsl-red-lightness: 30%;
+  --bhsl-yellow-hue: 60deg;
+  --bhsl-yellow-saturation: 100%;
+  --bhsl-yellow-lightness: 30%;
+  --bhsl-green-hue: 120deg;
+  --bhsl-green-saturation: 100%;
+  --bhsl-green-lightness: 30%;
+  --bhsl-cyan-hue: 180deg;
+  --bhsl-cyan-saturation: 100%;
+  --bhsl-cyan-lightness: 30%;
+  --bhsl-blue-hue: 240deg;
+  --bhsl-blue-saturation: 100%;
+  --bhsl-blue-lightness: 30%;
+  --bhsl-magenta-hue: 300deg;
+  --bhsl-magenta-saturation: 100%;
+  --bhsl-magenta-lightness: 30%;
+  --bhsl-inserted-hue: var(--bhsl-green-hue);
+  --bhsl-inserted-saturation: var(--bhsl-green-saturation);
+  --bhsl-inserted-lightness: var(--bhsl-green-lightness);
+  --bhsl-deleted-hue: var(--bhsl-red-hue);
+  --bhsl-deleted-saturation: var(--bhsl-red-saturation);
+  --bhsl-deleted-lightness: var(--bhsl-red-lightness);
+  --bfont-text-style: normal;
+  --bfont-text-variant: normal;
+  --bfont-text-weight: 400;
+  --bfont-text-stretch: normal;
+  --bfont-text-height: 1.3;
+  --bfont-text-family: sans-serif;
+  --bfont-header-style: normal;
+  --bfont-header-variant: normal;
+  --bfont-header-weight: 600;
+  --bfont-header-stretch: normal;
+  --bfont-header-height: 1.7;
+  --bfont-header-family: sans-serif;
+  --bfont-code-style: normal;
+  --bfont-code-variant: normal;
+  --bfont-code-weight: 400;
+  --bfont-code-stretch: normal;
+  --bfont-code-height: 1.3;
+  --bfont-code-family: monospace;
+  --bfont-boldcode-style: normal;
+  --bfont-boldcode-variant: normal;
+  --bfont-boldcode-weight: 700;
+  --bfont-boldcode-stretch: normal;
+  --bfont-boldcode-height: 1.3;
+  --bfont-boldcode-family: monospace;
+  --bfont-term-style: italic;
+  --bfont-term-variant: normal;
+  --bfont-term-weight: 700;
+  --bfont-term-stretch: normal;
+  --bfont-term-height: 1.3;
+  --bfont-term-family: sans-serif;
+  --bfont-summary-style: italic;
+  --bfont-summary-variant: normal;
+  --bfont-summary-weight: 400;
+  --bfont-summary-stretch: normal;
+  --bfont-summary-height: 1.3;
+  --bfont-summary-family: sans-serif;
+  --bfont-idiomatic-style: italic;
+  --bfont-idiomatic-variant: normal;
+  --bfont-idiomatic-weight: 400;
+  --bfont-idiomatic-stretch: normal;
+  --bfont-idiomatic-height: 1.3;
+  --bfont-idiomatic-family: sans-serif;
+  --bfont-emphasis-style: italic;
+  --bfont-emphasis-variant: normal;
+  --bfont-emphasis-weight: 400;
+  --bfont-emphasis-stretch: normal;
+  --bfont-emphasis-height: 1.3;
+  --bfont-emphasis-family: sans-serif;
+  --bfont-attention-style: normal;
+  --bfont-attention-variant: normal;
+  --bfont-attention-weight: 700;
+  --bfont-attention-stretch: normal;
+  --bfont-attention-height: 1.3;
+  --bfont-attention-family: sans-serif;
+  --bfont-strong-style: normal;
+  --bfont-strong-variant: normal;
+  --bfont-strong-weight: 700;
+  --bfont-strong-stretch: normal;
+  --bfont-strong-height: 1.3;
+  --bfont-strong-family: sans-serif;
+  --bfont-variable-style: normal;
+  --bfont-variable-variant: normal;
+  --bfont-variable-weight: 400;
+  --bfont-variable-stretch: normal;
+  --bfont-variable-height: 1.3;
+  --bfont-variable-family: sans-serif;
+  --bfont-citation-style: normal;
+  --bfont-citation-variant: small-caps;
+  --bfont-citation-weight: 400;
+  --bfont-citation-stretch: normal;
+  --bfont-citation-height: 1.3;
+  --bfont-citation-family: sans-serif;
+  --bfont-label-style: normal;
+  --bfont-label-variant: normal;
+  --bfont-label-weight: 400;
+  --bfont-label-stretch: normal;
+  --bfont-label-height: 1.3;
+  --bfont-label-family: sans-serif;
   --bhsl-current-hue: var(--bhsl-foreground-hue);
   --bhsl-current-saturation: var(--bhsl-foreground-saturation);
   --bhsl-current-lightness: var(--bhsl-foreground-lightness);
@@ -15,6 +147,36 @@
   font-stretch: var(--bfont-text-stretch);
   line-height: var(--bfont-text-height);
   font-family: var(--bfont-text-family);
+}
+@media screen {
+  :where(.bluelib) {
+    background-image: var(--burl-background-full);
+  }
+}
+@media screen and (max-width: 3840px) {
+  :where(.bluelib) {
+    background-image: var(--burl-background-3840);
+  }
+}
+@media screen and (max-width: 1920px) {
+  :where(.bluelib) {
+    background-image: var(--burl-background-1920);
+  }
+}
+@media screen and (max-width: 1366px) {
+  :where(.bluelib) {
+    background-image: var(--burl-background-1366);
+  }
+}
+@media screen and (max-width: 640px) {
+  :where(.bluelib) {
+    background-image: var(--burl-background-640);
+  }
+}
+@media screen and (max-width: 360px) {
+  :where(.bluelib) {
+    background-image: var(--burl-background-360);
+  }
 }
 :where(.bluelib),
 :where(.bluelib) :where(*) {
@@ -99,6 +261,16 @@
   gap: 8px;
   background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
 }
+@media (max-width: 492px) {
+  :where(.bluelib) :where(.panel) {
+    min-width: calc(100vw - 16px);
+  }
+}
+@media (min-width: 493px) {
+  :where(.bluelib) :where(.panel) {
+    min-width: 476px;
+  }
+}
 :where(.bluelib) :where(.panel):where(.border-top),
 :where(.bluelib) :where(.panel):where(.panel-box) {
   border-top-width: 2px;
@@ -122,6 +294,9 @@
 }
 :where(.bluelib) :where(.panel):where(.panel-parenthesis) {
   font-size: smaller;
+}
+:where(.bluelib) :where(.panel) :where(.panel) {
+  min-width: unset;
 }
 :where(.bluelib) :where(.chapter-0) {
   flex-wrap: nowrap;

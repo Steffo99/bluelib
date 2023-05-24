@@ -1,6 +1,12 @@
 #!/bin/bash
 # Maybe a Makefile would be better...
 
+origin=$(pwd)
+cd "dist"
+
+echo "Cleaning dist:" *
+rm -I *
+
 echo "Finding mixins..."
 mixins=$(ls ../src/mixins/**.less)
 echo "Mixins:"
@@ -54,3 +60,4 @@ lessc "$base.less" --clean-css "$base.min.css"
 done
 done
 
+cd "$origin"

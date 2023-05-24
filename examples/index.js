@@ -149,10 +149,10 @@ function rulesetsSorter(a, b) {
 const rulesetsEnabled = [
 	"base",
 	"classic",
-	// "glass",
+	"glass",
 	"layouts-center",
-	// "colors-royalblue",
-	// "fonts-fira-ghpages",
+	"colors-royalblue",
+	"fonts-fira-ghpages",
 ]
 
 /**

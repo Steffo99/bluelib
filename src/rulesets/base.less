@@ -36,6 +36,7 @@
 		.map-hsl-group(inserted; green);
 		.map-hsl-group(deleted; red);
 		
+		// Set the default fonts
 		.create-font-group(text; normal; normal; 400; normal; regular; 1.3; sans-serif);
 		.create-font-group(header; normal; normal; 600; normal; regular; 1.7; sans-serif);
 		.create-font-group(code; normal; normal; 400; normal; regular; 1.3; monospace);
@@ -55,6 +56,7 @@
 
 		// Set the background defined in the palette
 		background-color: .hsl-group(background)[@c];
+		.use-background-images();
 
 		// Make the element fill all available space
 		width: 100%;
