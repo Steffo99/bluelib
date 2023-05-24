@@ -269,6 +269,12 @@
 					</p>
 					<dl>
 						<dt>
+							<label class="fade" title="fonts-fira-ghpages"><input type="radio" autocomplete="off" disabled checked name="ruleset-fonts" value=""> None</label>
+						</dt>
+						<dd>
+							If no font ruleset is applied, Bluelib defaults to using the browser's fonts.
+						</dd>
+						<dt>
 							<label class="fade" title="fonts-fira-ghpages"><input type="radio" autocomplete="off" disabled checked name="ruleset-fonts" value="fira-ghpages"> Fira</label>
 						</dt>
 						<dd>
@@ -312,14 +318,14 @@
 						Via UNPKG
 					</h3>
 					<p>
-						You can quickly add Bluelib to a simple website by adding the targets using <code>&lt;link&gt;</code> tags, like this:
+						You can quickly add Bluelib to a simple website by adding the targets using <code>&lt;link&gt;</code> tags and the <a href="https://unpkg.com/">UNPKG</a> CDN, like this:
 					</p>
 					<div class="panel">
 						<code>
 							&lt;link <wbr>rel=&quot;stylesheet&quot; <wbr>href=&quot;https://unpkg.com/@steffo/bluelib<wbr>@<var>VERSION</var><wbr>/dist/<wbr><var>RULESET</var>.<var>SELECTORSET</var>.min.css&quot;<wbr> type=&quot;text/css&quot;<wbr> /&gt;
 						</code>
 					</div>
-					<p class="float-bottom">
+					<p>
 						To use the targets currently enabled in this page, you should use:
 					</p>
 					<div class="panel fade" id="js-unpkg-targets">
@@ -346,7 +352,7 @@
 							import <wbr>"@steffo/bluelib/dist/<wbr><var>RULESET</var>.<var>SELECTORSET</var>.css";
 						</code>
 					</div>
-					<p class="float-bottom">
+					<p>
 						To use the targets currently enabled in this page, you should use:
 					</p>
 					<div class="panel fade" id="js-yarn-targets">

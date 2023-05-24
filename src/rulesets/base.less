@@ -11,6 +11,45 @@
 	//<editor-fold desc="Rules: Body">
 
 	& {
+		// Set the default colors
+		.create-hsl-group(background; 0deg; 0%; 100%);
+		.create-hsl-group(foreground; 0deg; 0%; 15%);
+		.create-hsl-group(primary; 0deg; 0%; 0%);
+		.create-hsl-group(link; 180deg; 100%; 40%);
+	
+		.create-hsl-group(mark-foreground; 0deg; 0%; 0%);
+		.create-hsl-group(mark-background; 60deg; 100%; 75%);
+	
+		.create-hsl-group(todo-foreground; 204deg; 11%; 18%);
+		.create-hsl-group(todo-background; 43deg; 100%; 65%);
+	
+		.create-hsl-group(sample-input; 0deg; 100%; 0%);
+		.create-hsl-group(sample-output; 0deg; 100%; 100%);
+	
+		.create-hsl-group(red; 0deg; 100%; 30%);
+		.create-hsl-group(yellow; 60deg; 100%; 30%);
+		.create-hsl-group(green; 120deg; 100%; 30%);
+		.create-hsl-group(cyan; 180deg; 100%; 30%);
+		.create-hsl-group(blue; 240deg; 100%; 30%);
+		.create-hsl-group(magenta; 300deg; 100%; 30%);
+	
+		.map-hsl-group(inserted; green);
+		.map-hsl-group(deleted; red);
+		
+		.create-font-group(text; normal; normal; 400; normal; regular; 1.3; sans-serif);
+		.create-font-group(header; normal; normal; 600; normal; regular; 1.7; sans-serif);
+		.create-font-group(code; normal; normal; 400; normal; regular; 1.3; monospace);
+		.create-font-group(boldcode; normal; normal; 700; normal; regular; 1.3; monospace);
+		.create-font-group(term; italic; normal; 700; normal; regular; 1.3; sans-serif);
+		.create-font-group(summary; italic; normal; 400; normal; regular; 1.3; sans-serif);
+		.create-font-group(idiomatic; italic; normal; 400; normal; regular; 1.3; sans-serif);
+		.create-font-group(emphasis; italic; normal; 400; normal; regular; 1.3; sans-serif);
+		.create-font-group(attention; normal; normal; 700; normal; regular; 1.3; sans-serif);
+		.create-font-group(strong; normal; normal; 700; normal; regular; 1.3; sans-serif);
+		.create-font-group(variable; normal; normal; 400; normal; regular; 1.3; sans-serif);
+		.create-font-group(citation; normal; small-caps; 400; normal; regular; 1.3; sans-serif);
+		.create-font-group(label; normal; normal; 400; normal; regular; 1.3; sans-serif);
+
 		// Set the current color
 		.map-hsl-group(current, foreground);
 

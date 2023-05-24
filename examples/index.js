@@ -51,21 +51,6 @@ function getStyleIdFromBaseName(baseName) {
 }
 
 /**
- * Generate the UNPKG URL (`"https://unpkg.com/@steffo/bluelib@8.1.0/dist/classic.root.min.css"`) from a version (`"8.1.0"`), a base name (`"classic"`) and a selectorset (`"root"`).
- */
-function getUnpkgUrlFromBaseName(baseName, version, selectorset) {
-	return `https://unpkg.com/@steffo/bluelib@${version}/dist/${baseName}.${selectorset}.min.css`
-}
-
-/**
- * Generate the JS import path (`"@steffo/bluelib/dist/classic.root.css"`) from a base name (`"classic"`) and a selectorset (`"root"`).
- */
-function getJSImportPathFromBaseName(baseName, selectorSet) {
-	return `@steffo/bluelib/dist/${baseName}.${selectorSet}.css`
-}
-
-
-/**
  * Check if the less compiler is done rendering Less stylesheets into CSS.
  *
  * @returns {boolean} `true` if the rendering is complete, `false` otherwise.
@@ -127,6 +112,12 @@ function initStyleFromBaseName() {
 	console.info("[Bluelib] The following styles are available:", styleFromBaseName)
 }
 
+/**
+ * The currently enabled selectorset.
+ * 
+ * @type {String}
+ */
+let selectorsetEnabled = "root";
 
 /**
  * List of valid rulesets, in the order they should be enabled in.
@@ -158,10 +149,10 @@ function rulesetsSorter(a, b) {
 const rulesetsEnabled = [
 	"base",
 	"classic",
-	"glass",
+	// "glass",
 	"layouts-center",
-	"colors-royalblue",
-	"fonts-fira-ghpages",
+	// "colors-royalblue",
+	// "fonts-fira-ghpages",
 ]
 
 /**
@@ -211,14 +202,14 @@ function setRuleset(baseName, shouldBeEnabled) {
  * 
  * @type {HTMLDivElement | undefined}
  */
-const unpkgTargets = undefined
+let unpkgTargets = undefined
 
 /**
  * The `#js-yarn-targets` element.
  * 
  * @type {HTMLDivElement | undefined}
  */
-const yarnTargets = undefined
+let yarnTargets = undefined
 
 /**
  * Initialize the {@link unpkgTargets} and {@link yarnTargets} variables.
@@ -239,9 +230,8 @@ function sync() {
 		element.disabled = !rulesetsEnabled.includes(baseName)
 		console.debug("[Bluelib] State of", baseName, element, "changed to", !element.disabled)
 	}
-	for(const baseName of rulesetsEnabled) {
-
-	}
+	unpkgTargets.innerHTML = rulesetsEnabled.map(baseName => `<code>&lt;link <wbr>rel=&quot;stylesheet&quot; <wbr>href=&quot;https://unpkg.com/@steffo/bluelib<wbr>@<b>${version}</b><wbr>/dist/<wbr><b>${baseName}</b>.<b>${selectorsetEnabled}</b>.min.css&quot;<wbr> type=&quot;text/css&quot; /&gt;</code>`).join("<br>")
+	yarnTargets.innerHTML = rulesetsEnabled.map(baseName => `<code>import &quot;@steffo/bluelib/dist/<wbr><b>${baseName}</b><wbr>.<b>${selectorsetEnabled}</b><wbr>.css&quot;;</code>`).join("<br>")
 	console.debug("[Bluelib] Done syncing enabled rulesets.")
 }
 
@@ -256,6 +246,26 @@ function allowInteraction() {
 		element.addEventListener("input", onToggleableRulesetToggle)
 		element.parentElement.classList.remove("fade")
 	}
+	for(const element of document.querySelectorAll("#panel-rulesets-colors input")) {
+		console.debug("[Bluelib] Enabling interaction on:", element)
+		element.disabled = false
+		element.addEventListener("input", onColorRulesetSelection)
+		element.parentElement.classList.remove("fade")
+	}
+	for(const element of document.querySelectorAll("#panel-rulesets-fonts input")) {
+		console.debug("[Bluelib] Enabling interaction on:", element)
+		element.disabled = false
+		element.addEventListener("input", onFontRulesetSelection)
+		element.parentElement.classList.remove("fade")
+	}
+	for(const element of document.querySelectorAll("#panel-selectorsets input")) {
+		console.debug("[Bluelib] Enabling interaction on:", element)
+		element.disabled = false
+		element.addEventListener("input", onSelectorsetSelection)
+		element.parentElement.classList.remove("fade")
+	}
+	unpkgTargets.classList.remove("fade")
+	yarnTargets.classList.remove("fade")
 	console.info("[Bluelib] Example page is ready!")
 }
 
@@ -263,7 +273,7 @@ function allowInteraction() {
 /**
  * Event callback for ruleset toggles in the page.
  *
- * @param event {Event} The triggered event.
+ * @param event {Event} The triggering event.
  */
 function onToggleableRulesetToggle(event) {
 	const baseName = event.target.value
@@ -271,6 +281,52 @@ function onToggleableRulesetToggle(event) {
 	console.debug("[Bluelib] Received onRulesetToggle ", baseName, shouldBeEnabled)
 	setRuleset(baseName, shouldBeEnabled)
 	sortRulesetsEnabled()
+	sync()
+}
+
+/**
+ * Event callback for color ruleset selections in the page.
+ * 
+ * @param event {Event} The triggering event.
+ */
+function onColorRulesetSelection(event) {
+	const old = rulesetsEnabled.find(v => v.startsWith("colors-"))
+	if(old) {
+		disableRuleset(old)
+	}
+	if(event.target.value) {
+		const baseName = `colors-${event.target.value}`
+		enableRuleset(baseName)
+	}
+	sync()
+}
+
+
+/**
+ * Event callback for font ruleset selections in the page.
+ * 
+ * @param event {Event} The triggering event.
+ */
+function onFontRulesetSelection(event) {
+	const old = rulesetsEnabled.find(v => v.startsWith("fonts-"))
+	if(old) {
+		disableRuleset(old)
+	}
+	if(event.target.value) {
+		const baseName = `fonts-${event.target.value}`
+		enableRuleset(baseName)
+	}
+	sync()
+}
+
+/**
+ * Event callback for selectorset selections in the page.
+ * 
+ * @param event {Event} The triggering event.
+ */
+function onSelectorsetSelection(event) {
+	selectorsetEnabled = event.target.value
+	console.debug("[Bluelib] Changed selectorset to:", selectorsetEnabled)
 	sync()
 }
 
