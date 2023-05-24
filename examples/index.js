@@ -189,7 +189,7 @@ function enableRuleset(baseName) {
 function disableRuleset(baseName) {
 	const pos = rulesetsEnabled.indexOf(baseName)
 	if(pos) {
-		rulesetsEnabled.splice(pos)
+		rulesetsEnabled.splice(pos, 1)
 	}
 }
 
@@ -214,7 +214,7 @@ function sync() {
 	// Toggle Less-compiled stylesheets
 	for(const [baseName, element] of Object.entries(styleFromBaseName)) {
 		element.disabled = !rulesetsEnabled.includes(baseName)
-		console.debug("[Bluelib] State of", baseName, "changed to", !element.disabled)
+		console.debug("[Bluelib] State of", baseName, element, "changed to", !element.disabled)
 	}
 	console.debug("[Bluelib] Done syncing enabled rulesets.")
 }
