@@ -207,6 +207,29 @@ function setRuleset(baseName, shouldBeEnabled) {
 
 
 /**
+ * The `#js-unpkg-targets` element.
+ * 
+ * @type {HTMLDivElement | undefined}
+ */
+const unpkgTargets = undefined
+
+/**
+ * The `#js-yarn-targets` element.
+ * 
+ * @type {HTMLDivElement | undefined}
+ */
+const yarnTargets = undefined
+
+/**
+ * Initialize the {@link unpkgTargets} and {@link yarnTargets} variables.
+ */
+function initTargets() {
+	unpkgTargets = document.getElementById("js-unpkg-targets")
+	yarnTargets = document.getElementById("js-yarn-targets")
+}
+
+
+/**
  * Synchronize {@link rulesetsEnabled} with the {@link document}.
  */
 function sync() {
@@ -215,6 +238,9 @@ function sync() {
 	for(const [baseName, element] of Object.entries(styleFromBaseName)) {
 		element.disabled = !rulesetsEnabled.includes(baseName)
 		console.debug("[Bluelib] State of", baseName, element, "changed to", !element.disabled)
+	}
+	for(const baseName of rulesetsEnabled) {
+
 	}
 	console.debug("[Bluelib] Done syncing enabled rulesets.")
 }
@@ -255,6 +281,7 @@ async function onWindowLoad() {
 	await initVersion()
 	await sleepUntilLessIsDone()
 	initStyleFromBaseName()
+	initTargets()
 	sortRulesetsEnabled()
 	sync()
 	allowInteraction()
