@@ -1,0 +1,42 @@
+.create-background-images(@base; @ext) {
+	--burl-background-full: url(~"@{base}.@{ext}");
+	--burl-background-3840: url(~"@{base}3840.@{ext}");
+	--burl-background-1920: url(~"@{base}1920.@{ext}");
+	--burl-background-1366: url(~"@{base}1366.@{ext}");
+	--burl-background-640: url(~"@{base}640.@{ext}");
+	--burl-background-360: url(~"@{base}360.@{ext}");
+}
+
+.create-background-image(@name) {
+	--burl-background-full: url(~"@{name}");
+	--burl-background-3840: url(~"@{name}");
+	--burl-background-1920: url(~"@{name}");
+	--burl-background-1366: url(~"@{name}");
+	--burl-background-640: url(~"@{name}");
+	--burl-background-360: url(~"@{name}");
+}
+
+.use-background-images() {
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+
+	@media screen {
+		background-image: var(--burl-background-full);
+	}	
+	@media screen and (max-width: 3840px) {
+		background-image: var(--burl-background-3840);
+	}
+	@media screen and (max-width: 1920px) {
+		background-image: var(--burl-background-1920);
+	}
+	@media screen and (max-width: 1366px) {
+		background-image: var(--burl-background-1366);
+	}
+	@media screen and (max-width: 640px) {
+		background-image: var(--burl-background-640);
+	}
+	@media screen and (max-width: 360px) {
+		background-image: var(--burl-background-360);
+	}	
+}

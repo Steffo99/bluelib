@@ -1,0 +1,23 @@
+/**
+ * Bluelib Layouts Flex
+ * by <me@steffo.eu>
+ */
+:where(.bluelib) :where(.layout-flex-row),
+:where(.bluelib) :where(.layout-flex-rrow),
+:where(.bluelib) :where(.layout-flex-column),
+:where(.bluelib) :where(.layout-flex-rcolumn) {
+  display: flex;
+  gap: 8px;
+}
+:where(.bluelib) :where(.layout-flex-row) {
+  flex-direction: row;
+}
+:where(.bluelib) :where(.layout-flex-rrow) {
+  flex-direction: row-reverse;
+}
+:where(.bluelib) :where(.layout-flex-column) {
+  flex-direction: column;
+}
+:where(.bluelib) :where(.layout-flex-rcolumn) {
+  flex-direction: column-reverse;
+}

@@ -13,6 +13,7 @@
 		<link rel="icon" type="image/x-icon" href="../favicon.ico">
 		<link rel="stylesheet/less" type="text/css" href="../dist/base.root.less">
 		<link rel="stylesheet/less" type="text/css" href="../dist/layouts-center.root.less">
+		<link rel="stylesheet/less" type="text/css" href="../dist/layouts-flex.root.less">
 		<link rel="stylesheet/less" type="text/css" href="../dist/colors-royalblue.root.less">
 		<link rel="stylesheet/less" type="text/css" href="../dist/colors-amber.root.less">
 		<link rel="stylesheet/less" type="text/css" href="../dist/colors-pixeldawn.root.less">
@@ -21,7 +22,6 @@
 		<link rel="stylesheet/less" type="text/css" href="../dist/classic.root.less">
 		<link rel="stylesheet/less" type="text/css" href="../dist/glass.root.less">
 		<link rel="stylesheet/less" type="text/css" href="../dist/fun.root.less">
-		<link rel="stylesheet" type="text/css" href="./index.css">
 		<script src="index.js"></script>
 		<script>
 			less = {
@@ -32,7 +32,6 @@
 		<title>Bluelib</title>
 	</head>
 	<body class="theme-bluelib layout-center">
-		<img class="layout-center-background" alt="" src="fabrice-nerfin-puHQJZd3MDg-unsplash.jpg">
 		<header>
 			<h1>
 				Bluelib
@@ -75,8 +74,8 @@
 					</h3>
 					<ol>
 						<li><a href="#chapter-welcome">Welcome to Bluelib!</a></li>
-						<li><a href="#chapter-targets">Rulesets, selectorsets, targets</a></li>
-						<li><a href="#chapter-install">Installation and usage</a></li>
+						<li><a href="#chapter-configure">Configuration</a></li>
+						<li><a href="#chapter-install">Installation</a></li>
 						<li><a href="#chapter-panels">Panels</a></li>
 						<li><a href="#chapter-chapters">Chapters</a></li>
 						<li><a href="#chapter-modifiers">Modifiers</a></li>
@@ -154,139 +153,165 @@
 					</ul>
 				</section>
 			</div>
-			<div class="chapter-3" id="chapter-targets">
+			<div class="chapter-1" id="chapter-configure">
 				<h2>
-					Rulesets, selectorsets, targets
+					Configuration
 				</h2>
 				<section class="panel box" id="panel-targets">
 					<h3>
 						Targets
 					</h3>
 					<p>
-						A Bluelib <dfn id="dfn-target">target</dfn> is a CSS document where CSS rulesets of a certain type are grouped together.
+						Bluelib is composed by many separate CSS documents, each one providing different features which may or may not be desired in a certain website.
 					</p>
 					<p>
-						It is composed by two parts: the <dfn id="dfn-ruleset">ruleset</dfn>, determining the CSS rules to use, and the
-						<dfn id="dfn-selectorset">selectorset</dfn>, determining the elements to apply the CSS rules on.
-					</p>
-					<hr/>
-					<p>
-						<i>Targets</i> always have a predictable name, which is:
-					</p>
-					<div class="panel">
-						<p>
-							<code>dist/<var>RULESET</var>.<var>SELECTORSET</var>.css</code>
-						</p>
-					</div>
-					<p>
-						Be sure to choose the ones matching your needs!
-					</p>
-					<hr/>
-					<p>
-						By running <code>dist/_build.sh</code>, new targets are generated and compiled from <a href="https://lesscss.org/">Less</a> to CSS.
+						A single one of these documents is called a <dfn id="dfn-target">target</dfn>.
 					</p>
 					<p>
-						The <a href="https://en.wikipedia.org/wiki/Cartesian_product">cartesian product</a> is applied between all <i>rulesets</i> in
-						<code>src/rulesets</code> and all <i>selectorsets</i> in <code>src/selectorsets</code>, compiling a new target for each pair.
+						A <i>target</i> is composed by two parts:
 					</p>
+					<ul>
+						<li>a <dfn id="dfn-ruleset">ruleset</dfn>, which defines <b>which rules</b> should apply to the page;</li>
+						<li>a <dfn id="dfn-selectorset">selectorset</dfn>, which defines <b>on which elements</b> the changes should be applied to.</li>
+					</ul>
 				</section>
-				<section class="panel box rainbow" id="panel-rulesets todo">
+			</div>
+			<div class="chapter-3" id="chapter-rulesets">
+				<form class="panel box" id="panel-rulesets-toggleable" name="rulesets-toggleable">
 					<h3>
-						Available rulesets
+						Generic rulesets
 					</h3>
+					<p>
+						Enable the rulesets providing the features you need, and opt out of the others to keep your page as lightweight as possible!
+					</p>
 					<dl>
 						<dt>
-							<label class="fade"><input type="checkbox" autocomplete="off" disabled checked class="ruleset-toggle" name="ruleset-base" onclick="toggleStyle('less:dist-base:root')"> Base</label>
+							<label class="fade" title="base"><input type="checkbox" autocomplete="off" disabled checked name="ruleset-base" value="base"> Base</label>
 						</dt>
 						<dd>
 							The base <i>ruleset</i>, providing the layout and basic high contrast theming.
 						</dd>
 						<dt>
-							<label class="fade"><input type="checkbox" autocomplete="off" checked class="ruleset-toggle" name="ruleset-classic" onclick="toggleStyle('less:dist-classic:root')"> Classic</label>
+							<label class="fade" title="layouts-center"><input type="checkbox" autocomplete="off" disabled checked name="ruleset-layouts-center" value="layouts-center"> Layout: Center</label>
+						</dt>
+						<dd>
+							<mark>Experimental.</mark>
+							Gives a header at the top, a footer at the bottom, and fits the content between the two.
+						</dd>
+						<dt>
+							<label class="fade" title="layouts-flex"><input type="checkbox" autocomplete="off" disabled name="ruleset-layouts-flex" value="layouts-flex"> Layout: Flex</label>
+						</dt>
+						<dd>
+							<mark>Experimental.</mark>
+							Allows you to quickly customize the positioning of panels via pre-made flex classes and the <code>flex-basis</code> property.
+						</dd>
+						<dt>
+							<label class="fade" title="classic"><input type="checkbox" autocomplete="off" disabled checked name="ruleset-classic" value="classic"> Classic</label>
 						</dt>
 						<dd>
 							Inspired by the older Bluelib versions, with semi-transparent panels and rounded borders.
 						</dd>
 						<dt>
-							<label class="fade"><input type="checkbox" autocomplete="off" checked class="ruleset-toggle" name="ruleset-glass" onclick="toggleStyle('less:dist-glass:root')"> Glass</label>
+							<label class="fade" title="glass"><input type="checkbox" autocomplete="off" disabled checked name="ruleset-glass" value="glass"> Glass</label>
 						</dt>
 						<dd>
 							Made to celebrate the addition of <code>backdrop-filter</code> to Firefox, makes panels have a <q>stained glass</q> background.
 						</dd>
 						<dt>
-							<label class="fade"><input type="checkbox" autocomplete="off" disabled class="ruleset-toggle" name="ruleset-fun" onclick="toggleStyle('less:dist-fun:root')"> Fun</label>
+							<label class="fade" title="fun"><input type="checkbox" autocomplete="off" disabled name="ruleset-fun" value="fun"> Fun</label>
 						</dt>
 						<dd>
 							<mark>Experimental.</mark>
 							<i>Ruleset</i> with bizzare or buggy but fun rules.
 						</dd>
-						<dt>Layouts</dt>
+					</dl>
+				</form>
+				<form class="panel box" id="panel-rulesets-colors" name="rulesets-colors">
+					<h3>
+						Color rulesets
+					</h3>
+					<p>
+						Pick your preferred color palette among these ones!
+					</p>
+					<dl>
+						<dt>
+							<label class="fade" title="<nothing>"><input type="radio" autocomplete="off" disabled checked name="ruleset-colors" value=""> None</label>
+						</dt>
 						<dd>
-							<dl>
-								<dt>
-									<label class="fade"><input type="checkbox" autocomplete="off" checked class="ruleset-toggle" name="ruleset-fun" onclick="toggleStyle('less:dist-layouts-center:root')"> Center</label>
-								</dt>
-								<dd>
-									Gives the page a background, a header at the top, a footer at the bottom, and fits the content between the two.
-								</dd>
-							</dl>
+							If no color ruleset is applied, Bluelib defaults to a plain black-on-white palette.
 						</dd>
-						<dt>Colors</dt>
+						<dt>
+							<label class="fade" title="colors-royalblue"><input type="radio" autocomplete="off" disabled checked name="ruleset-colors" value="royalblue"> Royal Blue</label>
+						</dt>
 						<dd>
-							<dl>
-								<dt>
-									<label class="fade"><input type="radio" autocomplete="off" disabled checked class="ruleset-toggle" name="ruleset-colors" onclick="selectColor ('less:dist-colors-royalblue:root', 'fabrice-nerfin-puHQJZd3MDg-unsplash.jpg')"> Royal Blue</label>
-								</dt>
-								<dd>
-									<a href="https://github.com/Steffo99">Steffo</a>'s signature color theme, based upon RYG⁵'s logo colors.
-								</dd>
-								<dt>
-									<label class="fade"><input type="radio" autocomplete="off" disabled class="ruleset-toggle" name="ruleset-colors" onclick="selectColor ('less:dist-colors-amber:root', 'anastasiia-chepinska-lcfH0p6emhw-unsplash-edited.jpg')"> Gestione Amber</label>
-								</dt>
-								<dd>
-									<a href="https://github.com/Nemesis-FT">Nemesis</a>' own color theme, with a "coffee-like" look.
-								</dd>
-								<dt>
-									<label class="fade"><input type="radio" autocomplete="off" disabled class="ruleset-toggle" name="ruleset-colors" onclick="selectColor ('less:dist-colors-pixeldawn:root', 'pixeldawn-viktya.png')"> Pixel Dawn</label>
-								</dt>
-								<dd>
-									A theme developed in collaboration with Viktya, featuring a pixelated beach-side sunrise.
-								</dd>
-								<dt>
-									<label class="fade"><input type="radio" autocomplete="off" disabled class="ruleset-toggle" name="ruleset-colors" onclick="selectColor ('less:dist-colors-purplestar:root', 'kazuend-2KXEb_8G5vo-unsplash-edited.jpg')"> Purple Star</label>
-								</dt>
-								<dd>
-									A purple-ish theme for <a href="https://www.starshard.studio">Star Shard Studio</a>.
-								</dd>
-							</dl>
+							<a href="https://github.com/Steffo99">Steffo</a>'s signature color palette, based upon RYG⁵'s logo colors.
 						</dd>
-						<dt>Fonts</dt>
+						<dt>
+							<label class="fade" title="colors-amber"><input type="radio" autocomplete="off" disabled name="ruleset-colors" value="amber"> Gestione Amber</label>
+						</dt>
 						<dd>
-							<dl>
-								<dt><label class="fade"><input type="radio" autocomplete="off" disabled checked name="ruleset-fonts"> Fira</label></dt>
-								<dd>
-									Font theme based upon Mozilla's <a href="https://github.com/mozilla/Fira">Fira</a> font.
-								</dd>
-							</dl>
+							<a href="https://github.com/Nemesis-FT">Nemesis</a>' own color palette, with a "coffee-like" look.
+						</dd>
+						<dt>
+							<label class="fade" title="colors-pixeldawn"><input type="radio" autocomplete="off" disabled name="ruleset-colors" value="pixeldawn"> Pixel Dawn</label>
+						</dt>
+						<dd>
+							A ruleset developed in collaboration with <a href="https://viktya.github.io/">Viktya</a>, featuring a pixelated beach-side sunrise.
+						</dd>
+						<dt>
+							<label class="fade" title="colors-purplestar"><input type="radio" autocomplete="off" disabled name="ruleset-colors" value="purplestar"> Purple Star</label>
+						</dt>
+						<dd>
+							A ruleset with a purple-yellow palette for <a href="https://www.starshard.studio">Star Shard Studio</a>.
 						</dd>
 					</dl>
-				</section>
-				<section class="panel box" id="panel-selectorsets">
+				</form>
+				<form class="panel box" id="panel-rulesets-fonts" name="rulesets-fonts">
 					<h3>
-						Available selectorsets
+						Font rulesets
 					</h3>
+					<p>
+						Pick your preferred fonts among these ones!
+					</p>
 					<dl>
-						<dt><label class="fade"><input type="radio" autocomplete="off" disabled checked name="selectorset"> Root</label></dt>
+						<dt>
+							<label class="fade" title="fonts-fira-ghpages"><input type="radio" autocomplete="off" disabled checked name="ruleset-fonts" value=""> None</label>
+						</dt>
+						<dd>
+							If no font ruleset is applied, Bluelib defaults to using the browser's fonts.
+						</dd>
+						<dt>
+							<label class="fade" title="fonts-fira-ghpages"><input type="radio" autocomplete="off" disabled checked name="ruleset-fonts" value="fira-ghpages"> Fira</label>
+						</dt>
+						<dd>
+							Font theme based upon Mozilla's <a href="https://github.com/mozilla/Fira">Fira</a> fonts.
+						</dd>
+					</dl>
+				</form>
+				<form class="panel box" id="panel-selectorsets" name="selectorsets">
+					<h3>
+						Possible selectorsets
+					</h3>
+					<p>
+						Choose the selectorset which better suits your needs!
+					</p>
+					<dl>
+						<dt><label class="fade"><input type="radio" autocomplete="off" disabled checked name="selectorsets" value="root"> Root</label></dt>
 						<dd>
 							Simple selectors for usage in plain HTML pages, with short and human-friendly class names.
 						</dd>
-						<dt><label class="fade"><input type="radio" autocomplete="off" disabled name="selectorset"> Module</label></dt>
+						<dt><label class="fade"><input type="radio" autocomplete="off" disabled name="selectorsets" value="module"> Module</label></dt>
 						<dd>
 							All selectors use class names, allowing the usage of the target with
-							<a href="https://github.com/css-modules/css-modules">CSS Modules</a>. Useful for React or similar web app projects.
+							<a href="https://github.com/css-modules/css-modules">CSS Modules</a>. Useful to create React component packages or in any cases you want isolation between Bluelib and the rest of your page.
 						</dd>
 					</dl>
-				</section>
+					<div class="panel parenthesis">
+						<p>
+							Since it's not possible to preview selectorset changes, this page will always use the <b>Root</b> selectorset, and the toggle above will only influence the installation instructions below.
+						</p>
+					</div>
+				</form>
 			</div>
 			<div class="chapter-3" id="chapter-install">
 				<h2>
@@ -297,24 +322,46 @@
 						Via UNPKG
 					</h3>
 					<p>
-						The easiest way to use Bluelib on your website is by using <a href="https://unpkg.com/">UNPKG</a>.
-					</p>
-					<p>
-						Simply link the stylesheets in the header of your project like this:
+						You can quickly add Bluelib to a simple website by adding the targets using <code>&lt;link&gt;</code> tags and the <a href="https://unpkg.com/">UNPKG</a> CDN, like this:
 					</p>
 					<div class="panel">
 						<code>
 							&lt;link <wbr>rel=&quot;stylesheet&quot; <wbr>href=&quot;https://unpkg.com/@steffo/bluelib<wbr>@<var>VERSION</var><wbr>/dist/<wbr><var>RULESET</var>.<var>SELECTORSET</var>.min.css&quot;<wbr> type=&quot;text/css&quot;<wbr> /&gt;
 						</code>
 					</div>
+					<p>
+						To use the targets currently enabled in this page, you should use:
+					</p>
+					<div class="panel fade" id="js-unpkg-targets">
+						Waiting for JavaScript to load...
+					</div>
 				</section>
-				<section class="panel box todo" id="panel-installtbd">
+				<section class="panel box" id="panel-yarn">
 					<h3>
-						Coming soon
+						Via a bundler
 					</h3>
 					<p>
-						More installation methods coming soon!
+						If you're building a website with a framework such as <a href="https://nextjs.org/">Next.JS</a>, you'll want first to install Bluelib via your package manager:
 					</p>
+					<div class="panel">
+						<code>
+							$ yarn add <a href="https://www.npmjs.com/package/@steffo/bluelib">@steffo/bluelib</a>
+						</code>
+					</div>
+					<p>
+						Then, you'll want to import the targets you desire at your website's root:
+					</p>
+					<div class="panel">
+						<code>
+							import <wbr>"@steffo/bluelib/dist/<wbr><var>RULESET</var>.<var>SELECTORSET</var>.css";
+						</code>
+					</div>
+					<p>
+						To use the targets currently enabled in this page, you should use:
+					</p>
+					<div class="panel fade" id="js-yarn-targets">
+						Waiting for JavaScript to load...
+					</div>
 				</section>
 			</div>
 			<div class="chapter-4" id="chapter-panels">
@@ -1710,7 +1757,7 @@ Contents
 						</p>
 					</form>
 				</section>
-				<section class="panel box todo" id="panel-range">
+				<section class="panel box" id="panel-range">
 					<h3>
 						Range
 					</h3>

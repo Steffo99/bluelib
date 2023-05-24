@@ -4,7 +4,7 @@
 	"description": "A stylesheet that supports fast dynamic recoloring via CSS variables",
 	"scripts": {
 		"dev": "web-dev-server --watch --port 8080",
-		"build": "cd dist && ./_build.sh && cd .."
+		"build": "./_build.sh && cd .."
 	},
 	"keywords": [
 		"bluelib",

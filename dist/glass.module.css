@@ -48,11 +48,4 @@
     background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
     backdrop-filter: none;
   }
-  :where(.bluelib) :where(.panel):where(.modifier-todo) {
-    background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness) / 0.3);
-    backdrop-filter: blur(var(--b-panel-blur)) grayscale(100%);
-  }
-  :where(.bluelib) :where(.panel) :where(.panel):where(.modifier-todo) {
-    background-color: hsl(var(--bhsl-todo-background-hue) var(--bhsl-todo-background-saturation) var(--bhsl-todo-background-lightness));
-  }
 }
