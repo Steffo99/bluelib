@@ -209,6 +209,14 @@
 		// Give the first panel in a stack a fixed background color, so it may be seen against a background
 		background-color: .hsl-group(background)[@c];
 
+		// Set a min-width for the first level panel
+		@media (max-width: 492px) {
+			min-width: calc(100vw - 16px);
+		}
+		@media (min-width: 493px) {
+			min-width: 476px;			
+		}
+
 		// Make borders togglable
 		&@{border-top}, &@{panel-box} {
 			border-top-width: 2px;
@@ -233,6 +241,11 @@
 		// For compatibility, make panel-parenthesis available
 		&@{panel-parenthesis} {
 			font-size: smaller;
+		}
+
+		// Do not set min-width for nested panels
+		@{panel} {
+			min-width: unset;
 		}
 	}
 
