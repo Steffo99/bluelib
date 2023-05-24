@@ -942,6 +942,10 @@
 
 	@{text-code}, @{text-preformatted}, @{text-input}, @{text-output} {
 		.use-font-group(code);
+
+		@{text-attention} {
+			.use-font-group(boldcode);
+		}
 	}
 
 	@{text-preformatted} {
@@ -949,11 +953,18 @@
 	}
 
 	@{text-input}, @{text-output} {
-		padding: 0 0.25ex;
+		padding: 0 0.35ex;
+		border-width: 1px;
+		border-style: solid;
+
+		@{text-input}, @{text-output} {
+			border-width: 0;
+		}
 	}
 
 	@{text-input} {
 		background-color: .hsl-group(sample-output)[@c];
+		border-color: .hsl-group(sample-input)[@c];
 		.map-hsl-group(current; sample-input);
 
 		@{text-input} {
@@ -963,6 +974,7 @@
 
 	@{text-output} {
 		background-color: .hsl-group(sample-input)[@c];
+		border-color: .hsl-group(sample-output)[@c];
 		.map-hsl-group(current; sample-output);
 
 		@{text-output} {

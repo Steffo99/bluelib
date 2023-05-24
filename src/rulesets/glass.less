@@ -52,18 +52,5 @@
 				backdrop-filter: none;
 			}
 		}
-
-		// Make to-do have a glass background too
-		@{panel}@{modifier-todo} {
-			background-color: .hsl-group(todo-background; 0.3)[@c];
-			backdrop-filter: blur(var(--b-panel-blur)) grayscale(100%);
-		}
-
-		@{panel} {
-			@{panel}@{modifier-todo} {
-				background-color: .hsl-group(todo-background)[@c];
-			}
-		}
-
 	}
 }
