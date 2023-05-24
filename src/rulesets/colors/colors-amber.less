@@ -4,28 +4,30 @@
  * ported to v5 by <me@steffo.eu>
  */
 
-@{bluelib} {
-	.create-hsl-group(background; 0deg; 8%; 14%);
-	.create-hsl-group(foreground; 19deg; 91%; 46%);
-	.create-hsl-group(primary; 0deg; 42%; 94%);
-	.create-hsl-group(link; 50deg; 100%; 80%);
-
-	.create-hsl-group(mark-foreground; 19deg; 64%; 14%);
-	.create-hsl-group(mark-background; 19deg; 100%; 81%);
-
-	.create-hsl-group(todo-foreground; 43deg; 100%; 65%);
-	.create-hsl-group(todo-background; 204deg; 11%; 18%);
-
-	.create-hsl-group(sample-input; 0deg; 100%; 0%);
-	.create-hsl-group(sample-output; 0deg; 100%; 100%);
-
-	.create-hsl-group(red; 0deg; 100%; 66%);
-	.create-hsl-group(yellow; 60deg; 100%; 66%);
-	.create-hsl-group(green; 120deg; 100%; 66%);
-	.create-hsl-group(cyan; 180deg; 100%; 66%);
-	.create-hsl-group(blue; 240deg; 100%; 66%);
-	.create-hsl-group(magenta; 300deg; 100%; 66%);
-
-	.map-hsl-group(inserted; green);
-	.map-hsl-group(deleted; red);
+@media screen {
+	@{bluelib} {
+		.create-hsl-group(background; 0deg; 8%; 14%);
+		.create-hsl-group(foreground; 19deg; 91%; 46%);
+		.create-hsl-group(primary; 0deg; 42%; 94%);
+		.create-hsl-group(link; 50deg; 100%; 80%);
+	
+		.create-hsl-group(mark-foreground; 19deg; 64%; 14%);
+		.create-hsl-group(mark-background; 19deg; 100%; 81%);
+	
+		.create-hsl-group(todo-foreground; 43deg; 100%; 65%);
+		.create-hsl-group(todo-background; 204deg; 11%; 18%);
+	
+		.create-hsl-group(sample-input; 0deg; 100%; 0%);
+		.create-hsl-group(sample-output; 0deg; 100%; 100%);
+	
+		.create-hsl-group(red; 0deg; 100%; 66%);
+		.create-hsl-group(yellow; 60deg; 100%; 66%);
+		.create-hsl-group(green; 120deg; 100%; 66%);
+		.create-hsl-group(cyan; 180deg; 100%; 66%);
+		.create-hsl-group(blue; 240deg; 100%; 66%);
+		.create-hsl-group(magenta; 300deg; 100%; 66%);
+	
+		.map-hsl-group(inserted; green);
+		.map-hsl-group(deleted; red);
+	}	
 }
