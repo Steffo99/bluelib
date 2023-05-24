@@ -5,6 +5,12 @@
  */
 @media screen {
   :where(.bluelib) {
+    --burl-background-full: url(../images/anastasiia-chepinska-lcfH0p6emhw-unsplash-edited/.jpg);
+    --burl-background-3840: url(../images/anastasiia-chepinska-lcfH0p6emhw-unsplash-edited/3840.jpg);
+    --burl-background-1920: url(../images/anastasiia-chepinska-lcfH0p6emhw-unsplash-edited/1920.jpg);
+    --burl-background-1366: url(../images/anastasiia-chepinska-lcfH0p6emhw-unsplash-edited/1366.jpg);
+    --burl-background-640: url(../images/anastasiia-chepinska-lcfH0p6emhw-unsplash-edited/640.jpg);
+    --burl-background-360: url(../images/anastasiia-chepinska-lcfH0p6emhw-unsplash-edited/360.jpg);
     --bhsl-background-hue: 0deg;
     --bhsl-background-saturation: 8%;
     --bhsl-background-lightness: 14%;

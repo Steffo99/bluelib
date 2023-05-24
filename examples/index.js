@@ -128,6 +128,7 @@ const rulesets = [
 	"glass",
 	"fun",
 	"layouts-center",
+	"layouts-flex",
 	"colors-royalblue",
 	"colors-amber",
 	"colors-pixeldawn",

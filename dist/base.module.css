@@ -139,6 +139,9 @@
   --bhsl-current-saturation: var(--bhsl-foreground-saturation);
   --bhsl-current-lightness: var(--bhsl-foreground-lightness);
   background-color: hsl(var(--bhsl-background-hue) var(--bhsl-background-saturation) var(--bhsl-background-lightness));
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   height: 100%;
   font-style: var(--bfont-text-style);
@@ -792,15 +795,35 @@
   line-height: var(--bfont-code-height);
   font-family: var(--bfont-code-family);
 }
+:where(.bluelib) :where(.text-code) :where(.text-attention),
+:where(.bluelib) :where(.text-preformatted) :where(.text-attention),
+:where(.bluelib) :where(.text-input) :where(.text-attention),
+:where(.bluelib) :where(.text-output) :where(.text-attention) {
+  font-style: var(--bfont-boldcode-style);
+  font-variant: var(--bfont-boldcode-variant);
+  font-weight: var(--bfont-boldcode-weight);
+  font-stretch: var(--bfont-boldcode-stretch);
+  line-height: var(--bfont-boldcode-height);
+  font-family: var(--bfont-boldcode-family);
+}
 :where(.bluelib) :where(.text-preformatted) {
   overflow-x: scroll;
 }
 :where(.bluelib) :where(.text-input),
 :where(.bluelib) :where(.text-output) {
-  padding: 0 0.25ex;
+  padding: 0 0.35ex;
+  border-width: 1px;
+  border-style: solid;
+}
+:where(.bluelib) :where(.text-input) :where(.text-input),
+:where(.bluelib) :where(.text-output) :where(.text-input),
+:where(.bluelib) :where(.text-input) :where(.text-output),
+:where(.bluelib) :where(.text-output) :where(.text-output) {
+  border-width: 0;
 }
 :where(.bluelib) :where(.text-input) {
   background-color: hsl(var(--bhsl-sample-output-hue) var(--bhsl-sample-output-saturation) var(--bhsl-sample-output-lightness));
+  border-color: hsl(var(--bhsl-sample-input-hue) var(--bhsl-sample-input-saturation) var(--bhsl-sample-input-lightness));
   --bhsl-current-hue: var(--bhsl-sample-input-hue);
   --bhsl-current-saturation: var(--bhsl-sample-input-saturation);
   --bhsl-current-lightness: var(--bhsl-sample-input-lightness);
@@ -815,6 +838,7 @@
 }
 :where(.bluelib) :where(.text-output) {
   background-color: hsl(var(--bhsl-sample-input-hue) var(--bhsl-sample-input-saturation) var(--bhsl-sample-input-lightness));
+  border-color: hsl(var(--bhsl-sample-output-hue) var(--bhsl-sample-output-saturation) var(--bhsl-sample-output-lightness));
   --bhsl-current-hue: var(--bhsl-sample-output-hue);
   --bhsl-current-saturation: var(--bhsl-sample-output-saturation);
   --bhsl-current-lightness: var(--bhsl-sample-output-lightness);

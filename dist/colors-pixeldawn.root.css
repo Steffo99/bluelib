@@ -4,6 +4,12 @@
  */
 @media screen {
   :where(body) {
+    --burl-background-full: url(../images/viktya-pixeldawn/full.png);
+    --burl-background-3840: url(../images/viktya-pixeldawn/full.png);
+    --burl-background-1920: url(../images/viktya-pixeldawn/full.png);
+    --burl-background-1366: url(../images/viktya-pixeldawn/full.png);
+    --burl-background-640: url(../images/viktya-pixeldawn/full.png);
+    --burl-background-360: url(../images/viktya-pixeldawn/full.png);
     --bhsl-background-hue: 14deg;
     --bhsl-background-saturation: 85%;
     --bhsl-background-lightness: 74%;

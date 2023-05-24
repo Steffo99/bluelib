@@ -4,12 +4,12 @@
  */
 @media screen {
   :where(body) {
-    --burl-background-full: url(https://steffo99-literate-giggle-5g694q7qw4h7qx5-8080.preview.app.github.dev/images/fabrice-nerfin-puHQJZd3MDg-unsplash/.jpg);
-    --burl-background-3840: url(https://steffo99-literate-giggle-5g694q7qw4h7qx5-8080.preview.app.github.dev/images/fabrice-nerfin-puHQJZd3MDg-unsplash/-3840.jpg);
-    --burl-background-1920: url(https://steffo99-literate-giggle-5g694q7qw4h7qx5-8080.preview.app.github.dev/images/fabrice-nerfin-puHQJZd3MDg-unsplash/-1920.jpg);
-    --burl-background-1366: url(https://steffo99-literate-giggle-5g694q7qw4h7qx5-8080.preview.app.github.dev/images/fabrice-nerfin-puHQJZd3MDg-unsplash/-1366.jpg);
-    --burl-background-640: url(https://steffo99-literate-giggle-5g694q7qw4h7qx5-8080.preview.app.github.dev/images/fabrice-nerfin-puHQJZd3MDg-unsplash/-640.jpg);
-    --burl-background-360: url(https://steffo99-literate-giggle-5g694q7qw4h7qx5-8080.preview.app.github.dev/images/fabrice-nerfin-puHQJZd3MDg-unsplash/-360.jpg);
+    --burl-background-full: url(../images/fabrice-nerfin-puHQJZd3MDg-unsplash/.jpg);
+    --burl-background-3840: url(../images/fabrice-nerfin-puHQJZd3MDg-unsplash/3840.jpg);
+    --burl-background-1920: url(../images/fabrice-nerfin-puHQJZd3MDg-unsplash/1920.jpg);
+    --burl-background-1366: url(../images/fabrice-nerfin-puHQJZd3MDg-unsplash/1366.jpg);
+    --burl-background-640: url(../images/fabrice-nerfin-puHQJZd3MDg-unsplash/640.jpg);
+    --burl-background-360: url(../images/fabrice-nerfin-puHQJZd3MDg-unsplash/360.jpg);
     --bhsl-background-hue: 224deg;
     --bhsl-background-saturation: 64%;
     --bhsl-background-lightness: 14%;
