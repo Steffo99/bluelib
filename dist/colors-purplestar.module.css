@@ -4,12 +4,12 @@
  */
 @media screen {
   :where(.bluelib) {
-    --burl-background-full: url(../images/kazuend-2KXEb_8G5vo-edited-unsplash/.jpg);
-    --burl-background-3840: url(../images/kazuend-2KXEb_8G5vo-edited-unsplash/3840.jpg);
-    --burl-background-1920: url(../images/kazuend-2KXEb_8G5vo-edited-unsplash/1920.jpg);
-    --burl-background-1366: url(../images/kazuend-2KXEb_8G5vo-edited-unsplash/1366.jpg);
-    --burl-background-640: url(../images/kazuend-2KXEb_8G5vo-edited-unsplash/640.jpg);
-    --burl-background-360: url(../images/kazuend-2KXEb_8G5vo-edited-unsplash/360.jpg);
+    --burl-background-full: url(https://gh.steffo.eu/bluelib-images/kazuend-2KXEb_8G5vo-edited-unsplash/.jpg);
+    --burl-background-3840: url(https://gh.steffo.eu/bluelib-images/kazuend-2KXEb_8G5vo-edited-unsplash/3840.jpg);
+    --burl-background-1920: url(https://gh.steffo.eu/bluelib-images/kazuend-2KXEb_8G5vo-edited-unsplash/1920.jpg);
+    --burl-background-1366: url(https://gh.steffo.eu/bluelib-images/kazuend-2KXEb_8G5vo-edited-unsplash/1366.jpg);
+    --burl-background-640: url(https://gh.steffo.eu/bluelib-images/kazuend-2KXEb_8G5vo-edited-unsplash/640.jpg);
+    --burl-background-360: url(https://gh.steffo.eu/bluelib-images/kazuend-2KXEb_8G5vo-edited-unsplash/360.jpg);
     --bhsl-background-hue: 262deg;
     --bhsl-background-saturation: 85%;
     --bhsl-background-lightness: 13%;
