@@ -1,6 +1,6 @@
 {
 	"name": "@steffo/bluelib",
-	"version": "9.0.0",
+	"version": "9.0.1",
 	"description": "A stylesheet that supports fast dynamic recoloring via CSS variables",
 	"scripts": {
 		"dev": "web-dev-server --watch --port 8080",
