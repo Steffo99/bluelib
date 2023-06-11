@@ -6,34 +6,81 @@
 
 @media screen {
 	@{bluelib} {
-		// .create-background-images("https://gh.steffo.eu/bluelib-images/fabrice-nerfin-puHQJZd3MDg-unsplash/", "jpg");
+		.create-hsl-group(rp-base; 249deg; 22%; 12%);
+		.create-hsl-group(rp-surface; 247deg; 23%; 15%);
+		.create-hsl-group(rp-overlay; 248deg; 25%; 18%);
+		.create-hsl-group(rp-muted; 249deg; 12%; 47%);
+		.create-hsl-group(rp-subtle; 248deg; 15%; 61%);
+		.create-hsl-group(rp-text; 245deg; 50%; 91%);
+		.create-hsl-group(rp-love; 343deg; 76%; 68%);
+		.create-hsl-group(rp-gold; 35deg; 88%; 72%);
+		.create-hsl-group(rp-rose; 2deg; 55%; 83%);
+		.create-hsl-group(rp-pine; 197deg; 49%; 38%);
+		.create-hsl-group(rp-foam; 189deg; 43%; 73%);
+		.create-hsl-group(rp-iris; 267deg; 57%; 78%);
+		.create-hsl-group(rp-highlight-low; 244deg; 18%; 15%);
+		.create-hsl-group(rp-highlight-med; 249deg; 15%; 28%);
+		.create-hsl-group(rp-highlight-high; 248deg; 13%; 36%);
 
-		.create-hsl-group(background; 249deg; 22%; 12%);
-		.create-hsl-group(foreground; 245deg; 50%; 91%);
-		.create-hsl-group(primary; 245deg; 50%; 91%);
-		// .create-hsl-group(link; 180deg; 100%; 40%);
+		.map-hsl-group(background; rp-base);
+		.map-hsl-group(foreground; rp-subtle);
+		.map-hsl-group(primary; rp-text);
+		.map-hsl-group(link; rp-foam);
 
-		.map-hsl-group(mark-foreground; background);
-		.map-hsl-group(mark-background; foreground);
-		// .create-hsl-group(mark-foreground; 249deg; 15%; 28%);
-		// .create-hsl-group(mark-background; 32deg; 100%; 81%);
+		.map-hsl-group(red; rp-love);
+		.map-hsl-group(yellow; rp-gold);
+		.map-hsl-group(green; rp-pine);
+		.map-hsl-group(cyan; rp-rose);
+		.map-hsl-group(blue; rp-foam);
+		.map-hsl-group(magenta; rp-iris);
 
-		.map-hsl-group(todo-foreground; background);
-		.map-hsl-group(todo-background; yellow);
-		// .create-hsl-group(todo-foreground; 43deg; 100%; 65%);
-		// .create-hsl-group(todo-background; 204deg; 11%; 18%);
+		.map-hsl-group(inserted; rp-foam);
+		.map-hsl-group(deleted; rp-love);
 
-		// .create-hsl-group(sample-input; 0deg; 100%; 0%);
-		// .create-hsl-group(sample-output; 0deg; 100%; 100%);
+		@{panel} {
+			background-color: .hsl-group(rp-surface)[@c] !important;
+			border-color: .hsl-group(rp-surface)[@c] !important;
+			border-width: 0;
 
-		.create-hsl-group(red; 343deg; 76%; 68%);
-		.create-hsl-group(yellow; 35deg; 88%; 72%);
-		.create-hsl-group(green; 197deg; 49%; 38%);
-		.create-hsl-group(cyan; 2deg; 66%; 75%);
-		.create-hsl-group(blue; 189deg; 43%; 73%);
-		.create-hsl-group(magenta; 267deg; 57%; 78%);
+			@{panel} {
+				background-color: .hsl-group(rp-overlay)[@c] !important;
+				border-color: .hsl-group(rp-overlay)[@c] !important;
 
-		.map-hsl-group(inserted; green);
-		.map-hsl-group(deleted; red);
+				@{panel} {
+					background-color: .hsl-group(rp-muted; 10%)[@c] !important;
+					border-color: .hsl-group(rp-muted; 10%)[@c] !important;
+				}
+			}
+		}
+
+		@{panel}@{modifier-red} {
+			background-color: .hsl-group(rp-love; 10%)[@c] !important;
+			border-color: .hsl-group(rp-love; 10%)[@c] !important;
+		}
+
+		@{panel}@{modifier-yellow} {
+			background-color: .hsl-group(rp-gold; 10%)[@c] !important;
+			border-color: .hsl-group(rp-gold; 10%)[@c] !important;
+		}
+
+		@{panel}@{modifier-green} {
+			background-color: .hsl-group(rp-pine; 10%)[@c] !important;
+			border-color: .hsl-group(rp-pine; 10%)[@c] !important;
+		}
+
+		@{panel}@{modifier-cyan} {
+			background-color: .hsl-group(rp-rose; 10%)[@c] !important;
+			border-color: .hsl-group(rp-rose; 10%)[@c] !important;
+		}
+
+		@{panel}@{modifier-blue} {
+			background-color: .hsl-group(rp-foam; 10%)[@c] !important;
+			border-color: .hsl-group(rp-foam; 10%)[@c] !important;
+		}
+
+		@{panel}@{modifier-magenta} {
+			background-color: .hsl-group(rp-iris; 10%)[@c] !important;
+			border-color: .hsl-group(rp-iris; 10%)[@c] !important;
+		}
 	}
 }

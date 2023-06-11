@@ -153,7 +153,7 @@ const rulesetsEnabled = [
 	"classic",
 	"glass",
 	"layouts-center",
-	"colors-royalblue",
+	"colors-rosepine",
 	"fonts-fira-ghpages",
 ]
 
