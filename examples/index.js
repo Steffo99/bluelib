@@ -133,6 +133,7 @@ const rulesets = [
 	"colors-amber",
 	"colors-pixeldawn",
 	"colors-purplestar",
+	"colors-rosepine",
 	"fonts-fira-ghpages",
 ]
 
