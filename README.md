@@ -11,8 +11,6 @@ Customizable, flexible and modular CSS library.
 [![Demo](https://img.shields.io/website?label=demo&url=https%3A%2F%2Fbluelib.steffo.eu%2Fexamples%2Findex.html)](https://img.shields.io/website?label=demo&url=https%3A%2F%2Fbluelib.steffo.eu%2Fexamples%2Findex.html)
  
 [![On NPM](https://img.shields.io/npm/v/@steffo/bluelib)](https://www.npmjs.com/package/@steffo/bluelib)
- 
-[![Chat](https://img.shields.io/matrix/bluelib:ryg.one?server_fqdn=matrix.ryg.one)](https://matrix.to/#/#bluelib:ryg.one)
 
 ## Screenshots
 
