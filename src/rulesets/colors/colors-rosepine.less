@@ -1,0 +1,86 @@
+/*
+ * Bluelib Rosé Pine Colors
+ * by <me@steffo.eu>
+ * inspired by https://rosepinetheme.com/
+ */
+
+@media screen {
+	@{bluelib} {
+		.create-hsl-group(rp-base; 249deg; 22%; 12%);
+		.create-hsl-group(rp-surface; 247deg; 23%; 15%);
+		.create-hsl-group(rp-overlay; 248deg; 25%; 18%);
+		.create-hsl-group(rp-muted; 249deg; 12%; 47%);
+		.create-hsl-group(rp-subtle; 248deg; 15%; 61%);
+		.create-hsl-group(rp-text; 245deg; 50%; 91%);
+		.create-hsl-group(rp-love; 343deg; 76%; 68%);
+		.create-hsl-group(rp-gold; 35deg; 88%; 72%);
+		.create-hsl-group(rp-rose; 2deg; 55%; 83%);
+		.create-hsl-group(rp-pine; 197deg; 49%; 38%);
+		.create-hsl-group(rp-foam; 189deg; 43%; 73%);
+		.create-hsl-group(rp-iris; 267deg; 57%; 78%);
+		.create-hsl-group(rp-highlight-low; 244deg; 18%; 15%);
+		.create-hsl-group(rp-highlight-med; 249deg; 15%; 28%);
+		.create-hsl-group(rp-highlight-high; 248deg; 13%; 36%);
+
+		.map-hsl-group(background; rp-base);
+		.map-hsl-group(foreground; rp-subtle);
+		.map-hsl-group(primary; rp-text);
+		.map-hsl-group(link; rp-foam);
+
+		.map-hsl-group(red; rp-love);
+		.map-hsl-group(yellow; rp-gold);
+		.map-hsl-group(green; rp-pine);
+		.map-hsl-group(cyan; rp-rose);
+		.map-hsl-group(blue; rp-foam);
+		.map-hsl-group(magenta; rp-iris);
+
+		.map-hsl-group(inserted; rp-foam);
+		.map-hsl-group(deleted; rp-love);
+
+		@{panel} {
+			background-color: .hsl-group(rp-surface)[@c] !important;
+			border-color: .hsl-group(rp-surface)[@c] !important;
+			border-width: 0;
+
+			@{panel} {
+				background-color: .hsl-group(rp-overlay)[@c] !important;
+				border-color: .hsl-group(rp-overlay)[@c] !important;
+
+				@{panel} {
+					background-color: .hsl-group(rp-muted; 10%)[@c] !important;
+					border-color: .hsl-group(rp-muted; 10%)[@c] !important;
+				}
+			}
+		}
+
+		@{panel}@{modifier-red} {
+			background-color: .hsl-group(rp-love; 10%)[@c] !important;
+			border-color: .hsl-group(rp-love; 10%)[@c] !important;
+		}
+
+		@{panel}@{modifier-yellow} {
+			background-color: .hsl-group(rp-gold; 10%)[@c] !important;
+			border-color: .hsl-group(rp-gold; 10%)[@c] !important;
+		}
+
+		@{panel}@{modifier-green} {
+			background-color: .hsl-group(rp-pine; 10%)[@c] !important;
+			border-color: .hsl-group(rp-pine; 10%)[@c] !important;
+		}
+
+		@{panel}@{modifier-cyan} {
+			background-color: .hsl-group(rp-rose; 10%)[@c] !important;
+			border-color: .hsl-group(rp-rose; 10%)[@c] !important;
+		}
+
+		@{panel}@{modifier-blue} {
+			background-color: .hsl-group(rp-foam; 10%)[@c] !important;
+			border-color: .hsl-group(rp-foam; 10%)[@c] !important;
+		}
+
+		@{panel}@{modifier-magenta} {
+			background-color: .hsl-group(rp-iris; 10%)[@c] !important;
+			border-color: .hsl-group(rp-iris; 10%)[@c] !important;
+		}
+	}
+}

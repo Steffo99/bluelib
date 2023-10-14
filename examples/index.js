@@ -133,6 +133,7 @@ const rulesets = [
 	"colors-amber",
 	"colors-pixeldawn",
 	"colors-purplestar",
+	"colors-rosepine",
 	"fonts-fira-ghpages",
 ]
 
@@ -152,7 +153,7 @@ const rulesetsEnabled = [
 	"classic",
 	"glass",
 	"layouts-center",
-	"colors-royalblue",
+	"colors-rosepine",
 	"fonts-fira-ghpages",
 ]
 
