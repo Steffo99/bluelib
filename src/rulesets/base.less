@@ -63,7 +63,11 @@
 		height: 100%;
 
 		// Set the default font family
-		.use-font-group(text)
+		.use-font-group(text);
+
+		// Set the opacity of the glass panels
+		--b-panel-initial-opacity: 1.0;
+		--b-panel-nested-opacity: 1.0;
 	}
 
 	//</editor-fold>
@@ -209,7 +213,7 @@
 		gap: 8px;
 
 		// Give the first panel in a stack a fixed background color, so it may be seen against a background
-		background-color: .hsl-group(background)[@c];
+		background-color: .hsl-group(background; var(--b-panel-initial-opacity))[@c];
 
 		// Set a min-width for the first level panel
 		@media (max-width: 492px) {
@@ -248,6 +252,8 @@
 		// Do not set min-width for nested panels
 		@{panel} {
 			min-width: unset;
+
+			background-color: .hsl-group(background; var(--b-panel-nested-opacity))[@c];
 		}
 	}
 

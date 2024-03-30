@@ -11,6 +11,9 @@
 
 		// Set the shadow drawn on element placed directly on the background
 		--b-outer-shadow: 2px 2px 4px .hsl-group(background)[@c];
+
+		// Override the nested panel opacity to keep them readable
+		--b-panel-nested-opacity: 0.075;
 	}
 
 	&, @{all} {
@@ -38,7 +41,7 @@
 
 		// Do not give the same effects to nested panels
 		@{panel} {
-			background-color: .hsl-group(current; 0.075)[@c];
+			background-color: .hsl-group(current; var(--b-panel-nested-opacity))[@c];
 			backdrop-filter: none;
 			box-shadow: none;
 		}
