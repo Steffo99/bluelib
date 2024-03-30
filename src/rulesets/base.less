@@ -883,6 +883,29 @@
 		}
 	}
 
+	@{form-row} {
+		display: flex;
+		flex-direction: row;
+
+		> @{all} {
+			flex-basis: 100%;
+			flex-shrink: 1;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		> @{form-row-text} {
+			flex-basis: unset;
+			flex-shrink: 0;
+			flex-grow: 1;
+			text-align: right;
+			margin: auto 0;
+
+			.use-font-group(label);
+			.map-hsl-group(current; primary);
+		}
+	}
+
 	//</editor-fold>
 
 	/// ===== Text =====
