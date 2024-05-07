@@ -10,7 +10,7 @@ Customizable, flexible and modular CSS library
 
 ## Links
 
-[![Demo](https://img.shields.io/website?label=demo&url=https%3A%2F%2Fbluelib.steffo.eu%2Fexamples%2Findex.html)](https://bluelib.steffo.eu/examples/index.html)
+[![Demo](https://img.shields.io/website?label=demo&url=https%3A%2F%2Fbluelib.steffo.eu%2Fexamples%2Findex.html)](https://bluelib.gh.steffo.eu/examples/index.html)
  
 [![NPM](https://img.shields.io/npm/v/@steffo/bluelib)](https://www.npmjs.com/package/@steffo/bluelib)
 
