@@ -52,7 +52,7 @@
 		"type": "git",
 		"url": "https://github.com/Steffo99/bluelib.git"
 	},
-	"license": "AGPL-3.0-or-later",
+	"license": "EUPL-1.2",
 	"private": false,
 	"devDependencies": {
 		"@web/dev-server": "^0.1.34",
