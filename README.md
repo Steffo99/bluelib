@@ -1,17 +1,23 @@
-# ![](media/icon.png) Bluelib
+<div align="center"> 
+
+![](.media/icon-128x128_round.png) 
+
+# Bluelib
 
 Customizable, flexible and modular CSS library
+
+</div>
 
 ## Links
 
 [![Demo](https://img.shields.io/website?label=demo&url=https%3A%2F%2Fbluelib.steffo.eu%2Fexamples%2Findex.html)](https://bluelib.steffo.eu/examples/index.html)
  
-[![On NPM](https://img.shields.io/npm/v/@steffo/bluelib)](https://www.npmjs.com/package/@steffo/bluelib)
+[![NPM](https://img.shields.io/npm/v/@steffo/bluelib)](https://www.npmjs.com/package/@steffo/bluelib)
 
 ## Screenshots
 
-![Screenshot of the Royal Blue color theme](media/screenshot-1.png)
-![Screenshot of the Pixel Dawn color theme](media/screenshot-2.png)
+![Screenshot of the Royal Blue color theme](.media/screenshot-1.png)
+![Screenshot of the Pixel Dawn color theme](.media/screenshot-2.png)
 
 ## Credits
 
